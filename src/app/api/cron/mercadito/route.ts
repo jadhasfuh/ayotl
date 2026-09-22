@@ -36,8 +36,17 @@ async function correr(req: Request) {
   const fecha = url.searchParams.get("fecha") ?? ayer;
   if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha)) return NextResponse.json({ error: "datos" }, { status: 400 });
 
-  const resultado = await cruzarMercadito(fecha);
-  return NextResponse.json({ ok: true, fecha, ...resultado });
+  // Quien llama aquí es el cron o el panel, así que el detalle del fallo se
+  // devuelve tal cual: es lo que hace falta para depurarlo desde
+  // `net._http_response`, donde está la respuesta de verdad del cron.
+  try {
+    const resultado = await cruzarMercadito(fecha);
+    return NextResponse.json({ ok: !resultado.error, fecha, ...resultado });
+  } catch (e) {
+    const detalle = e instanceof Error ? e.message : String(e);
+    console.error("[cron mercadito]", detalle);
+    return NextResponse.json({ ok: false, fecha, error: detalle }, { status: 502 });
+  }
 }
 
 export const GET = correr;

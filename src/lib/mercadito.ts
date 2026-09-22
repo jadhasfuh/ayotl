@@ -25,10 +25,10 @@ function digitos(tel: string): string {
   return soloNumeros.slice(-10);
 }
 
-export async function cruzarMercadito(fecha: string): Promise<{ marcados: number; saltados: number }> {
+export async function cruzarMercadito(fecha: string): Promise<{ marcados: number; saltados: number; error?: string }> {
   const url = process.env.MERCADITO_DATABASE_URL;
   const base = ayotl();
-  if (!url || !base) return { marcados: 0, saltados: 0 };
+  if (!url || !base) return { marcados: 0, saltados: 0, error: "sin configurar" };
 
   const { data: testers } = await base
     .from("testers").select("id, telefono")
@@ -40,7 +40,16 @@ export async function cruzarMercadito(fecha: string): Promise<{ marcados: number
   }
   if (porTelefono.size === 0) return { marcados: 0, saltados: 0 };
 
-  const cliente = new Client({ connectionString: url, connectionTimeoutMillis: 8000 });
+  // Mismo TLS que usa el propio Mercadito en su `src/lib/db.ts`: cifrado sí,
+  // pero sin verificar la cadena del pooler de Supabase, que no valida contra
+  // las CA del sistema. Sin esto, el handshake falla y el cruce revienta.
+  const esLocal = /@(localhost|127\.0\.0\.1)[:/]/.test(url);
+  const cliente = new Client({
+    connectionString: url,
+    ssl: esLocal ? undefined : { rejectUnauthorized: false },
+    connectionTimeoutMillis: 8000,
+    statement_timeout: 15000,
+  });
   await cliente.connect();
   let actividad: { telefono: string; pedidos: number; sesion: boolean }[] = [];
   try {
