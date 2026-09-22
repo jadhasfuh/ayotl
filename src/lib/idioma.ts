@@ -162,12 +162,12 @@ const TEXTOS = {
   acercaTitulo: { es: "Acerca de Ayotl", en: "About Ayotl" },
   acercaParrafos: {
     es: [
-      "Ayotl (se dice «a-yotl») es «tortuga» en náhuatl. Es una de las raíces que se le atribuyen al nombre de Sahuayo, el pueblo de Michoacán del que soy: la lectura más repetida lo hace venir de «tzacualli» (vasija, olla) y «ayotl» (tortuga), «olla en forma de tortuga», por la forma de la loma sobre la que se asentó. Hay otras versiones, como en casi toda etimología de pueblo; me quedo con la tortuga.",
+      "Ayotl (se dice «a-yotl») es «tortuga» en náhuatl. Es una de las raíces que se le atribuyen al nombre de Sahuayo, el pueblo de Michoacán del que soy: la lectura más repetida lo hace venir de «tzacuatlayotl», «vasija con forma de tortuga», de «tzacuatl» (vasija) y «ayotl» (tortuga). Hay otras versiones, como en casi toda etimología de pueblo; me quedo con la tortuga.",
       "Me gustó como nombre porque dice bastante de cómo trabajo. Una tortuga no corre, pero llega; carga su casa encima y no necesita mucho más. Los proyectos de Ayotl son así: pequeños, autosuficientes, sin inversores ni prisa, hechos por una sola persona que los usa y los mantiene.",
       "Soy Adrián. Hago software desde Sahuayo para gente concreta: los negocios de mi región, quienes estudian japonés, y quienes quieren un reto de cinco minutos al día. Cada app tiene su propio dominio y su propia vida; Ayotl es el paraguas que las junta.",
     ],
     en: [
-      "Ayotl (pronounced “ah-yotl”) is “turtle” in Nahuatl. It's one of the roots attributed to the name of Sahuayo, the town in Michoacán, Mexico, where I'm from: the most repeated reading derives it from “tzacualli” (vessel, pot) and “ayotl” (turtle), “turtle-shaped pot”, after the shape of the hill the town was founded on. There are other versions, as with almost every town etymology; I'm keeping the turtle.",
+      "Ayotl (pronounced “ah-yotl”) is “turtle” in Nahuatl. It's one of the roots attributed to the name of Sahuayo, the town in Michoacán, Mexico, where I'm from: the most repeated reading derives it from “tzacuatlayotl”, “turtle-shaped vessel”, from “tzacuatl” (vessel) and “ayotl” (turtle). There are other versions, as with almost every town etymology; I'm keeping the turtle.",
       "I liked it as a name because it says a lot about how I work. A turtle doesn't run, but it gets there; it carries its house on its back and doesn't need much else. Ayotl's projects are like that: small, self-sufficient, with no investors and no rush, built by one person who uses and maintains them.",
       "I'm Adrián. I build software from Sahuayo for specific people: the businesses in my region, people studying Japanese, and people who want a five-minute challenge every day. Each app has its own domain and its own life; Ayotl is the umbrella that brings them together.",
     ],
