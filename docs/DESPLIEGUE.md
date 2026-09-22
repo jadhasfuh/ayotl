@@ -59,8 +59,8 @@ están en `.env.example`.
    - `NEXT_PUBLIC_SITIO=https://ayotl.dev`
    - `ADMIN_SECRETO` (contraseña larga del panel `/admin/testers`)
    - `RESEND_API_KEY`, y opcionalmente `CORREO_DE` y `CORREO_AVISOS`
-   - `MERCADITO_SUPABASE_URL` y `MERCADITO_SUPABASE_SECRET_KEY` (los mismos
-     dos valores que ya tiene el servicio de Mercadito en Railway)
+   - `MERCADITO_DATABASE_URL` (**session pooler**, puerto 5432; la directa es
+     sólo IPv6 y no se alcanza desde Railway)
    - `CRON_SECRETO` (el mismo valor va en Supabase Vault, ver abajo)
 3. Settings → Networking → **Custom Domain** → `ayotl.dev`. Railway enseña un
    destino `xxxx.up.railway.app` y espera a ver el DNS.

@@ -30,12 +30,17 @@ la evidencia, no duplica. El panel tiene un botón para correrlo a mano.
 **Mercadito va por otro camino**, porque está en otra Supabase y se entra con
 teléfono, no con Google: un segundo cron (`ayotl-mercadito`, 6:10) pega con
 `pg_net` a `/api/cron/mercadito` de ayotl.dev con la cabecera
-`X-Cron-Secret`, y ese endpoint consulta la **API de Supabase de Mercadito**
-(`MERCADITO_SUPABASE_URL` + `MERCADITO_SUPABASE_SECRET_KEY`) y cruza el
-teléfono del tester con sus pedidos y sus sesiones. Se usa la API y no
-Postgres directo porque la conexión directa de ese proyecto es sólo IPv6 y
-desde Railway da `timeout expired`; además así no hay que copiar la
-contraseña de la base a un segundo servicio. La fecha de la sesión sale de `expires_at` menos
+`X-Cron-Secret`, y ese endpoint abre la base de Mercadito con `pg`
+(`MERCADITO_DATABASE_URL`, sólo lectura) y cruza el teléfono del tester con
+sus pedidos y sus sesiones.
+
+Dos cosas que costaron una tarde: esa URL tiene que ser la del **session
+pooler** (puerto 5432), porque la conexión directa del proyecto es sólo IPv6
+y desde Railway da `timeout expired`; y su **API de Supabase no sirve**, que
+era la alternativa obvia para no copiar la contraseña: el PostgREST de ese
+proyecto lleva caído quién sabe cuánto («Could not query the database for the
+schema cache») y nadie se había enterado porque Mercadito se conecta con `pg`
+y nunca la usa. La fecha de la sesión sale de `expires_at` menos
 los 30 días que dura; es aproximada, así que el pedido manda cuando hay los
 dos. El botón «Cruzar actividad» del panel hace las dos cosas.
 

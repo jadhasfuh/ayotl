@@ -45,7 +45,7 @@ src/lib/supabase-servidor.ts     cliente con llave secreta, `import "server-only
 src/lib/turnstile.ts             verificación del token (servidor)
 src/lib/admin.ts                 cookie httpOnly con HMAC de ADMIN_SECRETO
 src/lib/correo.ts                aviso por Resend de cada alta del Beta
-src/lib/mercadito.ts             cruce de días de Mercadito (otra Supabase, por teléfono, vía su API)
+src/lib/mercadito.ts             cruce de días de Mercadito (otra base, por teléfono, con pg)
 src/app/api/cron/mercadito/      lo llama pg_cron con X-Cron-Secret, y el botón del panel
 src/lib/sitio.ts                 URL pública (https://ayotl.dev por defecto en producción)
 public/icono.svg                 favicon; el mismo trazo que components/Tortuga.tsx (único sitio duplicado)
@@ -67,7 +67,7 @@ docs/                            decisiones y despliegue
 | `ADMIN_SECRETO` | servidor | contraseña del panel `/admin/testers` (≥ 12 caracteres); sin ella el panel no existe |
 | `RESEND_API_KEY` | servidor | avisar por correo de cada alta del Beta; sin ella el alta se guarda igual |
 | `CORREO_DE` / `CORREO_AVISOS` | servidor | remitente y destino del aviso (por defecto `avisos@` → `hola@ayotl.dev`) |
-| `MERCADITO_SUPABASE_URL` / `MERCADITO_SUPABASE_SECRET_KEY` | servidor | leer la Supabase de Mercadito para cruzar sus días por teléfono |
+| `MERCADITO_DATABASE_URL` | servidor | leer la base de Mercadito (session pooler) para cruzar sus días por teléfono |
 | `CRON_SECRETO` | servidor | cabecera `X-Cron-Secret` del cron que cruza Mercadito |
 
 No hay ninguna `NEXT_PUBLIC_` que el navegador necesite: nada se hornea en el
