@@ -150,8 +150,17 @@ const TEXTOS = {
     es: "La cuenta de Google con la que instalas apps. Úsala también para entrar a las apps: así puedo ver tu actividad y contarte los días.",
     en: "The Google account you install apps with. Use it to sign in to the apps too, so I can see your activity and count your days.",
   },
-  campoTelefono: { es: "WhatsApp (opcional)", en: "WhatsApp (optional)" },
-  campoTelefonoAyuda: { es: "10 dígitos. Para Mercadito y para pagarte por CoDi.", en: "10 digits. For Mercadito and to pay you via CoDi." },
+  campoTelefono: { es: "WhatsApp", en: "WhatsApp" },
+  campoTelefonoOpcional: { es: "WhatsApp (opcional)", en: "WhatsApp (optional)" },
+  campoTelefonoAyuda: { es: "10 dígitos. Para pagarte por CoDi.", en: "10 digits. To pay you via CoDi." },
+  campoTelefonoObligatorio: {
+    es: "Obligatorio para probar Mercadito: se entra con el teléfono, y es la única forma de contar tus días ahí.",
+    en: "Required to test Mercadito: you sign in with your phone, and it's the only way to count your days there.",
+  },
+  campoEmailGoogleObligatorio: {
+    es: "Obligatorio para probar Daily Challenge: se entra con «Entrar con Google», así que tiene que ser una cuenta de Gmail.",
+    en: "Required to test Daily Challenge: you sign in with “Sign in with Google”, so it has to be a Gmail account.",
+  },
   campoComentario: { es: "Algo más (opcional)", en: "Anything else (optional)" },
   campoComentarioAyuda: {
     es: "Modelo del teléfono, qué sueles usar, por qué te interesa…",
@@ -176,6 +185,14 @@ const TEXTOS = {
   errorMuchos: { es: "Demasiados intentos desde esta conexión. Prueba más tarde.", en: "Too many attempts from this connection. Try again later." },
   errorRobot: { es: "No pudimos verificar que eres una persona. Recarga la página e inténtalo otra vez.", en: "We couldn't verify you're a person. Reload the page and try again." },
   errorNoDisponible: { es: "El formulario no está disponible ahora mismo. Escríbeme a hola@ayotl.dev.", en: "The form isn't available right now. Email me at hola@ayotl.dev." },
+  errorTelefonoMercadito: {
+    es: "Para probar Mercadito hace falta tu WhatsApp: es con lo que se entra a la app.",
+    en: "To test Mercadito I need your WhatsApp number: that's how you sign in to the app.",
+  },
+  errorGoogleDaily: {
+    es: "Para probar Daily Challenge hace falta una cuenta de Gmail, que es con la que se entra. Ponla en «Correo de Google Play».",
+    en: "To test Daily Challenge I need a Gmail account, which is how you sign in. Put it in “Google Play email”.",
+  },
   errorLleno: { es: "Se acaban de llenar las plazas. Escríbeme a hola@ayotl.dev y te aviso si se abre una.", en: "The spots just filled up. Email me at hola@ayotl.dev and I'll let you know if one opens." },
   elegirUnaApp: { es: "Elige al menos una app.", en: "Pick at least one app." },
 

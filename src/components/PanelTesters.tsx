@@ -115,7 +115,10 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, confi
               <tr key={t.id}>
                 <th className="fijo" scope="row">
                   <span>{t.nombre}</span>
-                  <small>{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}</small>
+                  <small>
+                    {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
+                    {t.apps.includes("mercadito") && !t.telefono && <b className="falta"> · sin WhatsApp</b>}
+                  </small>
                 </th>
                 {fechas.map((f) => {
                   const hechos = porCelda.get(`${t.id}|${f}`) ?? [];
@@ -162,7 +165,10 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, confi
                 <span className={t.saldo > 0 ? "saldo-pendiente" : "saldo-cero"}>{t.saldo} MXN</span>
               </div>
               <p className="dato">{t.dias} días ({t.dias_completos} con las 3) · {t.ganado} ganado · {t.pagado} pagado</p>
-              <p className="ficha-contacto">{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}</p>
+              <p className="ficha-contacto">
+                {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
+                {t.apps.includes("mercadito") && !t.telefono && <b className="falta"> · sin WhatsApp</b>}
+              </p>
               {fechasConActividad.length > 0 && (
                 <ul className="ficha-dias">
                   {fechasConActividad.map((f) => (

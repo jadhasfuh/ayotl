@@ -85,6 +85,19 @@ Trampa: jlptest guarda `hechosPorDia` con la fecha **UTC** del navegador, así
 que un repaso a las 8 pm de Sahuayo cae bajo el día siguiente. Cada día de
 estudio sigue contando una vez, sólo desplazado; no se corrige.
 
+## Lo que el formulario exige según las apps
+
+| Si marca… | Hace falta | Por qué |
+|---|---|---|
+| Mercadito | **WhatsApp** | Esa app vive en otra base y se entra con teléfono; sin él no hay con qué cruzar sus días |
+| Daily Challenge | **Cuenta de Gmail** | Se entra con «Entrar con Google»; con otro correo no se sabe quién jugó |
+| JLPTest | nada más | El código de acceso llega a cualquier correo |
+
+Lo comprueba el formulario, el servidor (`esquemaRegistro`) y la base
+(`testers_mercadito_telefono` y `testers_daily_google`, como `not valid` para
+no invalidar las altas anteriores a la regla). `ayotl.testers_incompletos`
+lista a quien le falte algo; el panel lo marca en rojo como «sin WhatsApp».
+
 ## Lo que hay que pedirle a cada tester
 
 Esto es lo que hace posible el cruce. Sin el punto 1, un tester no suma días.
@@ -126,9 +139,11 @@ Texto para mandarles (WhatsApp):
 > final, por CoDi o transferencia. Con las tres son hasta 280 pesos. Además
 > te doy un mes gratis de JLPTest completo. Pasos:
 >
-> 1) Apúntate en https://ayotl.dev/beta con tu nombre, correo y WhatsApp. En
->    «Correo de Google Play» pon la cuenta de Google de tu teléfono: es con la
->    que voy a ver tu actividad, y si usas otra el día no cuenta.
+> 1) Apúntate en https://ayotl.dev/beta con tu nombre, correo y WhatsApp (el
+>    WhatsApp hace falta para Mercadito, que se entra con el teléfono, y para
+>    pagarte). En «Correo de Google Play» pon tu cuenta de Gmail: es con la
+>    que voy a ver tu actividad y con la que se entra a Daily Challenge; si
+>    usas otra, ese día no cuenta.
 > 2) Acepta ser tester con estos dos enlaces, **con esa misma cuenta**:
 >    Daily Challenge · https://play.google.com/apps/testing/click.dailychallenge.twa
 >    JLPTest · https://play.google.com/apps/testing/org.jlptest.twa

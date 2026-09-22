@@ -36,8 +36,8 @@ for f in supabase/migrations/*.sql; do
 done
 $PSQL -v ON_ERROR_STOP=1 -d $DB <<'SQL'
 \echo --- alta normal y upsert por email (debe quedar UNA fila, con los datos nuevos)
-insert into ayotl.testers (nombre, email, plataforma, apps, ip_hash)
-  values ('Ana', 'ana@ejemplo.mx', 'android', '{mercadito}', repeat('a', 32));
+insert into ayotl.testers (nombre, email, plataforma, apps, ip_hash, telefono)
+  values ('Ana', 'ana@ejemplo.mx', 'android', '{mercadito}', repeat('a', 32), '3539990000');
 insert into ayotl.testers (nombre, email, plataforma, apps, comentario, ip_hash, email_google, telefono)
   values ('Ana López', 'ana@ejemplo.mx', 'ios', '{mercadito,jlptest}', 'Pixel 8', repeat('a', 32), 'ana.lopez@gmail.com', '3531234567')
   on conflict (email) do update
@@ -58,6 +58,17 @@ insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'bet
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{otra}');      -- app desconocida
 update ayotl.testers set telefono = 'abc' where email = 'ana@ejemplo.mx';                                             -- teléfono
 \set ON_ERROR_STOP 1
+
+\echo --- requisitos: Mercadito sin teléfono y Daily sin gmail deben FALLAR
+\set ON_ERROR_STOP 0
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Tel', 'sintel@ejemplo.mx', 'web', '{mercadito}');
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Google', 'singoogle@ejemplo.mx', 'web', '{dailychallenge}');
+\set ON_ERROR_STOP 1
+\echo --- y estos SÍ deben entrar
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Con Tel', 'contel@ejemplo.mx', 'web', '{mercadito}', '3531234567');
+insert into ayotl.testers (nombre, email, plataforma, apps, email_google) values ('Con Google', 'congoogle@ejemplo.mx', 'web', '{dailychallenge}', 'congoogle@gmail.com');
+select nombre from ayotl.testers where email in ('contel@ejemplo.mx','congoogle@ejemplo.mx') order by 1;
+select count(*) as incompletos from ayotl.testers_incompletos;
 
 \echo --- cruce diario: Ana (por su correo de Google) estudió y jugó el 2026-09-20; Beto no tiene cuenta
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{jlptest}');

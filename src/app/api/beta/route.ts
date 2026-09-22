@@ -47,7 +47,15 @@ export async function POST(req: Request) {
   let cuerpo: unknown;
   try { cuerpo = await req.json(); } catch { return error("datos", 400); }
   const resultado = esquemaRegistro.safeParse(cuerpo);
-  if (!resultado.success) return error("datos", 400);
+  if (!resultado.success) {
+    // Las dos reglas condicionales llevan su propio mensaje, para que el
+    // formulario diga qué falta y no un «revisa los campos» genérico.
+    const motivo = resultado.error.issues
+      .map((i) => i.message)
+      .find((m): m is "telefono_mercadito" | "google_dailychallenge" =>
+        m === "telefono_mercadito" || m === "google_dailychallenge");
+    return error(motivo ?? "datos", 400);
+  }
   const datos = resultado.data;
 
   // El honeypot relleno delata a un bot: se contesta 200 sin guardar nada,

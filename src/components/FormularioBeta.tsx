@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { APPS } from "@/lib/apps";
-import { APPS_BETA, PLATAFORMAS, type ErrorBeta } from "@/lib/beta";
+import { APPS_BETA, esCorreoGoogle, PLATAFORMAS, type AppBeta, type ErrorBeta } from "@/lib/beta";
 import { t, type Idioma } from "@/lib/idioma";
 import { Tortuga } from "./Tortuga";
 
@@ -32,6 +32,11 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
   const [estado, setEstado] = useState<Estado>({ fase: "editando" });
   const [token, setToken] = useState("");
   const [errorApps, setErrorApps] = useState(false);
+  // Las apps elegidas mandan sobre qué campos son obligatorios: Mercadito se
+  // entra con teléfono y Daily Challenge con una cuenta de Google.
+  const [apps, setApps] = useState<AppBeta[]>([]);
+  const pideTelefono = apps.includes("mercadito");
+  const pideGoogle = apps.includes("dailychallenge");
   const widget = useRef<HTMLDivElement>(null);
   const widgetId = useRef<string | null>(null);
 
@@ -63,9 +68,17 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
     ev.preventDefault();
     const form = ev.currentTarget;
     const datos = new FormData(form);
-    const apps = datos.getAll("apps").map(String);
-    if (apps.length === 0) { setErrorApps(true); return; }
+    const elegidas = datos.getAll("apps").map(String);
+    if (elegidas.length === 0) { setErrorApps(true); return; }
     setErrorApps(false);
+    const telefono = String(datos.get("telefono") ?? "").trim();
+    const correoGoogle = String(datos.get("email_google") || datos.get("email") || "");
+    if (elegidas.includes("mercadito") && !telefono) {
+      setEstado({ fase: "error", codigo: "telefono_mercadito" }); return;
+    }
+    if (elegidas.includes("dailychallenge") && !esCorreoGoogle(correoGoogle)) {
+      setEstado({ fase: "error", codigo: "google_dailychallenge" }); return;
+    }
     setEstado({ fase: "enviando" });
     try {
       const res = await fetch("/api/beta", {
@@ -75,7 +88,7 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
           nombre: datos.get("nombre"),
           email: datos.get("email"),
           plataforma: datos.get("plataforma"),
-          apps,
+          apps: elegidas,
           comentario: datos.get("comentario") || "",
           email_google: datos.get("email_google") || "",
           telefono: datos.get("telefono") || "",
@@ -117,6 +130,7 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
   const MENSAJES: Record<ErrorBeta, string> = {
     datos: x("errorDatos"), muchos: x("errorMuchos"), robot: x("errorRobot"),
     no_disponible: x("errorNoDisponible"), lleno: x("errorLleno"), generico: x("errorGenerico"),
+    telefono_mercadito: x("errorTelefonoMercadito"), google_dailychallenge: x("errorGoogleDaily"),
   };
   const PLATAFORMA_TEXTO = { ios: x("plataformaIos"), android: x("plataformaAndroid"), web: x("plataformaWeb") };
   const enviando = estado.fase === "enviando";
@@ -139,13 +153,15 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
       </div>
       <div className="campo">
         <label htmlFor="email_google">{x("campoEmailGoogle")}</label>
-        <input id="email_google" name="email_google" type="email" maxLength={254} autoComplete="off" inputMode="email" />
-        <span className="ayuda">{x("campoEmailGoogleAyuda")}</span>
+        <input id="email_google" name="email_google" type="email" maxLength={254} autoComplete="off" inputMode="email"
+               required={pideGoogle} placeholder={pideGoogle ? "tucuenta@gmail.com" : undefined} />
+        <span className="ayuda">{pideGoogle ? x("campoEmailGoogleObligatorio") : x("campoEmailGoogleAyuda")}</span>
       </div>
       <div className="campo">
-        <label htmlFor="telefono">{x("campoTelefono")}</label>
-        <input id="telefono" name="telefono" type="tel" pattern="\+?[0-9 ]{10,15}" maxLength={15} autoComplete="tel" inputMode="tel" />
-        <span className="ayuda">{x("campoTelefonoAyuda")}</span>
+        <label htmlFor="telefono">{pideTelefono ? x("campoTelefono") : x("campoTelefonoOpcional")}</label>
+        <input id="telefono" name="telefono" type="tel" pattern="\+?[0-9 ]{10,15}" maxLength={15} autoComplete="tel" inputMode="tel"
+               required={pideTelefono} />
+        <span className="ayuda">{pideTelefono ? x("campoTelefonoObligatorio") : x("campoTelefonoAyuda")}</span>
       </div>
       <fieldset className="campo">
         <legend>{x("campoPlataforma")}</legend>
@@ -163,7 +179,13 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
         <div className="opciones">
           {APPS_BETA.map((id) => (
             <label key={id} className="opcion">
-              <input type="checkbox" name="apps" value={id} onChange={() => setErrorApps(false)} />
+              <input type="checkbox" name="apps" value={id}
+                     onChange={(ev) => {
+                       setErrorApps(false);
+                       setApps((previas) => ev.target.checked
+                         ? [...previas, id]
+                         : previas.filter((a) => a !== id));
+                     }} />
               {APPS.find((a) => a.id === id)?.nombre ?? id}
             </label>
           ))}
