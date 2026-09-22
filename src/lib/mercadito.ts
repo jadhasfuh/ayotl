@@ -42,7 +42,14 @@ export async function cruzarMercadito(fecha: string): Promise<Resultado> {
   const url = process.env.MERCADITO_SUPABASE_URL;
   const llave = process.env.MERCADITO_SUPABASE_SECRET_KEY;
   const base = ayotl();
-  if (!url || !llave || !base) return { marcados: 0, saltados: 0, error: "sin configurar" };
+  // Decir cuál falta, y no un "sin configurar" a secas: con dos variables
+  // nuevas, el fallo típico es un nombre mal escrito en Railway.
+  const faltan = [
+    !url && "MERCADITO_SUPABASE_URL",
+    !llave && "MERCADITO_SUPABASE_SECRET_KEY",
+    !base && "SUPABASE_URL/SUPABASE_SECRET_KEY",
+  ].filter(Boolean);
+  if (faltan.length) return { marcados: 0, saltados: 0, error: `faltan: ${faltan.join(", ")}` };
 
   // Los testers con teléfono, indexados por sus diez dígitos.
   const { data: testers, error: errorTesters } = await base
