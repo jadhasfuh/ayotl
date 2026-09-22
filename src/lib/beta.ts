@@ -63,6 +63,21 @@ export const esquemaRegistro = z.object({
 
 export type Registro = z.infer<typeof esquemaRegistro>;
 
+/**
+ * La lista de espera pide lo mínimo: nombre y correo. No hace falta ni
+ * teléfono ni cuenta de Google, porque no va a probar nada todavía.
+ */
+export const esquemaEspera = z.object({
+  nombre: z.string().trim().min(2).max(80),
+  email: z.string().trim().toLowerCase().email().max(254),
+  comentario: z.string().trim().max(500).optional().default(""),
+  idioma: z.enum(["es", "en"]).default("es"),
+  sitioweb: z.string().max(500).optional().default(""),
+  turnstile: z.string().max(4096).optional().default(""),
+});
+
+export type Espera = z.infer<typeof esquemaEspera>;
+
 /** Códigos que devuelve /api/beta; el formulario los traduce. */
 export type ErrorBeta = "datos" | "muchos" | "robot" | "no_disponible" | "lleno" | "generico"
   | "telefono_mercadito" | "google_dailychallenge";

@@ -63,3 +63,25 @@ export async function avisarAltaBeta(datos: Registro, esNuevo: boolean): Promise
     console.error("[beta] aviso", e instanceof Error ? e.message : e);
   }
 }
+
+/** Aviso de alguien que se queda en la lista de espera. */
+export async function avisarEspera(nombre: string, email: string, comentario: string): Promise<void> {
+  const clave = process.env.RESEND_API_KEY;
+  if (!clave) return;
+  const html = `<div style="font:16px/1.5 system-ui,sans-serif;color:#1c2422">
+  <p style="font-size:18px"><b>Lista de espera del programa Beta</b></p>
+  <p>${escapar(nombre)} — <b>${escapar(email)}</b></p>
+  ${comentario ? `<p style="color:#5b635f">${escapar(comentario)}</p>` : ""}
+  <p>Las plazas estaban llenas cuando entró.</p>
+</div>`;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { authorization: `Bearer ${clave}`, "content-type": "application/json" },
+      body: JSON.stringify({ from: DE, to: [PARA], reply_to: email, subject: `Beta: lista de espera — ${nombre}`, html }),
+      signal: AbortSignal.timeout(5000),
+    });
+  } catch (e) {
+    console.error("[espera] aviso", e instanceof Error ? e.message : e);
+  }
+}

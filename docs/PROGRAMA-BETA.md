@@ -2,9 +2,13 @@
 
 ## La regla
 
-**14 plazas.** Cuando se llenan, el formulario deja de aceptar altas nuevas y
-enseña un aviso con el correo de contacto; quien ya está dentro puede seguir
-corrigiendo sus datos. El cupo vive en `ayotl.programa.cupo`.
+**14 plazas.** Cuando se llenan, el formulario de alta se sustituye por uno
+de **lista de espera** que pide sólo nombre y correo (`ayotl.espera`), para
+avisar cuando se abra un lugar o empiece otra ronda; quien ya está dentro
+puede seguir corrigiendo sus datos. Pasa igual si las plazas se agotan
+mientras alguien rellenaba el formulario largo: en vez de un error, se le
+ofrece la lista. El cupo vive en `ayotl.programa.cupo` y el panel enseña
+cuánta gente espera detrás.
 
 Cada tester gana, **por día**, según en cuántas apps hizo algo real ese día:
 

@@ -34,7 +34,11 @@ export default async function Beta({ params }: Props) {
           <div>
             <h1>{x("betaTitulo")}</h1>
             <p className="grande">{x("betaIntro")}</p>
-            {libres !== null && <p className="dato" style={{ marginTop: "-0.5rem" }}>{x("betaPlazas")(libres, cupo)}</p>}
+            {libres !== null && (
+              <p className={libres === 0 ? "aviso error" : "dato"} style={libres === 0 ? undefined : { marginTop: "-0.5rem" }}>
+                {x("betaPlazas")(libres, cupo)}
+              </p>
+            )}
             <h2 style={{ fontSize: "1.2rem", marginTop: "2rem" }}>{x("betaQueRecibes")}</h2>
             <ul className="ventajas">
               {x("betaVentajas").map((v) => <li key={v}>{v}</li>)}

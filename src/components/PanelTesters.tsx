@@ -15,7 +15,8 @@ export type Pago = { id: number; tester: number; monto: number; fecha: string; m
 
 type Props = {
   testers: Saldo[]; dias: DiaPrueba[]; pagos: Pago[];
-  fechas: string[]; hoy: string; tarifas: [number, number, number]; configurado: boolean;
+  fechas: string[]; hoy: string; tarifas: [number, number, number];
+  enEspera: number; configurado: boolean;
 };
 
 const LETRA: Record<AppBeta, string> = { mercadito: "M", jlptest: "J", dailychallenge: "D" };
@@ -26,7 +27,7 @@ const MEDIOS = ["codi", "transferencia", "efectivo", "otro"] as const;
  * pega a /api/admin/* y refresca la página: los datos siempre vienen del
  * servidor, aquí no se calcula nada.
  */
-export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, configurado }: Props) {
+export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, configurado }: Props) {
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
@@ -94,6 +95,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, confi
         <div><b>{totalSaldo}</b><span className="dato">por pagar</span></div>
         <div><b>{testers.reduce((n, t) => n + t.dias, 0)}</b><span className="dato">días</span></div>
         <div><b>{testers.reduce((n, t) => n + t.dias_completos, 0)}</b><span className="dato">con las 3</span></div>
+        {enEspera > 0 && <div><b>{enEspera}</b><span className="dato">en espera</span></div>}
         <button type="button" className="enlace-salir" onClick={() => fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh())}>
           Salir
         </button>

@@ -133,6 +133,18 @@ const TEXTOS = {
       "Your name in the credits, if you want.",
     ],
   },
+  esperaTitulo: { es: "Las plazas están ocupadas", en: "All spots are taken" },
+  esperaTexto: {
+    es: "Se llenaron las 14 plazas de esta ronda. Déjame tu correo y te aviso si se abre una, o cuando haya otro programa de pruebas.",
+    en: "The 14 spots for this round are gone. Leave me your email and I'll let you know if one opens up, or when there's another testing round.",
+  },
+  esperaEnviar: { es: "Avísame", en: "Let me know" },
+  esperaComentario: { es: "¿Qué app te interesa? (opcional)", en: "Which app are you interested in? (optional)" },
+  esperaGraciasTitulo: { es: "Apuntado", en: "You're on the list" },
+  esperaGraciasTexto: {
+    es: "Te escribo en cuanto haya un lugar o algo nuevo que probar. Tu correo no se usa para nada más.",
+    en: "I'll write to you as soon as there's a spot or something new to test. Your email isn't used for anything else.",
+  },
   betaPlazas: {
     es: (libres: number, cupo: number) => libres > 0
       ? `Quedan ${libres} de ${cupo} plazas.`

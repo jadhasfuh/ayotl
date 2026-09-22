@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { APPS } from "@/lib/apps";
 import { APPS_BETA, esCorreoGoogle, PLATAFORMAS, type AppBeta, type ErrorBeta } from "@/lib/beta";
 import { t, type Idioma } from "@/lib/idioma";
+import { FormularioEspera } from "./FormularioEspera";
 import { Tortuga } from "./Tortuga";
 
 declare global {
@@ -107,14 +108,10 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
     if (widgetId.current) { window.turnstile?.reset(widgetId.current); setToken(""); }
   }
 
-  if (libres === 0) {
-    return (
-      <div className="formulario gracias" role="status">
-        <Tortuga lado={96} />
-        <p>{x("betaPlazas")(0, 14)}</p>
-        <p><a className="boton secundario" href="mailto:hola@ayotl.dev">hola@ayotl.dev</a></p>
-      </div>
-    );
+  // Sin plazas (al cargar la página o porque se llenaron mientras rellenaba
+  // el formulario): se pide el correo para avisar, no se le despide.
+  if (libres === 0 || (estado.fase === "error" && estado.codigo === "lleno")) {
+    return <FormularioEspera idioma={idioma} turnstileSitio={turnstileSitio} />;
   }
 
   if (estado.fase === "listo") {

@@ -91,7 +91,8 @@ select fecha, apps, cuales, monto from ayotl.dias_resumen order by fecha;
 insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@ejemplo.mx';
 select nombre, dias, ganado, pagado, saldo, ultimo_dia from ayotl.saldos order by nombre;
 
-\echo --- plazas: 14 de cupo, 3 testers dados de alta
+\echo --- plazas: 14 de cupo, y la lista de espera aparte
+insert into ayotl.espera (nombre, email) values ('Curiosa', 'curiosa@ejemplo.mx');
 select * from ayotl.plazas();
 
 \echo --- cortesía: la primera la crea, la segunda no la recorta
