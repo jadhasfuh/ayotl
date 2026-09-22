@@ -15,8 +15,12 @@ import { cruzarMercadito } from "@/lib/mercadito";
 export const dynamic = "force-dynamic";
 
 function secretoValido(req: Request): boolean {
-  const esperado = process.env.CRON_SECRETO;
-  const dado = req.headers.get("x-cron-secret");
+  // Se recortan los dos lados: pegar el valor en el panel de Railway deja un
+  // espacio o un salto con facilidad, y entonces la comparación falla con un
+  // 401 que parece un secreto equivocado. La comparación sigue siendo en
+  // tiempo constante.
+  const esperado = process.env.CRON_SECRETO?.trim();
+  const dado = req.headers.get("x-cron-secret")?.trim();
   if (!esperado || !dado) return false;
   const a = Buffer.from(esperado), b = Buffer.from(dado);
   return a.length === b.length && timingSafeEqual(a, b);
