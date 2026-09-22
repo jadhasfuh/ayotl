@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { APPS } from "@/lib/apps";
 import { APPS_BETA, type AppBeta } from "@/lib/beta";
 
@@ -29,6 +29,10 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
+  // La cuadrícula empieza el día 1 del programa, pero lo que interesa es lo
+  // último: al abrir, se va sola al final (hoy).
+  const scroll = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (scroll.current) scroll.current.scrollLeft = scroll.current.scrollWidth; }, [fechas.length]);
 
   // (tester, fecha) → apps con actividad ese día
   const porCelda = new Map<string, DiaPrueba[]>();
@@ -83,12 +87,19 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
     <div className="panel-admin">
       {aviso && <p className={`aviso ${aviso.tipo}`} role="status">{aviso.texto}</p>}
 
-      <p className="resumen">
-        <b>{testers.length}</b> testers · tarifa <b>{tarifa} MXN</b>/día · por pagar <b>{totalSaldo} MXN</b> ·
-        {" "}<a href="/api/admin/salir" onClick={(e) => { e.preventDefault(); fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh()); }}>salir</a>
-      </p>
+      <div className="resumen">
+        <div><b>{testers.length}</b><span className="dato">testers</span></div>
+        <div><b>{tarifa}</b><span className="dato">MXN/día</span></div>
+        <div><b>{totalSaldo}</b><span className="dato">por pagar</span></div>
+        <div><b>{testers.reduce((n, t) => n + t.dias, 0)}</b><span className="dato">días</span></div>
+        <button type="button" className="enlace-salir" onClick={() => fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh())}>
+          Salir
+        </button>
+      </div>
 
-      <div className="tabla-scroll">
+      {/* Ancho: la cuadrícula completa. La lista de abajo la sustituye en
+          móvil, porque una tabla de 21 columnas en 360 px no hay forma. */}
+      <div className="tabla-scroll solo-ancho" ref={scroll}>
         <table className="cuadricula">
           <thead>
             <tr>
@@ -128,18 +139,49 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
           </tbody>
         </table>
       </div>
-      <p className="ayuda">M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad (pasa el ratón para ver la evidencia). Pulsa una letra para marcar o quitar un día a mano; Mercadito siempre va a mano.</p>
+      <p className="ayuda solo-ancho">M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad (pasa el ratón para ver la evidencia). Pulsa una letra para marcar o quitar un día a mano; Mercadito siempre va a mano.</p>
 
+      <ul className="lista-testers solo-estrecho">
+        {testers.map((t) => {
+          const suyos = dias.filter((d) => d.tester === t.id);
+          const fechasConActividad = [...new Set(suyos.map((d) => d.fecha))].sort();
+          return (
+            <li key={t.id} className="ficha-tester">
+              <div className="ficha-cabecera">
+                <b>{t.nombre}</b>
+                <span className={t.saldo > 0 ? "saldo-pendiente" : "saldo-cero"}>{t.saldo} MXN</span>
+              </div>
+              <p className="dato">{t.dias} días · {t.ganado} ganado · {t.pagado} pagado</p>
+              <p className="ficha-contacto">{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}</p>
+              {fechasConActividad.length > 0 && (
+                <ul className="ficha-dias">
+                  {fechasConActividad.map((f) => (
+                    <li key={f}>
+                      <span className="dato">{f.slice(5)}</span>
+                      {suyos.filter((d) => d.fecha === f).map((d) => (
+                        <span key={d.app} className="dia si" title={JSON.stringify(d.evidencia)}>{LETRA[d.app]}</span>
+                      ))}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+        {testers.length === 0 && <li className="ayuda">Todavía no hay testers.</li>}
+      </ul>
+
+      <h2 className="titulo-gestion">Gestión</h2>
       <div className="acciones-admin">
         <form className="formulario" onSubmit={cruzar}>
-          <h2>Cruzar actividad</h2>
+          <h3>Cruzar actividad</h3>
           <p className="ayuda">El cron lo hace solo a las 6:00 para el día anterior. Aquí, para otra fecha o para ahora mismo.</p>
           <div className="campo"><label htmlFor="cruzar-fecha">Fecha (vacío = ayer)</label><input id="cruzar-fecha" name="fecha" type="date" max={hoy} /></div>
-          <button className="boton" disabled={ocupado}>Cruzar</button>
+          <button className="boton secundario" disabled={ocupado}>Cruzar</button>
         </form>
 
         <form className="formulario" onSubmit={registrarPago}>
-          <h2>Registrar pago</h2>
+          <h3>Registrar pago</h3>
           <div className="campo"><label htmlFor="pago-tester">Tester</label>
             <select id="pago-tester" name="tester" required>
               {testers.map((t) => <option key={t.id} value={t.id}>{t.nombre} — saldo {t.saldo}</option>)}
@@ -154,7 +196,8 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
         </form>
 
         <form className="formulario" onSubmit={marcarDia}>
-          <h2>Marcar un día a mano</h2>
+          <h3>Ajustar actividad</h3>
+          <p className="ayuda">Para excepciones y para Mercadito, que no se cruza solo.</p>
           <div className="campo"><label htmlFor="dia-tester">Tester</label>
             <select id="dia-tester" name="tester" required>{testers.map((t) => <option key={t.id} value={t.id}>{t.nombre}</option>)}</select>
           </div>
@@ -162,18 +205,28 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
           <div className="campo"><label htmlFor="dia-app">App</label>
             <select id="dia-app" name="app">{APPS.map((a) => <option key={a.id} value={a.id}>{a.nombre}</option>)}</select>
           </div>
-          <button className="boton" disabled={ocupado || testers.length === 0}>Marcar</button>
+          <button className="boton secundario" disabled={ocupado || testers.length === 0}>Marcar</button>
         </form>
       </div>
 
-      <h2 style={{ marginTop: "2rem" }}>Pagos</h2>
+      <h2 className="titulo-gestion">Pagos</h2>
       {pagos.length === 0 ? <p className="ayuda">Ninguno todavía.</p> : (
-        <table className="lista">
+        <table className="lista solo-ancho">
           <thead><tr><th>Fecha</th><th>Tester</th><th>Monto</th><th>Medio</th><th>Referencia</th></tr></thead>
           <tbody>{pagos.map((p) => (
             <tr key={p.id}><td>{p.fecha}</td><td>{nombre(p.tester)}</td><td>{p.monto}</td><td>{p.medio}</td><td>{p.referencia}</td></tr>
           ))}</tbody>
         </table>
+      )}
+      {pagos.length > 0 && (
+        <ul className="lista-pagos solo-estrecho">
+          {pagos.map((p) => (
+            <li key={p.id}>
+              <b>{nombre(p.tester)}</b> · {p.monto} MXN
+              <span className="dato">{p.fecha} · {p.medio}{p.referencia ? ` · ${p.referencia}` : ""}</span>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

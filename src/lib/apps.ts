@@ -4,7 +4,11 @@ import type { Idioma } from "./idioma";
  * Las fichas de la vitrina. Una entrada por producto; añadir una app es
  * añadir un objeto aquí (y su id a APPS_BETA en beta.ts si entra al programa).
  *
- * Los textos son de cara al público: los revisa Adrián.
+ * La portada sólo cuenta lo justo para que alguien decida si le interesa: un
+ * lema, una línea y tres datos. Lo demás, en la web de cada producto.
+ *
+ * Los datos son reales y salen de la base o del código de cada app
+ * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
   id: "mercadito" | "jlptest" | "dailychallenge";
@@ -15,6 +19,8 @@ export type App = {
   acento: "agua" | "caparazon" | "tierra";
   lema: Record<Idioma, string>;
   descripcion: Record<Idioma, string>;
+  /** Tres cifras concretas; dicen más que un párrafo y son escaneables. */
+  datos: { valor: string; etiqueta: Record<Idioma, string> }[];
   etiquetas: Record<Idioma, string[]>;
 };
 
@@ -30,9 +36,14 @@ export const APPS: App[] = [
       en: "Digital menu and tools for local businesses.",
     },
     descripcion: {
-      es: "Mesas con QR, comandas, meseros, reservas y corte de caja. Los pedidos llegan al WhatsApp del negocio; Mercadito no toca el dinero. Pensado para Sahuayo, Jiquilpan y alrededores.",
-      en: "QR tables, orders, waiters, reservations and end-of-day cash count. Orders go straight to the business's WhatsApp; Mercadito never touches the money. Built for Sahuayo, Jiquilpan and nearby towns.",
+      es: "Los pedidos llegan al WhatsApp del negocio; Mercadito no toca el dinero.",
+      en: "Orders go straight to the business's WhatsApp; Mercadito never touches the money.",
     },
+    datos: [
+      { valor: "49", etiqueta: { es: "MXN/mes", en: "MXN/month" } },
+      { valor: "0 %", etiqueta: { es: "comisión", en: "commission" } },
+      { valor: "3", etiqueta: { es: "municipios", en: "towns" } },
+    ],
     etiquetas: { es: ["Negocios", "iOS y Android", "Web"], en: ["Business", "iOS & Android", "Web"] },
   },
   {
@@ -46,9 +57,14 @@ export const APPS: App[] = [
       en: "Japanese from N5 to N1, in 20-word units.",
     },
     descripcion: {
-      es: "Vocabulario, gramática, lecturas y mini exámenes del JLPT con repaso espaciado. Más de 8 000 palabras y 800 puntos de gramática, con diccionario propio y un libro del N5.",
-      en: "Vocabulary, grammar, readings and JLPT mini-tests with spaced repetition. Over 8,000 words and 800 grammar points, with a built-in dictionary and an N5 book.",
+      es: "Vocabulario, gramática, lecturas y mini exámenes con repaso espaciado.",
+      en: "Vocabulary, grammar, readings and mini-tests with spaced repetition.",
     },
+    datos: [
+      { valor: "7 957", etiqueta: { es: "palabras", en: "words" } },
+      { valor: "846", etiqueta: { es: "gramáticas", en: "grammar points" } },
+      { valor: "619", etiqueta: { es: "unidades", en: "units" } },
+    ],
     etiquetas: { es: ["Japonés", "Android", "Web"], en: ["Japanese", "Android", "Web"] },
   },
   {
@@ -62,9 +78,14 @@ export const APPS: App[] = [
       en: "A new arcade challenge every day, Atari 2600 style.",
     },
     descripcion: {
-      es: "23 minijuegos, una partida por persona y top 10 a medianoche. Modo party para jugar con amigos y versus en tiempo real. Gratis.",
-      en: "23 mini-games, one run per person and a top 10 at midnight. Party mode to play with friends and real-time versus. Free.",
+      es: "Una partida por persona y top 10 a medianoche. Gratis.",
+      en: "One run per person and a top 10 at midnight. Free.",
     },
+    datos: [
+      { valor: "24", etiqueta: { es: "minijuegos", en: "mini-games" } },
+      { valor: "66", etiqueta: { es: "mapas", en: "maps" } },
+      { valor: "1", etiqueta: { es: "partida/día", en: "run/day" } },
+    ],
     etiquetas: { es: ["Juegos", "Android", "Web"], en: ["Games", "Android", "Web"] },
   },
 ];

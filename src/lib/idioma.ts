@@ -87,26 +87,26 @@ const TEXTOS = {
   // Inicio
   heroTitulo: { es: "Un estudio pequeño. Apps que duran.", en: "A small studio. Apps built to last." },
   heroTexto: {
-    es: "Ayotl significa «tortuga» en náhuatl. Aquí se hacen las cosas a su ritmo: productos chicos, bien terminados, que resuelven algo concreto.",
-    en: "Ayotl means “turtle” in Nahuatl. Things here move at their own pace: small products, well finished, that solve something concrete.",
+    es: "Ayotl significa «tortuga» en náhuatl. Hago productos pequeños, independientes y útiles, uno a uno y sin prisa.",
+    en: "Ayotl means “turtle” in Nahuatl. I build small, independent, useful products, one at a time and in no hurry.",
   },
   heroBotonApps: { es: "Ver las apps", en: "See the apps" },
   heroBotonBeta: { es: "Unirme al programa beta", en: "Join the beta program" },
   appsTitulo: { es: "Las apps", en: "The apps" },
   appsTexto: {
-    es: "Tres productos en producción, cada uno con su propio dominio y su propia gente.",
+    es: "Tres productos en producción, cada uno con su dominio y su propia gente.",
     en: "Three products in production, each with its own domain and its own people.",
   },
   abrirApp: { es: "Abrir", en: "Open" },
-  betaTeaserTitulo: { es: "¿Quieres probar lo nuevo antes que nadie?", en: "Want to try new things before anyone else?" },
+  betaTeaserTitulo: { es: "Lo próximo de Ayotl", en: "What's next at Ayotl" },
   betaTeaserTexto: {
-    es: "Busco testers independientes para las tres apps: gente que las use de verdad y me cuente qué falla.",
-    en: "I'm looking for independent testers for all three apps: people who really use them and tell me what breaks.",
+    es: "Cada versión la prueba antes un grupo pequeño de gente que usa las apps de verdad. Pago 20 pesos por cada día de prueba.",
+    en: "Every release is tried first by a small group of people who actually use the apps. I pay 20 MXN for each day of testing.",
   },
   acercaTeaserTitulo: { es: "¿Por qué una tortuga?", en: "Why a turtle?" },
   acercaTeaserTexto: {
-    es: "El nombre viene de Sahuayo, Michoacán, y de una palabra náhuatl con mucha historia.",
-    en: "The name comes from Sahuayo, Michoacán, and from a Nahuatl word with a long history.",
+    es: "Un nombre náhuatl de Sahuayo, Michoacán, que me gustó por lo que representa: llegar sin correr.",
+    en: "A Nahuatl name from Sahuayo, Michoacán, that I liked for what it stands for: getting there without running.",
   },
   leerMas: { es: "Leer la historia", en: "Read the story" },
 
@@ -182,6 +182,7 @@ const TEXTOS = {
   // Pie
   pieHecho: { es: "Hecho en Sahuayo, Michoacán.", en: "Made in Sahuayo, Michoacán." },
   pieCodigo: { es: "Código", en: "Code" },
+  pieDerechos: { es: "Todos los derechos reservados.", en: "All rights reserved." },
 
   // 404
   noEncontradoTitulo: { es: "Esta página no existe", en: "This page doesn't exist" },

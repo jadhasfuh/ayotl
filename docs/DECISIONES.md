@@ -101,3 +101,26 @@ De la revisión se aplicó todo el bloque 1 y 2:
   Martian Mono 400 (dominios, la etiqueta náhuatl). Dos pesos nuevos.
 
 No se aplicó, por ahora: el formulario en dos pasos y la bitácora con RSS.
+
+## 2026-09-22 — Segunda pasada de diseño: menos texto, más datos
+
+De la segunda revisión se aplicó casi todo, con dos salvedades: los textos
+siguen en primera persona del singular (es un estudio de una persona, no un
+«nosotros»), y las cifras de las tarjetas son las reales, comprobadas contra
+la base y el código de cada app el 2026-09-22 (7 957 palabras, 846
+gramáticas, 619 unidades; 24 minijuegos, 66 mapas), no las del ejemplo.
+
+- **Tarjetas**: un glifo por producto (QR, cuadro de kanji, marciano de
+  píxeles), dos líneas de texto y tres cifras concretas. Lo demás, en la web
+  de cada app.
+- **Hero** con más aire y la etimología como entradilla.
+- **Beta** pasa de «¿quieres probar?» a «Lo próximo de Ayotl», diciendo lo que
+  se gana (20 MXN por día).
+- **Pie** con la tortuga y el nombre en vez de una línea de copyright.
+- **Cabecera** más baja y la navegación de móvil como pestañas subrayadas.
+- **Botones**: principal verde, secundario de filo, acento sólo para enviar un
+  formulario. En oscuro el texto de los botones se invierte a tinta oscura:
+  blanco sobre el verde claro daba 2.16:1 (comprobado).
+- **Panel de admin**: responsive de verdad. La cuadrícula de días se queda en
+  escritorio; en móvil hay una ficha por tester con sus días. Acciones
+  agrupadas bajo «Gestión» y la cuadrícula se abre mostrando hoy.

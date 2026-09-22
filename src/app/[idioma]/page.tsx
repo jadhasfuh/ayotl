@@ -55,12 +55,13 @@ export default async function Inicio({ params }: Props) {
             <div className="panel">
               <h2>{x("betaTeaserTitulo")}</h2>
               <p>{x("betaTeaserTexto")}</p>
-              <Link href={ruta("beta", idioma)} className="boton acento">{x("navBeta")}</Link>
+              <Link href={ruta("beta", idioma)} className="boton">{x("navBeta")} →</Link>
             </div>
-            <div className="panel">
+            <div className="panel panel-tortuga">
+              <Tortuga lado={56} />
               <h2>{x("acercaTeaserTitulo")}</h2>
               <p>{x("acercaTeaserTexto")}</p>
-              <Link href={ruta("acerca", idioma)} className="boton secundario">{x("leerMas")}</Link>
+              <Link href={ruta("acerca", idioma)} className="enlace-flecha">{x("leerMas")} →</Link>
             </div>
           </div>
         </section>
