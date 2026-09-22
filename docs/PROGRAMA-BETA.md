@@ -188,3 +188,56 @@ select * from ayotl.dias_prueba where fecha >= current_date - 14 order by fecha,
 select * from ayotl.registrar_dia('2026-09-25');      -- cruzar un día a mano
 insert into ayotl.pagos (tester, monto, medio, referencia) values (3, 280, 'codi', 'folio…');
 ```
+
+## Anuncio para grupos de Facebook de Sahuayo
+
+Los grupos no se pueden publicar por la Graph API (Meta cerró la Groups API en
+2024), así que esto va copiado a mano. La página de Ayotl sí podría
+automatizarse, como se hace en Daily Challenge y Mercadito.
+
+**Antes de publicar, una advertencia que conviene tener presente:** Google
+revisa que los testers de una prueba cerrada sean personas reales que usan la
+app. Un anuncio público centrado en el pago («te pago por abrir mi app») es el
+patrón que buscan al comprobar los 14 días, y hay grupos de intercambio de
+testers que rechazan por eso. Por eso la versión recomendada habla de probar y
+opinar, y menciona el apoyo económico como una línea más.
+
+### Versión recomendada
+
+> **Busco 8 personas de Sahuayo para probar tres apps hechas aquí**
+>
+> Me llamo Adrián y desde Sahuayo hago software: Mercadito (menú digital para
+> negocios de aquí), JLPTest (para estudiar japonés) y Daily Challenge (un
+> reto arcade diario). Antes de publicar las versiones nuevas necesito que las
+> pruebe gente de verdad, no yo solo.
+>
+> Son 14 días, del 22 de septiembre al 5 de octubre. Lo único que pido es que
+> las uses un ratito al día y me digas qué falla, qué no se entiende o qué te
+> gustaría que hiciera.
+>
+> A cambio: un mes gratis de JLPTest completo, acceso a lo nuevo antes que
+> nadie, tu nombre en los agradecimientos si quieres, y un apoyo de entre 5 y
+> 20 pesos por cada día que las uses (se paga junto al final, por CoDi o
+> transferencia).
+>
+> Hace falta un teléfono Android o iPhone, una cuenta de Gmail y WhatsApp.
+>
+> Apúntate aquí: https://ayotl.dev/beta — quedan 8 lugares.
+
+### Versión corta, para bolsa de trabajo
+
+> Busco 8 personas de Sahuayo para probar durante 14 días tres apps hechas
+> aquí (un menú digital para negocios, una de japonés y un juego diario).
+> No es un empleo: son unos minutos al día usándolas y decirme qué falla.
+> Incluye un mes gratis de JLPTest y un apoyo de 5 a 20 pesos por día usado,
+> pagado al final por CoDi. Hace falta Android o iPhone, Gmail y WhatsApp.
+> https://ayotl.dev/beta
+
+### Qué revisar después de publicar
+
+- Las plazas se agotan solas: al llegar a 14, `/beta` deja de aceptar altas y
+  enseña el correo de contacto. No hay que cerrar nada a mano.
+- En el panel, quien aparezca en rojo como «sin WhatsApp» no puede sumar días
+  de Mercadito: hay que pedírselo.
+- Conviene responder a cada alta por WhatsApp con los enlaces de la prueba
+  cerrada de Play, que es el paso que de verdad cuenta para Google.
