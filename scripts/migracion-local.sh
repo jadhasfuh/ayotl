@@ -100,6 +100,12 @@ select ayotl.dar_cortesia('ana@ejemplo.mx', 30) is not null as creada;
 select ayotl.dar_cortesia('ana@ejemplo.mx', 1) is not null as segunda;
 select email, (hasta > now() + interval '20 days') as sigue_larga, nota from public.cortesias;
 
+\echo --- el freno del cruce: el primero se lo lleva, el segundo no
+select ayotl.tomar_cruce(5) as primero, ayotl.tomar_cruce(5) as segundo;
+\echo --- y pasados los minutos, vuelve a tocar
+update ayotl.programa set ultimo_cruce = now() - interval '10 minutes';
+select ayotl.tomar_cruce(5) as otra_vez;
+
 \echo --- anon no puede ni ver el esquema (debe FALLAR); service_role sí
 set role anon;
 \set ON_ERROR_STOP 0

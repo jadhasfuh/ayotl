@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cabecera } from "@/components/Cabecera";
 import { EntrarAdmin } from "@/components/EntrarAdmin";
 import { PanelTesters, type DiaPrueba, type Pago, type Saldo } from "@/components/PanelTesters";
+import { Refrescar } from "@/components/Refrescar";
+import { cruzarMercadito } from "@/lib/mercadito";
 import { adminConfigurado, esAdmin } from "@/lib/admin";
 import { idiomaDe } from "@/lib/paginas";
 import { ayotl } from "@/lib/supabase-servidor";
@@ -50,6 +52,23 @@ export default async function Testers({ params }: Props) {
 
   const base = ayotl();
   const hoy = hoyMexico();
+
+  // Cruzar el día de hoy al abrir, para que la cuadrícula esté al día sin
+  // tocar ningún botón. `tomar_cruce` limita esto a una vez cada cinco
+  // minutos: la página se renderiza en cada visita y cada cruce abre una
+  // conexión a la base de Mercadito.
+  if (base) {
+    const { data: toca } = await base.rpc("tomar_cruce", { p_minutos: 5 });
+    if (toca === true) {
+      const [sql, mercadito] = await Promise.allSettled([
+        base.rpc("registrar_dia", { p_fecha: hoy }),
+        cruzarMercadito(hoy),
+      ]);
+      if (sql.status === "rejected") console.error("[panel] cruce sql", sql.reason);
+      if (mercadito.status === "rejected") console.error("[panel] cruce mercadito", mercadito.reason);
+    }
+  }
+
   const [programa, saldos, dias, pagos, plazas] = base
     ? await Promise.all([
         base.from("programa").select("tarifa_1, tarifa_2, tarifa_3, inicio, fin").eq("id", 1).maybeSingle(),
@@ -70,6 +89,7 @@ export default async function Testers({ params }: Props) {
   return (
     <>
       {cabecera}
+      <Refrescar />
       <main className="contenedor seccion">
         <h1 style={{ fontSize: "2rem" }}>Testers</h1>
         <PanelTesters

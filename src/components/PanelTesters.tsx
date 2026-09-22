@@ -195,8 +195,8 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
       <h2 className="titulo-gestion">Gestión</h2>
       <div className="acciones-admin">
         <form className="formulario" onSubmit={cruzar}>
-          <h3>Cruzar actividad</h3>
-          <p className="ayuda">El cron lo hace solo cada mañana para el día anterior (6:00 las apps de esta base, 6:10 Mercadito). Aquí, para ver hoy sin esperar o para rellenar un día viejo.</p>
+          <h3>Cruzar un día viejo</h3>
+          <p className="ayuda">Hoy se cruza solo al abrir el panel, y el cron hace el día anterior cada mañana. Esto es para rellenar una fecha más atrás (alguien que se apuntó tarde, por ejemplo).</p>
           <div className="campo"><label htmlFor="cruzar-fecha">Fecha (vacío = ayer)</label><input id="cruzar-fecha" name="fecha" type="date" max={hoy} /></div>
           <button className="boton secundario" disabled={ocupado}>Cruzar</button>
         </form>
