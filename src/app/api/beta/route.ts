@@ -1,6 +1,7 @@
 import { createHmac } from "node:crypto";
 import { NextResponse } from "next/server";
 import { esquemaRegistro, type ErrorBeta } from "@/lib/beta";
+import { avisarAltaBeta } from "@/lib/correo";
 import { ayotl } from "@/lib/supabase-servidor";
 import { verificarTurnstile } from "@/lib/turnstile";
 
@@ -66,6 +67,9 @@ export async function POST(req: Request) {
     if ((count ?? 0) >= MAX_POR_IP_Y_HORA) return error("muchos", 429);
   }
 
+  // ¿Ya existía? Sólo para el asunto del aviso; el upsert es el mismo.
+  const { data: previo } = await base.from("testers").select("id").eq("email", datos.email).maybeSingle();
+
   const { error: errorAlta } = await base.from("testers").upsert({
     nombre: datos.nombre,
     email: datos.email,
@@ -85,5 +89,9 @@ export async function POST(req: Request) {
     console.error("[beta] alta", errorAlta.code, errorAlta.message);
     return error(errorAlta.code === "23514" ? "datos" : "generico", errorAlta.code === "23514" ? 400 : 500);
   }
+
+  // El aviso va después de guardar y sin `await` sobre su resultado para el
+  // usuario: si Resend tarda o falla, el alta ya está hecha.
+  await avisarAltaBeta(datos, !previo);
   return NextResponse.json({ ok: true });
 }

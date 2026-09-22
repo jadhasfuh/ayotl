@@ -12,7 +12,7 @@ transferencia. La tarifa vive en `ayotl.programa.tarifa_dia`.
 |---|---|---|
 | JLPTest | código al correo (Supabase Auth) | ≥ 1 repaso (`progreso.datos.hechosPorDia`) o ≥ 1 respuesta de examen (`resultados`) |
 | Daily Challenge | anónimo + **Google** opcional | ≥ 1 partida (`arcade.partidas`) |
-| Mercadito | teléfono + PIN, **otra Supabase** | se marca a mano en el panel (no hay cruce automático todavía) |
+| Mercadito | teléfono + PIN, **otra Supabase** | ≥ 1 pedido suyo, o una sesión iniciada ese día (se cruza por teléfono) |
 
 ## Cómo se cruza
 
@@ -26,6 +26,26 @@ app en `ayotl.dias_prueba`, con la evidencia (`{"repasos": 12}`,
 Un cron de `pg_cron` (`ayotl-registrar-dia`, 12:00 UTC = 6:00 de México)
 lo corre a diario para el día anterior. Es idempotente: repetirlo actualiza
 la evidencia, no duplica. El panel tiene un botón para correrlo a mano.
+
+**Mercadito va por otro camino**, porque está en otra Supabase y se entra con
+teléfono, no con Google: un segundo cron (`ayotl-mercadito`, 6:10) pega con
+`pg_net` a `/api/cron/mercadito` de ayotl.dev con la cabecera
+`X-Cron-Secret`, y ese endpoint abre la base de Mercadito con `pg`
+(`MERCADITO_DATABASE_URL`, sólo lectura) y cruza el teléfono del tester con
+sus pedidos y sus sesiones. La fecha de la sesión sale de `expires_at` menos
+los 30 días que dura; es aproximada, así que el pedido manda cuando hay los
+dos. El botón «Cruzar actividad» del panel hace las dos cosas.
+
+**El periodo manda.** `ayotl.programa.inicio` y `fin` acotan el programa: un
+día fuera no se registra ni se paga (`ayotl.en_periodo`). Vacíos, cuenta
+cualquier día. Se ponen así:
+
+```sql
+update ayotl.programa set inicio = '2026-09-25', fin = '2026-10-08';
+```
+
+**Cada alta avisa por correo** a `hola@ayotl.dev` (Resend), con los datos del
+tester y un enlace al panel; si Resend falla, el alta ya está guardada.
 
 `ayotl.saldos` (vista): días distintos × tarifa − `ayotl.pagos`.
 

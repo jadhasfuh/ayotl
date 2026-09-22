@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { esAdmin } from "@/lib/admin";
+import { cruzarMercadito } from "@/lib/mercadito";
 import { ayotl } from "@/lib/supabase-servidor";
 
 const esquema = z.object({ fecha: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional() });
@@ -17,5 +18,12 @@ export async function POST(req: Request) {
   if (!r.success) return NextResponse.json({ error: "datos" }, { status: 400 });
   const { data, error } = await base.rpc("registrar_dia", r.data.fecha ? { p_fecha: r.data.fecha } : {});
   if (error) { console.error("[admin] registrar", error.message); return NextResponse.json({ error: "generico" }, { status: 500 }); }
-  return NextResponse.json({ ok: true, filas: Array.isArray(data) ? data.length : 0 });
+
+  // Mercadito va aparte: otra base, se cruza por teléfono.
+  const ayer = new Date(Date.now() - 24 * 3600 * 1000)
+    .toLocaleDateString("en-CA", { timeZone: "America/Mexico_City" });
+  const mercadito = await cruzarMercadito(r.data.fecha ?? ayer);
+
+  const filas = (Array.isArray(data) ? data.length : 0) + mercadito.marcados;
+  return NextResponse.json({ ok: true, filas });
 }

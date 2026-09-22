@@ -19,6 +19,26 @@ Las migraciones siguientes van igual, en orden de fecha. La de
 `select * from cron.job` y su resultado real en `net._http_response` no
 aplica aquí (no usa pg_net); lo que hizo queda en `ayotl.dias_prueba`.
 
+### Avisos por correo (Resend)
+
+La cuenta de Resend ya existe (la usa jlptest). Hay que **añadir el dominio
+`ayotl.dev`** y copiar en Cloudflare los registros que dé: un TXT de SPF en
+`send`, el TXT de DKIM (`resend._domainkey`), un MX en `send` y, si se quiere,
+el `_dmarc`. Ese MX es de un subdominio, así que **no estorba al Email
+Routing**, que se queda con el MX de la raíz. Luego, una API key con permiso
+de envío → `RESEND_API_KEY`.
+
+### El cron de Mercadito
+
+1. Crear el secreto en Vault, una vez, con el mismo valor que `CRON_SECRETO`
+   de Railway:
+   ```sql
+   select vault.create_secret('<el valor>', 'ayotl_cron_secreto');
+   ```
+2. Aplicar `supabase/migrations/20260922190000_ayotl_cron_mercadito.sql`.
+3. Comprobar al día siguiente: `select * from net._http_response order by id desc limit 3`
+   (no `cron.job_run_details`, que dice `succeeded` aunque la API conteste 500).
+
 ## 2. Cloudflare Turnstile
 
 Cloudflare → Turnstile → Add widget: dominio `ayotl.dev`, modo *Managed*.
@@ -38,6 +58,9 @@ están en `.env.example`.
    - `TURNSTILE_SECRETO`
    - `NEXT_PUBLIC_SITIO=https://ayotl.dev`
    - `ADMIN_SECRETO` (contraseña larga del panel `/admin/testers`)
+   - `RESEND_API_KEY`, y opcionalmente `CORREO_DE` y `CORREO_AVISOS`
+   - `MERCADITO_DATABASE_URL` (pooler de sesión de la Supabase de Mercadito)
+   - `CRON_SECRETO` (el mismo valor va en Supabase Vault, ver abajo)
 3. Settings → Networking → **Custom Domain** → `ayotl.dev`. Railway enseña un
    destino `xxxx.up.railway.app` y espera a ver el DNS.
 
