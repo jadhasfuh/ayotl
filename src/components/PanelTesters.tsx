@@ -139,7 +139,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
           </tbody>
         </table>
       </div>
-      <p className="ayuda solo-ancho">M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad (pasa el ratón para ver la evidencia). Pulsa una letra para marcar o quitar un día a mano; Mercadito siempre va a mano.</p>
+      <p className="ayuda solo-ancho">M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad (pasa el ratón para ver la evidencia). Pulsa una letra para marcar o quitar un día a mano.</p>
 
       <ul className="lista-testers solo-estrecho">
         {testers.map((t) => {
@@ -175,7 +175,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
       <div className="acciones-admin">
         <form className="formulario" onSubmit={cruzar}>
           <h3>Cruzar actividad</h3>
-          <p className="ayuda">El cron lo hace solo a las 6:00 para el día anterior. Aquí, para otra fecha o para ahora mismo.</p>
+          <p className="ayuda">El cron lo hace solo cada mañana para el día anterior (6:00 las apps de esta base, 6:10 Mercadito). Aquí, para ver hoy sin esperar o para rellenar un día viejo.</p>
           <div className="campo"><label htmlFor="cruzar-fecha">Fecha (vacío = ayer)</label><input id="cruzar-fecha" name="fecha" type="date" max={hoy} /></div>
           <button className="boton secundario" disabled={ocupado}>Cruzar</button>
         </form>
@@ -197,7 +197,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
 
         <form className="formulario" onSubmit={marcarDia}>
           <h3>Ajustar actividad</h3>
-          <p className="ayuda">Para excepciones y para Mercadito, que no se cruza solo.</p>
+          <p className="ayuda">Para excepciones: un día que el cruce no vio (alguien entró con otra cuenta) o uno que no debería contar.</p>
           <div className="campo"><label htmlFor="dia-tester">Tester</label>
             <select id="dia-tester" name="tester" required>{testers.map((t) => <option key={t.id} value={t.id}>{t.nombre}</option>)}</select>
           </div>
