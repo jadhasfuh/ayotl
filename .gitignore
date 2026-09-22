@@ -1,0 +1,26 @@
+node_modules/
+.next/
+out/
+.DS_Store
+*.log
+
+# Secretos y contexto operativo: nunca al repo.
+.env
+.env.*
+!.env.example
+CONTEXTO-PRIVADO.md
+clave.json
+*.p8
+*.keystore
+*.jks
+
+# Los genera Next: no son código ni documentación del proyecto.
+next-env.d.ts
+*.tsbuildinfo
+
+# Los escribe `next dev` (Next 16) para los asistentes; se regeneran solos.
+AGENTS.md
+CLAUDE.md
+
+# El prompt de arranque describe infraestructura de todos los productos: no va al repo público.
+PROMPT-INICIAL.md
