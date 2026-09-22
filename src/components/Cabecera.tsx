@@ -26,8 +26,8 @@ export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina })
     <header className="cabecera">
       <div className="contenedor">
         <Link href={ruta("inicio", idioma)} className="marca" aria-label={x("marca")}>
-          <Tortuga />
-          <span>{x("marca")}</span>
+          <Tortuga lado={34} />
+          <span className="marca-nombre">{x("marca")}</span>
         </Link>
         <nav className="nav" aria-label={x("navInicio")}>{enlaces}</nav>
         <div className="cabecera-acciones">

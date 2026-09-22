@@ -34,7 +34,7 @@ export default async function Inicio({ params }: Props) {
                 <Link href={ruta("beta", idioma)} className="boton secundario">{x("heroBotonBeta")}</Link>
               </div>
             </div>
-            <div className="hero-tortuga"><Tortuga grosor={1.6} /></div>
+            <div className="hero-tortuga"><Tortuga lado={320} /></div>
           </div>
         </section>
 

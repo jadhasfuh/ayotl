@@ -21,7 +21,7 @@ export default async function Acerca({ params }: Props) {
       <Cabecera idioma={idioma} pagina="acerca" />
       <main id="contenido" className="seccion">
         <div className="contenedor prosa">
-          <div style={{ color: "var(--caparazon)", width: 120 }}><Tortuga grosor={2} /></div>
+          <div style={{ color: "var(--caparazon)" }}><Tortuga lado={120} /></div>
           <h1>{x("acercaTitulo")}</h1>
           {x("acercaParrafos").map((p) => <p key={p.slice(0, 24)}>{p}</p>)}
           <h2>{x("acercaStackTitulo")}</h2>

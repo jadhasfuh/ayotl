@@ -45,7 +45,8 @@ src/lib/supabase-servidor.ts     cliente con llave secreta, `import "server-only
 src/lib/turnstile.ts             verificación del token (servidor)
 src/lib/admin.ts                 cookie httpOnly con HMAC de ADMIN_SECRETO
 src/lib/sitio.ts                 URL pública (https://ayotl.dev por defecto en producción)
-public/icono.svg                 favicon; el mismo trazo que components/Tortuga.tsx
+public/icono.svg                 favicon; el mismo trazo que components/Tortuga.tsx (único sitio duplicado)
+src/app/og/Literata-Medium.ttf   la serif del nombre en la tarjeta OG: Satori no lee next/font
 supabase/migrations/             esquema `ayotl` (nunca escribe en `public` ni `arcade`; registrar_dia sólo los lee)
 scripts/migracion-local.sh       prueba de la migración en local
 docs/                            decisiones y despliegue

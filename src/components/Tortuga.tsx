@@ -1,20 +1,59 @@
 /**
- * La tortuga: un solo trazo, sin relleno, en `currentColor`. Es el mismo
- * dibujo que public/icono.svg; si cambia uno, cambia el otro. Es un
- * placeholder hasta que haya logo definitivo.
+ * El logo: una tortuga de perfil, sólo trazo, en `currentColor`.
+ *
+ * Es la única fuente del dibujo: el favicon (`public/icono.svg`), los PNG de
+ * `/icono/[medida]` y la tarjeta de `/og/[idioma]` salen todos de estos dos
+ * `path`. Si cambia el dibujo, cambia también `public/icono.svg` a mano — es
+ * el único sitio donde el trazo está duplicado, porque un SVG estático no
+ * puede importar de aquí.
  */
-export const TRAZO_TORTUGA =
-  "M5 37 C9 35 12 33 15 32 C13 16 43 8 48 30 C51 27 56 27 58 30 C63 33 63 40 58 42 C54 44 50 42 48 40 L46 47 L41 47 L42 41 C36 44 28 44 22 41 L21 47 L16 47 L18 40 C14 40 9 40 5 37 Z L15 32 L47 32";
 
-export function Tortuga({ grosor = 3, className, titulo }: { grosor?: number; className?: string; titulo?: string }) {
+/** Caparazón, cabeza, dos patas y cola. */
+export const TRAZO_TORTUGA =
+  "M6 37 C6 22 15 16 25 16 C36 16 44 23 44 37 Z " +
+  "M44 37 L48 31.5 L54 29.5 L59 32 L56 36 L49 37 Z " +
+  "M32 37 L33 46 L40 46 L39 37 M13 37 L14 46 L21 46 L20 37 " +
+  "M6 35 L3 32";
+
+/** Igual, sin cola: a 32 px o menos el trazo suelto se lee como suciedad. */
+export const TRAZO_TORTUGA_MINI =
+  "M6 37 C6 22 15 16 25 16 C36 16 44 23 44 37 Z " +
+  "M44 37 L48 31.5 L54 29.5 L59 32 L56 36 L49 37 Z " +
+  "M32 37 L33 46 L40 46 L39 37 M13 37 L14 46 L21 46 L20 37";
+
+/**
+ * Grosor por tamaño: busca unos 2 px aparentes de 20 a 192, con algo más de
+ * peso arriba para que en grande siga pareciendo un grabado y no un pelo.
+ */
+export function grosorTortuga(lado: number): number {
+  if (lado <= 24) return 5;
+  if (lado <= 32) return 4.25;
+  if (lado <= 48) return 3.4;
+  if (lado <= 128) return 2.9;
+  if (lado <= 256) return 3;
+  return 2.6;
+}
+
+export function trazoTortuga(lado: number): string {
+  return lado <= 32 ? TRAZO_TORTUGA_MINI : TRAZO_TORTUGA;
+}
+
+type Props = { lado?: number; grosor?: number; className?: string; titulo?: string };
+
+export function Tortuga({ lado = 34, grosor, className, titulo }: Props) {
   return (
     <svg
-      viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth={grosor}
-      strokeLinecap="round" strokeLinejoin="round" className={className}
-      role={titulo ? "img" : undefined} aria-hidden={titulo ? undefined : true}
+      viewBox="0 0 64 64"
+      width={lado} height={lado}
+      fill="none" stroke="currentColor"
+      strokeWidth={grosor ?? grosorTortuga(lado)}
+      strokeLinecap="round" strokeLinejoin="round"
+      className={className}
+      role={titulo ? "img" : undefined}
+      aria-hidden={titulo ? undefined : true}
     >
       {titulo && <title>{titulo}</title>}
-      <path d={TRAZO_TORTUGA} />
+      <path d={trazoTortuga(lado)} />
     </svg>
   );
 }

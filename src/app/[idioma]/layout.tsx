@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Literata, Martian_Mono } from "next/font/google";
 import "../globals.css";
 import { Pie } from "@/components/Pie";
 import { IDIOMAS } from "@/lib/idioma";
@@ -16,14 +16,14 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-// Inter autoalojada: el subconjunto latino es pequeño y así no depende de
-// Google en tiempo de ejecución.
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--fuente-ui",
-  display: "swap",
-});
+// Las tres autoalojadas: el subconjunto latino es pequeño y así no dependen
+// de Google en tiempo de ejecución. Inter para la interfaz, Literata (un solo
+// peso) para los títulos y el logotipo, Martian Mono (un peso) para los datos
+// cortos: dominios, la etiqueta náhuatl, los números de tarjeta.
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--f-inter", display: "swap" });
+const literata = Literata({ subsets: ["latin"], weight: ["500"], variable: "--f-literata", display: "swap" });
+const mono = Martian_Mono({ subsets: ["latin"], weight: ["400"], variable: "--f-mono", display: "swap" });
+const fuentes = `${inter.variable} ${literata.variable} ${mono.variable}`;
 
 export const metadata: Metadata = {
   // Sin `metadataBase` Next deja las URL de Open Graph relativas y quien
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width", initialScale: 1, maximumScale: 5,
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0f1a19" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e1a18" },
     { media: "(prefers-color-scheme: light)", color: "#f6f1e7" },
   ],
 };
@@ -57,7 +57,7 @@ export default async function Layout({ children, params }: { children: React.Rea
   return (
     // suppressHydrationWarning: el script de arriba puede haber puesto
     // data-tema antes de que React compare el HTML.
-    <html lang={idioma} className={inter.variable} suppressHydrationWarning>
+    <html lang={idioma} className={fuentes} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
       </head>

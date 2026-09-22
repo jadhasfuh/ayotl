@@ -80,3 +80,24 @@ Supabase, entra por teléfono) se marca a mano hasta que haga falta más.
 El panel `/admin/testers` va detrás de una contraseña única (`ADMIN_SECRETO`)
 y una cookie HMAC, no de Supabase Auth: es para una persona. Detalle en
 docs/PROGRAMA-BETA.md.
+
+## 2026-09-22 — Logo definitivo y revisión de look and feel
+
+El placeholder de una línea se cambió por el dibujo de la revisión de diseño:
+caparazón, cabeza, dos patas y cola, con una variante sin cola para 32 px o
+menos (el trazo suelto se leía como suciedad) y una tabla de grosores por
+tamaño (`grosorTortuga`). El viewBox se recorta al dibujo en los iconos y en
+la tarjeta OG, porque el cuadrado entero dejaba la tortuga perdida en medio
+lienzo.
+
+De la revisión se aplicó todo el bloque 1 y 2:
+
+- **Contraste**: `--tierra` daba 3.32:1 sobre la arena (comprobado), así que
+  el texto de las etiquetas usa `--tierra-texto` #7f5a2e (5.48:1) y la línea
+  de 4 px se queda con el ocre. `--agua-solido` para el relleno de botón.
+  `--fondo-2` era casi el fondo; ahora se distingue.
+- **Filo en vez de sombra**, radio 14 → 6, píldora sólo en botones y chips.
+- **Tres fuentes**: Inter (interfaz), Literata 500 (títulos y logotipo),
+  Martian Mono 400 (dominios, la etiqueta náhuatl). Dos pesos nuevos.
+
+No se aplicó, por ahora: el formulario en dos pasos y la bitácora con RSS.

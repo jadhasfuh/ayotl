@@ -97,7 +97,7 @@ export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; tur
   if (estado.fase === "listo") {
     return (
       <div className="formulario gracias" role="status">
-        <Tortuga grosor={2} />
+        <Tortuga lado={96} />
         <h2>{x("graciasTitulo")}</h2>
         <p>{x("graciasTexto")}</p>
       </div>
