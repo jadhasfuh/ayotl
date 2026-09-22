@@ -118,13 +118,20 @@ const TEXTOS = {
   },
   betaQueRecibes: { es: "Qué recibes", en: "What you get" },
   betaVentajas: {
-    es: ["Acceso a las versiones nuevas antes de que salgan.", "Un canal directo conmigo para reportar fallos y proponer cosas.", "Tu nombre en los agradecimientos, si quieres."],
-    en: ["Access to new versions before they ship.", "A direct line to me for bugs and ideas.", "Your name in the credits, if you want."],
+    es: ["Acceso a las versiones nuevas antes de que salgan.", "20 pesos por cada día que uses alguna de las apps durante la prueba; se pagan al terminar, por CoDi o transferencia.", "Un canal directo conmigo para reportar fallos y proponer cosas.", "Tu nombre en los agradecimientos, si quieres."],
+    en: ["Access to new versions before they ship.", "20 MXN for every day you use any of the apps during the test; paid at the end via CoDi or bank transfer.", "A direct line to me for bugs and ideas.", "Your name in the credits, if you want."],
   },
   campoNombre: { es: "Nombre", en: "Name" },
   campoEmail: { es: "Correo electrónico", en: "Email" },
   campoPlataforma: { es: "Dispositivo principal", en: "Main device" },
   campoApps: { es: "Apps que te interesan", en: "Apps you're interested in" },
+  campoEmailGoogle: { es: "Correo de Google Play (si es distinto)", en: "Google Play email (if different)" },
+  campoEmailGoogleAyuda: {
+    es: "La cuenta de Google con la que instalas apps. Úsala también para entrar a las apps: así puedo ver tu actividad y contarte los días.",
+    en: "The Google account you install apps with. Use it to sign in to the apps too, so I can see your activity and count your days.",
+  },
+  campoTelefono: { es: "WhatsApp (opcional)", en: "WhatsApp (optional)" },
+  campoTelefonoAyuda: { es: "10 dígitos. Para Mercadito y para pagarte por CoDi.", en: "10 digits. For Mercadito and to pay you via CoDi." },
   campoComentario: { es: "Algo más (opcional)", en: "Anything else (optional)" },
   campoComentarioAyuda: {
     es: "Modelo del teléfono, qué sueles usar, por qué te interesa…",

@@ -1,7 +1,9 @@
 #!/bin/bash
-# Prueba la migración de `ayotl` en el Postgres 16 local antes de tocar
-# producción. Crea una base desechable con stubs de los roles de Supabase y
-# ejercita los `check`, el upsert por email y el conteo por IP.
+# Prueba las migraciones de `ayotl` en el Postgres 16 local antes de tocar
+# producción. Crea una base desechable con stubs de los roles de Supabase y de
+# las tablas ajenas que lee `ayotl.registrar_dia` (auth, jlptest, arcade), y
+# ejercita los `check`, el upsert por email, el conteo por IP, el cruce diario
+# y los saldos.
 set -euo pipefail
 PSQL=/opt/homebrew/opt/postgresql@16/bin/psql
 DB=ayotl_prueba
@@ -18,21 +20,30 @@ end $$;
 -- creó service_role sin bypassrls, hay que ponérselo, que es como viene en
 -- Supabase. Sin esto el conteo de abajo da 0 y parece que la RLS lo tapa.
 alter role service_role bypassrls;
+create schema auth;
+create table auth.users (id uuid primary key, email text);
+-- lo que lee registrar_dia de jlptest (public) y Daily Challenge (arcade)
+create table public.progreso (perfil text primary key, datos jsonb not null default '{}');
+create table public.resultados (id bigserial primary key, perfil text not null, creado timestamptz not null default now());
+create schema arcade;
+create table arcade.partidas (id bigserial primary key, usuario uuid not null, puntaje int not null, creado_en timestamptz not null default now());
 SQL
 for f in supabase/migrations/*.sql; do
   echo "--- $f"
-  $PSQL -q -v ON_ERROR_STOP=1 -d $DB -f "$f"
+  # pg_cron no existe en local: el bloque del cron va al final y se recorta
+  sed '/^-- Cron:/,$d' "$f" | $PSQL -q -v ON_ERROR_STOP=1 -d $DB
 done
 $PSQL -v ON_ERROR_STOP=1 -d $DB <<'SQL'
 \echo --- alta normal y upsert por email (debe quedar UNA fila, con los datos nuevos)
 insert into ayotl.testers (nombre, email, plataforma, apps, ip_hash)
   values ('Ana', 'ana@ejemplo.mx', 'android', '{mercadito}', repeat('a', 32));
-insert into ayotl.testers (nombre, email, plataforma, apps, comentario, ip_hash)
-  values ('Ana López', 'ana@ejemplo.mx', 'ios', '{mercadito,jlptest}', 'Pixel 8', repeat('a', 32))
+insert into ayotl.testers (nombre, email, plataforma, apps, comentario, ip_hash, email_google, telefono)
+  values ('Ana López', 'ana@ejemplo.mx', 'ios', '{mercadito,jlptest}', 'Pixel 8', repeat('a', 32), 'ana.lopez@gmail.com', '3531234567')
   on conflict (email) do update
     set nombre = excluded.nombre, plataforma = excluded.plataforma, apps = excluded.apps,
-        comentario = excluded.comentario, actualizado_en = now();
-select nombre, email, plataforma, apps, comentario from ayotl.testers;
+        comentario = excluded.comentario, email_google = excluded.email_google, telefono = excluded.telefono,
+        actualizado_en = now();
+select nombre, email, email_google, telefono, plataforma, apps, comentario from ayotl.testers;
 
 \echo --- conteo por ip en la última hora (lo que hace /api/beta): debe dar 1
 select count(*) from ayotl.testers where ip_hash = repeat('a', 32) and actualizado_en > now() - interval '1 hour';
@@ -44,16 +55,37 @@ insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'Bet
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'nokia', '{jlptest}'); -- plataforma
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{}');          -- sin apps
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{otra}');      -- app desconocida
+update ayotl.testers set telefono = 'abc' where email = 'ana@ejemplo.mx';                                             -- teléfono
 \set ON_ERROR_STOP 1
+
+\echo --- cruce diario: Ana (por su correo de Google) estudió y jugó el 2026-09-20; Beto no tiene cuenta
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{jlptest}');
+insert into auth.users values ('11111111-1111-1111-1111-111111111111', 'Ana.Lopez@gmail.com');
+insert into public.progreso values ('11111111-1111-1111-1111-111111111111', '{"hechosPorDia": {"2026-09-20": 12}}');
+insert into public.resultados (perfil, creado) values ('11111111-1111-1111-1111-111111111111', '2026-09-20 22:30-06');
+insert into arcade.partidas (usuario, puntaje, creado_en) values
+  ('11111111-1111-1111-1111-111111111111', 340, '2026-09-20 23:50-06'),   -- 05:50 UTC del 21: debe contar como el 20
+  ('11111111-1111-1111-1111-111111111111', 120, '2026-09-21 09:00-06');
+select * from ayotl.registrar_dia('2026-09-20');
+\echo --- otra vez (idempotente: mismas dos filas, sin duplicar)
+select count(*) as filas from (select * from ayotl.registrar_dia('2026-09-20')) x;
+select tester, fecha, app, evidencia from ayotl.dias_prueba order by app;
+\echo --- el 21 sólo hay una partida
+select app, evidencia from ayotl.registrar_dia('2026-09-21');
+\echo --- saldos: Ana 2 días × 20 = 40, paga 20, queda 20; Beto 0
+insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@ejemplo.mx';
+select nombre, dias, ganado, pagado, saldo, ultimo_dia from ayotl.saldos order by nombre;
 
 \echo --- anon no puede ni ver el esquema (debe FALLAR); service_role sí
 set role anon;
 \set ON_ERROR_STOP 0
 select count(*) from ayotl.testers;
+select ayotl.registrar_dia('2026-09-20');
 \set ON_ERROR_STOP 1
 reset role;
 set role service_role;
 select count(*) as visibles_para_service_role from ayotl.testers;
+select count(*) as saldos_visibles from ayotl.saldos;
 reset role;
 SQL
 echo "Migración OK en $DB"

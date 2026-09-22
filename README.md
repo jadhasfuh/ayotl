@@ -32,6 +32,8 @@ src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio
 src/app/[idioma]/acerca/page.tsx historia del nombre (en inglés se sirve como /en/about)
 src/app/global-not-found.tsx     404 de todo el sitio, bilingüe, con su propio <html> (el layout raíz vive en [idioma])
 src/app/api/beta/route.ts        POST: zod → honeypot → Turnstile → límite por IP → upsert por email con la llave secreta
+src/app/[idioma]/admin/testers/  panel del programa Beta (contraseña ADMIN_SECRETO): días, saldos, pagos
+src/app/api/admin/*              entrar/salir, marcar días, registrar pagos, cruzar una fecha (sólo con la cookie de admin)
 src/app/og/[idioma]/route.tsx    tarjeta Open Graph 1200×630 (build)
 src/app/icono/[medida]/route.tsx PNG del icono en 32/180/192/512 (build)
 src/app/robots.ts, sitemap.ts
@@ -41,9 +43,10 @@ src/lib/apps.ts                  las fichas de la vitrina
 src/lib/beta.ts                  contrato del formulario (zod), compartido cliente/servidor
 src/lib/supabase-servidor.ts     cliente con llave secreta, `import "server-only"`, esquema `ayotl`
 src/lib/turnstile.ts             verificación del token (servidor)
+src/lib/admin.ts                 cookie httpOnly con HMAC de ADMIN_SECRETO
 src/lib/sitio.ts                 URL pública (https://ayotl.dev por defecto en producción)
 public/icono.svg                 favicon; el mismo trazo que components/Tortuga.tsx
-supabase/migrations/             esquema `ayotl` (nunca toca `public` ni `arcade`)
+supabase/migrations/             esquema `ayotl` (nunca escribe en `public` ni `arcade`; registrar_dia sólo los lee)
 scripts/migracion-local.sh       prueba de la migración en local
 docs/                            decisiones y despliegue
 ```
@@ -57,6 +60,7 @@ docs/                            decisiones y despliegue
 | `TURNSTILE_SITIO` | servidor → baja como prop | clave de sitio de Turnstile (pública por diseño) |
 | `TURNSTILE_SECRETO` | servidor | verificar el token |
 | `NEXT_PUBLIC_SITIO` | servidor | `https://ayotl.dev`; si falta, se asume |
+| `ADMIN_SECRETO` | servidor | contraseña del panel `/admin/testers` (≥ 12 caracteres); sin ella el panel no existe |
 
 No hay ninguna `NEXT_PUBLIC_` que el navegador necesite: nada se hornea en el
 build y el Dockerfile no lleva `ARG`.
@@ -66,6 +70,13 @@ build y el Dockerfile no lleva `ARG`.
 `git push origin main`. Railway construye el Dockerfile y publica. Los pasos de
 la primera vez (servicio, variables, dominio en Cloudflare, Turnstile, esquema
 expuesto en Supabase) están en [docs/DESPLIEGUE.md](docs/DESPLIEGUE.md).
+
+## Programa Beta
+
+Los testers ganan 20 MXN por día de actividad real; el cruce con jlptest y
+Daily Challenge lo hace `ayotl.registrar_dia` (misma base) con un cron
+diario, y el panel `/admin/testers` enseña días, saldos y pagos. Todo en
+[docs/PROGRAMA-BETA.md](docs/PROGRAMA-BETA.md).
 
 ## Reglas de la casa (resumen)
 

@@ -77,6 +77,8 @@ export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; tur
           plataforma: datos.get("plataforma"),
           apps,
           comentario: datos.get("comentario") || "",
+          email_google: datos.get("email_google") || "",
+          telefono: datos.get("telefono") || "",
           idioma,
           sitioweb: datos.get("sitioweb") || "",
           turnstile: token,
@@ -124,6 +126,16 @@ export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; tur
       <div className="campo">
         <label htmlFor="email">{x("campoEmail")}</label>
         <input id="email" name="email" type="email" required maxLength={254} autoComplete="email" inputMode="email" />
+      </div>
+      <div className="campo">
+        <label htmlFor="email_google">{x("campoEmailGoogle")}</label>
+        <input id="email_google" name="email_google" type="email" maxLength={254} autoComplete="off" inputMode="email" />
+        <span className="ayuda">{x("campoEmailGoogleAyuda")}</span>
+      </div>
+      <div className="campo">
+        <label htmlFor="telefono">{x("campoTelefono")}</label>
+        <input id="telefono" name="telefono" type="tel" pattern="\+?[0-9 ]{10,15}" maxLength={15} autoComplete="tel" inputMode="tel" />
+        <span className="ayuda">{x("campoTelefonoAyuda")}</span>
       </div>
       <fieldset className="campo">
         <legend>{x("campoPlataforma")}</legend>

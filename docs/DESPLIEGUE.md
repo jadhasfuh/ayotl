@@ -14,6 +14,11 @@ Después de esto, desplegar es `git push origin main`.
 3. Copiar la URL del proyecto y la **secret key** (no la publishable) para
    Railway.
 
+Las migraciones siguientes van igual, en orden de fecha. La de
+`ayotl_programa` deja un cron (`ayotl-registrar-dia`, 12:00 UTC): se ve en
+`select * from cron.job` y su resultado real en `net._http_response` no
+aplica aquí (no usa pg_net); lo que hizo queda en `ayotl.dias_prueba`.
+
 ## 2. Cloudflare Turnstile
 
 Cloudflare → Turnstile → Add widget: dominio `ayotl.dev`, modo *Managed*.
@@ -32,6 +37,7 @@ están en `.env.example`.
    - `TURNSTILE_SITIO`
    - `TURNSTILE_SECRETO`
    - `NEXT_PUBLIC_SITIO=https://ayotl.dev`
+   - `ADMIN_SECRETO` (contraseña larga del panel `/admin/testers`)
 3. Settings → Networking → **Custom Domain** → `ayotl.dev`. Railway enseña un
    destino `xxxx.up.railway.app` y espera a ver el DNS.
 

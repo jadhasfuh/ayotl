@@ -17,6 +17,14 @@ export const esquemaRegistro = z.object({
   plataforma: z.enum(PLATAFORMAS),
   apps: z.array(z.enum(APPS_BETA)).min(1).max(APPS_BETA.length),
   comentario: z.string().trim().max(500).optional().default(""),
+  /**
+   * El correo de Google con el que entra a Play y a las apps, si es otro que
+   * el de contacto: es la clave del cruce diario de actividad (ver migración
+   * ayotl_programa). Vacío = el mismo de arriba.
+   */
+  email_google: z.string().trim().toLowerCase().email().max(254).or(z.literal("")).optional().default(""),
+  /** WhatsApp: para Mercadito (que entra por teléfono) y para pagar por CoDi. */
+  telefono: z.string().trim().regex(/^\+?[0-9 ]{10,15}$/).or(z.literal("")).optional().default(""),
   idioma: z.enum(["es", "en"]).default("es"),
   /**
    * Honeypot: un campo oculto que las personas no ven y los bots rellenan.

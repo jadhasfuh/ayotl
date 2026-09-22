@@ -72,6 +72,8 @@ export async function POST(req: Request) {
     plataforma: datos.plataforma,
     apps: Array.from(new Set(datos.apps)),
     comentario: datos.comentario || null,
+    email_google: datos.email_google && datos.email_google !== datos.email ? datos.email_google : null,
+    telefono: datos.telefono ? datos.telefono.replace(/\s+/g, "") : null,
     idioma: datos.idioma,
     ip_hash,
     actualizado_en: new Date().toISOString(),

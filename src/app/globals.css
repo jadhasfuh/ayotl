@@ -279,3 +279,25 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
   html { scroll-behavior: auto; }
   .boton, .tarjeta { transition: none; }
 }
+
+/* --- Panel de administración (/admin/testers) ------------------------- */
+.panel-admin .resumen { color: var(--tinta-2); }
+.panel-admin .ayuda { font-size: 0.85rem; color: var(--tinta-2); }
+.tabla-scroll { overflow-x: auto; border: 1px solid var(--linea); border-radius: var(--radio); background: var(--fondo-2); }
+.cuadricula { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }
+.cuadricula th, .cuadricula td { padding: 0.35rem 0.4rem; border-bottom: 1px solid var(--linea); text-align: center; }
+.cuadricula th.hoy { color: var(--agua); }
+.cuadricula .fijo { position: sticky; left: 0; background: var(--fondo-2); text-align: left; min-width: 180px; z-index: 1; }
+.cuadricula .fijo small { display: block; font-weight: 400; color: var(--tinta-2); font-size: 0.75rem; }
+.cuadricula td.con { background: var(--caparazon-suave); }
+.dia { font: inherit; font-size: 0.72rem; font-weight: 600; width: 20px; height: 20px; padding: 0; margin: 0 1px; border-radius: 4px; border: 1px solid var(--linea); background: transparent; color: var(--tinta-2); cursor: pointer; }
+.dia.si { background: var(--caparazon); color: #fff; border-color: transparent; }
+.dia.no { opacity: 0.45; }
+.dia:hover { opacity: 1; border-color: var(--agua); }
+.acciones-admin { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+@media (min-width: 900px) { .acciones-admin { grid-template-columns: repeat(3, 1fr); } }
+.acciones-admin h2 { font-size: 1.1rem; margin: 0; }
+.acciones-admin .campo select { width: 100%; padding: 0.6rem 0.8rem; border-radius: 10px; border: 1px solid var(--linea); background: var(--fondo); color: var(--tinta); font: inherit; }
+.acciones-admin .campo input[type="date"], .acciones-admin .campo input[type="number"] { width: 100%; padding: 0.6rem 0.8rem; border-radius: 10px; border: 1px solid var(--linea); background: var(--fondo); color: var(--tinta); font: inherit; }
+.lista { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.lista th, .lista td { padding: 0.5rem; border-bottom: 1px solid var(--linea); text-align: left; }

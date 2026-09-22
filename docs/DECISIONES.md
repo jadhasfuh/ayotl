@@ -67,3 +67,16 @@ Tortuga de perfil en un solo trazo SVG (`public/icono.svg` y
 `components/Tortuga.tsx` comparten el `path`). Se cambiará por el definitivo;
 cuando llegue, cambiar el trazo en los dos sitios y regenerar nada más: los
 PNG (`/icono/*`, `/og/*`) se construyen del mismo `path` en el build.
+
+## 2026-09-22 — Programa Beta: 20 MXN por día, cruce en SQL
+
+Un tester cobra por día con actividad real en cualquiera de sus apps (no por
+app), 20 MXN, al terminar. Como jlptest, Daily Challenge y `ayotl` comparten
+base, el cruce es una función SQL (`ayotl.registrar_dia`) con `pg_cron`, sin
+pg_net ni secretos: lee `auth.users` por el correo de Google del tester, y de
+ahí `public.progreso`/`resultados` y `arcade.partidas`. Mercadito (otra
+Supabase, entra por teléfono) se marca a mano hasta que haga falta más.
+
+El panel `/admin/testers` va detrás de una contraseña única (`ADMIN_SECRETO`)
+y una cookie HMAC, no de Supabase Auth: es para una persona. Detalle en
+docs/PROGRAMA-BETA.md.
