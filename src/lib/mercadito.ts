@@ -49,7 +49,9 @@ export async function cruzarMercadito(fecha: string): Promise<Resultado> {
     !llave && "MERCADITO_SUPABASE_SECRET_KEY",
     !base && "SUPABASE_URL/SUPABASE_SECRET_KEY",
   ].filter(Boolean);
-  if (faltan.length) return { marcados: 0, saltados: 0, error: `faltan: ${faltan.join(", ")}` };
+  if (faltan.length || !url || !llave || !base) {
+    return { marcados: 0, saltados: 0, error: `faltan: ${faltan.join(", ")}` };
+  }
 
   // Los testers con teléfono, indexados por sus diez dígitos.
   const { data: testers, error: errorTesters } = await base
