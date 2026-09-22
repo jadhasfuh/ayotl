@@ -222,6 +222,21 @@ const TEXTOS = {
       "I'm Adrián. I build software from Sahuayo for specific people: the businesses in my region, people studying Japanese, and people who want a five-minute challenge every day. Each app has its own domain and its own life; Ayotl is the umbrella that brings them together.",
     ],
   },
+  acercaQuienTitulo: { es: "Quién está detrás", en: "Who's behind it" },
+  acercaQuienParrafos: {
+    es: [
+      "Soy desarrollador de software: unos cinco años, los últimos tres en Salesforce —Industries/OmniStudio, Order Management, Financial Services Cloud— y antes en automatización con RPA. He pasado por IBM, Bluetab, xpd global y ahora Ness Digital Engineering.",
+      "Estudio japonés y tengo el JLPT N3, que es de donde salió JLPTest; vivo en Sahuayo, que es de donde salió Mercadito. Ayotl es lo que hago por mi cuenta, fuera del trabajo.",
+    ],
+    en: [
+      "I'm a software developer: about five years, the last three in Salesforce — Industries/OmniStudio, Order Management, Financial Services Cloud — and before that in RPA automation. I've worked at IBM, Bluetab, xpd global and now Ness Digital Engineering.",
+      "I study Japanese and hold the JLPT N3, which is where JLPTest came from; I live in Sahuayo, which is where Mercadito came from. Ayotl is what I do on my own, outside work.",
+    ],
+  },
+  acercaDisponible: {
+    es: "Abierto a proyectos de Salesforce e integraciones.",
+    en: "Open to Salesforce and integration work.",
+  },
   acercaStackTitulo: { es: "Cómo está hecho", en: "How it's built" },
   acercaStackTexto: {
     es: "Todo corre sobre la misma base: Next.js y TypeScript, desplegado en Railway con Docker, datos en Supabase (Postgres) y las apps de tienda como envoltorios de la web. Código en GitHub, comentarios en español.",

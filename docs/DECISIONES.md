@@ -124,3 +124,20 @@ gramáticas, 619 unidades; 24 minijuegos, 66 mapas), no las del ejemplo.
 - **Panel de admin**: responsive de verdad. La cuadrícula de días se queda en
   escritorio; en móvil hay una ficha por tester con sus días. Acciones
   agrupadas bajo «Gestión» y la cuadrícula se abre mostrando hoy.
+
+## 2026-09-22 — Lo profesional en «Acerca de», no una página de CV
+
+Un currículum completo en ayotl.dev competiría con LinkedIn, envejece y no
+añade nada que LinkedIn no haga mejor. Lo que el sitio sí puede demostrar y
+LinkedIn no son tres productos en producción hechos por una persona.
+
+Así que en «Acerca de» va un párrafo corto (Salesforce, RPA, dónde ha
+trabajado, JLPT N3, Sahuayo) que además explica de dónde salió cada app,
+enlaces a LinkedIn y GitHub, y una línea de disponibilidad. Las treinta
+certificaciones de LinkedIn no se copian: las de 2021-2022 diluyen a las que
+pesan.
+
+Se añade también un `Person` en JSON-LD con `sameAs` a LinkedIn, GitHub y los
+tres dominios: es lo que le dice al buscador que todo eso es la misma
+persona, para que quien busque el nombre encuentre el sitio y no sólo el
+perfil.
