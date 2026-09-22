@@ -39,4 +39,4 @@ export const esquemaRegistro = z.object({
 export type Registro = z.infer<typeof esquemaRegistro>;
 
 /** Códigos que devuelve /api/beta; el formulario los traduce. */
-export type ErrorBeta = "datos" | "muchos" | "robot" | "no_disponible" | "generico";
+export type ErrorBeta = "datos" | "muchos" | "robot" | "no_disponible" | "lleno" | "generico";

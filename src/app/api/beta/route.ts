@@ -67,8 +67,14 @@ export async function POST(req: Request) {
     if ((count ?? 0) >= MAX_POR_IP_Y_HORA) return error("muchos", 429);
   }
 
-  // ¿Ya existía? Sólo para el asunto del aviso; el upsert es el mismo.
+  // ¿Ya existía? Para el asunto del aviso y, sobre todo, para el tope: quien
+  // ya está dentro puede corregir sus datos aunque no queden plazas.
   const { data: previo } = await base.from("testers").select("id").eq("email", datos.email).maybeSingle();
+
+  if (!previo) {
+    const { data: plazas } = await base.rpc("plazas").maybeSingle();
+    if (plazas && (plazas as { libres: number }).libres <= 0) return error("lleno", 409);
+  }
 
   const { error: errorAlta } = await base.from("testers").upsert({
     nombre: datos.nombre,
@@ -88,6 +94,15 @@ export async function POST(req: Request) {
     // error de datos, no del servidor, pero conviene verlo en el log.
     console.error("[beta] alta", errorAlta.code, errorAlta.message);
     return error(errorAlta.code === "23514" ? "datos" : "generico", errorAlta.code === "23514" ? 400 : 500);
+  }
+
+  // La cortesía de JLPTest: un mes de acceso completo, por el correo con el
+  // que entra a las apps. Va por `public.cortesias`, que jlptest ya consulta.
+  if (!previo) {
+    const { error: errorCortesia } = await base.rpc("dar_cortesia", {
+      p_email: datos.email_google || datos.email,
+    });
+    if (errorCortesia) console.error("[beta] cortesía", errorCortesia.message);
   }
 
   // El aviso va después de guardar y sin `await` sobre su resultado para el

@@ -2,9 +2,20 @@
 
 ## La regla
 
-Un tester gana **20 MXN por cada día** en que hizo algo real en al menos una
+**14 plazas.** Cuando se llenan, el formulario deja de aceptar altas nuevas y
+enseña un aviso con el correo de contacto; quien ya está dentro puede seguir
+corrigiendo sus datos. El cupo vive en `ayotl.programa.cupo`.
+
+Cada tester gana **20 MXN por cada día** en que hizo algo real en al menos una
 de las apps que está probando. Se paga al terminar la prueba, por CoDi o
 transferencia. La tarifa vive en `ayotl.programa.tarifa_dia`.
+
+Además, al apuntarse se lleva **un mes de JLPTest completo**: `/api/beta`
+llama a `ayotl.dar_cortesia`, que escribe una fila en `public.cortesias`
+(la tabla que jlptest ya consulta) por el correo de Google del tester. Es la
+única vez que este esquema escribe fuera de `ayotl`, y es una fila, no DDL.
+Si la persona ya tenía una cortesía más larga, no se le recorta. Los días
+están en `ayotl.programa.dias_cortesia`.
 
 «Algo real» es lo que las apps ya guardan; no hubo que tocarlas:
 

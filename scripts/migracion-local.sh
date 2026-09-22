@@ -25,6 +25,7 @@ create table auth.users (id uuid primary key, email text);
 -- lo que lee registrar_dia de jlptest (public) y Daily Challenge (arcade)
 create table public.progreso (perfil text primary key, datos jsonb not null default '{}');
 create table public.resultados (id bigserial primary key, perfil text not null, creado timestamptz not null default now());
+create table public.cortesias (email text primary key, hasta timestamptz not null, nota text, creado timestamptz not null default now());
 create schema arcade;
 create table arcade.partidas (id bigserial primary key, usuario uuid not null, puntaje int not null, creado_en timestamptz not null default now());
 SQL
@@ -75,6 +76,14 @@ select app, evidencia from ayotl.registrar_dia('2026-09-21');
 \echo --- saldos: Ana 2 días × 20 = 40, paga 20, queda 20; Beto 0
 insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@ejemplo.mx';
 select nombre, dias, ganado, pagado, saldo, ultimo_dia from ayotl.saldos order by nombre;
+
+\echo --- plazas: 14 de cupo, 3 testers dados de alta
+select * from ayotl.plazas();
+
+\echo --- cortesía: la primera la crea, la segunda no la recorta
+select ayotl.dar_cortesia('ana@ejemplo.mx', 30) is not null as creada;
+select ayotl.dar_cortesia('ana@ejemplo.mx', 1) is not null as segunda;
+select email, (hasta > now() + interval '20 days') as sigue_larga, nota from public.cortesias;
 
 \echo --- anon no puede ni ver el esquema (debe FALLAR); service_role sí
 set role anon;

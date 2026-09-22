@@ -118,8 +118,28 @@ const TEXTOS = {
   },
   betaQueRecibes: { es: "Qué recibes", en: "What you get" },
   betaVentajas: {
-    es: ["Acceso a las versiones nuevas antes de que salgan.", "20 pesos por cada día que uses alguna de las apps durante la prueba; se pagan al terminar, por CoDi o transferencia.", "Un canal directo conmigo para reportar fallos y proponer cosas.", "Tu nombre en los agradecimientos, si quieres."],
-    en: ["Access to new versions before they ship.", "20 MXN for every day you use any of the apps during the test; paid at the end via CoDi or bank transfer.", "A direct line to me for bugs and ideas.", "Your name in the credits, if you want."],
+    es: [
+      "Un mes de JLPTest completo, gratis, desde que te apuntas.",
+      "20 pesos por cada día que uses alguna de las apps durante la prueba; se pagan al terminar, por CoDi o transferencia.",
+      "Acceso a las versiones nuevas antes de que salgan.",
+      "Un canal directo conmigo para reportar fallos y proponer cosas.",
+      "Tu nombre en los agradecimientos, si quieres.",
+    ],
+    en: [
+      "A full month of JLPTest, free, from the day you sign up.",
+      "20 MXN for every day you use any of the apps during the test; paid at the end via CoDi or bank transfer.",
+      "Access to new versions before they ship.",
+      "A direct line to me for bugs and ideas.",
+      "Your name in the credits, if you want.",
+    ],
+  },
+  betaPlazas: {
+    es: (libres: number, cupo: number) => libres > 0
+      ? `Quedan ${libres} de ${cupo} plazas.`
+      : `Las ${cupo} plazas están ocupadas. Escríbeme y te aviso si se abre una.`,
+    en: (libres: number, cupo: number) => libres > 0
+      ? `${libres} of ${cupo} spots left.`
+      : `All ${cupo} spots are taken. Write to me and I'll let you know if one opens up.`,
   },
   campoNombre: { es: "Nombre", en: "Name" },
   campoEmail: { es: "Correo electrónico", en: "Email" },
@@ -148,14 +168,15 @@ const TEXTOS = {
   },
   graciasTitulo: { es: "¡Listo, ya estás dentro!", en: "Done, you're in!" },
   graciasTexto: {
-    es: "Te escribo en cuanto haya algo que probar. Gracias por echar una mano.",
-    en: "I'll write to you as soon as there's something to test. Thanks for helping out.",
+    es: "Te escribo en cuanto haya algo que probar. Tu mes de JLPTest ya está activo: entra con el mismo correo. Gracias por echar una mano.",
+    en: "I'll write to you as soon as there's something to test. Your free month of JLPTest is already active: sign in with the same email. Thanks for helping out.",
   },
   errorGenerico: { es: "No se pudo enviar. Inténtalo de nuevo en un momento.", en: "Couldn't send. Please try again in a moment." },
   errorDatos: { es: "Revisa los campos marcados.", en: "Please check the highlighted fields." },
   errorMuchos: { es: "Demasiados intentos desde esta conexión. Prueba más tarde.", en: "Too many attempts from this connection. Try again later." },
   errorRobot: { es: "No pudimos verificar que eres una persona. Recarga la página e inténtalo otra vez.", en: "We couldn't verify you're a person. Reload the page and try again." },
   errorNoDisponible: { es: "El formulario no está disponible ahora mismo. Escríbeme a hola@ayotl.dev.", en: "The form isn't available right now. Email me at hola@ayotl.dev." },
+  errorLleno: { es: "Se acaban de llenar las plazas. Escríbeme a hola@ayotl.dev y te aviso si se abre una.", en: "The spots just filled up. Email me at hola@ayotl.dev and I'll let you know if one opens." },
   elegirUnaApp: { es: "Elige al menos una app.", en: "Pick at least one app." },
 
   // Acerca de

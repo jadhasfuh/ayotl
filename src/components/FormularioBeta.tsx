@@ -27,7 +27,7 @@ type Estado = { fase: "editando" | "enviando" | "listo" } | { fase: "error"; cod
  * `turnstileSitio` llega como prop desde la página (leída en el servidor):
  * si es null, el widget no se pinta y el servidor tampoco lo exige.
  */
-export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; turnstileSitio: string | null }) {
+export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idioma; turnstileSitio: string | null; libres: number | null }) {
   const x = t(idioma);
   const [estado, setEstado] = useState<Estado>({ fase: "editando" });
   const [token, setToken] = useState("");
@@ -94,6 +94,16 @@ export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; tur
     if (widgetId.current) { window.turnstile?.reset(widgetId.current); setToken(""); }
   }
 
+  if (libres === 0) {
+    return (
+      <div className="formulario gracias" role="status">
+        <Tortuga lado={96} />
+        <p>{x("betaPlazas")(0, 14)}</p>
+        <p><a className="boton secundario" href="mailto:hola@ayotl.dev">hola@ayotl.dev</a></p>
+      </div>
+    );
+  }
+
   if (estado.fase === "listo") {
     return (
       <div className="formulario gracias" role="status">
@@ -106,7 +116,7 @@ export function FormularioBeta({ idioma, turnstileSitio }: { idioma: Idioma; tur
 
   const MENSAJES: Record<ErrorBeta, string> = {
     datos: x("errorDatos"), muchos: x("errorMuchos"), robot: x("errorRobot"),
-    no_disponible: x("errorNoDisponible"), generico: x("errorGenerico"),
+    no_disponible: x("errorNoDisponible"), lleno: x("errorLleno"), generico: x("errorGenerico"),
   };
   const PLATAFORMA_TEXTO = { ios: x("plataformaIos"), android: x("plataformaAndroid"), web: x("plataformaWeb") };
   const enviando = estado.fase === "enviando";
