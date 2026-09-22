@@ -30,7 +30,7 @@ src/app/[idioma]/layout.tsx      raíz: <html lang>, Inter, script de tema, meta
 src/app/[idioma]/page.tsx        inicio: hero + tarjetas + teasers
 src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio de Turnstile al servir)
 src/app/[idioma]/acerca/page.tsx historia del nombre (en inglés se sirve como /en/about)
-src/app/[idioma]/[...resto]/     todo lo demás → 404 (not-found.tsx, bilingüe y estático)
+src/app/global-not-found.tsx     404 de todo el sitio, bilingüe, con su propio <html> (el layout raíz vive en [idioma])
 src/app/api/beta/route.ts        POST: zod → honeypot → Turnstile → límite por IP → upsert por email con la llave secreta
 src/app/og/[idioma]/route.tsx    tarjeta Open Graph 1200×630 (build)
 src/app/icono/[medida]/route.tsx PNG del icono en 32/180/192/512 (build)

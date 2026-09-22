@@ -14,7 +14,8 @@ export function generateStaticParams() {
 
 export async function GET(_req: Request, { params }: { params: Promise<{ idioma: string }> }) {
   const { idioma } = await params;
-  const x = t(esIdioma(idioma) ? idioma : "es");
+  if (!esIdioma(idioma)) return new Response("No", { status: 404 });
+  const x = t(idioma);
   return new ImageResponse(
     (
       <div style={{

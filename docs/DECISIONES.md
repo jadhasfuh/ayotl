@@ -40,10 +40,21 @@ necesita su dirección. La cookie sólo sirve para que la raíz mande a `/en` a
 quien prefiera inglés la primera vez. Se implementa con `proxy.ts` (reescritura
 interna a `src/app/[idioma]/…`), no con `next-intl` ni similares.
 
-## 2026-09-21 — 404 bilingüe y estático
+## 2026-09-21 — 404 bilingüe con `global-not-found`
 
-`not-found.tsx` no recibe params, y leer `headers()` ahí vuelve dinámico el
-segmento entero. Como es la página que menos gente ve, sale en los dos idiomas.
+`not-found.tsx` dentro de `[idioma]` no sirve: no recibe params, leer
+`headers()` ahí vuelve dinámico el segmento entero, y con el layout raíz en un
+segmento dinámico Next devolvía un cascarón vacío que sólo se rellenaba con
+JS (curl y los buscadores veían el 404 genérico). `app/global-not-found.tsx`
+(flag `experimental.globalNotFound`) se sirve a nivel de enrutado con su
+propio `<html>`. Como no sabemos el idioma de quien llega, sale en los dos.
+
+## 2026-09-22 — Cabeceras de seguridad en `next.config.ts`
+
+CSP que sólo permite scripts propios y de Turnstile (con `'unsafe-inline'`
+porque Next hidrata con scripts inline), `nosniff`, `Referrer-Policy`,
+`Permissions-Policy` y `frame-ancestors 'none'`. `/favicon.ico` se reescribe a
+`/icono/32` para que los navegadores que lo piden solos no generen 404.
 
 ## 2026-09-21 — La IP no se guarda en claro
 
