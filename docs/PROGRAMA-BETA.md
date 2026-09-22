@@ -89,18 +89,19 @@ Trampa: jlptest guarda `hechosPorDia` con la fecha **UTC** del navegador, así
 que un repaso a las 8 pm de Sahuayo cae bajo el día siguiente. Cada día de
 estudio sigue contando una vez, sólo desplazado; no se corrige.
 
-## Lo que el formulario exige según las apps
+## Lo que el formulario exige siempre
 
-| Si marca… | Hace falta | Por qué |
-|---|---|---|
-| Mercadito | **WhatsApp** | Esa app vive en otra base y se entra con teléfono; sin él no hay con qué cruzar sus días |
-| Daily Challenge | **Cuenta de Gmail** | Se entra con «Entrar con Google»; con otro correo no se sabe quién jugó |
-| JLPTest | nada más | El código de acceso llega a cualquier correo |
+| Dato | Por qué |
+|---|---|
+| **WhatsApp** | Es como se paga (CoDi), como se avisa, y como se entra a Mercadito: sin él sus días no se pueden cruzar |
+| **Cuenta de Gmail** | Es con la que se acepta la prueba cerrada en Play y con la que se entra a Daily Challenge |
 
-Lo comprueba el formulario, el servidor (`esquemaRegistro`) y la base
-(`testers_mercadito_telefono` y `testers_daily_google`, como `not valid` para
-no invalidar las altas anteriores a la regla). `ayotl.testers_incompletos`
-lista a quien le falte algo; el panel lo marca en rojo como «sin WhatsApp».
+Empezaron siendo condicionales (según las apps marcadas) y quedaban altas a
+medias: cinco de las seis primeras entraron sin teléfono. Ahora hacen falta
+siempre. Lo comprueba el formulario, el servidor (`esquemaRegistro`) y la
+base (`testers_telefono` y `testers_google`, como `not valid` para no
+invalidar esas altas anteriores). `ayotl.testers_incompletos` lista a quien
+le falte algo y el panel lo marca en rojo.
 
 ## Lo que hay que pedirle a cada tester
 

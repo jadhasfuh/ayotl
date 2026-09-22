@@ -50,13 +50,20 @@ export const esquemaRegistro = z.object({
   /** Token de Turnstile; vacío si el widget no está configurado. */
   turnstile: z.string().max(4096).optional().default(""),
 }).superRefine((datos, ctx) => {
-  // Mercadito se cruza por teléfono (vive en otra base y se entra con
-  // teléfono y PIN): sin él, sus días no se pueden contar.
-  if (datos.apps.includes("mercadito") && !datos.telefono) {
+  // Los dos hacen falta siempre, marque las apps que marque:
+  //
+  //  · El teléfono, porque se paga por CoDi y porque Mercadito se entra con
+  //    él (es la única forma de contar sus días).
+  //  · Una cuenta de Google, porque los enlaces de la prueba cerrada de Play
+  //    se aceptan con cuenta de Google y porque es como se entra a Daily
+  //    Challenge. Sin ella no hay manera de saber quién jugó.
+  //
+  // Antes eran condicionales y quedaban altas a medias: gente sin teléfono a
+  // la que no se le puede pagar ni contar Mercadito.
+  if (!datos.telefono) {
     ctx.addIssue({ code: "custom", path: ["telefono"], message: "telefono_mercadito" });
   }
-  // Daily Challenge se identifica con «Entrar con Google».
-  if (datos.apps.includes("dailychallenge") && !esCorreoGoogle(datos.email_google || datos.email)) {
+  if (!esCorreoGoogle(datos.email_google || datos.email)) {
     ctx.addIssue({ code: "custom", path: ["email_google"], message: "google_dailychallenge" });
   }
 });

@@ -37,9 +37,9 @@ done
 $PSQL -v ON_ERROR_STOP=1 -d $DB <<'SQL'
 \echo --- alta normal y upsert por email (debe quedar UNA fila, con los datos nuevos)
 insert into ayotl.testers (nombre, email, plataforma, apps, ip_hash, telefono)
-  values ('Ana', 'ana@ejemplo.mx', 'android', '{mercadito}', repeat('a', 32), '3539990000');
+  values ('Ana', 'ana@gmail.com', 'android', '{mercadito}', repeat('a', 32), '3539990000');
 insert into ayotl.testers (nombre, email, plataforma, apps, comentario, ip_hash, email_google, telefono)
-  values ('Ana López', 'ana@ejemplo.mx', 'ios', '{mercadito,jlptest}', 'Pixel 8', repeat('a', 32), 'ana.lopez@gmail.com', '3531234567')
+  values ('Ana López', 'ana@gmail.com', 'ios', '{mercadito,jlptest}', 'Pixel 8', repeat('a', 32), 'ana.lopez@gmail.com', '3531234567')
   on conflict (email) do update
     set nombre = excluded.nombre, plataforma = excluded.plataforma, apps = excluded.apps,
         comentario = excluded.comentario, email_google = excluded.email_google, telefono = excluded.telefono,
@@ -51,27 +51,27 @@ select count(*) from ayotl.testers where ip_hash = repeat('a', 32) and actualiza
 
 \echo --- los check rechazan lo que no debe entrar (cada línea debe FALLAR)
 \set ON_ERROR_STOP 0
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('B', 'b@ejemplo.mx', 'web', '{jlptest}');          -- nombre corto
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'Beto@Ejemplo.mx', 'web', '{jlptest}');   -- email sin normalizar
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'nokia', '{jlptest}'); -- plataforma
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{}');          -- sin apps
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{otra}');      -- app desconocida
-update ayotl.testers set telefono = 'abc' where email = 'ana@ejemplo.mx';                                             -- teléfono
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('B', 'b@gmail.com', 'web', '{jlptest}');          -- nombre corto
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'Beto@Gmail.com', 'web', '{jlptest}');   -- email sin normalizar
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@gmail.com', 'nokia', '{jlptest}'); -- plataforma
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@gmail.com', 'web', '{}');          -- sin apps
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@gmail.com', 'web', '{otra}');      -- app desconocida
+update ayotl.testers set telefono = 'abc' where email = 'ana@gmail.com';                                             -- teléfono
 \set ON_ERROR_STOP 1
 
-\echo --- requisitos: Mercadito sin teléfono y Daily sin gmail deben FALLAR
+\echo --- requisitos: sin teléfono o sin gmail deben FALLAR, marque lo que marque
 \set ON_ERROR_STOP 0
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Tel', 'sintel@ejemplo.mx', 'web', '{mercadito}');
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Google', 'singoogle@ejemplo.mx', 'web', '{dailychallenge}');
+insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Tel', 'sintel@gmail.com', 'web', '{jlptest}');
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Sin Google', 'singoogle@ejemplo.mx', 'web', '{jlptest}', '3531110000');
 \set ON_ERROR_STOP 1
 \echo --- y estos SÍ deben entrar
-insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Con Tel', 'contel@ejemplo.mx', 'web', '{mercadito}', '3531234567');
-insert into ayotl.testers (nombre, email, plataforma, apps, email_google) values ('Con Google', 'congoogle@ejemplo.mx', 'web', '{dailychallenge}', 'congoogle@gmail.com');
-select nombre from ayotl.testers where email in ('contel@ejemplo.mx','congoogle@ejemplo.mx') order by 1;
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Con Tel', 'contel@gmail.com', 'web', '{mercadito}', '3531234567');
+insert into ayotl.testers (nombre, email, plataforma, apps, email_google, telefono) values ('Con Google', 'congoogle@ejemplo.mx', 'web', '{dailychallenge}', 'congoogle@gmail.com', '3531110001');
+select nombre from ayotl.testers where email in ('contel@gmail.com','congoogle@ejemplo.mx') order by 1;
 select count(*) as incompletos from ayotl.testers_incompletos;
 
 \echo --- cruce diario: Ana (por su correo de Google) estudió y jugó el 2026-09-20; Beto no tiene cuenta
-insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'beto@ejemplo.mx', 'web', '{jlptest}');
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Beto', 'beto@gmail.com', 'web', '{jlptest}', '3532220000');
 insert into auth.users values ('11111111-1111-1111-1111-111111111111', 'Ana.Lopez@gmail.com');
 insert into public.progreso values ('11111111-1111-1111-1111-111111111111', '{"hechosPorDia": {"2026-09-20": 12}}');
 insert into public.resultados (perfil, creado) values ('11111111-1111-1111-1111-111111111111', '2026-09-20 22:30-06');
@@ -88,7 +88,7 @@ select app, evidencia from ayotl.registrar_dia('2026-09-21');
 select fecha, apps, cuales, monto from ayotl.dias_resumen order by fecha;
 
 \echo --- saldos: Ana 10 + 5 = 15, paga 20, queda -5 (pagada de más); Beto 0
-insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@ejemplo.mx';
+insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@gmail.com';
 select nombre, dias, ganado, pagado, saldo, ultimo_dia from ayotl.saldos order by nombre;
 
 \echo --- plazas: 14 de cupo, y la lista de espera aparte
@@ -96,8 +96,8 @@ insert into ayotl.espera (nombre, email) values ('Curiosa', 'curiosa@ejemplo.mx'
 select * from ayotl.plazas();
 
 \echo --- cortesía: la primera la crea, la segunda no la recorta
-select ayotl.dar_cortesia('ana@ejemplo.mx', 30) is not null as creada;
-select ayotl.dar_cortesia('ana@ejemplo.mx', 1) is not null as segunda;
+select ayotl.dar_cortesia('ana@gmail.com', 30) is not null as creada;
+select ayotl.dar_cortesia('ana@gmail.com', 1) is not null as segunda;
 select email, (hasta > now() + interval '20 days') as sigue_larga, nota from public.cortesias;
 
 \echo --- el freno del cruce: el primero se lo lleva, el segundo no

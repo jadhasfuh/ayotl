@@ -133,10 +133,10 @@ const TEXTOS = {
       "Your name in the credits, if you want.",
     ],
   },
-  esperaTitulo: { es: "Las plazas están ocupadas", en: "All spots are taken" },
+  esperaTitulo: { es: "Por ahora ya no hay lugares", en: "No spots left for now" },
   esperaTexto: {
-    es: "Se llenaron las 14 plazas de esta ronda. Déjame tu correo y te aviso si se abre una, o cuando haya otro programa de pruebas.",
-    en: "The 14 spots for this round are gone. Leave me your email and I'll let you know if one opens up, or when there's another testing round.",
+    es: "Lo siento: ya se alcanzó el número de testers que necesitaba para esta ronda. Déjame tu correo y te aviso en cuanto se abra un lugar o empiece la siguiente.",
+    en: "Sorry: I've already reached the number of testers I needed for this round. Leave me your email and I'll let you know as soon as a spot opens up or the next round starts.",
   },
   esperaEnviar: { es: "Avísame", en: "Let me know" },
   esperaComentario: { es: "¿Qué app te interesa? (opcional)", en: "Which app are you interested in? (optional)" },
@@ -147,31 +147,31 @@ const TEXTOS = {
   },
   betaPlazas: {
     es: (libres: number, cupo: number) => libres > 0
-      ? `Quedan ${libres} de ${cupo} plazas.`
-      : `Las ${cupo} plazas están ocupadas. Escríbeme y te aviso si se abre una.`,
+      ? `Quedan ${libres} de ${cupo} lugares.`
+      : "Lo siento: ya se alcanzó el número de testers que necesitaba por ahora.",
     en: (libres: number, cupo: number) => libres > 0
       ? `${libres} of ${cupo} spots left.`
-      : `All ${cupo} spots are taken. Write to me and I'll let you know if one opens up.`,
+      : "Sorry: I've already reached the number of testers I needed for now.",
   },
   campoNombre: { es: "Nombre", en: "Name" },
   campoEmail: { es: "Correo electrónico", en: "Email" },
   campoPlataforma: { es: "Dispositivo principal", en: "Main device" },
   campoApps: { es: "Apps que te interesan", en: "Apps you're interested in" },
-  campoEmailGoogle: { es: "Correo de Google Play (si es distinto)", en: "Google Play email (if different)" },
+  campoEmailGoogle: { es: "Correo de Google", en: "Google email" },
   campoEmailGoogleAyuda: {
     es: "La cuenta de Google con la que instalas apps. Úsala también para entrar a las apps: así puedo ver tu actividad y contarte los días.",
     en: "The Google account you install apps with. Use it to sign in to the apps too, so I can see your activity and count your days.",
   },
   campoTelefono: { es: "WhatsApp", en: "WhatsApp" },
-  campoTelefonoOpcional: { es: "WhatsApp (opcional)", en: "WhatsApp (optional)" },
+  campoTelefonoOpcional: { es: "WhatsApp", en: "WhatsApp" },
   campoTelefonoAyuda: { es: "10 dígitos. Para pagarte por CoDi.", en: "10 digits. To pay you via CoDi." },
   campoTelefonoObligatorio: {
-    es: "Obligatorio para probar Mercadito: se entra con el teléfono, y es la única forma de contar tus días ahí.",
-    en: "Required to test Mercadito: you sign in with your phone, and it's the only way to count your days there.",
+    es: "10 dígitos. Para pagarte por CoDi, para avisarte, y porque a Mercadito se entra con el teléfono.",
+    en: "10 digits. To pay you via CoDi, to reach you, and because you sign in to Mercadito with your phone.",
   },
   campoEmailGoogleObligatorio: {
-    es: "Obligatorio para probar Daily Challenge: se entra con «Entrar con Google», así que tiene que ser una cuenta de Gmail.",
-    en: "Required to test Daily Challenge: you sign in with “Sign in with Google”, so it has to be a Gmail account.",
+    es: "Tiene que ser una cuenta de Gmail: es con la que se acepta la prueba en Google Play y con la que se entra a Daily Challenge.",
+    en: "It has to be a Gmail account: it's how you accept the test on Google Play and how you sign in to Daily Challenge.",
   },
   campoComentario: { es: "Algo más (opcional)", en: "Anything else (optional)" },
   campoComentarioAyuda: {
@@ -198,12 +198,12 @@ const TEXTOS = {
   errorRobot: { es: "No pudimos verificar que eres una persona. Recarga la página e inténtalo otra vez.", en: "We couldn't verify you're a person. Reload the page and try again." },
   errorNoDisponible: { es: "El formulario no está disponible ahora mismo. Escríbeme a hola@ayotl.dev.", en: "The form isn't available right now. Email me at hola@ayotl.dev." },
   errorTelefonoMercadito: {
-    es: "Para probar Mercadito hace falta tu WhatsApp: es con lo que se entra a la app.",
-    en: "To test Mercadito I need your WhatsApp number: that's how you sign in to the app.",
+    es: "Hace falta tu WhatsApp: es como te aviso y como te pago por CoDi.",
+    en: "I need your WhatsApp number: it's how I reach you and how I pay you via CoDi.",
   },
   errorGoogleDaily: {
-    es: "Para probar Daily Challenge hace falta una cuenta de Gmail, que es con la que se entra. Ponla en «Correo de Google Play».",
-    en: "To test Daily Challenge I need a Gmail account, which is how you sign in. Put it in “Google Play email”.",
+    es: "Hace falta una cuenta de Gmail: es con la que se acepta la prueba en Google Play. Ponla en «Correo de Google».",
+    en: "I need a Gmail account: it's how you accept the test on Google Play. Put it in “Google email”.",
   },
   errorLleno: { es: "Se acaban de llenar las plazas. Escríbeme a hola@ayotl.dev y te aviso si se abre una.", en: "The spots just filled up. Email me at hola@ayotl.dev and I'll let you know if one opens." },
   elegirUnaApp: { es: "Elige al menos una app.", en: "Pick at least one app." },

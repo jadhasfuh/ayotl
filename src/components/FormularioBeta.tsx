@@ -3,7 +3,7 @@
 import Script from "next/script";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { APPS } from "@/lib/apps";
-import { APPS_BETA, esCorreoGoogle, PLATAFORMAS, type AppBeta, type ErrorBeta } from "@/lib/beta";
+import { APPS_BETA, esCorreoGoogle, PLATAFORMAS, type ErrorBeta } from "@/lib/beta";
 import { t, type Idioma } from "@/lib/idioma";
 import { FormularioEspera } from "./FormularioEspera";
 import { Tortuga } from "./Tortuga";
@@ -33,11 +33,6 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
   const [estado, setEstado] = useState<Estado>({ fase: "editando" });
   const [token, setToken] = useState("");
   const [errorApps, setErrorApps] = useState(false);
-  // Las apps elegidas mandan sobre qué campos son obligatorios: Mercadito se
-  // entra con teléfono y Daily Challenge con una cuenta de Google.
-  const [apps, setApps] = useState<AppBeta[]>([]);
-  const pideTelefono = apps.includes("mercadito");
-  const pideGoogle = apps.includes("dailychallenge");
   const widget = useRef<HTMLDivElement>(null);
   const widgetId = useRef<string | null>(null);
 
@@ -74,12 +69,8 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
     setErrorApps(false);
     const telefono = String(datos.get("telefono") ?? "").trim();
     const correoGoogle = String(datos.get("email_google") || datos.get("email") || "");
-    if (elegidas.includes("mercadito") && !telefono) {
-      setEstado({ fase: "error", codigo: "telefono_mercadito" }); return;
-    }
-    if (elegidas.includes("dailychallenge") && !esCorreoGoogle(correoGoogle)) {
-      setEstado({ fase: "error", codigo: "google_dailychallenge" }); return;
-    }
+    if (!telefono) { setEstado({ fase: "error", codigo: "telefono_mercadito" }); return; }
+    if (!esCorreoGoogle(correoGoogle)) { setEstado({ fase: "error", codigo: "google_dailychallenge" }); return; }
     setEstado({ fase: "enviando" });
     try {
       const res = await fetch("/api/beta", {
@@ -151,14 +142,14 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
       <div className="campo">
         <label htmlFor="email_google">{x("campoEmailGoogle")}</label>
         <input id="email_google" name="email_google" type="email" maxLength={254} autoComplete="off" inputMode="email"
-               required={pideGoogle} placeholder={pideGoogle ? "tucuenta@gmail.com" : undefined} />
-        <span className="ayuda">{pideGoogle ? x("campoEmailGoogleObligatorio") : x("campoEmailGoogleAyuda")}</span>
+               required placeholder="tucuenta@gmail.com" />
+        <span className="ayuda">{x("campoEmailGoogleObligatorio")}</span>
       </div>
       <div className="campo">
-        <label htmlFor="telefono">{pideTelefono ? x("campoTelefono") : x("campoTelefonoOpcional")}</label>
+        <label htmlFor="telefono">{x("campoTelefono")}</label>
         <input id="telefono" name="telefono" type="tel" pattern="\+?[0-9 ]{10,15}" maxLength={15} autoComplete="tel" inputMode="tel"
-               required={pideTelefono} />
-        <span className="ayuda">{pideTelefono ? x("campoTelefonoObligatorio") : x("campoTelefonoAyuda")}</span>
+               required />
+        <span className="ayuda">{x("campoTelefonoObligatorio")}</span>
       </div>
       <fieldset className="campo">
         <legend>{x("campoPlataforma")}</legend>
@@ -176,13 +167,7 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
         <div className="opciones">
           {APPS_BETA.map((id) => (
             <label key={id} className="opcion">
-              <input type="checkbox" name="apps" value={id}
-                     onChange={(ev) => {
-                       setErrorApps(false);
-                       setApps((previas) => ev.target.checked
-                         ? [...previas, id]
-                         : previas.filter((a) => a !== id));
-                     }} />
+              <input type="checkbox" name="apps" value={id} onChange={() => setErrorApps(false)} />
               {APPS.find((a) => a.id === id)?.nombre ?? id}
             </label>
           ))}
