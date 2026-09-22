@@ -75,20 +75,47 @@ Esto es lo que hace posible el cruce. Sin el punto 1, un tester no suma días.
 3. Instalar las apps **desde Play** con el enlace de la prueba cerrada, y no
    desinstalarlas durante los 14 días.
 
+## Los enlaces
+
+Cada app tiene dos direcciones en Play y **no son intercambiables**:
+
+| App | Paquete | Enlace de inscripción (el que se manda) | Ficha |
+|---|---|---|---|
+| Daily Challenge | `click.dailychallenge.twa` | https://play.google.com/apps/testing/click.dailychallenge.twa | https://play.google.com/store/apps/details?id=click.dailychallenge.twa |
+| JLPTest | `org.jlptest.twa` | https://play.google.com/apps/testing/org.jlptest.twa | https://play.google.com/store/apps/details?id=org.jlptest.twa |
+| Mercadito | `mx.mercadito.cx` | ya está publicada, no hace falta | https://play.google.com/store/apps/details?id=mx.mercadito.cx |
+
+El de `/apps/testing/` es el que hay que mandar: es donde la persona acepta
+ser tester. El de `/store/apps/details` **sólo abre después de aceptar**;
+mientras no lo haya hecho (o si la cuenta no está en la lista de testers) le
+sale «no encontrada», que es la confusión de siempre.
+
+Comprobado el 2026-09-22: las fichas de Daily Challenge y JLPTest dan 404 sin
+sesión, que es lo normal en una prueba cerrada; la de Mercadito abre, porque
+ya está publicada.
+
 Texto para mandarles (WhatsApp):
 
-> Hola. Te apunto como tester de mis apps. Son 14 días y te pago 20 pesos por
-> cada día que uses alguna de ellas (te lo pago al final, por CoDi o
-> transferencia). Pasos:
+> Hola. Te apunto como tester de mis apps. Son 14 días (del 22 de septiembre
+> al 5 de octubre) y te pago 20 pesos por cada día que uses alguna de ellas;
+> te lo pago todo junto al final, por CoDi o transferencia. Pasos:
+>
 > 1) Apúntate en https://ayotl.dev/beta con tu nombre, correo y WhatsApp. En
->    «Correo de Google Play» pon la cuenta de Google de tu teléfono.
-> 2) Acepta la prueba con este enlace de Play: [enlace de la prueba cerrada]
->    (con esa misma cuenta de Google).
-> 3) Instala las apps desde Play y entra con ese mismo correo de Google:
->    en JLPTest te llega un código al correo; en Daily Challenge toca «Entrar
->    con Google». Si no entras con esa cuenta, ese día no cuenta.
-> 4) Úsalas un ratito cada día: un repaso en JLPTest o una partida en Daily
->    Challenge basta. Y si algo falla, me lo mandas por aquí.
+>    «Correo de Google Play» pon la cuenta de Google de tu teléfono: es con la
+>    que voy a ver tu actividad, y si usas otra el día no cuenta.
+> 2) Acepta ser tester con estos dos enlaces, **con esa misma cuenta**:
+>    Daily Challenge · https://play.google.com/apps/testing/click.dailychallenge.twa
+>    JLPTest · https://play.google.com/apps/testing/org.jlptest.twa
+>    En cada uno sale un botón «Become a tester» / «Convertirme en tester».
+> 3) Ya aceptado, instala desde Play (el enlace de descarga aparece en esa
+>    misma página; tarda unos minutos en activarse la primera vez).
+> 4) Entra en las apps con ese mismo correo: en JLPTest te llega un código al
+>    correo; en Daily Challenge toca «Entrar con Google» (si te quedas como
+>    invitado, no puedo saber que eres tú).
+> 5) Úsalas un ratito cada día: un repaso en JLPTest o una partida en Daily
+>    Challenge basta para que cuente el día.
+> 6) No desinstales las apps durante los 14 días, que es lo que Google mira.
+>    Y si algo falla o se ve raro, mándamelo por aquí.
 
 ## Google Play: la prueba cerrada
 
