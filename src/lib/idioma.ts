@@ -100,8 +100,8 @@ const TEXTOS = {
   abrirApp: { es: "Abrir", en: "Open" },
   betaTeaserTitulo: { es: "Lo próximo de Ayotl", en: "What's next at Ayotl" },
   betaTeaserTexto: {
-    es: "Cada versión la prueba antes un grupo pequeño de gente que usa las apps de verdad. Pago 20 pesos por cada día de prueba.",
-    en: "Every release is tried first by a small group of people who actually use the apps. I pay 20 MXN for each day of testing.",
+    es: "Cada versión la prueba antes un grupo pequeño de gente que usa las apps de verdad. Pago por día de prueba: hasta 20 pesos si usas las tres.",
+    en: "Every release is tried first by a small group of people who actually use the apps. I pay per day of testing: up to 20 MXN if you use all three.",
   },
   acercaTeaserTitulo: { es: "¿Por qué una tortuga?", en: "Why a turtle?" },
   acercaTeaserTexto: {
@@ -120,14 +120,14 @@ const TEXTOS = {
   betaVentajas: {
     es: [
       "Un mes de JLPTest completo, gratis, desde que te apuntas.",
-      "20 pesos por cada día que uses alguna de las apps durante la prueba; se pagan al terminar, por CoDi o transferencia.",
+      "Se paga por día y por cuántas apps usaste ese día: 5 pesos por una, 10 por dos y 20 si usas las tres. Todo junto al final, por CoDi o transferencia.",
       "Acceso a las versiones nuevas antes de que salgan.",
       "Un canal directo conmigo para reportar fallos y proponer cosas.",
       "Tu nombre en los agradecimientos, si quieres.",
     ],
     en: [
       "A full month of JLPTest, free, from the day you sign up.",
-      "20 MXN for every day you use any of the apps during the test; paid at the end via CoDi or bank transfer.",
+      "Paid per day, by how many apps you used that day: 5 MXN for one, 10 for two, 20 if you use all three. Paid at the end via CoDi or bank transfer.",
       "Access to new versions before they ship.",
       "A direct line to me for bugs and ideas.",
       "Your name in the credits, if you want.",

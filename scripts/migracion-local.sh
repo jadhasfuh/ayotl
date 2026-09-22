@@ -73,7 +73,10 @@ select count(*) as filas from (select * from ayotl.registrar_dia('2026-09-20')) 
 select tester, fecha, app, evidencia from ayotl.dias_prueba order by app;
 \echo --- el 21 sólo hay una partida
 select app, evidencia from ayotl.registrar_dia('2026-09-21');
-\echo --- saldos: Ana 2 días × 20 = 40, paga 20, queda 20; Beto 0
+\echo --- tarifa por número de apps: el 20 tocó dos apps (10), el 21 sólo una (5)
+select fecha, apps, cuales, monto from ayotl.dias_resumen order by fecha;
+
+\echo --- saldos: Ana 10 + 5 = 15, paga 20, queda -5 (pagada de más); Beto 0
 insert into ayotl.pagos (tester, monto, medio, referencia) select id, 20, 'codi', 'prueba' from ayotl.testers where email = 'ana@ejemplo.mx';
 select nombre, dias, ganado, pagado, saldo, ultimo_dia from ayotl.saldos order by nombre;
 

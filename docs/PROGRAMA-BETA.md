@@ -6,9 +6,22 @@
 enseña un aviso con el correo de contacto; quien ya está dentro puede seguir
 corrigiendo sus datos. El cupo vive en `ayotl.programa.cupo`.
 
-Cada tester gana **20 MXN por cada día** en que hizo algo real en al menos una
-de las apps que está probando. Se paga al terminar la prueba, por CoDi o
-transferencia. La tarifa vive en `ayotl.programa.tarifa_dia`.
+Cada tester gana, **por día**, según en cuántas apps hizo algo real ese día:
+
+| Apps ese día | Paga |
+|---|---|
+| 1 | 5 MXN |
+| 2 | 10 MXN |
+| 3 | **20 MXN** |
+
+El salto de 10 a 20 es a propósito: lo que hace falta para la prueba cerrada
+de Play es que tengan las tres instaladas y en uso, así que la tercera app
+vale lo que las dos primeras juntas. Los importes están en
+`ayotl.programa.tarifa_1/2/3` y el cálculo, en la vista `ayotl.dias_resumen`
+(un día de un tester, con cuántas apps tocó y lo que vale). `ayotl.saldos`
+suma eso, no multiplica.
+
+Se paga todo junto al terminar la prueba, por CoDi o transferencia.
 
 Además, al apuntarse se lleva **un mes de JLPTest completo**: `/api/beta`
 llama a `ayotl.dar_cortesia`, que escribe una fila en `public.cortesias`
@@ -108,8 +121,10 @@ ya está publicada.
 Texto para mandarles (WhatsApp):
 
 > Hola. Te apunto como tester de mis apps. Son 14 días (del 22 de septiembre
-> al 5 de octubre) y te pago 20 pesos por cada día que uses alguna de ellas;
-> te lo pago todo junto al final, por CoDi o transferencia. Pasos:
+> al 5 de octubre) y te pago por cada día que las uses: 5 pesos si usas una,
+> 10 si usas dos y 20 si usas las tres ese día. Te lo pago todo junto al
+> final, por CoDi o transferencia. Con las tres son hasta 280 pesos. Además
+> te doy un mes gratis de JLPTest completo. Pasos:
 >
 > 1) Apúntate en https://ayotl.dev/beta con tu nombre, correo y WhatsApp. En
 >    «Correo de Google Play» pon la cuenta de Google de tu teléfono: es con la
@@ -123,8 +138,8 @@ Texto para mandarles (WhatsApp):
 > 4) Entra en las apps con ese mismo correo: en JLPTest te llega un código al
 >    correo; en Daily Challenge toca «Entrar con Google» (si te quedas como
 >    invitado, no puedo saber que eres tú).
-> 5) Úsalas un ratito cada día: un repaso en JLPTest o una partida en Daily
->    Challenge basta para que cuente el día.
+> 5) Úsalas un ratito cada día: un repaso en JLPTest, una partida en Daily
+>    Challenge y abrir Mercadito basta para que cuente el día entero (20).
 > 6) No desinstales las apps durante los 14 días, que es lo que Google mira.
 >    Y si algo falla o se ve raro, mándamelo por aquí.
 

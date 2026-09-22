@@ -7,14 +7,15 @@ import { APPS_BETA, type AppBeta } from "@/lib/beta";
 
 export type Saldo = {
   id: number; nombre: string; email: string; email_google: string; telefono: string | null;
-  apps: AppBeta[]; dias: number; ganado: number; pagado: number; saldo: number; ultimo_dia: string | null;
+  apps: AppBeta[]; dias: number; dias_completos: number;
+  ganado: number; pagado: number; saldo: number; ultimo_dia: string | null;
 };
 export type DiaPrueba = { tester: number; fecha: string; app: AppBeta; evidencia: Record<string, unknown> };
 export type Pago = { id: number; tester: number; monto: number; fecha: string; medio: string; referencia: string | null };
 
 type Props = {
   testers: Saldo[]; dias: DiaPrueba[]; pagos: Pago[];
-  fechas: string[]; hoy: string; tarifa: number; configurado: boolean;
+  fechas: string[]; hoy: string; tarifas: [number, number, number]; configurado: boolean;
 };
 
 const LETRA: Record<AppBeta, string> = { mercadito: "M", jlptest: "J", dailychallenge: "D" };
@@ -25,7 +26,7 @@ const MEDIOS = ["codi", "transferencia", "efectivo", "otro"] as const;
  * pega a /api/admin/* y refresca la página: los datos siempre vienen del
  * servidor, aquí no se calcula nada.
  */
-export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, configurado }: Props) {
+export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, configurado }: Props) {
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
@@ -89,9 +90,10 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
 
       <div className="resumen">
         <div><b>{testers.length}</b><span className="dato">testers</span></div>
-        <div><b>{tarifa}</b><span className="dato">MXN/día</span></div>
+        <div><b>{tarifas.join(" · ")}</b><span className="dato">MXN por 1 · 2 · 3 apps</span></div>
         <div><b>{totalSaldo}</b><span className="dato">por pagar</span></div>
         <div><b>{testers.reduce((n, t) => n + t.dias, 0)}</b><span className="dato">días</span></div>
+        <div><b>{testers.reduce((n, t) => n + t.dias_completos, 0)}</b><span className="dato">con las 3</span></div>
         <button type="button" className="enlace-salir" onClick={() => fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh())}>
           Salir
         </button>
@@ -105,7 +107,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
             <tr>
               <th className="fijo">Tester</th>
               {fechas.map((f) => <th key={f} title={f} className={f === hoy ? "hoy" : undefined}>{f.slice(8)}</th>)}
-              <th>Días</th><th>Ganado</th><th>Pagado</th><th>Saldo</th>
+              <th>Días</th><th>Con 3</th><th>Ganado</th><th>Pagado</th><th>Saldo</th>
             </tr>
           </thead>
           <tbody>
@@ -113,13 +115,17 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
               <tr key={t.id}>
                 <th className="fijo" scope="row">
                   <span>{t.nombre}</span>
-                  <small>{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""} · {t.apps.map((a) => LETRA[a]).join("")}</small>
+                  <small>{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}</small>
                 </th>
                 {fechas.map((f) => {
                   const hechos = porCelda.get(`${t.id}|${f}`) ?? [];
+                  const completo = hechos.length >= APPS_BETA.length;
                   return (
-                    <td key={f} className={hechos.length ? "con" : undefined}>
-                      {APPS_BETA.filter((a) => t.apps.includes(a)).map((a) => {
+                    <td key={f} className={completo ? "con completo" : hechos.length ? "con" : undefined}
+                        title={completo ? "Las tres apps ese día" : undefined}>
+                      {/* Se enseñan las tres apps a todos, no sólo las que
+                          eligieron: ahora cualquiera puede sumar las tres. */}
+                      {APPS_BETA.map((a) => {
                         const d = hechos.find((h) => h.app === a);
                         return (
                           <button key={a} type="button" disabled={ocupado} className={`dia ${d ? "si" : "no"}`}
@@ -132,14 +138,18 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
                     </td>
                   );
                 })}
-                <td>{t.dias}</td><td>{t.ganado}</td><td>{t.pagado}</td><td><b>{t.saldo}</b></td>
+                <td>{t.dias}</td><td>{t.dias_completos}</td><td>{t.ganado}</td><td>{t.pagado}</td><td><b>{t.saldo}</b></td>
               </tr>
             ))}
-            {testers.length === 0 && <tr><td colSpan={fechas.length + 5}>Todavía no hay testers.</td></tr>}
+            {testers.length === 0 && <tr><td colSpan={fechas.length + 6}>Todavía no hay testers.</td></tr>}
           </tbody>
         </table>
       </div>
-      <p className="ayuda solo-ancho">M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad (pasa el ratón para ver la evidencia). Pulsa una letra para marcar o quitar un día a mano.</p>
+      <p className="ayuda solo-ancho">
+        M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad ese día (pasa el ratón para ver la evidencia).
+        La celda con borde es un día con las tres apps, que vale {tarifas[2]} en vez de {tarifas[0]}.
+        Pulsa una letra para marcar o quitar un día a mano.
+      </p>
 
       <ul className="lista-testers solo-estrecho">
         {testers.map((t) => {
@@ -151,7 +161,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
                 <b>{t.nombre}</b>
                 <span className={t.saldo > 0 ? "saldo-pendiente" : "saldo-cero"}>{t.saldo} MXN</span>
               </div>
-              <p className="dato">{t.dias} días · {t.ganado} ganado · {t.pagado} pagado</p>
+              <p className="dato">{t.dias} días ({t.dias_completos} con las 3) · {t.ganado} ganado · {t.pagado} pagado</p>
               <p className="ficha-contacto">{t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}</p>
               {fechasConActividad.length > 0 && (
                 <ul className="ficha-dias">
@@ -161,6 +171,9 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifa, config
                       {suyos.filter((d) => d.fecha === f).map((d) => (
                         <span key={d.app} className="dia si" title={JSON.stringify(d.evidencia)}>{LETRA[d.app]}</span>
                       ))}
+                      {suyos.filter((d) => d.fecha === f).length >= APPS_BETA.length && (
+                        <span className="dato">· {tarifas[2]} MXN</span>
+                      )}
                     </li>
                   ))}
                 </ul>
