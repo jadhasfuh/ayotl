@@ -50,7 +50,20 @@ export async function cruzarMercadito(fecha: string): Promise<{ marcados: number
     connectionTimeoutMillis: 8000,
     statement_timeout: 15000,
   });
-  await cliente.connect();
+  // `pg` emite `error` en el propio cliente cuando el socket se cae o el
+  // handshake falla. Sin un oyente, Node lo convierte en excepción no
+  // capturada y **se lleva el proceso por delante**: el contenedor moría y
+  // Cloudflare devolvía un 502 suyo, no el error de la API.
+  cliente.on("error", (e) => console.error("[mercadito] cliente", e.message));
+
+  try {
+    await cliente.connect();
+  } catch (e) {
+    const detalle = e instanceof Error ? e.message : String(e);
+    console.error("[mercadito] conexión", detalle);
+    return { marcados: 0, saltados: 0, error: `conexión: ${detalle}` };
+  }
+
   let actividad: { telefono: string; pedidos: number; sesion: boolean }[] = [];
   try {
     const telefonos = [...porTelefono.keys()];
@@ -68,8 +81,12 @@ export async function cruzarMercadito(fecha: string): Promise<{ marcados: number
       [telefonos, fecha],
     );
     actividad = rows.map((r) => ({ telefono: r.telefono, pedidos: Number(r.pedidos), sesion: r.sesion }));
+  } catch (e) {
+    const detalle = e instanceof Error ? e.message : String(e);
+    console.error("[mercadito] consulta", detalle);
+    return { marcados: 0, saltados: 0, error: `consulta: ${detalle}` };
   } finally {
-    await cliente.end();
+    await cliente.end().catch(() => {});
   }
 
   let marcados = 0, saltados = 0;

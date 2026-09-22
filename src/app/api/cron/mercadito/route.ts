@@ -41,7 +41,10 @@ async function correr(req: Request) {
   // `net._http_response`, donde está la respuesta de verdad del cron.
   try {
     const resultado = await cruzarMercadito(fecha);
-    return NextResponse.json({ ok: !resultado.error, fecha, ...resultado });
+    // El sha del build: sin él no hay forma de saber si lo que contesta es la
+    // versión que acabas de subir o la anterior.
+    const build = process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7);
+    return NextResponse.json({ ok: !resultado.error, fecha, build, ...resultado });
   } catch (e) {
     const detalle = e instanceof Error ? e.message : String(e);
     console.error("[cron mercadito]", detalle);
