@@ -133,6 +133,15 @@ const TEXTOS = {
       { t: "Automation", d: "Your business posting to Facebook and Instagram on its own, orders landing in your WhatsApp, your system talking to the one you already use. Set up once, then it runs itself." },
     ],
   },
+  negMuestraTitulo: { es: "Así se ve", en: "What it looks like" },
+  negMuestraMenu: {
+    es: "El menú que ve tu cliente en su teléfono: pide sin registrarse y el pedido te llega por WhatsApp.",
+    en: "The menu your customer sees on their phone: they order without signing up and it reaches you on WhatsApp.",
+  },
+  negMuestraPanel: {
+    es: "Tu panel: tus precios, el QR de tu menú, tus mesas y el corte de caja del día.",
+    en: "Your dashboard: your prices, your menu's QR code, your tables and the day's cash count.",
+  },
   negPrueba: { es: "Lo que ya he hecho", en: "What I've already built" },
   negPruebaTexto: {
     es: "No son ejemplos de escuela: son tres productos en producción, con su dominio, sus usuarios y su mantenimiento. Mercadito lo usan negocios de Sahuayo, Jiquilpan y San Pedro.",

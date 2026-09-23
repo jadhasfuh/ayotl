@@ -51,6 +51,24 @@ export default async function Negocios({ params }: Props) {
             ))}
           </ul>
 
+          <h2 style={{ marginTop: "3rem" }}>{x("negMuestraTitulo")}</h2>
+          {/* Capturas reales de Mercadito, hechas con la tienda de
+              demostración: enseñar el producto convence más que describirlo. */}
+          <ul className="capturas">
+            <li>
+              <img src="/capturas/mercadito-menu.webp" alt="" width={840} height={1720} loading="lazy" />
+              <p>{x("negMuestraMenu")}</p>
+            </li>
+            <li>
+              <img src="/capturas/mercadito-panel-movil.webp" alt="" width={840} height={1800} loading="lazy" />
+              <p>{x("negMuestraPanel")}</p>
+            </li>
+            <li>
+              <img src="/capturas/mercadito-mesas.webp" alt="" width={840} height={1800} loading="lazy" />
+              <p>{x("negServicios")[2].d}</p>
+            </li>
+          </ul>
+
           <h2 style={{ marginTop: "3rem" }}>{x("negPrueba")}</h2>
           <p className="prosa">{x("negPruebaTexto")}</p>
           <ul className="trabajos">

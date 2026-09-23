@@ -141,3 +141,22 @@ Se añade también un `Person` en JSON-LD con `sameAs` a LinkedIn, GitHub y los
 tres dominios: es lo que le dice al buscador que todo eso es la misma
 persona, para que quien busque el nombre encuentre el sitio y no sólo el
 perfil.
+
+## 2026-09-23 — Página para negocios y capturas
+
+La portada habla a quien usa las apps; `/negocios` habla a quien quiere que
+le hagan una. Separadas a propósito: mezclarlas dejaba un mensaje borroso, y
+la de negocios es la que se le manda por WhatsApp a un restaurante de
+Sahuayo. Lleva `ProfessionalService` en JSON-LD con el teléfono y la zona.
+
+Las capturas se sacaron encendiendo la **tienda de demostración de
+Mercadito** (`demo-apple`), cambiándole el PIN 123456 por uno aleatorio
+mientras duraba, y apagándola al terminar con `apagar-demo.sql`. De paso se
+le arregló el estado: estaba como `caducada` y el panel salía con el cartel
+gris de «tu suscripción terminó», que es lo primero que habría visto la
+próxima revisión de Apple o Google; ahora es una cortesía al corriente.
+
+Las imágenes viven en `public/capturas/*.webp`, a 840 px de ancho (el doble
+del móvil) y ~50 kB cada una. El guion que las toma está en el bloc de notas
+de la sesión, no en el repo: se vuelve a escribir en cinco minutos y
+dependía de credenciales de la demo.
