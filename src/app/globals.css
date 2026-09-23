@@ -353,7 +353,9 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
 .resumen { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 2rem; margin: 0 0 1.5rem; padding: 1rem 1.25rem; border: 1px solid var(--linea); border-radius: var(--radio); background: var(--fondo-2); }
 .resumen > div { display: flex; flex-direction: column; }
 .resumen b { font-size: 1.4rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.enlace-salir { margin-left: auto; border: 0; background: none; font: inherit; color: var(--agua); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.resumen-acciones { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
+.boton.chico { padding: 0.4rem 0.9rem; font-size: 0.9rem; }
+.enlace-salir {  border: 0; background: none; font: inherit; color: var(--agua); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 
 .tabla-scroll { overflow-x: auto; border: 1px solid var(--linea); border-radius: var(--radio); background: var(--fondo-2); }
 .cuadricula { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }

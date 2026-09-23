@@ -54,11 +54,12 @@ export default async function Testers({ params }: Props) {
   const hoy = hoyMexico();
 
   // Cruzar el día de hoy al abrir, para que la cuadrícula esté al día sin
-  // tocar ningún botón. `tomar_cruce` limita esto a una vez cada cinco
+  // tocar ningún botón. `tomar_cruce` limita esto a una vez cada dos
   // minutos: la página se renderiza en cada visita y cada cruce abre una
-  // conexión a la base de Mercadito.
+  // conexión a la base de Mercadito. Para ver algo que acaba de pasar está
+  // el botón «Actualizar», que se salta el freno.
   if (base) {
-    const { data: toca } = await base.rpc("tomar_cruce", { p_minutos: 5 });
+    const { data: toca } = await base.rpc("tomar_cruce", { p_minutos: 2 });
     if (toca === true) {
       const [sql, mercadito] = await Promise.allSettled([
         base.rpc("registrar_dia", { p_fecha: hoy }),

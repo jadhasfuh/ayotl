@@ -96,9 +96,17 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
         <div><b>{testers.reduce((n, t) => n + t.dias, 0)}</b><span className="dato">días</span></div>
         <div><b>{testers.reduce((n, t) => n + t.dias_completos, 0)}</b><span className="dato">con las 3</span></div>
         {enEspera > 0 && <div><b>{enEspera}</b><span className="dato">en espera</span></div>}
-        <button type="button" className="enlace-salir" onClick={() => fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh())}>
-          Salir
-        </button>
+        <div className="resumen-acciones">
+          {/* Se salta el freno de dos minutos del cruce automático: es el
+              botón de «acabo de hacer algo en una app, enséñamelo ya». */}
+          <button type="button" className="boton secundario chico" disabled={ocupado}
+                  onClick={() => llamar("/api/admin/registrar", "POST", { fecha: hoy }, "Actualizado")}>
+            {ocupado ? "Buscando…" : "Actualizar"}
+          </button>
+          <button type="button" className="enlace-salir" onClick={() => fetch("/api/admin/salir", { method: "POST" }).then(() => router.refresh())}>
+            Salir
+          </button>
+        </div>
       </div>
 
       {/* Ancho: la cuadrícula completa. La lista de abajo la sustituye en
