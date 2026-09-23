@@ -59,6 +59,18 @@ insert into ayotl.testers (nombre, email, plataforma, apps) values ('Beto', 'bet
 update ayotl.testers set telefono = 'abc' where email = 'ana@gmail.com';                                             -- teléfono
 \set ON_ERROR_STOP 1
 
+\echo --- correos únicos: robarle el correo a otro tester debe FALLAR
+\set ON_ERROR_STOP 0
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono) values ('Listillo', 'ana@gmail.com', 'web', '{jlptest}', '3535550000');
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono, email_google) values ('Listillo', 'listillo@gmail.com', 'web', '{jlptest}', '3535550000', 'ana@gmail.com');
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono, correos_extra) values ('Listillo', 'listillo@gmail.com', 'web', '{jlptest}', '3535550000', '{ana.lopez@gmail.com}');
+\set ON_ERROR_STOP 1
+\echo --- y un correo suyo de verdad sí entra
+insert into ayotl.testers (nombre, email, plataforma, apps, telefono, correos_extra) values ('Listillo', 'listillo@gmail.com', 'web', '{jlptest}', '3535550000', '{listillo.viejo@hotmail.com}');
+\echo --- y el tester puede seguir editando lo suyo sin chocar consigo mismo
+update ayotl.testers set correos_extra = correos_extra || '{otro.mio@hotmail.com}' where email = 'listillo@gmail.com';
+select nombre, correos_extra from ayotl.testers where email = 'listillo@gmail.com';
+
 \echo --- requisitos: sin teléfono o sin gmail deben FALLAR, marque lo que marque
 \set ON_ERROR_STOP 0
 insert into ayotl.testers (nombre, email, plataforma, apps) values ('Sin Tel', 'sintel@gmail.com', 'web', '{jlptest}');

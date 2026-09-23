@@ -205,6 +205,10 @@ const TEXTOS = {
     es: "Hace falta una cuenta de Gmail: es con la que se acepta la prueba en Google Play. Ponla en «Correo de Google».",
     en: "I need a Gmail account: it's how you accept the test on Google Play. Put it in “Google email”.",
   },
+  errorCorreoUsado: {
+    es: "Ese correo ya está apuntado por otra persona. Si es tuyo y te apuntaste antes, usa el mismo correo de contacto de aquella vez.",
+    en: "That email is already registered by someone else. If it's yours and you signed up before, use the same contact email you used then.",
+  },
   errorLleno: { es: "Se acaban de llenar las plazas. Escríbeme a hola@ayotl.dev y te aviso si se abre una.", en: "The spots just filled up. Email me at hola@ayotl.dev and I'll let you know if one opens." },
   elegirUnaApp: { es: "Elige al menos una app.", en: "Pick at least one app." },
 

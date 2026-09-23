@@ -120,6 +120,14 @@ select * from ayotl.registrar_dia(current_date);   -- para recontar hoy
 Si alguien dice «hice un examen y no me contó», esto es lo primero que hay
 que mirar: con qué correo entró a la app.
 
+**Ningún correo puede estar en dos testers.** Un disparador
+(`testers_correos_unicos`) compara los correos de la fila —contacto, Google
+y extra— contra los de todos los demás y rechaza el choque; si no, dos
+personas podrían apuntar la misma cuenta y las dos cobrarían su actividad.
+El formulario lo cuenta con un mensaje claro («ese correo ya está apuntado
+por otra persona»), y volver a apuntarse con el propio correo de contacto
+sigue funcionando: eso es una actualización, no un choque.
+
 ## Lo que hay que pedirle a cada tester
 
 Esto es lo que hace posible el cruce. Sin el punto 1, un tester no suma días.

@@ -104,9 +104,12 @@ export async function POST(req: Request) {
   }, { onConflict: "email" });
 
   if (errorAlta) {
-    // 23514 = check violado: la base rechazó algo que zod dejó pasar. Es un
-    // error de datos, no del servidor, pero conviene verlo en el log.
+    // 23514 = check violado: la base rechazó algo que zod dejó pasar.
+    // 23505 = el disparador de correos únicos: alguien puso el correo de
+    // otro tester (compartirlo haría que los dos cobraran esa actividad).
+    // Los dos son errores de datos, no del servidor, pero conviene verlos.
     console.error("[beta] alta", errorAlta.code, errorAlta.message);
+    if (errorAlta.code === "23505") return error("correo_usado", 409);
     return error(errorAlta.code === "23514" ? "datos" : "generico", errorAlta.code === "23514" ? 400 : 500);
   }
 

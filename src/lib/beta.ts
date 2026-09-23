@@ -87,4 +87,4 @@ export type Espera = z.infer<typeof esquemaEspera>;
 
 /** Códigos que devuelve /api/beta; el formulario los traduce. */
 export type ErrorBeta = "datos" | "muchos" | "robot" | "no_disponible" | "lleno" | "generico"
-  | "telefono_mercadito" | "google_dailychallenge";
+  | "telefono_mercadito" | "google_dailychallenge" | "correo_usado";

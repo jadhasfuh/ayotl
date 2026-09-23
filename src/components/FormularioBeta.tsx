@@ -118,6 +118,7 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
   const MENSAJES: Record<ErrorBeta, string> = {
     datos: x("errorDatos"), muchos: x("errorMuchos"), robot: x("errorRobot"),
     no_disponible: x("errorNoDisponible"), lleno: x("errorLleno"), generico: x("errorGenerico"),
+    correo_usado: x("errorCorreoUsado"),
     telefono_mercadito: x("errorTelefonoMercadito"), google_dailychallenge: x("errorGoogleDaily"),
   };
   const PLATAFORMA_TEXTO = { ios: x("plataformaIos"), android: x("plataformaAndroid"), web: x("plataformaWeb") };
