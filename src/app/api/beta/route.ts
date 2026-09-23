@@ -15,7 +15,10 @@ import { verificarTurnstile } from "@/lib/turnstile";
  * Por email se hace upsert: quien se apunta dos veces actualiza sus datos
  * en vez de duplicarse.
  */
-const MAX_POR_IP_Y_HORA = 5;
+// Turnstile ya para a los bots; esto es sólo para que un humano con prisa no
+// llene la tabla. Ocho porque una familia o un grupo de amigos apuntándose
+// desde el mismo wifi es el caso normal, no el sospechoso.
+const MAX_POR_IP_Y_HORA = 8;
 
 function error(codigo: ErrorBeta, status: number) {
   return NextResponse.json({ error: codigo }, { status });
@@ -65,8 +68,15 @@ export async function POST(req: Request) {
   const ip = ipDe(req);
   if (!(await verificarTurnstile(datos.turnstile, ip))) return error("robot", 403);
 
+  // ¿Ya existía? Para el asunto del aviso y, sobre todo, para dos permisos:
+  // quien ya está dentro puede corregir sus datos aunque no queden plazas y
+  // aunque su conexión haya llegado al límite (que es lo que pasa cuando
+  // varios se apuntan desde el mismo wifi y luego uno vuelve a añadir su
+  // teléfono).
+  const { data: previo } = await base.from("testers").select("id").eq("email", datos.email).maybeSingle();
+
   const ip_hash = huella(ip);
-  if (ip_hash) {
+  if (ip_hash && !previo) {
     const desde = new Date(Date.now() - 60 * 60 * 1000).toISOString();
     const { count, error: errorCuenta } = await base
       .from("testers").select("id", { count: "exact", head: true })
@@ -74,10 +84,6 @@ export async function POST(req: Request) {
     if (errorCuenta) { console.error("[beta] cuenta por ip", errorCuenta.message); return error("generico", 500); }
     if ((count ?? 0) >= MAX_POR_IP_Y_HORA) return error("muchos", 429);
   }
-
-  // ¿Ya existía? Para el asunto del aviso y, sobre todo, para el tope: quien
-  // ya está dentro puede corregir sus datos aunque no queden plazas.
-  const { data: previo } = await base.from("testers").select("id").eq("email", datos.email).maybeSingle();
 
   if (!previo) {
     const { data: plazas } = await base.rpc("plazas").maybeSingle();
