@@ -64,15 +64,16 @@ export default async function Testers({ params }: Props) {
     }
   }
 
-  const [programa, saldos, dias, pagos, plazas] = base
+  const [programa, saldos, dias, pagos, plazas, tokens] = base
     ? await Promise.all([
         base.from("programa").select("tarifa_1, tarifa_2, tarifa_3, inicio, fin").eq("id", 1).maybeSingle(),
         base.from("saldos").select("*").order("nombre"),
         base.from("dias_prueba").select("tester, fecha, app, evidencia").gte("fecha", sumarDias(hoy, -60)).order("fecha"),
         base.from("pagos").select("id, tester, monto, fecha, medio, referencia").order("id", { ascending: false }).limit(100),
         base.rpc("plazas").maybeSingle(),
+        base.from("testers").select("id, token"),
       ])
-    : [null, null, null, null, null];
+    : [null, null, null, null, null, null];
 
   const p = programa?.data;
   const tarifas: [number, number, number] = [p?.tarifa_1 ?? 5, p?.tarifa_2 ?? 10, p?.tarifa_3 ?? 20];
@@ -95,6 +96,7 @@ export default async function Testers({ params }: Props) {
           hoy={hoy}
           tarifas={tarifas}
           enEspera={(plazas?.data as { en_espera: number } | null)?.en_espera ?? 0}
+          tokens={Object.fromEntries(((tokens?.data ?? []) as { id: number; token: string }[]).map((t) => [t.id, t.token]))}
           configurado={!!base}
         />
       </main>

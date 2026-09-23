@@ -16,7 +16,7 @@ export type Pago = { id: number; tester: number; monto: number; fecha: string; m
 type Props = {
   testers: Saldo[]; dias: DiaPrueba[]; pagos: Pago[];
   fechas: string[]; hoy: string; tarifas: [number, number, number];
-  enEspera: number; configurado: boolean;
+  enEspera: number; tokens: Record<number, string>; configurado: boolean;
 };
 
 const LETRA: Record<AppBeta, string> = { jlptest: "J", dailychallenge: "D" };
@@ -27,10 +27,26 @@ const MEDIOS = ["codi", "transferencia", "efectivo", "otro"] as const;
  * pega a /api/admin/* y refresca la página: los datos siempre vienen del
  * servidor, aquí no se calcula nada.
  */
-export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, configurado }: Props) {
+export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, tokens, configurado }: Props) {
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
+  // Cuál se acaba de copiar, para confirmarlo en el propio botón.
+  const [copiado, setCopiado] = useState<number | null>(null);
+
+  /** El enlace personal del tester, el que se le manda por WhatsApp. */
+  function enlaceDe(id: number): string | null {
+    const token = tokens[id];
+    return token ? `${typeof location === "undefined" ? "https://ayotl.dev" : location.origin}/mi/${token}` : null;
+  }
+
+  function copiarEnlace(id: number) {
+    const enlace = enlaceDe(id);
+    if (!enlace) return;
+    navigator.clipboard?.writeText(enlace);
+    setCopiado(id);
+    setTimeout(() => setCopiado((actual) => (actual === id ? null : actual)), 2000);
+  }
   // La cuadrícula empieza el día 1 del programa, pero lo que interesa es lo
   // último: al abrir, se va sola al final (hoy).
   const scroll = useRef<HTMLDivElement>(null);
@@ -129,6 +145,11 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                     {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
                     {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
                   </small>
+                  {enlaceDe(t.id) && (
+                    <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
+                      {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
+                    </button>
+                  )}
                 </th>
                 {fechas.map((f) => {
                   const hechos = porCelda.get(`${t.id}|${f}`) ?? [];
@@ -179,6 +200,11 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                 {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
                 {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
               </p>
+              {enlaceDe(t.id) && (
+                <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
+                  {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
+                </button>
+              )}
               {fechasConActividad.length > 0 && (
                 <ul className="ficha-dias">
                   {fechasConActividad.map((f) => (

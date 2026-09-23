@@ -212,6 +212,21 @@ principal aparece «Apply for production access».
 
 Mercadito ya está aprobada: sus testers son sólo para probar, sin plazo.
 
+## Los enlaces de cada tester
+
+Cada tester tiene el suyo, `ayotl.dev/mi/<token>`, y se le enseña al
+terminar de apuntarse (además de mandárselo por correo). En el panel, bajo
+el nombre de cada uno, hay un «copiar su enlace» para pegarlo en WhatsApp.
+
+Por SQL, si hace falta:
+
+```sql
+select nombre, 'https://ayotl.dev/mi/' || token as enlace from ayotl.testers;
+```
+
+Quien lo pierda puede pedirlo desde cualquier enlace roto: la página enseña
+un formulario que se lo manda por correo.
+
 ## El panel
 
 `https://ayotl.dev/admin/testers`, con la contraseña de `ADMIN_SECRETO`
