@@ -108,6 +108,12 @@ select count(*) as filas from (select * from ayotl.registrar_dia('2026-09-20')) 
 select tester, fecha, app, evidencia from ayotl.dias_prueba order by app;
 \echo --- el 21 sólo hay una partida
 select app, evidencia from ayotl.registrar_dia('2026-09-21');
+\echo --- fuera del periodo no se suma: con el programa del 25 al 8, los días 20 y 21 no cuentan
+update ayotl.programa set inicio = '2026-09-25', fin = '2026-10-08';
+select count(*) as dias_fuera_del_periodo from ayotl.dias_resumen;
+update ayotl.programa set inicio = null, fin = null;
+select count(*) as dias_sin_periodo from ayotl.dias_resumen;
+
 \echo --- tarifa por número de apps: el 20 tocó dos apps (10), el 21 sólo una (5)
 select fecha, apps, cuales, monto from ayotl.dias_resumen order by fecha;
 

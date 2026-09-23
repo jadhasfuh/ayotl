@@ -73,11 +73,13 @@ los 30 días que dura; es aproximada, así que el pedido manda cuando hay los
 dos. El botón «Cruzar actividad» del panel hace las dos cosas.
 
 **El periodo manda.** `ayotl.programa.inicio` y `fin` acotan el programa: un
-día fuera no se registra ni se paga (`ayotl.en_periodo`). Vacíos, cuenta
+día fuera no se registra (`ayotl.en_periodo`) y tampoco se suma, porque
+`ayotl.dias_resumen` filtra por esas fechas. Lo registrado fuera de rango se
+queda como historia en `dias_prueba`, pero no se paga. Vacíos, cuenta
 cualquier día. Se ponen así:
 
 ```sql
-update ayotl.programa set inicio = '2026-09-25', fin = '2026-10-08';
+update ayotl.programa set inicio = '2026-09-24', fin = '2026-10-07';
 ```
 
 **Cada alta avisa por correo** a `hola@ayotl.dev` (Resend), con los datos del
@@ -163,8 +165,8 @@ ya está publicada.
 
 Texto para mandarles (WhatsApp):
 
-> Hola. Te apunto como tester de mis apps. Son 14 días (del 22 de septiembre
-> al 5 de octubre) y te pago por cada día que las uses: 5 pesos si usas una,
+> Hola. Te apunto como tester de mis apps. Son 14 días (del 24 de septiembre
+> al 7 de octubre) y te pago por cada día que las uses: 5 pesos si usas una,
 > 10 si usas dos y 20 si usas las tres ese día. Te lo pago todo junto al
 > final, por CoDi o transferencia. Con las tres son hasta 280 pesos. Además
 > te doy un mes gratis de JLPTest completo. Pasos:
@@ -241,7 +243,7 @@ opinar, y menciona el apoyo económico como una línea más.
 > reto arcade diario). Antes de publicar las versiones nuevas necesito que las
 > pruebe gente de verdad, no yo solo.
 >
-> Son 14 días, del 22 de septiembre al 5 de octubre. Lo único que pido es que
+> Son 14 días, del 24 de septiembre al 7 de octubre. Lo único que pido es que
 > las uses un ratito al día y me digas qué falla, qué no se entiende o qué te
 > gustaría que hiciera.
 >
