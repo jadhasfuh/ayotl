@@ -112,6 +112,17 @@ const TEXTOS = {
   },
   leerMas: { es: "Leer la historia", en: "Read the story" },
 
+  // Página de cada app
+  appAbrir: { es: "Abrir", en: "Open" },
+  appEnLaTienda: { es: "En Google Play", en: "On Google Play" },
+  appVolver: { es: "Todas las apps", en: "All apps" },
+  appPantallas: { es: "Por dentro", en: "A look inside" },
+  appOtras: { es: "Las otras apps", en: "The other apps" },
+  appHechaPor: {
+    es: "La hice yo, y la mantengo. Si quieres algo parecido para tu negocio, hablamos.",
+    en: "I built it, and I keep it running. If you want something like it for your business, let's talk.",
+  },
+
   // Para negocios
   negTitulo: { es: "¿Necesitas una app o una página?", en: "Need an app or a website?" },
   negIntro: {

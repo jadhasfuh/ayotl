@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { App } from "@/lib/apps";
 import { t, type Idioma } from "@/lib/idioma";
 import { MarcaApp } from "./MarcaApp";
@@ -26,8 +27,13 @@ export function TarjetaApp({ app, idioma }: { app: App; idioma: Idioma }) {
       <ul className="etiquetas" aria-label={x("navApps")}>
         {app.etiquetas[idioma].map((e) => <li key={e}>{e}</li>)}
       </ul>
-      <a className="abrir" href={app.url} target="_blank" rel="noopener">
-        {x("abrirApp")} {app.nombre} <span aria-hidden="true">↗</span>
+      {/* El enlace que cubre la tarjeta lleva a su página, no a la app: ahí
+          se ve qué hace antes de decidir salir del sitio. */}
+      <Link className="abrir" href={`${idioma === "en" ? "/en" : ""}/apps/${app.id}`}>
+        {x("leerMas")} <span aria-hidden="true">→</span>
+      </Link>
+      <a className="abrir-fuera" href={app.url} target="_blank" rel="noopener">
+        {x("abrirApp")} <span aria-hidden="true">↗</span>
       </a>
     </li>
   );

@@ -244,6 +244,7 @@ ul { padding-left: 1.2em; }
 .etiquetas { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0; }
 .etiquetas li { font-size: 0.78rem; font-weight: 500; padding: 0.2rem 0.6rem; border-radius: var(--radio-pildora); background: var(--tarjeta-suave); color: var(--tarjeta-texto); }
 .tarjeta .abrir { align-self: flex-start; margin-top: 0.25rem; font-weight: 500; }
+.tarjeta .abrir-fuera { font-size: 0.85rem; color: var(--tinta-2); position: relative; z-index: 1; }
 /* Toda la tarjeta es clicable, pero el enlace real es uno solo (accesible). */
 .tarjeta .abrir::after { content: ""; position: absolute; inset: 0; }
 
@@ -460,3 +461,31 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
   border: 1px solid var(--linea); border-radius: 14px; background: var(--fondo-2);
 }
 .capturas p { margin: 0; color: var(--tinta-2); font-size: 0.95rem; max-width: none; }
+
+/* --- Página de cada app ------------------------------------------------ */
+.app-cabecera { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+.app-cabecera h1 { margin: 0 0 0.15em; }
+.app-cabecera p { margin: 0; color: var(--tinta-2); }
+.tarjeta-glifo.grande { width: 64px; height: 64px; }
+.tarjeta-glifo.grande svg { width: 64px; height: 64px; }
+main[data-acento="agua"] { --tarjeta-acento: var(--agua); }
+main[data-acento="caparazon"] { --tarjeta-acento: var(--caparazon); }
+main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
+.datos.grandes { border-top: 0; padding-top: 0; gap: 0.35rem 2.5rem; margin: 1.5rem 0; }
+.datos.grandes b { font-size: 1.6rem; }
+/* Las pantallas alternan lado en escritorio: se lee como una historia y no
+   como un catálogo. */
+.pantallas { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 2.5rem; }
+.pantallas li { display: grid; gap: 1.25rem; align-items: center; }
+.pantallas img {
+  width: 100%; max-width: 20rem; height: auto; max-height: 26rem;
+  object-fit: cover; object-position: top; justify-self: center;
+  border: 1px solid var(--linea); border-radius: 16px; background: var(--fondo-2);
+}
+.pantallas h3 { margin: 0 0 0.35em; }
+.pantallas p { margin: 0; color: var(--tinta-2); }
+@media (min-width: 760px) {
+  .pantallas li { grid-template-columns: 20rem 1fr; gap: 2.5rem; }
+  .pantallas li:nth-child(even) { grid-template-columns: 1fr 20rem; }
+  .pantallas li:nth-child(even) img { order: 2; }
+}
