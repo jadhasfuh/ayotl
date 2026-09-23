@@ -90,7 +90,7 @@ export async function POST(req: Request) {
     if (plazas && (plazas as { libres: number }).libres <= 0) return error("lleno", 409);
   }
 
-  const { error: errorAlta } = await base.from("testers").upsert({
+  const { data: fila, error: errorAlta } = await base.from("testers").upsert({
     nombre: datos.nombre,
     email: datos.email,
     plataforma: datos.plataforma,
@@ -101,7 +101,7 @@ export async function POST(req: Request) {
     idioma: datos.idioma,
     ip_hash,
     actualizado_en: new Date().toISOString(),
-  }, { onConflict: "email" });
+  }, { onConflict: "email" }).select("token").maybeSingle();
 
   if (errorAlta) {
     // 23514 = check violado: la base rechazó algo que zod dejó pasar.
@@ -125,5 +125,7 @@ export async function POST(req: Request) {
   // El aviso va después de guardar y sin `await` sobre su resultado para el
   // usuario: si Resend tarda o falla, el alta ya está hecha.
   await avisarAltaBeta(datos, !previo);
-  return NextResponse.json({ ok: true });
+  // El enlace para ver su progreso. Se le enseña al terminar y se le manda
+  // también por correo: es lo único que tiene que guardar.
+  return NextResponse.json({ ok: true, token: (fila as { token?: string } | null)?.token ?? null });
 }

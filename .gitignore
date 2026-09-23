@@ -24,3 +24,6 @@ CLAUDE.md
 
 # El prompt de arranque describe infraestructura de todos los productos: no va al repo público.
 PROMPT-INICIAL.md
+
+# Respaldos antes de borrados masivos: datos personales, no van al repo.
+respaldos/

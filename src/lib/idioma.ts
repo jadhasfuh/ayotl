@@ -212,6 +212,54 @@ const TEXTOS = {
   errorLleno: { es: "Se acaban de llenar las plazas. Escríbeme a hola@ayotl.dev y te aviso si se abre una.", en: "The spots just filled up. Email me at hola@ayotl.dev and I'll let you know if one opens." },
   elegirUnaApp: { es: "Elige al menos una app.", en: "Pick at least one app." },
 
+  // Enlace del tester
+  miTitulo: { es: "Tu programa Beta", en: "Your Beta program" },
+  miHola: { es: (nombre: string) => `Hola, ${nombre}`, en: (nombre: string) => `Hi, ${nombre}` },
+  miDias: { es: "días con actividad", en: "days with activity" },
+  miCompletos: { es: "con las tres apps", en: "with all three apps" },
+  miGanado: { es: "ganado", en: "earned" },
+  miPagado: { es: "pagado", en: "paid" },
+  miSaldo: { es: "te debo", en: "I owe you" },
+  miComoSeCuenta: {
+    es: (t1: number, t2: number, t3: number) =>
+      `Cada día cuenta según en cuántas apps hiciste algo: ${t1} pesos por una, ${t2} por dos y ${t3} por las tres. Basta con un repaso en JLPTest, una partida en Daily Challenge o entrar a Mercadito.`,
+    en: (t1: number, t2: number, t3: number) =>
+      `Each day counts by how many apps you used: ${t1} MXN for one, ${t2} for two, ${t3} for all three. One review in JLPTest, one run in Daily Challenge or opening Mercadito is enough.`,
+  },
+  miHoy: { es: "Hoy", en: "Today" },
+  miHoyNada: { es: "Hoy todavía no registras nada.", en: "Nothing registered today yet." },
+  miHoyFaltan: {
+    es: (faltan: string[]) => `Hoy te faltan: ${faltan.join(", ")}.`,
+    en: (faltan: string[]) => `Missing today: ${faltan.join(", ")}.`,
+  },
+  miHoyCompleto: { es: "¡Día completo! Hoy ya vale el máximo.", en: "Full day! Today is worth the maximum." },
+  miPeriodo: {
+    es: (inicio: string, fin: string) => `Del ${inicio} al ${fin}.`,
+    en: (inicio: string, fin: string) => `From ${inicio} to ${fin}.`,
+  },
+  miDetalle: { es: "Tus días", en: "Your days" },
+  miSinDias: { es: "Todavía no hay días registrados. Se actualiza cada mañana.", en: "No days registered yet. It updates every morning." },
+  miTarda: {
+    es: "Lo de hoy puede tardar unos minutos en aparecer; lo de ayer y antes se cierra cada mañana a las 6.",
+    en: "Today's activity can take a few minutes to show up; previous days are closed every morning at 6.",
+  },
+  miNoVale: { es: "Ese enlace no vale", en: "That link isn't valid" },
+  miNoValeTexto: {
+    es: "Puede que esté incompleto o que tu alta ya no exista. Pon el correo con el que te apuntaste y te lo mando otra vez.",
+    en: "It may be incomplete, or your signup may no longer exist. Enter the email you signed up with and I'll send it again.",
+  },
+  miPedir: { es: "Mándame el enlace", en: "Send me the link" },
+  miPedido: {
+    es: "Si ese correo está apuntado, el enlace ya va para allá. Revisa también el correo no deseado.",
+    en: "If that email is registered, the link is on its way. Check your spam folder too.",
+  },
+  miGuarda: {
+    es: "Guarda este enlace: con él ves tus días y lo que llevas ganado. También te lo mandé por correo.",
+    en: "Keep this link: it shows your days and what you've earned. I've emailed it to you too.",
+  },
+  miCopiar: { es: "Copiar", en: "Copy" },
+  miCopiado: { es: "Copiado", en: "Copied" },
+
   // Acerca de
   acercaTitulo: { es: "Acerca de Ayotl", en: "About Ayotl" },
   acercaParrafos: {

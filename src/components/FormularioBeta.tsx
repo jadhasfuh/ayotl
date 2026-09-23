@@ -19,7 +19,10 @@ declare global {
   }
 }
 
-type Estado = { fase: "editando" | "enviando" | "listo" } | { fase: "error"; codigo: ErrorBeta };
+type Estado =
+  | { fase: "editando" | "enviando" }
+  | { fase: "listo"; token: string | null }
+  | { fase: "error"; codigo: ErrorBeta };
 
 /**
  * El formulario del programa Beta. Manda JSON a /api/beta; nunca habla con
@@ -89,8 +92,8 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
           turnstile: token,
         }),
       });
-      if (res.ok) { setEstado({ fase: "listo" }); return; }
-      const cuerpo = (await res.json().catch(() => ({}))) as { error?: ErrorBeta };
+      const cuerpo = (await res.json().catch(() => ({}))) as { error?: ErrorBeta; token?: string | null };
+      if (res.ok) { setEstado({ fase: "listo", token: cuerpo.token ?? null }); return; }
       setEstado({ fase: "error", codigo: cuerpo.error ?? "generico" });
     } catch {
       setEstado({ fase: "error", codigo: "generico" });
@@ -106,11 +109,24 @@ export function FormularioBeta({ idioma, turnstileSitio, libres }: { idioma: Idi
   }
 
   if (estado.fase === "listo") {
+    const enlace = estado.token
+      ? `${location.origin}${idioma === "en" ? "/en" : ""}/mi/${estado.token}`
+      : null;
     return (
       <div className="formulario gracias" role="status">
         <Tortuga lado={96} />
         <h2>{x("graciasTitulo")}</h2>
         <p>{x("graciasTexto")}</p>
+        {enlace && (
+          <>
+            <p>{x("miGuarda")}</p>
+            <p className="enlace-personal"><a href={enlace}>{enlace}</a></p>
+            <button type="button" className="boton secundario chico"
+                    onClick={() => navigator.clipboard?.writeText(enlace)}>
+              {x("miCopiar")}
+            </button>
+          </>
+        )}
       </div>
     );
   }

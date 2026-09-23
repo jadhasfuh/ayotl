@@ -20,6 +20,12 @@ end $$;
 -- creó service_role sin bypassrls, hay que ponérselo, que es como viene en
 -- Supabase. Sin esto el conteo de abajo da 0 y parece que la RLS lo tapa.
 alter role service_role bypassrls;
+create extension if not exists pgcrypto with schema public;
+-- En Supabase pgcrypto vive en `extensions`; aquí se simula para que la
+-- migración del enlace encuentre gen_random_bytes donde la busca.
+create schema extensions;
+create or replace function extensions.gen_random_bytes(int) returns bytea
+  language sql as 'select public.gen_random_bytes($1)';
 create schema auth;
 create table auth.users (id uuid primary key, email text);
 -- lo que lee registrar_dia de jlptest (public) y Daily Challenge (arcade)
@@ -123,6 +129,13 @@ select ayotl.tomar_cruce(5) as primero, ayotl.tomar_cruce(5) as segundo;
 \echo --- y pasados los minutos, vuelve a tocar
 update ayotl.programa set ultimo_cruce = now() - interval '10 minutes';
 select ayotl.tomar_cruce(5) as otra_vez;
+
+\echo --- el enlace del tester: su progreso y la recuperación por correo
+select nombre, dias, ganado, saldo, jsonb_array_length(detalle) as dias_detallados
+from ayotl.mi_progreso((select token from ayotl.testers where email = 'ana@gmail.com'));
+select ayotl.token_de('ana.vieja@hotmail.com') is not null as recupera_con_correo_extra;
+select ayotl.token_de('nadie@ejemplo.mx') is null as desconocido_no_devuelve_nada;
+select count(distinct token) = count(*) as tokens_unicos from ayotl.testers;
 
 \echo --- anon no puede ni ver el esquema (debe FALLAR); service_role sí
 set role anon;

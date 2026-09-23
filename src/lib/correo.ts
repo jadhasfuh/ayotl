@@ -85,3 +85,33 @@ export async function avisarEspera(nombre: string, email: string, comentario: st
     console.error("[espera] aviso", e instanceof Error ? e.message : e);
   }
 }
+
+/** Le manda a un tester su enlace personal de progreso. */
+export async function avisarEnlace(email: string, token: string, idioma: "es" | "en"): Promise<void> {
+  const clave = process.env.RESEND_API_KEY;
+  if (!clave) return;
+  const base = (process.env.NEXT_PUBLIC_SITIO || "https://ayotl.dev").replace(/\/$/, "");
+  const enlace = `${base}${idioma === "en" ? "/en" : ""}/mi/${token}`;
+  const es = idioma === "es";
+  const html = `<div style="font:16px/1.5 system-ui,sans-serif;color:#1c2422">
+  <p>${es ? "Aquí tienes tu enlace del programa Beta de Ayotl. Ábrelo cuando quieras para ver tus días y lo que llevas ganado:"
+          : "Here's your link for Ayotl's Beta program. Open it any time to see your days and what you've earned:"}</p>
+  <p><a href="${enlace}">${enlace}</a></p>
+  <p style="color:#5b635f">${es ? "Guárdalo: es personal y no hace falta contraseña."
+                                : "Keep it: it's personal and needs no password."}</p>
+</div>`;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { authorization: `Bearer ${clave}`, "content-type": "application/json" },
+      body: JSON.stringify({
+        from: DE, to: [email],
+        subject: es ? "Tu enlace del programa Beta de Ayotl" : "Your Ayotl Beta program link",
+        html,
+      }),
+      signal: AbortSignal.timeout(5000),
+    });
+  } catch (e) {
+    console.error("[enlace] envío", e instanceof Error ? e.message : e);
+  }
+}
