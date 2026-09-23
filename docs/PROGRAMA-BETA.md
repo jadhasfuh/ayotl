@@ -15,12 +15,11 @@ Cada tester gana, **por día**, según en cuántas apps hizo algo real ese día:
 | Apps ese día | Paga |
 |---|---|
 | 1 | 5 MXN |
-| 2 | 10 MXN |
-| 3 | **20 MXN** |
+| 2 | **15 MXN** |
 
-El salto de 10 a 20 es a propósito: lo que hace falta para la prueba cerrada
-de Play es que tengan las tres instaladas y en uso, así que la tercera app
-vale lo que las dos primeras juntas. Los importes están en
+El salto es a propósito: lo que hace falta para la prueba cerrada de Play es
+que tengan las dos instaladas y en uso, así que la segunda app vale el
+triple que la primera. Los importes están en
 `ayotl.programa.tarifa_1/2/3` y el cálculo, en la vista `ayotl.dias_resumen`
 (un día de un tester, con cuántas apps tocó y lo que vale). `ayotl.saldos`
 suma eso, no multiplica.
@@ -40,7 +39,13 @@ están en `ayotl.programa.dias_cortesia`.
 |---|---|---|
 | JLPTest | código al correo (Supabase Auth) | ≥ 1 repaso (`progreso.datos.hechosPorDia`) o ≥ 1 respuesta de examen (`resultados`) |
 | Daily Challenge | anónimo + **Google** opcional | ≥ 1 partida (`arcade.partidas`) |
-| Mercadito | teléfono + PIN, **otra Supabase** | ≥ 1 pedido suyo, o una sesión iniciada ese día (se cruza por teléfono) |
+
+**Mercadito quedó fuera del programa** (23-sep-2026): ya está publicada en las
+tiendas, así que no necesita la prueba cerrada de Play ni tiene sentido pagar
+por probarla. Su cruce por teléfono sigue en el código
+(`src/lib/mercadito.ts`, `/api/cron/mercadito`) pero el cron está
+desprogramado; volver a meterla es añadirla a `APPS_BETA`, al `check` de
+`apps` y reprogramar el cron.
 
 ## Cómo se cruza
 
@@ -95,7 +100,7 @@ estudio sigue contando una vez, sólo desplazado; no se corrige.
 
 | Dato | Por qué |
 |---|---|
-| **WhatsApp** | Es como se paga (CoDi), como se avisa, y como se entra a Mercadito: sin él sus días no se pueden cruzar |
+| **WhatsApp** | Es como se paga (CoDi) y como se le avisa |
 | **Cuenta de Gmail** | Es con la que se acepta la prueba cerrada en Play y con la que se entra a Daily Challenge |
 
 Empezaron siendo condicionales (según las apps marcadas) y quedaban altas a
@@ -152,7 +157,7 @@ Cada app tiene dos direcciones en Play y **no son intercambiables**:
 |---|---|---|---|
 | Daily Challenge | `click.dailychallenge.twa` | https://play.google.com/apps/testing/click.dailychallenge.twa | https://play.google.com/store/apps/details?id=click.dailychallenge.twa |
 | JLPTest | `org.jlptest.twa` | https://play.google.com/apps/testing/org.jlptest.twa | https://play.google.com/store/apps/details?id=org.jlptest.twa |
-| Mercadito | `mx.mercadito.cx` | ya está publicada, no hace falta | https://play.google.com/store/apps/details?id=mx.mercadito.cx |
+| Mercadito | `mx.mercadito.cx` | fuera del programa: ya está publicada | https://play.google.com/store/apps/details?id=mx.mercadito.cx |
 
 El de `/apps/testing/` es el que hay que mandar: es donde la persona acepta
 ser tester. El de `/store/apps/details` **sólo abre después de aceptar**;
@@ -166,16 +171,15 @@ ya está publicada.
 Texto para mandarles (WhatsApp):
 
 > Hola. Te apunto como tester de mis apps. Son 14 días (del 24 de septiembre
-> al 7 de octubre) y te pago por cada día que las uses: 5 pesos si usas una,
-> 10 si usas dos y 20 si usas las tres ese día. Te lo pago todo junto al
-> final, por CoDi o transferencia. Con las tres son hasta 280 pesos. Además
-> te doy un mes gratis de JLPTest completo. Pasos:
+> al 7 de octubre) y te pago por cada día que las uses: 5 pesos si usas una y
+> 15 si usas las dos ese día. Te lo pago todo junto al final, por CoDi o
+> transferencia. Con las dos son hasta 210 pesos. Además te doy un mes gratis
+> de JLPTest completo. Pasos:
 >
 > 1) Apúntate en https://ayotl.dev/beta con tu nombre, correo y WhatsApp (el
->    WhatsApp hace falta para Mercadito, que se entra con el teléfono, y para
->    pagarte). En «Correo de Google Play» pon tu cuenta de Gmail: es con la
->    que voy a ver tu actividad y con la que se entra a Daily Challenge; si
->    usas otra, ese día no cuenta.
+>    WhatsApp es para pagarte por CoDi y para avisarte). En «Correo de
+>    Google» pon tu cuenta de Gmail: es con la que voy a ver tu actividad y
+>    con la que se entra a Daily Challenge; si usas otra, ese día no cuenta.
 > 2) Acepta ser tester con estos dos enlaces, **con esa misma cuenta**:
 >    Daily Challenge · https://play.google.com/apps/testing/click.dailychallenge.twa
 >    JLPTest · https://play.google.com/apps/testing/org.jlptest.twa
@@ -185,10 +189,13 @@ Texto para mandarles (WhatsApp):
 > 4) Entra en las apps con ese mismo correo: en JLPTest te llega un código al
 >    correo; en Daily Challenge toca «Entrar con Google» (si te quedas como
 >    invitado, no puedo saber que eres tú).
-> 5) Úsalas un ratito cada día: un repaso en JLPTest, una partida en Daily
->    Challenge y abrir Mercadito basta para que cuente el día entero (20).
+> 5) Úsalas un ratito cada día: un repaso en JLPTest y una partida en Daily
+>    Challenge, y ese día vale 15.
 > 6) No desinstales las apps durante los 14 días, que es lo que Google mira.
 >    Y si algo falla o se ve raro, mándamelo por aquí.
+>
+> Al apuntarte te doy un enlace tuyo (ayotl.dev/mi/…) donde ves los días que
+> llevas y cuánto va sumando. Guárdalo.
 
 ## Google Play: la prueba cerrada
 
@@ -236,21 +243,20 @@ opinar, y menciona el apoyo económico como una línea más.
 
 ### Versión recomendada
 
-> **Busco gente de Sahuayo para probar tres apps hechas aquí**
+> **Busco gente de Sahuayo para probar dos apps hechas aquí**
 >
-> Me llamo Adrián y desde Sahuayo hago software: Mercadito (menú digital para
-> negocios de aquí), JLPTest (para estudiar japonés) y Daily Challenge (un
-> reto arcade diario). Antes de publicar las versiones nuevas necesito que las
-> pruebe gente de verdad, no yo solo.
+> Me llamo Adrián y desde Sahuayo hago software. Necesito que dos de mis
+> apps las pruebe gente de verdad antes de publicarlas: JLPTest (para
+> estudiar japonés) y Daily Challenge (un reto arcade nuevo cada día).
 >
 > Son 14 días, del 24 de septiembre al 7 de octubre. Lo único que pido es que
 > las uses un ratito al día y me digas qué falla, qué no se entiende o qué te
 > gustaría que hiciera.
 >
 > A cambio: un mes gratis de JLPTest completo, acceso a lo nuevo antes que
-> nadie, tu nombre en los agradecimientos si quieres, y un apoyo de entre 5 y
-> 20 pesos por cada día que las uses (se paga junto al final, por CoDi o
-> transferencia).
+> nadie, tu nombre en los agradecimientos si quieres, y un apoyo de 5 pesos
+> por día si usas una y 15 si usas las dos (se paga junto al final, por CoDi
+> o transferencia).
 >
 > Hace falta un teléfono Android o iPhone, una cuenta de Gmail y WhatsApp.
 >
@@ -259,11 +265,11 @@ opinar, y menciona el apoyo económico como una línea más.
 
 ### Versión corta, para bolsa de trabajo
 
-> Busco gente de Sahuayo para probar durante 14 días tres apps hechas aquí
-> (un menú digital para negocios, una de japonés y un juego diario).
+> Busco gente de Sahuayo para probar durante 14 días dos apps hechas aquí
+> (una de japonés y un juego diario).
 > No es un empleo: son unos minutos al día usándolas y decirme qué falla.
-> Incluye un mes gratis de JLPTest y un apoyo de 5 a 20 pesos por día usado,
-> pagado al final por CoDi. Hace falta Android o iPhone, Gmail y WhatsApp.
+> Incluye un mes gratis de JLPTest y un apoyo de 5 a 15 pesos por día usado,
+> pagado al final por CoDi. Hace falta Android, Gmail y WhatsApp.
 > https://ayotl.dev/beta
 
 ### Qué revisar después de publicar

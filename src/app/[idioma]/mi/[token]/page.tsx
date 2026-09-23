@@ -90,7 +90,7 @@ export default async function MiProgreso({ params }: Props) {
             ? <p className="dato">{x("miHoyFaltan")(faltanHoy)}</p>
             : <p className="dato">{x("miHoyCompleto")}</p>}
           <p className="enlaces-persona">
-            {APPS.map((a) => (
+            {APPS.filter((a) => APPS_BETA.includes(a.id as AppBeta)).map((a) => (
               <a key={a.id} href={a.url} target="_blank" rel="noopener">{a.nombre} ↗</a>
             ))}
           </p>
@@ -110,7 +110,7 @@ export default async function MiProgreso({ params }: Props) {
         )}
         <p className="dato">{x("miTarda")}</p>
 
-        <p>{x("miComoSeCuenta")(p.tarifa_1, p.tarifa_2, p.tarifa_3)}</p>
+        <p>{x("miComoSeCuenta")(p.tarifa_1, p.tarifa_2)}</p>
       </main>
     </>
   );

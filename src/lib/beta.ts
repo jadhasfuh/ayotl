@@ -8,7 +8,12 @@ import { z } from "zod";
 export const PLATAFORMAS = ["ios", "android", "web"] as const;
 export type Plataforma = (typeof PLATAFORMAS)[number];
 
-export const APPS_BETA = ["mercadito", "jlptest", "dailychallenge"] as const;
+/**
+ * Las apps del programa. Mercadito no está: ya se publicó en las tiendas,
+ * así que no necesita la prueba cerrada de Play ni tiene sentido pagar por
+ * probarla. El código del cruce de Mercadito sigue ahí por si vuelve.
+ */
+export const APPS_BETA = ["jlptest", "dailychallenge"] as const;
 export type AppBeta = (typeof APPS_BETA)[number];
 
 /**

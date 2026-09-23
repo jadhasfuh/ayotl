@@ -100,8 +100,8 @@ const TEXTOS = {
   abrirApp: { es: "Abrir", en: "Open" },
   betaTeaserTitulo: { es: "Lo próximo de Ayotl", en: "What's next at Ayotl" },
   betaTeaserTexto: {
-    es: "Cada versión la prueba antes un grupo pequeño de gente que usa las apps de verdad. Pago por día de prueba: hasta 20 pesos si usas las tres.",
-    en: "Every release is tried first by a small group of people who actually use the apps. I pay per day of testing: up to 20 MXN if you use all three.",
+    es: "Cada versión la prueba antes un grupo pequeño de gente que usa las apps de verdad. Pago por día de prueba: hasta 15 pesos si usas las dos.",
+    en: "Every release is tried first by a small group of people who actually use the apps. I pay per day of testing: up to 15 MXN if you use both.",
   },
   acercaTeaserTitulo: { es: "¿Por qué una tortuga?", en: "Why a turtle?" },
   acercaTeaserTexto: {
@@ -120,14 +120,14 @@ const TEXTOS = {
   betaVentajas: {
     es: [
       "Un mes de JLPTest completo, gratis, desde que te apuntas.",
-      "Se paga por día y por cuántas apps usaste ese día: 5 pesos por una, 10 por dos y 20 si usas las tres. Todo junto al final, por CoDi o transferencia.",
+      "Se paga por día y por cuántas apps usaste ese día: 5 pesos por una y 15 si usas las dos. Todo junto al final, por CoDi o transferencia.",
       "Acceso a las versiones nuevas antes de que salgan.",
       "Un canal directo conmigo para reportar fallos y proponer cosas.",
       "Tu nombre en los agradecimientos, si quieres.",
     ],
     en: [
       "A full month of JLPTest, free, from the day you sign up.",
-      "Paid per day, by how many apps you used that day: 5 MXN for one, 10 for two, 20 if you use all three. Paid at the end via CoDi or bank transfer.",
+      "Paid per day, by how many apps you used that day: 5 MXN for one and 15 if you use both. Paid at the end via CoDi or bank transfer.",
       "Access to new versions before they ship.",
       "A direct line to me for bugs and ideas.",
       "Your name in the credits, if you want.",
@@ -216,15 +216,15 @@ const TEXTOS = {
   miTitulo: { es: "Tu programa Beta", en: "Your Beta program" },
   miHola: { es: (nombre: string) => `Hola, ${nombre}`, en: (nombre: string) => `Hi, ${nombre}` },
   miDias: { es: "días con actividad", en: "days with activity" },
-  miCompletos: { es: "con las tres apps", en: "with all three apps" },
+  miCompletos: { es: "con las dos apps", en: "with both apps" },
   miGanado: { es: "ganado", en: "earned" },
   miPagado: { es: "pagado", en: "paid" },
   miSaldo: { es: "te debo", en: "I owe you" },
   miComoSeCuenta: {
-    es: (t1: number, t2: number, t3: number) =>
-      `Cada día cuenta según en cuántas apps hiciste algo: ${t1} pesos por una, ${t2} por dos y ${t3} por las tres. Basta con un repaso en JLPTest, una partida en Daily Challenge o entrar a Mercadito.`,
-    en: (t1: number, t2: number, t3: number) =>
-      `Each day counts by how many apps you used: ${t1} MXN for one, ${t2} for two, ${t3} for all three. One review in JLPTest, one run in Daily Challenge or opening Mercadito is enough.`,
+    es: (t1: number, t2: number) =>
+      `Cada día cuenta según en cuántas apps hiciste algo: ${t1} pesos por una y ${t2} por las dos. Basta con un repaso en JLPTest o una partida en Daily Challenge.`,
+    en: (t1: number, t2: number) =>
+      `Each day counts by how many apps you used: ${t1} MXN for one and ${t2} for both. One review in JLPTest or one run in Daily Challenge is enough.`,
   },
   miHoy: { es: "Hoy", en: "Today" },
   miHoyNada: { es: "Hoy todavía no registras nada.", en: "Nothing registered today yet." },

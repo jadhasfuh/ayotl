@@ -3,7 +3,6 @@ import { Cabecera } from "@/components/Cabecera";
 import { EntrarAdmin } from "@/components/EntrarAdmin";
 import { PanelTesters, type DiaPrueba, type Pago, type Saldo } from "@/components/PanelTesters";
 import { Refrescar } from "@/components/Refrescar";
-import { cruzarMercadito } from "@/lib/mercadito";
 import { adminConfigurado, esAdmin } from "@/lib/admin";
 import { idiomaDe } from "@/lib/paginas";
 import { ayotl } from "@/lib/supabase-servidor";
@@ -55,18 +54,13 @@ export default async function Testers({ params }: Props) {
 
   // Cruzar el día de hoy al abrir, para que la cuadrícula esté al día sin
   // tocar ningún botón. `tomar_cruce` limita esto a una vez cada dos
-  // minutos: la página se renderiza en cada visita y cada cruce abre una
-  // conexión a la base de Mercadito. Para ver algo que acaba de pasar está
-  // el botón «Actualizar», que se salta el freno.
+  // minutos, porque la página se renderiza en cada visita. Para ver algo
+  // que acaba de pasar está el botón «Actualizar», que se salta el freno.
   if (base) {
     const { data: toca } = await base.rpc("tomar_cruce", { p_minutos: 2 });
     if (toca === true) {
-      const [sql, mercadito] = await Promise.allSettled([
-        base.rpc("registrar_dia", { p_fecha: hoy }),
-        cruzarMercadito(hoy),
-      ]);
-      if (sql.status === "rejected") console.error("[panel] cruce sql", sql.reason);
-      if (mercadito.status === "rejected") console.error("[panel] cruce mercadito", mercadito.reason);
+      const { error } = await base.rpc("registrar_dia", { p_fecha: hoy });
+      if (error) console.error("[panel] cruce", error.message);
     }
   }
 

@@ -19,7 +19,7 @@ type Props = {
   enEspera: number; configurado: boolean;
 };
 
-const LETRA: Record<AppBeta, string> = { mercadito: "M", jlptest: "J", dailychallenge: "D" };
+const LETRA: Record<AppBeta, string> = { jlptest: "J", dailychallenge: "D" };
 const MEDIOS = ["codi", "transferencia", "efectivo", "otro"] as const;
 
 /**
@@ -91,10 +91,10 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
 
       <div className="resumen">
         <div><b>{testers.length}</b><span className="dato">testers</span></div>
-        <div><b>{tarifas.join(" · ")}</b><span className="dato">MXN por 1 · 2 · 3 apps</span></div>
+        <div><b>{tarifas[0]} · {tarifas[1]}</b><span className="dato">MXN por 1 · 2 apps</span></div>
         <div><b>{totalSaldo}</b><span className="dato">por pagar</span></div>
         <div><b>{testers.reduce((n, t) => n + t.dias, 0)}</b><span className="dato">días</span></div>
-        <div><b>{testers.reduce((n, t) => n + t.dias_completos, 0)}</b><span className="dato">con las 3</span></div>
+        <div><b>{testers.reduce((n, t) => n + t.dias_completos, 0)}</b><span className="dato">con las dos</span></div>
         {enEspera > 0 && <div><b>{enEspera}</b><span className="dato">en espera</span></div>}
         <div className="resumen-acciones">
           {/* Se salta el freno de dos minutos del cruce automático: es el
@@ -117,7 +117,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
             <tr>
               <th className="fijo">Tester</th>
               {fechas.map((f) => <th key={f} title={f} className={f === hoy ? "hoy" : undefined}>{f.slice(8)}</th>)}
-              <th>Días</th><th>Con 3</th><th>Ganado</th><th>Pagado</th><th>Saldo</th>
+              <th>Días</th><th>Con 2</th><th>Ganado</th><th>Pagado</th><th>Saldo</th>
             </tr>
           </thead>
           <tbody>
@@ -127,7 +127,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                   <span>{t.nombre}</span>
                   <small>
                     {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
-                    {t.apps.includes("mercadito") && !t.telefono && <b className="falta"> · sin WhatsApp</b>}
+                    {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
                   </small>
                 </th>
                 {fechas.map((f) => {
@@ -135,9 +135,9 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                   const completo = hechos.length >= APPS_BETA.length;
                   return (
                     <td key={f} className={completo ? "con completo" : hechos.length ? "con" : undefined}
-                        title={completo ? "Las tres apps ese día" : undefined}>
-                      {/* Se enseñan las tres apps a todos, no sólo las que
-                          eligieron: ahora cualquiera puede sumar las tres. */}
+                        title={completo ? "Las dos apps ese día" : undefined}>
+                      {/* Se enseñan las dos apps a todos, no sólo las que
+                          eligieron: cualquiera puede sumar las dos. */}
                       {APPS_BETA.map((a) => {
                         const d = hechos.find((h) => h.app === a);
                         return (
@@ -159,8 +159,8 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
         </table>
       </div>
       <p className="ayuda solo-ancho">
-        M = Mercadito · J = JLPTest · D = Daily Challenge. Verde: hubo actividad ese día (pasa el ratón para ver la evidencia).
-        La celda con borde es un día con las tres apps, que vale {tarifas[2]} en vez de {tarifas[0]}.
+        J = JLPTest · D = Daily Challenge. Verde: hubo actividad ese día (pasa el ratón para ver la evidencia).
+        La celda con borde es un día con las dos, que vale {tarifas[1]} en vez de {tarifas[0]}.
         Pulsa una letra para marcar o quitar un día a mano.
       </p>
 
@@ -177,7 +177,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
               <p className="dato">{t.dias} días ({t.dias_completos} con las 3) · {t.ganado} ganado · {t.pagado} pagado</p>
               <p className="ficha-contacto">
                 {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
-                {t.apps.includes("mercadito") && !t.telefono && <b className="falta"> · sin WhatsApp</b>}
+                {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
               </p>
               {fechasConActividad.length > 0 && (
                 <ul className="ficha-dias">
@@ -188,7 +188,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                         <span key={d.app} className="dia si" title={JSON.stringify(d.evidencia)}>{LETRA[d.app]}</span>
                       ))}
                       {suyos.filter((d) => d.fecha === f).length >= APPS_BETA.length && (
-                        <span className="dato">· {tarifas[2]} MXN</span>
+                        <span className="dato">· {tarifas[1]} MXN</span>
                       )}
                     </li>
                   ))}
