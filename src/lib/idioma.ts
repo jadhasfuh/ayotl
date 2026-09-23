@@ -125,9 +125,13 @@ const TEXTOS = {
 
   // Para negocios
   negTitulo: { es: "¿Tu negocio necesita una app o una página?", en: "Does your business need an app or a website?" },
+  negCercania: {
+    es: "Hecho en Sahuayo, para negocios de aquí",
+    en: "Made in Sahuayo, for businesses here",
+  },
   negIntro: {
-    es: "Ayotl es un estudio de software en Sahuayo, Michoacán. Sus tres apps están en producción y las usan negocios y gente de la región todos los días. Para un negocio que necesita algo hecho a la medida, la primera plática no cuesta nada y termina con una respuesta clara: si tiene sentido hacerlo, cuánto cuesta y en cuánto tiempo.",
-    en: "Ayotl is a software studio in Sahuayo, Michoacán. Its three apps are in production, used every day by businesses and people around the region. For a business that needs something custom, the first conversation is free and ends with a clear answer: whether it's worth building, what it costs and how long it takes.",
+    es: "Ayotl es un estudio de software de Sahuayo. Aquí mismo: sus tres apps están en producción y las usan negocios y gente de la región todos los días. Si tu negocio necesita algo a la medida, la primera plática no cuesta nada —en tu local si prefieres— y termina con una respuesta clara: si vale la pena hacerlo, cuánto cuesta y en cuánto tiempo.",
+    en: "Ayotl is a software studio from Sahuayo — right here. Its three apps are in production, used every day by businesses and people around the region. If your business needs something custom, the first conversation is free — at your place if you prefer — and ends with a clear answer: whether it's worth building, what it costs and how long it takes.",
   },
   negQueHago: { es: "Qué se puede construir", en: "What can be built" },
   negServicios: {
@@ -155,30 +159,30 @@ const TEXTOS = {
   },
   negPrueba: { es: "Lo que ya está hecho", en: "What's already built" },
   negPruebaTexto: {
-    es: "No son ejemplos de escuela: son tres productos en producción, con su dominio, sus usuarios y su mantenimiento. A Mercadito lo usan negocios de Sahuayo, Jiquilpan y San Pedro.",
-    en: "These aren't school projects: three products in production, each with its own domain, users and upkeep. Mercadito is used by businesses in Sahuayo, Jiquilpan and San Pedro.",
+    es: "No son ejemplos de escuela: son tres productos en producción, con su dominio, sus usuarios y su mantenimiento. A Mercadito lo usan negocios de aquí —Sahuayo, Jiquilpan, San Pedro— y quien lo atiende cuando algo falla vive en el mismo pueblo.",
+    en: "These aren't school projects: three products in production, each with its own domain, users and upkeep. Mercadito is used by businesses here — Sahuayo, Jiquilpan, San Pedro — and whoever fixes it when something breaks lives in the same town.",
   },
   negComo: { es: "Cómo se trabaja", en: "How the work goes" },
   negPasos: {
     es: [
-      "Primero una plática sobre lo que necesitas, sin compromiso. Si no te hace falta un software, te lo decimos.",
-      "Después, por escrito y cerrado: qué incluye, cuánto cuesta y en cuánto tiempo.",
-      "Durante el trabajo lo vas viendo funcionando, no en dibujos.",
+      "Primero una plática, donde te acomode: en tu negocio, por WhatsApp o por llamada. Sin compromiso, y si no te hace falta un software se te dice de frente.",
+      "Después, por escrito y cerrado: qué incluye, cuánto cuesta y en cuánto tiempo. Sin letras chiquitas ni cobros que aparezcan luego.",
+      "Durante el trabajo lo vas viendo funcionando, no en dibujos, y se te enseña cómo usarlo hasta que te sientas a gusto.",
       "Al final queda a tu nombre: tu dominio, tus cuentas, tus datos. Si un día quieres llevártelo, te lo llevas.",
     ],
     en: [
-      "First a conversation about what you need, no strings. If you don't need software, you'll be told.",
-      "Then, in writing and fixed: what's included, the price and the timeline.",
-      "While it's being built you see it working, not as drawings.",
+      "First a conversation, wherever suits you: at your business, over WhatsApp or by phone. No strings, and if you don't need software you'll be told straight.",
+      "Then, in writing and fixed: what's included, the price and the timeline. No fine print and no charges that show up later.",
+      "While it's being built you see it working, not as drawings, and you're shown how to use it until you're comfortable.",
       "At the end it's yours: your domain, your accounts, your data. If you ever want to take it elsewhere, you can.",
     ],
   },
-  negContacto: { es: "Contacto", en: "Get in touch" },
+  negContacto: { es: "Platiquemos", en: "Let's talk" },
   negContactoTexto: {
-    es: "Por WhatsApp o por correo. Ayotl está en Sahuayo, así que también se puede quedar en persona.",
-    en: "By WhatsApp or email. Ayotl is based in Sahuayo, so meeting in person is an option too.",
+    es: "Manda un WhatsApp y platicamos sin compromiso. Y si prefieres verlo en persona, Ayotl está aquí en Sahuayo: se puede pasar a tu negocio.",
+    en: "Send a WhatsApp and let's talk, no strings. And if you'd rather do it in person, Ayotl is right here in Sahuayo: a visit to your place can be arranged.",
   },
-  negWhatsapp: { es: "Escribir por WhatsApp", en: "Message on WhatsApp" },
+  negWhatsapp: { es: "Mandar un WhatsApp", en: "Send a WhatsApp" },
 
   // Programa Beta
   betaTitulo: { es: "Programa Beta", en: "Beta Program" },

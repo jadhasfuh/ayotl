@@ -33,6 +33,7 @@ export default async function Negocios({ params }: Props) {
       <main id="contenido" className="seccion">
         <div className="contenedor">
           <div className="prosa">
+            <p className="etiqueta-nahuatl">{x("negCercania")}</p>
             <h1>{x("negTitulo")}</h1>
             <p className="grande">{x("negIntro")}</p>
             <p className="hero-botones">
