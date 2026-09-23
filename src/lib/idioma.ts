@@ -49,11 +49,12 @@ export function idiomaDeCabecera(accept: string | null | undefined): Idioma {
 }
 
 /** Las páginas del sitio y su dirección pública en cada idioma. */
-export const PAGINAS = ["inicio", "beta", "acerca"] as const;
+export const PAGINAS = ["inicio", "negocios", "beta", "acerca"] as const;
 export type Pagina = (typeof PAGINAS)[number];
 
 export const RUTAS: Record<Pagina, Record<Idioma, string>> = {
   inicio: { es: "/", en: "/en" },
+  negocios: { es: "/negocios", en: "/en/business" },
   beta:   { es: "/beta", en: "/en/beta" },
   acerca: { es: "/acerca", en: "/en/about" },
 };
@@ -78,6 +79,7 @@ const TEXTOS = {
   // Navegación
   navInicio: { es: "Inicio", en: "Home" },
   navApps: { es: "Apps", en: "Apps" },
+  navNegocios: { es: "Para negocios", en: "For businesses" },
   navBeta: { es: "Programa Beta", en: "Beta Program" },
   navAcerca: { es: "Acerca de", en: "About" },
   cambiarIdioma: { es: "English", en: "Español" },
@@ -109,6 +111,54 @@ const TEXTOS = {
     en: "A Nahuatl name from Sahuayo, Michoacán, that I liked for what it stands for: getting there without running.",
   },
   leerMas: { es: "Leer la historia", en: "Read the story" },
+
+  // Para negocios
+  negTitulo: { es: "¿Necesitas una app o una página?", en: "Need an app or a website?" },
+  negIntro: {
+    es: "Soy Adrián, de Sahuayo. Hago software desde aquí: tres apps mías están en producción y las usan negocios y gente de la región todos los días. Si tienes un negocio y necesitas algo hecho a la medida, hablamos y te digo con franqueza si puedo ayudarte y cuánto cuesta.",
+    en: "I'm Adrián, from Sahuayo. I build software from here: three of my own apps are in production, used every day by businesses and people in the region. If you run a business and need something custom, let's talk and I'll tell you straight whether I can help and what it costs.",
+  },
+  negQueHago: { es: "Qué puedo hacerte", en: "What I can build for you" },
+  negServicios: {
+    es: [
+      { t: "Tu página o tienda en línea", d: "Rápida, que se vea bien en el teléfono y que aparezca en Google. Con tu propio dominio, no una red social prestada." },
+      { t: "Una app para iPhone y Android", d: "Publicada en App Store y Google Play a tu nombre. Es lo que hice con Mercadito, que hoy está en las dos tiendas." },
+      { t: "El sistema de tu negocio", d: "Menú con código QR, comandas a la cocina, meseros, reservas, corte de caja. Lo mismo que Mercadito hace para los negocios de aquí, adaptado a lo tuyo." },
+      { t: "Automatizaciones", d: "Que tu negocio publique solo en Facebook e Instagram, que los pedidos lleguen a tu WhatsApp, que tu sistema hable con el que ya usas. Se configura una vez y trabaja solo." },
+    ],
+    en: [
+      { t: "Your website or online store", d: "Fast, good-looking on a phone, and findable on Google. On your own domain, not a borrowed social account." },
+      { t: "An iPhone and Android app", d: "Published on the App Store and Google Play under your name. That's what I did with Mercadito, now live on both." },
+      { t: "Your business system", d: "QR menu, orders to the kitchen, waiters, reservations, end-of-day cash count. The same Mercadito does for businesses here, fitted to yours." },
+      { t: "Automation", d: "Your business posting to Facebook and Instagram on its own, orders landing in your WhatsApp, your system talking to the one you already use. Set up once, then it runs itself." },
+    ],
+  },
+  negPrueba: { es: "Lo que ya he hecho", en: "What I've already built" },
+  negPruebaTexto: {
+    es: "No son ejemplos de escuela: son tres productos en producción, con su dominio, sus usuarios y su mantenimiento. Mercadito lo usan negocios de Sahuayo, Jiquilpan y San Pedro.",
+    en: "These aren't school projects: three products in production, each with its own domain, users and upkeep. Mercadito is used by businesses in Sahuayo, Jiquilpan and San Pedro.",
+  },
+  negComo: { es: "Cómo trabajo", en: "How I work" },
+  negPasos: {
+    es: [
+      "Hablamos de lo que necesitas, sin compromiso. Si no te hace falta un software, te lo digo.",
+      "Te paso qué incluye, cuánto cuesta y en cuánto tiempo, por escrito y cerrado.",
+      "Lo hago y te lo voy enseñando funcionando, no en dibujos.",
+      "Queda a tu nombre: tu dominio, tus cuentas, tus datos. Si un día quieres llevártelo, te lo llevas.",
+    ],
+    en: [
+      "We talk about what you need, no strings. If you don't need software, I'll say so.",
+      "You get what's included, the price and the timeline, in writing and fixed.",
+      "I build it and show it to you working, not as drawings.",
+      "It's yours: your domain, your accounts, your data. If you ever want to take it elsewhere, you can.",
+    ],
+  },
+  negContacto: { es: "Hablemos", en: "Let's talk" },
+  negContactoTexto: {
+    es: "Escríbeme por WhatsApp o por correo y platicamos. Soy de aquí: si hace falta, nos vemos.",
+    en: "Send me a WhatsApp or an email and we'll talk it through. I'm local: we can meet in person if that's easier.",
+  },
+  negWhatsapp: { es: "Escríbeme por WhatsApp", en: "Message me on WhatsApp" },
 
   // Programa Beta
   betaTitulo: { es: "Programa Beta", en: "Beta Program" },

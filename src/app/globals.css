@@ -427,3 +427,24 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
   .mis-dias li { grid-template-columns: 1fr auto; }
   .mis-dias li .dato { grid-column: 1 / -1; }
 }
+
+/* --- Para negocios ------------------------------------------------------ */
+.servicios { display: grid; gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
+@media (min-width: 720px) { .servicios { grid-template-columns: 1fr 1fr; } }
+.servicios li { padding: 1.5rem; border: 1px solid var(--linea); border-radius: var(--radio); background: var(--fondo-2); }
+.servicios h3 { margin: 0 0 0.35em; }
+.servicios p { margin: 0; color: var(--tinta-2); }
+.trabajos { display: grid; gap: 1px; list-style: none; padding: 0; margin: 1.5rem 0 0; background: var(--linea); border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; }
+.trabajos li { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 1rem 1.25rem; background: var(--fondo); }
+.trabajos li[data-acento="agua"] { --tarjeta-acento: var(--agua); }
+.trabajos li[data-acento="caparazon"] { --tarjeta-acento: var(--caparazon); }
+.trabajos li[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
+.trabajos h3 { margin: 0; font-size: 1.05rem; }
+.trabajos p { margin: 0; color: var(--tinta-2); font-size: 0.95rem; }
+.trabajos .enlace-flecha { font-family: var(--fuente-dato); font-size: 11px; white-space: nowrap; }
+@media (max-width: 560px) {
+  .trabajos li { grid-template-columns: auto 1fr; }
+  .trabajos .enlace-flecha { grid-column: 2; }
+}
+.pasos { padding-left: 1.2em; }
+.pasos li { margin-bottom: 0.75em; }

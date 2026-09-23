@@ -12,6 +12,7 @@ export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina })
   const otro: Idioma = idioma === "es" ? "en" : "es";
   const secciones: { pagina: Pagina; texto: string }[] = [
     { pagina: "inicio", texto: x("navApps") },
+    { pagina: "negocios", texto: x("navNegocios") },
     { pagina: "beta", texto: x("navBeta") },
     { pagina: "acerca", texto: x("navAcerca") },
   ];

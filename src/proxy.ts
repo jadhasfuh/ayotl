@@ -36,9 +36,12 @@ export function proxy(req: NextRequest) {
     destino.pathname = pathname.slice(3) || "/";
     return NextResponse.redirect(destino, 308);
   }
-  if (pathname === "/en/acerca") {
+  // Las rutas internas en inglés llevan el nombre español de la carpeta; si
+  // alguien las teclea, se le manda a la dirección pública.
+  const INTERNAS_EN: Record<string, string> = { "/en/acerca": "/en/about", "/en/negocios": "/en/business" };
+  if (INTERNAS_EN[pathname]) {
     const destino = req.nextUrl.clone();
-    destino.pathname = "/en/about";
+    destino.pathname = INTERNAS_EN[pathname];
     return NextResponse.redirect(destino, 308);
   }
   if (pathname === "/" && !esIdioma(cookie)
@@ -52,7 +55,8 @@ export function proxy(req: NextRequest) {
   let interno: string;
   if (pathname === "/en" || pathname.startsWith("/en/")) {
     idioma = "en";
-    interno = pathname === "/en/about" ? "/en/acerca" : pathname;
+    const PUBLICAS_EN: Record<string, string> = { "/en/about": "/en/acerca", "/en/business": "/en/negocios" };
+    interno = PUBLICAS_EN[pathname] ?? pathname;
   } else {
     idioma = "es";
     interno = pathname === "/" ? "/es" : `/es${pathname}`;
