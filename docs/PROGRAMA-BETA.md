@@ -209,7 +209,7 @@ opinar, y menciona el apoyo económico como una línea más.
 
 ### Versión recomendada
 
-> **Busco 8 personas de Sahuayo para probar tres apps hechas aquí**
+> **Busco gente de Sahuayo para probar tres apps hechas aquí**
 >
 > Me llamo Adrián y desde Sahuayo hago software: Mercadito (menú digital para
 > negocios de aquí), JLPTest (para estudiar japonés) y Daily Challenge (un
@@ -227,12 +227,13 @@ opinar, y menciona el apoyo económico como una línea más.
 >
 > Hace falta un teléfono Android o iPhone, una cuenta de Gmail y WhatsApp.
 >
-> Apúntate aquí: https://ayotl.dev/beta — quedan 8 lugares.
+> Apúntate aquí: https://ayotl.dev/beta (la página dice cuántos lugares
+> quedan; son pocos).
 
 ### Versión corta, para bolsa de trabajo
 
-> Busco 8 personas de Sahuayo para probar durante 14 días tres apps hechas
-> aquí (un menú digital para negocios, una de japonés y un juego diario).
+> Busco gente de Sahuayo para probar durante 14 días tres apps hechas aquí
+> (un menú digital para negocios, una de japonés y un juego diario).
 > No es un empleo: son unos minutos al día usándolas y decirme qué falla.
 > Incluye un mes gratis de JLPTest y un apoyo de 5 a 20 pesos por día usado,
 > pagado al final por CoDi. Hace falta Android o iPhone, Gmail y WhatsApp.
@@ -240,8 +241,12 @@ opinar, y menciona el apoyo económico como una línea más.
 
 ### Qué revisar después de publicar
 
-- Las plazas se agotan solas: al llegar a 14, `/beta` deja de aceptar altas y
-  enseña el correo de contacto. No hay que cerrar nada a mano.
+- El cupo son **14 plazas contando la tuya**: 13 personas de fuera, que es
+  margen de sobra sobre los 12 que exige Play por si alguien se cae. Se
+  agotan solas: al llegarse al tope, `/beta` cambia el formulario por el de
+  lista de espera. No hay que cerrar nada a mano.
+- El anuncio no lleva el número de lugares escrito a mano a propósito: el que
+  vale es el de la página, que se actualiza solo.
 - En el panel, quien aparezca en rojo como «sin WhatsApp» no puede sumar días
   de Mercadito: hay que pedírselo.
 - Conviene responder a cada alta por WhatsApp con los enlaces de la prueba
