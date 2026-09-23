@@ -160,3 +160,16 @@ Las imágenes viven en `public/capturas/*.webp`, a 840 px de ancho (el doble
 del móvil) y ~50 kB cada una. El guion que las toma está en el bloc de notas
 de la sesión, no en el repo: se vuelve a escribir en cinco minutos y
 dependía de credenciales de la demo.
+
+## 2026-09-23 — Todo el sitio en tercera persona
+
+Los textos estaban escritos en primera persona («soy Adrián», «la hice yo»,
+«te pago»). Se pasan a hablar de Ayotl y de lo que hace: «Ayotl es un
+estudio de software en Sahuayo», «hecha y mantenida por Ayotl», «el programa
+paga por día de prueba». Las llamadas a la acción siguen dirigiéndose al
+lector en segunda persona («apúntate», «escribe por WhatsApp»), que es lo
+natural en un botón.
+
+Las dos excepciones, a propósito: los botones donde habla el visitante
+(«Avisarme», «Enviarme el enlace») y el mensaje de WhatsApp de
+docs/PROGRAMA-BETA.md, que es un mensaje personal de Adrián y no una página.
