@@ -79,6 +79,12 @@ insert into arcade.partidas (usuario, puntaje, creado_en) values
   ('11111111-1111-1111-1111-111111111111', 340, '2026-09-20 23:50-06'),   -- 05:50 UTC del 21: debe contar como el 20
   ('11111111-1111-1111-1111-111111111111', 120, '2026-09-21 09:00-06');
 select * from ayotl.registrar_dia('2026-09-20');
+\echo --- un segundo correo del mismo tester también cuenta
+insert into auth.users values ('44444444-4444-4444-4444-444444444444', 'ana.vieja@hotmail.com');
+insert into public.resultados (perfil, creado) values ('44444444-4444-4444-4444-444444444444', '2026-09-20 19:00-06');
+update ayotl.testers set correos_extra = '{ana.vieja@hotmail.com}' where email = 'ana@gmail.com';
+select app, evidencia from ayotl.registrar_dia('2026-09-20') where app = 'jlptest';
+
 \echo --- otra vez (idempotente: mismas dos filas, sin duplicar)
 select count(*) as filas from (select * from ayotl.registrar_dia('2026-09-20')) x;
 select tester, fecha, app, evidencia from ayotl.dias_prueba order by app;

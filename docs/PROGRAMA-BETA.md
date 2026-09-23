@@ -103,6 +103,23 @@ base (`testers_telefono` y `testers_google`, como `not valid` para no
 invalidar esas altas anteriores). `ayotl.testers_incompletos` lista a quien
 le falte algo y el panel lo marca en rojo.
 
+### Cuando alguien ya tiene cuenta con otro correo
+
+Pasa, y pasó el primer día: el correo con el que se apunta (el de Google,
+que es el que vale para Play y para Daily Challenge) no tiene por qué ser el
+de su cuenta vieja de JLPTest. Para eso está `ayotl.testers.correos_extra`:
+correos adicionales del mismo tester, que el cruce también mira.
+
+```sql
+update ayotl.testers
+   set correos_extra = correos_extra || '{sucuenta.vieja@hotmail.com}'
+ where email = 'suyo@gmail.com';
+select * from ayotl.registrar_dia(current_date);   -- para recontar hoy
+```
+
+Si alguien dice «hice un examen y no me contó», esto es lo primero que hay
+que mirar: con qué correo entró a la app.
+
 ## Lo que hay que pedirle a cada tester
 
 Esto es lo que hace posible el cruce. Sin el punto 1, un tester no suma días.
