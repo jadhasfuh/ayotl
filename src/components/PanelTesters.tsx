@@ -17,6 +17,8 @@ type Props = {
   testers: Saldo[]; dias: DiaPrueba[]; pagos: Pago[];
   fechas: string[]; hoy: string; tarifas: [number, number, number];
   enEspera: number; tokens: Record<number, string>;
+  /** Todos los correos de cada tester: el de contacto, el de Google y los extra. */
+  correos: Record<number, string[]>;
   periodo: { inicio: string | null; fin: string | null };
   configurado: boolean;
 };
@@ -41,7 +43,7 @@ function enLetra(fecha: string | null): string {
     { day: "numeric", month: "long", timeZone: "UTC" });
 }
 
-export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, tokens, periodo, configurado }: Props) {
+export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, tokens, correos, periodo, configurado }: Props) {
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
@@ -209,7 +211,12 @@ Si algo falla o se ve raro, mándamelo por aquí.`;
                 <th className="fijo" scope="row">
                   <span>{t.nombre}</span>
                   <small>
-                    {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
+                    {(correos[t.id] ?? [t.email_google]).map((c, i, todos) => (
+                      <span key={c} className="correo">
+                        {todos.length > 1 && <i>{i + 1}</i>}{c}
+                      </span>
+                    ))}
+                    {t.telefono ? ` · ${t.telefono}` : ""}
                     {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
                     {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
                   </small>
@@ -270,7 +277,12 @@ Si algo falla o se ve raro, mándamelo por aquí.`;
               </div>
               <p className="dato">{t.dias} días ({t.dias_completos} con las 3) · {t.ganado} ganado · {t.pagado} pagado</p>
               <p className="ficha-contacto">
-                {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
+                {(correos[t.id] ?? [t.email_google]).map((c, i, todos) => (
+                  <span key={c} className="correo">
+                    {todos.length > 1 && <i>{i + 1}</i>}{c}
+                  </span>
+                ))}
+                {t.telefono ? ` · ${t.telefono}` : ""}
                 {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
                 {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
               </p>

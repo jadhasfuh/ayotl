@@ -71,7 +71,7 @@ export default async function Testers({ params }: Props) {
         base.from("dias_prueba").select("tester, fecha, app, evidencia").gte("fecha", sumarDias(hoy, -60)).order("fecha"),
         base.from("pagos").select("id, tester, monto, fecha, medio, referencia").order("id", { ascending: false }).limit(100),
         base.rpc("plazas").maybeSingle(),
-        base.from("testers").select("id, token"),
+        base.from("testers").select("id, token, email, email_google, correos_extra"),
       ])
     : [null, null, null, null, null, null];
 
@@ -97,6 +97,10 @@ export default async function Testers({ params }: Props) {
           tarifas={tarifas}
           enEspera={(plazas?.data as { en_espera: number } | null)?.en_espera ?? 0}
           tokens={Object.fromEntries(((tokens?.data ?? []) as { id: number; token: string }[]).map((t) => [t.id, t.token]))}
+          correos={Object.fromEntries(
+            ((tokens?.data ?? []) as { id: number; email: string; email_google: string | null; correos_extra: string[] }[])
+              .map((t) => [t.id, [...new Set([t.email_google || t.email, t.email, ...(t.correos_extra ?? [])])]]),
+          )}
           periodo={{ inicio: p?.inicio ?? null, fin: p?.fin ?? null }}
           configurado={!!base}
         />

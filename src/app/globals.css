@@ -389,6 +389,11 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
 .falta { color: var(--error); font-weight: 600; }
 .repetido { color: var(--tierra-texto); font-weight: 600; }
 .copiar-par { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+/* Cuando un tester tiene dos cuentas, se numeran: así se ve de un vistazo
+   que sus días salen de las dos y no de una sola. */
+.correo { margin-right: 0.6rem; }
+.correo i { font-style: normal; font-size: 0.7em; font-weight: 700; color: var(--agua);
+            border: 1px solid var(--linea); border-radius: 3px; padding: 0 3px; margin-right: 3px; }
 .enlace-copiar { display: inline-block; margin-top: 0.25rem; padding: 0; border: 0; background: none; font: inherit; font-size: 0.78rem; font-weight: 400; color: var(--agua); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
 .ficha-contacto { font-family: var(--fuente-dato); font-size: 11px; color: var(--tinta-2); word-break: break-all; }
 .ficha-dias { list-style: none; padding: 0.75rem 0 0; margin: 0.75rem 0 0; border-top: 1px solid var(--linea); display: grid; gap: 0.35rem; }
