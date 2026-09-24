@@ -96,6 +96,17 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
     llamar("/api/admin/registrar", "POST", fecha ? { fecha } : {}, "Cruce hecho");
   }
 
+  // Dos altas con el mismo teléfono suelen ser la misma persona con dos
+  // cuentas de Google. No es ilegal —cada cuenta cuenta para Play— pero
+  // ocupa dos lugares y cobra dos veces, así que conviene verlo.
+  const porTelefono = new Map<string, number>();
+  for (const t of testers) {
+    const clave = (t.telefono ?? "").replace(/\D/g, "").slice(-10);
+    if (clave) porTelefono.set(clave, (porTelefono.get(clave) ?? 0) + 1);
+  }
+  const repetido = (tel: string | null) =>
+    !!tel && (porTelefono.get(tel.replace(/\D/g, "").slice(-10)) ?? 0) > 1;
+
   const totalSaldo = testers.reduce((s, t) => s + t.saldo, 0);
   const nombre = (id: number) => testers.find((t) => t.id === id)?.nombre ?? `#${id}`;
 
@@ -144,6 +155,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                   <small>
                     {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
                     {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
+                    {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
                   </small>
                   {enlaceDe(t.id) && (
                     <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
@@ -199,6 +211,7 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
               <p className="ficha-contacto">
                 {t.email_google}{t.telefono ? ` · ${t.telefono}` : ""}
                 {!t.telefono && <b className="falta"> · sin WhatsApp</b>}
+                {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
               </p>
               {enlaceDe(t.id) && (
                 <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
