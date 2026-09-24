@@ -15,6 +15,12 @@ export type App = {
   nombre: string;
   dominio: string;
   url: string;
+  /**
+   * La página de «Become a tester» de la prueba cerrada de Play. Es el paso
+   * que de verdad cuenta para Google, y el que más se olvida: sin aceptar
+   * ahí, la ficha de la app no abre y la instalación no cuenta.
+   */
+  playTester?: string;
   /** Color de acento de la tarjeta (par claro/oscuro, ver globals.css). */
   acento: "agua" | "caparazon" | "tierra";
   lema: Record<Idioma, string>;
@@ -77,6 +83,7 @@ export const APPS: App[] = [
     nombre: "JLPTest",
     dominio: "jlptest.org",
     url: "https://jlptest.org",
+    playTester: "https://play.google.com/apps/testing/org.jlptest.twa",
     acento: "agua",
     lema: {
       es: "Japonés del N5 al N1, en unidades de 20 palabras.",
@@ -112,6 +119,7 @@ export const APPS: App[] = [
     nombre: "Daily Challenge",
     dominio: "dailychallenge.click",
     url: "https://dailychallenge.click",
+    playTester: "https://play.google.com/apps/testing/click.dailychallenge.twa",
     acento: "caparazon",
     lema: {
       es: "Un reto arcade nuevo cada día, estilo Atari 2600.",

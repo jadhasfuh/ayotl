@@ -421,6 +421,9 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
 .panel.hoy h2 { margin-top: 0; font-size: 1.2rem; }
 .panel.hoy p { margin: 0 0 0.5rem; }
 .panel.hoy.completo { border-color: var(--caparazon); }
+.enlaces-apps { list-style: none; padding: 0; margin: 1rem 0 0.5rem; display: grid; gap: 0.5rem; }
+.enlaces-apps li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem; }
+.enlaces-apps b { min-width: 9rem; }
 .mis-dias { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 1px; background: var(--linea); border: 1px solid var(--linea); border-radius: var(--radio); overflow: hidden; }
 .mis-dias li { display: grid; grid-template-columns: 8rem 1fr auto; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0.9rem; background: var(--fondo); }
 .mis-dias li.completo { background: var(--caparazon-suave); }

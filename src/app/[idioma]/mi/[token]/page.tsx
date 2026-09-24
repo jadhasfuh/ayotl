@@ -89,11 +89,20 @@ export default async function MiProgreso({ params }: Props) {
           {faltanHoy.length > 0
             ? <p className="dato">{x("miHoyFaltan")(faltanHoy)}</p>
             : <p className="dato">{x("miHoyCompleto")}</p>}
-          <p className="enlaces-persona">
+          {/* Lo primero es aceptar la prueba en Play: es el paso que cuenta
+              para Google y el que más se olvida. Abrir la app va después. */}
+          <ul className="enlaces-apps">
             {APPS.filter((a) => APPS_BETA.includes(a.id as AppBeta)).map((a) => (
-              <a key={a.id} href={a.url} target="_blank" rel="noopener">{a.nombre} ↗</a>
+              <li key={a.id}>
+                <b>{a.nombre}</b>
+                {a.playTester && (
+                  <a href={a.playTester} target="_blank" rel="noopener">{x("miEnPlay")} ↗</a>
+                )}
+                <a href={a.url} target="_blank" rel="noopener" className="dato">{a.dominio} ↗</a>
+              </li>
             ))}
-          </p>
+          </ul>
+          <p className="dato">{x("miPlayNota")}</p>
         </div>
 
         <h2>{x("miDetalle")}</h2>

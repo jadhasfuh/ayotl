@@ -301,6 +301,11 @@ const TEXTOS = {
       `Each day counts by how many apps you used: ${t1} MXN for one and ${t2} for both. One review in JLPTest or one run in Daily Challenge is enough.`,
   },
   miHoy: { es: "Hoy", en: "Today" },
+  miEnPlay: { es: "Aceptar en Play", en: "Accept on Play" },
+  miPlayNota: {
+    es: "Si todavía no aceptaste la prueba en Google Play, empieza por ahí: sin eso la app no se puede instalar y el día no cuenta.",
+    en: "If you haven't accepted the test on Google Play yet, start there: without it the app can't be installed and the day won't count.",
+  },
   miHoyNada: { es: "Hoy todavía no registras nada.", en: "Nothing registered today yet." },
   miHoyFaltan: {
     es: (faltan: string[]) => `Hoy te faltan: ${faltan.join(", ")}.`,
