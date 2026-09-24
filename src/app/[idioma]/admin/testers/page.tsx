@@ -97,6 +97,7 @@ export default async function Testers({ params }: Props) {
           tarifas={tarifas}
           enEspera={(plazas?.data as { en_espera: number } | null)?.en_espera ?? 0}
           tokens={Object.fromEntries(((tokens?.data ?? []) as { id: number; token: string }[]).map((t) => [t.id, t.token]))}
+          periodo={{ inicio: p?.inicio ?? null, fin: p?.fin ?? null }}
           configurado={!!base}
         />
       </main>

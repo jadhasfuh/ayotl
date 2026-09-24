@@ -16,7 +16,9 @@ export type Pago = { id: number; tester: number; monto: number; fecha: string; m
 type Props = {
   testers: Saldo[]; dias: DiaPrueba[]; pagos: Pago[];
   fechas: string[]; hoy: string; tarifas: [number, number, number];
-  enEspera: number; tokens: Record<number, string>; configurado: boolean;
+  enEspera: number; tokens: Record<number, string>;
+  periodo: { inicio: string | null; fin: string | null };
+  configurado: boolean;
 };
 
 const LETRA: Record<AppBeta, string> = { jlptest: "J", dailychallenge: "D" };
@@ -27,7 +29,19 @@ const MEDIOS = ["codi", "transferencia", "efectivo", "otro"] as const;
  * pega a /api/admin/* y refresca la página: los datos siempre vienen del
  * servidor, aquí no se calcula nada.
  */
-export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, tokens, configurado }: Props) {
+const PLAY = {
+  jlptest: "https://play.google.com/apps/testing/org.jlptest.twa",
+  dailychallenge: "https://play.google.com/apps/testing/click.dailychallenge.twa",
+};
+
+/** «24 de septiembre», para el mensaje. */
+function enLetra(fecha: string | null): string {
+  if (!fecha) return "";
+  return new Date(`${fecha}T12:00:00Z`).toLocaleDateString("es-MX",
+    { day: "numeric", month: "long", timeZone: "UTC" });
+}
+
+export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEspera, tokens, periodo, configurado }: Props) {
   const router = useRouter();
   const [aviso, setAviso] = useState<{ tipo: "exito" | "error"; texto: string } | null>(null);
   const [ocupado, setOcupado] = useState(false);
@@ -38,6 +52,48 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
   function enlaceDe(id: number): string | null {
     const token = tokens[id];
     return token ? `${typeof location === "undefined" ? "https://ayotl.dev" : location.origin}/mi/${token}` : null;
+  }
+
+  /**
+   * El mensaje de bienvenida, ya con sus datos. Es el mismo que se manda a
+   * todos; lo único que cambia es el nombre, el teléfono, su correo y su
+   * enlace, así que escribirlo a mano cada vez era pedir erratas.
+   */
+  function mensajeDe(t: Saldo): string {
+    const enlace = enlaceDe(t.id) ?? "";
+    const nombre = t.nombre.split(" ").slice(0, 2).join(" ");
+    const tel = (t.telefono ?? "").replace(/\D/g, "").slice(-10);
+    return `Hola ${nombre}, ya quedaste apuntado. Gracias.
+
+Son 14 días, del ${enLetra(periodo.inicio)} al ${enLetra(periodo.fin)}. Se paga por cada día que uses las apps: ${tarifas[0]} pesos si usas una y ${tarifas[1]} si usas las dos ese día. Todo junto al final, por CoDi al ${tel}. Con las dos son hasta ${tarifas[1] * fechas.length} pesos.
+
+1) Acepta ser tester en los dos enlaces, con tu cuenta ${t.email_google}:
+
+   JLPTest · ${PLAY.jlptest}
+   Daily Challenge · ${PLAY.dailychallenge}
+
+   En cada uno sale un botón "Become a tester" / "Convertirme en tester".
+
+2) Instala las dos desde ahí mismo (la primera vez el enlace de descarga tarda unos minutos en activarse).
+
+3) Entra con ese mismo correo: en JLPTest te llega un código al correo; en Daily Challenge toca "Entrar con Google". Si entras como invitado o con otra cuenta, ese día no cuenta.
+
+4) Un ratito al día basta: un repaso en JLPTest y una partida en Daily Challenge, y ese día ya vale ${tarifas[1]}.
+
+5) No desinstales las apps durante los 14 días, que es lo que Google revisa.
+
+Ya tienes un mes de JLPTest completo gratis, activo desde hoy.
+
+Aquí ves tus días y lo que llevas ganado, sin contraseña:
+${enlace}
+
+Si algo falla o se ve raro, mándamelo por aquí.`;
+  }
+
+  function copiarMensaje(t: Saldo) {
+    navigator.clipboard?.writeText(mensajeDe(t));
+    setCopiado(-t.id);
+    setTimeout(() => setCopiado((actual) => (actual === -t.id ? null : actual)), 2000);
   }
 
   function copiarEnlace(id: number) {
@@ -158,9 +214,14 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                     {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
                   </small>
                   {enlaceDe(t.id) && (
-                    <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
-                      {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
-                    </button>
+                    <span className="copiar-par">
+                      <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
+                        {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
+                      </button>
+                      <button type="button" className="enlace-copiar" onClick={() => copiarMensaje(t)}>
+                        {copiado === -t.id ? "copiado ✓" : "copiar su mensaje"}
+                      </button>
+                    </span>
                   )}
                 </th>
                 {fechas.map((f) => {
@@ -214,9 +275,14 @@ export function PanelTesters({ testers, dias, pagos, fechas, hoy, tarifas, enEsp
                 {repetido(t.telefono) && <b className="repetido"> · mismo teléfono que otro</b>}
               </p>
               {enlaceDe(t.id) && (
-                <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
-                  {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
-                </button>
+                <span className="copiar-par">
+                  <button type="button" className="enlace-copiar" onClick={() => copiarEnlace(t.id)}>
+                    {copiado === t.id ? "copiado ✓" : "copiar su enlace"}
+                  </button>
+                  <button type="button" className="enlace-copiar" onClick={() => copiarMensaje(t)}>
+                    {copiado === -t.id ? "copiado ✓" : "copiar su mensaje"}
+                  </button>
+                </span>
               )}
               {fechasConActividad.length > 0 && (
                 <ul className="ficha-dias">
