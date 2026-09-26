@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cabecera } from "@/components/Cabecera";
 import { MarcaApp } from "@/components/MarcaApp";
+import { Telefono } from "@/components/Telefono";
 import { Tortuga } from "@/components/Tortuga";
 import { APPS } from "@/lib/apps";
 import { ruta, t } from "@/lib/idioma";
@@ -57,15 +58,15 @@ export default async function Negocios({ params }: Props) {
               demostración: enseñar el producto convence más que describirlo. */}
           <ul className="capturas">
             <li>
-              <img src="/capturas/mercadito-menu.webp" alt="" width={840} height={1720} loading="lazy" />
+              <Telefono imagen="mercadito-menu" />
               <p>{x("negMuestraMenu")}</p>
             </li>
             <li>
-              <img src="/capturas/mercadito-panel-movil.webp" alt="" width={840} height={1800} loading="lazy" />
+              <Telefono imagen="mercadito-panel-movil" />
               <p>{x("negMuestraPanel")}</p>
             </li>
             <li>
-              <img src="/capturas/mercadito-mesas.webp" alt="" width={840} height={1800} loading="lazy" />
+              <Telefono imagen="mercadito-mesas" />
               <p>{x("negServicios")[2].d}</p>
             </li>
           </ul>

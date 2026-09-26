@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Cabecera } from "@/components/Cabecera";
 import { MarcaApp } from "@/components/MarcaApp";
+import { Telefono } from "@/components/Telefono";
 import { APPS, type App } from "@/lib/apps";
 import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
@@ -92,7 +93,7 @@ export default async function PaginaApp({ params }: Props) {
           <ul className="pantallas">
             {app.pantallas.map((p) => (
               <li key={p.imagen}>
-                <img src={`/capturas/${p.imagen}.webp`} alt="" width={840} height={1800} loading="lazy" />
+                <Telefono imagen={p.imagen} alto="largo" />
                 <div>
                   <h3>{p.titulo[idioma]}</h3>
                   <p>{p.texto[idioma]}</p>
