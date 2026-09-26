@@ -91,6 +91,52 @@ export const EJEMPLOS: Ejemplo[] = [
 `,
   },
   {
+    id: "primos",
+    nombre: { es: "Números primos (el difícil)", en: "Prime numbers (the hard one)" },
+    entradas: "30",
+    fuente: `programa
+  // Todos los primos hasta el número que se lea.
+  //
+  // El lenguaje no tiene resto ni booleanos ni funciones, así que:
+  //   · el resto se saca a mano:  @a - (@a / @b) * @b
+  //     (entre enteros la división trunca, igual que en C)
+  //   · el «es primo» se lleva en un entero que vale 1 o 0
+  //   · y se prueban divisores mientras @d * @d <= @n, que es
+  //     donde deja de tener sentido seguir buscando.
+
+  ent @tope;
+  ent @n;
+  ent @d;
+  ent @resto;
+  ent @esPrimo;
+
+  lec @tope;
+
+  @n = 2;
+  mientras @n <= @tope hacer
+  inicio
+    @esPrimo = 1;
+    @d = 2;
+
+    mientras @d * @d <= @n hacer
+    inicio
+      @resto = @n - (@n / @d) * @d;
+      si @resto == 0 inicio
+        @esPrimo = 0;
+        @d = @n;          // ya no hace falta seguir probando
+      fin endif
+      @d = @d + 1;
+    fin
+
+    si @esPrimo == 1 inicio
+      imp @n;
+    fin endif
+
+    @n = @n + 1;
+  fin
+`,
+  },
+  {
     id: "error",
     nombre: { es: "Un programa con error", en: "A program with an error" },
     entradas: "",

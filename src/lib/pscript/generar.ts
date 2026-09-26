@@ -26,12 +26,28 @@ function tipoDe(e: Expresion, simbolos: Map<string, Simbolo>): Tipo {
   }
 }
 
-function expr(e: Expresion): string {
+/**
+ * Precedencia, para poner paréntesis sólo donde hacen falta. Sin esto,
+ * `@n - (@n / @d) * @d` salía como `n - n / d * d`: da lo mismo por
+ * precedencia, pero quien lee el C no debería tener que comprobarlo.
+ */
+const PRECEDENCIA: Record<string, number> = {
+  "*": 3, "/": 3, "+": 2, "-": 2,
+  ">": 1, "<": 1, ">=": 1, "<=": 1, "==": 1, "!=": 1,
+};
+
+function expr(e: Expresion, fuera = 0): string {
   switch (e.clase) {
     case "var": return enC(e.nombre);
     case "lit": return e.tipo === "caracter" ? `'${e.valor}'` : String(e.valor);
-    case "neg": return `-${expr(e.de)}`;
-    case "bin": return `${expr(e.izq)} ${e.op} ${expr(e.der)}`;
+    case "neg": return `-${expr(e.de, 4)}`;
+    case "bin": {
+      const mia = PRECEDENCIA[e.op] ?? 0;
+      // El lado derecho se envuelve a igual precedencia: a - (b - c) no es
+      // lo mismo que a - b - c.
+      const texto = `${expr(e.izq, mia)} ${e.op} ${expr(e.der, mia + 1)}`;
+      return mia < fuera ? `(${texto})` : texto;
+    }
   }
 }
 

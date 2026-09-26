@@ -1,5 +1,5 @@
 import { ErrorPScript } from "./lexer";
-import type { Expresion, Programa, Sentencia } from "./parser";
+import type { Expresion, Programa, Sentencia, Tipo } from "./parser";
 
 /**
  * El intérprete.
@@ -19,6 +19,22 @@ export type Resultado = { salida: string[]; pasos: number };
 export function ejecutar(programa: Programa, entradas: string[]): Resultado {
   const memoria = new Map<string, number | string>();
   const tipos = new Map(programa.simbolos.map((s) => [s.nombre, s.tipo]));
+
+  /**
+   * El tipo que tendría la expresión en el C generado. Hace falta para una
+   * cosa concreta: en C, `7 / 2` entre enteros da 3, no 3.5. Sin esto, el
+   * intérprete y el C generado daban resultados distintos con la misma
+   * división, y el truco de sacar el resto —`a - (a / b) * b`— no
+   * funcionaba en la página aunque sí en C.
+   */
+  const tipoDe = (e: Expresion): Tipo => {
+    switch (e.clase) {
+      case "lit": return e.tipo;
+      case "var": return tipos.get(e.nombre) ?? "entero";
+      case "neg": return tipoDe(e.de);
+      case "bin": return tipoDe(e.izq) === "decimal" || tipoDe(e.der) === "decimal" ? "decimal" : "entero";
+    }
+  };
   const salida: string[] = [];
   const cola = [...entradas];
   let pasos = 0;
@@ -36,13 +52,22 @@ export function ejecutar(programa: Programa, entradas: string[]): Resultado {
       case "neg": return -Number(valor(e.de));
       case "bin": {
         const a = valor(e.izq), b = valor(e.der);
+        // `dec` es `float` en el C generado, o sea 32 bits. JavaScript
+        // calcula en 64, así que 149.90 * 0.16 salía 173.884000 aquí y
+        // 173.883987 en el programa compilado. `Math.fround` recorta cada
+        // resultado a 32 bits y los dos vuelven a decir lo mismo.
+        const aFloat = (n: number) => (tipoDe(e) === "decimal" ? Math.fround(n) : n);
         switch (e.op) {
-          case "+": return typeof a === "string" || typeof b === "string" ? `${a}${b}` : a + b;
-          case "-": return Number(a) - Number(b);
-          case "*": return Number(a) * Number(b);
-          case "/":
+          case "+": return typeof a === "string" || typeof b === "string" ? `${a}${b}` : aFloat(a + b);
+          case "-": return aFloat(Number(a) - Number(b));
+          case "*": return aFloat(Number(a) * Number(b));
+          case "/": {
             if (Number(b) === 0) throw new ErrorPScript("División entre cero", e.linea, "ejecución");
-            return Number(a) / Number(b);
+            const division = Number(a) / Number(b);
+            // Entre enteros, división entera: igual que el C que sale.
+            return tipoDe(e.izq) === "entero" && tipoDe(e.der) === "entero"
+              ? Math.trunc(division) : aFloat(division);
+          }
           case ">": return a > b ? 1 : 0;
           case "<": return a < b ? 1 : 0;
           case ">=": return a >= b ? 1 : 0;
@@ -67,7 +92,11 @@ export function ejecutar(programa: Programa, entradas: string[]): Resultado {
         case "asig": {
           const v = valor(n.valor);
           // Un entero se queda entero, como haría el C generado.
-          memoria.set(n.nombre, tipos.get(n.nombre) === "entero" && typeof v === "number" ? Math.trunc(v) : v);
+          const t = tipos.get(n.nombre);
+          const guardado = typeof v === "number"
+            ? (t === "entero" ? Math.trunc(v) : t === "decimal" ? Math.fround(v) : v)
+            : v;
+          memoria.set(n.nombre, guardado);
           break;
         }
         case "lec": {
@@ -75,8 +104,11 @@ export function ejecutar(programa: Programa, entradas: string[]): Resultado {
           if (crudo === undefined) {
             throw new ErrorPScript(`No hay más datos de entrada para ${n.nombre}`, n.linea, "ejecución");
           }
-          const t = tipos.get(n.nombre);
-          memoria.set(n.nombre, t === "caracter" ? crudo.trim().slice(0, 1) : Number(crudo));
+          const tipoLeido = tipos.get(n.nombre);
+          memoria.set(n.nombre,
+            tipoLeido === "caracter" ? crudo.trim().slice(0, 1)
+              : tipoLeido === "decimal" ? Math.fround(Number(crudo))
+              : Math.trunc(Number(crudo)));
           break;
         }
         case "imp": {
