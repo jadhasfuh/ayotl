@@ -597,3 +597,4 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
   font-family: var(--fuente-dato); font-size: 12.5px; line-height: 1.7; white-space: pre;
 }
 .pscript .aviso { margin: 0.25rem 0; }
+.pscript-acciones { display: flex; flex-wrap: wrap; gap: 1.25rem; margin: 0.5rem 0 0; }

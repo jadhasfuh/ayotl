@@ -54,6 +54,7 @@ inicio
 fin`}</code></pre>
             </figure>
             <p>{x("psHistoria")}</p>
+            <p>{x("psAnecdota")}</p>
             <p>
               <a href="https://github.com/jadhasfuh/PScript" target="_blank" rel="noopener">
                 {x("psRepo")} ↗

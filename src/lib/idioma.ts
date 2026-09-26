@@ -158,6 +158,15 @@ const TEXTOS = {
   psSinSalida: { es: "Sin salida todavía. Pulsa Ejecutar.", en: "No output yet. Press Run." },
   psCorrecto: { es: "Compila sin errores.", en: "Compiles with no errors." },
   psCopiar: { es: "Copiar el C", en: "Copy the C" },
+  psCopiarYAbrir: { es: "Copiar y abrir un compilador en línea", en: "Copy and open an online compiler" },
+  psCopiadoPega: {
+    es: "Copiado. Pégalo en la pestaña que se acaba de abrir y dale a Run.",
+    en: "Copied. Paste it in the tab that just opened and hit Run.",
+  },
+  psAnecdota: {
+    es: "En 2021 la entrega era exactamente ésta: compilar el programa, copiar el C que salía, pegarlo en un compilador en línea y correrlo delante del profesor. El botón de arriba hace ese mismo viaje en un clic.",
+    en: "Back in 2021 the hand-in worked exactly like this: compile the program, copy the C that came out, paste it into an online compiler and run it in front of the professor. The button above does that same trip in one click.",
+  },
   psGramatica: { es: "El lenguaje, en una pantalla", en: "The language, on one screen" },
   psRepo: { es: "El original en Java, en GitHub", en: "The Java original, on GitHub" },
 

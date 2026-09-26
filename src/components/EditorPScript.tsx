@@ -25,6 +25,7 @@ export function EditorPScript({ idioma }: { idioma: Idioma }) {
   const [pestana, setPestana] = useState<Pestana>("salida");
   const [salida, setSalida] = useState<string[] | null>(null);
   const [errorEjecucion, setErrorEjecucion] = useState<string | null>(null);
+  const [copiado, setCopiado] = useState(false);
 
   // Compilar en cada tecla: el programa más largo de aquí son treinta
   // líneas, así que no hace falta esperar a que deje de escribir.
@@ -119,11 +120,24 @@ export function EditorPScript({ idioma }: { idioma: Idioma }) {
             <>
               <pre className="pscript-panel">{c || "—"}</pre>
               {c && (
-                <button type="button" className="enlace-copiar"
-                        onClick={() => navigator.clipboard?.writeText(c)}>
-                  {x("psCopiar")}
-                </button>
+                <p className="pscript-acciones">
+                  <button type="button" className="enlace-copiar"
+                          onClick={() => { navigator.clipboard?.writeText(c); setCopiado(true); }}>
+                    {x("psCopiar")}
+                  </button>
+                  {/* El viaje de 2021, en un clic: copiar y abrir el
+                      compilador en línea donde se pegaba. */}
+                  <button type="button" className="enlace-copiar"
+                          onClick={() => {
+                            navigator.clipboard?.writeText(c);
+                            setCopiado(true);
+                            window.open("https://www.programiz.com/c-programming/online-compiler/", "_blank", "noopener");
+                          }}>
+                    {x("psCopiarYAbrir")} ↗
+                  </button>
+                </p>
               )}
+              {copiado && <p className="dato">{x("psCopiadoPega")}</p>}
             </>
           )}
 
