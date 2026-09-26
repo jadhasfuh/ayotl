@@ -51,11 +51,16 @@ export default async function Inicio({ params }: Props) {
         </section>
 
         <section className="seccion">
-          <div className="contenedor dos">
+          <div className="contenedor dos tres">
             <div className="panel">
               <h2>{x("betaTeaserTitulo")}</h2>
               <p>{x("betaTeaserTexto")}</p>
               <Link href={ruta("beta", idioma)} className="boton">{x("navBeta")} →</Link>
+            </div>
+            <div className="panel">
+              <h2>{x("notasTeaserTitulo")}</h2>
+              <p>{x("notasTeaserTexto")}</p>
+              <Link href={ruta("notas", idioma)} className="enlace-flecha">{x("navNotas")} →</Link>
             </div>
             <div className="panel panel-tortuga">
               <Tortuga lado={56} />

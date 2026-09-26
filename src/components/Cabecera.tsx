@@ -13,10 +13,15 @@ export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina })
   const secciones: { pagina: Pagina; texto: string; corto: string }[] = [
     { pagina: "inicio", texto: x("navApps"), corto: x("navApps") },
     { pagina: "negocios", texto: x("navNegocios"), corto: x("navNegociosCorto") },
+    { pagina: "notas", texto: x("navNotas"), corto: x("navNotas") },
     { pagina: "beta", texto: x("navBeta"), corto: x("navBetaCorto") },
     { pagina: "acerca", texto: x("navAcerca"), corto: x("navAcercaCorto") },
   ];
-  const enlaces = (corto: boolean) => secciones.map((s) => (
+  // En el teléfono caben cuatro; «Notas» se queda para la barra de arriba y
+  // el pie, que es donde la busca quien viene a leer.
+  const enlaces = (corto: boolean) => secciones
+    .filter((s) => !corto || s.pagina !== "notas")
+    .map((s) => (
     <Link key={s.pagina} href={s.pagina === "inicio" ? `${ruta("inicio", idioma)}#apps` : ruta(s.pagina, idioma)}
           aria-current={s.pagina === pagina && s.pagina !== "inicio" ? "page" : undefined}>
       {corto ? s.corto : s.texto}

@@ -49,12 +49,13 @@ export function idiomaDeCabecera(accept: string | null | undefined): Idioma {
 }
 
 /** Las páginas del sitio y su dirección pública en cada idioma. */
-export const PAGINAS = ["inicio", "negocios", "beta", "acerca"] as const;
+export const PAGINAS = ["inicio", "negocios", "notas", "beta", "acerca"] as const;
 export type Pagina = (typeof PAGINAS)[number];
 
 export const RUTAS: Record<Pagina, Record<Idioma, string>> = {
   inicio: { es: "/", en: "/en" },
   negocios: { es: "/negocios", en: "/en/business" },
+  notas: { es: "/notas", en: "/en/notes" },
   beta:   { es: "/beta", en: "/en/beta" },
   acerca: { es: "/acerca", en: "/en/about" },
 };
@@ -85,6 +86,7 @@ const TEXTOS = {
   navNegociosCorto: { es: "Negocios", en: "Business" },
   navBetaCorto: { es: "Beta", en: "Beta" },
   navAcercaCorto: { es: "Acerca", en: "About" },
+  navNotas: { es: "Notas", en: "Notes" },
   navBeta: { es: "Programa Beta", en: "Beta Program" },
   navAcerca: { es: "Acerca de", en: "About" },
   cambiarIdioma: { es: "English", en: "Español" },
@@ -116,6 +118,11 @@ const TEXTOS = {
     en: "A Nahuatl name from Sahuayo, Michoacán, chosen for what it stands for: getting there without running.",
   },
   leerMas: { es: "Leer la historia", en: "Read the story" },
+  notasTeaserTitulo: { es: "Cómo está hecho por dentro", en: "How it works underneath" },
+  notasTeaserTexto: {
+    es: "Notas de cosas que se rompieron en producción: un cron que decía «succeeded» sin haber publicado nada, una base que no se dejaba alcanzar, un juego que no puede fiarse del navegador.",
+    en: "Notes on things that broke in production: a cron reporting “succeeded” with nothing published, a database that refused to be reached, a game that can't trust the browser.",
+  },
 
   // Página de cada app
   appAbrir: { es: "Abrir", en: "Open" },
@@ -127,6 +134,16 @@ const TEXTOS = {
     es: "Hecha y mantenida por Ayotl. Si tu negocio necesita algo parecido, la página «Para negocios» lo explica.",
     en: "Built and maintained by Ayotl. If your business needs something similar, the “For businesses” page explains how.",
   },
+
+  // Notas
+  notasTitulo: { es: "Notas", en: "Notes" },
+  notasIntro: {
+    es: "Cosas que se rompieron en producción y lo que costó entenderlas. Ni tutoriales ni listas de trucos: sólo problemas que pasaron de verdad, con el detalle que hace falta para que a otro no le cuesten la misma tarde.",
+    en: "Things that broke in production and what it took to understand them. No tutorials, no listicles: only problems that actually happened, with the detail someone else needs to avoid losing the same afternoon.",
+  },
+  notasEn: { es: "En", en: "In" },
+  notasVolver: { es: "Todas las notas", en: "All notes" },
+  notasLeer: { es: "Leer", en: "Read" },
 
   // Para negocios
   negTitulo: { es: "¿Tu negocio necesita una app o una página?", en: "Does your business need an app or a website?" },

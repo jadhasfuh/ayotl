@@ -38,7 +38,7 @@ export function proxy(req: NextRequest) {
   }
   // Las rutas internas en inglés llevan el nombre español de la carpeta; si
   // alguien las teclea, se le manda a la dirección pública.
-  const INTERNAS_EN: Record<string, string> = { "/en/acerca": "/en/about", "/en/negocios": "/en/business" };
+  const INTERNAS_EN: Record<string, string> = { "/en/acerca": "/en/about", "/en/negocios": "/en/business", "/en/notas": "/en/notes" };
   if (INTERNAS_EN[pathname]) {
     const destino = req.nextUrl.clone();
     destino.pathname = INTERNAS_EN[pathname];
@@ -55,8 +55,10 @@ export function proxy(req: NextRequest) {
   let interno: string;
   if (pathname === "/en" || pathname.startsWith("/en/")) {
     idioma = "en";
-    const PUBLICAS_EN: Record<string, string> = { "/en/about": "/en/acerca", "/en/business": "/en/negocios" };
-    interno = PUBLICAS_EN[pathname] ?? pathname;
+    const PUBLICAS_EN: Record<string, string> = { "/en/about": "/en/acerca", "/en/business": "/en/negocios", "/en/notes": "/en/notas" };
+    // Las notas cuelgan de la sección: /en/notes/<id> -> /en/notas/<id>
+    interno = PUBLICAS_EN[pathname]
+      ?? (pathname.startsWith("/en/notes/") ? pathname.replace("/en/notes/", "/en/notas/") : pathname);
   } else {
     idioma = "es";
     interno = pathname === "/" ? "/es" : `/es${pathname}`;

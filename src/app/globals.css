@@ -251,6 +251,7 @@ ul { padding-left: 1.2em; }
 /* --- Dos columnas (teasers) --------------------------------------------- */
 .dos { display: grid; gap: 1.25rem; }
 @media (min-width: 720px) { .dos { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .dos.tres { grid-template-columns: repeat(3, 1fr); } }
 .panel { padding: 1.75rem; border-radius: var(--radio); border: 1px solid var(--linea); background: var(--fondo-2); }
 .panel h2 { margin-top: 0; }
 .panel h2 { font-size: 1.4rem; }
@@ -543,3 +544,24 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
   .dia { min-width: 28px; height: 28px; }
   .enlace-copiar { padding-block: 0.4rem; }
 }
+
+/* --- Notas -------------------------------------------------------------- */
+.lista-notas { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 2rem; }
+.lista-notas li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+.lista-notas li[data-acento="agua"] { --tarjeta-acento: var(--agua); }
+.lista-notas li[data-acento="caparazon"] { --tarjeta-acento: var(--caparazon); }
+.lista-notas li[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
+.lista-notas h2 { font-size: 1.35rem; margin: 0.15em 0 0.35em; }
+.lista-notas h2 a { color: var(--tinta); text-decoration: none; }
+.lista-notas h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.lista-notas p { margin: 0; color: var(--tinta-2); }
+.codigo { margin: 1.5rem 0; }
+.codigo pre {
+  margin: 0; padding: 1rem 1.1rem; overflow-x: auto;
+  background: var(--fondo-2); border: 1px solid var(--linea); border-radius: var(--radio);
+  font-family: var(--fuente-dato); font-size: 12.5px; line-height: 1.7;
+}
+.codigo code { color: var(--tinta); }
+.codigo figcaption { margin-top: 0.5rem; font-size: 0.85rem; color: var(--tinta-2); }
+.prosa ul { max-width: 64ch; }
+.prosa li { margin-bottom: 0.4em; }

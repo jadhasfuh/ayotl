@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { APPS } from "@/lib/apps";
 import { PAGINAS, ruta } from "@/lib/idioma";
+import { NOTAS } from "@/lib/notas";
 import { sitio } from "@/lib/sitio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,5 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       languages: { es: base + ruta(pagina, "es"), en: base + ruta(pagina, "en") },
     },
   }));
-  return [...paginas, ...apps];
+  const notas: MetadataRoute.Sitemap = NOTAS.map((n) => ({
+    url: `${base}/notas/${n.id}`,
+    lastModified: new Date(n.fecha),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+    alternates: { languages: { es: `${base}/notas/${n.id}`, en: `${base}/en/notes/${n.id}` } },
+  }));
+  return [...paginas, ...apps, ...notas];
 }
