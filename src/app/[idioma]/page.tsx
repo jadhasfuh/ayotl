@@ -61,6 +61,7 @@ export default async function Inicio({ params }: Props) {
               <h2>{x("notasTeaserTitulo")}</h2>
               <p>{x("notasTeaserTexto")}</p>
               <Link href={ruta("notas", idioma)} className="enlace-flecha">{x("navNotas")} →</Link>
+              <Link href={ruta("pscript", idioma)} className="enlace-flecha">PScript →</Link>
             </div>
             <div className="panel panel-tortuga">
               <Tortuga lado={56} />

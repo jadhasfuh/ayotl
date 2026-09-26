@@ -49,13 +49,14 @@ export function idiomaDeCabecera(accept: string | null | undefined): Idioma {
 }
 
 /** Las páginas del sitio y su dirección pública en cada idioma. */
-export const PAGINAS = ["inicio", "negocios", "notas", "beta", "acerca"] as const;
+export const PAGINAS = ["inicio", "negocios", "notas", "pscript", "beta", "acerca"] as const;
 export type Pagina = (typeof PAGINAS)[number];
 
 export const RUTAS: Record<Pagina, Record<Idioma, string>> = {
   inicio: { es: "/", en: "/en" },
   negocios: { es: "/negocios", en: "/en/business" },
   notas: { es: "/notas", en: "/en/notes" },
+  pscript: { es: "/pscript", en: "/en/pscript" },
   beta:   { es: "/beta", en: "/en/beta" },
   acerca: { es: "/acerca", en: "/en/about" },
 };
@@ -135,6 +136,31 @@ const TEXTOS = {
     en: "Built and maintained by Ayotl. If your business needs something similar, the “For businesses” page explains how.",
   },
 
+  // PScript
+  psTitulo: { es: "PScript en el navegador", en: "PScript in the browser" },
+  psIntro: {
+    es: "Un compilador de escuela, de 2021, traído a la web. Se escribe en un lenguaje inventado y sale C: el mismo recorrido de un compilador de verdad —léxico, sintáctico, semántico y generación de código— en una página que se puede tocar.",
+    en: "A 2021 school compiler brought to the web. You write in a made-up language and C comes out: the same journey a real compiler makes — lexical, syntactic, semantic and code generation — on a page you can poke at.",
+  },
+  psHistoria: {
+    es: "El original está en Java con JavaFX y usa un analizador LR con tablas generadas a mano; traduce a C, no interpreta nada. Esta versión reescribe el analizador como descendente recursivo, que reconoce la misma gramática y además se puede leer, y añade un intérprete que no existía: sin él habría que bajarse el C y compilarlo para saber si un programa hace lo que uno creía.",
+    en: "The original is Java with JavaFX and uses an LR parser with hand-built tables; it translates to C and interprets nothing. This version rewrites the parser as recursive descent — same grammar, but readable — and adds an interpreter that didn't exist: without it you'd have to download the C and compile it just to see whether a program does what you thought.",
+  },
+  psEditor: { es: "El programa", en: "The program" },
+  psEntradas: { es: "Datos de lec", en: "Input for lec" },
+  psEntradasAyuda: { es: "Uno por renglón, en el orden en que se leen.", en: "One per line, in the order they're read." },
+  psEjecutar: { es: "Ejecutar", en: "Run" },
+  psEjemplo: { es: "Ejemplos", en: "Examples" },
+  psSalida: { es: "Salida", en: "Output" },
+  psCodigoC: { es: "C generado", en: "Generated C" },
+  psTokens: { es: "Tokens", en: "Tokens" },
+  psSimbolos: { es: "Tabla de símbolos", en: "Symbol table" },
+  psSinSalida: { es: "Sin salida todavía. Pulsa Ejecutar.", en: "No output yet. Press Run." },
+  psCorrecto: { es: "Compila sin errores.", en: "Compiles with no errors." },
+  psCopiar: { es: "Copiar el C", en: "Copy the C" },
+  psGramatica: { es: "El lenguaje, en una pantalla", en: "The language, on one screen" },
+  psRepo: { es: "El original en Java, en GitHub", en: "The Java original, on GitHub" },
+
   // Notas
   notasTitulo: { es: "Notas", en: "Notes" },
   notasIntro: {
@@ -144,6 +170,10 @@ const TEXTOS = {
   notasEn: { es: "En", en: "In" },
   notasVolver: { es: "Todas las notas", en: "All notes" },
   notasLeer: { es: "Leer", en: "Read" },
+  notasPScript: {
+    es: "Y una curiosidad: el compilador que hice en la escuela, reescrito en JavaScript y con editor, para jugar con él sin instalar nada.",
+    en: "And a curiosity: the compiler I built at school, rewritten in JavaScript with an editor, to play with it without installing anything.",
+  },
 
   // Para negocios
   negTitulo: { es: "¿Tu negocio necesita una app o una página?", en: "Does your business need an app or a website?" },

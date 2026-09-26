@@ -4,7 +4,7 @@ import { Cabecera } from "@/components/Cabecera";
 import { MarcaApp } from "@/components/MarcaApp";
 import { Tortuga } from "@/components/Tortuga";
 import { APPS } from "@/lib/apps";
-import { t } from "@/lib/idioma";
+import { ruta, t } from "@/lib/idioma";
 import { NOTAS } from "@/lib/notas";
 import { idiomaDe, metadatosDe } from "@/lib/paginas";
 
@@ -63,6 +63,12 @@ export default async function Notas({ params }: Props) {
               );
             })}
           </ul>
+
+          <div className="panel" style={{ marginTop: "2.5rem" }}>
+            <h2>{x("psTitulo")}</h2>
+            <p>{x("notasPScript")}</p>
+            <Link href={ruta("pscript", idioma)} className="enlace-flecha">{x("psEjecutar")} →</Link>
+          </div>
         </div>
       </main>
     </>
