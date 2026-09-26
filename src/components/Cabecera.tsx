@@ -10,16 +10,16 @@ import { Tortuga } from "./Tortuga";
 export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina }) {
   const x = t(idioma);
   const otro: Idioma = idioma === "es" ? "en" : "es";
-  const secciones: { pagina: Pagina; texto: string }[] = [
-    { pagina: "inicio", texto: x("navApps") },
-    { pagina: "negocios", texto: x("navNegocios") },
-    { pagina: "beta", texto: x("navBeta") },
-    { pagina: "acerca", texto: x("navAcerca") },
+  const secciones: { pagina: Pagina; texto: string; corto: string }[] = [
+    { pagina: "inicio", texto: x("navApps"), corto: x("navApps") },
+    { pagina: "negocios", texto: x("navNegocios"), corto: x("navNegociosCorto") },
+    { pagina: "beta", texto: x("navBeta"), corto: x("navBetaCorto") },
+    { pagina: "acerca", texto: x("navAcerca"), corto: x("navAcercaCorto") },
   ];
-  const enlaces = secciones.map((s) => (
+  const enlaces = (corto: boolean) => secciones.map((s) => (
     <Link key={s.pagina} href={s.pagina === "inicio" ? `${ruta("inicio", idioma)}#apps` : ruta(s.pagina, idioma)}
           aria-current={s.pagina === pagina && s.pagina !== "inicio" ? "page" : undefined}>
-      {s.texto}
+      {corto ? s.corto : s.texto}
     </Link>
   ));
 
@@ -30,7 +30,7 @@ export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina })
           <Tortuga lado={34} />
           <span className="marca-nombre">{x("marca")}</span>
         </Link>
-        <nav className="nav" aria-label={x("navInicio")}>{enlaces}</nav>
+        <nav className="nav" aria-label={x("navInicio")}>{enlaces(false)}</nav>
         <div className="cabecera-acciones">
           <Link href={ruta(pagina, otro)} className="enlace-idioma" hrefLang={otro} lang={otro}>
             {x("cambiarIdioma")}
@@ -38,7 +38,7 @@ export function Cabecera({ idioma, pagina }: { idioma: Idioma; pagina: Pagina })
           <SelectorTema etiqueta={x("cambiarTema")} />
         </div>
       </div>
-      <nav className="nav-movil" aria-label={x("navInicio")}>{enlaces}</nav>
+      <nav className="nav-movil" aria-label={x("navInicio")}>{enlaces(true)}</nav>
     </header>
   );
 }

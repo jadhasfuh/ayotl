@@ -80,6 +80,11 @@ const TEXTOS = {
   navInicio: { es: "Inicio", en: "Home" },
   navApps: { es: "Apps", en: "Apps" },
   navNegocios: { es: "Para negocios", en: "For businesses" },
+  // En el teléfono no caben las cuatro secciones con su nombre largo, y
+  // recortarlas es mejor que dejar la barra corriéndose de lado.
+  navNegociosCorto: { es: "Negocios", en: "Business" },
+  navBetaCorto: { es: "Beta", en: "Beta" },
+  navAcercaCorto: { es: "Acerca", en: "About" },
   navBeta: { es: "Programa Beta", en: "Beta Program" },
   navAcerca: { es: "Acerca de", en: "About" },
   cambiarIdioma: { es: "English", en: "Español" },

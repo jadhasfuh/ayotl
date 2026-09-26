@@ -171,9 +171,9 @@ ul { padding-left: 1.2em; }
 :root[data-tema="oscuro"] .icono-boton .sol { display: none; }
 
 /* Navegación móvil: una fila bajo la cabecera con las secciones. */
-.nav-movil { display: flex; gap: 1rem; overflow-x: auto; padding: 0 1rem 0.5rem; scrollbar-width: none; }
+.nav-movil { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0 1rem; scrollbar-width: none; }
 .nav-movil::-webkit-scrollbar { display: none; }
-.nav-movil a { flex: none; padding: 0 0 0.2rem; border-bottom: 2px solid transparent; color: var(--tinta-2); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+.nav-movil a { flex: 1; text-align: center; padding: 0.7rem 0.25rem; border-bottom: 2px solid transparent; color: var(--tinta-2); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
 .nav-movil a[aria-current="page"] { color: var(--tinta); border-bottom-color: var(--caparazon); }
 
 @media (min-width: 640px) {
@@ -527,4 +527,19 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 @keyframes asomar {
   from { opacity: 0; transform: translateY(1.25rem); }
   to   { opacity: 1; transform: none; }
+}
+
+/* --- Tocable con el dedo ------------------------------------------------
+   Los enlaces de texto quedaban en 20 px de alto; lo cómodo son 44. Se les
+   da aire vertical sin tocar el tamaño de letra, así no cambia el diseño
+   pero sí la puntería. En pantallas con ratón no hace falta. */
+@media (pointer: coarse) {
+  .enlace-flecha, .tarjeta .abrir, .tarjeta .abrir-fuera,
+  .enlaces-persona a, .enlaces-apps a, .pie nav a, .lista-pagos a,
+  .mis-dias a, .dato a, .prosa a { display: inline-block; padding-block: 0.7rem; }
+  .icono-boton, .enlace-idioma { min-width: 44px; height: 44px; }
+  .opcion { padding: 0.65rem 1rem; }
+  .boton { padding: 0.8rem 1.3rem; }
+  .dia { min-width: 28px; height: 28px; }
+  .enlace-copiar { padding-block: 0.4rem; }
 }
