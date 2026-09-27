@@ -169,7 +169,7 @@
 
 /* --- La escalera de precios -------------------------------------------- */
 .niveles { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 12px; }
-@media (min-width: 760px) { .niveles { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+@media (min-width: 720px) { .niveles { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); align-items: start; } }
 .nivel {
   position: relative;
   padding: 16px; border: 1px solid var(--m-linea); border-radius: var(--radio);
@@ -226,4 +226,81 @@
 .rubro {
   font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
   opacity: 0.6; margin-bottom: 8px;
+}
+
+/* --- La muestra de app ------------------------------------------------- */
+/* En el teléfono va a pantalla completa, que es donde se enseña. El marco
+   aparece sólo en escritorio, para que se lea como app y no como web. */
+.telefono { margin: 18px 0; }
+.pantalla { display: flex; flex-direction: column; background: var(--m-fondo); }
+@media (min-width: 720px) {
+  .telefono { display: flex; justify-content: center; }
+  .pantalla {
+    width: 390px; height: 780px; overflow: hidden;
+    border: 10px solid #0a0a0a; border-radius: 40px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12), 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.appBarra {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 14px 16px; background: var(--m-suave);
+  border-bottom: 1px solid var(--m-linea); flex: none;
+}
+.appNombre { font-weight: 650; font-size: 16px; }
+.appSucursal select {
+  margin-top: 2px; padding: 2px 4px 2px 0; font: inherit; font-size: 12.5px;
+  color: var(--m-acento); background: transparent; border: 0; cursor: pointer;
+}
+.appSucursal.sinMenu { font-size: 12.5px; opacity: 0.6; }
+.appCampana { position: relative; font-size: 15px; opacity: 0.75; }
+.appCampana i {
+  position: absolute; top: -2px; right: -3px; width: 7px; height: 7px;
+  background: var(--m-acento); border-radius: 50%;
+}
+
+.appCuerpo { flex: 1; overflow-y: auto; padding: 14px 16px 18px; }
+@media (min-width: 720px) { .appCuerpo { min-height: 0; } }
+
+.appPestanas {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; flex: none;
+  background: var(--m-suave); border-top: 1px solid var(--m-linea);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+  position: sticky; bottom: 0; z-index: 5;
+}
+.appPestanas button {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 7px 2px; font: inherit; font-size: 10.5px; line-height: 1.2;
+  color: var(--m-tinta); opacity: 0.55; background: transparent;
+  border: 0; border-radius: 8px; cursor: pointer; text-align: center;
+}
+.appPestanas button span { font-size: 16px; }
+.appPestanas button[aria-pressed="true"] { opacity: 1; color: var(--m-acento); }
+
+/* La tarjeta de sellos */
+.tarjeta {
+  padding: 18px 16px; border-radius: var(--radio);
+  background: var(--m-suave); border: 1px solid var(--m-acento);
+}
+.sellos { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 9px; }
+.sellos .sello {
+  aspect-ratio: 1; display: grid; place-items: center; font-size: 15px;
+  border: 1px dashed var(--m-linea); border-radius: 50%; opacity: 0.5;
+}
+.sellos .sello.puesto {
+  color: var(--m-sobre-acento); background: var(--m-acento);
+  border-style: solid; border-color: var(--m-acento); opacity: 1;
+}
+.tarjeta .premio { margin-top: 14px; font-weight: 600; }
+.tarjeta .faltan { margin-top: 3px; font-size: 13.5px; opacity: 0.7; }
+
+/* El cambio entre la página y la app */
+.cambiar { display: flex; gap: 8px; margin: 16px 0 0; }
+.cambiar a {
+  flex: 1; padding: 11px 12px; text-align: center; text-decoration: none;
+  font-size: 14px; font-weight: 600; border-radius: 999px;
+  color: var(--m-acento); border: 1px solid var(--m-acento);
+}
+.cambiar a[aria-current="page"] {
+  color: var(--m-sobre-acento); background: var(--m-acento);
 }

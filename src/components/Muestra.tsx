@@ -108,7 +108,7 @@ function Reserva({ demo, hoy }: { demo: Demo; hoy: string }) {
 
 /* --- Carrito de pedido -------------------------------------------------- */
 
-function Carrito({ demo }: { demo: Demo }) {
+export function Carrito({ demo, desnudo }: { demo: Demo; desnudo?: boolean }) {
   const [cantidad, setCantidad] = useState<Record<string, number>>({});
   const [busca, setBusca] = useState("");
   const [grupo, setGrupo] = useState("");
@@ -150,7 +150,7 @@ Total: ${pesos(total)}
 ${entrega === "recoger" ? "Paso por él" : "A domicilio"}${nombre ? `\nA nombre de ${nombre}` : ""}`;
 
   return (
-    <div className="panel">
+    <div className={desnudo ? "" : "panel"}>
       <div className="fichas">
         <span className="pildora abierto">Abierto ahora</span>
         <span className="pildora">Pide por WhatsApp</span>

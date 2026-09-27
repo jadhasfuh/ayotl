@@ -43,6 +43,17 @@ export type Demo = {
   horarios?: string[];
   /** Para el cotizador: por cuántas unidades se multiplica el precio. */
   cotizacion?: { etiqueta: string; unidad: string; ayuda?: string; conCalendario?: boolean };
+  /**
+   * Si lleva app propia, lo que se enseña dentro. Vive en `/demo/<slug>/app`
+   * y es el escalón de arriba: lo que una página no puede dar —icono en la
+   * pantalla, avisos sin pagar pauta, «lo de siempre» en dos toques.
+   */
+  app?: {
+    sucursales?: string[];
+    lealtad: { hechos: number; total: number; premio: string };
+    historial: { cuando: string; lineas: string[]; total: number }[];
+    avisos: { cuando: string; titulo: string; texto: string }[];
+  };
 };
 
 export const DEMOS: Demo[] = [
@@ -118,6 +129,18 @@ export const DEMOS: Demo[] = [
     modulo: "carrito",
     telefonoVisible: "(353) 532-5644",
     direccion: "Abasolo 49, Centro, Sahuayo de Morelos",
+    app: {
+      lealtad: { hechos: 7, total: 10, premio: "La décima pizza va por la casa" },
+      historial: [
+        { cuando: "Viernes pasado", lineas: ["2 × Pizza hawaiana", "1 × Refresco 600 ml"], total: 360 },
+        { cuando: "Hace dos semanas", lineas: ["1 × Pizza mexicana", "1 × Pasta alfredo"], total: 295 },
+      ],
+      avisos: [
+        { cuando: "Hoy, 1:20 p. m.", titulo: "Ya salió la del día", texto: "Rebanada de peperoni a $35 hasta las 6." },
+        { cuando: "Sábado", titulo: "2×1 en pizzas medianas", texto: "Sólo hoy, de 7 a 10 de la noche." },
+      ],
+    },
+
     articulos: [
       { nombre: "Pizza hawaiana", detalle: "Jamón y piña", precio: 165, grupo: "Pizzas" },
       { nombre: "Pizza mexicana", detalle: "Chorizo, jalapeño y cebolla", precio: 175, grupo: "Pizzas" },
@@ -151,6 +174,88 @@ export const DEMOS: Demo[] = [
       { nombre: "Paquete con banquete", detalle: "Lo anterior más comida y servicio", precio: 620, grupo: "Por invitado" },
       { nombre: "Paquete completo", detalle: "Banquete, bebidas, música y coordinación", precio: 890, grupo: "Por invitado" },
     ],
+  },
+  {
+    slug: "la-cochera",
+    portada: { titulo: "Pastelería desde 1986", bajada: "Once sucursales en seis ciudades. Encarga tu pastel para la fecha que lo necesitas, y recógelo en la que te quede más cerca." },
+    tipografia: "serif",
+    negocio: "Pastelería La Cochera",
+    rubro: "Pastelería y cafetería",
+    ciudad: "Sahuayo, Michoacán",
+    color: { fondo: "#1a1214", tinta: "#f6ece9", acento: "#c9736f", suave: "#251a1c" },
+    hallazgo: "26-sep-2026: tiene sitio propio (pastelerialacochera.com) con once sucursales listadas, pero es un folleto: no deja pedir en línea, no enseña precios y no tiene WhatsApp. Hasta la sección «Tu Pastel» es informativa: para encargarlo hay que ir o llamar.",
+    gancho: "Cuarenta años, once sucursales y seis ciudades — y para encargar un pastel el cliente todavía tiene que ir al mostrador o llamar por teléfono.",
+    propuesta: [
+      "Encargo de pastel en línea: sabor, tamaño, qué se escribe encima, para qué día y en qué sucursal se recoge.",
+      "El encargo entra ya escrito a la sucursal que eligió: se acaban los pasteles mal anotados por teléfono.",
+      "Once sucursales en el mapa, con la más cercana arriba.",
+      "Y lo que un mostrador no da: saber qué sabor se pide más, en qué sucursal y en qué semana del año.",
+    ],
+    modulo: "carrito",
+    telefonoVisible: "(353) 128-2488",
+    direccion: "Constitución 303, Sahuayo de Morelos · y diez sucursales más",
+    articulos: [
+      { nombre: "Pastel de tres leches", detalle: "Chico, 8 porciones", precio: 320, grupo: "Pasteles" },
+      { nombre: "Pastel de chocolate", detalle: "Mediano, 15 porciones", precio: 480, grupo: "Pasteles" },
+      { nombre: "Pastel personalizado", detalle: "Se encarga con tres días", precio: 650, grupo: "Pasteles" },
+      { nombre: "Rebanada del día", detalle: "La que haya en mostrador", precio: 55, grupo: "Por rebanada" },
+      { nombre: "Concha y pan dulce", detalle: "Por pieza", precio: 18, grupo: "Panadería" },
+      { nombre: "Café americano", precio: 40, grupo: "Cafetería" },
+      { nombre: "Capuchino", precio: 55, grupo: "Cafetería" },
+    ],
+    app: {
+      sucursales: ["Portal 20", "Guerrero", "Madero", "Matamoros", "Lázaro Cárdenas", "Jiquilpan", "Zamora Centro", "Zamora Norte", "San Pedro Caro", "La Barca", "Mazamitla"],
+      lealtad: { hechos: 4, total: 8, premio: "El octavo café va por la casa" },
+      historial: [
+        { cuando: "Domingo", lineas: ["1 × Pastel de chocolate", "2 × Capuchino"], total: 590 },
+        { cuando: "Hace un mes", lineas: ["1 × Pastel personalizado", "6 × Concha y pan dulce"], total: 758 },
+      ],
+      avisos: [
+        { cuando: "Hoy, 8:10 a. m.", titulo: "Ya hay pan recién salido", texto: "En Portal 20, de 8 a 11 de la mañana." },
+        { cuando: "Hace tres días", titulo: "Tu pastel está listo", texto: "Puedes recogerlo en la sucursal Guerrero hasta las 9." },
+      ],
+    },
+  },
+  {
+    slug: "crostoli",
+    portada: { titulo: "Café y restaurante", bajada: "Desayuno, comida y cena en un solo lugar, en Las Brisas. Pide desde aquí y recógelo o que te lo lleven." },
+    tipografia: "sans",
+    negocio: "Crostoli",
+    rubro: "Café y restaurante",
+    ciudad: "Sahuayo, Michoacán",
+    color: { fondo: "#17130f", tinta: "#f4ede4", acento: "#d98b3a", suave: "#211a14" },
+    hallazgo: "26-sep-2026: es el #2 de 481 restaurantes de Sahuayo en Restaurant Guru, con 4.5 estrellas y 197 reseñas en Google. Y ya tiene 134 platillos en 16 categorías cargados en Mercadito, con fotos: el catálogo existe y está al día.",
+    gancho: "Ya subiste 134 platillos con sus fotos. Ese trabajo ya está hecho — falta que salga con tu nombre y no con el de otro.",
+    propuesta: [
+      "Su carta ya está cargada: lo que sigue no es capturarla otra vez, es ponerle su nombre, su portada y su enlace.",
+      "El mismo panel de siempre: se cambia un precio una vez y cambia en los dos lados.",
+      "Con 197 reseñas y el segundo lugar del pueblo, la gente ya lo busca por su nombre: que encuentre lo suyo y no una ficha de terceros.",
+      "Y el escalón de arriba: su app, con avisos que llegan sin pagarle pauta a Facebook.",
+    ],
+    modulo: "carrito",
+    telefonoVisible: "(353) 688-0761",
+    direccion: "Calle Michoacán 7-37, Las Brisas, Sahuayo de Morelos",
+    articulos: [
+      { nombre: "Hamburguesa de la casa", detalle: "Con papas gajo", precio: 165, grupo: "Hamburguesas" },
+      { nombre: "Panini de pollo", detalle: "Pesto y queso manchego", precio: 135, grupo: "Paninis" },
+      { nombre: "Pasta alfredo", detalle: "Con pan de ajo", precio: 145, grupo: "Pastas" },
+      { nombre: "Waffle con fruta", detalle: "Miel de maple", precio: 110, grupo: "Waffles" },
+      { nombre: "Pan francés", detalle: "Con cajeta y nuez", precio: 105, grupo: "Waffles" },
+      { nombre: "Capuchino", precio: 55, grupo: "Bebidas" },
+      { nombre: "Frappé", detalle: "El de la temporada", precio: 75, grupo: "Bebidas" },
+      { nombre: "Pastel de zanahoria", detalle: "Rebanada", precio: 70, grupo: "Postres" },
+    ],
+    app: {
+      lealtad: { hechos: 6, total: 8, premio: "El octavo café va por la casa" },
+      historial: [
+        { cuando: "Ayer", lineas: ["1 × Hamburguesa de la casa", "1 × Frappé"], total: 240 },
+        { cuando: "La semana pasada", lineas: ["2 × Pan francés", "2 × Capuchino"], total: 320 },
+      ],
+      avisos: [
+        { cuando: "Hoy, 9:00 a. m.", titulo: "Ya está el desayuno", texto: "Pan francés con café a $135 hasta mediodía." },
+        { cuando: "Viernes", titulo: "Nuevo en la carta", texto: "Frappé de temporada. Pruébalo esta semana." },
+      ],
+    },
   },
   {
     slug: "fisiotec",

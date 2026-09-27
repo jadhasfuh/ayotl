@@ -62,6 +62,20 @@ export const NIVELES: Nivel[] = [
       "Lo que haga falta: se escribe antes cuánto y en cuánto tiempo",
     ],
   },
+  {
+    id: "app",
+    nombre: "Su app propia",
+    precio: "Desde $15,000",
+    recurrente: "$450 al mes",
+    resumen: "Su icono en la pantalla del cliente, y avisos que llegan sin pagar pauta.",
+    incluye: [
+      "Publicada en Google Play con su nombre",
+      "Avisos a quien tenga la app, sin costo por mensaje",
+      "«Lo de siempre»: repetir el pedido de siempre en dos toques",
+      "Tarjeta de puntos, sin el cartoncito que se pierde",
+      "El mismo catálogo otra vez: se carga una vez y sale en los tres lados",
+    ],
+  },
 ];
 
 /** Con qué se puede conectar. Todo esto está hecho ya en algún producto. */
@@ -83,4 +97,6 @@ export const INTEGRACIONES: { nombre: string; detalle: string }[] = [
 export const LETRA_CHICA =
   "Precios en pesos, sin IVA. El alta se cobra al entregar, no antes. La mensualidad cubre hospedaje, " +
   "respaldos y los cambios chicos; se cancela cuando quiera y el catálogo se va con usted. " +
-  "Cobrar con tarjeta se puede conectar, pero la comisión la pone el banco y se cotiza aparte.";
+  "Cobrar con tarjeta se puede conectar, pero la comisión la pone el banco y se cotiza aparte. " +
+  "La cuenta de Google Play ya está pagada y es de Ayotl: la app se publica ahí sin costo de alta para usted, " +
+  "y si un día quiere la suya propia, se traspasa.";

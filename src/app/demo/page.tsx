@@ -41,6 +41,13 @@ export default function Muestras() {
                 <span className="detalle" style={{ whiteSpace: "nowrap" }}>{MODULOS[d.modulo]}</span>
               </div>
               <p className="detalle" style={{ marginTop: 6 }}>{d.rubro} · {d.gancho}</p>
+              {d.app && (
+                <p style={{ marginTop: 8 }}>
+                  <Link href={`/demo/${d.slug}/app`} style={{ color: "var(--m-acento)", fontSize: 13.5 }}>
+                    y su app →
+                  </Link>
+                </p>
+              )}
             </li>
           ))}
         </ul>

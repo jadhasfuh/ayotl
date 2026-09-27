@@ -168,6 +168,22 @@ ninguna usa sus fotos ni su logotipo: van huecos marcados «foto».
 | `/demo/rica-pizza` | Rica Pizza | Menú con carrito y pedido armado | Su menú está en restaurantguru, carta.menu, wheree y gastroranking, con anuncios de la competencia al lado |
 | `/demo/real-de-las-palmas` | Real de las Palmas | Calendario de fechas libres + cotizador por invitado | «Fiestas & Eventos» son 63 negocios y casi ninguno tiene página; la pregunta que más llega es si hay fecha |
 | `/demo/fisiotec` | Fisiotec | Agenda de citas con horas libres | 42 fichas de médicos en el directorio y ninguna deja agendar |
+| `/demo/la-cochera` | Pastelería La Cochera | Carta, y su app con encargo y sucursal | Once sucursales en seis ciudades, cuarenta años, y su sitio no deja pedir, ni ver precios, ni escribir por WhatsApp |
+| `/demo/crostoli` | Crostoli | Carta, y su app | #2 de 481 restaurantes de Sahuayo, 4.5★ con 197 reseñas, y 134 platillos ya cargados en Mercadito |
+
+Tres llevan además **muestra de app** en `/demo/<negocio>/app`: Rica Pizza,
+La Cochera y Crostoli. Desde la página se pasa a la app con el par de botones
+de arriba, que es como se enseña: primero su página, luego «y así se vería su
+app». La app tiene cuatro pestañas y cada una está por una razón que se dice
+en voz alta:
+
+- **Carta** — el mismo catálogo, para que se vea que se carga una sola vez.
+- **Lo de siempre** — repetir el pedido de siempre en dos toques. En un
+  negocio al que se vuelve, esto es lo que hace que la app se quede.
+- **Puntos** — la tarjeta de sellos sin el cartoncito que se pierde.
+- **Avisos** — el único canal que llega al cliente sin pagarle pauta a nadie.
+  Ése es el argumento de venta de la app, y conviene decirlo con esas
+  palabras: el mismo alcance en Facebook se paga cada vez.
 
 Los tres módulos (reserva, carrito, agenda) y el cotizador sirven para casi
 cualquier giro del pueblo: hotel y salón comparten el calendario, restaurante

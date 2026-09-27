@@ -55,6 +55,12 @@ export default async function PaginaMuestra({ params }: { params: Promise<{ nego
         <section className="portada">
           <h1>{demo.portada.titulo}</h1>
           <p className="bajada">{demo.portada.bajada}</p>
+          {demo.app && (
+            <nav className="cambiar">
+              <a href={`/demo/${demo.slug}`} aria-current="page">Su página</a>
+              <a href={`/demo/${demo.slug}/app`}>Su app</a>
+            </nav>
+          )}
         </section>
 
         <Muestra demo={demo} hoy={hoy} />
