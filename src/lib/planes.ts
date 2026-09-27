@@ -4,10 +4,10 @@
  * Va al pie de cada muestra. Los precios están aquí y en ningún otro sitio:
  * para cambiarlos se toca este fichero y ya.
  *
- * La escalera arranca en cero a propósito. Mercadito ya existe, ya tiene el
- * menú con pedido por WhatsApp sin registro ni comisiones, y ya hay 37
- * negocios de Sahuayo con carta cargada: regalar el primer escalón cuesta
- * nada y convierte la visita en «pruébelo» en vez de «fírmeme».
+ * El primer escalón cuesta $49 al mes con dos meses gratis, que es lo que
+ * Mercadito cobra de verdad. No se pone «gratis» para que suene mejor: el
+ * precio va escrito donde el negocio lo pueda leer, y de todas formas la
+ * prueba de dos meses ya hace el trabajo de convencer.
  */
 export type Nivel = {
   id: string;
@@ -24,12 +24,14 @@ export const NIVELES: Nivel[] = [
   {
     id: "ficha",
     nombre: "Su ficha en Mercadito",
-    precio: "Gratis",
+    precio: "2 meses gratis",
+    recurrente: "luego $49 al mes",
     resumen: "Ya está hecha. Se carga el menú y esa misma tarde está en línea.",
     incluye: [
       "Su carta en mercadito.cx/m/su-negocio",
       "Pedido por WhatsApp, sin registro y sin comisiones",
       "Buscador, categorías y «lo más pedido»",
+      "Mesas, comandas y reserva de citas, si el giro lo pide",
       "Se actualiza desde el celular, cuando cambie un precio",
     ],
   },

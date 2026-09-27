@@ -122,14 +122,15 @@ cambiarlos se toca ese fichero y nada más.
 
 | | Qué es | Cuánto |
 | --- | --- | --- |
-| **1. Su ficha en Mercadito** | Su carta en `mercadito.cx/m/su-negocio`, con pedido por WhatsApp, sin registro ni comisiones | Gratis |
+| **1. Su ficha en Mercadito** | Su carta en `mercadito.cx/m/su-negocio`, con pedido por WhatsApp, sin comisiones por venta. También mesas, comandas y citas | 2 meses gratis, luego $49/mes |
 | **2. Enlace propio** | Lo mismo con su nombre y sus colores, sin Mercadito a la vista. Un solo panel, un solo catálogo, sale en los dos lados | $1,500 de alta + $250 al mes |
 | **3. A la medida** | Lo que un catálogo no resuelve: reservas, citas, calendario, cotizador, dominio propio | Desde $8,000 + $350 al mes |
 
-El primer escalón es gratis a propósito. Convierte la visita en «pruébelo» en
-vez de «fírmeme», y cuesta cero porque **ya está construido**. El segundo es
-el que se quiere vender: el alta cubre el trabajo y la mensualidad paga el
-mantenimiento sin tener que revender cada año.
+El primer escalón es el precio real de Mercadito, con sus dos meses de
+prueba. Convierte la visita en «pruébelo» en vez de «fírmeme», y a ti no te
+cuesta nada porque **ya está construido**. El segundo es el que se quiere
+vender: el alta cubre el trabajo y la mensualidad paga el mantenimiento sin
+tener que revender cada año.
 
 Cobrar con tarjeta se puede conectar, pero la comisión la pone el banco: se
 dice aparte y se cotiza aparte. Prometer una comisión que no se controla es

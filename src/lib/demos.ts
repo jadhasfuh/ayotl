@@ -93,7 +93,7 @@ export const DEMOS: Demo[] = [
     hallazgo: "26-sep-2026: no le encontré sitio propio. Aparece en fichas de terceros (infoisinfo, tlapalerias.com, directorios) con datos y reseñas que no controla.",
     gancho: "Cuando alguien busca «pisos en Sahuayo», encuentra fichas de otros con tus datos y tus reseñas. Ninguna es tuya.",
     propuesta: [
-      "El catálogo puede estar hoy en Mercadito, sin costo, con buscador y pedido por WhatsApp.",
+      "El catálogo puede estar hoy en Mercadito, con buscador y pedido por WhatsApp, y dos meses de prueba.",
       "Con enlace propio: buscador por medida, color y ambiente, con foto grande de cada pieza.",
       "Cada pieza con su medida, su acabado y si hay existencia; el cliente llega sabiendo qué pedir.",
       "Botón de cotizar que manda al WhatsApp los metros cuadrados y la pieza elegida.",
@@ -121,7 +121,7 @@ export const DEMOS: Demo[] = [
     hallazgo: "26-sep-2026: sin sitio propio. Su menú está publicado en restaurantguru, carta.menu, wheree y gastroranking, con precios que no controla y anuncios de otros restaurantes encima.",
     gancho: "Tu menú está en cinco páginas que no son tuyas, con precios viejos y anuncios de la competencia al lado.",
     propuesta: [
-      "Esto puede estar en línea hoy mismo y sin costo: es Mercadito, que ya funciona y ya tiene 37 cartas de Sahuayo cargadas.",
+      "Esto puede estar en línea hoy mismo: es Mercadito, que ya funciona, ya tiene 37 cartas de Sahuayo cargadas y trae dos meses de prueba.",
       "Pedido armado por el cliente que llega al WhatsApp ya escrito, sin errores de teléfono y sin comisión de nadie.",
       "Si después quiere su propio enlace, es la misma carta con su nombre y sus colores: se carga una vez y sale en los dos lados.",
       "Código QR para las mesas, y lo que hoy no tiene: cuántos abrieron la carta y qué es lo que más se pide.",
