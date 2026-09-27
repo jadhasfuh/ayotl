@@ -1,0 +1,168 @@
+/* ---------------------------------------------------------------------------
+   Estilos de las muestras para negocios de Sahuayo.
+
+   Aparte de globals.css a propósito: cada muestra tiene que verse como el
+   sitio del negocio, no como Ayotl. Los colores llegan por variables que la
+   página pone en línea desde `src/lib/demos.ts`.
+   ------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.m {
+  --radio: 10px;
+  margin: 0;
+  background: var(--m-fondo);
+  color: var(--m-tinta);
+  font-family: var(--f-inter), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-text-size-adjust: 100%;
+}
+.m h1, .m h2, .m h3 { line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+.m.serif h1, .m.serif h2, .m.serif .marca { font-family: var(--f-literata), Georgia, serif; font-weight: 500; }
+.m.sans h1, .m.sans h2, .m.sans .marca { font-weight: 650; letter-spacing: -0.02em; }
+.m p { margin: 0; }
+.m img { max-width: 100%; }
+
+.envoltura { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+
+/* --- El aviso. Va arriba, pegado, y no se puede quitar. ------------------ */
+.aviso {
+  position: sticky; top: 0; z-index: 20;
+  background: #2b2118; color: #ffe9c7;
+  border-bottom: 2px solid #d9a441;
+  font-size: 12.5px; line-height: 1.45;
+  padding: 8px 16px;
+}
+.aviso b { color: #fff; }
+.aviso a { color: #ffd489; }
+.aviso .envoltura { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+
+/* --- Cabecera ----------------------------------------------------------- */
+.cabecera {
+  padding: 14px 0; border-bottom: 1px solid var(--m-linea);
+  background: var(--m-suave);
+  position: relative;
+}
+.cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.marca { font-size: 19px; }
+.marca small { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; letter-spacing: 0.1em; }
+.tel { font-size: 13px; opacity: 0.75; white-space: nowrap; }
+
+/* --- Portada ------------------------------------------------------------ */
+.portada { padding: 34px 0 26px; }
+.portada h1 { font-size: 30px; }
+.portada .bajada { margin-top: 10px; font-size: 16px; opacity: 0.78; max-width: 46ch; }
+@media (min-width: 680px) { .portada { padding: 52px 0 38px; } .portada h1 { font-size: 42px; } }
+
+/* --- El módulo interactivo ---------------------------------------------- */
+.panel {
+  background: var(--m-suave);
+  border: 1px solid var(--m-linea);
+  border-radius: var(--radio);
+  padding: 16px;
+  margin: 18px 0;
+}
+.panel > h2 { font-size: 17px; margin-bottom: 12px; }
+.campo { display: block; margin-bottom: 12px; }
+.campo span { display: block; font-size: 12.5px; opacity: 0.72; margin-bottom: 5px; }
+.campo input, .campo select {
+  width: 100%; padding: 11px 12px; font: inherit; font-size: 16px;
+  color: var(--m-tinta); background: var(--m-fondo);
+  border: 1px solid var(--m-linea); border-radius: 8px;
+}
+.campo input:focus-visible, .campo select:focus-visible,
+.m button:focus-visible, .m a:focus-visible {
+  outline: 2px solid var(--m-acento); outline-offset: 2px;
+}
+.dos { display: grid; gap: 12px; }
+@media (min-width: 560px) { .dos { grid-template-columns: 1fr 1fr; } }
+
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 13px 18px; font: inherit; font-weight: 600; font-size: 15px;
+  color: var(--m-sobre-acento); background: var(--m-acento);
+  border: 0; border-radius: 999px; cursor: pointer;
+}
+.boton:disabled { opacity: 0.45; cursor: not-allowed; }
+.boton.fantasma { background: transparent; color: var(--m-acento); border: 1px solid var(--m-acento); }
+
+/* --- Fichas (habitaciones, platillos, materiales) ----------------------- */
+.lista { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 620px) { .lista.dosCols { grid-template-columns: 1fr 1fr; } }
+.ficha {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px; border: 1px solid var(--m-linea); border-radius: var(--radio);
+  background: var(--m-fondo);
+}
+/* Una <button class="ficha"> no hereda el color: sin esto el texto sale
+   en el negro por omisión del navegador, sobre fondo oscuro. */
+.m button.ficha { color: var(--m-tinta); }
+.ficha.puesta { border-color: var(--m-acento); box-shadow: inset 0 0 0 1px var(--m-acento); }
+.ficha .cuerpo { flex: 1; min-width: 0; }
+.ficha .nombre { font-weight: 600; font-size: 15px; }
+.ficha .detalle { font-size: 13px; opacity: 0.7; }
+.ficha .precio { font-size: 14px; font-weight: 600; white-space: nowrap; align-self: center; }
+/* El hueco de la foto: una muestra no usa fotos del negocio sin permiso. */
+.hueco {
+  flex: none; width: 54px; height: 54px; border-radius: 8px;
+  background: repeating-linear-gradient(45deg, var(--m-suave) 0 6px, var(--m-linea) 6px 12px);
+  display: grid; place-items: center; font-size: 10px; opacity: 0.55; text-align: center;
+}
+
+/* Contador de cantidad */
+.cuenta { display: flex; align-items: center; gap: 6px; }
+.cuenta button {
+  width: 40px; height: 40px; font: inherit; font-size: 17px; line-height: 1;
+  color: var(--m-tinta); background: var(--m-suave);
+  border: 1px solid var(--m-linea); border-radius: 8px; cursor: pointer;
+}
+.cuenta b { min-width: 18px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* Rejilla de horarios */
+.horas { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+.horas button {
+  padding: 11px 6px; font: inherit; font-size: 14px;
+  color: var(--m-tinta); background: var(--m-fondo);
+  border: 1px solid var(--m-linea); border-radius: 8px; cursor: pointer;
+}
+.horas button[aria-pressed="true"] { background: var(--m-acento); color: var(--m-sobre-acento); border-color: var(--m-acento); }
+.horas button:disabled { opacity: 0.35; cursor: not-allowed; text-decoration: line-through; }
+
+/* Calendario de ocupación */
+.mes { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.mes .dia {
+  padding: 11px 0; font-size: 13px; border-radius: 6px;
+  border: 1px solid transparent; font-variant-numeric: tabular-nums;
+}
+.mes .dia.libre { background: var(--m-fondo); border-color: var(--m-linea); cursor: pointer; }
+.mes .dia.libre[aria-pressed="true"] { background: var(--m-acento); color: var(--m-sobre-acento); }
+.mes .dia.ocupado { background: var(--m-linea); opacity: 0.5; text-decoration: line-through; }
+.mes .encabezado { font-size: 11px; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.06em; padding-bottom: 2px; }
+
+/* El total y el mensaje compuesto */
+.total { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; font-size: 15px; }
+.total b { font-size: 21px; }
+.mensaje {
+  margin-top: 14px; padding: 12px 14px; border-radius: var(--radio);
+  background: #e7fbe0; color: #14321a; border: 1px solid #b7e3ab;
+}
+.mensaje .etiqueta { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin-bottom: 6px; }
+.mensaje pre {
+  margin: 0; white-space: pre-wrap; word-break: break-word;
+  font-family: var(--f-mono), ui-monospace, monospace; font-size: 13px; line-height: 1.6;
+}
+.nota { font-size: 12.5px; opacity: 0.65; margin-top: 8px; }
+
+/* --- Al pie: qué resuelve --------------------------------------------- */
+.porque {
+  margin-top: 30px; padding: 26px 0 40px;
+  border-top: 1px solid var(--m-linea); background: var(--m-suave);
+}
+.porque h2 { font-size: 18px; margin-bottom: 4px; }
+.porque .gancho { font-size: 17px; margin: 12px 0; padding-left: 14px; border-left: 3px solid var(--m-acento); }
+.porque ul { margin: 12px 0 0; padding-left: 20px; }
+.porque li { margin-bottom: 7px; }
+.porque .hallazgo { font-size: 13px; opacity: 0.72; margin-top: 14px; }
+.porque .firma { margin-top: 22px; font-size: 14px; }
+.porque .firma a { color: var(--m-acento); font-weight: 600; }

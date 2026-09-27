@@ -103,12 +103,10 @@ donde la gente paga el predial».
 Lo que convierte en este pueblo no es un folleto, es enseñarle a alguien su
 propio negocio funcionando. Antes de tocar la puerta:
 
-1. **Monta una página de una sola pantalla con lo suyo**, sacado de lo que ya
-   es público: su nombre, su logotipo si se ve en Facebook, tres o cuatro
-   productos con precio, su dirección y un botón de WhatsApp. Quince minutos
-   con lo que ya está hecho en ayotl.dev.
-2. **Súbela a una dirección temporal** (`ayotl.dev/demo/mahide`, por ejemplo)
-   y ábrela en tu teléfono antes de entrar.
+1. **Abre su muestra** en `ayotl.dev/demo/<negocio>`. Ya hay cinco montadas
+   (ver abajo); una nueva son quince minutos: un fichero en `src/lib/demos.ts`.
+2. **Ábrela en tu teléfono antes de entrar**, y dale una vuelta tú primero,
+   para que no sea la primera vez que la tocas delante del dueño.
 3. **Entra y enséñasela.** No se explica, se enseña: «Mire, así se vería. La
    hice ayer para enseñársela; si le sirve, la dejamos con su dominio.»
 4. **Deja algo físico**: una tarjeta con el QR de esa demo. Que la pueda
@@ -116,6 +114,28 @@ propio negocio funcionando. Antes de tocar la puerta:
 
 Es más trabajo por visita, pero cambia la conversación: se deja de discutir
 si conviene tener página y se pasa a discutir la suya.
+
+### Las muestras ya montadas
+
+Están en `ayotl.dev/demo` (esa lista no se enlaza desde el sitio ni se
+indexa). Cada una lleva arriba, pegado y sin forma de cerrarlo, el aviso de
+que no es el sitio del negocio: una página que pudiera pasar por oficial no
+se publica, y además así la conversación empieza donde tiene que empezar.
+Ningún botón le escribe a nadie —enseñan el mensaje que se compondría—, y
+ninguna usa sus fotos ni su logotipo: van huecos marcados «foto».
+
+| Muestra | Negocio | Lo que enseña | Por qué ése |
+| --- | --- | --- | --- |
+| `/demo/portozul` | Portozul Hotel & Suites | Reserva directa: fechas, habitación, estimado | Sólo se reserva por Expedia, Hotels.com, Orbitz, Despegar y Trip.com. Cada reserva deja 15–20 % de comisión |
+| `/demo/mahide` | Mahide | Cotizador por metro cuadrado, con merma | Sin sitio propio; sus datos y reseñas viven en fichas de terceros |
+| `/demo/rica-pizza` | Rica Pizza | Menú con carrito y pedido armado | Su menú está en restaurantguru, carta.menu, wheree y gastroranking, con anuncios de la competencia al lado |
+| `/demo/real-de-las-palmas` | Real de las Palmas | Calendario de fechas libres + cotizador por invitado | «Fiestas & Eventos» son 63 negocios y casi ninguno tiene página; la pregunta que más llega es si hay fecha |
+| `/demo/fisiotec` | Fisiotec | Agenda de citas con horas libres | 42 fichas de médicos en el directorio y ninguna deja agendar |
+
+Los tres módulos (reserva, carrito, agenda) y el cotizador sirven para casi
+cualquier giro del pueblo: hotel y salón comparten el calendario, restaurante
+y ferretería el carrito, y todo consultorio la agenda. Montar la sexta
+muestra es copiar el bloque de otra y cambiar los datos.
 
 ### Lo que se dice al entrar
 
@@ -155,7 +175,16 @@ Ayuntamiento cuando haya dos o tres trabajos locales que enseñar.
 ya clasificados: 183 en «Restaurantes & Comida Rápida», 73 en «Comida &
 Desayunos», 61 en «Tecnología & Electrónica», 42 en «Cafeterías &
 Pastelerías», 42 en «Médicos». Es la lista de prospectos más completa que hay
-del pueblo, y dice de cada uno si tiene o no sitio propio.
+del pueblo.
+
+Dos advertencias sobre ese directorio. La primera: sus fichas están casi
+vacías —dirección, teléfono y poco más—, así que no sirve para saber si un
+negocio tiene sitio; eso hay que comprobarlo a mano. La segunda, y la que
+importa: **lo patrocina OITSYS (oitsys.com), una consultora de software de
+aquí**. O sea que el directorio es el embudo de un competidor local que ya
+está en esas puertas. No cambia a quién visitar, pero sí el tono: no se
+compite por precio contra una consultora, se compite por ser el de aquí que
+contesta el teléfono y entrega en una semana.
 
 ---
 
