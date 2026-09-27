@@ -110,6 +110,8 @@ function Reserva({ demo, hoy }: { demo: Demo; hoy: string }) {
 
 function Carrito({ demo }: { demo: Demo }) {
   const [cantidad, setCantidad] = useState<Record<string, number>>({});
+  const [busca, setBusca] = useState("");
+  const [grupo, setGrupo] = useState("");
   const [nombre, setNombre] = useState("");
   const [entrega, setEntrega] = useState("recoger");
   const [listo, setListo] = useState(false);
@@ -122,6 +124,18 @@ function Carrito({ demo }: { demo: Demo }) {
     }
     return [...m];
   }, [demo.articulos]);
+
+  // Buscar por nombre y por descripción: la gente teclea «piña», no «hawaiana».
+  const filtrados = useMemo(() => {
+    const q = busca.trim().toLowerCase();
+    return grupos
+      .filter(([g]) => !grupo || g === grupo)
+      .map(([g, arts]) => [
+        g,
+        arts.filter((a) => !q || `${a.nombre} ${a.detalle ?? ""}`.toLowerCase().includes(q)),
+      ] as [string, Articulo[]])
+      .filter(([, arts]) => arts.length > 0);
+  }, [grupos, grupo, busca]);
 
   const poner = (nom: string, d: number) => {
     setListo(false);
@@ -137,10 +151,38 @@ ${entrega === "recoger" ? "Paso por él" : "A domicilio"}${nombre ? `\nA nombre 
 
   return (
     <div className="panel">
-      <h2>Arma tu pedido</h2>
-      {grupos.map(([grupo, arts]) => (
-        <div key={grupo} style={{ marginBottom: 16 }}>
-          <h3 style={{ fontSize: 13, textTransform: "uppercase", letterSpacing: "0.08em", opacity: 0.6, marginBottom: 8 }}>{grupo}</h3>
+      <div className="fichas">
+        <span className="pildora abierto">Abierto ahora</span>
+        <span className="pildora">Pide por WhatsApp</span>
+        <span className="pildora">Sin registro · sin comisiones</span>
+      </div>
+
+      <label className="campo" style={{ marginTop: 14 }}>
+        <span className="oculto">Buscar en la carta</span>
+        <input
+          type="search" value={busca} placeholder="¿Qué se te antoja?"
+          onChange={(e) => { setBusca(e.target.value); setListo(false); }}
+        />
+      </label>
+
+      <div className="chips">
+        <button type="button" aria-pressed={grupo === ""} onClick={() => setGrupo("")}>
+          Todo <small>{demo.articulos.length}</small>
+        </button>
+        {grupos.map(([g, arts]) => (
+          <button key={g} type="button" aria-pressed={grupo === g} onClick={() => setGrupo(grupo === g ? "" : g)}>
+            {g} <small>{arts.length}</small>
+          </button>
+        ))}
+      </div>
+
+      {filtrados.length === 0 && (
+        <p className="nota" style={{ marginTop: 14 }}>No hay nada con «{busca}». Prueba con otra cosa.</p>
+      )}
+
+      {filtrados.map(([grupoNombre, arts]) => (
+        <div key={grupoNombre} style={{ marginBottom: 16 }}>
+          <h3 className="rubro">{grupoNombre}</h3>
           <ul className="lista">
             {arts.map((a) => (
               <li key={a.nombre} className={`ficha ${(cantidad[a.nombre] ?? 0) > 0 ? "puesta" : ""}`}>
@@ -160,6 +202,7 @@ ${entrega === "recoger" ? "Paso por él" : "A domicilio"}${nombre ? `\nA nombre 
           </ul>
         </div>
       ))}
+
       <label className="campo">
         <span>¿A nombre de quién?</span>
         <input value={nombre} onChange={(e) => { setNombre(e.target.value); setListo(false); }} placeholder="Tu nombre" />

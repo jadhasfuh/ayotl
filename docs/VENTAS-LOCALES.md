@@ -115,6 +115,43 @@ propio negocio funcionando. Antes de tocar la puerta:
 Es más trabajo por visita, pero cambia la conversación: se deja de discutir
 si conviene tener página y se pasa a discutir la suya.
 
+### La escalera: qué se ofrece y qué cuesta
+
+Los precios viven en `src/lib/planes.ts` y salen al pie de cada muestra. Para
+cambiarlos se toca ese fichero y nada más.
+
+| | Qué es | Cuánto |
+| --- | --- | --- |
+| **1. Su ficha en Mercadito** | Su carta en `mercadito.cx/m/su-negocio`, con pedido por WhatsApp, sin registro ni comisiones | Gratis |
+| **2. Enlace propio** | Lo mismo con su nombre y sus colores, sin Mercadito a la vista. Un solo panel, un solo catálogo, sale en los dos lados | $1,500 de alta + $250 al mes |
+| **3. A la medida** | Lo que un catálogo no resuelve: reservas, citas, calendario, cotizador, dominio propio | Desde $8,000 + $350 al mes |
+
+El primer escalón es gratis a propósito. Convierte la visita en «pruébelo» en
+vez de «fírmeme», y cuesta cero porque **ya está construido**. El segundo es
+el que se quiere vender: el alta cubre el trabajo y la mensualidad paga el
+mantenimiento sin tener que revender cada año.
+
+Cobrar con tarjeta se puede conectar, pero la comisión la pone el banco: se
+dice aparte y se cotiza aparte. Prometer una comisión que no se controla es
+la manera más rápida de quedar mal.
+
+### El mejor prospecto del pueblo ya está en Mercadito
+
+`mercadito.cx/menus` tiene **37 negocios de Sahuayo con la carta cargada y
+pública**. Ésos son los prospectos más calientes que hay, por encima de
+cualquiera del directorio, y por una razón: ya demostraron que quieren estar
+en línea y ya hicieron el trabajo aburrido de subir su catálogo. Crostoli
+tiene 66 bebidas y 25 fotos cargadas a mano. Eso es alguien comprometido.
+
+A ése no se le vende una página: se le enseña la suya funcionando y se le
+pregunta si la quiere con su nombre en vez del de Mercadito. La venta empieza
+en el escalón dos, no en el cero.
+
+Lo que ya está resuelto ahí dentro —y que no hay que volver a construir— es
+el menú: color propio del negocio, «Abierto ahora», buscador, categorías con
+su cuenta, «más vendidos», fotos, personalizar y el pedido por WhatsApp. Las
+muestras de catálogo copian esos patrones justamente porque ya están probados.
+
 ### Las muestras ya montadas
 
 Están en `ayotl.dev/demo` (esa lista no se enlaza desde el sitio ni se

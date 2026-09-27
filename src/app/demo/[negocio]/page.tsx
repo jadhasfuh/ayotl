@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AvisoMuestra } from "@/components/AvisoMuestra";
 import { Muestra } from "@/components/Muestra";
+import { Planes } from "@/components/Planes";
 import { DEMOS, demoPorSlug } from "@/lib/demos";
 
 export function generateStaticParams() {
@@ -69,6 +70,9 @@ export default async function PaginaMuestra({ params }: { params: Promise<{ nego
             {demo.propuesta.map((linea) => <li key={linea}>{linea}</li>)}
           </ul>
           <p className="hallazgo"><b>Lo que se revisó.</b> {demo.hallazgo}</p>
+
+          <Planes negocio={demo.negocio} />
+
           <p className="firma">
             La hizo <a href="https://ayotl.dev">Ayotl</a>, taller de software en Sahuayo.
             Si le sirve a {demo.negocio}, se construye de verdad — con su nombre, sus fotos y sus precios.
