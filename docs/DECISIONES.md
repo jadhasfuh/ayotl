@@ -173,3 +173,28 @@ natural en un botón.
 Las dos excepciones, a propósito: los botones donde habla el visitante
 («Avisarme», «Enviarme el enlace») y el mensaje de WhatsApp de
 docs/PROGRAMA-BETA.md, que es un mensaje personal de Adrián y no una página.
+
+## 2026-09-28 — Ayotl es una pata del piloto JICA, y eso manda sobre lo público
+
+Adrián postuló a la beca Secihti/JICA (Ritsumeikan; resultados 15-dic-2026).
+Mercadito es el instrumento de investigación; **Ayotl es donde eso se hace
+público**: los precios de Mercadito, las notas y el programa Beta.
+
+Por eso, antes de escribir aquí cualquier cosa sobre el piloto, los precios o
+el programa, se lee `~/Documents/mercadito/docs/PILOTO-JICA.md`, que tiene el
+contexto completo y las restricciones permanentes. Tres que pegan directo a
+este repo:
+
+- Lo que se publique aquí sobre Mercadito tiene que coincidir con lo que
+  Mercadito cobra de verdad. Ya pasó una vez: las muestras de `/demo` decían
+  «Gratis» cuando el precio era «2 meses gratis, luego $49/mes».
+- Japón **no** «resolvió» la digitalización de sus pymes. Si aparece en una
+  nota, va como el laboratorio más instructivo del mundo —con sus *shutter
+  streets* y con la respuesta institucional más sistemática que existe—,
+  nunca como país que lo tiene resuelto.
+- «En ciudades pequeñas la gente no paga por reparto» es una **pregunta
+  abierta**, no un hallazgo: sólo 4 % de las reseñas negativas del competidor
+  local mencionan precio, y hay sesgo de supervivencia declarado.
+
+El puntero también está en `CLAUDE.md`, pero ese fichero está en `.gitignore`
+y no viaja: el registro que vale es éste.
