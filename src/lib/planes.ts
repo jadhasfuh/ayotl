@@ -4,10 +4,14 @@
  * Va al pie de cada muestra. Los precios están aquí y en ningún otro sitio:
  * para cambiarlos se toca este fichero y ya.
  *
- * El primer escalón cuesta $49 al mes con dos meses gratis, que es lo que
- * Mercadito cobra de verdad. No se pone «gratis» para que suene mejor: el
- * precio va escrito donde el negocio lo pueda leer, y de todas formas la
- * prueba de dos meses ya hace el trabajo de convencer.
+ * El primer escalón es gratis, y esta vez sí es verdad: desde el 28-sep-2026
+ * Mercadito no le cobra a ningún negocio mientras dure el piloto de
+ * investigación, hasta el 31-oct-2027 (mercadito.cx/piloto).
+ *
+ * Si el piloto termina y Mercadito vuelve a cobrar, aquí hay que volver a
+ * poner «2 meses gratis, luego $49 al mes» — y ese día las muestras tienen
+ * que cambiar el MISMO día que cambie Mercadito. Ya se publicó una vez un
+ * precio que no existía; que no vuelva a pasar al revés.
  */
 export type Nivel = {
   id: string;
@@ -24,11 +28,12 @@ export const NIVELES: Nivel[] = [
   {
     id: "ficha",
     nombre: "Su ficha en Mercadito",
-    precio: "2 meses gratis",
-    recurrente: "luego $49 al mes",
+    precio: "Gratis",
+    recurrente: "hasta octubre de 2027",
     resumen: "Ya está hecha. Se carga el menú y esa misma tarde está en línea.",
     incluye: [
       "Su carta en mercadito.cx/m/su-negocio",
+      "Sin costo mientras dure el piloto de digitalización del comercio local",
       "Pedido por WhatsApp, sin registro y sin comisiones",
       "Buscador, categorías y «lo más pedido»",
       "Mesas, comandas y reserva de citas, si el giro lo pide",

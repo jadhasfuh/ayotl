@@ -83,7 +83,7 @@ precios viejos y anuncios de otros restaurantes encima. Y en Facebook tienes
 dos cuentas: la gente escribe a la que no lees.»
 
 **Qué ofrecerle:** menú propio con código QR para las mesas y pedido a su
-WhatsApp. Es exactamente Mercadito, y por 49 al mes; si sólo quieren la
+WhatsApp. Es exactamente Mercadito, y hoy sin costo; si sólo quieren la
 página, sale igual de barato.
 
 ### 5. H. Ayuntamiento — el más lento, no el primero
@@ -122,13 +122,19 @@ cambiarlos se toca ese fichero y nada más.
 
 | | Qué es | Cuánto |
 | --- | --- | --- |
-| **1. Su ficha en Mercadito** | Su carta en `mercadito.cx/m/su-negocio`, con pedido por WhatsApp, sin comisiones por venta. También mesas, comandas y citas | 2 meses gratis, luego $49/mes |
+| **1. Su ficha en Mercadito** | Su carta en `mercadito.cx/m/su-negocio`, con pedido por WhatsApp, sin comisiones por venta. También mesas, comandas y citas | **Gratis** hasta el 31-oct-2027 |
 | **2. Enlace propio** | Lo mismo con su nombre y sus colores, sin Mercadito a la vista. Un solo panel, un solo catálogo, sale en los dos lados | $1,500 de alta + $250 al mes |
 | **3. A la medida** | Lo que un catálogo no resuelve: reservas, citas, calendario, cotizador, dominio propio | Desde $8,000 + $350 al mes |
 
-El primer escalón es el precio real de Mercadito, con sus dos meses de
-prueba. Convierte la visita en «pruébelo» en vez de «fírmeme», y a ti no te
-cuesta nada porque **ya está construido**. El segundo es el que se quiere
+El primer escalón es gratis de verdad: desde el 28-sep-2026 Mercadito no le
+cobra a nadie mientras dure el **piloto de digitalización del comercio local**
+(`mercadito.cx/piloto`), hasta el 31-oct-2027. Convierte la visita en
+«pruébelo» en vez de «fírmeme», y a ti no te cuesta nada porque **ya está
+construido**.
+
+Eso además cambia la frase con la que entras. Ya no es «le sale en $49 al
+mes»: es «esto no le cuesta nada, y si un día quiere su propio enlace,
+hablamos». Es mucho más fácil que te dejen enseñarlo. El segundo es el que se quiere
 vender: el alta cubre el trabajo y la mensualidad paga el mantenimiento sin
 tener que revender cada año.
 

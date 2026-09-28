@@ -52,7 +52,8 @@ export const APPS: App[] = [
       en: "Orders go straight to the business's WhatsApp; Mercadito never touches the money.",
     },
     datos: [
-      { valor: "49", etiqueta: { es: "MXN/mes", en: "MXN/month" } },
+      // Durante el piloto de investigación (2026-2027) no hay mensualidad.
+      { valor: "Gratis", etiqueta: { es: "piloto 2026-2027", en: "2026-2027 pilot" } },
       { valor: "0 %", etiqueta: { es: "comisión", en: "commission" } },
       { valor: "3", etiqueta: { es: "municipios", en: "towns" } },
     ],
