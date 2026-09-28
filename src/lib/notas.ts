@@ -24,6 +24,78 @@ export type Nota = {
 
 export const NOTAS: Nota[] = [
   {
+    id: "mercadito-se-vuelve-gratuito",
+    fecha: "2026-09-28",
+    proyecto: "mercadito",
+    titulo: {
+      es: "Mercadito se vuelve gratuito: un piloto de investigación",
+      en: "Mercadito goes free: a research pilot",
+    },
+    entradilla: {
+      es: "El canal informal le ganó al formal, y el producto se rediseñó alrededor de eso. Lo que faltaba era medirlo: un contador dice cuántos, nunca cuándo, y eso no se puede recuperar después.",
+      en: "The informal channel beat the formal one, and the product was redesigned around it. What was missing was measuring it: a counter tells you how many, never when — and that can't be recovered later.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Mercadito empezó como un marketplace con reparto y comisión del 5 al 8 %. El 24 de agosto de 2026 dejó de operar entregas y se quedó como menús digitales, mesas y reservas, con el pedido saliendo al WhatsApp del negocio. No fue un fracaso técnico: fue que el canal informal ganó tan claramente que lo sensato era rediseñar el producto alrededor de él, en vez de seguir peleándole.",
+        en: "Mercadito started as a delivery marketplace with a 5–8 % commission. On 24 August 2026 it stopped running deliveries and became digital menus, tables and bookings, with the order going out to the business's own WhatsApp. It wasn't a technical failure: the informal channel won so clearly that the sensible move was to redesign the product around it instead of fighting it.",
+      } },
+      { tipo: "p", texto: {
+        es: "El código de la comisión no se borró: sigue en el repositorio, apagado tras una bandera. Un modelo que se recorrió y se abandonó, con su fecha y su hash, vale más que cualquier afirmación sobre él — y si se borra, se borra la prueba.",
+        en: "The commission code wasn't deleted: it's still in the repo, switched off behind a flag. A model you walked and abandoned, with its date and its hash, is worth more than any claim about it — and deleting it deletes the evidence.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo que no había era medición. El menú tenía dos contadores, `menu_vistas` y `menu_pedidos`, acumulados desde siempre. Dicen cuántos y no dicen nada más: ni a qué hora entra el trabajo, ni si quien abre la carta llega a pedir, ni si el pedido que salió a WhatsApp terminó en venta. Y un acumulado no se puede des-agregar después: cada día que pasaba era un día de serie perdido para siempre.",
+        en: "What was missing was measurement. The menu had two counters, `menu_vistas` and `menu_pedidos`, cumulative since day one. They say how many and nothing else: not when the work comes in, not whether someone who opens the menu ends up ordering, not whether an order that left for WhatsApp became a sale. And a running total can't be un-aggregated later: every day that passed was a day of series lost for good.",
+      } },
+      { tipo: "p", texto: {
+        es: "Desde el 28 de septiembre de 2026 hay una fila por cada apertura de carta y por cada pedido: con su marca de tiempo, de dónde llegó, una sesión aleatoria que vive 24 horas y la banda del monto. La tabla es de sólo altas, y lo impone la base de datos, no la costumbre: un registro que se puede reescribir no sirve para investigar.",
+        en: "Since 28 September 2026 there's one row per menu open and per order: with its timestamp, where it came from, a random session that lives 24 hours, and the amount band. The table is append-only, and the database enforces it rather than convention: a record you can rewrite is no use for research.",
+      } },
+      { tipo: "codigo", texto: `-- Append-only con una sola puerta: el negocio puede contestar
+-- "¿este pedido sí te llegó?", y nada más.
+IF OLD.confirmado IS NOT NULL THEN
+  RAISE EXCEPTION 'esta confirmación ya se respondió y no se cambia';
+END IF;
+IF (NEW.id, NEW.created_at, NEW.puesto_id, NEW.tipo, NEW.session_id,
+    NEW.origen, NEW.monto_estimado_rango, NEW.items)
+   IS DISTINCT FROM
+   (OLD.id, OLD.created_at, OLD.puesto_id, OLD.tipo, OLD.session_id,
+    OLD.origen, OLD.monto_estimado_rango, OLD.items) THEN
+  RAISE EXCEPTION 'de menu_eventos sólo se escribe la confirmación del negocio';
+END IF;`, pie: {
+        es: "Sin esa confirmación, el contador de pedidos cuenta intenciones y las llama ventas.",
+        en: "Without that confirmation, the order counter counts intentions and calls them sales.",
+      } },
+      { tipo: "p", texto: {
+        es: "El dato personal no se anonimiza después: no se captura. Eso no es una postura, es una decisión de esquema, y se nota en las columnas que no existen:",
+        en: "Personal data isn't anonymised afterwards: it isn't captured. That's not a stance, it's a schema decision, and it shows in the columns that don't exist:",
+      } },
+      { tipo: "lista", puntos: {
+        es: [
+          "Banda de monto («de $101 a $200»), nunca el ticket: para modelar demanda alcanza, y no dice cuánto factura nadie.",
+          "Colonia, nunca la dirección. Franja del día, nunca la hora del cliente.",
+          "Ni nombre, ni teléfono, ni el texto que el cliente escriba: sólo productos y cantidades.",
+          "La sesión es aleatoria, caduca sola en 24 horas y no se liga a ninguna cuenta aunque exista.",
+        ],
+        en: [
+          "Amount band (“$101 to $200”), never the ticket: enough to model demand, and it doesn't say what anyone bills.",
+          "Neighbourhood, never the street address. Time-of-day band, never the customer's clock time.",
+          "No name, no phone, no free text from the customer: just products and quantities.",
+          "The session id is random, expires by itself in 24 hours and is never linked to an account, even when one exists.",
+        ],
+      } },
+      { tipo: "p", texto: {
+        es: "Y por eso Mercadito es gratuito hasta octubre de 2027. No es una promoción: el acceso libre es lo que maximiza cuántos negocios cargan su carta, que es de donde sale el dato. Tampoco se está regalando un ingreso que existiera — la plataforma tenía 60 negocios activos y un solo pedido en toda su historia. Los negocios lo saben: hay una página que lo explica y quien no quiera participar queda fuera escribiendo un correo, sin perder nada.",
+        en: "That's why Mercadito is free until October 2027. It isn't a promotion: open access is what maximises how many businesses load their menu, which is where the data comes from. Nor is it giving up revenue that existed — the platform had 60 active businesses and a single order in its whole history. The businesses know: there's a page explaining it, and anyone who'd rather not take part is excluded by sending an email, losing nothing.",
+      } },
+      { tipo: "p", texto: {
+        es: "El estudio mira a Japón, y conviene decir con cuidado por qué. Japón no resolvió la digitalización de su comercio chico: tiene sus propias calles de cortinas bajadas, y sus pymes van tarde en transformación digital. Lo que sí tiene, y no tiene nadie más, es la respuesta institucional más sistemática que existe — programas de revitalización de calles comerciales, subsidios para adoptar herramientas digitales, un programa nacional de productividad. Se estudia por sus aciertos y por sus fracasos, que es la única forma en que un caso ajeno sirve para algo.",
+        en: "The study looks at Japan, and it's worth being careful about why. Japan hasn't solved small-retail digitalisation: it has its own shuttered shopping streets, and its SMEs lag on digital transformation. What it does have, and nobody else does, is the most systematic policy response in existence — shopping-street revitalisation programmes, subsidies for adopting digital tools, a national SME productivity programme. It's studied for its successes and its failures, which is the only way somebody else's case is any use.",
+      } },
+    ],
+  },
+  {
     id: "el-cliente-nunca-manda-un-numero",
     fecha: "2026-09-11",
     proyecto: "dailychallenge",

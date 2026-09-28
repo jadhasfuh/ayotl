@@ -29,5 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
     alternates: { languages: { es: `${base}/notas/${n.id}`, en: `${base}/en/notes/${n.id}` } },
   }));
-  return [...paginas, ...apps, ...notas];
+  // El research statement va sin alternates: existe sólo en inglés y las dos
+  // direcciones apuntan a la misma canónica.
+  const research: MetadataRoute.Sitemap = [{
+    url: `${base}/research`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }];
+  return [...paginas, ...apps, ...notas, ...research];
 }

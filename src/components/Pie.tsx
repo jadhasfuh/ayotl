@@ -18,6 +18,9 @@ export function Pie({ idioma }: { idioma: Idioma }) {
           <Link href={ruta("notas", idioma)}>{x("navNotas")}</Link>
           <Link href={ruta("beta", idioma)}>{x("navBeta")}</Link>
           <Link href={ruta("acerca", idioma)}>{x("navAcerca")}</Link>
+          {/* Sin traducir a propósito: la página es en inglés, y su lector
+              no es alguien de Sahuayo. */}
+          <Link href={idioma === "en" ? "/en/research" : "/research"} lang="en">Research</Link>
           <a href="mailto:hola@ayotl.dev">hola@ayotl.dev</a>
           <a href="https://github.com/jadhasfuh" rel="me noopener">{x("pieCodigo")}</a>
         </nav>
