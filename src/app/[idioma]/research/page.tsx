@@ -11,16 +11,19 @@ type Props = { params: Promise<{ idioma: string }> };
  * El research statement, sólo en inglés.
  *
  * Única página del sitio que no se traduce, y a posta: su lector es un
- * profesor japonés o un evaluador de la beca, no alguien de Sahuayo. Se sirve
- * igual en las dos direcciones para no romper el enrutado por idioma, con la
- * canónica apuntando siempre a /research.
+ * profesor japonés o un evaluador de la beca, no alguien de Sahuayo.
+ *
+ * Se sirve en las dos direcciones para no romper el enrutado por idioma, pero
+ * la buena es /en/research y ahí apunta todo —la canónica, el pie, el
+ * sitemap—: en /research el texto salía en inglés con la navegación en
+ * español, que es justo la incoherencia que no quieres que vea un evaluador.
  */
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Research · Ayotl",
     description:
       "Informal messaging commerce in small Mexican cities: four data sources, aggregation-by-design privacy, and a platform that pivoted to the channel it was competing with.",
-    alternates: { canonical: `${sitio()}/research` },
+    alternates: { canonical: `${sitio()}/en/research` },
   };
 }
 

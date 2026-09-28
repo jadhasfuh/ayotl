@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // El research statement va sin alternates: existe sólo en inglés y las dos
   // direcciones apuntan a la misma canónica.
   const research: MetadataRoute.Sitemap = [{
-    url: `${base}/research`,
+    url: `${base}/en/research`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
