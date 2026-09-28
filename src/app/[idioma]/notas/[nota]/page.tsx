@@ -40,6 +40,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "article", title: nota.titulo[idioma], description: nota.entradilla[idioma],
       url: enlaceDe(nota, idioma), publishedTime: nota.fecha,
+      siteName: "Ayotl",
+      locale: idioma === "es" ? "es_MX" : "en_US",
+      // Las notas se compartían sin imagen: en WhatsApp y en X salía el
+      // enlace pelón, sin tarjeta. Se reutiliza la misma tortuga que el
+      // resto del sitio en vez de generar una por nota — son cinco notas,
+      // no un blog, y una tarjeta genérica ya evita el enlace desnudo.
+      images: [{ url: `${sitio()}/og/${idioma}`, width: 1200, height: 630, alt: "Ayotl" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: nota.titulo[idioma],
+      description: nota.entradilla[idioma],
     },
   };
 }
