@@ -31,11 +31,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   // El research statement va sin alternates: existe sólo en inglés y las dos
   // direcciones apuntan a la misma canónica.
-  const research: MetadataRoute.Sitemap = [{
-    url: `${base}/en/research`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }];
+  const research: MetadataRoute.Sitemap = [
+    {
+      url: `${base}/en/research`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${base}/en/research/chronology`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+  ];
   return [...paginas, ...apps, ...notas, ...research];
 }

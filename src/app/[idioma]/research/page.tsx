@@ -107,6 +107,14 @@ export default async function Research({ params }: Props) {
               and both are what I want to study and adapt.
             </p>
 
+            <h2>How the instrument is watched</h2>
+            <p>
+              The platform is both the object and the instrument, so its failures matter to the
+              research. A dated chronology of the corrections — including the three occasions
+              when the series turned out to be blind to an entire channel — is published
+              separately: <Link href="/en/research/chronology">what we kept finding was missing</Link>.
+            </p>
+
             <p className="nota-pie">
               Adrián Ceja Rentería · Sahuayo, Michoacán, Mexico. Applicant to the JICA
               Knowledge Co-Creation Program (Information Science and Engineering, Ritsumeikan
