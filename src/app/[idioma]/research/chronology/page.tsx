@@ -50,7 +50,7 @@ export default async function Chronology({ params }: Props) {
               commit hash. 512 commits since 12 April 2026; 76 of them titled <code>fix</code>.
             </p>
 
-            <h2>A model walked and abandoned</h2>
+            <h2>A model adopted and abandoned</h2>
             <p>
               Mercadito launched as a delivery marketplace charging a 5–8 % commission. On
               <b> 24 August 2026</b> (<code>dbdc382</code>) it stopped operating deliveries:
@@ -59,7 +59,7 @@ export default async function Chronology({ params }: Props) {
             </p>
             <p>
               The commission code was not deleted. It remains in the repository behind a feature
-              flag, and that is the primary evidence of the proposal: a model that was walked
+              flag, and that is the primary evidence of the proposal: a model that was adopted
               and abandoned, with a date and a hash, is worth more than any claim about it.
             </p>
 

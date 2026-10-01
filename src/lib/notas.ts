@@ -42,7 +42,7 @@ export const NOTAS: Nota[] = [
       } },
       { tipo: "p", texto: {
         es: "El código de la comisión no se borró: sigue en el repositorio, apagado tras una bandera. Un modelo que se recorrió y se abandonó, con su fecha y su hash, vale más que cualquier afirmación sobre él — y si se borra, se borra la prueba.",
-        en: "The commission code wasn't deleted: it's still in the repo, switched off behind a flag. A model you walked and abandoned, with its date and its hash, is worth more than any claim about it — and deleting it deletes the evidence.",
+        en: "The commission code wasn't deleted: it's still in the repo, switched off behind a flag. A model you adopted, operated and abandoned, with its date and its hash, is worth more than any claim about it — and deleting it deletes the evidence.",
       } },
       { tipo: "p", texto: {
         es: "Lo que no había era medición. El menú tenía dos contadores, `menu_vistas` y `menu_pedidos`, acumulados desde siempre. Dicen cuántos y no dicen nada más: ni a qué hora entra el trabajo, ni si quien abre la carta llega a pedir, ni si el pedido que salió a WhatsApp terminó en venta. Y un acumulado no se puede des-agregar después: cada día que pasaba era un día de serie perdido para siempre.",

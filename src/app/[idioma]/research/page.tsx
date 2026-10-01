@@ -59,7 +59,7 @@ export default async function Research({ params }: Props) {
               On 24 August 2026 it stopped operating deliveries and was redesigned around the
               channel that had beaten it: orders now leave for the business&rsquo;s own
               WhatsApp. The commission code is still in the repository, switched off behind a
-              flag — a model walked and abandoned, dated and auditable. The same pattern shows
+              flag — a model adopted, operated and abandoned, dated and auditable. The same pattern shows
               up in public reviews of the local competitor, where customers describe couriers
               phoning the restaurant to place the order by hand.
             </p>
