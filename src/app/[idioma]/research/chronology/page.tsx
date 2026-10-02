@@ -80,7 +80,7 @@ export default async function Chronology({ params }: Props) {
 
             <h2>The instrument itself was blind</h2>
             <p>
-              The most instructive part, and the one worth telling plainly: <b>three times in
+              The most instructive part, and the one worth telling plainly: <b>four times in
               four days the series turned out to be blind to an entire channel</b>. All three
               were corrected the same day they were found — which is the only moment when
               correcting a series costs nothing.
@@ -107,8 +107,21 @@ export default async function Chronology({ params }: Props) {
                       &ldquo;unknown&rdquo; or &ldquo;link&rdquo;. Facebook&rsquo;s in-app browser
                       rarely sends a referrer at all.</td>
                 </tr>
+                <tr>
+                  <td>1 Oct</td>
+                  <td>The <b>QR code each business downloads from its own panel</b> did not carry
+                      the marker — only the printed pack did. We would have handed out marked
+                      codes while businesses kept posting their own.</td>
+                </tr>
               </tbody>
             </table>
+            <p>
+              The fourth deserves a note of its own for <b>who caught it</b>: not the code and
+              not a review, but field knowledge — <em>&ldquo;every business profile already shows
+              its QR&rdquo;</em>. It is the only one of the four that could not have been found
+              by reading the repository: it took knowing how the platform is used in real life.
+              Verified by decoding the PNG served in production.
+            </p>
             <p>Two corrections of the same kind, elsewhere:</p>
             <ul>
               <li>
