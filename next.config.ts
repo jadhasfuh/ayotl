@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 /**
  * Cabeceras de seguridad. La CSP lleva 'unsafe-inline' en scripts porque Next
  * hidrata con scripts inline (y el de tema también lo es); lo que sí cierra
- * es de dónde pueden venir scripts externos: sólo Turnstile.
+ * es de dónde pueden venir scripts externos: sólo Turnstile. Marcos, sólo
+ * Turnstile y el reproductor de YouTube.
  */
 const CSP = [
   "default-src 'self'",
@@ -12,7 +13,9 @@ const CSP = [
   "img-src 'self' data:",
   "font-src 'self'",
   "connect-src 'self'",
-  "frame-src https://challenges.cloudflare.com",
+  // youtube-nocookie: el vídeo incrustado de cada reto (/retos/<slug>), sin
+  // cookies de seguimiento hasta que alguien le da play.
+  "frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com",
   "form-action 'self'",
   "base-uri 'self'",
   "frame-ancestors 'none'",

@@ -30,6 +30,7 @@ src/app/[idioma]/layout.tsx      raíz: <html lang>, Inter, script de tema, meta
 src/app/[idioma]/page.tsx        inicio: hero + tarjetas + teasers
 src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio de Turnstile al servir)
 src/app/[idioma]/acerca/page.tsx historia del nombre (en inglés se sirve como /en/about)
+src/app/[idioma]/retos/          retos de código de los vídeos de YouTube (en inglés /en/challenges); datos en src/content/retos.json, que genera `ttcode export`
 src/app/global-not-found.tsx     404 de todo el sitio, bilingüe, con su propio <html> (el layout raíz vive en [idioma])
 src/app/api/beta/route.ts        POST: zod → honeypot → Turnstile → límite por IP → upsert por email con la llave secreta
 src/app/[idioma]/admin/testers/  panel del programa Beta (contraseña ADMIN_SECRETO): días, saldos, pagos

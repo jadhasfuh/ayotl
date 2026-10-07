@@ -198,3 +198,22 @@ este repo:
 
 El puntero también está en `CLAUDE.md`, pero ese fichero está en `.gitignore`
 y no viaja: el registro que vale es éste.
+
+## 2026-10-07 — Retos de código: el código vive aquí, no en YouTube
+
+Los vídeos de retos (ttcode, `~/Documents/code challenge`) se publican en el
+canal de YouTube de Adrián, y cada uno enlaza a `/retos/<slug>` (en inglés
+`/en/challenges/<slug>`). El código **no** va en la descripción del vídeo:
+YouTube rechaza `<` y `>` (y el C los trae en cada `#include`), y con una
+sola fuente la descripción no se desincroniza del código.
+
+- La página pinta el editor del vídeo, quieto: azul Atari, Press Start 2P y
+  los colores de `ttcode/palette.py`. Esos colores **no** siguen el tema del
+  sitio, porque son los del vídeo. Botón de copiar y la salida real debajo.
+- El sitio no resalta nada. `ttcode export` escribe `src/content/retos.json`
+  con el código ya partido en tramos por el mismo tokenizador del vídeo, así
+  que la web y el vídeo no pueden discrepar en un color.
+- El enunciado va en inglés en las dos versiones, como en el vídeo; la
+  versión en español lo avisa.
+- El vídeo se incrusta desde `youtube-nocookie.com` (añadido a `frame-src`).
+- «Retos» va en el pie y no en la cabecera, que en el teléfono ya va llena.

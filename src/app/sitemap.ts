@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { APPS } from "@/lib/apps";
 import { PAGINAS, ruta } from "@/lib/idioma";
 import { NOTAS } from "@/lib/notas";
+import { RETOS } from "@/lib/retos";
 import { sitio } from "@/lib/sitio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -29,6 +30,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
     alternates: { languages: { es: `${base}/notas/${n.id}`, en: `${base}/en/notes/${n.id}` } },
   }));
+  const retos: MetadataRoute.Sitemap = RETOS.map((r) => ({
+    url: `${base}/retos/${r.slug}`,
+    lastModified: r.fecha ? new Date(r.fecha) : new Date(),
+    changeFrequency: "yearly" as const,
+    priority: 0.5,
+    alternates: { languages: { es: `${base}/retos/${r.slug}`, en: `${base}/en/challenges/${r.slug}` } },
+  }));
   // El research statement va sin alternates: existe sólo en inglés y las dos
   // direcciones apuntan a la misma canónica.
   const research: MetadataRoute.Sitemap = [
@@ -45,5 +53,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ];
-  return [...paginas, ...apps, ...notas, ...research];
+  return [...paginas, ...apps, ...notas, ...retos, ...research];
 }

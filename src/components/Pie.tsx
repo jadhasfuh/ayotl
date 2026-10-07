@@ -16,6 +16,7 @@ export function Pie({ idioma }: { idioma: Idioma }) {
         </div>
         <nav aria-label={x("marca")}>
           <Link href={ruta("notas", idioma)}>{x("navNotas")}</Link>
+          <Link href={ruta("retos", idioma)}>{x("navRetos")}</Link>
           <Link href={ruta("beta", idioma)}>{x("navBeta")}</Link>
           <Link href={ruta("acerca", idioma)}>{x("navAcerca")}</Link>
           {/* Siempre a /en/research, también desde el sitio en español: la

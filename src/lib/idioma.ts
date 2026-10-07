@@ -49,13 +49,14 @@ export function idiomaDeCabecera(accept: string | null | undefined): Idioma {
 }
 
 /** Las páginas del sitio y su dirección pública en cada idioma. */
-export const PAGINAS = ["inicio", "negocios", "notas", "pscript", "beta", "acerca"] as const;
+export const PAGINAS = ["inicio", "negocios", "notas", "retos", "pscript", "beta", "acerca"] as const;
 export type Pagina = (typeof PAGINAS)[number];
 
 export const RUTAS: Record<Pagina, Record<Idioma, string>> = {
   inicio: { es: "/", en: "/en" },
   negocios: { es: "/negocios", en: "/en/business" },
   notas: { es: "/notas", en: "/en/notes" },
+  retos: { es: "/retos", en: "/en/challenges" },
   pscript: { es: "/pscript", en: "/en/pscript" },
   beta:   { es: "/beta", en: "/en/beta" },
   acerca: { es: "/acerca", en: "/en/about" },
@@ -177,6 +178,27 @@ const TEXTOS = {
     en: "Things that broke in production and what it took to understand them. No tutorials, no listicles: only problems that actually happened, with the detail someone else needs to avoid losing the same afternoon.",
   },
   notasEn: { es: "En", en: "In" },
+
+  // Retos de código (los vídeos de YouTube; el código sale de ttcode)
+  navRetos: { es: "Retos", en: "Challenges" },
+  retosTitulo: { es: "Retos de código", en: "Code challenges" },
+  retosIntro: {
+    es: "Problemas clásicos de entrevista y de práctica, resueltos en dos lenguajes y tecleados en una máquina de 8 bits. El vídeo está en YouTube; el código, aquí, para copiarlo y correrlo.",
+    en: "Classic interview and practice problems, solved in two languages and typed out on an 8-bit machine. The video is on YouTube; the code is here, to copy and run.",
+  },
+  retosVolver: { es: "Todos los retos", en: "All challenges" },
+  retosMas: { es: "Más retos", en: "More challenges" },
+  retosEnunciado: { es: "El reto", en: "The challenge" },
+  retosCodigo: { es: "La solución", en: "The solution" },
+  retosCopiar: { es: "Copiar", en: "Copy" },
+  retosCopiado: { es: "Copiado", en: "Copied" },
+  retosSalida: { es: "Salida", en: "Output" },
+  retosVerYoutube: { es: "Ver en YouTube", en: "Watch on YouTube" },
+  retosVideo: { es: "El vídeo", en: "The video" },
+  retosEnunciadoIngles: {
+    es: "El enunciado va en inglés, igual que en el vídeo.",
+    en: "",
+  },
   notasVolver: { es: "Todas las notas", en: "All notes" },
   notasLeer: { es: "Leer", en: "Read" },
   notasPScript: {
