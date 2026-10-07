@@ -258,6 +258,46 @@ $ dig +short A  aws-1-us-west-2.pooler.supabase.com
       } },
     ],
   },
+  {
+    id: "la-api-de-youtube",
+    fecha: "2026-10-07",
+    proyecto: "ayotl",
+    titulo: {
+      es: "Subir un vídeo por la API de YouTube: tres trampas en una tarde",
+      en: "Uploading a video through the YouTube API: three traps in one afternoon",
+    },
+    entradilla: {
+      es: "Un «argumento inválido» que no dice cuál, un permiso que deja subir pero no corregir, y una edición que apaga en silencio lo que no le mandaste.",
+      en: "An “invalid argument” that won't say which one, a permission that lets you upload but not fix, and an edit that silently switches off whatever you didn't send.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Los retos de código de este sitio salen también en YouTube: un vídeo largo y un Short por día, subidos y programados por un script. La primera subida, con título, descripción, etiquetas, idioma, «no es para niños» y fecha de publicación, volvió con esto:",
+        en: "This site's code challenges also go out on YouTube: one long video and one Short a day, uploaded and scheduled by a script. The first upload, with title, description, tags, language, “not made for kids” and a publish date, came back with this:",
+      } },
+      { tipo: "codigo", texto: `HttpError 400: Request contains an invalid argument.
+reason: INVALID_REQUEST_METADATA`, pie: {
+        es: "Ni el campo ni el motivo. Y cada subida cuesta 1 600 de las 10 000 unidades diarias.",
+        en: "Neither the field nor the reason. And every upload costs 1,600 of the 10,000 daily units.",
+      } },
+      { tipo: "p", texto: {
+        es: "Con seis subidas al día no se puede ir probando a ciegas. Lo que funcionó fue cambiar de estrategia: subir el vídeo con lo mínimo (título, descripción, categoría, privado) y añadir el resto después con `videos.update`, que cuesta 50. Así se podía probar campo por campo. Y ahí vino la sorpresa: los cuatro campos pasaron, uno a uno y todos juntos. Lo que la subida rechaza, la edición lo acepta. Desde entonces el script sube en dos pasos.",
+        en: "With six uploads a day you can't test blindly. What worked was changing strategy: upload the video with the bare minimum (title, description, category, private) and add the rest afterwards with `videos.update`, which costs 50. That made it possible to test field by field. And the surprise: all four fields went through, one by one and all together. What the upload rejects, the edit accepts. Since then the script uploads in two steps.",
+      } },
+      { tipo: "p", texto: {
+        es: "La segunda trampa salió al intentar esa edición: `403 insufficient permissions`. El permiso que uno pide para subir vídeos, `youtube.upload`, deja subir y nada más: ni corregir un título ni cambiar la fecha. Hace falta el permiso completo, `youtube`, y volver a autorizar.",
+        en: "The second trap appeared on that very edit: `403 insufficient permissions`. The scope you ask for to upload videos, `youtube.upload`, lets you upload and nothing else: not fix a title, not change the date. You need the full `youtube` scope, and to authorize again.",
+      } },
+      { tipo: "p", texto: {
+        es: "La tercera es la más traicionera, porque no da error. Para programar el vídeo se mandó sólo la parte que importaba del `status`: privado, fecha y «no es para niños». Respuesta: 200. Pero `update` **reemplaza el objeto entero**, y lo que no va en él vuelve a su valor por omisión. El vídeo quedó con `embeddable: false`, o sea que el reproductor incrustado en la página del reto habría dicho «vídeo no disponible» el día del estreno. Ahora el script manda siempre el `status` completo.",
+        en: "The third is the most treacherous, because it doesn't fail. To schedule the video, only the relevant part of `status` was sent: private, date and “not made for kids”. Response: 200. But `update` **replaces the whole object**, and whatever isn't in it goes back to its default. The video ended up with `embeddable: false`, meaning the player embedded on the challenge page would have said “video unavailable” on launch day. The script now always sends the full `status`.",
+      } },
+      { tipo: "p", texto: {
+        es: "Y una buena noticia que la documentación no deja clara: aunque el proyecto no haya pasado la auditoría de la API, un vídeo subido como privado con fecha de publicación se publica solo a su hora. La auditoría hace falta para subir más de seis vídeos al día, no para publicarlos.",
+        en: "And some good news the documentation doesn't make clear: even if the project hasn't passed the API audit, a video uploaded as private with a publish date goes public on its own at that time. The audit is needed to upload more than six videos a day, not to publish them.",
+      } },
+    ],
+  },
 ];
 
 export function notaPorId(id: string): Nota | undefined {
