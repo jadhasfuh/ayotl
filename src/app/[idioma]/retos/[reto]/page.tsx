@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Press_Start_2P } from "next/font/google";
+import { atari } from "@/app/fuentes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Cabecera } from "@/components/Cabecera";
@@ -9,8 +9,6 @@ import { idiomaDe } from "@/lib/paginas";
 import { SECCIONES, enlaceReto, publicados, retoPorSlug, type Reto } from "@/lib/retos";
 import { sitio } from "@/lib/sitio";
 
-// La fuente del vídeo. Sólo la cargan las páginas de reto, no todo el sitio.
-const atari = Press_Start_2P({ subsets: ["latin"], weight: "400", variable: "--f-atari", display: "swap" });
 
 type Props = { params: Promise<{ idioma: string; reto: string }> };
 

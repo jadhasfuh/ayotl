@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Literata, Martian_Mono } from "next/font/google";
+import { fuentesSitio } from "./fuentes";
 import Link from "next/link";
 import "./globals.css";
 import { Cabecera } from "@/components/Cabecera";
@@ -15,9 +15,6 @@ import { ruta, t } from "@/lib/idioma";
  * Bilingüe y estático: no sabemos el idioma de quien llega, y es la página
  * que menos gente ve.
  */
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--f-inter", display: "swap" });
-const literata = Literata({ subsets: ["latin"], weight: ["500"], variable: "--f-literata", display: "swap" });
-const mono = Martian_Mono({ subsets: ["latin"], weight: ["400"], variable: "--f-mono", display: "swap" });
 
 export const metadata: Metadata = {
   title: "404 · Ayotl",
@@ -38,7 +35,7 @@ export default function NoEncontrado() {
   const es = t("es");
   const en = t("en");
   return (
-    <html lang="es" className={`${inter.variable} ${literata.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="es" className={fuentesSitio} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
       </head>

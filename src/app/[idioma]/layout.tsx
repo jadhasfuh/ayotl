@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Literata, Martian_Mono } from "next/font/google";
+import { fuentesSitio } from "../fuentes";
 import "../globals.css";
 import { Pie } from "@/components/Pie";
 import { IDIOMAS } from "@/lib/idioma";
@@ -16,14 +16,10 @@ export function generateStaticParams() {
 }
 export const dynamicParams = false;
 
-// Las tres autoalojadas: el subconjunto latino es pequeño y así no dependen
-// de Google en tiempo de ejecución. Inter para la interfaz, Literata (un solo
-// peso) para los títulos y el logotipo, Martian Mono (un peso) para los datos
-// cortos: dominios, la etiqueta náhuatl, los números de tarjeta.
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--f-inter", display: "swap" });
-const literata = Literata({ subsets: ["latin"], weight: ["500"], variable: "--f-literata", display: "swap" });
-const mono = Martian_Mono({ subsets: ["latin"], weight: ["400"], variable: "--f-mono", display: "swap" });
-const fuentes = `${inter.variable} ${literata.variable} ${mono.variable}`;
+// Inter para la interfaz, Literata (un solo peso) para los títulos y el
+// logotipo, Martian Mono (un peso) para los datos cortos. Desde el repo: ver
+// app/fuentes/LEEME.md.
+const fuentes = fuentesSitio;
 
 export const metadata: Metadata = {
   // Sin `metadataBase` Next deja las URL de Open Graph relativas y quien

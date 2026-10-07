@@ -227,3 +227,14 @@ con el día de México), así que cada página aparece sola el día que le toca.
 Por eso `/retos`, `/retos/<slug>` y el sitemap son dinámicos y no se hornean.
 La página sale a las 00:00 y el vídeo a las 13:00: el enlace de la
 descripción nunca apunta a un 404.
+
+## 2026-10-07 — Fuentes en el repo, no descargadas en cada build
+
+`next/font/google` baja las tipografías de fonts.googleapis.com en cada
+compilación, y si Google no contesta en ese minuto el deploy entero falla. A
+Mercadito le pasó el 5-oct (su commit 3cd632b). Las cuatro de este sitio
+(Inter variable, Literata 500, Martian Mono 400, Press Start 2P) se bajaron una
+vez, subconjunto `latin` como antes, a `src/app/fuentes/`, y se cargan con
+`next/font/local` desde un solo módulo que importan los tres layouts y la
+página de reto. Mismo resultado en el navegador (variables CSS, respaldo con
+`size-adjust`, preload); el build ya no sale a internet y bajó a ~4 s.
