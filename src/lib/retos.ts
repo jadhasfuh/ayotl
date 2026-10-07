@@ -37,9 +37,20 @@ export type Reto = {
   codigo: Codigo[];
 };
 
-export const RETOS = datos.retos as Reto[];
+const TODOS = datos.retos as Reto[];
 
-export const retoPorSlug = (slug: string) => RETOS.find((r) => r.slug === slug);
+/** Hoy en México (AAAA-MM-DD), que es el día con el que se programan. */
+export const hoyMx = () => new Date().toLocaleDateString("en-CA", { timeZone: "America/Mexico_City" });
+
+/**
+ * Los retos ya publicados: con fecha y que no sea futura. `ttcode programar`
+ * sube los vídeos programados en YouTube y exporta aquí los de varios días
+ * de golpe; cada página aparece sola el día que le toca, sin otro push. Por
+ * eso las páginas que leen esto son dinámicas y no se hornean en el build.
+ */
+export const publicados = (hoy = hoyMx()) => TODOS.filter((r) => r.fecha && r.fecha <= hoy);
+
+export const retoPorSlug = (slug: string) => publicados().find((r) => r.slug === slug);
 
 /** Las secciones del canal, con el rótulo que llevan en el vídeo. */
 export const SECCIONES: Record<Reto["seccion"], string> = {

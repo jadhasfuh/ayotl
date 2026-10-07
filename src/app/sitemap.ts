@@ -2,8 +2,11 @@ import type { MetadataRoute } from "next";
 import { APPS } from "@/lib/apps";
 import { PAGINAS, ruta } from "@/lib/idioma";
 import { NOTAS } from "@/lib/notas";
-import { RETOS } from "@/lib/retos";
+import { publicados } from "@/lib/retos";
 import { sitio } from "@/lib/sitio";
+
+// Dinámico por los retos: cada día entra uno (ver `publicados`).
+export const dynamic = "force-dynamic";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = sitio();
@@ -30,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
     alternates: { languages: { es: `${base}/notas/${n.id}`, en: `${base}/en/notes/${n.id}` } },
   }));
-  const retos: MetadataRoute.Sitemap = RETOS.map((r) => ({
+  const retos: MetadataRoute.Sitemap = publicados().map((r) => ({
     url: `${base}/retos/${r.slug}`,
     lastModified: r.fecha ? new Date(r.fecha) : new Date(),
     changeFrequency: "yearly" as const,

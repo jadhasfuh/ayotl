@@ -4,9 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Cabecera } from "@/components/Cabecera";
 import { EditorReto } from "@/components/EditorReto";
-import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
+import { ruta, t, type Idioma } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
-import { RETOS, SECCIONES, enlaceReto, retoPorSlug, type Reto } from "@/lib/retos";
+import { SECCIONES, enlaceReto, publicados, retoPorSlug, type Reto } from "@/lib/retos";
 import { sitio } from "@/lib/sitio";
 
 // La fuente del vídeo. Sólo la cargan las páginas de reto, no todo el sitio.
@@ -14,10 +14,9 @@ const atari = Press_Start_2P({ subsets: ["latin"], weight: "400", variable: "--f
 
 type Props = { params: Promise<{ idioma: string; reto: string }> };
 
-export function generateStaticParams() {
-  return IDIOMAS.flatMap((i) => RETOS.map((r) => ({ idioma: i.id, reto: r.slug })));
-}
-export const dynamicParams = false;
+// Dinámica: el reto de mañana ya está en el JSON y tiene que aparecer solo
+// mañana (ver `publicados` en lib/retos).
+export const dynamic = "force-dynamic";
 
 async function retoDe(params: Props["params"]): Promise<[Reto, Idioma]> {
   const { reto } = await params;
@@ -81,7 +80,7 @@ function Markdown({ texto }: { texto: string }) {
 export default async function PaginaReto({ params }: Props) {
   const [reto, idioma] = await retoDe(params);
   const x = t(idioma);
-  const otros = RETOS.filter((r) => r.slug !== reto.slug).slice(0, 3);
+  const otros = publicados().filter((r) => r.slug !== reto.slug).slice(0, 3);
   const video = reto.youtube.video ?? reto.youtube.short;
 
   return (

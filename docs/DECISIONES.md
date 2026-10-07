@@ -217,3 +217,13 @@ sola fuente la descripción no se desincroniza del código.
   versión en español lo avisa.
 - El vídeo se incrusta desde `youtube-nocookie.com` (añadido a `frame-src`).
 - «Retos» va en el pie y no en la cabecera, que en el teléfono ya va llena.
+
+### 2026-10-07 — Un reto al día, sin push diario
+
+`ttcode programar` sube los vídeos de varios días de golpe, programados en
+YouTube (`publishAt`, 13:00 de México), y exporta todos a `retos.json` con su
+fecha. El sitio esconde los de fecha futura (`publicados()` en `lib/retos.ts`,
+con el día de México), así que cada página aparece sola el día que le toca.
+Por eso `/retos`, `/retos/<slug>` y el sitemap son dinámicos y no se hornean.
+La página sale a las 00:00 y el vídeo a las 13:00: el enlace de la
+descripción nunca apunta a un 404.

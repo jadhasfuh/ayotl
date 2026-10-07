@@ -188,6 +188,7 @@ const TEXTOS = {
   },
   retosVolver: { es: "Todos los retos", en: "All challenges" },
   retosMas: { es: "Más retos", en: "More challenges" },
+  retosPronto: { es: "El primer reto sale muy pronto.", en: "The first challenge is coming very soon." },
   retosEnunciado: { es: "El reto", en: "The challenge" },
   retosCodigo: { es: "La solución", en: "The solution" },
   retosCopiar: { es: "Copiar", en: "Copy" },
