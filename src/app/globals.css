@@ -616,15 +616,17 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 .reto h1 { margin-top: 0.4rem; }
 .reto > section { margin-top: 2.25rem; }
 .reto h2 { font-size: 1.4rem; }
+.reto .prosa p { font-size: 1.02rem; }
 .reto-enunciado { white-space: pre-line; }
 .reto-aviso { font-size: 0.9rem; color: var(--tinta-2); margin-top: -0.25rem; }
 .reto-ejemplo {
-  margin: 0 0 1rem; padding: 0.8rem 1rem; overflow-x: auto;
+  margin: 0 0 1rem; padding: 0.8rem 1rem; overflow-x: auto; max-width: 100%;
   background: var(--fondo-2); border: 1px solid var(--linea); border-radius: var(--radio);
   font-family: var(--fuente-dato); font-size: 12.5px; line-height: 1.7;
 }
 
 .atari {
+  /* En el teléfono, de orilla a orilla: cada columna cuenta. */
   --atari-azul: #1838b4; --atari-azul-2: #0e2278; --atari-claro: #96beff;
   font-family: var(--f-atari), ui-monospace, monospace;
   background: var(--atari-azul); color: #fff; border-radius: var(--radio); overflow: hidden;
@@ -632,35 +634,41 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 }
 .atari-barra {
   display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
-  padding: 0.5rem; background: var(--atari-azul-2);
+  padding: 0 0.25rem; background: var(--atari-azul-2);
 }
 .atari-pestanas { display: flex; gap: 0.25rem; flex-wrap: wrap; }
 .atari button {
-  font: inherit; font-size: 10px; line-height: 1; padding: 0.6rem 0.7rem; cursor: pointer;
+  font: inherit; font-size: 9px; line-height: 1; padding: 0 0.75rem; cursor: pointer;
+  min-height: 44px;   /* área táctil cómoda en el teléfono */
   border: 0; border-radius: 0; background: transparent; color: var(--atari-claro);
 }
 /* Vídeo inverso, como las cabeceras del vídeo. */
 .atari-pestanas button[aria-selected="true"] { background: #fff; color: var(--atari-azul); }
 .atari-copiar { background: #ffde5a !important; color: var(--atari-azul-2) !important; }
 .atari button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* El código se desliza dentro de su caja; la página nunca. min-width: 0
+   para que la caja no estire a sus padres hasta el ancho de la línea más
+   larga. */
+.atari, .reto > section { min-width: 0; max-width: 100%; }
 .atari-codigo {
-  margin: 0; padding: 1rem 1rem 1rem 0; overflow-x: auto;
-  font: inherit; font-size: 12px; line-height: 1.9; white-space: pre; tab-size: 4;
+  margin: 0; padding: 0.9rem 0.9rem 0.9rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch;
+  font: inherit; font-size: 10px; line-height: 2; white-space: pre; tab-size: 4;
 }
-@media (min-width: 820px) { .atari-codigo { font-size: 14px; } }
+@media (min-width: 820px) { .atari-codigo { font-size: 12px; } }
 .atari code { font: inherit; background: none; padding: 0; color: inherit; }
 .atari-linea { display: block; }
 .atari-num {
-  display: inline-block; width: 3.5em; padding-right: 1em; text-align: right;
+  display: inline-block; width: 3em; padding-right: 0.8em; text-align: right;
   color: var(--atari-claro); opacity: 0.8; user-select: none; -webkit-user-select: none;
 }
 .s-kw { color: #ffde5a; } .s-type { color: #a0ffaa; } .s-builtin { color: #ffc896; }
 .s-string { color: #78ebff; } .s-number { color: #b4ff78; } .s-comment { color: #bec8f0; }
 .s-punct { color: #ffa050; } .s-preproc { color: #ff96dc; } .s-func { color: #ffffa0; }
 .atari-terminal {
-  padding: 0.9rem 1rem; background: #000; color: #aaa;
-  font-size: 11px; line-height: 1.9; overflow-x: auto; white-space: pre;
+  padding: 0.8rem 0.9rem; background: #000; color: #aaa;
+  font-size: 9px; line-height: 2; overflow-x: auto; white-space: pre;
 }
+@media (min-width: 820px) { .atari-terminal { font-size: 10px; } }
 .atari-terminal p { margin: 0; }
 .atari-prompt { color: #78ff8c; }
 .atari-error { color: #ff6e6e; }
@@ -668,3 +676,13 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 .reto-video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radio); overflow: hidden; background: #000; }
 .reto-video.vertical { aspect-ratio: 9 / 16; max-width: 22rem; }
 .reto-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+@media (max-width: 600px) {
+  /* El editor sale del margen del contenedor y ocupa todo el ancho. */
+  .atari { margin-inline: -1rem; width: calc(100% + 2rem); max-width: none; border-radius: 0; border-width: 4px 0; }
+  .reto .prosa p { font-size: 1rem; line-height: 1.6; }
+  .reto h2 { font-size: 1.25rem; }
+  .reto h1 { font-size: 2rem; }
+  .reto-ejemplo { font-size: 11px; padding: 0.7rem 0.8rem; }
+  .lista-retos { grid-template-columns: 1fr; }
+}
