@@ -75,8 +75,8 @@ const TEXTOS = {
   marca: { es: "Ayotl", en: "Ayotl" },
   lema: { es: "Software hecho despacio, desde Sahuayo.", en: "Software made slowly, from Sahuayo." },
   descripcionSitio: {
-    es: "Ayotl es el estudio personal de software de Adrián: Mercadito, JLPTest y Daily Challenge. Apps pequeñas, cuidadas y hechas desde Sahuayo, Michoacán.",
-    en: "Ayotl is Adrián's personal software studio: Mercadito, JLPTest and Daily Challenge. Small, carefully built apps made in Sahuayo, Michoacán.",
+    es: "Ayotl es el estudio personal de software de Adrián: Mercadito, JLPTest, Daily Challenge y War Zone. Apps pequeñas, cuidadas y hechas desde Sahuayo, Michoacán.",
+    en: "Ayotl is Adrián's personal software studio: Mercadito, JLPTest, Daily Challenge and War Zone. Small, carefully built apps made in Sahuayo, Michoacán.",
   },
 
   // Navegación
@@ -105,8 +105,8 @@ const TEXTOS = {
   heroBotonBeta: { es: "Entrar al programa beta", en: "Join the beta program" },
   appsTitulo: { es: "Las apps", en: "The apps" },
   appsTexto: {
-    es: "Tres productos en producción, cada uno con su dominio y su propia gente.",
-    en: "Three products in production, each with its own domain and its own people.",
+    es: "Tres productos en producción, cada uno con su dominio y su propia gente, y un juego en camino a las tiendas.",
+    en: "Three products in production, each with its own domain and its own people, and a game on its way to the stores.",
   },
   abrirApp: { es: "Abrir", en: "Open" },
   betaTeaserTitulo: { es: "Lo próximo de Ayotl", en: "What's next at Ayotl" },
@@ -129,6 +129,7 @@ const TEXTOS = {
   // Página de cada app
   appAbrir: { es: "Abrir", en: "Open" },
   appEnLaTienda: { es: "En Google Play", en: "On Google Play" },
+  appProximamente: { es: "Próximamente", en: "Coming soon" },
   appVolver: { es: "Todas las apps", en: "All apps" },
   appPantallas: { es: "Por dentro", en: "A look inside" },
   appOtras: { es: "Las otras apps", en: "The other apps" },

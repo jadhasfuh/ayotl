@@ -514,6 +514,14 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 }
 .telefono.corto img { max-height: 21rem; }
 .telefono.largo img { max-height: 30rem; }
+/* Acostado, para los juegos apaisados: el marco entero cabe en la columna y
+   la captura (pixel art 16:9) no se suaviza al escalar. */
+.telefono.apaisado { max-width: 30rem; padding: 0.5rem 0.65rem; border-radius: 1.6rem; }
+.telefono.apaisado img { border-radius: 1.1rem; aspect-ratio: 16 / 9; object-fit: contain; image-rendering: pixelated; background: #000; }
+@media (min-width: 720px) {
+  .pantallas li:has(.telefono.apaisado), .pantallas li:nth-child(even):has(.telefono.apaisado) { grid-template-columns: 1fr; }
+  .pantallas li:has(.telefono.apaisado) .telefono { justify-self: start; }
+}
 
 /* Aparecen al llegar a ellas. Con `animation-timeline` no hace falta ni una
    línea de JavaScript; donde no exista, simplemente se ven desde el principio. */

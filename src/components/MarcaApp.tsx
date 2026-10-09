@@ -40,6 +40,34 @@ export function MarcaApp({ app }: { app: App["id"] }) {
       </svg>
     );
   }
+  if (app === "warzone") {
+    // War Zone: el monigote de Territory War con los brazos en cruz, en los
+    // mismos píxeles rellenos que el marciano.
+    const MONIGOTE = [
+      "....XXX....",
+      "....XXX....",
+      ".....X.....",
+      "..XXXXXXX..",
+      ".X...X...X.",
+      ".....X.....",
+      ".....X.....",
+      "....X.X....",
+      "...X...X...",
+      "..X.....X..",
+    ];
+    const lado = 2.4;
+    return (
+      <svg {...comun} strokeWidth={0} fill="currentColor">
+        {MONIGOTE.flatMap((fila, y) =>
+          [...fila].map((celda, x) =>
+            celda === "X" ? (
+              <rect key={`${x}-${y}`} x={2.8 + x * lado} y={4 + y * lado} width={lado} height={lado} />
+            ) : null,
+          ),
+        )}
+      </svg>
+    );
+  }
   // Daily Challenge: el marciano de Space Invaders, dibujado en píxeles
   // rellenos (2,5 px de lado) porque es pixel art, no línea.
   const MARCIANO = [

@@ -11,10 +11,12 @@ import type { Idioma } from "./idioma";
  * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
-  id: "mercadito" | "jlptest" | "dailychallenge";
+  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone";
   nombre: string;
+  /** Lo que va bajo el nombre en la tarjeta: el dominio, o dónde está si aún no tiene web. */
   dominio: string;
-  url: string;
+  /** Si falta, la app todavía no se puede abrir desde aquí (está en camino a la tienda). */
+  url?: string;
   /**
    * La página de «Become a tester» de la prueba cerrada de Play. Es el paso
    * que de verdad cuenta para Google, y el que más se olvida: sin aceptar
@@ -34,6 +36,8 @@ export type App = {
    * o con las pantallas públicas de cada app.
    */
   pantallas: { imagen: string; titulo: Record<Idioma, string>; texto: Record<Idioma, string> }[];
+  /** Juegos apaisados: la captura se monta en un teléfono acostado, en vez de parado. */
+  apaisada?: boolean;
 };
 
 export const APPS: App[] = [
@@ -146,6 +150,50 @@ export const APPS: App[] = [
       { imagen: "dailychallenge-party",
         titulo: { es: "Modo party", en: "Party mode" },
         texto: { es: "Creas una sala, pasas el código a tus amigos y juegan las mismas rondas. La tabla se actualiza en vivo.", en: "Create a room, share the code with your friends and play the same rounds. The table updates live." } },
+    ],
+  },
+  {
+    // En camino a Google Play y App Store (octubre de 2026); sin web propia
+    // porque es una app nativa con anuncios. Las cifras salen del código:
+    // www/game/weapons.js, maps.js y campaign.js del repo.
+    id: "warzone",
+    nombre: "War Zone",
+    dominio: "Google Play · App Store",
+    acento: "caparazon",
+    apaisada: true,
+    lema: {
+      es: "Batallas por turnos de monigotes, estilo Atari 2600.",
+      en: "Turn-based stick-figure battles, Atari 2600 style.",
+    },
+    descripcion: {
+      es: "Terreno que se rompe, once armas, campaña, retos, partidas pasando el teléfono y en línea. Gratis, con anuncios.",
+      en: "Destructible terrain, eleven weapons, a campaign, challenges, pass-the-phone and online matches. Free, with ads.",
+    },
+    datos: [
+      { valor: "11", etiqueta: { es: "armas", en: "weapons" } },
+      { valor: "8", etiqueta: { es: "mapas", en: "maps" } },
+      { valor: "10", etiqueta: { es: "misiones", en: "missions" } },
+    ],
+    etiquetas: { es: ["Juegos", "Android", "iOS"], en: ["Games", "Android", "iOS"] },
+    pantallas: [
+      { imagen: "warzone-castillo",
+        titulo: { es: "El terreno se rompe", en: "The ground breaks" },
+        texto: { es: "Cada granada deja un cráter. El muro que te cubría deja de cubrirte en tres turnos, y un buen tiro puede tirar a alguien al vacío.", en: "Every grenade leaves a crater. The wall that covered you stops covering you in three turns, and a good shot can knock someone off the map." } },
+      { imagen: "warzone-isla",
+        titulo: { es: "Once armas", en: "Eleven weapons" },
+        texto: { es: "Granada, rifle y bota sin límite. Bazuca, francotirador, bomba, pico, plataforma y muro con munición contada. El láser y el lanzagranadas se ganan.", en: "Grenade, rifle and boot, unlimited. Bazooka, sniper, bomb, pickaxe, platform and wall with counted ammo. The laser and the grenade launcher are earned." } },
+      { imagen: "warzone-campana",
+        titulo: { es: "Campaña de diez misiones", en: "A ten-mission campaign" },
+        texto: { es: "Del tres contra tres en la isla al seis contra seis en la cueva. Cada misión ganada abre un mapa, un arma o un gorro.", en: "From three-on-three on the island to six-on-six in the cave. Each mission won unlocks a map, a weapon or a hat." } },
+      { imagen: "warzone-pasa",
+        titulo: { es: "Pasa el teléfono", en: "Pass the phone" },
+        texto: { es: "Dos jugadores, o dos contra dos, en el mismo aparato. Entre turno y turno la pantalla se apaga para que nadie vea el plan del otro.", en: "Two players, or two-on-two, on the same device. Between turns the screen goes dark so nobody sees the other side's plan." } },
+      { imagen: "warzone-menu",
+        titulo: { es: "En línea, sin servidor de juego", en: "Online, with no game server" },
+        texto: { es: "Salas con código de cinco letras, uno contra uno y dos contra dos cooperativo, ranking por victorias. Sólo viajan los botones que pulsas: la partida se calcula igual en cada teléfono.", en: "Rooms with a five-letter code, one-on-one and two-on-two co-op, a ranking by wins. Only the buttons you press travel: every phone computes the same match." } },
+      { imagen: "warzone-vector",
+        titulo: { es: "Dos estilos", en: "Two looks" },
+        texto: { es: "La paleta de una consola de 1977, o líneas blancas sobre negro al estilo Vib-Ribbon. Mismo juego, mismas reglas; sólo cambia el dibujo.", en: "The palette of a 1977 console, or white lines on black in the Vib-Ribbon style. Same game, same rules; only the drawing changes." } },
     ],
   },
 ];

@@ -83,9 +83,13 @@ export default async function PaginaApp({ params }: Props) {
           </ul>
 
           <p className="hero-botones">
-            <a href={app.url} className="boton" target="_blank" rel="noopener">
-              {x("appAbrir")} {app.dominio} ↗
-            </a>
+            {app.url ? (
+              <a href={app.url} className="boton" target="_blank" rel="noopener">
+                {x("appAbrir")} {app.dominio} ↗
+              </a>
+            ) : (
+              <span className="boton secundario" aria-disabled="true">{x("appProximamente")}: {app.dominio}</span>
+            )}
             <Link href={ruta("negocios", idioma)} className="boton secundario">{x("navNegocios")}</Link>
           </p>
 
@@ -93,7 +97,7 @@ export default async function PaginaApp({ params }: Props) {
           <ul className="pantallas">
             {app.pantallas.map((p) => (
               <li key={p.imagen}>
-                <Telefono imagen={p.imagen} alto="largo" />
+                <Telefono imagen={p.imagen} alto="largo" apaisado={app.apaisada} />
                 <div>
                   <h3>{p.titulo[idioma]}</h3>
                   <p>{p.texto[idioma]}</p>

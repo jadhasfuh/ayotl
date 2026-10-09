@@ -1,10 +1,12 @@
 # ayotl.dev
 
 El sitio de la marca **Ayotl** («tortuga» en náhuatl), el paraguas de Mercadito,
-JLPTest y Daily Challenge. Tres páginas (inicio con las tarjetas de las apps,
-programa Beta, acerca de), en español e inglés, con modo claro/oscuro.
+JLPTest, Daily Challenge y War Zone (`~/Documents/territorio war`, juego nativo
+en camino a las tiendas; sin web propia, su ficha vive aquí). Tres páginas
+(inicio con las tarjetas de las apps, programa Beta, acerca de), en español e
+inglés, con modo claro/oscuro.
 
-Misma receta que los otros tres productos: **Next.js 16 App Router + React 19 +
+Misma receta que los tres productos web: **Next.js 16 App Router + React 19 +
 TypeScript**, CSS propio, `output: "standalone"`, Dockerfile → **Railway**, y
 datos en la **Supabase de jlptest** dentro de un esquema propio `ayotl`.
 

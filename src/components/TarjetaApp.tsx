@@ -32,9 +32,13 @@ export function TarjetaApp({ app, idioma }: { app: App; idioma: Idioma }) {
       <Link className="abrir" href={`${idioma === "en" ? "/en" : ""}/apps/${app.id}`}>
         {x("leerMas")} <span aria-hidden="true">→</span>
       </Link>
-      <a className="abrir-fuera" href={app.url} target="_blank" rel="noopener">
-        {x("abrirApp")} <span aria-hidden="true">↗</span>
-      </a>
+      {app.url ? (
+        <a className="abrir-fuera" href={app.url} target="_blank" rel="noopener">
+          {x("abrirApp")} <span aria-hidden="true">↗</span>
+        </a>
+      ) : (
+        <span className="abrir-fuera">{x("appProximamente")}</span>
+      )}
     </li>
   );
 }

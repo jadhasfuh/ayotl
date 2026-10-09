@@ -238,3 +238,16 @@ vez, subconjunto `latin` como antes, a `src/app/fuentes/`, y se cargan con
 `next/font/local` desde un solo módulo que importan los tres layouts y la
 página de reto. Mismo resultado en el navegador (variables CSS, respaldo con
 `size-adjust`, preload); el build ya no sale a internet y bajó a ~4 s.
+
+## 2026-10-08 — War Zone entra a la vitrina sin tener web
+
+War Zone (`~/Documents/territorio war`) es el cuarto producto: un juego
+nativo (Capacitor, AdMob) en camino a Google Play y App Store, sin dominio
+propio porque no hay nada que servir por web. Su ficha vive aquí, en
+`/apps/warzone`, para tener a dónde mandar desde las tiendas y desde los
+vídeos. Para eso `App.url` pasó a ser opcional: sin URL, la tarjeta y la
+página dicen «Próximamente» y el campo `dominio` nombra las tiendas. Las
+capturas son del canvas del juego (320×180) escaladas ×4 sin suavizar y en
+webp sin pérdida, pesan menos de 3 KB cada una, y se montan en un teléfono
+acostado (`Telefono apaisado`), porque el juego se juega así. El texto de
+«tres apps en producción» se queda: War Zone todavía no lo está.
