@@ -153,12 +153,14 @@ export const APPS: App[] = [
     ],
   },
   {
-    // En camino a Google Play y App Store (octubre de 2026); sin web propia
-    // porque es una app nativa con anuncios. Las cifras salen del código:
-    // www/game/weapons.js, maps.js y campaign.js del repo.
+    // Se juega en la web dentro de Daily Challenge (como «juego extra», sin
+    // anuncios) y va en camino a Google Play y App Store con AdMob (octubre
+    // de 2026). Las cifras salen del código: www/game/weapons.js, maps.js y
+    // campaign.js del repo jadhasfuh/warzone.
     id: "warzone",
     nombre: "War Zone",
-    dominio: "Google Play · App Store",
+    dominio: "dailychallenge.click/warzone",
+    url: "https://dailychallenge.click/warzone",
     acento: "caparazon",
     apaisada: true,
     lema: {
