@@ -195,7 +195,7 @@ export const APPS: App[] = [
         texto: { es: "Salas con código de cinco letras, uno contra uno y dos contra dos cooperativo, ranking por victorias. Sólo viajan los botones que pulsas: la partida se calcula igual en cada teléfono.", en: "Rooms with a five-letter code, one-on-one and two-on-two co-op, a ranking by wins. Only the buttons you press travel: every phone computes the same match." } },
       { imagen: "warzone-vector",
         titulo: { es: "Dos estilos", en: "Two looks" },
-        texto: { es: "La paleta de una consola de 1977, o líneas blancas sobre negro al estilo Vib-Ribbon. Mismo juego, mismas reglas; sólo cambia el dibujo.", en: "The palette of a 1977 console, or white lines on black in the Vib-Ribbon style. Same game, same rules; only the drawing changes." } },
+        texto: { es: "La paleta de una consola de 1977, o puro contorno: líneas blancas sobre negro. Mismo juego, mismas reglas; sólo cambia el dibujo.", en: "The palette of a 1977 console, or pure outline: white lines on black. Same game, same rules; only the drawing changes." } },
     ],
   },
 ];
