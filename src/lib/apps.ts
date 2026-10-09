@@ -189,7 +189,7 @@ export const APPS: App[] = [
         texto: { es: "Del tres contra tres en la isla al seis contra seis en la cueva. Cada misión ganada abre un mapa, un arma o un gorro.", en: "From three-on-three on the island to six-on-six in the cave. Each mission won unlocks a map, a weapon or a hat." } },
       { imagen: "warzone-pasa",
         titulo: { es: "Pasa el teléfono", en: "Pass the phone" },
-        texto: { es: "Dos jugadores, o dos contra dos, en el mismo aparato. Entre turno y turno la pantalla se apaga para que nadie vea el plan del otro.", en: "Two players, or two-on-two, on the same device. Between turns the screen goes dark so nobody sees the other side's plan." } },
+        texto: { es: "Dos jugadores en el mismo aparato. Entre turno y turno la pantalla se apaga para que nadie vea el plan del otro.", en: "Two players on the same device. Between turns the screen goes dark so nobody sees the other side's plan." } },
       { imagen: "warzone-menu",
         titulo: { es: "En línea, sin servidor de juego", en: "Online, with no game server" },
         texto: { es: "Salas con código de cinco letras, uno contra uno y dos contra dos cooperativo, ranking por victorias. Sólo viajan los botones que pulsas: la partida se calcula igual en cada teléfono.", en: "Rooms with a five-letter code, one-on-one and two-on-two co-op, a ranking by wins. Only the buttons you press travel: every phone computes the same match." } },
