@@ -6,7 +6,7 @@ import type { Idioma } from "./idioma";
  * existe porque algo se rompió en producción y costó una tarde entenderlo.
  *
  * El cuerpo se escribe como una lista de bloques para no meter Markdown ni
- * su intérprete: son cuatro notas, no un blog.
+ * su intérprete: son unas pocas notas, no un blog.
  */
 export type Bloque =
   | { tipo: "p"; texto: Record<Idioma, string> }
@@ -16,7 +16,7 @@ export type Bloque =
 export type Nota = {
   id: string;
   fecha: string;                       // AAAA-MM-DD, la del hallazgo
-  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl";
+  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl" | "warzone";
   titulo: Record<Idioma, string>;
   entradilla: Record<Idioma, string>;
   cuerpo: Bloque[];
@@ -295,6 +295,72 @@ reason: INVALID_REQUEST_METADATA`, pie: {
       { tipo: "p", texto: {
         es: "Y una buena noticia que la documentación no deja clara: aunque el proyecto no haya pasado la auditoría de la API, un vídeo subido como privado con fecha de publicación se publica solo a su hora. La auditoría hace falta para subir más de seis vídeos al día, no para publicarlos.",
         en: "And some good news the documentation doesn't make clear: even if the project hasn't passed the API audit, a video uploaded as private with a publish date goes public on its own at that time. The audit is needed to upload more than six videos a day, not to publish them.",
+      } },
+    ],
+  },
+  {
+    id: "pixeles-gordos-en-android",
+    fecha: "2026-10-09",
+    proyecto: "warzone",
+    titulo: {
+      es: "War Zone: píxeles gordos que llegan nítidos al teléfono",
+      en: "War Zone: fat pixels that reach the phone crisp",
+    },
+    entradilla: {
+      es: "Un juego dibujado a 320 por 180 con la paleta del Atari 2600, y el icono salía borroso en Android. No era el dibujo: eran tres reescalados que nadie pidió.",
+      en: "A game drawn at 320 by 180 with the Atari 2600 palette, and the icon came out blurry on Android. It wasn't the drawing: it was three rescalings nobody asked for.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "War Zone es artillería por turnos con monigotes: un lienzo de 320 por 180, la paleta de 128 colores del chip de vídeo del 2600, una fuente de 3 por 5 y una calavera de 13 por 13 píxeles como logo. Todo se dibuja con rectángulos, sin un solo PNG, y el canvas se escala con `image-rendering: pixelated`. En el navegador, impecable. En el teléfono, la primera queja fue «el logo al iniciar no tiene mucha calidad».",
+        en: "War Zone is turn-based artillery with stick figures: a 320 by 180 canvas, the 128-colour palette of the 2600's video chip, a 3 by 5 font and a 13 by 13 pixel skull as the logo. Everything is drawn with rectangles, not a single PNG, and the canvas is scaled with `image-rendering: pixelated`. In the browser, flawless. On the phone, the first complaint was “the logo at launch doesn't look very sharp”.",
+      } },
+      { tipo: "p", texto: {
+        es: "El icono y la pantalla de arranque no los dibuja el juego: los genera una herramienta a partir de un PNG de 1024 píxeles, reescalándolo a cada densidad de Android con un filtro Lanczos. Es lo correcto para una foto y lo peor para una calavera de 13 celdas: cada borde se vuelve un degradado de dos o tres píxeles. Luego Android 12 toma el icono adaptable, pensado para 108 dp, y lo pinta a 240 dp en la pantalla de arranque con filtro bilineal: un segundo reescalado, hacia arriba, de 2,2 veces. Y por el camino el icono adaptable recorta un 16,7 % por lado para la máscara. Tres transformaciones, ninguna entera.",
+        en: "The game doesn't draw the icon or the launch screen: a tool generates them from a 1024-pixel PNG, rescaling it to every Android density with a Lanczos filter. That's right for a photo and the worst thing for a 13-cell skull: every edge becomes a two- or three-pixel gradient. Then Android 12 takes the adaptive icon, meant for 108 dp, and paints it at 240 dp on the launch screen with bilinear filtering: a second rescale, upwards, by 2.2. And along the way the adaptive icon crops 16.7 % per side for the mask. Three transforms, none of them whole.",
+      } },
+      { tipo: "codigo", texto: `// celda de un número entero de píxeles, para que la calavera
+// quepa en el círculo visible de cada recurso
+const celdaEnCirculo = (diametro, aire = 0.92) =>
+  Math.max(1, Math.floor(diametro / 2 / radio * aire));
+
+for (const [d, k] of Object.entries({ mdpi: 1, hdpi: 1.5, xhdpi: 2, xxhdpi: 3, xxxhdpi: 4 })) {
+  const fg = Math.round(108 * k), sp = Math.round(288 * k);
+  escribir(\`mipmap-\${d}/ic_launcher_foreground.png\`, calavera(fg, celdaEnCirculo(fg)));
+  escribir(\`mipmap-\${d}/splash_icono_fg.png\`, calavera(sp, celdaEnCirculo(sp * 2 / 3)));
+}`, pie: {
+        es: "Cada recurso se dibuja a su tamaño exacto. No se reescala nada, nunca.",
+        en: "Every resource is drawn at its exact size. Nothing gets rescaled, ever.",
+      } },
+      { tipo: "p", texto: {
+        es: "La pantalla de arranque de Android 12 admite un icono propio (`windowSplashScreenAnimatedIcon`), así que se le da uno de 288 dp con la calavera dentro del círculo visible de 192 dp, en vez de dejar que agrande el del lanzador. Y el fondo de la ventana mientras carga el WebView, que como PNG se estiraba a la pantalla, pasa a ser un `layer-list`: color plano y el mismo bitmap centrado, sin escalar. Se comprobó con capturas por `adb` nada más lanzar la app, con dos trampas de regalo: con la pantalla apagada las capturas salen negras, y la del arranque sale girada, porque el sistema la dibuja en vertical aunque el juego sea apaisado.",
+        en: "Android 12's launch screen accepts its own icon (`windowSplashScreenAnimatedIcon`), so it gets a 288 dp one with the skull inside the visible 192 dp circle, instead of letting it enlarge the launcher's. And the window background while the WebView loads, which as a PNG was stretched to the screen, becomes a `layer-list`: flat colour and the same bitmap centred, unscaled. It was verified with `adb` screenshots right after launching the app, with two free traps: with the screen off the captures come out black, and the launch one comes out rotated, because the system draws it portrait even though the game is landscape.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo mismo que limita al 2600 es lo que le da el estilo, y el juego lo usa a propósito:",
+        en: "What limits the 2600 is what gives it its look, and the game uses it on purpose:",
+      } },
+      { tipo: "lista", puntos: {
+        es: [
+          "Cambiar el color entre línea y línea era gratis y un degradado horizontal, imposible: por eso los cielos a bandas.",
+          "Dos sprites de 8 píxeles por línea, de un solo color; más que eso, parpadeo. Los fondos van en bloques de 4 por 2, el «playfield» de 40 columnas.",
+          "Animar era apuntar a otra tabla de bytes: el monigote tiene un cuadro por pose, de 7 por 10, y se espeja para mirar al otro lado.",
+          "Un sprite azul sobre un cielo azul no se ve. La consola no tenía contorno; el juego sí: un halo negro de un píxel alrededor de cada monigote.",
+        ],
+        en: [
+          "Changing the colour between scanlines was free and a horizontal gradient impossible: hence the banded skies.",
+          "Two 8-pixel sprites per line, one colour each; more than that, flicker. Backgrounds go in 4 by 2 blocks, the 40-column “playfield”.",
+          "Animating meant pointing at another table of bytes: the stick figure has one frame per pose, 7 by 10, mirrored to face the other way.",
+          "A blue sprite over a blue sky can't be seen. The console had no outlines; the game does: a one-pixel black halo around every figure.",
+        ],
+      } },
+      { tipo: "p", texto: {
+        es: "Y el ojo chueco. Con todo ya nítido, el logo seguía raro: la cuenca derecha de la calavera iba corrida un píxel desde el primer día. A 5 píxeles no se nota; a 50, en la pantalla de arranque, sí, y lo vio Adrián nada más verla grande. La nitidez también sirve para eso: para que los errores se vean.",
+        en: "And the crooked eye. With everything sharp at last, the logo still looked off: the skull's right socket had been shifted one pixel since day one. At 5 pixels it doesn't show; at 50, on the launch screen, it does, and Adrián spotted it the moment he saw it big. Sharpness is good for that too: it lets the mistakes show.",
+      } },
+      { tipo: "p", texto: {
+        es: "War Zone se juega en dailychallenge.click/warzone y está entrando a Google Play en prueba cerrada.",
+        en: "War Zone is playable at dailychallenge.click/warzone and is entering Google Play as a closed test.",
       } },
     ],
   },
