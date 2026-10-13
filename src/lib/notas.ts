@@ -364,6 +364,129 @@ for (const [d, k] of Object.entries({ mdpi: 1, hdpi: 1.5, xhdpi: 2, xxhdpi: 3, x
       } },
     ],
   },
+  {
+    id: "la-granada-que-parecia-frenarse",
+    fecha: "2026-10-12",
+    proyecto: "warzone",
+    titulo: {
+      es: "War Zone: la granada que parecía frenarse en el aire",
+      en: "War Zone: the grenade that seemed to slow down mid-air",
+    },
+    entradilla: {
+      es: "«En los tiros largos y altos, la granada como que se ralentiza.» El juego no iba lento: con la CPU seis veces más lenta seguía a 30 cuadros por segundo. Lo que frenaba era la cámara.",
+      en: "“On long, high throws the grenade sort of slows down.” The game wasn't slow: with the CPU throttled six times it still ran at 30 frames a second. What was braking was the camera.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "La queja llegó así, con un «a veces» y un «como que». Lo primero fue descartar lo obvio: se corrió el juego de verdad en Chrome, con su propio bucle y la CPU frenada cuatro y seis veces, como un teléfono de gama media y uno de gama baja, y se lanzó la granada más larga y más alta que permite el castillo. Treinta ticks de simulación por segundo, y ni un cuadro por encima de 33,5 ms. El juego no se ralentizaba.",
+        en: "The complaint arrived just like that, with a “sometimes” and a “sort of”. The first step was ruling out the obvious: the real game ran in Chrome, with its own loop and the CPU throttled four and six times, like a mid-range and a low-end phone, throwing the longest, highest grenade the castle allows. Thirty simulation ticks per second, and not a single frame above 33.5 ms. The game wasn't slowing down.",
+      } },
+      { tipo: "p", texto: {
+        es: "Entonces se midió lo que ve el jugador: la velocidad de la granada en píxeles de pantalla, cuadro a cuadro. Ahí estaba. Al lanzar, la cámara se abría de 2x a 1x y se centraba entre el que tira y la granada, persiguiéndola con un suavizado de 12 a 15 % por cuadro. Las tres cosas restan: al abrirse, la granada se ve a la mitad de tamaño y de velocidad; al seguirla, la cámara se lleva la mitad del movimiento; y como llegaba tarde, la granada se salía de cuadro por arriba.",
+        en: "So the thing the player sees was measured instead: the grenade's speed in screen pixels, frame by frame. There it was. On release the camera zoomed out from 2x to 1x and centred itself between the thrower and the grenade, chasing it with 12 to 15 % smoothing per frame. All three subtract: zooming out halves the grenade's size and speed, following it eats half of its motion, and since the camera arrived late, the grenade left the frame at the top.",
+      } },
+      { tipo: "codigo", texto: `tick   pantalla (x, y)   px por cuadro
+   6      143,  39            6,4
+  12      144,  16            2,6
+  18      142,   8            0,7   <- ya detrás del marcador
+  24      143,   8            0,4
+  36      153,  13            1,4`, pie: {
+        es: "El mismo tiro, antes: de 6,4 a 0,4 píxeles por cuadro, y casi un segundo fuera de cuadro.",
+        en: "The same throw, before: from 6.4 down to 0.4 pixels per frame, and almost a second out of frame.",
+      } },
+      { tipo: "p", texto: {
+        es: "La solución no fue seguirla mejor, sino no tener que seguirla. La simulación es determinista y no depende de la cámara, así que en el momento del tiro ya se sabe todo el vuelo: se simula una copia del proyectil con la misma física, sin tocar el mundo, y la cámara encuadra el recorrido entero desde el primer cuadro. Casi no se mueve, y la granada cruza la pantalla. Si el vuelo no cabe ni abierto a 1x, la cámara la acompaña en el mismo cuadro en que se acerca al borde, sin retraso.",
+        en: "The fix wasn't following it better but not having to follow it. The simulation is deterministic and doesn't depend on the camera, so the whole flight is known the moment the shot leaves: a copy of the projectile is simulated with the same physics, without touching the world, and the camera frames the entire path from the first frame. It barely moves, and the grenade crosses the screen. If the flight doesn't fit even at 1x, the camera goes along with it on the very frame it nears the edge, with no lag.",
+      } },
+      { tipo: "codigo", texto: `/** Lo que le queda por volar, con la misma física y sin tocar el mundo. */
+vueloRestante(p, n = 240) {
+  const c = { ...p }, pts = [];
+  for (let i = 0; i < n && c.viva; i++) {
+    const fin = this.pasoProyectil(c, false);   // false: nada estalla de verdad
+    pts.push({ x: c.x, y: c.y });
+    if (fin) break;
+  }
+  return pts;
+}`, pie: {
+        es: "Ahora el mismo tiro va a entre 2 y 6 píxeles por cuadro, y se ve entero.",
+        en: "The same throw now moves at 2 to 6 pixels per frame, and is visible all the way.",
+      } },
+      { tipo: "p", texto: {
+        es: "La misma medición sacó otro bug que también se había reportado como otra cosa: «cuando la cámara se sale del mapa se ve una distorsión». El límite del mapa se aplicaba al destino de la cámara, no a la cámara: mientras el zoom se abría cerca del borde derecho o de abajo, el destino se recorría hacia adentro y la cámara, suavizada, llegaba tarde. La vista se pasaba del mapa hasta 22 píxeles, ahí no se dibujaba nada y el canvas conservaba el cuadro anterior: rayas. En la cueva pasaba en el 39 % de los cuadros. Ahora la cámara se encierra en sus límites con el zoom de ese mismo cuadro, el cielo y el mar se pintan también fuera del mapa, y sólo se asoma afuera, 48 píxeles como mucho, para seguir algo que de verdad se sale: una bomba que se va por el borde o un monigote que cae al vacío.",
+        en: "The same measurement turned up another bug that had also been reported as something else: “when the camera goes off the map there's a distortion”. The map limit was applied to the camera's target, not to the camera: while the zoom opened near the right or bottom edge, the target moved inwards and the smoothed camera arrived late. The view overshot the map by up to 22 pixels, nothing was drawn there, and the canvas kept the previous frame: streaks. In the cave level it happened in 39 % of frames. Now the camera is clamped with the zoom of that very frame, the sky and sea are painted beyond the map too, and it only peeks outside, 48 pixels at most, to follow something that really leaves: a bomb going over the edge or a stick figure falling into the void.",
+      } },
+      { tipo: "p", texto: {
+        es: "Y una tercera, de regalo, al revisar la queja del castillo («se vuelve una batalla de granadas a distancia»): el pico, la herramienta para abrir camino, nunca dejó pasar a nadie. Cavaba círculos de radio 5 empezando a 4 píxeles de la mano, y en el túnel quedaba un píxel de tierra en la boca, a los pies y a la altura de la cabeza de un monigote que mide 10. Ninguna prueba caminaba por el túnel después de cavarlo. Ahora una lo hace a 0°, ±20° y 35°, y el castillo tiene además un portón que lo atraviesa.",
+        en: "And a third one, as a bonus, while looking at the castle complaint (“it turns into a long-range grenade battle”): the pickaxe, the tool for clearing a path, never let anyone through. It dug radius-5 circles starting 4 pixels from the hand, which left a pixel of earth at the tunnel's mouth, at the feet and at head height of a stick figure 10 pixels tall. No test walked through the tunnel after digging it. Now one does, at 0°, ±20° and 35°, and the castle also has a gate running through it.",
+      } },
+      { tipo: "p", texto: {
+        es: "Las tres quejas eran ciertas y las tres describían otra cosa. Lo que las separó fue medir lo que ve el jugador, y no lo que uno cree que hace el código. War Zone 1.0.6 se juega en dailychallenge.click/warzone.",
+        en: "All three complaints were true, and all three described something else. What told them apart was measuring what the player sees, rather than what you believe the code does. War Zone 1.0.6 is playable at dailychallenge.click/warzone.",
+      } },
+    ],
+  },
+  {
+    id: "grabar-la-carta-sin-tocar-el-piloto",
+    fecha: "2026-10-12",
+    proyecto: "mercadito",
+    titulo: {
+      es: "Grabar la carta real sin tocar los datos del piloto",
+      en: "Recording the live menu without touching the pilot's data",
+    },
+    entradilla: {
+      es: "Para los reels de Mercadito había que enseñar la carta de verdad, con sus fotos, sus precios y el botón de pedir. Pero cada vez que alguien la abre, el piloto lo anota, y en una tabla de sólo altas lo anotado se queda.",
+      en: "Mercadito's reels had to show the real menu, with its photos, its prices and the order button. But every time someone opens it, the pilot writes it down, and in an append-only table what's written stays.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Los vídeos cortos de Mercadito para Instagram y Facebook tenían que ser la carta real de los negocios, no una maqueta: abrirla, elegir, tocar «Pedir por WhatsApp». El problema es que eso es justo lo que mide el piloto. Abrir la carta manda una «vista»; pedir manda un «pedido» con sus productos, que suma también al «Más vendidos» del negocio. Las dos cosas van a `menu_eventos`, una tabla de la que nada se borra: una toma repetida diez veces son diez aperturas que nunca pasaron, para siempre en la serie que se va a analizar.",
+        en: "Mercadito's short videos for Instagram and Facebook had to be the businesses' real menus, not a mock-up: open one, choose, tap “Order on WhatsApp”. The trouble is that this is exactly what the pilot measures. Opening a menu sends a “view”; ordering sends an “order” with its items, which also feeds the business's “Best sellers”. Both go to `menu_eventos`, a table nothing is ever deleted from: a take repeated ten times is ten openings that never happened, forever in the series that's going to be analysed.",
+      } },
+      { tipo: "p", texto: {
+        es: "La grabación se hace con Chrome sin ventana, controlado por su protocolo de depuración y cuadro a cuadro, y el mismo protocolo deja detener cada petición antes de que salga. La regla es una: lo que no sea leer no sale de la computadora. Se contesta ahí mismo con un `{ok: true}`, la página cree que quedó anotado y sigue como siempre. Y el enlace a WhatsApp se corta con un 204: la página no se va, y del enlace se lee el mensaje que armó la carta, que es justo el que sale en pantalla en uno de los reels.",
+        en: "The recording is done with headless Chrome, driven by its debugging protocol frame by frame, and the same protocol lets you hold every request before it leaves. There's a single rule: anything that isn't a read never leaves the computer. It's answered right there with `{ok: true}`, the page believes it was recorded and carries on as usual. And the WhatsApp link is cut off with a 204: the page doesn't navigate away, and the link gives up the message the menu put together, which is exactly what one of the reels shows on screen.",
+      } },
+      { tipo: "codigo", texto: `on('Fetch.requestPaused', ({ requestId, request }) => {
+  // el enlace a WhatsApp no sale: de él se lee el mensaje que armó la carta
+  if (request.url.startsWith('https://wa.me/')) {
+    registro.whatsapp.push(request.url);
+    return cdp('Fetch.fulfillRequest', { requestId, responseCode: 204 });
+  }
+  // lo que no es leer se contesta aquí: la vista y el pedido nunca llegan
+  if (!['GET', 'HEAD', 'OPTIONS'].includes(request.method)) {
+    registro.contestadosAqui.push(request.method + ' ' + request.url);
+    return cdp('Fetch.fulfillRequest', {
+      requestId, responseCode: 200, body: btoa('{"ok":true}') });
+  }
+  return cdp('Fetch.continueRequest', { requestId });
+});`, pie: {
+        es: "Y no se da por bueno: aparte se anota todo lo que no es leer que la página intentó mandar, y si algo no se contestó aquí, la toma se tira.",
+        en: "And it isn't taken on faith: everything that isn't a read the page tried to send is logged separately, and if anything wasn't answered locally, the take is thrown away.",
+      } },
+      { tipo: "p", texto: {
+        es: "Cinco reels, cero eventos en el servidor: cada toma terminó con su auditoría en «llegaron al servidor: 0». Por el camino salieron las trampas de grabar una página que no está hecha para grabarse:",
+        en: "Five reels, zero events on the server: every take ended with its audit at “reached the server: 0”. Along the way came the traps of recording a page that isn't built to be recorded:",
+      } },
+      { tipo: "lista", puntos: {
+        es: [
+          "Las secciones usan `content-visibility: auto`: lo que está fuera de pantalla no se pinta, y su posición y su texto salen mal hasta que se pinta. Para medir dónde está cada producto, antes de grabar se fuerza el pintado.",
+          "Las fotos son perezosas y algunas pesan varios megas: se piden todas antes y se espera a que se decodifiquen, para que ningún cuadro salga con una foto a medias.",
+          "Del directorio a la carta no hay evento `load`: la navegación es del lado del cliente. Se espera a que cambie la dirección.",
+          "Una de las cartas abre de 7 a 10 de la noche y antes dice «Cerrado ahora». La toma se programó con `sleep` para las 19:05 y empezó a las 20:10: en macOS, el reloj de `sleep` se detiene mientras la Mac duerme.",
+        ],
+        en: [
+          "Sections use `content-visibility: auto`: whatever is off-screen isn't painted, and its position and text come out wrong until it is. To measure where each product sits, painting is forced before recording.",
+          "Photos are lazy and some weigh several megabytes: they're all requested first and decoded before recording, so no frame shows a half-loaded photo.",
+          "Going from the directory to a menu fires no `load` event: navigation is client-side. You wait for the URL to change.",
+          "One of the menus opens from 7 to 10 p.m. and says “Closed now” before then. The take was scheduled with `sleep` for 19:05 and started at 20:10: on macOS, `sleep`'s clock stops while the Mac is asleep.",
+        ],
+      } },
+      { tipo: "p", texto: {
+        es: "La regla de fondo es la misma de todo el piloto: un instrumento que se vigila a sí mismo. Si la carta sirve también para promocionar, la promoción no puede volverse ruido en la medición.",
+        en: "The underlying rule is the pilot's own: an instrument that watches itself. If the menu doubles as promotional material, promotion can't turn into noise in the measurement.",
+      } },
+    ],
+  },
 ];
 
 export function notaPorId(id: string): Nota | undefined {
