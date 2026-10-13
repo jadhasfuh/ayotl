@@ -261,8 +261,14 @@ sumó Noticias a tu nivel, y War Zone cambió de HUD, de castillo y de armas
 420×900 a 2× que contesta en local toda petición que no sea GET: no salió
 ninguna vista, progreso ni partida. Sólo se dejó pasar el alta de la sesión
 anónima de Daily Challenge, porque sin ella la portada enseña un error.
-Mercadito usa la carta pública de la tienda de demostración; las del panel
-(caja, corte, mesas, ventas) siguen siendo las del 23-sep, porque para
-sacarlas hay que entrar a la demo con su PIN y eso lo hace Adrián. Las de War
+Mercadito usa la carta pública de la tienda de demostración. Las del panel
+salieron de la sesión de la demo que Adrián abrió en su Chrome (el PIN no lo
+teclea Claude). La ventana estaba a pantalla completa y no se podía achicar,
+así que el cuerpo de la página se fijó a 420 px con `zoom: 2` (cada píxel sale a
+2×). Los tramos de 704 px se cosieron con los encabezados pegajosos en su sitio,
+y el teléfono del mesero de prueba va desenfocado. «Tu panel» es ahora la
+pestaña Mi tienda (vistas, QR, compartir, menú para imprimir), que es lo que
+dice su texto. Ventas se queda con la del 23-sep: hoy la demo no tiene ventas
+y saldría vacía. Las de War
 Zone salen del propio juego (`window.TH` en un Chrome sin ventana: menú,
 campaña, castillo con su cráter, arsenal, pasa el teléfono y vector).
