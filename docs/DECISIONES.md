@@ -251,3 +251,18 @@ capturas son del canvas del juego (320×180) escaladas ×4 sin suavizar y en
 webp sin pérdida, pesan menos de 3 KB cada una, y se montan en un teléfono
 acostado (`Telefono apaisado`), porque el juego se juega así. El texto de
 «tres apps en producción» se queda: War Zone todavía no lo está.
+
+## 2026-10-13 — Capturas al día
+
+Las del 23-sep se habían quedado atrás: Daily Challenge ya tiene sus puertas
+(reto, práctica, juegos libres, party, War Zone) y 35 recreativas; jlptest
+sumó Noticias a tu nivel, y War Zone cambió de HUD, de castillo y de armas
+(son doce con el hara kiri). Se rehicieron con un Chrome sin ventana a
+420×900 a 2× que contesta en local toda petición que no sea GET: no salió
+ninguna vista, progreso ni partida. Sólo se dejó pasar el alta de la sesión
+anónima de Daily Challenge, porque sin ella la portada enseña un error.
+Mercadito usa la carta pública de la tienda de demostración; las del panel
+(caja, corte, mesas, ventas) siguen siendo las del 23-sep, porque para
+sacarlas hay que entrar a la demo con su PIN y eso lo hace Adrián. Las de War
+Zone salen del propio juego (`window.TH` en un Chrome sin ventana: menú,
+campaña, castillo con su cráter, arsenal, pasa el teléfono y vector).
