@@ -84,6 +84,8 @@ export function proxy(req: NextRequest) {
 
 export const config = {
   // Sólo páginas: ni la API, ni las muestras (viven fuera del idioma, en
-  // `app/demo`, con su propio layout), ni lo estático, ni las imágenes.
-  matcher: ["/((?!api|demo|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json)$).*)"],
+  // `app/demo`, con su propio layout), ni lo estático, ni las imágenes, ni
+  // la demo de «La procesión de los dormidos» (`/procesion`, una HTML en
+  // public/ con su fuente .woff2 en public/fuentes/).
+  matcher: ["/((?!api|demo|procesion|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json|woff2|woff|html)$).*)"],
 };
