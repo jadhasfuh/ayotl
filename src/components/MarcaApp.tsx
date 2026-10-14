@@ -68,6 +68,18 @@ export function MarcaApp({ app }: { app: App["id"] }) {
       </svg>
     );
   }
+  if (app === "procesion") {
+    // La procesión de los dormidos: una veladora (guardar = prender una), en
+    // trazo, como la tortuga.
+    return (
+      <svg {...comun}>
+        <path d="M16 13.5c-3.2-2.6-3.2-6.3 0-10 3.2 3.7 3.2 7.4 0 10z" />
+        <path d="M16 9.5v4" strokeWidth="1.2" />
+        <rect x="10.5" y="15.5" width="11" height="13.5" rx="1.6" />
+        <path d="M13.5 20h5 M13.5 24h5" strokeWidth="1.2" />
+      </svg>
+    );
+  }
   // Daily Challenge: el marciano de Space Invaders, dibujado en píxeles
   // rellenos (2,5 px de lado) porque es pixel art, no línea.
   const MARCIANO = [

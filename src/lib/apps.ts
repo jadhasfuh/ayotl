@@ -11,7 +11,7 @@ import type { Idioma } from "./idioma";
  * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
-  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone";
+  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion";
   nombre: string;
   /** Lo que va bajo el nombre en la tarjeta: el dominio, o dónde está si aún no tiene web. */
   dominio: string;
@@ -199,6 +199,53 @@ export const APPS: App[] = [
       { imagen: "warzone-vector",
         titulo: { es: "Dos estilos", en: "Two looks" },
         texto: { es: "La paleta de una consola de 1977, o puro contorno: líneas blancas sobre negro. Mismo juego, mismas reglas; sólo cambia el dibujo.", en: "The palette of a 1977 console, or pure outline: white lines on black. Same game, same rules; only the drawing changes." } },
+    ],
+  },
+  {
+    // «La procesión de los dormidos» es el nombre de trabajo (octubre de 2026).
+    // La demo (capítulos 1 a 3) se sirve desde aquí: public/procesion.html es
+    // dist/liobas-demo.html del repo procesion-de-los-dormidos, y /procesion
+    // es una reescritura en next.config.ts. El juego completo va a itch.io y
+    // a Google Play. Las cifras salen del guion (PROCESION.md de ese repo).
+    id: "procesion",
+    nombre: "La procesión de los dormidos",
+    dominio: "ayotl.dev/procesion",
+    url: "https://ayotl.dev/procesion",
+    acento: "tierra",
+    apaisada: true,
+    lema: {
+      es: "Survival horror en las calles reales de Sahuayo, estilo FAITH y Atari 2600.",
+      en: "Survival horror on the real streets of Sahuayo, FAITH and Atari 2600 style.",
+    },
+    descripcion: {
+      es: "Liobas vuelve después de quince años y el pueblo despertó a otra cosa. Ocho capítulos de historia; la demo trae los tres primeros, gratis.",
+      en: "Liobas comes back after fifteen years and the town woke up to something else. An eight-chapter story; the demo has the first three, free.",
+    },
+    datos: [
+      { valor: "8", etiqueta: { es: "capítulos", en: "chapters" } },
+      { valor: "2 h 15", etiqueta: { es: "de historia", en: "of story" } },
+      { valor: "21", etiqueta: { es: "documentos", en: "documents" } },
+    ],
+    etiquetas: { es: ["Juegos", "Terror", "Web"], en: ["Games", "Horror", "Web"] },
+    pantallas: [
+      { imagen: "procesion-titulo",
+        titulo: { es: "Líneas sobre negro", en: "Lines on black" },
+        texto: { es: "Lienzo de 240 por 160, la paleta de 128 colores del Atari 2600, un acento por lugar y un monitor viejo encima: líneas de barrido, viñeta y estática que crece cuando algo se acerca.", en: "A 240 by 160 canvas, the Atari 2600's 128-colour palette, one accent colour per place and an old monitor on top: scanlines, vignette and static that grows when something gets close." } },
+      { imagen: "procesion-boulevard",
+        titulo: { es: "Las calles de verdad", en: "The real streets" },
+        texto: { es: "El trazo del centro de Sahuayo sale de OpenStreetMap: la central de autobuses, la Presidencia, Constitución, la plaza, el mercado. Las cuadras se acortan; los nombres no cambian.", en: "The layout of downtown Sahuayo comes from OpenStreetMap: the bus station, the town hall, Constitución, the plaza, the market. Blocks get shorter; the names stay." } },
+      { imagen: "procesion-plaza",
+        titulo: { es: "Un pueblo que no está vacío", en: "A town that isn't empty" },
+        texto: { es: "La gente sigue ahí, haciendo lo de siempre: barrer, vender, rezar, mirar la Parroquia. No se mueren: se caen y se levantan. Y responden a su propio nombre.", en: "The people are still there, doing what they always did: sweeping, selling, praying, staring at the church. They don't die: they fall and get up. And they answer to their own name." } },
+      { imagen: "procesion-catacumbas",
+        titulo: { es: "La historia se lee", en: "The story is read" },
+        texto: { es: "Veintiún documentos con voz propia: partes de la policía, actas de cabildo, cartas sin enviar, hojas de oración, la libreta de un cura. Los nombres que aprendes ahí son la munición del final.", en: "Twenty-one documents, each in its own voice: police reports, council minutes, unsent letters, prayer sheets, a priest's notebook. The names you learn there are the ammunition for the ending." } },
+      { imagen: "procesion-torre",
+        titulo: { es: "Campanas que suenan solas", en: "Bells that ring on their own" },
+        texto: { es: "Todo el sonido es chiptune sintetizado al vuelo, y los diálogos los lee una voz de chip, letra por letra, con la boca del retrato sincronizada. Sin un solo archivo de audio.", en: "All the sound is chiptune synthesized on the fly, and a chip voice reads the dialogue letter by letter, with the portrait's mouth in sync. Not a single audio file." } },
+      { imagen: "procesion-ayotl",
+        titulo: { es: "Lo que hay abajo", en: "What's underneath" },
+        texto: { es: "Cinemáticas rotoscopiadas con líneas, como las de FAITH, en los momentos que importan. Lo que despertó bajo el cerro no se ve nunca completo. Ficción: la Hermandad, la vasija y los túneles son invención.", en: "Rotoscoped line cinematics, FAITH style, at the moments that matter. What woke up under the hill is never fully seen. Fiction: the Brotherhood, the vessel and the tunnels are invented." } },
     ],
   },
 ];

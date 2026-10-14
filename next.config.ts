@@ -47,7 +47,11 @@ const nextConfig: NextConfig = {
   async rewrites() {
     // Los navegadores piden /favicon.ico por su cuenta aunque el HTML
     // declare otro icono; que no sea un 404 en el log.
-    return [{ source: "/favicon.ico", destination: "/icono/32" }];
+    return [
+      { source: "/favicon.ico", destination: "/icono/32" },
+      // La demo de «La procesión de los dormidos»: una sola HTML en public/.
+      { source: "/procesion", destination: "/procesion.html" },
+    ];
   },
 };
 
