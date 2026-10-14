@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <style>@font-face{font-family:"Press Start 2P";src:url("/fuentes/PressStart2P-Regular.woff2") format("woff2");font-display:swap}</style>
+<style>@font-face{font-family:"PixelMplus10";src:url("/fuentes/PixelMplus10.woff2") format("woff2");font-display:swap}</style>
 <style>
 :root{color-scheme:dark}
 html,body{margin:0;height:100%;background:#000;overflow:hidden;font-family:"Press Start 2P",monospace;color:#ccc;-webkit-user-select:none;user-select:none;touch-action:none}
@@ -25,7 +26,7 @@ body.touch #touch{display:block}
       <button data-key="KeyR">R</button><button data-key="KeyF">GOLPE</button><button data-key="KeyE">E</button>
     </div>
   </div>
-  <span id="preload">.</span>
+  <span id="preload">.<span style="font-family:'PixelMplus10'">あ</span></span>
 </div>
 <script>
 window.DEMO = true;
@@ -121,10 +122,10 @@ window.LEVELS = (function () {
 // ======================================================================================
 window.DATA = (function () {
   const prologue = [
-    { t: 0, who: 'Liobas', text: 'Quince años. Quince. Y lo primero que pienso es que la curva de La Barca sigue igual de fea.' },
+    { t: 0, who: 'Liobas', text: 'Quince años, y esta madre igual. Pinche curva maciza de La Barca.' },
     { t: 7, who: 'Liobas', text: 'Todo por ahorrarme cien varos del hotel en Guadalajara. "Manejas de noche y llegas a desayunar", dijo el Chuche.' },
     { t: 15, who: 'Radio', text: '...Dios te salve, María, llena eres de gracia... (estática)' },
-    { t: 21, who: 'Liobas', text: '...La glorieta de Jiquilpan. 4:30. Ni un taco. Ni el de la gasolinera. La silla ahí, el despachador no.' },
+    { t: 21, who: 'Liobas', text: '...El libramiento. 4:30. Ni un taco. Ni el de la gasolinera. La silla ahí, el despachador no.' },
     { t: 29, who: 'Liobas', text: 'Es domingo, son las cuatro y media. ¿Qué esperaba? ¿Mariachi?' },
     { t: 34, who: 'Liobas', text: 'Vendieron la casa de mi mamá. Vengo por las cajas y me regreso.' },
     { t: 38, who: 'Liobas', text: '...¿Y ese? Parado en el acotamiento, viendo el llano. Ni voltea.' },
@@ -440,10 +441,10 @@ window.STORY = (function () {
 
 // Traducción al inglés (generada por tools/en.py; no editar a mano). Clave: el texto en español tal cual.
 window.EN = {
-"Quince años. Quince. Y lo primero que pienso es que la curva de La Barca sigue igual de fea.": "Fifteen years. Fifteen. And the first thing I think is that the curve at La Barca is as ugly as ever.",
+"Quince años, y esta madre igual. Pinche curva maciza de La Barca.": "Fifteen years, and this damn road is the same. That cursed curve at La Barca.",
 "Todo por ahorrarme cien varos del hotel en Guadalajara. \"Manejas de noche y llegas a desayunar\", dijo el Chuche.": "All to save a hundred pesos on a hotel in Guadalajara. \"Drive at night and you'll make it for breakfast,\" Chuche said.",
 "...Dios te salve, María, llena eres de gracia... (estática)": "...Hail Mary, full of grace... (static)",
-"...La glorieta de Jiquilpan. 4:30. Ni un taco. Ni el de la gasolinera. La silla ahí, el despachador no.": "...The Jiquilpan roundabout. 4:30. Not a taco stand open. Not even the gas station guy. The chair's there, the attendant isn't.",
+"...El libramiento. 4:30. Ni un taco. Ni el de la gasolinera. La silla ahí, el despachador no.": "...The bypass road. 4:30. Not a taco stand open. Not even the gas station guy. The chair's there, the attendant isn't.",
 "Es domingo, son las cuatro y media. ¿Qué esperaba? ¿Mariachi?": "It's Sunday, half past four in the morning. What did I expect? Mariachi?",
 "Vendieron la casa de mi mamá. Vengo por las cajas y me regreso.": "They sold my mom's house. I'm here for the boxes, then I'm gone.",
 "...¿Y ese? Parado en el acotamiento, viendo el llano. Ni voltea.": "...Who's that? Standing on the shoulder, staring at the plain. Doesn't even turn around.",
@@ -1014,6 +1015,587 @@ window.EN = {
 "Radio": "Radio"
 };
 
+// Japonés (generado por tools/ja.py; no editar a mano). Clave: el texto en español tal cual.
+window.JA = {
+"Quince años, y esta madre igual. Pinche curva maciza de La Barca.": "十五年。で、こいつは相変わらずだ。ラ・バルカのクソみたいなカーブ。",
+"Todo por ahorrarme cien varos del hotel en Guadalajara. \"Manejas de noche y llegas a desayunar\", dijo el Chuche.": "グアダラハラのホテル代、百ペソ浮かすためにこれだ。「夜走れば朝飯に間に合う」ってチュチェが言ったんだ。",
+"...Dios te salve, María, llena eres de gracia... (estática)": "…めでたし聖寵充ち満てるマリア…（ノイズ）",
+"...El libramiento. 4:30. Ni un taco. Ni el de la gasolinera. La silla ahí, el despachador no.": "…バイパス道路。四時半。タコス屋も開いてない。ガソリンスタンドの係もいない。椅子はある、人はいない。",
+"Es domingo, son las cuatro y media. ¿Qué esperaba? ¿Mariachi?": "日曜の朝四時半だぞ。何を期待してた？マリアッチか？",
+"Vendieron la casa de mi mamá. Vengo por las cajas y me regreso.": "母さんの家が売れた。荷物を取りに来ただけだ。すぐ帰る。",
+"...¿Y ese? Parado en el acotamiento, viendo el llano. Ni voltea.": "…あいつは何だ？路肩に突っ立って、平野を見てる。振り向きもしない。",
+"...Pinche borracho.": "…酔っ払いめ。",
+"Niebla. La de la ciénega. Mi mamá decía que cuando baja así, no sale nadie.": "霧だ。湿地の霧。こんなふうに降りてくる夜は誰も外に出ないって、母さんが言ってた。",
+"BIENVENIDOS A SAHUAYO · CAPITAL DEL HUARACHE": "ようこそ サウアヨへ · ワラチェの都",
+"¿Y esto? Patrullas, carros atravesados... ¿a las cinco de la mañana?": "何だこれは？パトカー、道をふさぐ車…朝の五時に？",
+"No. No, no, no. Ahorita no. Ahorita no te me apagues.": "だめだ。だめだめだめ。今はやめてくれ。今止まるな。",
+"CAPÍTULO 1": "第一章",
+"CAPÍTULO 2": "第二章",
+"CAPITULO 2": "第二章",
+"CAPITULO 3": "第三章",
+"CAPITULO 4": "第四章",
+"CAPITULO 5": "第五章",
+"CAPITULO 6": "第六章",
+"CAPITULO 7": "第七章",
+"CAPITULO 8": "第八章",
+"La vuelta": "帰郷",
+"A la plaza": "広場へ",
+"Mercado y Parroquia": "市場と教会",
+"Catacumbas": "カタコンベ",
+"Sagrado Corazón": "サグラド・コラソン",
+"El Infiernito": "エル・インフィエルニート",
+"El túnel": "トンネル",
+"Cristo Rey": "クリスト・レイ",
+"Ni un taxi, ni un alma. Camina por el boulevard hacia el norte, hasta la calle Constitución.": "タクシーも人影もない。大通りを北へ、コンスティトゥシオン通りまで歩け。",
+"Algo anda mal con ese señor. Defiéndete: clic o F para golpear. Cuida el aire.": "あの男は様子がおかしい。身を守れ：クリックかFで殴る。息に気をつけろ。",
+"Busca a algún policía en la Presidencia Municipal. La entrada principal está encadenada: prueba la puerta de la calle Guerrero.": "市役所で警官を探せ。正面入口は鎖で閉まっている：ゲレロ通り側の扉を試せ。",
+"Hay guardias adentro y no están bien. Busca algo con qué defenderte en las oficinas.": "中に警備員がいるが、まともじゃない。事務室で武器になる物を探せ。",
+"Sube a la planta alta: Seguridad Pública y la oficina del Presidente.": "二階へ上がれ：公安課と市長室だ。",
+"Lee lo que dejaron en el Cabildo y en la oficina del Presidente.": "議会室と市長室に残された物を読め。",
+"Ya sabes lo suficiente. Sal por la puerta de Guerrero y toma Constitución hacia la plaza.": "もう十分わかった。ゲレロ通りの扉から出て、コンスティトゥシオン通りを広場へ。",
+"Toma Constitución hacia el poniente. Los cruces están cerrados con carros; sigue la calle hasta el Hotel Latino.": "コンスティトゥシオン通りを西へ。交差点は車でふさがれている。ホテル・ラティーノまで進め。",
+"El cencerro suena desde la azotea del Hotel Latino. Entra: la llave del 7 está en el tablero de la recepción.": "ホテル・ラティーノの屋上からカウベルが鳴っている。中へ：7号室の鍵はフロントのキーボードにある。",
+"Los perros se dispersaron. Sigue por Constitución hasta la Farmacia Roma: ahí hay medicinas, debajo del mostrador.": "犬たちは散った。コンスティトゥシオン通りを薬局ロマまで。カウンターの下に薬がある。",
+"Llega a la Plaza Principal, al kiosco.": "中央広場の東屋まで行け。",
+"La Parroquia está encadenada. Rodea por el Mercado: entra por la calle Morelos, al sur.": "教会は鎖で閉まっている。市場を回り込め：南のモレロス通りから入れ。",
+"Entra al Mercado por la puerta de Morelos (al sur de la Parroquia) y cruza hasta la reja de Sahagún.": "モレロス通り側の入口（教会の南）から市場に入り、サアグン通り側の鉄格子まで抜けろ。",
+"La puerta lateral de la Parroquia da a Sahagún. Entra.": "教会の横の扉はサアグン通りに面している。入れ。",
+"Alguien se atrincheró en las oficinas del patio. Habla con quien esté ahí.": "中庭の事務室に誰かが立てこもっている。話しかけろ。",
+"El Padre te dio la llave del baptisterio. Ahí guardó lo que no quería que la Hermandad leyera.": "神父に洗礼堂の鍵をもらった。兄弟団に読まれたくない物をそこに隠してある。",
+"Vuelve con el Padre. La trampilla de la sacristía baja a las catacumbas.": "神父のところへ戻れ。聖具室の跳ね戸がカタコンベへ下りている。",
+"Las galerías llegan al Sagrado Corazón. Busca la capilla subterránea: ahí dejaron su cuaderno.": "通路はサグラド・コラソン教会まで続いている。地下の礼拝堂を探せ：奴らのノートがある。",
+"La escalera de salida tiene un candado de cuatro números. Alguna placa de estos nichos sabe el año.": "出口の階段には四桁の錠がかかっている。この壁龕の銘板のどれかがその年を知っている。",
+"Sube al Sagrado Corazón.": "サグラド・コラソン教会へ上がれ。",
+"Sube a la torre. Las campanas grandes están arriba: el Padre quiere que las toques.": "塔を登れ。大きな鐘は上にある：神父はお前に鳴らしてほしがっている。",
+"No funcionó. El Campanero sube. Baja la torre, cruza la nave y sal por el atrio hacia el norte, a la calle Arregui.": "だめだった。鐘つきが上がってくる。塔を下り、身廊を抜け、前庭から北のアレギ通りへ出ろ。",
+"Baja por Arregui hasta el arroyo. El Padre dijo \"una entrada vieja\" en el talud.": "アレギ通りを下って小川へ。神父は土手に「古い入口」があると言った。",
+"La niña del río no habla. Le falta algo a su muñeca. La troca con el motor encendido tiene la puerta abierta.": "川の少女は話さない。人形に何かが足りない。エンジンのかかったピックアップのドアが開いている。",
+"La boca de piedra con la cruz de hierro. Entra.": "鉄の十字架のある石の口。入れ。",
+"Cruza la cueva. Los Enmascarados no cruzan la luz de una veladora: si encuentras una, prendela (V).": "洞窟を抜けろ。仮面の者たちはろうそくの光を越えられない：見つけたら灯せ（V）。",
+"La sala del Ayotl. Duermen alrededor. No corras. No dispares. Cruza.": "アヨトルの間。奴らが周りで眠っている。走るな。撃つな。渡れ。",
+"La escalera de piedra. Sube. Lee la libreta mientras subes.": "石の階段。登れ。登りながら手帳を読め。",
+"El sistema de audio del cerro necesita luz. Hay un generador en el cuarto de máquinas, bajo la explanada, lado poniente. Le falta gasolina.": "丘の音響設備には電気がいる。広場の下、西側の機械室に発電機がある。ガソリンが足りない。",
+"Toca la campana chica de la capilla tres veces, para que vengan.": "礼拝堂の小さな鐘を三度鳴らせ。奴らが来るように。",
+"Al micrófono. No les reces: nómbralos. Uno por uno. Tres rondas.": "マイクへ。祈るな：名前を呼べ。一人ずつ。三回戦だ。",
+"Aviso en la terminal": "バスターミナルの掲示",
+"Recibo de Tesorería": "出納課の領収書",
+"Parte de novedades · 12 de julio": "事件報告 · 七月十二日",
+"Acta de Cabildo · 18 de julio": "議会議事録 · 七月十八日",
+"Carta sin enviar": "出されなかった手紙",
+"Oración del Santo Despertar": "聖なる目覚めの祈り",
+"Nota del Hotel Latino": "ホテル・ラティーノのメモ",
+"Receta con anotación": "書き込みのある処方箋",
+"Cuaderno de la Hermandad": "兄弟団のノート",
+"Última página de Doña Eduviges": "エドゥビヘスおばさんの最後の一枚",
+"La libreta del Padre Anselmo": "アンセルモ神父の手帳",
+"Libro de registro del hotel": "ホテルの宿泊台帳",
+"Lista del Penitente": "苦行者のリスト",
+"Aviso de Correos": "郵便局の掲示",
+"Hoja escondida del Padre": "神父が隠した一枚",
+"Placa de un nicho": "壁龕の銘板",
+"Volante de la Hermandad": "兄弟団のチラシ",
+"Nota del campanero viejo": "老いた鐘つきのメモ",
+"Cuaderno del taller de huarache": "ワラチェ工房の帳面",
+"Inscripción en la galería vieja": "古い通路の碑文",
+"Guion de la Hermandad para el cerro": "丘での兄弟団の段取り",
+"AVISO A LOS USUARIOS.\nPor disposición del H. Ayuntamiento y de la Hermandad del Santo Despertar, las corridas quedan SUSPENDIDAS hasta nuevo aviso. No se venderán boletos de salida.\nDios nos cuide.\n— Sahuayo, 24 de julio.\n\n(abajo, con pluma, letra distinta:)\nEl de las 5:40 sí salió. Yo lo vi irse vacío. —R.": "利用者各位。\n市議会および聖なる目覚めの兄弟団の決定により、全便は追って通知があるまで運休とします。出発の切符は販売しません。\n神よ我らを守りたまえ。\n— サウアヨ、七月二十四日。\n\n（下に、ペンで、別の筆跡：）\n五時四十分の便は出た。空のまま出ていくのを見た。—R",
+"TESORERÍA MUNICIPAL · RECIBO 00417\nConcepto: donativo voluntario \"Procesión de Desagravio\".\nRecibí de: Hermandad del Santo Despertar.\nCantidad: $48,000.00 (cuarenta y ocho mil pesos). Efectivo.\nObservaciones: \"para veladoras y cencerros\".\n\n(con lápiz:) ¿Quién necesita 48 mil pesos de cencerros?": "市出納課 · 領収書 00417\n名目：任意の寄付「償いの行列」。\n受領先：聖なる目覚めの兄弟団。\n金額：48,000.00ペソ（四万八千ペソ）。現金。\n備考：「ろうそくとカウベル代」。\n\n（鉛筆で：）四万八千ペソ分のカウベルなんて誰がいるんだ？",
+"DIRECCIÓN DE SEGURIDAD PÚBLICA · PARTE DE NOVEDADES · 12 DE JULIO\n\n22:40 — Reporte de persona agresiva en calle Insurgentes esq. Juárez. Masculino 40 años aprox., camisa de cuadros, \"haciendo ruidos\". Al llegar la unidad 03 el sujeto corrió en cuatro patas (sic). No se logró detención. Vecinos lo identifican como Salvador \"Chava\" Orozco.\n\n23:15 — Vecinos de la col. Santuario reportan campanas del Sagrado Corazón sonando sin personal en el templo. Se verifica: templo cerrado con candado por fuera. Las campanas continuaban.\n\n23:50 — Doña E. (La Vidente) y 30 personas con túnicas en la escalinata de Cristo Rey, subiendo de rodillas. No constituye falta. Se retira la unidad.\n\nOBSERVACIÓN DEL COMANDANTE: Es la quinta noche. Pido instrucciones por escrito. Mis elementos no quieren cubrir el turno de noche. Yo tampoco.\n— Cmte. J. Navarro": "公安課 · 事件報告 · 七月十二日\n\n22:40 — インスルヘンテス通りとフアレス通りの角で暴れる人物の通報。男性、四十歳前後、チェックのシャツ、「うなり声をあげている」。三号車が到着すると、当人は四つん這いで走り去った（原文ママ）。逮捕に至らず。近隣住民はサルバドール・「チャバ」・オロスコと証言。\n\n23:15 — サントゥアリオ地区の住民から、無人のサグラド・コラソン教会の鐘が鳴っているとの通報。確認：教会は外側から南京錠で施錠。鐘は鳴り続けていた。\n\n23:50 — E夫人（お告げの女）と三十名がローブ姿でクリスト・レイの階段を膝で登っていた。違反には当たらず。撤収。\n\n隊長所見：これで五晩目。文書での指示を求む。部下は夜勤を嫌がっている。私もだ。\n— J・ナバロ隊長",
+"SESIÓN EXTRAORDINARIA DE CABILDO · 18 DE JULIO\nÚnico punto: Festival de las Fiestas de Santiago Apóstol.\n\nEl regidor de Cultura expone que el Festival (escenario en la plaza, 4 noches, patrocinio cervecero) es \"lo que trae gente y dinero\". La regidora de Educación expone que \"la fiesta ya no es de Santiago, es del DJ\", y lee una carta de 412 firmas de la Hermandad del Santo Despertar que exige cancelar.\n\nSe somete a votación: 7 votos a favor de CANCELAR el Festival, 2 en contra.\n\nSe autoriza en su lugar una \"Procesión de Desagravio\" el 24 de julio de la plaza a Cristo Rey, organizada por la Hermandad, \"sin bocinas, sin alcohol, con veladoras\".\n\nEl Presidente Municipal pide que conste en acta que vota a favor \"para que ya se calmen\".\n\n(en el margen, a lápiz:) Se calmaron.": "市議会臨時会 · 七月十八日\n議題：聖ヤコブ祭のフェスティバルについて。\n\n文化担当議員は、フェスティバル（広場のステージ、四晩、ビール会社の協賛）は「人と金を呼ぶもの」だと述べる。教育担当議員は「祭りはもう聖ヤコブのものではなくDJのものだ」と述べ、中止を求める聖なる目覚めの兄弟団の四百十二名の署名入り書簡を読み上げる。\n\n採決：フェスティバル中止に賛成七、反対二。\n\n代わりに七月二十四日、広場からクリスト・レイまでの「償いの行列」を兄弟団主催で認める。「スピーカーなし、酒なし、ろうそくのみ」。\n\n市長は「連中が静かになるように」賛成票を投じたと議事録に残すよう求める。\n\n（余白に、鉛筆で：）静かになった。",
+"Mari:\nNo te vayas a reír. Llevo dos días durmiendo en la oficina porque en la casa se oyen cencerros toda la noche y en la oficina no. O sea sí, pero menos.\n\nAyer fui a la procesión porque era de ley ir. Yo esperaba rezos. Y había rezos, pero también otra cosa que no era español ni latín. Celso lo leía de un cuaderno. Eduviges se reía. Las veladoras no se apagaban con el aire.\n\nSubieron una vasija de barro, grande, como una tortuga, entre ocho. La pusieron frente al Cristo. Y luego todos gritaron \"despierta\" y yo también grité, Mari, porque todos gritaban, y no sé por qué.\n\nDesde entonces no he dormido. Las campanas no paran. Navarro no contesta la radio. Mandé a los muchachos a cerrar el boulevard con las patrullas y no regresaron.\n\nSi lees esto es que no te llamé. No es que no quisiera. Es que ya no sé qué voy a decir cuando abra la boca.\nTe quiero. No vengas.\n—T.": "マリへ\n笑わないでくれ。二日前から事務所で寝ている。家にいると一晩中カウベルが聞こえて、事務所だと聞こえないからだ。いや、聞こえるが、少しは静かだ。\n\n昨日は行列に出た。出ないわけにはいかなかった。祈りを聞くつもりだった。祈りはあった。だがスペイン語でもラテン語でもない何かもあった。セルソがノートから読み上げていた。エドゥビヘスは笑っていた。ろうそくは風に吹かれても消えなかった。\n\n大きな土の壺を、亀みたいなやつを、八人がかりで運び上げた。キリスト像の前に置いた。それからみんなが「目覚めよ」と叫んで、おれも叫んだ、マリ。みんなが叫んでいたからで、なぜだかわからない。\n\nそれから眠れていない。鐘が止まらない。ナバロは無線に出ない。パトカーで大通りを封鎖させに若い連中を出したが、戻ってこなかった。\n\nこれを読んでいるなら、おれは電話しなかったということだ。したくなかったわけじゃない。口を開いたら何を言うのか、もうわからないんだ。\n愛してる。来るな。\n—T",
+"✝ ORACIÓN DEL SANTO DESPERTAR ✝\n(rezar de rodillas, con la veladora en la mano, nueve veces)\n\nDios Padre, que ves a este pueblo dormido en la fiesta y el vicio,\nperdona a Sahuayo, Sodoma de la Ciénega, y corrígelo con tu fuerza.\nQue el que baila, pare. Que el que come, ayune. Que el que grita, calle.\nQue el que se puso máscara, se la quede.\nDespierta, Señor, al que duerme bajo el cerro, y que él los despierte a ellos.\nDESPIERTA, SAHUAYO. Amén.\n\n(a mano:) El Hermano dice que ya está despierto. Que ya no hay que rezar. Que ahora hay que cuidar el rebaño.": "✝ 聖なる目覚めの祈り ✝\n（跪き、ろうそくを手に、九度唱えること）\n\n父なる神よ、祭りと悪徳に眠るこの町を見たまえ。\n湿地のソドム、サウアヨを赦し、御力をもって正したまえ。\n踊る者は止まれ。食う者は断て。叫ぶ者は黙れ。\n仮面をつけた者は、それを外すな。\n主よ、丘の下に眠る者を目覚めさせ、その者に彼らを目覚めさせたまえ。\n目覚めよ、サウアヨ。アーメン。\n\n（手書きで：）兄弟は、もう目覚めたと言う。もう祈る必要はない。これからは群れの世話をするのだと。",
+"Para quien venga a cubrir el turno:\nNO le abran al del cuarto 7. Lleva tres días sin salir y pide que le lleven el desayuno \"con la campanita\". No tenemos campanita.\nLa llave de la azotea la tiene él. No sé por qué se la di.\n—Yola": "次のシフトの人へ：\n7号室の客には扉を開けないこと。三日間部屋から出ず、朝食を「小さな鈴と一緒に」持ってこいと言う。うちに鈴なんてない。\n屋上の鍵はあの人が持っている。どうして渡したのか自分でもわからない。\n—ヨラ",
+"Receta: Clonazepam 2 mg. Paciente: ——. Médico: Dr. ——.\n\n(al reverso, con plumón:)\nYa no surto. Vinieron tres de la Hermandad a decir que las medicinas \"duermen\". Me quitaron el estante completo.\nSi alguien necesita algo, está debajo del mostrador, en la caja de las vendas.\nQue Dios me perdone por lo que les dije.": "処方箋：クロナゼパム 2 mg。患者：——。医師：——。\n\n（裏に、マーカーで：）\nもう薬は出さない。兄弟団の三人が来て、薬は「人を眠らせる」と言った。棚ごと持っていかれた。\n誰か必要なら、カウンターの下、包帯の箱の中にある。\n奴らに言ったことを、神よ赦したまえ。",
+"RITO DEL DESPERTAR\n(copiado de la Vidente, que lo copió del sueño)\nI. Se baja a donde están los que murieron por Cristo Rey y se les pide permiso.\nII. Se cava bajo la tercera cruz hasta hallar el corazón viejo del pueblo. (Hallado el 2 de julio. Es una vasija. Tortuga. Pesa como un hombre.)\nIII. Se sube al cerro con el corazón. Cuarenta veladoras por cada año desde que la fiesta se echó a perder: la Vidente dice que fue en el 85. (Hicimos 1,640. Faltaron.)\nIV. Se llama al Durmiente por su nombre viejo tres veces y por su nombre nuevo tres veces.\nV. Se le ofrece lo que el pueblo más quiere: la fiesta. Las máscaras. La comida. El ruido.\nVI. Cuando despierte, nosotros ya estaremos despiertos y los demás se corregirán.\n\n(otra letra:) Punto VI no está pasando como dijo. Los demás no se corrigieron: se quedaron en lo que estaban haciendo. El Hermano dice que eso ES la corrección. Yo ya no sé.\n\n(otra letra, grande:) NO LE DIGAN SU NOMBRE EN VOZ ALTA. VIENE.": "目覚めの儀式\n（お告げの女より書き写す。彼女は夢より書き写した）\n一、クリスト・レイのために死んだ者たちのもとへ下り、許しを乞う。\n二、第三の十字架の下を掘り、町の古い心臓を見つける。（七月二日に発見。壺である。亀。男一人分の重さ。）\n三、心臓を抱えて丘を登る。祭りが堕落してからの一年ごとに、ろうそく四十本：お告げの女は八五年からだと言う。（千六百四十本作った。足りなかった。）\n四、眠れる者を古い名で三度、新しい名で三度呼ぶ。\n五、町が最も愛するものを捧げる：祭り。仮面。食べ物。騒ぎ。\n六、彼が目覚めるとき、我らはすでに目覚めており、他の者たちは正される。\n\n（別の筆跡：）六は、言われたとおりになっていない。他の者たちは正されなかった：していたことをそのまま続けている。兄弟は、それこそが正しさだと言う。私にはもうわからない。\n\n（別の筆跡、大きく：）あの名を声に出して呼ぶな。来る。",
+"Yo nomás quería que dejaran de poner la música tan fuerte en la plaza. Eso era todo. Que mi hijo no llegara borracho el 25. Que el padre no tuviera que gritar la misa encima del sonido.\nSe lo pedí a Dios y me contestó otro. Yo creí que era Él porque hablaba bonito.\nAhora el Hermano dice que yo soy santa y me tiene aquí abajo para que no me vaya.\nSi alguien lee esto: no le recen. No lo llamen. Llámenlos a ellos. Por su nombre. Como cuando uno llama a los hijos a cenar. Eso sí lo oyen.\n—Eduviges Hernández, 71 años. Perdón.": "私はただ、広場であんなに大きな音で音楽をかけるのをやめてほしかっただけ。それだけだった。息子が二十五日に酔って帰ってこないように。神父さまがスピーカーに負けじとミサを叫ばなくてすむように。\n神さまにお願いしたら、別の者が答えた。あんまりきれいな言葉で話すから、あの方だと思ってしまった。\n今、兄弟は私を聖女だと言って、逃げないようにここに閉じ込めている。\nこれを読む人へ：あれに祈らないで。あれを呼ばないで。あの人たちを呼んで。名前で。子どもたちを夕飯に呼ぶみたいに。それなら聞こえる。\n—エドゥビヘス・エルナンデス、七十一歳。ごめんなさい。",
+"Cuaderno de pasta dura, letra de cura.\n\nPágina 1. Lo que sé: la cosa de abajo no es demonio ni es santo. Es el lugar. Es el nombre. Despierta cuando lo llaman y se duerme cuando lo dejan en paz. La Hermandad lo llama con campanas. Yo pensé que podía bendecirlo con campanas. Error de viejo.\n\nPágina 2. Lo que vi: los poseídos responden a su propio nombre. Lupe me volteó a ver cuando le dije \"Lupe\". No \"hija\", no \"mujer\": Lupe. Un segundo. Luego se fue.\n\nPágina 3. Lista: todos los que tú vayas sabiendo. Apúntalos. Los nombres son lo único que no se les olvidó.\n\nPágina 4. Súbete donde te oigan todos. Toca para que vengan. Y luego no les reces: nómbralos. Uno por uno. Hasta que se cansen de estar despiertos.": "硬い表紙の手帳、神父の筆跡。\n\n一頁。わかっていること：下にいるあれは悪魔でも聖人でもない。あれは場所だ。あれは名前だ。呼ばれれば目覚め、放っておけば眠る。兄弟団は鐘であれを呼ぶ。私は鐘で祝福できると思った。老人の間違いだ。\n\n二頁。見たこと：取り憑かれた者は自分の名前に反応する。「ルペ」と呼ぶと、ルペは私を振り返った。「娘よ」でも「お前」でもない：ルペ、と。一秒だけ。それから行ってしまった。\n\n三頁。リスト：お前が知った者を全員。書き留めろ。名前だけは、彼らが忘れなかった唯一のものだ。\n\n四頁。皆に聞こえる場所に登れ。鐘を鳴らして呼べ。そして祈るな：名前を呼べ。一人ずつ。彼らが目覚めていることに疲れるまで。",
+"HOTEL LATINO · REGISTRO DE HUÉSPEDES · JULIO\n\n19 — Cuarto 3: Sr. Vargas, viajante de huarache. Pagó dos noches.\n21 — Cuarto 7: Rubén Castañeda. \"Es de aquí, pero ya no quiere dormir en su casa\". Pagó una semana. Trae campanitas en una bolsa.\n22 — Cuarto 5: dos muchachos de Jiquilpan que venían al Festival. Se fueron sin pagar cuando les dijeron que se canceló.\n23 — Nadie.\n24 — Nadie. Don Rubén pidió que le subieran el desayuno con la campanita. Yola dijo que no.\n25 — (sin letra; la página está marcada con cera de veladora)": "ホテル・ラティーノ · 宿泊台帳 · 七月\n\n十九日 — 3号室：バルガス氏、ワラチェの行商。二泊分前払い。\n二十一日 — 7号室：ルベン・カスタニェダ。「地元の人だが、もう自宅で寝たくないそうだ」。一週間分前払い。袋に小さな鈴を入れて持ち歩いている。\n二十二日 — 5号室：フェスティバル目当てのヒキルパンの若者二人。中止と聞くと払わずに出ていった。\n二十三日 — なし。\n二十四日 — なし。ルベンさんが朝食を鈴と一緒に持ってこいと言った。ヨラは断った。\n二十五日 — （記入なし。ページにろうそくの蝋の跡）",
+"REBAÑO DE CONSTITUCIÓN (a mi cargo)\n- Los dos de la ferretería (hermanos)\n- El muchacho del Oxxo (de noche)\n- Ramiro, el que vendía discos en la plaza\n\nSe llaman con dos cencerradas cortas. Se calman con una larga. Si uno se me va, lo dejo: el Hermano dice que el Durmiente los recoge solo.\nNo bajar de la azotea hasta que salga el sol. El sol ya no sale.": "コンスティトゥシオン通りの群れ（私の担当）\n- 金物屋の二人（兄弟）\n- オクソの夜番の若いの\n- ラミロ、広場でレコードを売っていた男\n\nカウベルを短く二度で呼ぶ。長く一度で鎮める。一人逃げても放っておく：眠れる者が自分で拾うと兄弟が言った。\n日が昇るまで屋上から下りるな。日はもう昇らない。",
+"SERVICIO POSTAL MEXICANO · SUCURSAL SAHUAYO · AVISO\nPor instrucciones superiores (?) no se recibirá ni entregará correspondencia hasta nuevo aviso.\n\n(abajo, a mano, en el reverso de un recibo:)\nCuca: te dejé tu carta de tu hija en el cajón de las estampillas. No la pude entregar porque ya no estabas en el puesto, estabas en el pasillo, parada, diciendo \"qué va a llevar\" sin nadie. Perdóname. Me voy a Jiquilpan a pie.\n—Toño": "メキシコ郵便局 · サウアヨ支局 · 掲示\n上からの指示（？）により、追って通知があるまで郵便の受付も配達も行いません。\n\n（下に、手書きで、領収書の裏に：）\nクカへ：娘さんからの手紙は切手の引き出しに入れておいた。渡せなかったのは、あんたがもう店にいなかったからだ。通路に突っ立って、誰もいないのに「何にしましょう」って言ってた。許してくれ。ヒキルパンまで歩いて行く。\n—トニョ",
+"Lo que no quiero que lean los de la Hermandad:\n\nLos nombres de los que todavía hablaban y me buscaron: en la sacristía, en la calle, en recados por debajo de la puerta. Del confesionario no se escribe nada; eso se queda conmigo. Los que faltan en mi libreta: Nachito, el que barre la plaza. Doña Chelo, la de los tamales. El profe Gudiño. Mi sobrina Lupe.\n\nSi me matan, que alguien los diga en voz alta en un lugar donde se oiga. No un rezo. Un pase de lista.\n\nY el año del candado de abajo es el año en que lo cerraron: el del niño.": "兄弟団に読まれたくないこと：\n\nまだ話せて、私を訪ねてきた人々の名前：聖具室で、通りで、扉の下に差し込まれたメモで。告解で聞いたことは何も書かない。それは私と共にある。手帳に足りない名前：広場を掃くナチート。タマレス屋のチェロおばさん。グディニョ先生。姪のルペ。\n\n私が殺されたら、誰かが声の届く場所でこの名を声に出して呼んでほしい。祈りではなく。点呼を。\n\nそして下の錠の年は、閉ざされた年だ：あの少年の年。",
+"AQUÍ DESCANSAN LOS RESTOS DE\nJ. TRINIDAD GÁLVEZ\nCRISTERO\n† 1928\n\"MURIÓ POR CRISTO REY Y POR SU PUEBLO\"\n\n(rayado encima con un clavo:) DESPIERTA": "ここに眠る\nJ・トリニダー・ガルベス\nクリステロ\n† 1928\n「王なるキリストと故郷のために死す」\n\n（釘で上から引っかいて：）DESPIERTA — 目覚めよ",
+"✝ HERMANDAD DEL SANTO DESPERTAR ✝\nSAHUAYENSE: el pueblo ya despertó. No tengas miedo del que camina y no habla: está corrigiéndose.\nNO prendas luces. NO pongas música. NO digas nombres.\nSi oyes la campana grande, VEN.\nEl Hermano Celso te espera en el cerro.": "✝ 聖なる目覚めの兄弟団 ✝\nサウアヨの民へ：町は目覚めた。歩きながら話さない者を恐れるな：正されている途中だ。\n明かりをつけるな。音楽をかけるな。名前を口にするな。\n大きな鐘が聞こえたら、来い。\nセルソ兄弟が丘でお前を待っている。",
+"A quien suba:\nLas campanas se tocan con la cuerda, tres jalones largos, no más, porque la grande está cuarteada desde el temblor.\nDesde el 24 suenan solas y nadie jala nada. Yo me bajé y ya no subo.\nDesde que sacaron la vasija suenan distinto. Como si ya no fueran de bronce. Como si el golpe cayera en un pozo.\nSi las tocas tú, que sea por algo bueno.\n—Chon, campanero desde 1979": "登ってきた者へ：\n鐘は綱で鳴らす。長く三度、それ以上はだめだ。大きいのは地震以来ひびが入っている。\n二十四日から鐘は勝手に鳴る。誰も綱を引いていない。私は下りた。もう登らない。\n壺が運び出されてから音が変わった。青銅じゃなくなったみたいに。打った音が井戸の底に落ちていくみたいに。\nお前が鳴らすなら、良いことのために鳴らしてくれ。\n—チョン、一九七九年より鐘つき",
+"PEDIDOS\n- 40 pares tejidos, para la Hermandad (sin cobrar, dice mi papá)\n- 12 pares para la danza de los tlahualiles (cancelada, se quedan)\n\nMi papá se fue a la procesión con los 40 pares puestos en una lona. No regresó. Dejé la troca prendida para que vea la luz si vuelve de noche.\n—Memo Sandoval": "注文\n- 編みのワラチェ四十足、兄弟団へ（代金は取らないと親父が言う）\n- トラワリルの踊り用に十二足（中止。残る）\n\n親父は四十足を防水布に並べて行列へ出かけた。戻ってこなかった。夜に帰ってきたら明かりが見えるように、ピックアップのエンジンをかけたままにしておく。\n—メモ・サンドバル",
+"ESTOS NICHOS SE VACIARON EN 1931 PARA LLEVAR A LOS NUESTROS ARRIBA, A LA LUZ.\nLO QUE QUEDÓ ABAJO NO ERA NUESTRO.\nNO SE CAVE MÁS ABAJO DE ESTA PIEDRA.\n\n(abajo, con pintura fresca:) Cavamos.": "この壁龕は一九三一年、我らの者を光の下へ運び上げるために空にされた。\n下に残ったものは、我らのものではなかった。\nこの石より下は掘るな。\n\n（下に、新しいペンキで：）掘った。",
+"ORDEN PARA ESTA NOCHE (Hermano Celso)\n1. Generador apagado. Nada de bocinas: él no quiere ruido que no sea de nosotros.\n2. Campana chica: solo yo la toco.\n3. Nombres prohibidos en la explanada: los de la lista de la Vidente (los que se pueden despertar de a de veras). Si alguien los dice, cencerro largo y se lo llevan abajo.\n4. Decir en voz alta nada más estos: \"el Durmiente\", \"el Despierto\", \"el Corazón Viejo\", \"Tzacuatlayotl\".\n5. Si él habla, nadie conteste. No es demonio: es más grande que eso, y nosotros somos polvo.": "今夜の段取り（セルソ兄弟）\n一、発電機は切る。スピーカーは使わない：彼は我らのもの以外の音を望まない。\n二、小さな鐘は私だけが鳴らす。\n三、広場で口にしてはならない名前：お告げの女のリストにある者たち（本当に目覚めさせられる者たち）。誰かが口にしたら、長いカウベルで下へ連れていく。\n四、声に出していいのはこれだけ：「眠れる者」「目覚めし者」「古い心臓」「ツァクアトラヨトル」。\n五、彼が語っても、誰も答えるな。彼は悪魔ではない：それより大きなもので、我らは塵だ。",
+"La central de autobuses. Horario pegado en el vidrio con cinta. Adentro, un autobús con la puerta abierta y las luces de cabina prendidas. Nadie.": "バスターミナル。ガラスにテープで貼られた時刻表。中にはドアが開いたまま車内灯のついたバス。誰もいない。",
+"Pintado con aerosol rojo, con letra de alguien que no sabe pintar: DESPIERTA SAHUAYO. Debajo, más chiquito: \"ya\".": "赤いスプレーで、描き慣れない字：DESPIERTA SAHUAYO——目覚めよ、サウアヨ。その下に小さく：「ya」——もう。",
+"PRESIDENCIA MUNICIPAL · SAHUAYO DE MORELOS · \"Progreso, Justicia, Patria\". La placa tiene veladoras derretidas abajo.": "市役所 · サウアヨ・デ・モレロス · 「進歩、正義、祖国」。銘板の下に溶けたろうそく。",
+"El mural de Sahuayo: tlahualiles, huaraches, las torres de la parroquia, Cristo Rey en el cerro. Está nuevo. Está bonito. Alguien le rayó los ojos a todas las caras.": "サウアヨの壁画：トラワリルの踊り手、ワラチェ、教会の塔、丘のクリスト・レイ。新しい。きれいだ。誰かが全部の顔の目を引っかいた。",
+"TESORERÍA MUNICIPAL · Horario 9:00 a 15:00 · \"No se aceptan cheques\".": "市出納課 · 受付 9:00〜15:00 · 「小切手不可」。",
+"REGISTRO CIVIL · Nacimientos, matrimonios, defunciones. La ventanilla de defunciones tiene una fila de veladoras.": "戸籍課 · 出生、婚姻、死亡。死亡届の窓口にろうそくが一列。",
+"SALA DE CABILDO. Las sillas están todas volteadas hacia la ventana, como si hubieran estado viendo algo afuera.": "議会室。椅子が全部窓の方を向いている。外の何かを見ていたみたいに。",
+"DIRECCIÓN DE SEGURIDAD PÚBLICA. En el pizarrón: \"TURNO NOCHE: nadie\". Y abajo, con otra letra: \"ya no hace falta\".": "公安課。ホワイトボードに「夜勤：なし」。その下に別の筆跡で「もう必要ない」。",
+"OFICINA DEL C. PRESIDENTE MUNICIPAL. La puerta tiene una hoja clavada con una tachuela.": "市長室。扉に画鋲で紙が一枚留めてある。",
+"HOTEL LATINO · 5 PISOS · \"Confort y tradición\". La cortina está arriba y el letrero de NO HAY CUARTOS, prendido.": "ホテル・ラティーノ · 五階建て · 「快適と伝統」。シャッターは上がり、「満室」の看板が点いている。",
+"FARMACIA ROMA · Constitución 212. La vitrina rota desde adentro. En el vidrio, con plumón: \"Las medicinas DUERMEN. No surtimos\".": "薬局ロマ · コンスティトゥシオン212。内側から割られたショーウィンドウ。ガラスにマーカーで「薬は人を眠らせる。もう出さない」。",
+"OFICINA DE CORREOS, en medio del mercado. La ventanilla cerrada. Un cajón entreabierto con estampillas.": "市場の真ん中の郵便局。窓口は閉まっている。切手の入った引き出しが半開き。",
+"Carnicería \"La Michoacana\". Focos rojos prendidos, nada colgado de los ganchos. Las moscas sí.": "精肉店「ラ・ミチョアカナ」。赤い電球は点いているが、フックには何も掛かっていない。ハエだけはいる。",
+"Puesto de fritangas. Las carnitas en el cazo, frías, con una costra de manteca blanca. Todavía huele.": "揚げ物の屋台。鍋のカルニータスは冷え、白いラードの膜が張っている。まだ匂う。",
+"El retablo dorado. Santiago Apóstol a caballo. Alguien le quitó la espada y le puso un cencerro en la mano.": "金色の祭壇画。馬上の聖ヤコブ。誰かが剣を取り上げて、手にカウベルを持たせた。",
+"La capilla del niño mártir. Exvotos, fotos, un huarachito de bronce, gallos de yeso. Todo intacto. Es el único lugar limpio de la ciudad.": "殉教した少年の礼拝堂。奉納物、写真、青銅の小さなワラチェ、石膏の雄鶏。何も荒らされていない。この町で唯一きれいな場所だ。",
+"El baptisterio. Placa: \"Aquí estuvo preso el niño mártir en 1928\". La puerta tiene llave nueva.": "洗礼堂。銘板：「一九二八年、殉教した少年がここに囚われた」。扉の鍵は新しい。",
+"La sacristía. Casullas colgadas, un cáliz, y en el piso una trampilla con una argolla de hierro.": "聖具室。掛けられた祭服、聖杯、そして床に鉄の輪のついた跳ね戸。",
+"La galería inundada. El agua hasta la rodilla, fría, con olor a cantera. Cada paso suena en todo el túnel.": "水に浸かった通路。膝までの冷たい水、石切り場の匂い。一歩ごとにトンネル中に響く。",
+"Un derrumbe. Tabique y tierra hasta el techo. Hay que rodear.": "崩落。レンガと土が天井まで。回り道だ。",
+"La sala museo. Esculturas de yeso de santos y mártires, sin terminar, con la malla de alambre asomando. La escalera baja a las catacumbas.": "展示室。聖人と殉教者の石膏像、未完成で、針金の網が覗いている。階段はカタコンベへ下りる。",
+"El coro. Un piano vertical con la tapa abierta. En el atril, un himno a lápiz: \"Despierta, Sahuayo\" en vez de \"Despierta, pecador\".": "聖歌隊席。蓋の開いたアップライトピアノ。譜面台に鉛筆書きの賛美歌：「目覚めよ、罪人」の代わりに「目覚めよ、サウアヨ」。",
+"La puerta de la torre. Arriba, las campanas grandes. Suenan solas desde el 24.": "塔の扉。上には大きな鐘。二十四日から勝手に鳴っている。",
+"Las tres campanas del Sagrado Corazón. La grande, cuarteada. Las cuerdas bajan hasta el piso de abajo.": "サグラド・コラソン教会の三つの鐘。大きいのにはひび。綱は下の階まで垂れている。",
+"Placa en el atrio: \"En este lugar fueron fusilados 27 cristeros\". Veladoras nuevas debajo, prendidas.": "前庭の銘板：「この地で二十七名のクリステロが銃殺された」。下に新しいろうそく、火がついている。",
+"Taller de huarache. Hormas colgadas, tiras de cuero, una radio con estática. Nadie.": "ワラチェ工房。吊るされた靴型、革の帯、ノイズを流すラジオ。誰もいない。",
+"CALLE PADRE J. LUIS ARREGUI. Casas bajas, talleres. Al fondo baja al arroyo.": "パドレ・J・ルイス・アレギ通り。低い家並み、工房。突き当たりは小川へ下る。",
+"Puente de concreto sobre El Infiernito. Alguien pintó en la barda: \"AQUÍ NO HAY INFIERNO, ES NOMÁS AGUA\".": "エル・インフィエルニート（小さな地獄）に架かるコンクリートの橋。塀に落書き：「ここに地獄はない。ただの水だ」。",
+"Nichos vacíos. Las placas arrancadas. Esta galería es más vieja que las de arriba.": "空の壁龕。銘板は剥がされている。この通路は上のものより古い。",
+"La vasija. Enorme, enterrada hasta la mitad, con forma de tortuga. El barro está tibio. El piso sube y baja, despacio, como si respirara.": "壺。巨大で、半分まで埋まり、亀の形をしている。土は温かい。床がゆっくり上下する。呼吸しているみたいに。",
+"Cuarto de máquinas. Un generador, un amplificador viejo y un micrófono con cable. Las bocinas de trompeta apuntan al pueblo.": "機械室。発電機、古いアンプ、コード付きのマイク。ラッパ型のスピーカーが町を向いている。",
+"La capilla de Cristo Rey, debajo de la explanada, entre las dos escaleras. Chiquita, de piedra. Una campana chica en la pared.": "クリスト・レイの礼拝堂。広場の下、二つの階段の間。石造りで小さい。壁に小さな鐘。",
+"Cuarto 7. Campanitas en una bolsa, una veladora, la cama sin deshacer.": "7号室。袋に入った小さな鈴、ろうそく、乱れていないベッド。",
+"Reja de metal.": "金属の格子。",
+"Tianguis de llantas. \"Instalación gratis\". Una llanta rodó hasta media calle.": "タイヤ市。「取り付け無料」。タイヤが一本、道の真ん中まで転がっている。",
+"Clínica. Luz prendida adentro. Nadie en recepción.": "診療所。中は明かりがついている。受付に誰もいない。",
+"Roca húmeda.": "湿った岩。",
+"Banco. El cajero repite \"RETIRE SU TARJETA\" en la pantalla, sin tarjeta.": "銀行。ATMの画面が「カードをお取りください」と繰り返している。カードはない。",
+"Los portales de la Presidencia. Cantera rosa, balcones verdes, el reloj parado en las 11:52.": "市役所の回廊。ピンクの石、緑のバルコニー、十一時五十二分で止まった時計。",
+"Valla de la Policía Municipal. \"Cerrado por seguridad\". ¿Seguridad de quién?": "市警察のバリケード。「安全のため閉鎖」。誰の安全だ？",
+"Arcos del patio. Pintas de sombras de veladoras en la cantera.": "中庭のアーチ。石にろうそくの煙の影が染みついている。",
+"Madera oscura y retratos de presidentes municipales. A todos les tacharon la cara.": "暗い木材と歴代市長の肖像。全員の顔が塗りつぶされている。",
+"Una pared.": "壁。",
+"Una casa. Cortina abajo, luz apagada. Nadie abre.": "家。シャッターは下り、明かりは消えている。誰も出てこない。",
+"Pared.": "壁。",
+"La Parroquia de Santiago Apóstol. Cantera, torres, cúpula roja.": "サンティアゴ・アポストル教会。切り石、塔、赤いドーム。",
+"Piedra de la torre.": "塔の石。",
+"Cantera. Fría.": "切り石。冷たい。",
+"Tabique viejo. Húmedo.": "古いレンガ。湿っている。",
+"Un nicho con su placa.": "銘板のついた壁龕。",
+"Lámina del mercado.": "市場のトタン。",
+"La pared del hotel, naranja.": "ホテルの壁、オレンジ色。",
+"Farmacia Roma.": "薬局ロマ。",
+"El kiosco de hierro de la plaza.": "広場の鉄の東屋。",
+"Un carro atravesado.": "道をふさぐ車。",
+"Encadenado. Por aquí no.": "鎖がかかっている。ここは通れない。",
+"Cerrado con llave.": "鍵がかかっている。",
+"Un carro.": "車。",
+"Un carro con las puertas abiertas. Las llaves puestas.": "ドアが開いたままの車。鍵は差さったまま。",
+"Un carro. Adentro, en el asiento, un cencerro.": "車。座席の上にカウベル。",
+"Un carro. La puerta abierta y el radio prendido, en estática.": "車。ドアが開き、ラジオがノイズを流している。",
+"Basura.": "ゴミ。",
+"Bolsas de basura regadas. Sigue habiendo muchos marranitos, al parecer.": "散らばったゴミ袋。相変わらず行儀の悪い連中が多いらしい。",
+"Basura. Botellas de la fiesta del año pasado, todavía.": "ゴミ。去年の祭りの瓶が、まだ。",
+"Basura. Envolturas de veladoras, puras.": "ゴミ。ろうそくの包み紙ばかり。",
+"Basura. Un volante de la procesión, pisado.": "ゴミ。踏まれた行列のチラシ。",
+"Zapatos en fila sobre la banqueta. De varios tamaños. Como si se los hubieran quitado para entrar a algún lado.": "歩道に並んだ靴。いろんなサイズ。どこかに入るために脱いだみたいに。",
+"Un carrito de súper en medio del boulevard. Lleno de veladoras nuevas, en su caja.": "大通りの真ん中にショッピングカート。箱入りの新しいろうそくでいっぱいだ。",
+"Patrulla de la Policía Municipal. La torreta prendida, el radio chasqueando solo. Nadie.": "市警察のパトカー。警光灯は回り、無線が勝手にノイズを鳴らす。誰もいない。",
+"Un autobús de pasajeros. La puerta abierta, las luces de cabina prendidas, la tele con estática. Un boleto en el escalón: Guadalajara–Sahuayo, 5:40.": "旅客バス。ドアは開き、車内灯は点き、テレビは砂嵐。ステップに切符：グアダラハラ—サウアヨ、5:40。",
+"El Tsuru del Chuche. Muerto. Ni los faros. Ni el radio. Ni modo. En el espejo, las llaves de la casa de mi mamá.": "チュチェのツル。死んだ。ライトもラジオもだめ。仕方ない。ミラーに母さんの家の鍵。",
+"Una lámpara. Parpadea. Zumba.": "街灯。ちらつく。うなる。",
+"Lámpara del boulevard, de dos brazos. Un brazo prendido, el otro no.": "大通りの二本腕の街灯。片方は点き、片方は消えている。",
+"Una palmera del camellón. Alguien le amarró listones negros.": "中央分離帯のヤシの木。誰かが黒いリボンを結んだ。",
+"Una jacaranda. Todavía con flor, fuera de temporada.": "ジャカランダ。季節外れなのにまだ花をつけている。",
+"El obelisco del camellón, de cantera rosa. La placa está tapada con cera de veladora.": "中央分離帯のオベリスク、ピンクの石。銘板はろうそくの蝋で覆われている。",
+"Las letras SAHUAYO del parquecito. A la O le falta la mitad.": "小公園のSAHUAYOの文字。Oが半分欠けている。",
+"Un ficus del camellón. Alguien le colgó cencerros.": "中央分離帯のゴムの木。誰かがカウベルを吊るした。",
+"Una banca. Vacía.": "ベンチ。空だ。",
+"Una banca. Un rosario colgado del respaldo.": "ベンチ。背もたれにロザリオが掛かっている。",
+"Una banca. Alguien dejó un cencerro encima.": "ベンチ。誰かがカウベルを置いていった。",
+"La fuente del patio, seca. Monedas al fondo. Y una muela.": "中庭の噴水、干上がっている。底に小銭。それと奥歯が一本。",
+"Un escritorio. Papeles, un café frío, una foto familiar boca abajo.": "机。書類、冷めたコーヒー、伏せられた家族写真。",
+"Una silla.": "椅子。",
+"Una rata. Muerta. Mordida.": "ネズミ。死んでいる。噛まれている。",
+"La estatua del tlahualil de la plaza. Alguien le pintó la máscara de negro.": "広場のトラワリル像。誰かが仮面を黒く塗った。",
+"El huarache más grande del mundo. Récord Guinness. Lo dice la placa.": "世界一大きなワラチェ。ギネス記録。銘板にそう書いてある。",
+"Un puesto del mercado. La lona abajo, la mercancía intacta, un radio con estática.": "市場の屋台。幕は下り、商品はそのまま、ラジオはノイズ。",
+"El mostrador.": "カウンター。",
+"Estantes vacíos. Les quitaron todo lo que \"duerme\".": "空の棚。「眠らせる」ものは全部持っていかれた。",
+"Una cama de hotel, tendida. Nadie durmió aquí.": "整えられたホテルのベッド。誰も寝ていない。",
+"El sillón de la recepción. Un periódico del jueves 23 de julio de 2026.": "ロビーのソファ。二〇二六年七月二十三日、木曜日の新聞。",
+"Una planta de plástico.": "造花の鉢。",
+"La tele de la recepción, con estática.": "ロビーのテレビ、砂嵐。",
+"Tinaco.": "貯水タンク。",
+"La antena del hotel. Un cencerro amarrado arriba, se mueve con el aire.": "ホテルのアンテナ。てっぺんにカウベルが結ばれ、風に揺れている。",
+"Ropa tendida. Túnicas de manta, mojadas.": "干した洗濯物。濡れた木綿のローブ。",
+"Una banca de iglesia. Rayada con uñas.": "教会の長椅子。爪で引っかかれている。",
+"El altar. Veladoras, flores secas.": "祭壇。ろうそく、枯れた花。",
+"Un cirio. Prendido.": "大ろうそく。火がついている。",
+"Exvotos: fotos de bebés, un huarache de bronce, una pulsera de hospital.": "奉納物：赤ん坊の写真、青銅のワラチェ、病院のリストバンド。",
+"Un gallo de yeso, pintado. Parte de la memoria del lugar.": "彩色された石膏の雄鶏。この場所の記憶の一部。",
+"La pila bautismal, de cantera. Seca.": "石の洗礼盤。乾いている。",
+"Un mantel de altar tapando a alguien. No lo levantes.": "誰かを覆う祭壇布。めくるな。",
+"La trampilla a las catacumbas.": "カタコンベへの跳ね戸。",
+"Placa de un nicho. Nombre, fecha, \"murió por Cristo Rey\".": "壁龕の銘板。名前、日付、「王なるキリストのために死す」。",
+"Réplica de la vasija, de barro, con forma de tortuga. Chiquita. La real está más abajo.": "亀の形をした土の壺の複製。小さい。本物はもっと下にある。",
+"Pintura fresca en la pared: DESPIERTA. Todavía escurre.": "壁に塗りたてのペンキ：DESPIERTA——目覚めよ。まだ垂れている。",
+"Escombro.": "瓦礫。",
+"Escalera hacia arriba.": "上りの階段。",
+"Escalera hacia abajo.": "下りの階段。",
+"Un piano vertical. La tapa abierta.": "アップライトピアノ。蓋が開いている。",
+"Una ventana de la torre. Abajo, el pueblo en niebla. Por la calle viene gente, despacio.": "塔の窓。下には霧の町。通りを人がゆっくりやってくる。",
+"Las campanas grandes. La cuerda cuelga hasta abajo.": "大きな鐘。綱が下まで垂れている。",
+"La cuerda de las campanas.": "鐘の綱。",
+"Flores secas.": "枯れた花。",
+"Escultura de yeso sin terminar. La malla asoma por el hombro.": "未完成の石膏像。肩から針金の網が覗いている。",
+"Hormas de madera colgadas en fila.": "一列に吊るされた木の靴型。",
+"La troca. Motor encendido, faros prendidos, nadie.": "ピックアップ。エンジンはかかり、ライトは点き、誰もいない。",
+"Una llanta en el agua.": "水の中のタイヤ。",
+"Carrizo.": "葦。",
+"Una cruz de hierro oxidada clavada en la roca.": "岩に打ち込まれた錆びた鉄の十字架。",
+"Goteo.": "水滴。",
+"La vasija. Enorme. Tibia. El piso respira.": "壺。巨大。温かい。床が呼吸している。",
+"Un número rayado en la pared: escalones.": "壁に刻まれた数字：段数。",
+"El pedestal de Cristo Rey. Quince metros de piedra y arriba la estatua con los brazos abiertos, mirando a la Ciénega.": "クリスト・レイの台座。十五メートルの石、その上に両腕を広げた像。湿地を見下ろしている。",
+"Una estación del vía crucis en mosaico. Intacta.": "モザイクの十字架の道の留。無傷だ。",
+"Bocina de trompeta apuntando al pueblo.": "町を向いたラッパ型スピーカー。",
+"El campanario de piedra volcánica, con sus tres campanas y las bocinas amarradas.": "溶岩石の鐘楼。三つの鐘と、縛り付けられたスピーカー。",
+"Generador de gasolina.": "ガソリン発電機。",
+"Amplificador viejo, de los de bulbos.": "古い真空管アンプ。",
+"El micrófono. Con cable.": "マイク。コード付き。",
+"Escalera de caracol.": "らせん階段。",
+"El tablero de llaves de la recepción. Faltan la 7 y la de la azotea.": "フロントのキーボード。7号室と屋上の鍵がない。",
+"Pan del mercado. Duro, pero pan.": "市場のパン。固いが、パンだ。",
+"La llave del cuarto 7, con su llavero de madera. Colgada aparte de las demás.": "木の札のついた7号室の鍵。他の鍵とは離して掛けてある。",
+"Llave con etiqueta: AZOTEA. Estaba en la mesa de noche del cuarto 7.": "「屋上」と札のついた鍵。7号室のナイトテーブルにあった。",
+"Cuarto 7. Cerrado con llave. Del otro lado alguien respira pegado a la puerta.": "7号室。鍵がかかっている。向こう側で誰かが扉に張りついて息をしている。",
+"Puerta de la azotea. Cerrada. Arriba suena un cencerro, despacio, como llamando.": "屋上の扉。閉まっている。上でカウベルがゆっくり、呼ぶように鳴っている。",
+"La caja de las vendas. Debajo del mostrador, como decía la nota. Pesa.": "包帯の箱。メモのとおりカウンターの下。重い。",
+"Un diablito de carga, de los de bultos. Pesado, pero rueda.": "荷物運び用の台車。重いが、転がる。",
+"La reja del mercado hacia Sahagún. Tiene un boquete abajo, pero alguien atoró un carrito. Con un diablito se podría palanquear.": "サアグン通り側の市場の鉄格子。下に隙間があるが、誰かがカートを詰め込んだ。台車があればこじ開けられそうだ。",
+"El baptisterio. Cerrado con llave desde hace mucho. En la puerta, una placa: \"Aquí estuvo preso el niño mártir\".": "洗礼堂。長いこと鍵がかかっている。扉に銘板：「殉教した少年がここに囚われた」。",
+"Detrás del altar, una cajita de balas envuelta en un pañuelo con iniciales.": "祭壇の裏に、イニシャル入りのハンカチに包まれた弾の小箱。",
+"Un rifle Máuser oxidado, del 28. Pesa como un recuerdo.": "錆びたモーゼル銃、二八年のもの。記憶のように重い。",
+"El Cristero": "クリステロ",
+"Un hombre sentado en su nicho, con sombrero, sin rifle. Levanta la mano como pidiendo algo que le falta.": "壁龕に座る帽子の男。銃がない。足りない何かを求めるように手を上げている。",
+"Una puerta de hierro con candado de combinación de cuatro números. Arriba, grabado: \"EL AÑO EN QUE SE CERRÓ\".": "四桁のダイヤル錠のかかった鉄の扉。上に刻まれている：「閉ざされた年」。",
+"Una cabeza de muñeca, de las de plástico duro, en el asiento de la troca. Los ojos se le mueven.": "硬いプラスチックの人形の頭。ピックアップの座席に。目が動く。",
+"La troca con el motor encendido. Nadie adentro. La puerta está abierta: en el asiento, una cabeza de muñeca.": "エンジンのかかったピックアップ。中に誰もいない。ドアは開いている：座席に人形の頭。",
+"La niña del río": "川の少女",
+"Una niña parada en el agua con una muñeca sin cabeza. No dice nada. Mueve la muñeca como si la meciera.": "首のない人形を抱いて水の中に立つ少女。何も言わない。人形をあやすように揺らしている。",
+"Una veladora de las grandes, nueva, con cerillos pegados con cinta. Alguien la dejó aquí a propósito.": "大きなろうそく、新品、マッチがテープで貼ってある。誰かがわざとここに置いた。",
+"Un bidón de gasolina a medias, junto a la jardinera. Alguien lo usó para las lámparas.": "半分残ったガソリン缶、花壇のそば。誰かがランプに使った。",
+"Caja de interruptores del sistema de audio. Sin luz, no sirve.": "音響設備のブレーカー。電気がなければ役に立たない。",
+"La señora de la veladora": "ろうそくの婦人",
+"Hotel Latino · recepción": "ホテル・ラティーノ · フロント",
+"Hotel Latino · planta alta": "ホテル・ラティーノ · 上階",
+"Hotel Latino · azotea": "ホテル・ラティーノ · 屋上",
+"Farmacia Roma": "薬局ロマ",
+"Mercado Morelos": "モレロス市場",
+"Parroquia de Santiago Apóstol": "サンティアゴ・アポストル教会",
+"Parroquia del Sagrado Corazón": "サグラド・コラソン教会",
+"Torre del Sagrado Corazón": "サグラド・コラソンの塔",
+"Calle Padre J. Luis Arregui": "パドレ・J・ルイス・アレギ通り",
+"La cueva": "洞窟",
+"La sala del Ayotl": "アヨトルの間",
+"La escalera de piedra": "石の階段",
+"¿Qué chingados...?": "何だよ、これ…？",
+"...Ora webos. ¿Qué chingados traes ahí?": "…おいおい。何を持ってるんだ？",
+"...¿Qué chingados?": "…何なんだよ？",
+"(respira) Está vivo. Está... respirando. Con los ojos abiertos.": "（息をつく）生きてる。息を…してる。目を開けたまま。",
+"La Presidencia está ahí en la contraesquina. Deja voy a ver si hay algún poli, pa que luego no me la hagan de pedo.": "市役所は向かいの角だ。警官がいないか見てこよう。後で面倒なことにならないように。",
+"Cerrada con cadena. Claro. La de Guerrero, entonces.": "鎖で閉まってる。そりゃそうだ。じゃあゲレロ通り側だ。",
+"Luz de emergencia. Papeles en el piso. Huele a veladora.": "非常灯。床に散らばった書類。ろうそくの匂い。",
+"¿Hay alguien? ...Soy civil, eh.": "誰かいるか？…民間人だぞ、おい。",
+"Un poli. Sentado, de espaldas. Con el radio en la mano.": "警官だ。背を向けて座ってる。無線を手に。",
+"...Mejor no le hablo de frente.": "…正面から声をかけないほうがいいな。",
+"Una macana. Reglamentaria. Me la llevo prestada; luego la devuelvo.": "警棒。官給品だ。借りていく。後で返す。",
+"La pistola del comandante. Cinco balas. Me tiemblan las manos nomás de agarrarla.": "隊長の拳銃。弾は五発。握っただけで手が震える。",
+"El radio del comandante. Puro chasquido... pero chasquea más cuando hay alguien cerca. Me lo quedo.": "隊長の無線。ノイズばかりだ…でも誰かが近くにいるとノイズが強くなる。もらっておく。",
+"...No. Esto no es una borrachera. Esto no es nada que yo conozca.": "…違う。これは酒のせいじゃない。おれの知ってるどんなものでもない。",
+"Desde el balcón se ve Constitución hasta donde la niebla deja. Y en la niebla, una fila de gente caminando despacio hacia la plaza. Con campanitas.": "バルコニーからコンスティトゥシオン通りが霧の許す限り見える。霧の中、広場へゆっくり歩く人の列。小さな鈴を持って。",
+"Ya deberían ser las luces. Y nada: la niebla, y lo mismo de oscuro. Vamos a la plaza, pues. A ver qué queda.": "もう明るくなってるはずだ。なのに何も変わらない：霧と、同じ暗さ。広場へ行こう。何が残ってるか見てやる。",
+"...Perdón. Perdón, oficial.": "…すまない。すまない、おまわりさん。",
+"Clic izquierdo o F: golpear. Cada golpe gasta AIRE. Si te quedas sin aire, pegas a la mitad. Shift para correr (también gasta).": "左クリックかF：殴る。殴るたびに息を使う。息が切れると威力は半分。Shiftで走る（息を使う）。",
+"Veladora apagada. Prenderla (E) guarda tu progreso. Si te chuchean, vuelves aquí.": "消えたろうそく。灯す（E）と進行が保存される。やられたらここに戻る。",
+"Sin balas.": "弾がない。",
+"Nada. Un rosario y chicles.": "何もない。ロザリオとガム。",
+"Balas. Perdón, oficial.": "弾だ。すまない、おまわりさん。",
+"La última vez que vi este boulevard vacío fue en el 2011. Esa noche también. Por otra cosa.": "この大通りが空っぽだったのを最後に見たのは二〇一一年だ。あの夜もそうだった。別の理由で。",
+"CAPÍTULO 1 COMPLETADO": "第一章 完了",
+"CAPÍTULO 2 COMPLETADO": "第二章 完了",
+"CAPÍTULO 3 COMPLETADO": "第三章 完了",
+"CAPÍTULO 4 COMPLETADO": "第四章 完了",
+"CAPÍTULO 5 COMPLETADO": "第五章 完了",
+"CAPÍTULO 6 COMPLETADO": "第六章 完了",
+"CAPÍTULO 7 COMPLETADO": "第七章 完了",
+"Constitución pa abajo, hasta la plaza. Tres cuadras. Caminando con mi abuela eran diez minutos.": "コンスティトゥシオン通りを下って広場へ。三ブロック。ばあちゃんと歩くと十分かかった。",
+"El Hotel Latino. Cinco pisos. Y desde la azotea un cencerro, despacio, como llamando a alguien.": "ホテル・ラティーノ。五階建て。屋上からカウベルが、ゆっくり、誰かを呼ぶみたいに。",
+"...¿Esos son perros? No ladran. Van con las manos.": "…あれは犬か？吠えない。手をついて歩いてる。",
+"El del cencerro los trae. Si se calla el cencerro, a lo mejor se van.": "カウベルの奴が操ってる。カウベルが止まれば、いなくなるかもしれない。",
+"Se calló el cencerro.": "カウベルが止まった。",
+"...Abajo ya no se oyen. Perdón, hermano. O lo que fueras.": "…下からはもう聞こえない。すまない、兄弟。それとも何だったのか知らないが。",
+"Quince años y la Roma sigue abriendo a las ocho. Bueno. Abría.": "十五年経っても薬局ロマは八時開店か。いや。だった、だな。",
+"El Nievero. El mismo carrito. Y la campana sonando sola.": "アイス屋のおじさん。同じ屋台。鈴が勝手に鳴ってる。",
+"El fantasma señala la campana del carrito. Golpéala (F) para callarla.": "幽霊が屋台の鈴を指す。叩いて（F）黙らせろ。",
+"...Gracias, don. De limón, la próxima.": "…ありがとう、おじさん。今度はライムで。",
+"La plaza llena un domingo a las seis de la mañana. Y nadie habla.": "日曜の朝六時に広場が満員だ。それで誰もしゃべらない。",
+"Están viendo la Parroquia. Todos. Mejor no me les acerco.": "教会を見てる。全員だ。近づかないほうがいい。",
+"La reja con cadena y dos carros atravesados. Por el Mercado, pues: la puerta de Sahagún.": "鎖のかかった門と道をふさぐ二台の車。じゃあ市場から：サアグン通りの扉だ。",
+"El Mercado. Huele a fritanga fría y a focos rojos. Alguien dice \"qué va a llevar\" sin que haya nadie.": "市場。冷えた揚げ物と赤い電球の匂い。誰もいないのに「何にしましょう」と言う声。",
+"Ese señor... está hinchado. Como si hubiera comido tres días seguidos sin parar. No se mete por los pasillos: mejor.": "あの男…膨れ上がってる。三日間食い続けたみたいに。通路には入ってこられない：ありがたい。",
+"La reja a Sahagún. Un boquete abajo y un carrito atorado. Con el diablito de los bultos la palanqueo.": "サアグン通りへの鉄格子。下の隙間にカートが詰まってる。荷物用の台車でこじ開けてやる。",
+"Ya. Sahagún. La puerta de la Parroquia está ahí enfrente.": "よし。サアグン通りだ。教会の扉は真向かい。",
+"Aquí me bautizaron. Aquí lo tuvieron al niño. Yo venía con mi abuela.": "ここで洗礼を受けた。あの少年が閉じ込められた場所だ。ばあちゃんと来てた。",
+"Las veladoras prendidas. Alguien sigue aquí.": "ろうそくに火がついてる。まだ誰かいる。",
+"¿Liobas? ¿El de doña Chuy? Dios mío. Pasa, pasa, cierra.": "リオバスか？チュイさんとこの？なんと。入れ、入れ、扉を閉めろ。",
+"Padre, ¿qué pasó aquí?": "神父さん、ここで何があったんだ？",
+"Lo que pasa cuando la gente reza enojada. Eran de aquí. Rosario de los jueves. Buenas personas, hijo, no te voy a decir que no. Y de repente la fiesta les dio asco.": "怒りながら祈るとこうなるのだよ。地元の者たちだ。木曜のロザリオの会。善い人たちだった、息子よ、それは否定しない。それが急に、祭りを嫌悪するようになった。",
+"\"Sodoma\", decían. \"Sahuayo duerme.\" Yo pensé: es la edad, se les pasa.": "「ソドムだ」と言っていた。「サウアヨは眠っている」と。歳のせいだ、そのうち収まると思った。",
+"¿Y luego?": "それで？",
+"Luego empezaron a subir el cerro de rodillas. Luego a cavar abajo del Sagrado Corazón. Dijeron que habían encontrado \"el corazón viejo del pueblo\". Una vasija. Una tortuga.": "それから膝で丘を登り始めた。それからサグラド・コラソンの下を掘り始めた。「町の古い心臓」を見つけたと言った。壺だ。亀だ。",
+"Dicen que es el nombre viejo del pueblo. Tzacuatlayotl: la vasija, la tortuga. Quién sabe si Sahuayo se llamó así alguna vez, hijo.": "町の古い名だと言うのだ。ツァクアトラヨトル：壺、亀。サウアヨが本当にそう呼ばれたことがあるのか、誰にもわからんよ。",
+"Ellos decidieron que sí. Y le rezaron al nombre como si fuera santo.": "あの者たちはそうだと決めた。そして聖人にするように、その名に祈った。",
+"Padre, con todo respeto, eso suena a...": "神父さん、失礼だけど、それはまるで…",
+"A locura. Sí. Hasta que la noche del 24 sonaron todas las campanas solas. Todas. Y la gente salió a la calle y ya no volvió a entrar.": "狂気のようだろう。そうだ。二十四日の夜、全部の鐘が勝手に鳴るまではな。全部だ。人々は通りに出て、二度と戻らなかった。",
+"El sábado no amaneció, Liobas. Mira el reloj de la torre: da la hora como si nada. El cielo no.": "土曜日は夜が明けなかったのだよ、リオバス。塔の時計を見ろ：何事もないように時を刻む。空はそうじゃない。",
+"Yo me encerré aquí con Lupe. Lupe ya no está.": "私はルペとここに閉じこもった。ルペはもういない。",
+"...Lo siento.": "…ご愁傷さまです。",
+"Desde que cavaron, el 2 de julio, llevo escribiendo lo que sé en esta libreta. Toma la llave del baptisterio: ahí escondí una hoja que no quiero que lean ellos. Léela y vuelve.": "奴らが掘り始めた七月二日から、知ったことをこの手帳に書いている。洗礼堂の鍵を持っていけ：奴らに読まれたくない紙を隠してある。読んで戻ってこい。",
+"¿Ya la leíste? Entonces ya sabes lo que yo: no es un exorcismo, hijo. Es una lista de nombres.": "読んだか？なら私と同じことを知ったな：悪魔祓いじゃない、息子よ。名前のリストだ。",
+"Las catacumbas llegan al Sagrado Corazón. Ahí están las campanas grandes. Si las toco, vienen todos. Y entonces los bendigo desde la torre. Es la única forma de alcanzarlos a todos.": "カタコンベはサグラド・コラソン教会まで続いている。大きな鐘はそこにある。鳴らせば皆が来る。そうしたら塔から皆を祝福する。全員に届く唯一の方法だ。",
+"¿Y si no funciona?": "うまくいかなかったら？",
+"Entonces corres, hijo. Yo ya estoy viejo. La trampilla de la sacristía: ya la abrí. Nos vemos arriba.": "そのときは走れ、息子よ。私はもう年寄りだ。聖具室の跳ね戸は開けておいた。上で会おう。",
+"Ve al baptisterio primero. La llave ya la tienes.": "先に洗礼堂へ行け。鍵はもう持っているだろう。",
+"Nos vemos arriba, hijo. Ve con Dios. O con quien sea que quede.": "上で会おう、息子よ。神と共に行け。あるいは、まだ残っている誰かと。",
+"Una señora con una veladora apagada. No me ve a mí: ve la puerta de Sahagún.": "消えたろうそくを持った婦人。おれを見ていない：サアグン通りの扉を見ている。",
+"Pide prender la veladora de su hijo en la puerta lateral. Cuando esté prendida, vuelve con ella.": "横の扉で息子のろうそくを灯してほしいと頼んでいる。灯したら、彼女のところへ戻れ。",
+"Ya quedó, señora. Ya está prendida.": "終わったよ、奥さん。火はついた。",
+"La señora señala el altar de la Parroquia y se va con la niebla. Detrás del altar hay algo.": "婦人は教会の祭壇を指し、霧とともに消える。祭壇の裏に何かある。",
+"Pa abajo, pues. Como el niño.": "じゃあ下へ。あの少年みたいに。",
+"Tabique, nichos, placas con nombres. Y veladoras nuevas. Aquí anduvieron hace poco.": "レンガ、壁龕、名前の銘板。それに新しいろうそく。奴らは少し前までここにいた。",
+"Está oscuro. La radio chasquea sin parar aquí abajo: puedes apagarla con T.": "暗い。この下では無線がノイズを鳴らしっぱなしだ：Tで切れる。",
+"Suenan antes de verse. Como el traje de los danzantes, pero despacio.": "見える前に音が聞こえる。踊り手の衣装みたいな音、でもゆっくりだ。",
+"¿Qué... ? Una máscara de tlahualil. Pegada. Pegada a la cara.": "何だ…？トラワリルの仮面。貼りついてる。顔に貼りついてる。",
+"Es de tlahualil... pero alguien le hizo algo. Le quitaron los colores y le taparon los ojos con cera.": "トラワリルの仮面だ…でも誰かが細工した。色を剥がして、目を蝋でふさいである。",
+"Corre más rápido que yo. No le voy a dar con nada. Mejor no hacer ruido.": "おれより速い。何をぶつけても効かない。音を立てないほうがいい。",
+"Un señor sentado en su nicho, con sombrero. Sin rifle. Me enseña las manos vacías.": "壁龕に座った帽子の男。銃がない。空っぽの手を見せてくる。",
+"Tenga, don. Ya está.": "ほら、おじさん。これでいい。",
+"El Cristero se acomoda el sombrero y golpea la pared con la culata. El tabique cede: hay un atajo.": "クリステロは帽子を直し、銃床で壁を叩く。レンガが崩れる：近道だ。",
+"Candado de cuatro números. \"El año en que se cerró\". El Padre dijo: el del niño.": "四桁の錠。「閉ざされた年」。神父は言った：あの少年の年だと。",
+"Mil novecientos veintiocho. Abrió.": "一九二八。開いた。",
+"El Sagrado Corazón. La nave enorme, las flores secas. Y el piano del coro con la tapa abierta.": "サグラド・コラソン教会。巨大な身廊、枯れた花。蓋の開いた聖歌隊席のピアノ。",
+"(una tecla) ...Perdón.": "（鍵盤を一つ）…すまん。",
+"Cuatro pisos de caracol. Por las ventanas, el pueblo en niebla, y por todas las calles gente caminando pa acá. Despacio.": "四階分のらせん階段。窓からは霧の町と、あらゆる通りをこっちへ歩いてくる人々。ゆっくりと。",
+"Las ocho y media. Y sigue siendo de noche.": "八時半。それでもまだ夜だ。",
+"La cuerda de las campanas. Jala tres veces (E).": "鐘の綱。三度引け（E）。",
+"Una.": "一。",
+"Dos.": "二。",
+"Tres.": "三。",
+"(desde abajo, subiendo) ¡Ya vienen! ¡Por Madero, por Hidalgo, por Monterde! ¡Todos!": "（下から、登りながら）来たぞ！マデロ通りから、イダルゴ通りから、モンテルデ通りから！全員だ！",
+"(gritando por la ventana) ¡EN EL NOMBRE DEL PADRE, DEL HIJO...!": "（窓から叫んで）父と、子と…の御名において！",
+"...No pasa nada, Padre.": "…何も起きないよ、神父さん。",
+"...No. Sí pasa. Todos levantaron la cara. Y las campanas siguen solas. Más fuerte.": "…いや。起きてる。全員が顔を上げた。鐘はまだ勝手に鳴ってる。もっと強く。",
+"Toma la libreta. Vete por Arregui, al arroyo. Hay una entrada vieja. Léela allá arriba, no aquí. ¡Corre, hijo!": "手帳を持っていけ。アレギ通りから小川へ。古い入口がある。あの上で読め、ここじゃない。走れ、息子よ！",
+"El Campanero. Está subiendo.": "鐘つきだ。上がってくる。",
+"¡No lo puedo tumbar! ¡Corre!": "倒せない！走れ！",
+"Arregui. El Padre dijo al arroyo.": "アレギ通り。神父は小川へと言った。",
+"Talleres de huarache, hormas colgadas. Y una troca con el motor prendido, sin nadie.": "ワラチェ工房、吊るされた靴型。それにエンジンのかかったピックアップ、誰も乗っていない。",
+"El Infiernito. Qué nombre pa un arroyo. Qué nombre pa esta noche.": "エル・インフィエルニート。小さな地獄。小川にしちゃ大層な名前だ。今夜にはぴったりだが。",
+"Una niña parada en el agua. Con una muñeca sin cabeza. No me ve.": "水の中に立つ少女。首のない人形を抱えて。おれを見ていない。",
+"Ten. Ya está completa.": "ほら。これで全部揃った。",
+"La niña abraza la muñeca y señala el talud: una boca de piedra con una cruz de hierro oxidada. Luego se hunde en el agua, despacio, sin una burbuja.": "少女は人形を抱きしめ、土手を指す：錆びた鉄の十字架のある石の口。それから水に沈んでいく。ゆっくり、泡ひとつ立てずに。",
+"Roca, goteo, y luego tabique viejo. Las catacumbas de abajo de las catacumbas.": "岩、水滴、それから古いレンガ。カタコンベの下のカタコンベ。",
+"Esto no sale en las visitas de las catacumbas. Esto no lo sabe nadie.": "これはカタコンベの見学では見せない。誰も知らない場所だ。",
+"Una veladora grande, con cerillos. Alguien la dejó aquí a propósito.": "マッチ付きの大きなろうそく。誰かがわざとここに置いた。",
+"V: prender o apagar la veladora. Los Enmascarados no cruzan su luz. Si corres, se apaga.": "V：ろうそくを灯す／消す。仮面の者たちはその光を越えられない。走ると消える。",
+"(la radio, apagada, chasquea) ...está tibia.": "（切ったはずの無線がノイズを鳴らす）…温かい。",
+"Ahí está. La vasija. La tortuga. Está tibia.": "あった。壺だ。亀だ。温かい。",
+"...Eso lo dije yo. Todavía no lo decía.": "…今のはおれの声だ。まだ言ってなかったのに。",
+"Duermen alrededor. Todos con la máscara. Si corro, despiertan. Despacio.": "周りで眠ってる。全員仮面をつけて。走れば目を覚ます。ゆっくりだ。",
+"¡Despertaron!": "目を覚ました！",
+"Ciento cuarenta escalones, dijo la libreta. Pa arriba.": "百四十段、と手帳にあった。上へ。",
+"Página 1. La cosa de abajo no es demonio ni es santo. Es el lugar. Es el nombre. Despierta cuando lo llaman y se duerme cuando lo dejan en paz.": "一頁。下にいるあれは悪魔でも聖人でもない。あれは場所だ。あれは名前だ。呼ばれれば目覚め、放っておけば眠る。",
+"Página 2. Los poseídos responden a su propio nombre. Lupe me volteó a ver cuando le dije \"Lupe\". Un segundo. Luego se fue.": "二頁。取り憑かれた者は自分の名前に反応する。「ルペ」と呼ぶと、ルペは私を振り返った。一秒だけ。それから行ってしまった。",
+"Página 4. Súbete donde te oigan todos. Toca para que vengan. Y luego no les reces: nómbralos. Uno por uno. Hasta que se cansen de estar despiertos.": "四頁。皆に聞こえる場所に登れ。鐘を鳴らして呼べ。そして祈るな：名前を呼べ。一人ずつ。彼らが目覚めていることに疲れるまで。",
+"Cristo Rey. La explanada, el pedestal, las bocinas apuntando al pueblo. Y abajo, en la niebla, todas las campanas.": "クリスト・レイ。広場、台座、町を向いたスピーカー。そして下の霧の中、すべての鐘。",
+"El generador. Sin gasolina. Había un bidón por las jardineras.": "発電機。ガソリンがない。花壇のあたりに缶があった。",
+"Arrancó a la segunda. Mejor que el Tsuru.": "二回目でかかった。ツルよりましだ。",
+"La campana chica de la capilla. Tres veces (E).": "礼拝堂の小さな鐘。三度（E）。",
+"Ya vienen. Por la escalinata, despacio. Al micrófono.": "来る。階段を、ゆっくり。マイクへ。",
+"Probando... Sahuayo. Soy Liobas, el de doña Chuy. Me fui hace quince años. Ya volví.": "テスト中…サウアヨ。リオバスだ、チュイさんとこの息子だ。十五年前に出ていった。帰ってきた。",
+"No les voy a rezar. Les voy a pasar lista.": "祈ったりしない。点呼を取る。",
+"...Una campana se calló.": "…鐘が一つ、黙った。",
+"Ese no es de aquí. Ese es el nombre de la cosa. Suben más rápido.": "それはこの町の名前じゃない。あれの名前だ。奴らの登りが速くなる。",
+"Silencio.": "静寂。",
+"La gente sube las escaleras despacio. Se sienta en los escalones. Se duerme. La Hermandad, sin campanas, se queda parada en la explanada sin saber qué hacer.": "人々はゆっくり階段を登る。段に腰を下ろす。眠る。鐘を失った兄弟団は、どうしていいかわからず広場に立ち尽くす。",
+"Amanece sobre la Ciénega. Por fin. Una luz se prende abajo: primero en el llano, luego en los tejados. Al revés.": "湿地に夜が明ける。ようやく。下で光が灯る：まず平野に、それから屋根に。逆さまに。",
+"Despierta, Sahuayo.": "目覚めろ、サウアヨ。",
+"Los Enmascarados llegaron a la explanada.": "仮面の者たちが広場に着いた。",
+"LA PROCESION DE LOS DORMIDOS\n\nSHY Studios · 2019-2026\nCalles reales: OpenStreetMap (ODbL). Personajes y hechos: ficción. La Hermandad, la vasija y lo que hay debajo de Sahuayo son invención.\nAudio y gráficos sintetizados. Gracias por volver.": "LA PROCESION DE LOS DORMIDOS\n\nayotl.dev · 2019-2026\n実在の通り：OpenStreetMap（ODbL）。人物と出来事：フィクション。兄弟団、壺、サウアヨの地下にあるものは創作です。\n音と絵はすべて合成。帰ってきてくれてありがとう。",
+"...A la primera. Pinche Tsuru.": "…一発でかかった。このツルめ。",
+"FIN DE LA DEMO\n\nLa procesión sigue abajo: las catacumbas, el Sagrado Corazón, el Infiernito, el túnel y Cristo Rey. Cinco capítulos más.\n\nEl juego completo: ayotl.dev/procesion": "デモ終了\n\n行列は下へと続く：カタコンベ、サグラド・コラソン、エル・インフィエルニート、トンネル、そしてクリスト・レイ。あと五章。\n\n完全版：ayotl.dev/procesion",
+"Ay, Dios mío. Ay, Dios mío.": "ああ、神様。ああ、神様。",
+"...No mames. No mames, no mames.": "…嘘だろ。嘘だ、嘘だ。",
+"Era de aquí. Seguro lo conocía.": "地元の人だ。きっと知ってる人だ。",
+"(respira) Ya. Ya quedó. No se mueve.": "（息をつく）よし。終わった。動かない。",
+"Quédese ahí, vecino. Por favor.": "そこにいてくれ、ご近所さん。頼む。",
+"No era usted. No era usted.": "あんたじゃなかった。あんたじゃなかったんだ。",
+"Perdón, don. Perdón.": "すまない、おじさん。すまない。",
+"...Respira. Está respirando.": "…息をしてる。生きてる。",
+"...Era un muchacho.": "…若い奴だった。",
+"Perdón, mijo.": "すまない、坊主。",
+"Iba en cuatro patas y era gente.": "四つん這いで、でも人間だった。",
+"...Ya. Descanse.": "…もういい。休んでくれ。",
+"Tanta comida y nadie lo sentó a la mesa.": "あんなに食べ物があって、誰も食卓に座らせてやらなかった。",
+"Nada. Una foto de su hija y un billete de veinte.": "何もない。娘の写真と二十ペソ札。",
+"Las llaves de una patrulla que ya no arranca.": "もう動かないパトカーの鍵。",
+"Un radio sin pila. Nada que sirva.": "電池切れの無線。使える物はない。",
+"Balas. Las voy a necesitar más que usted.": "弾だ。あんたよりおれが必要だ。",
+"Un cargador. Perdón. De veras, perdón.": "弾倉だ。すまない。本当にすまない。",
+"Clic. Nada.": "カチ。何も出ない。",
+"Vacía. Chingada madre.": "空だ。くそったれ。",
+"La campana se calló": "鈴が黙った",
+"Veladora: progreso guardado": "ろうそく：進行を保存",
+"Interruptor: audio encendido": "ブレーカー：音響オン",
+"Llave del baptisterio": "洗礼堂の鍵",
+"La veladora se apagó": "ろうそくが消えた",
+"Veladora apagada": "ろうそくを消した",
+"Radio apagada": "無線オフ",
+"Radio encendida": "無線オン",
+"Veladora prendida (no corras)": "ろうそく点灯（走るな）",
+"Botiquín. Salud +40": "救急箱。体力 +40",
+"Suero. Salud +20": "点滴。体力 +20",
+"Pan del mercado. Salud +15": "市場のパン。体力 +15",
+"Balas +6": "弾 +6",
+"El micrófono. Sin luz no sirve: el generador está en el cuarto de máquinas.": "マイク。電気がなければ使えない：発電機は機械室だ。",
+"Primero hay que llamarlos: la campana chica de la capilla.": "まず奴らを呼ばないと：礼拝堂の小さな鐘だ。",
+"El generador, trabajando.": "発電機、稼働中。",
+"La trampilla, abierta. Huele a cantera mojada.": "跳ね戸、開いている。濡れた石の匂い。",
+"Cerrada con llave. El Padre la abre cuando vuelvas con la hoja.": "鍵がかかっている。紙を持って戻れば神父が開けてくれる。",
+"La trampilla a las catacumbas. Cerrada con una argolla y un candado.": "カタコンベへの跳ね戸。輪と南京錠で閉まっている。",
+"El carrito del nievero. Ya callado.": "アイス屋の屋台。もう静かだ。",
+"El carrito de nieves. La campana suena sola. F: golpearla.": "アイスの屋台。鈴が勝手に鳴っている。F：叩く。",
+"Ya está abierto.": "もう開いている。",
+"Cuarto 7. Campanitas en una bolsa, una veladora, la cama sin deshacer. Y una llave con etiqueta.": "7号室。袋に入った小さな鈴、ろうそく、乱れていないベッド。それと札のついた鍵。",
+"Las campanas siguen solas. Ya no hace falta jalar.": "鐘はまだ勝手に鳴っている。もう引く必要はない。",
+"La campana chica. Ya vienen.": "小さな鐘。来る。",
+"Todavía no. El Padre dijo: las campanas.": "まだだ。神父は言った：鐘だ、と。",
+"NUEVO JUEGO": "はじめから",
+"CONTINUAR": "つづきから",
+"CAPITULOS": "章をえらぶ",
+"CONTROLES": "そうさ",
+"MUSICA": "おんがく",
+"EFECTOS": "こうかおん",
+"VOZ": "こえ",
+"CUADROS": "フレーム",
+"IDIOMA": "ことば",
+"SI": "オン",
+"NO": "オフ",
+"CLIC: ACTIVAR SONIDO": "クリック：おとをオン",
+"DEMO · CAPITULOS 1 A 3": "デモ · 第一章〜第三章",
+"ESC: VOLVER": "ESC：もどる",
+"E: JUGAR · ESC: VOLVER": "E：あそぶ · ESC：もどる",
+"(bloqueado)": "（ロック）",
+"(en el juego completo)": "（完全版で）",
+"Los capitulos se desbloquean al llegar a ellos.": "章はたどり着くと開く。",
+"Demo: capitulos 1 a 3. El resto, en el juego completo.": "デモ：第一章〜第三章。残りは完全版で。",
+"FLECHAS / WASD": "矢印 / WASD",
+"caminar": "あるく",
+"SHIFT": "SHIFT",
+"correr (gasta aire)": "はしる（息をつかう）",
+"E / ENTER": "E / ENTER",
+"usar, leer, hablar": "つかう、よむ、はなす",
+"F / ESPACIO / CLIC": "F / スペース / クリック",
+"golpear o disparar": "なぐる、うつ",
+"recargar": "リロード",
+"Q 1 2 3": "Q 1 2 3",
+"cambiar arma": "ぶきをかえる",
+"radio": "むせん",
+"veladora (cap. 7)": "ろうそく（第七章）",
+"diario y documentos": "にっきと しょるい",
+"mapa": "ちず",
+"pausa / saltar escena": "ポーズ / シーンをとばす",
+"VELADORA + E": "ろうそく + E",
+"guardar partida": "セーブ",
+"PUÑOS": "こぶし",
+"MACANA": "けいぼう",
+"PISTOLA": "ピストル",
+"AIRE": "いき",
+"OBJ": "もくてき",
+"DOCS": "しょるい",
+"NOMBRES": "なまえ",
+"COSAS": "もちもの",
+"CAP.": "第",
+"(nada todavia)": "（まだない）",
+"E: LEER": "E：よむ",
+"(nadie todavia)": "（まだ誰も）",
+"(nada)": "（なし）",
+"<> CAMBIAR  J CERRAR": "<> きりかえ  J とじる",
+"...y": "…ほか",
+"mas": "名",
+"MAPA MUY GRANDE": "ちずが大きすぎる",
+"M: CERRAR": "M：とじる",
+"PAUSA": "ポーズ",
+"SEGUIR": "つづける",
+"MENU PRINCIPAL": "メインメニュー",
+"CANDADO": "じょう",
+"ARRIBA/ABAJO: numero  E: abrir  ESC: salir": "上下：すうじ  E：あける  ESC：やめる",
+"PASE DE LISTA": "てんこ",
+"Campanas calladas:": "黙った鐘：",
+"Errores:": "ミス：",
+"E: decir el nombre al microfono": "E：マイクに名前を言う",
+"Los Enmascarados subieron un tramo.": "仮面の者たちが一段登った。",
+"SIGUE": "つぎ",
+"CERRAR": "とじる",
+"TE CHUCHEARON": "やられた",
+"MAL DIA PARA VOLVER": "帰ってくる日をまちがえた",
+"E / Enter: ultima veladora": "E / Enter：さいごのろうそく",
+"NO SE PUEDE TUMBAR. CORRE.": "倒せない。走れ。",
+"DESPIERTA, SAHUAYO": "目覚めろ、サウアヨ",
+"Capítulo 1 completado.": "第一章 完了。",
+"Capítulo 2 completado.": "第二章 完了。",
+"Capítulo 3 completado.": "第三章 完了。",
+"Capítulo 4 completado.": "第四章 完了。",
+"Capítulo 5 completado.": "第五章 完了。",
+"Capítulo 6 completado.": "第六章 完了。",
+"Capítulo 7 completado.": "第七章 完了。",
+"Capítulo 8 completado.": "第八章 完了。",
+"Chava Orozco": "チャバ・オロスコ",
+"Comandante Navarro": "ナバロ隊長",
+"Regidora Toña Méndez": "トニャ・メンデス議員",
+"Presidente Tomás Valdez": "トマス・バルデス市長",
+"Nachito (el que barre)": "ナチート（掃除の人）",
+"Rubén Castañeda (don Rubén, cuarto 7)": "ルベン・カスタニェダ（7号室のルベンさん）",
+"Lic. Ramírez (Farmacia Roma)": "ラミレスさん（薬局ロマ）",
+"Ramiro (el de los discos)": "ラミロ（レコード売り）",
+"Señora Cuca (mercado)": "クカおばさん（市場）",
+"Toño (correos)": "トニョ（郵便局）",
+"Lupe (sacristana)": "ルペ（堂守）",
+"Padre Anselmo": "アンセルモ神父",
+"Doña Chelo (tamales)": "チェロおばさん（タマレス）",
+"Profe Gudiño": "グディニョ先生",
+"J. Trinidad Gálvez": "J・トリニダー・ガルベス",
+"Chon (campanero viejo)": "チョン（老いた鐘つき）",
+"Memo Sandoval": "メモ・サンドバル",
+"Don Sandoval (huarachero)": "サンドバルさん（ワラチェ職人）",
+"Eduviges Hernández": "エドゥビヘス・エルナンデス",
+"Hermano Celso": "セルソ兄弟",
+"Hermano Celso Ibarra": "セルソ・イバラ兄弟",
+"Doña Eduviges": "エドゥビヘスおばさん",
+"El Durmiente": "眠れる者",
+"El Despierto": "目覚めし者",
+"El Corazón Viejo": "古い心臓",
+"Tzacuatlayotl": "ツァクアトラヨトル",
+"El Que Duerme Bajo el Cerro": "丘の下に眠る者",
+"La Tortuga": "亀",
+"El Santo Despertar": "聖なる目覚め",
+"El Nombre Viejo": "古い名",
+"calles reales:": "実在の通り：",
+"personajes y hechos:": "人物と出来事：",
+"ficcion": "フィクション",
+"la hermandad, la vasija y lo que": "兄弟団、壺、そしてサウアヨの",
+"hay bajo sahuayo: invencion": "地下にあるもの：創作",
+"ninguna persona real": "実在の人物は",
+"aparece en este juego": "登場しません",
+"audio y graficos": "音と絵は",
+"sintetizados": "すべて合成",
+"estilo: FAITH, Atari 2600,": "スタイル：FAITH、Atari 2600、",
+"gracias por volver": "帰ってきてくれてありがとう",
+"ESC: menu": "ESC：メニュー",
+"Radio (Liobas)": "無線（リオバス）",
+"Padre": "神父",
+"Radio": "無線"
+};
+
 // ======================================================================================
 //  GFX: lienzo 240x160, paleta Atari 2600 (NTSC), primitivas de líneas, texto y filtro CRT
 // ======================================================================================
@@ -1038,10 +1620,20 @@ window.GFX = (function () {
   function poly(pts, c) { for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; line(a[0], a[1], b[0], b[1], c); } }
   function bitmap(rows, x, y, c, scale) { const s = scale || 1; g.fillStyle = c; for (let j = 0; j < rows.length; j++) for (let i = 0; i < rows[j].length; i++) if (rows[j][i] !== '.' && rows[j][i] !== ' ') g.fillRect(x + i * s, y + j * s, s, s); }
   // texto con la fuente pixel (8px); color y sombra
-  // Idioma: con 'en', toda cadena que se dibuje y esté en window.EN sale traducida (los textos largos se traducen antes de partirlos en líneas).
+  // Idioma: con 'en' o 'ja', toda cadena que se dibuje y esté en window.EN / window.JA sale traducida (los textos largos se traducen antes de partirlos en líneas).
   let lang = 'es'; function setLang(l) { lang = l; }
-  function text(str, x, y, c, size, align) { if (lang === 'en' && window.EN && window.EN[str]) str = window.EN[str]; g.font = `${size || 8}px "Press Start 2P", monospace`; g.textAlign = align || 'left'; g.textBaseline = 'top'; g.fillStyle = c || PAL.white; g.fillText(str, x | 0, y | 0); g.textAlign = 'left'; }
-  function wrap(str, maxChars) { const words = str.split(' '); const lines = []; let cur = ''; for (const w of words) { if ((cur + ' ' + w).trim().length > maxChars) { lines.push(cur.trim()); cur = w; } else cur += ' ' + w; } if (cur.trim()) lines.push(cur.trim()); return lines; }
+  const dict = () => lang === 'en' ? window.EN : lang === 'ja' ? window.JA : null;
+  // Japonés: se dibuja con PixelMplus10 (fuente pixel japonesa) a 10 px, su tamaño natural; ancho completo 10 px, medio (ASCII) 5 px.
+  const CJK = /[\u3000-\u30ff\u3400-\u9fff\uff00-\uffef]/; const esCJK = s => CJK.test(s); const anchoCJK = ch => CJK.test(ch) ? 1 : .5;
+  function text(str, x, y, c, size, align) { const D = dict(); if (D && D[str]) str = D[str]; g.font = esCJK(str) ? '10px "PixelMplus10", monospace' : `${size || 8}px "Press Start 2P", monospace`; g.textAlign = align || 'left'; g.textBaseline = 'top'; g.fillStyle = c || PAL.white; g.fillText(str, x | 0, y | 0); g.textAlign = 'left'; }
+  // Parte en líneas de a lo más maxChars letras de Press Start 2P al tamaño size (cuadrada: ancho = size). En japonés no hay espacios:
+  // se corta por carácter con el mismo presupuesto en píxeles, sin empezar línea con puntuación de cierre.
+  const NO_INICIO = '。、）」！？ー…：・';
+  function wrap(str, maxChars, size) {
+    if (esCJK(str)) { const max = maxChars * (size || 8) / 10; const lines = []; let cur = '', w = 0; for (const ch of str) { const a = anchoCJK(ch); if (w + a > max && !(NO_INICIO.includes(ch) && w + a <= max + 1)) { if (ch === ' ') { lines.push(cur + ch); cur = ''; w = 0; continue; } lines.push(cur); cur = ''; w = 0; } cur += ch; w += a; } if (cur) lines.push(cur); return lines; }
+    const words = str.split(' '); const lines = []; let cur = ''; for (const w of words) { if ((cur + ' ' + w).trim().length > maxChars) { lines.push(cur.trim()); cur = w; } else cur += ' ' + w; } if (cur.trim()) lines.push(cur.trim()); return lines;
+  }
+  const lineH = base => lang === 'ja' ? Math.max(base || 8, 11) : (base || 8);   // paso de línea: 11 px en japonés (glifos de 10)
   // ---- CRT: brillo (bloom), líneas de barrido, viñeta, aberración y distorsión ----
   const fx = { bloom: .35, scan: .35, vignette: .5, aberr: 1, jitter: 0, noise: 0, flicker: 0 };
   function present(t) {
@@ -1064,7 +1656,7 @@ window.GFX = (function () {
     if (fx.flicker > 0) { og.fillStyle = `rgba(255,255,255,${(Math.sin(t * 60) * .5 + .5) * fx.flicker * .06})`; og.fillRect(0, 0, ow, oh); }
     og.fillStyle = `rgba(0,0,0,${.03 + (((t * 120) | 0) % 2) * .025})`; og.fillRect(0, 0, ow, oh);
   }
-  return { W, H, PAL, atari, init, ctx, clear, px, rect, box, line, circle, poly, bitmap, text, wrap, present, fx, setLang, get lang() { return lang; } };
+  return { W, H, PAL, atari, init, ctx, clear, px, rect, box, line, circle, poly, bitmap, text, wrap, lineH, esCJK, present, fx, setLang, get lang() { return lang; } };
 })();
 
 // ======================================================================================
@@ -1115,26 +1707,40 @@ window.Chip = (function () {
     m: { f: [300, 1100], d: .07, nasal: true }, n: { f: [300, 1100], d: .06, nasal: true }, ñ: { f: [300, 1600], d: .08, nasal: true }, l: { f: [400, 1400], d: .06 }, r: { golpe: [.02, 220] }, y: { f: [300, 2200], d: .06 }, h: { pausa: .01 },
     v: { golpe: [.03, 180] }, w: { f: [350, 800], d: .06 }, ' ': { pausa: .07 }, ',': { pausa: .14 }, '.': { pausa: .26 }, '?': { pausa: .22 }, '!': { pausa: .22 }, ':': { pausa: .18 }, '…': { pausa: .3 }
   };
-  // habla un texto (español). Devuelve { dur, times[] } con el tiempo (s) en que suena cada carácter y si es vocal (para la boca).
+  // Japonés: cada kana se lee como sus fonemas (か → k+a); los kanji, que no sabemos leer, balbucean una sílaba fija por carácter.
+  const KANA = 'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉゃゅょ';
+  const ROMA = 'a i u e o ka ki ku ke ko sa si su se so ta ti tu te to na ni nu ne no ha hi fu he ho ma mi mu me mo ya yu yo ra ri ru re ro wa o n ga gi gu ge go za zi zu ze zo da di du de do ba bi bu be bo pa pi pu pe po a i u e o ya yu yo'.split(' ');
+  const PUNT_JA = { '。': '.', '、': ',', '！': '!', '？': '?', '：': ':', '…': '…', '　': ' ', '・': ' ', 'ー': 'a', 'っ': 'h', 'ッ': 'h', 'ヴ': 'bu' };
+  function fonemas(ch) {   // un carácter → cadena de letras latinas que la voz sabe decir ('' si no suena)
+    const cp = ch.codePointAt(0); let k = ch; if (cp >= 0x30a1 && cp <= 0x30f6) k = String.fromCodePoint(cp - 0x60);   // katakana → hiragana
+    if (PUNT_JA[ch]) return PUNT_JA[ch]; const i = KANA.indexOf(k); if (i >= 0) return ROMA[i];
+    if (cp >= 0x4e00 && cp <= 0x9fff) return 'ktsnmrdg'[cp % 8] + 'aiueo'[(cp >> 3) % 5];   // kanji: sílaba fija por carácter
+    return '';
+  }
+  // habla un texto (español, inglés o japonés). Devuelve { dur, times[] } con el tiempo (s) en que suena cada carácter y si es vocal (para la boca).
   // acotaciones entre paréntesis: no se leen; disparan su efecto
-  function acotacion(s) { if (/respir/.test(s)) sfx('respiro'); else if (/est[aá]tica/.test(s)) sfx('estatica'); else if (/tecla/.test(s)) sfx('tecla'); else if (/grit/.test(s)) sfx('grito'); }
+  function acotacion(s) { if (/respir|breath|息|呼吸/.test(s)) sfx('respiro'); else if (/est[aá]tica|static|ノイズ/.test(s)) sfx('estatica'); else if (/tecla|key|鍵盤/.test(s)) sfx('tecla'); else if (/grit|shout|scream|叫/.test(s)) sfx('grito'); }
   // opts: vel (velocidad), onda ('sawtooth'|'square'|'triangle': el timbre), fmul (formantes más agudos o graves), ruido (siseo de radio), mudo
   function hablar(texto, pitch, opts) {
     opts = opts || {}; const t0 = (A.ctx ? now() : 0) + .03; let t = t0; const base = pitch || 95; const vel = opts.vel || 1; const fm = opts.fmul || 1;
     const s = texto.toLowerCase(); const times = []; let i = 0, n = 0; let dentro = 0, acot = '';
     const audible = A.ctx && A.pref.voz && !opts.mudo;
-    for (const ch0 of s) {
-      if (ch0 === '(') { dentro++; acot = ''; i++; times.push({ t: t - t0, v: false }); t += .01 / vel; continue; }
-      if (dentro) { i++; times.push({ t: t - t0, v: false }); t += .01 / vel; if (ch0 === ')') { dentro--; if (audible) acotacion(acot); } else acot += ch0; continue; }
-      const ch = ch0.normalize('NFD').replace(/[\u0300-\u036f]/g, '') || ch0; const f = FON[ch] || FON[ch0]; i++;
-      times.push({ t: t - t0, v: !!(f && f.f && !f.nasal) });
-      if (!f) { t += .02 / vel; continue; }
-      if (f.pausa) { t += f.pausa / vel; continue; }
+    const suena = ch => {   // un fonema latino: lo toca (si audible) y avanza t. Devuelve si fue vocal (para la boca)
+      const f = FON[ch]; if (!f) { t += .02 / vel; return false; }
+      if (f.pausa) { t += f.pausa / vel; return false; }
       const wob = 1 + Math.sin(n * .9) * .04; n++;
       if (f.ruido) { if (audible) noise(t, f.ruido[0], f.ruido[2] * (opts.vol || 1), f.ruido[1], A.voiceBus); t += f.ruido[0] / vel; }
       else if (f.golpe) { if (audible) note(f.golpe[1] * (base / 95), t, f.golpe[0], 'square', .25 * (opts.vol || 1), f.golpe[1] / 2, A.voiceBus); t += (f.golpe[0] + .015) / vel; }
       else { if (audible) { vocal(t, f.d / vel, f.f[0] * fm, f.f[1] * fm, base * wob * (f.nasal ? .9 : 1), (f.nasal ? .5 : .8) * (opts.vol || 1), (i % 7 === 0) ? base * .92 : null, opts.onda); if (opts.ruido) noise(t, f.d / vel, .05, 1800, A.voiceBus, 7000); } t += f.d / vel; }
-      t += .012 / vel;
+      t += .012 / vel; return !!(f.f && !f.nasal);
+    };
+    for (const ch0 of s) {
+      if (ch0 === '(' || ch0 === '（') { dentro++; acot = ''; i++; times.push({ t: t - t0, v: false }); t += .01 / vel; continue; }
+      if (dentro) { i++; times.push({ t: t - t0, v: false }); t += .01 / vel; if (ch0 === ')' || ch0 === '）') { dentro--; if (audible) acotacion(acot); } else acot += ch0; continue; }
+      i++; const cp = ch0.codePointAt(0);
+      if (cp >= 0x3000) { const fs = fonemas(ch0); times.push({ t: t - t0, v: /[aeiou]/.test(fs) }); if (!fs) { t += .02 / vel; continue; } for (const c of fs) suena(c); continue; }   // japonés
+      const ch = ch0.normalize('NFD').replace(/[\u0300-\u036f]/g, '') || ch0; const f = FON[ch] || FON[ch0];
+      times.push({ t: t - t0, v: !!(f && f.f && !f.nasal) }); suena(FON[ch] ? ch : ch0);
     }
     return { dur: t - t0, times };
   }
@@ -1764,9 +2370,11 @@ window.GAME = (function () {
   };
   // ---------- estado ----------
   const st = { mode: 'title', t: 0, frame: 0, fps15: false, menu: 0, cut: null, dlg: null, doc: null, journal: null, toast: null, obj: null, objT: 0, flip: 0, pauseMenu: 0, shake: 0, flash: 0, street: '', streetT: 0, touch: false, clock: 300, chapter: 1, radioOn: true, puzzle: null, near: 99, chapSel: 0 };
-  // Idioma: 'es' o 'en' (window.EN traduce al vuelo). Se recuerda; la primera vez sale del navegador.
-  st.lang = (() => { try { const l = localStorage.getItem('liobas2d.lang'); if (l === 'en' || l === 'es') return l; } catch (e) { } return (navigator.language || '').toLowerCase().startsWith('en') ? 'en' : 'es'; })();
-  const T = s => (st.lang === 'en' && window.EN && window.EN[s]) || s;
+  // Idioma: 'es', 'en' o 'ja' (window.EN / window.JA traducen al vuelo). Se recuerda; la primera vez sale del navegador.
+  const LANGS = ['es', 'en', 'ja'];
+  st.lang = (() => { try { const l = localStorage.getItem('liobas2d.lang'); if (LANGS.includes(l)) return l; } catch (e) { } const nl = (navigator.language || '').toLowerCase(); return nl.startsWith('en') ? 'en' : nl.startsWith('ja') ? 'ja' : 'es'; })();
+  const T = s => { const D = st.lang === 'en' ? window.EN : st.lang === 'ja' ? window.JA : null; return (D && D[s]) || s; };
+  const LH = () => G.lineH(8);   // paso de línea de los párrafos (8; 11 en japonés)
   const P = { level: 'city', x: 0, y: 0, dir: 2, f: 0, step: 0, hp: 100, air: 100, weapon: 'punos', inv: {}, mag: 0, extra: 0, cd: 0, atk: 0, run: false, moving: false, hurt: 0, reload: 0, vela: false, velaT: 0 };
   const SAVE = { flags: {}, docs: {}, picked: {}, downed: {}, lit: {}, over: [], unlocked: 1, chapter: 1 };
   const levels = {}; const keys = {}, input = { mx: 0, my: 0 };
@@ -1829,7 +2437,7 @@ window.GAME = (function () {
     if (typeof lines === 'string' && ST.variantes && ST.variantes[lines]) { const v = ST.variantes[lines]; let i = Math.floor(Math.random() * v.length); if (v.length > 1 && i === ultimaVar[lines]) i = (i + 1) % v.length; ultimaVar[lines] = i; lines = v[i]; }
     if (typeof lines === 'string' && LINES[lines]) lines = LINES[lines]; const arr = (Array.isArray(lines) ? lines : [lines]).map(l => typeof l === 'string' ? { who: '', text: T(l) } : { who: l.who, text: T(l.text) }); if (st.dlg) { st.dlg.lines = st.dlg.lines.concat(arr); if (after) { const prev = st.dlg.after; st.dlg.after = () => { if (prev) prev(); after(); }; } return; } st.dlg = { lines: arr, i: 0, page: 0, pages: null, t: 0, voice: null, after }; startPage(); }
   function startPage() {
-    const d = st.dlg, ln = d.lines[d.i]; const maxc = ln.who === 'Liobas' ? 22 : 33, per = ln.who === 'Liobas' ? 6 : 7; const wl = []; for (const para of ln.text.split('\n')) wl.push(...G.wrap(para, maxc));
+    const d = st.dlg, ln = d.lines[d.i]; const ja = G.esCJK(ln.text); const maxc = ln.who === 'Liobas' ? 22 : 33, per = ja ? 4 : ln.who === 'Liobas' ? 6 : 7; const wl = []; for (const para of ln.text.split('\n')) wl.push(...G.wrap(para, maxc, 7));
     d.pages = []; for (let i = 0; i < wl.length; i += per) d.pages.push(wl.slice(i, i + per)); if (!d.pages.length) d.pages = [['']];
     const txt = d.pages[d.page].join(' '); d.t = 0; d.voice = voz(ln.who, txt);
     if (!ln.who) A.sfx('papel');
@@ -1899,7 +2507,7 @@ window.GAME = (function () {
   // menú del título (lista tipo PS1: tres renglones a la vista, el de en medio es el elegido)
   function menuItems() {
     const it = [{ k: 'nuevo', l: T('NUEVO JUEGO') }]; if (hasSave()) it.push({ k: 'seguir', l: T('CONTINUAR') });
-    it.push({ k: 'caps', l: T('CAPITULOS') }, { k: 'ctrl', l: T('CONTROLES') }, { k: 'musica', l: T('MUSICA') + ': ' + T(A.pref.musica ? 'SI' : 'NO') }, { k: 'efectos', l: T('EFECTOS') + ': ' + T(A.pref.efectos ? 'SI' : 'NO') }, { k: 'voz', l: T('VOZ') + ': ' + T(A.pref.voz ? 'SI' : 'NO') }, { k: 'cuadros', l: T('CUADROS') + ': ' + (st.fps15 ? '15' : '30') }, { k: 'idioma', l: T('IDIOMA') + ': ' + (st.lang === 'en' ? 'EN' : 'ES') });
+    it.push({ k: 'caps', l: T('CAPITULOS') }, { k: 'ctrl', l: T('CONTROLES') }, { k: 'musica', l: T('MUSICA') + ': ' + T(A.pref.musica ? 'SI' : 'NO') }, { k: 'efectos', l: T('EFECTOS') + ': ' + T(A.pref.efectos ? 'SI' : 'NO') }, { k: 'voz', l: T('VOZ') + ': ' + T(A.pref.voz ? 'SI' : 'NO') }, { k: 'cuadros', l: T('CUADROS') + ': ' + (st.fps15 ? '15' : '30') }, { k: 'idioma', l: T('IDIOMA') + ': ' + st.lang.toUpperCase() });
     return it;
   }
   function menuSelect(k) {
@@ -1907,7 +2515,7 @@ window.GAME = (function () {
     if (k === 'nuevo') startPrologue(); else if (k === 'seguir') { if (load()) { st.mode = 'play'; beginPlay(); } }
     else if (k === 'caps') { st.mode = 'chapters'; st.chapSel = 0; } else if (k === 'ctrl') st.mode = 'controls';
     else if (k === 'musica') { A.setPref('musica', !A.pref.musica); if (A.pref.musica) A.music('titulo'); } else if (k === 'efectos') A.setPref('efectos', !A.pref.efectos); else if (k === 'voz') A.setPref('voz', !A.pref.voz); else if (k === 'cuadros') st.fps15 = !st.fps15;
-    else if (k === 'idioma') { st.lang = st.lang === 'en' ? 'es' : 'en'; G.setLang(st.lang); try { localStorage.setItem('liobas2d.lang', st.lang); } catch (e) { } }
+    else if (k === 'idioma') { st.lang = LANGS[(LANGS.indexOf(st.lang) + 1) % LANGS.length]; G.setLang(st.lang); try { localStorage.setItem('liobas2d.lang', st.lang); } catch (e) { } }
   }
   function journalKey(code) {
     const J = st.journal; const docIds = Object.keys(SAVE.docs);
@@ -2059,7 +2667,7 @@ window.GAME = (function () {
     else if (e.t === 'item') { if (e.gives) { for (const k in e.gives) giveItem(k, e.gives[k]); } else { P.inv[e.item] = 1; } if (e.item === 'veladora') { say('veladora_item'); } else say(e.look || ('Recogiste: ' + e.item)); }
     setObjective();
   }
-  function openDoc(id, fromJournal) { const d = DOCS[id]; if (!d) return; const lines = []; for (const para of T(d.text).split('\n')) { if (!para.trim()) { lines.push(''); continue; } lines.push(...G.wrap(para, 33)); } const pages = []; for (let i = 0; i < lines.length; i += 14) pages.push(lines.slice(i, i + 14)); st.doc = { id, title: T(d.title), pages, page: 0, fromJournal: !!fromJournal }; st.mode = 'doc'; A.sfx('papel'); if (d.names) for (const n of d.names) setFlag('nombre_' + n); }
+  function openDoc(id, fromJournal) { const d = DOCS[id]; if (!d) return; const lines = []; for (const para of T(d.text).split('\n')) { if (!para.trim()) { lines.push(''); continue; } lines.push(...G.wrap(para, 33, 7)); } const pages = []; const per = LH() > 8 ? 10 : 14; for (let i = 0; i < lines.length; i += per) pages.push(lines.slice(i, i + per)); st.doc = { id, title: T(d.title), pages, page: 0, fromJournal: !!fromJournal }; st.mode = 'doc'; A.sfx('papel'); if (d.names) for (const n of d.names) setFlag('nombre_' + n); }
   function closeDoc() { const id = st.doc.id, fj = st.doc.fromJournal; st.mode = fj ? 'journal' : 'play'; st.doc = null; A.sfx('papel'); if (!fj && id === 'doc04' && !F('doc04_leido')) { setFlag('doc04_leido'); say('doc04_leido'); } setObjective(); }
   function exitTo(door) { A.sfx('puerta'); const p = window.MAPDATA.places[door.at]; placePlayer('city', p[0], p[1] - .2, 2); A.ambiente(true); A.music('calle'); if (st.chapter === 1 && SAVE.docs.doc03 && SAVE.docs.doc04 && !F('cap1_fin')) { setTimeout(() => { say('salir', () => endChapter()); }, 300); } setObjective(); }
   function followLink(l) {
@@ -2232,7 +2840,7 @@ window.GAME = (function () {
     if (L.ayotl) { g.globalAlpha = .08 + Math.sin(t * 1.2) * .06; G.rect(0, 0, G.W, PLAYH, C.brown); g.globalAlpha = 1; }
     drawBar();
     if (st.streetT > 0 && !st.dlg) { g.globalAlpha = Math.min(1, st.streetT); G.text(st.street.toUpperCase(), 236, PLAYH - 10, C.gray, 6, 'right'); g.globalAlpha = 1; }
-    if (st.objT > 0 && !st.dlg && st.mode === 'play') { const lines = G.wrap(st.objText, 29); g.globalAlpha = Math.min(1, st.objT); G.rect(0, 0, G.W, 6 + lines.length * 8, C.black); G.rect(0, 6 + lines.length * 8, G.W, 1, C.dgray); lines.forEach((l, i) => G.text(l, 4, 3 + i * 8, i ? C.lgray : C.yellow, 8)); g.globalAlpha = 1; }
+    if (st.objT > 0 && !st.dlg && st.mode === 'play') { const lines = G.wrap(st.objText, 29, 8), lh = LH(); g.globalAlpha = Math.min(1, st.objT); G.rect(0, 0, G.W, 6 + lines.length * lh, C.black); G.rect(0, 6 + lines.length * lh, G.W, 1, C.dgray); lines.forEach((l, i) => G.text(l, 4, 3 + i * lh, i ? C.lgray : C.yellow, 8)); g.globalAlpha = 1; }
     if (st.toast && !st.dlg) { G.rect(0, PLAYH - 12, G.W, 12, C.black); G.text(st.toast.text, 120, PLAYH - 10, C.yellow, 7, 'center'); }
     if (st.dlg) drawDlg();
   }
@@ -2296,14 +2904,14 @@ window.GAME = (function () {
     if (d.voice) { const i = Math.min(d.voice.times.length - 1, shown - 1); const cu = d.voice.times[i]; if (cu && cu.v && d.t - cu.t < .12 && d.t < d.voice.dur) mouth = .6 + .4 * Math.sin(st.t * 40); }
     let tx = 4; if (ln.who === 'Liobas') { S.portrait(4, y0 + 5, mouth, C.white, st.t, 3); tx = 78; }
     else if (ln.who) { G.text(T(ln.who).toUpperCase(), 4, y0 + 4, ln.who === 'Padre' ? C.tan : C.gray, 8); }
-    const lines = d.pages[d.page]; let y = y0 + (ln.who && ln.who !== 'Liobas' ? 13 : 4);
-    for (const l of lines) { const n = Math.max(0, Math.min(l.length, left)); if (n > 0) G.text(l.slice(0, n), tx, y, ln.who ? C.white : C.lgray, 7); left -= l.length + 1; y += 8; }
+    const lines = d.pages[d.page]; let y = y0 + (ln.who && ln.who !== 'Liobas' ? (LH() > 8 ? 15 : 13) : 4);
+    for (const l of lines) { const n = Math.max(0, Math.min(l.length, left)); if (n > 0) G.text(l.slice(0, n), tx, y, ln.who ? C.white : C.lgray, 7); left -= l.length + 1; y += LH(); }
     const done = shown >= lines.join(' ').length; if (done && ((st.t * 2) | 0) % 2) G.text('E', 230, PLAYH - 10, C.yellow, 8);
   }
   function drawSub(sub, yb) {
-    if (!sub) return; const shown = sub.voice ? sub.voice.times.filter(x => x.t <= sub.t).length : 999; const lines = G.wrap(sub.text, 33); let left = shown;
-    const y0 = (yb || PLAYH - 2) - lines.length * 8; G.rect(0, y0 - 2, G.W, lines.length * 8 + 3, C.black); lines.forEach((l, i) => { const n = Math.max(0, Math.min(l.length, left)); left -= l.length + 1; G.text(l.slice(0, n), 120, y0 + i * 8, sub.who === 'Radio' ? C.orange : sub.who ? C.white : C.lgreen, 7, 'center'); });
-    if (shown >= sub.text.length && st.cut && st.cut.sub === sub && !st.cut.subAck && ((st.t * 2) | 0) % 2) G.text('E', 230, PLAYH - 10, C.yellow, 8);
+    if (!sub) return; const shown = sub.voice ? sub.voice.times.filter(x => x.t <= sub.t).length : 999; const lines = G.wrap(sub.text, 33, 7); let left = shown; const lh = LH();
+    const y0 = (yb || PLAYH - 2) - lines.length * lh; G.rect(0, y0 - 2, G.W, lines.length * lh + 3, C.black); const sep = G.esCJK(sub.text) ? 0 : 1; lines.forEach((l, i) => { const n = Math.max(0, Math.min(l.length, left)); left -= l.length + sep; G.text(l.slice(0, n), 120, y0 + i * lh, sub.who === 'Radio' ? C.orange : sub.who ? C.white : C.lgreen, 7, 'center'); });
+    if (shown >= sub.text.length && st.cut && st.cut.sub === sub && !st.cut.subAck) { G.rect(224, PLAYH - 12, 14, 11, C.black); G.text('E', 228, PLAYH - 10, C.yellow, 8); }   // fija, no parpadea: en la intro se perdía
   }
   const MENU_Y = 110;
   function drawTitle() {
@@ -2334,16 +2942,17 @@ window.GAME = (function () {
   function drawDoc() {
     const d = st.doc; G.rect(0, 0, G.W, PLAYH, C.black); G.box(2, 2, G.W - 4, PLAYH - 4, C.gray);
     G.text(d.title.toUpperCase().slice(0, 29), 120, 5, C.white, 8, 'center'); G.rect(8, 15, G.W - 16, 1, C.dgray);
-    d.pages[d.page].forEach((l, i) => G.text(l, 4, 19 + i * 8, C.lgray, 7));
+    d.pages[d.page].forEach((l, i) => G.text(l, 4, 19 + i * LH(), C.lgray, 7));
     G.text(`${d.page + 1}/${d.pages.length}  E: ${T(d.page + 1 < d.pages.length ? 'SIGUE' : 'CERRAR')}`, 120, PLAYH - 11, C.gray, 8, 'center');
   }
   function drawJournal() {
     const J = st.journal; G.rect(0, 0, G.W, PLAYH, C.black); const tabs = ['OBJ', 'DOCS', 'NOMBRES', 'COSAS'];
-    tabs.forEach((tb, i) => G.text(tb, [6, 46, 100, 180][i], 3, i === J.tab ? C.yellow : C.gray, 8)); G.rect(0, 13, G.W, 1, C.dgray);
-    if (J.tab === 0) { G.text(T('CAP.') + ' ' + st.chapter + ': ' + T(chap().sub).toUpperCase(), 6, 18, C.tan, 8); G.wrap(st.objText || '', 29).forEach((l, i) => G.text(l, 6, 30 + i * 9, C.lgray, 8)); }
-    if (J.tab === 1) { const ids = Object.keys(SAVE.docs); if (!ids.length) G.text('(nada todavia)', 6, 20, C.dgray, 8); const first = Math.max(0, J.sel - 10); ids.slice(first, first + 12).forEach((id, i) => G.text(((first + i === J.sel ? '> ' : '  ') + T(DOCS[id].title)).slice(0, 29), 6, 20 + i * 9, first + i === J.sel ? C.yellow : C.lgray, 8)); G.text('E: LEER', 6, PLAYH - 22, C.dgray, 8); }
-    if (J.tab === 2) { const ns = NAMES.filter(n => F('nombre_' + n)); if (!ns.length) G.text('(nadie todavia)', 6, 20, C.dgray, 8); ns.slice(0, 13).forEach((n, i) => G.text(('- ' + T(n)).slice(0, 29), 6, 20 + i * 9, C.lgray, 8)); if (ns.length > 13) G.text(T('...y') + ' ' + (ns.length - 13) + ' ' + T('mas'), 6, 20 + 13 * 9, C.dgray, 8); }
-    if (J.tab === 3) { const inv = Object.keys(P.inv).filter(k => !['macana', 'pistola', 'radio'].includes(k)); const all = ['macana', 'pistola', 'radio'].filter(k => P.inv[k]).concat(inv); if (!all.length) G.text('(nada)', 6, 20, C.dgray, 8); all.forEach((k, i) => G.text('- ' + k.replace(/_/g, ' '), 6, 20 + i * 9, C.lgray, 8)); }
+    tabs.forEach((tb, i) => G.text(tb, (LH() > 8 ? [6, 56, 106, 166] : [6, 46, 100, 180])[i], 3, i === J.tab ? C.yellow : C.gray, 8)); G.rect(0, 13, G.W, 1, C.dgray);
+    if (J.tab === 0) { G.text(T('CAP.') + ' ' + st.chapter + ': ' + T(chap().sub).toUpperCase(), 6, 18, C.tan, 8); G.wrap(st.objText || '', 29, 8).forEach((l, i) => G.text(l, 6, 30 + i * G.lineH(9), C.lgray, 8)); }
+    const lh = G.lineH(9), nL = lh > 9 ? 9 : 12;   // en japonés los glifos miden 10: menos renglones, más separados
+    if (J.tab === 1) { const ids = Object.keys(SAVE.docs); if (!ids.length) G.text('(nada todavia)', 6, 20, C.dgray, 8); const first = Math.max(0, J.sel - (nL - 2)); ids.slice(first, first + nL).forEach((id, i) => G.text(((first + i === J.sel ? '> ' : '  ') + T(DOCS[id].title)).slice(0, 29), 6, 20 + i * lh, first + i === J.sel ? C.yellow : C.lgray, 8)); G.text('E: LEER', 6, PLAYH - 22, C.dgray, 8); }
+    if (J.tab === 2) { const ns = NAMES.filter(n => F('nombre_' + n)); if (!ns.length) G.text('(nadie todavia)', 6, 20, C.dgray, 8); const nN = nL + 1; ns.slice(0, nN).forEach((n, i) => G.text(('- ' + T(n)).slice(0, 29), 6, 20 + i * lh, C.lgray, 8)); if (ns.length > nN) G.text(T('...y') + ' ' + (ns.length - nN) + ' ' + T('mas'), 6, 20 + nN * lh, C.dgray, 8); }
+    if (J.tab === 3) { const inv = Object.keys(P.inv).filter(k => !['macana', 'pistola', 'radio'].includes(k)); const all = ['macana', 'pistola', 'radio'].filter(k => P.inv[k]).concat(inv); if (!all.length) G.text('(nada)', 6, 20, C.dgray, 8); all.forEach((k, i) => G.text('- ' + k.replace(/_/g, ' '), 6, 20 + i * lh, C.lgray, 8)); }
     G.text('<> CAMBIAR  J CERRAR', 120, PLAYH - 12, C.gray, 8, 'center'); drawBar();
   }
   function drawMap() {
@@ -2359,7 +2968,7 @@ window.GAME = (function () {
   function drawPause() { const g = G.ctx(); g.globalAlpha = .7; G.rect(0, 0, G.W, PLAYH, C.black); g.globalAlpha = 1; G.text('PAUSA', 120, 50, C.white, 8, 'center'); G.text((st.pauseMenu === 0 ? '> ' : '  ') + 'SEGUIR', 60, 72, st.pauseMenu === 0 ? C.yellow : C.lgray, 8); G.text((st.pauseMenu === 1 ? '> ' : '  ') + 'MENU PRINCIPAL', 60, 84, st.pauseMenu === 1 ? C.yellow : C.lgray, 8); }
   function drawPuzzle() {
     const Z = st.puzzle; const g = G.ctx(); g.globalAlpha = .85; G.rect(0, 0, G.W, PLAYH, C.black); g.globalAlpha = 1;
-    if (Z.kind === 'code') { G.text('CANDADO', 120, 20, C.white, 8, 'center'); G.wrap(Z.text, 29).slice(0, 3).forEach((l, i) => G.text(l, 120, 34 + i * 9, C.lgray, 6, 'center')); const sh = Z.shake > 0 ? (Math.random() - .5) * 6 : 0; for (let i = 0; i < 4; i++) { G.box(70 + i * 26 + sh, 70, 20, 24, i === Z.pos ? C.yellow : C.gray); G.text(String(Z.d[i]), 80 + i * 26 + sh, 78, i === Z.pos ? C.yellow : C.white, 8, 'center'); } G.text('ARRIBA/ABAJO: numero  E: abrir  ESC: salir', 120, 110, C.dgray, 5, 'center'); }
+    if (Z.kind === 'code') { G.text('CANDADO', 120, 20, C.white, 8, 'center'); G.wrap(Z.text, 29, 6).slice(0, 3).forEach((l, i) => G.text(l, 120, 34 + i * G.lineH(9), C.lgray, 6, 'center')); const sh = Z.shake > 0 ? (Math.random() - .5) * 6 : 0; for (let i = 0; i < 4; i++) { G.box(70 + i * 26 + sh, 70, 20, 24, i === Z.pos ? C.yellow : C.gray); G.text(String(Z.d[i]), 80 + i * 26 + sh, 78, i === Z.pos ? C.yellow : C.white, 8, 'center'); } G.text('ARRIBA/ABAJO: numero  E: abrir  ESC: salir', 120, 110, C.dgray, 5, 'center'); }
     if (Z.kind === 'names') { G.text(T('PASE DE LISTA') + ' ' + (Z.round + 1) + '/3', 120, 10, C.white, 8, 'center'); G.text(T('Campanas calladas:') + ' ' + Z.hits + '  ' + T('Errores:') + ' ' + Z.errors, 120, 22, C.gray, 6, 'center'); Z.opts.forEach((o, i) => G.text((i === Z.sel ? '> ' : '  ') + T(o), 20, 50 + i * 16, i === Z.sel ? C.yellow : C.lgray, 8)); G.text('E: decir el nombre al microfono', 120, 112, C.dgray, 6, 'center'); if (Z.errors) G.text('Los Enmascarados subieron un tramo.', 120, 124, C.red, 6, 'center'); }
   }
   // ---------- bucle ----------
@@ -2387,7 +2996,7 @@ window.GAME = (function () {
     document.addEventListener('visibilitychange', () => { if (document.hidden && st.mode === 'play') { st.mode = 'pause'; A.pause(true); } });
     requestAnimationFrame(frame);
   }
-  return { init, step, renderNow: render, st, P, SAVE, keys, input, goPlace, placePlayer, press, say, get levels() { return levels; }, cur, load, newGame, startChapter, beginPlay, setFlag, F, CHAPTERS, endChapter, openTile, interact, attack, tables: { TRIG, CITY_SPAWNS, CITY_LINKS, CITY_SETUP, DOCS, SIGNS, LINES, LOOKS, NAMES, ENEMY, WEAPONS } };
+  return { init, step, renderNow: render, st, P, SAVE, keys, input, goPlace, placePlayer, press, say, openDoc, setObjective, T, setLang: l => { st.lang = l; G.setLang(l); }, get levels() { return levels; }, cur, load, newGame, startChapter, beginPlay, setFlag, F, CHAPTERS, endChapter, openTile, interact, attack, tables: { TRIG, CITY_SPAWNS, CITY_LINKS, CITY_SETUP, DOCS, SIGNS, LINES, LOOKS, NAMES, ENEMY, WEAPONS } };
 })();
 window.addEventListener('DOMContentLoaded', () => { window.LIOBAS = window.GAME; window.GAME.init(); });
 
