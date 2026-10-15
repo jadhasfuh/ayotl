@@ -223,7 +223,7 @@ export const APPS: App[] = [
     },
     datos: [
       { valor: "8", etiqueta: { es: "capítulos", en: "chapters" } },
-      { valor: "2 h 15", etiqueta: { es: "de historia", en: "of story" } },
+      { valor: "1 h 30", etiqueta: { es: "de historia", en: "of story" } },
       { valor: "21", etiqueta: { es: "documentos", en: "documents" } },
     ],
     etiquetas: { es: ["Juegos", "Terror", "Web"], en: ["Games", "Horror", "Web"] },
