@@ -203,14 +203,14 @@ export const APPS: App[] = [
   },
   {
     // «La procesión de los dormidos» es el nombre de trabajo (octubre de 2026).
-    // La demo (capítulos 1 a 3) se sirve desde aquí: public/procesion.html es
-    // dist/liobas-demo.html del repo procesion-de-los-dormidos, y /procesion
-    // es una reescritura en next.config.ts. El juego completo va a itch.io y
-    // a Google Play. Las cifras salen del guion (PROCESION.md de ese repo).
+    // La demo (capítulos 1 a 3) se juega en Daily Challenge, la app de juegos,
+    // como War Zone; ayotl.dev/procesion redirige allá (next.config.ts). El
+    // juego completo va a itch.io y a Google Play. Las cifras salen del guion
+    // (PROCESION.md del repo procesion-de-los-dormidos).
     id: "procesion",
     nombre: "La procesión de los dormidos",
-    dominio: "ayotl.dev/procesion",
-    url: "https://ayotl.dev/procesion",
+    dominio: "dailychallenge.click/liobas",
+    url: "https://dailychallenge.click/liobas",
     acento: "tierra",
     apaisada: true,
     lema: {

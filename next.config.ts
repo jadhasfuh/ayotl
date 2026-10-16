@@ -49,9 +49,12 @@ const nextConfig: NextConfig = {
     // declare otro icono; que no sea un 404 en el log.
     return [
       { source: "/favicon.ico", destination: "/icono/32" },
-      // La demo de «La procesión de los dormidos»: una sola HTML en public/.
-      { source: "/procesion", destination: "/procesion.html" },
     ];
+  },
+  async redirects() {
+    // «La procesión de los dormidos» se juega en Daily Challenge, la app de juegos, como War Zone
+    // (decisión de Adrián, 15-oct-2026). Los enlaces viejos a ayotl.dev/procesion van allá.
+    return [{ source: "/procesion", destination: "https://dailychallenge.click/liobas", permanent: true }];
   },
 };
 
