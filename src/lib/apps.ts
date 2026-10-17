@@ -209,8 +209,8 @@ export const APPS: App[] = [
     // (PROCESION.md del repo procesion-de-los-dormidos).
     id: "procesion",
     nombre: "La procesión de los dormidos",
-    dominio: "dailychallenge.click/liobas",
-    url: "https://dailychallenge.click/liobas",
+    dominio: "dailychallenge.click/procesion",
+    url: "https://dailychallenge.click/procesion",
     acento: "tierra",
     apaisada: true,
     lema: {
