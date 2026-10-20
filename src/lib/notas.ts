@@ -16,7 +16,7 @@ export type Bloque =
 export type Nota = {
   id: string;
   fecha: string;                       // AAAA-MM-DD, la del hallazgo
-  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl" | "warzone";
+  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl" | "warzone" | "kazan";
   titulo: Record<Idioma, string>;
   entradilla: Record<Idioma, string>;
   cuerpo: Bloque[];
@@ -484,6 +484,104 @@ vueloRestante(p, n = 240) {
       { tipo: "p", texto: {
         es: "La regla de fondo es la misma de todo el piloto: un instrumento que se vigila a sí mismo. Si la carta sirve también para promocionar, la promoción no puede volverse ruido en la medición.",
         en: "The underlying rule is the pilot's own: an instrument that watches itself. If the menu doubles as promotional material, promotion can't turn into noise in the measurement.",
+      } },
+    ],
+  },
+  {
+    id: "un-juego-de-estrategia-en-linea-con-unos-bytes-por-tick",
+    fecha: "2026-10-20",
+    proyecto: "kazan",
+    titulo: {
+      es: "Un juego de estrategia en línea con unos bytes por tick",
+      en: "An online strategy game on a few bytes per tick",
+    },
+    entradilla: {
+      es: "La pregunta era si un juego de ciudades y ejércitos podía ser en tiempo real desde el teléfono, con varios en el mismo mapa. Puede, con una idea de 1996: no se manda el mundo, se mandan las órdenes, y cada teléfono simula lo mismo.",
+      en: "The question was whether a game of cities and armies could run in real time from a phone, with several people on the same map. It can, with an idea from 1996: you don't send the world, you send the orders, and every phone simulates the same thing.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "El primer impulso es mandar el estado: dónde está cada soldado, cuánta vida tiene cada casa. Con doscientas unidades a diez veces por segundo son cientos de kilobytes por segundo por jugador, y en un teléfono con datos eso no se sostiene. La alternativa es la de los juegos de estrategia de los noventa: cada cliente corre la simulación completa, y lo único que viaja es «en el tick 1 240, el jugador 2 mandó estas tropas a tal casilla». Unas decenas de bytes.",
+        en: "The first instinct is to send the state: where every soldier is, how much health every house has. With two hundred units ten times a second that's hundreds of kilobytes per second per player, and on a phone on mobile data that doesn't hold. The alternative is the one strategy games used in the nineties: every client runs the full simulation, and the only thing that travels is «on tick 1,240, player 2 sent these troops to that tile». A few dozen bytes.",
+      } },
+      { tipo: "p", texto: {
+        es: "Para que funcione, la simulación tiene que ser determinista: con las mismas órdenes, el mismo resultado en todos, siempre. Eso impone reglas incómodas. Nada de `Math.random`: el azar sale de un generador propio guardado en el estado. Nada de `Math.sin` ni `Math.atan2`, que un motor puede redondear distinto que otro; sólo sumas, productos y `Math.sqrt`, que la norma obliga a redondear igual en todas partes. Y recorrer siempre las listas en el mismo orden.",
+        en: "For that to work, the simulation has to be deterministic: same orders, same result for everyone, always. That imposes awkward rules. No `Math.random`: randomness comes from a generator of our own kept in the state. No `Math.sin` or `Math.atan2`, which one engine may round differently from another; only sums, products and `Math.sqrt`, which the standard forces to round identically everywhere. And always walk the lists in the same order.",
+      } },
+      { tipo: "codigo", texto: `// Dos partidas con la misma semilla y las mismas órdenes acaban idénticas,
+// y una copia serializada a medio camino sigue igual que el original.
+const a = partida(3000, -1), b = partida(3000, -1), c = partida(3000, 1500);
+if (a !== b || a !== c) process.exit(1);`, pie: { es: "La prueba que corre antes de cada cambio de reglas.", en: "The test that runs before every rules change." } },
+      { tipo: "p", texto: {
+        es: "El servidor no simula para los demás: sólo ordena el tiempo. Cada 100 ms cierra un tick, toma las órdenes que llegaron, les pone el número de tick y las reparte. Cada 5 segundos manda un resumen del estado (un hash de las vidas, posiciones y recursos); si a un cliente no le cuadra, pide el estado completo y sigue desde ahí. Quien entra a media partida recibe ese estado completo una vez. Y las computadoras rivales juegan desde el servidor: sus órdenes viajan como las de cualquiera.",
+        en: "The server doesn't simulate for the others: it only keeps time. Every 100 ms it closes a tick, takes the orders that arrived, stamps them with the tick number and hands them out. Every 5 seconds it sends a state digest (a hash of healths, positions and resources); if a client disagrees, it asks for the full state and carries on from there. Whoever joins mid-match receives that full state once. And the computer rivals play from the server: their orders travel like anyone's.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo que se gana con esto es más de lo que parece. Mientras estás conectado, es en tiempo real: ves llegar al enemigo y mandas a tu gente. Mientras no estás, tu ciudad se defiende sola, porque la simulación no necesita al jugador. Y un tick de una partida de cuatro cuesta cinco centésimas de milisegundo en el servidor: un proceso aguanta cientos de islas.",
+        en: "What this buys is more than it seems. While you're connected, it's real time: you see the enemy arrive and send your people. While you're away, your city defends itself, because the simulation doesn't need the player. And one tick of a four-player match costs five hundredths of a millisecond on the server: one process can hold hundreds of islands.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo que sigue costando es lo que cada teléfono simula. Con cuatro u ocho jugadores sobra; para veinte habría que dejar de mirar todas las unidades enemigas en cada tick y partir el mapa en zonas. Por ahora la isla es de cuatro, y el volcán se encarga de que ninguna partida dure para siempre.",
+        en: "What still costs is what each phone simulates. With four or eight players there's plenty of headroom; for twenty you'd have to stop checking every enemy unit on every tick and split the map into zones. For now the island holds four, and the volcano makes sure no match lasts forever.",
+      } },
+    ],
+  },
+  {
+    id: "la-intro-de-la-casa",
+    fecha: "2026-10-21",
+    proyecto: "ayotl",
+    titulo: {
+      es: "La intro de la casa: una tortuga, una piedra y tres juegos",
+      en: "The house intro: a turtle, a rock and three games",
+    },
+    entradilla: {
+      es: "Los tres juegos de Ayotl arrancan ahora con la misma escena de tres segundos. Un módulo sin dependencias que cada juego alimenta con su lienzo y su audio, porque los tres dibujan y suenan distinto por dentro.",
+      en: "Ayotl's three games now open with the same three-second scene. A dependency-free module that each game feeds with its own canvas and audio, because all three draw and sound differently inside.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Los tres juegos comparten la estética (píxeles gordos, paleta de una consola de 1977, sonido de chip) pero no el código: uno dibuja en un lienzo de 320x180 con sus propias primitivas, otro en uno de 240x160 que después pasa por un filtro de monitor viejo, y el tercero acaba de nacer. Un módulo compartido tenía que pedir lo mínimo: un contexto 2D, un tamaño, y, si el juego ya abrió el audio, su `AudioContext` y el nodo donde conectar.",
+        en: "The three games share the look (fat pixels, the palette of a 1977 console, chip sound) but not the code: one draws on a 320x180 canvas with its own primitives, another on a 240x160 one that then goes through an old-monitor filter, and the third was just born. A shared module had to ask for the minimum: a 2D context, a size, and, if the game has already opened audio, its `AudioContext` and the node to plug into.",
+      } },
+      { tipo: "codigo", texto: `await introAyotl({ ctx, ancho, alto, audioCtx, destino, canvas });`, pie: { es: "La escena se centra en cualquier tamaño; un toque o una tecla la salta.", en: "The scene centres itself at any size; a tap or a key skips it." } },
+      { tipo: "p", texto: {
+        es: "El detalle que manda es el audio. Los navegadores no dejan sonar nada hasta el primer gesto del usuario, así que la intro no puede ir al cargar la página: va al primer toque. En un juego ese toque ya era «tocar para empezar»; en otro era «clic: activar sonido»; el tercero tiene ahora una pantalla de inicio sólo para eso. Las cinco notas de las letras (do, mi, sol, do, mi) se tocan con osciladores creados en ese momento, sobre el bus de efectos del juego, y por eso respetan su control de volumen.",
+        en: "The detail that rules everything is audio. Browsers don't let anything play until the user's first gesture, so the intro can't run on page load: it runs on the first tap. In one game that tap was already «tap to start»; in another it was «click: enable sound»; the third now has a splash screen for exactly that. The five notes of the letters (C, E, G, C, E) are played with oscillators created on the spot, on the game's effects bus, which is why they respect its volume control.",
+      } },
+      { tipo: "p", texto: {
+        es: "Mientras la intro pinta, el bucle del juego tiene que callarse: cada uno tiene ahora un modo «intro» en el que no dibuja (uno de ellos sólo sigue copiando el lienzo interno al de salida, para que el filtro de monitor siga encendido). Al terminar, cada juego vuelve a donde estaba: al menú, o al título con su música. Hay tres copias del archivo, una por repositorio, con una nota arriba que dice que si se cambia una se cambian las tres. Para un archivo de ochenta líneas, un paquete habría sido más ceremonia que ayuda.",
+        en: "While the intro paints, the game loop has to stay quiet: each one now has an «intro» mode in which it doesn't draw (one of them only keeps copying the internal canvas to the output, so the monitor filter stays on). When it ends, each game goes back to where it was: the menu, or the title with its music. There are three copies of the file, one per repository, with a note at the top saying that if you change one you change all three. For an eighty-line file, a package would have been more ceremony than help.",
+      } },
+    ],
+  },
+  {
+    id: "un-reel-de-citas-sin-un-paciente-real",
+    fecha: "2026-10-20",
+    proyecto: "mercadito",
+    titulo: {
+      es: "Un reel de citas sin un paciente real",
+      en: "A bookings reel without a real patient",
+    },
+    entradilla: {
+      es: "Para enseñar las reservas en un reel hacía falta un consultorio con agenda llena. El único que había en la base era real, con la dirección de una casa y el teléfono de una persona. Se grabó en un Mercadito que no existe.",
+      en: "Showing bookings in a reel needed a clinic with a full agenda. The only one in the database was real, with a home address and a person's phone number. It was recorded on a Mercadito that doesn't exist.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Los reels de Mercadito se graban en el sitio real, con un Chrome sin ventana que contesta en local toda petición que no sea de lectura, para que ninguna vista ni ningún pedido cuente en el piloto. Eso sirve para enseñar cartas de negocios reales. No sirve para enseñar el módulo de citas: el negocio de prueba que tenía servicios y agenda es una peluquería de verdad, y su ficha lleva una dirección particular y un número de teléfono. Un vídeo público con eso no se publica.",
+        en: "Mercadito's reels are recorded on the real site, with a headless Chrome that answers locally every request that isn't a read, so that no view and no order counts in the pilot. That works for showing real businesses' menus. It doesn't work for showing the bookings module: the test business that had services and an agenda is a real hair salon, and its listing carries a home address and a phone number. A public video with that doesn't get published.",
+      } },
+      { tipo: "p", texto: {
+        es: "La salida fue levantar un Mercadito entero en la máquina que graba: un Postgres propio en otro puerto, el servidor de desarrollo apuntando a él, y todas las variables de las llaves de producción (Facebook, Stripe, notificaciones, almacenamiento) puestas en blanco. Ese detalle importa: una variable vacía en el entorno le gana al archivo `.env`, así que ese servidor local no puede publicar, cobrar ni avisar a nadie aunque alguien lo intente.",
+        en: "The way out was to bring up a whole Mercadito on the recording machine: its own Postgres on another port, the development server pointing at it, and every production-key variable (Facebook, Stripe, notifications, storage) set to blank. That detail matters: an empty variable in the environment beats the `.env` file, so that local server can't post, charge or notify anyone even if something tries.",
+      } },
+      { tipo: "p", texto: {
+        es: "Encima se sembró «Tu Consultorio Dental», que no existe: cinco servicios, seis productos con imágenes hechas a propósito, un horario y una agenda del día con pacientes inventados. Hasta ahí hubo tropiezos útiles. La carta sólo pinta imágenes con dirección web, no incrustadas, y su política de seguridad sólo deja `https`: las imágenes de prueba acabaron en un servidor estático aparte con la política apagada sólo para esa toma. Y la tabla de vistas de carta es de sólo altas también en local, así que el negocio de prueba no se borra y se vuelve a sembrar: se actualiza en su lugar.",
+        en: "On top of it we seeded «Tu Consultorio Dental», which doesn't exist: five services, six products with purpose-made images, opening hours and a day's agenda with made-up patients. Even that had useful snags. The menu only renders images with a web address, not embedded ones, and its security policy only allows `https`: the test images ended up on a separate static server with the policy switched off for that one take. And the menu-views table is append-only locally too, so the test business can't be deleted and re-seeded: it gets updated in place.",
+      } },
+      { tipo: "p", texto: {
+        es: "El reel tiene tres tomas: un paciente que reserva como invitado, la dentista que ve la cita en su agenda y la confirma con un toque, y la carta con sus productos. Los teléfonos, aunque son de mentira, salen desenfocados: el grabador apunta en cada cuadro el recuadro de cada número y el montaje lo difumina. El pie del vídeo dice que es un consultorio de ejemplo. Y el servidor local se apaga al terminar: el tiempo que vive una base así es el tiempo que dura la grabación.",
+        en: "The reel has three takes: a patient booking as a guest, the dentist seeing the appointment in her agenda and confirming it with one tap, and the menu with its products. The phone numbers, fake as they are, come out blurred: the recorder notes the box of every number on every frame and the edit blurs it. The caption says it's an example clinic. And the local server is shut down when it's over: a database like that lives exactly as long as the recording.",
       } },
     ],
   },

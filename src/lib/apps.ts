@@ -11,7 +11,7 @@ import type { Idioma } from "./idioma";
  * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
-  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion";
+  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion" | "kazan";
   nombre: string;
   /** Lo que va bajo el nombre en la tarjeta: el dominio, o dónde está si aún no tiene web. */
   dominio: string;
@@ -156,6 +156,53 @@ export const APPS: App[] = [
       { imagen: "dailychallenge-party",
         titulo: { es: "Modo party", en: "Party mode" },
         texto: { es: "Creas una sala, pasas el código a tus amigos y juegan las mismas rondas. La tabla se actualiza en vivo.", en: "Create a room, share the code with your friends and play the same rounds. The table updates live." } },
+    ],
+  },
+  {
+    // Prototipo (21-oct-2026): estrategia en tiempo real en una isla con
+    // volcán. Se juega en la web dentro de Daily Challenge como «juego
+    // extra»; la partida en línea existe en el código pero espera su
+    // servidor; la app con AdMob viene después. El nombre (火山, «volcán») es
+    // provisional. Las cifras salen de sim/sim.js y sim/mapa.js del repo.
+    id: "kazan",
+    nombre: "Kazan",
+    dominio: "dailychallenge.click/kazan",
+    url: "https://dailychallenge.click/kazan",
+    acento: "agua",
+    apaisada: true,
+    lema: {
+      es: "Levanta tu ciudad, arma tu ejército y escapa de la lava.",
+      en: "Build your city, raise an army and outrun the lava.",
+    },
+    descripcion: {
+      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Prototipo, gratis.",
+      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. A free prototype.",
+    },
+    datos: [
+      { valor: "9", etiqueta: { es: "edificios", en: "buildings" } },
+      { valor: "6", etiqueta: { es: "tropas", en: "unit types" } },
+      { valor: "4", etiqueta: { es: "islas", en: "island types" } },
+    ],
+    etiquetas: { es: ["Juegos", "Web", "Prototipo"], en: ["Games", "Web", "Prototype"] },
+    pantallas: [
+      { imagen: "kazan-ciudad",
+        titulo: { es: "Obreros que recogen y construyen", en: "Workers who gather and build" },
+        texto: { es: "Empiezas con tu base y tres obreros: dos ya cortan madera y uno saca hierro. Cada árbol y cada veta se agotan, así que la ciudad crece hacia el bosque y la sierra.", en: "You start with your base and three workers: two already chop wood and one mines iron. Every tree and every seam runs out, so the city grows toward the forest and the hills." } },
+      { imagen: "kazan-construir",
+        titulo: { es: "Una cuadrícula que dice dónde", en: "A grid that says where" },
+        texto: { es: "Eliges un edificio y la isla se pinta de verde donde cabe y de rojo donde no: árboles, mineral, agua, montaña o por donde viene la lava. El fantasma se arrastra con el dedo y una torre enseña su alcance.", en: "Pick a building and the island turns green where it fits and red where it doesn't: trees, ore, water, mountain or where the lava is headed. The ghost drags with your finger and a tower shows its range." } },
+      { imagen: "kazan-cuartel",
+        titulo: { es: "Seis tropas que se contrarrestan", en: "Six unit types that counter each other" },
+        texto: { es: "Soldado barato, francotirador de alcance, tanque que pega el doble a los edificios, explorador que corre, dron que vuela sobre el agua, y el obrero. Las tropas en marcha atacan lo que encuentran.", en: "A cheap soldier, a long-range sniper, a tank that hits buildings twice as hard, a fast scout, a drone that flies over water, and the worker. Troops on the march attack whatever they find." } },
+      { imagen: "kazan-tropas",
+        titulo: { es: "Hecho para el dedo", en: "Made for a finger" },
+        texto: { es: "Tocas un muñeco y se elige su grupo. Dejas el dedo quieto un momento y arrastras: eliges todo lo que quede en el área. Luego tocas a dónde van.", en: "Tap a figure and its group is selected. Hold still for a moment and drag: everything inside the area is selected. Then tap where they go." } },
+      { imagen: "kazan-lava",
+        titulo: { es: "El volcán se come la isla", en: "The volcano eats the island" },
+        texto: { es: "A un cuarto de la partida hace erupción. La lava avanza por tierra, casilla a casilla, y el agua la para. Si se come tu base, sigues con la gente que te quede: huir también es jugar.", en: "A quarter of the way in, it erupts. The lava moves over land, tile by tile, and water stops it. If it swallows your base, you carry on with whoever is left: running is part of the game." } },
+      { imagen: "kazan-nieve",
+        titulo: { es: "Cuatro islas", en: "Four islands" },
+        texto: { es: "Bosque, nieve, desierto y pantano, cada una con su propio mapa a partir de una semilla. En el pantano las ciénagas frenan y no se construye; en el desierto casi no hay agua donde esconderse.", en: "Forest, snow, desert and swamp, each with its own map from a seed. In the swamp the marshes slow you down and can't be built on; in the desert there is hardly any water to hide behind." } },
     ],
   },
   {

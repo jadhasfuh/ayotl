@@ -300,3 +300,17 @@ Adrián vio algunas viejas. Lo que cambió:
   una copia de la portada: ahora es una partida de práctica de la pirámide de
   cubos (la práctica contada se contestó en local). El catálogo dice 40
   recreativas y hay 147 mapas: las cifras de la ficha pasan de 35/66 a 40/147.
+
+## 2026-10-21 — Kazan en la vitrina, y tres notas
+
+Entra el sexto producto, **Kazan** (nombre provisional: 火山, «volcán»): estrategia
+en tiempo real en una isla con volcán, prototipo que se juega dentro de Daily
+Challenge como juego extra. Su ficha lleva seis capturas apaisadas del propio
+canvas (320×180 a 4× sin suavizar, como las de War Zone), sacadas con
+`tools/capturas-ayotl.mjs` de su repo. Sus cifras salen de `sim/sim.js`.
+
+Las notas de ayotl.dev llevaban desde el 12-oct sin entradas. Van tres: cómo
+funciona la partida en línea de Kazan (cada teléfono simula, sólo viajan las
+órdenes), la intro de la casa que ahora comparten los tres juegos, y cómo se
+grabó el reel de citas de Mercadito en un Mercadito local para no enseñar los
+datos de un negocio real. Para eso `Nota.proyecto` admite ahora `kazan`.
