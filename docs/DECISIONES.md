@@ -295,6 +295,8 @@ Adrián vio algunas viejas. Lo que cambió:
   - los nombres nuevos;
   - la frase completa del boulevard.
 - **War Zone.** Se quedan: desde el 13-oct sólo cambió lo de los anuncios.
-- **Daily Challenge.** Queda pendiente. Railway tenía caída de builds, y el
-  sitio todavía no enseña la tanda de octubre (cinco juegos nuevos). Además,
-  `dailychallenge-juego` era copia de la portada, no de una partida.
+- **Daily Challenge.** Las cuatro, con la tanda de octubre ya desplegada
+  (Railway tuvo caída de builds de 11:03 a 15:00). `dailychallenge-juego` era
+  una copia de la portada: ahora es una partida de práctica de la pirámide de
+  cubos (la práctica contada se contestó en local). El catálogo dice 40
+  recreativas y hay 147 mapas: las cifras de la ficha pasan de 35/66 a 40/147.

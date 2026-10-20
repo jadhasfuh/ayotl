@@ -140,8 +140,9 @@ export const APPS: App[] = [
       en: "One run per person and a top 10 at midnight. Free.",
     },
     datos: [
-      { valor: "35", etiqueta: { es: "recreativas", en: "arcade games" } },
-      { valor: "66", etiqueta: { es: "mapas", en: "maps" } },
+      // Lo que dice dailychallenge.click/juegos el 2026-10-20 (40 recreativas) y public/content/maps (147).
+      { valor: "40", etiqueta: { es: "recreativas", en: "arcade games" } },
+      { valor: "147", etiqueta: { es: "mapas", en: "maps" } },
       { valor: "1", etiqueta: { es: "partida/día", en: "run/day" } },
     ],
     etiquetas: { es: ["Juegos", "Android", "Web"], en: ["Games", "Android", "Web"] },
@@ -150,7 +151,7 @@ export const APPS: App[] = [
         titulo: { es: "El reto de hoy", en: "Today's challenge" },
         texto: { es: "Un juego distinto cada día, con su mapa y su música. Una partida por persona: la misma para todo el mundo.", en: "A different game every day, with its own map and music. One run per person: the same one for everybody." } },
       { imagen: "dailychallenge-juegos",
-        titulo: { es: "35 recreativas", en: "35 arcade games" },
+        titulo: { es: "40 recreativas", en: "40 arcade games" },
         texto: { es: "Escritos en JavaScript puro, sin motor ni descargas, con la paleta y el sonido de una consola de 1977.", en: "Written in plain JavaScript, no engine and no downloads, with the palette and sound of a 1977 console." } },
       { imagen: "dailychallenge-party",
         titulo: { es: "Modo party", en: "Party mode" },
