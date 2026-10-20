@@ -165,7 +165,7 @@ export const APPS: App[] = [
     // servidor; la app con AdMob viene después. El nombre (火山, «volcán») es
     // provisional. Las cifras salen de sim/sim.js y sim/mapa.js del repo.
     id: "kazan",
-    nombre: "Kazan",
+    nombre: "Kazan (demo)",
     dominio: "dailychallenge.click/kazan",
     url: "https://dailychallenge.click/kazan",
     acento: "agua",
@@ -175,15 +175,15 @@ export const APPS: App[] = [
       en: "Build your city, raise an army and outrun the lava.",
     },
     descripcion: {
-      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Prototipo, gratis.",
-      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. A free prototype.",
+      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Demo, gratis.",
+      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. A free demo.",
     },
     datos: [
       { valor: "9", etiqueta: { es: "edificios", en: "buildings" } },
       { valor: "6", etiqueta: { es: "tropas", en: "unit types" } },
       { valor: "4", etiqueta: { es: "islas", en: "island types" } },
     ],
-    etiquetas: { es: ["Juegos", "Web", "Prototipo"], en: ["Games", "Web", "Prototype"] },
+    etiquetas: { es: ["Juegos", "Web", "Demo"], en: ["Games", "Web", "Demo"] },
     pantallas: [
       { imagen: "kazan-ciudad",
         titulo: { es: "Obreros que recogen y construyen", en: "Workers who gather and build" },
@@ -258,7 +258,7 @@ export const APPS: App[] = [
     // juego completo va a itch.io y a Google Play. Las cifras salen del guion
     // (PROCESION.md del repo procesion-de-los-dormidos).
     id: "procesion",
-    nombre: "La procesión de los dormidos",
+    nombre: "La procesión de los dormidos (demo)",
     dominio: "dailychallenge.click/procesion",
     url: "https://dailychallenge.click/procesion",
     acento: "tierra",

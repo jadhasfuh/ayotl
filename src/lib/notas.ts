@@ -535,8 +535,8 @@ if (a !== b || a !== c) process.exit(1);`, pie: { es: "La prueba que corre antes
       en: "The house intro: a turtle, a rock and three games",
     },
     entradilla: {
-      es: "Los tres juegos de Ayotl arrancan ahora con la misma escena de tres segundos. Un módulo sin dependencias que cada juego alimenta con su lienzo y su audio, porque los tres dibujan y suenan distinto por dentro.",
-      en: "Ayotl's three games now open with the same three-second scene. A dependency-free module that each game feeds with its own canvas and audio, because all three draw and sound differently inside.",
+      es: "Los tres juegos de Ayotl arrancan ahora con la misma escena de seis segundos. Un módulo sin dependencias que cada juego alimenta con su lienzo y su audio, porque los tres dibujan y suenan distinto por dentro.",
+      en: "Ayotl's three games now open with the same six-second scene. A dependency-free module that each game feeds with its own canvas and audio, because all three draw and sound differently inside.",
     },
     cuerpo: [
       { tipo: "p", texto: {
