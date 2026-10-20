@@ -99,9 +99,11 @@ export const APPS: App[] = [
       en: "Vocabulary, grammar, readings and mini-tests with spaced repetition.",
     },
     datos: [
-      { valor: "7 957", etiqueta: { es: "palabras", en: "words" } },
-      { valor: "846", etiqueta: { es: "gramáticas", en: "grammar points" } },
-      { valor: "619", etiqueta: { es: "unidades", en: "units" } },
+      // Lo que dice la portada de jlptest.org el 2026-10-20 (VOCABULARIO,
+      // GRAMATICA y UNIDADES de su lib/contenido.ts).
+      { valor: "9 452", etiqueta: { es: "palabras", en: "words" } },
+      { valor: "864", etiqueta: { es: "gramáticas", en: "grammar points" } },
+      { valor: "600", etiqueta: { es: "unidades", en: "units" } },
     ],
     etiquetas: { es: ["Japonés", "Android", "Web"], en: ["Japanese", "Android", "Web"] },
     pantallas: [

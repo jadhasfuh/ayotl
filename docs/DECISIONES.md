@@ -272,3 +272,29 @@ dice su texto. Ventas se queda con la del 23-sep: hoy la demo no tiene ventas
 y saldría vacía. Las de War
 Zone salen del propio juego (`window.TH` en un Chrome sin ventana: menú,
 campaña, castillo con su cráter, arsenal, pasa el teléfono y vector).
+
+## 2026-10-20 — Capturas al día (2)
+
+Adrián vio algunas viejas. Lo que cambió:
+
+- **Mercadito.** La carta de la demo salía con letras en lugar de fotos; ahora
+  es la de Amazónico (Adrián dio permiso de usar cualquier restaurante), con
+  su logo, la promoción del día y «Más vendidos» con fotos. Su vista
+  (`POST /api/menu/<id>/evento`) se contestó en local: el piloto no la contó.
+  Las del panel siguen siendo de la demo; la interfaz no ha cambiado.
+- **jlptest.** Las cinco, al día: la portada dice 9 452 palabras y 864 puntos
+  de gramática, y las noticias son las de hoy. «Repaso espaciado» enseñaba la
+  pantalla vacía («Nada vencido»), porque la sesión anónima no tiene
+  historial. Ahora es una tarjeta de práctica, con «No la sabía / La sabía» y
+  «las que falles vuelven antes de cerrar la sesión». El progreso que manda se
+  contestó en local. Las cifras de la ficha pasan a 9 452 / 864 / 600, las de
+  su `lib/contenido.ts` en producción.
+- **La procesión de los dormidos.** Las seis, rehechas con el juego del 18-oct:
+  - el menú nuevo (idioma, capítulos);
+  - los sprites de tres tonos y los árboles;
+  - los nombres nuevos;
+  - la frase completa del boulevard.
+- **War Zone.** Se quedan: desde el 13-oct sólo cambió lo de los anuncios.
+- **Daily Challenge.** Queda pendiente. Railway tenía caída de builds, y el
+  sitio todavía no enseña la tanda de octubre (cinco juegos nuevos). Además,
+  `dailychallenge-juego` era copia de la portada, no de una partida.
