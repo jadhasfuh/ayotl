@@ -8,11 +8,11 @@ import type { NextConfig } from "next";
  */
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com",
+  "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://static.cloudflareinsights.com",   // Web Analytics de Cloudflare (el beacon que inyecta el proxy)
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  "connect-src 'self'",
+  "connect-src 'self' https://cloudflareinsights.com",
   // youtube-nocookie: el vídeo incrustado de cada reto (/retos/<slug>), sin
   // cookies de seguimiento hasta que alguien le da play.
   "frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com",

@@ -194,7 +194,7 @@ ul { padding-left: 1.2em; }
   align-self: flex-start;
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--fuente-dato); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--caparazon); background: var(--caparazon-suave);
+  color: #3f5a2d; background: var(--caparazon-suave);   /* un tono más oscuro que --caparazon: con el fondo suave, 4.35:1 no pasaba el contraste */
   padding: 0.35rem 0.8rem; border-radius: var(--radio-pildora); margin-bottom: 1.25rem;
 }
 @media (min-width: 720px) {
@@ -320,7 +320,7 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
 .pie-marca { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
 .pie-marca .marca { font-size: 28px; }
 .pie-marca p { margin: 0; }
-.pie-legal { margin: 0; font-size: 0.85rem; opacity: 0.8; }
+.pie-legal { margin: 0; font-size: 0.85rem; opacity: 0.92; }   /* con 0.8 el gris quedaba en 3.6:1 */
 @media (min-width: 720px) {
   .pie .contenedor { grid-template-columns: 1fr auto; align-items: center; }
   .pie-legal { grid-column: 1 / -1; }
