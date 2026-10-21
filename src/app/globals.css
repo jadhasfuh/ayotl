@@ -15,6 +15,7 @@
   --tinta-2: #5b635f;        /* texto secundario — 5.5:1 */
   --linea: #ddd2ba;          /* el filo que sustituye a la sombra */
   --caparazon: #4f6d3a;
+  --caparazon-etiqueta: #3f5a2d;
   --caparazon-suave: rgba(79, 109, 58, 0.14);
   --agua: #1e6f7a;           /* enlaces y texto de acción */
   --agua-solido: #165761;    /* relleno de botón: 8.2:1 con blanco */
@@ -49,6 +50,7 @@
     --tinta-2: #a4ada7;
     --linea: #25352f;
     --caparazon: #93bd6a;    /* el #7fa35f se apagaba sobre el fondo */
+    --caparazon-etiqueta: #93bd6a;
     --caparazon-suave: rgba(147, 189, 106, 0.18);
     --agua: #63c3d2;
     --agua-solido: #63c3d2;
@@ -70,6 +72,7 @@
   --tinta-2: #a4ada7;
   --linea: #25352f;
   --caparazon: #93bd6a;
+  --caparazon-etiqueta: #93bd6a;
   --caparazon-suave: rgba(147, 189, 106, 0.18);
   --agua: #63c3d2;
   --agua-solido: #63c3d2;
@@ -194,7 +197,7 @@ ul { padding-left: 1.2em; }
   align-self: flex-start;
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: var(--fuente-dato); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: #3f5a2d; background: var(--caparazon-suave);   /* un tono más oscuro que --caparazon: con el fondo suave, 4.35:1 no pasaba el contraste */
+  color: var(--caparazon-etiqueta); background: var(--caparazon-suave);   /* en claro, un verde más oscuro que --caparazon (4.35:1 no pasaba); en oscuro, el mismo verde claro */
   padding: 0.35rem 0.8rem; border-radius: var(--radio-pildora); margin-bottom: 1.25rem;
 }
 @media (min-width: 720px) {
