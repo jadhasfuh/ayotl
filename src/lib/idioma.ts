@@ -41,6 +41,11 @@ export function idiomaDeCabecera(accept: string | null | undefined): Idioma {
     .map((x, i) => ({ ...x, i }))
     .sort((a, b) => b.peso - a.peso || a.i - b.i);
 
+  // `*` a secas es «me da igual» (lo manda el fetch de Node y algún rastreador):
+  // le toca la portada en español, no la redirección a /en, que en el sitemap
+  // haría pasar la URL de la portada por una página con redirección.
+  if (preferencias.every((x) => x.cod === "*")) return IDIOMA_POR_DEFECTO;
+
   for (const { cod } of preferencias) {
     if (cod === "es" || cod.startsWith("es-")) return "es";
     if (cod === "en" || cod.startsWith("en-")) return "en";
