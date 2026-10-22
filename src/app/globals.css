@@ -334,6 +334,9 @@ fieldset.campo { border: 0; margin: 0; padding: 0; min-width: 0; }
 /* --- 404 --------------------------------------------------------------- */
 .no-encontrado { text-align: center; padding: clamp(3rem, 10vw, 6rem) 0; }
 .no-encontrado svg { width: 120px; height: 120px; color: var(--tierra); margin-bottom: 1rem; }
+/* Los párrafos llevan su max-width de 64ch: sin margen automático la caja se
+   quedaba a la izquierda y el texto no caía bajo el título, que sí va al centro. */
+.no-encontrado p, .gracias p { margin-inline: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
