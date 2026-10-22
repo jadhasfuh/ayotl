@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { fuentesSitio } from "../fuentes";
 import "../globals.css";
 import { Pie } from "@/components/Pie";
+import { Visitas } from "@/components/Visitas";
 import { IDIOMAS } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
 import { sitio } from "@/lib/sitio";
@@ -60,6 +61,7 @@ export default async function Layout({ children, params }: { children: React.Rea
       <body>
         {children}
         <Pie idioma={idioma} />
+        <Visitas sitio="ayotl" host="ayotl.dev" />
       </body>
     </html>
   );

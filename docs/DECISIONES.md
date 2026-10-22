@@ -314,3 +314,29 @@ funciona la partida en línea de Kazan (cada teléfono simula, sólo viajan las
 órdenes), la intro de la casa que ahora comparten los tres juegos, y cómo se
 grabó el reel de citas de Mercadito en un Mercadito local para no enseñar los
 datos de un negocio real. Para eso `Nota.proyecto` admite ahora `kazan`.
+
+## 2026-10-21 — Un contador de visitas propio para toda la casa
+
+Hasta hoy no sabíamos cuánta gente entra a ningún sitio (Search Console sólo
+ve la portada de Daily, y AdSense pide tráfico). Adrián pidió poder contarlo
+desde Supabase con una consulta. Se hizo propio, sin Google Analytics ni
+terceros:
+
+- **Un solo endpoint, en ayotl.dev** (`/api/visita`): es el único sitio detrás
+  de Cloudflare, así que el país sale de `cf-ipcountry` sin mirar la IP. Daily
+  (y sus juegos extra), jlptest y Mercadito le mandan un beacon de texto plano
+  (sin CORS previo); Mercadito tuvo que abrir `https://ayotl.dev` en su
+  `connect-src`. Así Mercadito, que tiene su propia base, no necesita la llave
+  secreta de la Supabase compartida.
+- **Agregado por día** en el esquema `ayotl` (`visitas` por página y origen,
+  `visitantes` por país, idioma, teléfono o computadora y app). Ni IP, ni cookies,
+  ni la dirección de la que se llegó (sólo el sitio: `google`, `ayotl.dev`…). Los
+  tokens e identificadores de las rutas se cambian por `:token` / `:id`; `/admin`
+  y `/api` no se cuentan. El «visitante» lo decide el navegador: la primera
+  página del día en ese sitio (lo recuerda en localStorage).
+- **Sólo en producción** (el componente mira el dominio) y `?nocontar` apaga el
+  contador en ese navegador para no contarnos a nosotros.
+- **Las apps nativas no cuentan:** el contador de los juegos extra se lo pone
+  Daily al copiarlos (`tools/visita.js`), no vive en sus repos. Las TWA (Daily,
+  jlptest) sí, porque son la web; se marcan como `app`.
+- Las páginas de privacidad de Daily, jlptest y Mercadito lo cuentan.
