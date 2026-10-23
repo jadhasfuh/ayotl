@@ -161,8 +161,9 @@ export const APPS: App[] = [
   {
     // Prototipo (21-oct-2026): estrategia en tiempo real en una isla con
     // volcán. Se juega en la web dentro de Daily Challenge como «juego
-    // extra»; la partida en línea existe en el código pero espera su
-    // servidor; la app con AdMob viene después. El nombre (火山, «volcán») es
+    // extra»; en línea (la isla de la semana) en kazan.dailychallenge.click
+    // desde el 22-oct; la app con AdMob viene después. Prototipo 8 (22-oct):
+    // doce edificios y nueve tropas. El nombre (火山, «volcán») es
     // provisional. Las cifras salen de sim/sim.js y sim/mapa.js del repo.
     id: "kazan",
     nombre: "Kazan (demo)",
@@ -179,21 +180,21 @@ export const APPS: App[] = [
       en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. A free demo.",
     },
     datos: [
-      { valor: "9", etiqueta: { es: "edificios", en: "buildings" } },
-      { valor: "6", etiqueta: { es: "tropas", en: "unit types" } },
+      { valor: "12", etiqueta: { es: "edificios", en: "buildings" } },
+      { valor: "9", etiqueta: { es: "tropas", en: "unit types" } },
       { valor: "4", etiqueta: { es: "islas", en: "island types" } },
     ],
     etiquetas: { es: ["Juegos", "Web", "Demo"], en: ["Games", "Web", "Demo"] },
     pantallas: [
       { imagen: "kazan-ciudad",
         titulo: { es: "Obreros que recogen y construyen", en: "Workers who gather and build" },
-        texto: { es: "Empiezas con tu base y tres obreros: dos ya cortan madera y uno saca hierro. Cada árbol y cada veta se agotan, así que la ciudad crece hacia el bosque y la sierra.", en: "You start with your base and three workers: two already chop wood and one mines iron. Every tree and every seam runs out, so the city grows toward the forest and the hills." } },
+        texto: { es: "Empiezas con tu base y cuatro obreros: tres ya cortan madera y uno saca hierro. Cada árbol y cada veta se agotan, así que la ciudad crece hacia el bosque y la sierra.", en: "You start with your base and four workers: three already chop wood and one mines iron. Every tree and every seam runs out, so the city grows toward the forest and the hills." } },
       { imagen: "kazan-construir",
         titulo: { es: "Una cuadrícula que dice dónde", en: "A grid that says where" },
         texto: { es: "Eliges un edificio y la isla se pinta de verde donde cabe y de rojo donde no: árboles, mineral, agua, montaña o por donde viene la lava. El fantasma se arrastra con el dedo y una torre enseña su alcance.", en: "Pick a building and the island turns green where it fits and red where it doesn't: trees, ore, water, mountain or where the lava is headed. The ghost drags with your finger and a tower shows its range." } },
       { imagen: "kazan-cuartel",
-        titulo: { es: "Seis tropas que se contrarrestan", en: "Six unit types that counter each other" },
-        texto: { es: "Soldado barato, francotirador de alcance, tanque que pega el doble a los edificios, explorador que corre, dron que vuela sobre el agua, y el obrero. Las tropas en marcha atacan lo que encuentran.", en: "A cheap soldier, a long-range sniper, a tank that hits buildings twice as hard, a fast scout, a drone that flies over water, and the worker. Troops on the march attack whatever they find." } },
+        titulo: { es: "Nueve tropas que se contrarrestan", en: "Nine unit types that counter each other" },
+        texto: { es: "Soldado barato, francotirador de alcance, moto que caza obreros, médico que cura a los suyos, tanque que pega el doble a los edificios, artillería que dispara a siete casillas, explorador que corre, dron que vuela sobre el agua, y el obrero. Las tropas en marcha atacan lo que encuentran.", en: "A cheap soldier, a long-range sniper, a bike that hunts workers, a medic that heals its own, a tank that hits buildings twice as hard, artillery that shoots seven tiles away, a fast scout, a drone that flies over water, and the worker. Troops on the march attack whatever they find." } },
       { imagen: "kazan-tropas",
         titulo: { es: "Hecho para el dedo", en: "Made for a finger" },
         texto: { es: "Tocas un muñeco y se elige su grupo. Dejas el dedo quieto un momento y arrastras: eliges todo lo que quede en el área. Luego tocas a dónde van.", en: "Tap a figure and its group is selected. Hold still for a moment and drag: everything inside the area is selected. Then tap where they go." } },
