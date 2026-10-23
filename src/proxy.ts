@@ -38,7 +38,7 @@ export function proxy(req: NextRequest) {
   }
   // Las rutas internas en inglés llevan el nombre español de la carpeta; si
   // alguien las teclea, se le manda a la dirección pública.
-  const INTERNAS_EN: Record<string, string> = { "/en/acerca": "/en/about", "/en/negocios": "/en/business", "/en/notas": "/en/notes", "/en/retos": "/en/challenges" };
+  const INTERNAS_EN: Record<string, string> = { "/en/acerca": "/en/about", "/en/negocios": "/en/business", "/en/notas": "/en/notes", "/en/retos": "/en/challenges", "/en/aprende": "/en/learn" };
   if (INTERNAS_EN[pathname]) {
     const destino = req.nextUrl.clone();
     destino.pathname = INTERNAS_EN[pathname];
@@ -55,11 +55,12 @@ export function proxy(req: NextRequest) {
   let interno: string;
   if (pathname === "/en" || pathname.startsWith("/en/")) {
     idioma = "en";
-    const PUBLICAS_EN: Record<string, string> = { "/en/about": "/en/acerca", "/en/business": "/en/negocios", "/en/notes": "/en/notas", "/en/challenges": "/en/retos" };
-    // Las notas y los retos cuelgan de su sección: /en/notes/<id> -> /en/notas/<id>
+    const PUBLICAS_EN: Record<string, string> = { "/en/about": "/en/acerca", "/en/business": "/en/negocios", "/en/notes": "/en/notas", "/en/challenges": "/en/retos", "/en/learn": "/en/aprende" };
+    // Las notas, los retos y los cursos cuelgan de su sección: /en/notes/<id> -> /en/notas/<id>
     interno = PUBLICAS_EN[pathname]
       ?? (pathname.startsWith("/en/notes/") ? pathname.replace("/en/notes/", "/en/notas/")
         : pathname.startsWith("/en/challenges/") ? pathname.replace("/en/challenges/", "/en/retos/")
+        : pathname.startsWith("/en/learn/") ? pathname.replace("/en/learn/", "/en/aprende/")
         : pathname);
   } else {
     idioma = "es";
@@ -86,5 +87,5 @@ export const config = {
   // Sólo páginas: ni la API, ni las muestras (viven fuera del idioma, en
   // `app/demo`, con su propio layout), ni lo estático, ni las imágenes, ni
   // `/procesion`, que redirige a Daily Challenge (next.config.ts).
-  matcher: ["/((?!api|demo|procesion|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json|woff2|woff|html)$).*)"],
+  matcher: ["/((?!api|demo|procesion|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json|js|woff2|woff|html)$).*)"],
 };

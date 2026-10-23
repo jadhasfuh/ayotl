@@ -340,3 +340,37 @@ terceros:
   Daily al copiarlos (`tools/visita.js`), no vive en sus repos. Las TWA (Daily,
   jlptest) sí, porque son la web; se marcan como `app`.
 - Las páginas de privacidad de Daily, jlptest y Mercadito lo cuentan.
+
+## 2026-10-23 — Aprende: cursos con código que se corre aquí mismo
+
+Adrián pidió una sección para aprender, «para mí y para quien quiera», al
+estilo Duolingo: un curso de estructuras de datos desde cero hasta avanzado y
+otro que explique un juego de Daily Challenge por partes (lenguaje, cómo se
+divide, gráficos, sonido, lógica, multijugador). Vive en `/aprende`
+(`/en/learn`) y tiene un aviso al principio de `/retos` para quien llega a los
+retos sin las bases.
+
+- **JavaScript**, no Python ni C: corre en el navegador sin instalar nada, es el
+  lenguaje de los juegos de Daily Challenge (así los dos cursos comparten
+  lenguaje) y las ideas pasan igual a los otros.
+- **El código se corre de verdad**, en un Worker (`public/aprende/ejecutor.js`)
+  nuevo por ejecución que se mata a los 3 s: un ciclo infinito no congela la
+  página. El Worker no ve el DOM, ni cookies, ni localStorage, y se sirve con su
+  propia CSP (`default-src 'none'; script-src 'self' 'unsafe-eval'`): puede usar
+  `new Function` pero no sale a la red. La CSP del sitio no cambió. El proxy de
+  idioma ya no toca los `.js` (si no, el Worker se reescribía a `/es/…`).
+- **La forma de la lección** la pidió Adrián: explicación arriba, el código en el
+  editor azul de los retos (ahora editable, con el mismo resaltado) y a la
+  derecha el resultado con notas de qué mirar; en el teléfono, debajo. Luego
+  preguntas de cuatro tipos: elegir, completar huecos, ordenar renglones y
+  escribir código que pasa pruebas. Las falladas vuelven al final.
+- **El progreso**, en localStorage (`ayotl.aprende`): sin cuenta ni tabla. Es una
+  comodidad de quien estudia; si se pierde, se pierde una racha, no un dato.
+- **El contenido son ficheros TS** (una unidad por fichero), como las notas.
+  `npm run aprende` corre cada programa en los dos idiomas con el mismo
+  ejecutor y cada solución contra sus pruebas, y comprueba que el código
+  inicial no las pase ya.
+- Las lecciones son estáticas con `revalidate` de una hora: los retos enlazados
+  salen el día que se publica su vídeo, como en `/retos`.
+- El curso de Snake cita el código real de `daily challenge/public/arcade`. Si
+  Snake cambia, hay que revisarlo.

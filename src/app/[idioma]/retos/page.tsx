@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Cabecera } from "@/components/Cabecera";
-import { t } from "@/lib/idioma";
+import { ruta, t } from "@/lib/idioma";
 import { idiomaDe, metadatosDe } from "@/lib/paginas";
 import { SECCIONES, enlaceReto, publicados, type Reto } from "@/lib/retos";
+import { CURSOS, rutaCurso } from "@/lib/aprende";
 
 // Dinámica: cada día aparece el reto que toca (ver `publicados`).
 export const dynamic = "force-dynamic";
@@ -34,6 +35,18 @@ export default async function Retos({ params }: Props) {
             <h1>{x("retosTitulo")}</h1>
             <p className="grande">{x("retosIntro")}</p>
           </div>
+
+          {/* El «cómo empezar»: para quien llega a los retos sin saber qué es una pila. */}
+          <aside className="panel retos-aprende" aria-labelledby="retos-aprende">
+            <h2 id="retos-aprende">{x("aprendeRetosTitulo")}</h2>
+            <p>{x("aprendeRetosTexto")}</p>
+            <ul>
+              {CURSOS.map((c) => (
+                <li key={c.id}><Link href={rutaCurso(c.id, idioma)} className="enlace-flecha">{c.titulo[idioma]} →</Link></li>
+              ))}
+            </ul>
+            <Link href={ruta("aprende", idioma)} className="dato">{x("aprendeTodosCursos")}</Link>
+          </aside>
 
           {secciones.length === 0 && <p className="dato" style={{ marginTop: "2rem" }}>{x("retosPronto")}</p>}
 

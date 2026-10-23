@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { APPS } from "@/lib/apps";
+import { CURSOS, leccionesDe, rutaCurso, rutaLeccion } from "@/lib/aprende";
 import { PAGINAS, ruta } from "@/lib/idioma";
 import { NOTAS } from "@/lib/notas";
 import { publicados } from "@/lib/retos";
@@ -40,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
     alternates: { languages: { es: `${base}/retos/${r.slug}`, en: `${base}/en/challenges/${r.slug}` } },
   }));
+  const cursos: MetadataRoute.Sitemap = CURSOS.flatMap((c) => [
+    { url: base + rutaCurso(c.id, "es"), changeFrequency: "monthly" as const, priority: 0.6,
+      alternates: { languages: { es: base + rutaCurso(c.id, "es"), en: base + rutaCurso(c.id, "en") } } },
+    ...leccionesDe(c).map((l) => ({
+      url: base + rutaLeccion(c.id, l.id, "es"), changeFrequency: "yearly" as const, priority: 0.5,
+      alternates: { languages: { es: base + rutaLeccion(c.id, l.id, "es"), en: base + rutaLeccion(c.id, l.id, "en") } },
+    })),
+  ]);
   // El research statement va sin alternates: existe sólo en inglés y las dos
   // direcciones apuntan a la misma canónica.
   const research: MetadataRoute.Sitemap = [
@@ -56,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ];
-  return [...paginas, ...apps, ...notas, ...retos, ...research];
+  return [...paginas, ...apps, ...notas, ...retos, ...cursos, ...research];
 }

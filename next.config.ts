@@ -42,6 +42,12 @@ const nextConfig: NextConfig = {
         { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
         { key: "X-Frame-Options", value: "DENY" },
       ],
+    }, {
+      // El Worker que corre el código de las lecciones (/aprende) necesita
+      // `new Function`; lleva su propia CSP, que pisa a la de arriba sólo
+      // en este fichero: eval sí, pero ni red ni scripts de fuera.
+      source: "/aprende/ejecutor.js",
+      headers: [{ key: "Content-Security-Policy", value: "default-src 'none'; script-src 'self' 'unsafe-eval'" }],
     }];
   },
   async rewrites() {

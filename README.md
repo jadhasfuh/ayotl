@@ -18,6 +18,7 @@ npm run dev          # http://localhost:3002 — sin .env.local el sitio carga e
 npm run revisar      # tsc --noEmit
 npm run build        # el mismo build que hace el Dockerfile
 npm run db:local     # aplica la migración en el Postgres 16 local y ejercita checks, upsert y permisos
+npm run aprende      # revisa los cursos: corre cada programa y cada solución contra sus pruebas (-- --ver imprime las salidas)
 ```
 
 Con `.env.local` (copiar de `.env.example`) apuntando a Supabase y a Turnstile,
@@ -33,6 +34,10 @@ src/app/[idioma]/page.tsx        inicio: hero + tarjetas + teasers
 src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio de Turnstile al servir)
 src/app/[idioma]/acerca/page.tsx historia del nombre (en inglés se sirve como /en/about)
 src/app/[idioma]/retos/          retos de código de los vídeos de YouTube (en inglés /en/challenges); datos en src/content/retos.json, que genera `ttcode export`
+src/app/[idioma]/aprende/        cursos al estilo Duolingo (en inglés /en/learn): índice, camino del curso y lección
+src/lib/aprende/                 los cursos: tipos.ts (formato), estructuras/ y snake/ (una unidad por fichero), resaltar.ts, ejecutar.ts, progreso.ts (localStorage)
+src/components/aprende/          Leccion (una tarjeta a la vez), Camino, Pizarra (editor que corre), Dibujo (SVG), TextoRico, CodigoQuieto
+public/aprende/ejecutor.js       Worker que corre el código de las lecciones, con su propia CSP (next.config.ts)
 src/app/global-not-found.tsx     404 de todo el sitio, bilingüe, con su propio <html> (el layout raíz vive en [idioma])
 src/app/api/beta/route.ts        POST: zod → honeypot → Turnstile → límite por IP → upsert por email con la llave secreta
 src/app/[idioma]/admin/testers/  panel del programa Beta (contraseña ADMIN_SECRETO): días, saldos, pagos
