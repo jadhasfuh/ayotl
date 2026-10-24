@@ -159,16 +159,17 @@ export const APPS: App[] = [
     ],
   },
   {
-    // Prototipo (21-oct-2026): estrategia en tiempo real en una isla con
-    // volcán. Se juega en la web dentro de Daily Challenge como «juego
-    // extra»; en línea (la isla de la semana) en kazan.dailychallenge.click
-    // desde el 22-oct; la app con AdMob viene después. Prototipo 8 (22-oct):
-    // doce edificios y nueve tropas. El nombre (火山, «volcán») es
-    // provisional. Las cifras salen de sim/sim.js y sim/mapa.js del repo.
+    // Estrategia en tiempo real en una isla con volcán, el juego completo (ya
+    // no la demo): en la web en kazan.dailychallenge.click (y como «juego
+    // extra» en Daily Challenge), en línea desde el 22-oct y en Google Play
+    // desde el 23-oct-2026 (prueba cerrada, dev.ayotl.kazan, con AdMob). El
+    // nombre es 火山, «volcán» en japonés. Las cifras salen de sim/sim.js y
+    // sim/mapa.js del repo jadhasfuh/kazan.
     id: "kazan",
-    nombre: "Kazan (demo)",
-    dominio: "dailychallenge.click/kazan",
-    url: "https://dailychallenge.click/kazan",
+    nombre: "Kazan",
+    dominio: "kazan.dailychallenge.click",
+    url: "https://kazan.dailychallenge.click",
+    playTester: "https://play.google.com/apps/testing/dev.ayotl.kazan",
     acento: "agua",
     apaisada: true,
     lema: {
@@ -176,15 +177,15 @@ export const APPS: App[] = [
       en: "Build your city, raise an army and outrun the lava.",
     },
     descripcion: {
-      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Demo, gratis.",
-      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. A free demo.",
+      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Solo contra la computadora o en línea, en un reto semanal de hasta 50 naciones o en una sala con código para tus amigos. En la web y en Android, gratis.",
+      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. Solo against the computer or online, in a weekly challenge for up to 50 nations or a room with a code for your friends. On the web and Android, free.",
     },
     datos: [
       { valor: "12", etiqueta: { es: "edificios", en: "buildings" } },
       { valor: "9", etiqueta: { es: "tropas", en: "unit types" } },
       { valor: "4", etiqueta: { es: "islas", en: "island types" } },
     ],
-    etiquetas: { es: ["Juegos", "Web", "Demo"], en: ["Games", "Web", "Demo"] },
+    etiquetas: { es: ["Juegos", "Android", "Web"], en: ["Games", "Android", "Web"] },
     pantallas: [
       { imagen: "kazan-ciudad",
         titulo: { es: "Obreros que recogen y construyen", en: "Workers who gather and build" },
