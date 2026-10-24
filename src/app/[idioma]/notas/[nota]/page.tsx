@@ -11,6 +11,11 @@ import { fecha } from "../page";
 
 type Props = { params: Promise<{ idioma: string; nota: string }> };
 
+/** Lo que va entre comillas invertidas en un párrafo (`menu_vistas`) sale como código; antes se veían las comillas. */
+function conCodigo(texto: string) {
+  return texto.split("`").map((trozo, k) => (k % 2 ? <code key={k}>{trozo}</code> : trozo));
+}
+
 export function generateStaticParams() {
   return IDIOMAS.flatMap((i) => NOTAS.map((n) => ({ idioma: i.id, nota: n.id })));
 }
@@ -80,11 +85,11 @@ export default async function PaginaNota({ params }: Props) {
           <p className="grande">{nota.entradilla[idioma]}</p>
 
           {nota.cuerpo.map((b, i) => {
-            if (b.tipo === "p") return <p key={i}>{b.texto[idioma]}</p>;
+            if (b.tipo === "p") return <p key={i}>{conCodigo(b.texto[idioma])}</p>;
             if (b.tipo === "lista") {
               return (
                 <ul key={i}>
-                  {b.puntos[idioma].map((punto) => <li key={punto.slice(0, 20)}>{punto}</li>)}
+                  {b.puntos[idioma].map((punto) => <li key={punto.slice(0, 20)}>{conCodigo(punto)}</li>)}
                 </ul>
               );
             }

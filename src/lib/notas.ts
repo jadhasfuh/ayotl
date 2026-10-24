@@ -585,6 +585,151 @@ if (a !== b || a !== c) process.exit(1);`, pie: { es: "La prueba que corre antes
       } },
     ],
   },
+  {
+    id: "un-curso-que-corre-tu-codigo",
+    fecha: "2026-10-23",
+    proyecto: "ayotl",
+    titulo: {
+      es: "Un curso que corre tu código sin dejarlo salir",
+      en: "A course that runs your code without letting it out",
+    },
+    entradilla: {
+      es: "La sección Aprende tiene lecciones con código que se puede editar y correr. El problema no es correrlo: es que un bucle infinito o un fetch escrito por el alumno no tumben la página. La respuesta fue un Worker nuevo por ejecución, con su propia política de seguridad y tres segundos de vida.",
+      en: "The Learn section has lessons with code you can edit and run. Running it isn't the problem: the problem is that a student's infinite loop or fetch mustn't take the page down. The answer was a fresh Worker per run, with its own security policy and three seconds to live.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Cada lección de estructuras de datos trae un programa en JavaScript: explicación arriba, el código en un editor y a la derecha lo que imprime. El alumno lo cambia y le da a CORRER. Hacer eso con `eval` en la página es lo primero que se ocurre y lo peor: un `while (true)` congela la pestaña entera, y el código tiene a mano el DOM, las cookies y la red.",
+        en: "Every data structures lesson ships a JavaScript program: explanation on top, the code in an editor and, beside it, what it prints. The student changes it and hits RUN. Doing that with `eval` in the page is the first idea and the worst one: a `while (true)` freezes the whole tab, and the code has the DOM, the cookies and the network at hand.",
+      } },
+      { tipo: "p", texto: {
+        es: "Así que el código corre en un Worker que se crea para esa ejecución y se destruye después. Si en tres segundos no contestó, se le llama a `terminate()` y la página dice que tardó demasiado: el bucle infinito muere con su hilo, no con la pestaña. Lo que imprime `console.log` vuelve por `postMessage`, ya formateado como lo haría Node.",
+        en: "So the code runs in a Worker created for that run and thrown away afterwards. If it hasn't answered within three seconds, it gets `terminate()` and the page says it took too long: the infinite loop dies with its thread, not with the tab. Whatever `console.log` prints comes back through `postMessage`, already formatted the way Node would.",
+      } },
+      { tipo: "codigo", texto: `// next.config.ts: el script del Worker lleva su propia política.
+// Puede evaluar código (para eso está) y nada más: ni red, ni scripts de fuera.
+{ source: "/aprende/ejecutor.js",
+  headers: [{ key: "Content-Security-Policy",
+              value: "default-src 'none'; script-src 'self' 'unsafe-eval'" }] }`, pie: { es: "La única página del sitio que permite evaluar código, y no puede hablar con nadie.", en: "The only page on the site allowed to evaluate code, and it can't talk to anyone." } },
+      { tipo: "p", texto: {
+        es: "Hubo un tropiezo tonto: el proxy que traduce las rutas al inglés (`/en/learn` ↔ `/aprende`) también interceptaba el archivo del Worker y le devolvía otra cosa. Se arregló sacando los `.js` del matcher del proxy. Y otro menos tonto: las lecciones que miden tiempos (meter al principio de un arreglo frente a meter al final) usaban demasiados elementos y en un teléfono lento chocaban con los tres segundos. Bajaron a veinte mil.",
+        en: "There was a silly stumble: the proxy that maps routes to English (`/en/learn` ↔ `/aprende`) was also intercepting the Worker file and returning something else. The fix was taking `.js` out of the proxy's matcher. And a less silly one: lessons that time things (inserting at the start of an array versus at the end) used too many elements and hit the three-second wall on slow phones. They went down to twenty thousand.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo que hace que el curso se pueda mantener es una prueba: `npm run aprende` corre cada programa y cada solución de las 48 lecciones con el mismo ejecutor que usa la página, y falla si alguno no imprime lo que la lección dice que imprime. Un curso de programación con un ejemplo que no compila es peor que no tener curso.",
+        en: "What makes the course maintainable is a test: `npm run aprende` runs every program and every solution in the 48 lessons with the same executor the page uses, and fails if any of them doesn't print what the lesson says it prints. A programming course with an example that doesn't run is worse than no course.",
+      } },
+    ],
+  },
+  {
+    id: "recortar-antes-de-traducir",
+    fecha: "2026-10-23",
+    proyecto: "kazan",
+    titulo: {
+      es: "Recortar antes de traducir, y una fuente japonesa que medía el doble",
+      en: "Cutting before translating, and a Japanese font twice the size",
+    },
+    entradilla: {
+      es: "En inglés y en japonés, algunos avisos de Kazan salían en español y cortados. No faltaban traducciones: el texto se recortaba antes de buscarlo en el diccionario. Y en japonés todo se amontonaba por otra razón: el kanji medía el doble que la letra.",
+      en: "In English and Japanese, some of Kazan's messages came out in Spanish and cut short. The translations weren't missing: the text was being trimmed before it was looked up in the dictionary. And in Japanese everything was crowded for another reason: the kanji was twice the size of the letters.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Kazan está escrito en español, y cada texto que llega a la pantalla se busca tal cual en un diccionario del idioma elegido. Los avisos de arriba se pintaban con `mensaje.slice(0, 52)` para que no se salieran, y los nombres de las tarjetas con `nombre.slice(0, 8)`. El recorte iba antes de traducir: «ASERRADERO» se volvía «ASERRADE», que no está en ningún diccionario, y salía así en las tres lenguas. Lo mismo con lo compuesto: «2 SOLDADO» o «CUARTEL 300/300» no son entradas del diccionario.",
+        en: "Kazan is written in Spanish, and every text that reaches the screen is looked up verbatim in a dictionary for the chosen language. The top messages were drawn with `mensaje.slice(0, 52)` so they wouldn't overflow, and card names with `nombre.slice(0, 8)`. The cut came before the translation: «ASERRADERO» became «ASERRADE», which is in no dictionary, and that's what showed in all three languages. Same with composed strings: «2 SOLDADO» or «CUARTEL 300/300» aren't dictionary entries.",
+      } },
+      { tipo: "codigo", texto: `// Antes: se recorta en español y ya no se encuentra.
+L.texto(d.nombre.slice(0, 8), x, y);
+// Ahora: se traduce y luego se recorta a lo que quepa, midiendo.
+function cabe(s, ancho) { let t = tr(s); while (t.length > 1 && L.anchoTexto(t) > ancho) t = t.slice(0, -1); return t; }`, pie: { es: "La regla que quedó: nada de recortar ni pegar texto antes de traducir.", en: "The rule that stuck: no cutting or gluing text before translating." } },
+      { tipo: "p", texto: {
+        es: "Lo del japonés era de tamaño. La letra latina del juego es una fuente de 3x5 píxeles que avanza 4 por letra; el japonés se pintaba con PixelMplus10, de 10 píxeles. Cada kanji ocupaba lo de dos letras y media, y la barra de arriba, pensada con posiciones fijas, se montaba: el reloj de la derecha acababa encima del botón para salir. Primero se arregló midiendo cada cosa y colocándola en fila; luego, de raíz, cambiando la fuente.",
+        en: "The Japanese problem was size. The game's Latin font is 3×5 pixels and advances 4 per letter; Japanese was drawn with PixelMplus10, at 10 pixels. Each kanji took the room of two and a half letters, and the top bar, laid out with fixed positions, piled up: the clock on the right ended up on top of the exit button. First it was fixed by measuring everything and laying it out in a row; then, at the root, by changing the font.",
+      } },
+      { tipo: "p", texto: {
+        es: "Los juegos japoneses de la época casi no usaban kanji, porque a esa resolución no se leen: kana, abreviaturas, nombres de cuatro o cinco letras. Los juegos de estilo retro de hoy suelen usar 美咲フォント (Misaki), de Num Kadoma: 8x8 con los kanji dibujados en 7x7 y licencia libre, también para uso comercial. El carácter ancho mide 8 y el estrecho 4, exactamente lo que mide una letra de nuestra fuente. Recortada a los 688 caracteres que usa el juego pesa 12 KB, menos que la anterior.",
+        en: "Japanese games of that era barely used kanji, because at that resolution they can't be read: kana, abbreviations, names of four or five letters. Retro-style games today often use 美咲フォント (Misaki) by Num Kadoma: 8×8 with the kanji drawn in 7×7 and a free licence, commercial use included. A full-width character is 8 wide and a half-width one 4, exactly the size of one of our letters. Cut down to the 688 characters the game uses, it weighs 12 KB, less than the old one.",
+      } },
+      { tipo: "p", texto: {
+        es: "Una excepción a propósito: La procesión de los dormidos se quedó con PixelMplus10. Su letra latina es de 8 píxeles, no de 3x5, y es un juego de historia con mucho diálogo en kanji: ahí el tamaño de 10 se lee mejor y no estorba.",
+        en: "One deliberate exception: The Procession of the Sleepers kept PixelMplus10. Its Latin font is 8 pixels, not 3×5, and it's a story game with plenty of kanji dialogue: there, the 10-pixel size reads better and doesn't get in the way.",
+      } },
+    ],
+  },
+  {
+    id: "cuatro-obreros-que-parecian-dos",
+    fecha: "2026-10-23",
+    proyecto: "kazan",
+    titulo: {
+      es: "Cuatro obreros que parecían dos, y tropas que no se defendían",
+      en: "Four workers that looked like two, and troops that wouldn't fight back",
+    },
+    entradilla: {
+      es: "Dos reportes del mismo día de juego. Uno se arreglaba sólo en el dibujo y no tocaba la partida; el otro era una regla, y en un juego en línea determinista cambiar una regla es una migración.",
+      en: "Two reports from the same day of play. One could be fixed in the drawing alone, without touching the match; the other was a rule, and in a deterministic online game, changing a rule is a migration.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "El juego decía «4 obreros» y en el mapa había dos. Los cuatro nacen en la misma casilla junto a la base, y tres van a cortar madera al árbol más cercano. Como la simulación es determinista, los tres eligen el mismo árbol, siguen el mismo camino y quedan pixel sobre pixel durante toda la partida. No era un error de la simulación, así que no se tocó: se arregló en el dibujo, pintando corridos de lado a los que caen en el mismo punto.",
+        en: "The game said «4 workers» and the map showed two. All four spawn on the same tile next to the base, and three go to chop the nearest tree. Since the simulation is deterministic, the three pick the same tree, follow the same path and stay pixel on pixel for the whole match. It wasn't a simulation bug, so the simulation wasn't touched: it was fixed in the drawing, nudging sideways whoever lands on the same spot.",
+      } },
+      { tipo: "p", texto: {
+        es: "Ese arreglo tuvo una consecuencia: tocar un muñeco medía la distancia a su posición real, y ahora el muñeco se ve a unos píxeles de ahí. El jugador tocaba el dibujo y no elegía nada. El toque pasó a medirse contra el centro de lo que se ve, con más margen para el dedo que para el ratón.",
+        en: "That fix had a consequence: tapping a unit measured the distance to its real position, and now the unit is drawn a few pixels away from it. Players tapped the drawing and selected nothing. The tap is now measured against the centre of what's drawn, with more margin for a finger than for a mouse.",
+      } },
+      { tipo: "p", texto: {
+        es: "El segundo reporte: enemigos que pasaban junto a sus tropas sin atacarlas, derechos a su objetivo, aunque les dispararan. Era lo programado: una tropa con la orden de atacar algo concreto no se distraía. Ahora, si lo que va a tirar es un edificio y una tropa armada se le pone a la vista, se vuelve contra ella y, cuando cae, retoma el edificio. Contra una unidad señalada sigue a muerte: ésa es la orden.",
+        en: "The second report: enemies walking past their troops without attacking them, straight for their target, even while being shot. That was by design: a troop ordered to attack something specific didn't get distracted. Now, if what it's going after is a building and an armed troop comes into view, it turns on it and, once it falls, goes back to the building. Against a unit the player singled out, it keeps going: that's the order.",
+      } },
+      { tipo: "codigo", texto: `// Todos los teléfonos y el servidor simulan lo mismo con las mismas órdenes.
+// Una regla nueva cambia lo que sale: se sube la versión y las partidas
+// guardadas con la anterior se descartan en vez de desincronizarse.
+export const VERSION_SIM = 11;`, pie: { es: "Cada cambio de reglas sube este número.", en: "Every rules change bumps this number." } },
+      { tipo: "p", texto: {
+        es: "Eso último no se puede hacer en el dibujo: cambia lo que pasa en la partida, así que todos los clientes tienen que correr la misma regla al mismo tiempo. Se sube la versión de la simulación, el servidor descarta las salas guardadas con la anterior y el reto semanal vuelve a empezar. Por eso los arreglos que se pueden hacer sólo en el dibujo se hacen ahí, y los de reglas se juntan cuando se puede.",
+        en: "That last one can't be done in the drawing: it changes what happens in the match, so every client has to run the same rule at the same time. The simulation version goes up, the server discards rooms saved under the old one, and the weekly challenge starts over. That's why fixes that can live in the drawing go there, and rule changes get batched when possible.",
+      } },
+    ],
+  },
+  {
+    id: "poco-valor-segun-adsense",
+    fecha: "2026-10-23",
+    proyecto: "dailychallenge",
+    titulo: {
+      es: "«Contenido de poco valor»: datos con forma en vez de más texto",
+      en: "«Low value content»: shaped data instead of more text",
+    },
+    entradilla: {
+      es: "AdSense rechazó Daily Challenge por contenido de poco valor. La reacción fácil es escribir más párrafos. Lo que hicimos fue mirar qué veía el revisor y enseñar los datos que el sitio ya tenía y no mostraba.",
+      en: "AdSense turned Daily Challenge down for low value content. The easy reaction is writing more paragraphs. What we did was look at what the reviewer was seeing and show the data the site already had but didn't display.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Lo primero fue medir. Las 94 páginas del sitemap, con el texto visible de cada una: la portada y Cómo se juega estaban bien, pero había 44 fichas de juego con setenta a cien palabras propias, 42 páginas de días con la misma plantilla, una página de contacto de 28 palabras, y casi nada indexado todavía (el sitemap había fallado justo el día que se cayó el proveedor de hospedaje).",
+        en: "The first step was measuring. All 94 sitemap pages, with the visible text of each: the home page and How to play were fine, but there were 44 game pages with seventy to a hundred words of their own, 42 day pages built from the same template, a 28-word contact page, and almost nothing indexed yet (the sitemap had failed on exactly the day the hosting provider went down).",
+      } },
+      { tipo: "p", texto: {
+        es: "Y un detalle que no se veía: el sitio elige idioma por el navegador, sin URLs aparte para el inglés o el japonés. El rastreador de Google no manda español, así que el revisor casi seguro vio la versión en inglés. Desde entonces el inglés se revisa igual que el español.",
+        en: "And a detail that wasn't obvious: the site picks its language from the browser, with no separate URLs for English or Japanese. Google's crawler doesn't ask for Spanish, so the reviewer almost certainly saw the English version. Since then, English gets checked as carefully as Spanish.",
+      } },
+      { tipo: "p", texto: {
+        es: "La respuesta no fue escribir más, sino enseñar lo que había. Cada día cerrado tiene su campeón, su puntaje y cuánta gente jugó; nada de eso salía en la ficha de cada juego. Ahora cada ficha trae una tabla de las veces que salió en el reto, con su campeón, y una gráfica de los puntajes ganadores; la portada, una tabla de los últimos días y la gráfica de jugadores por día. Las gráficas son SVG hechos en el servidor con la paleta del juego: no hay librería de gráficas.",
+        en: "The answer wasn't writing more but showing what was there. Every closed day has its champion, its score and how many people played; none of that appeared on each game's page. Now every game page has a table of the times it was the challenge, with its champion, and a chart of the winning scores; the home page, a table of the last few days and a chart of players per day. The charts are SVG made on the server with the game's palette: there's no charting library.",
+      } },
+      { tipo: "codigo", texto: `// lib/historial.ts: cada reto con su campeón y sus jugadores, en dos consultas
+// sin importar cuántos días: los cierres y el primer puesto de cada fecha.
+db.from("cierres").select("fecha, total").in("fecha", fechas)
+db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in("fecha", fechas)`, pie: { es: "Datos que ya estaban en la base desde el primer día.", en: "Data that was in the database since day one." } },
+      { tipo: "p", texto: {
+        es: "El resto fue forma. Las reglas pasaron de párrafos a una lista; el día, a una línea de tiempo hora por hora; los modos y los controles, a fichas de dos columnas; cómo se verifica un puntaje, a cuatro pasos numerados. Y lo que no aporta salió del buscador: las páginas que son herramientas (crear un party, borrar la cuenta) y los días con menos de tres jugadores, que eran una tabla casi vacía.",
+        en: "The rest was shape. The rules went from paragraphs to a list; the day, to an hour-by-hour timeline; the modes and controls, to two-column cards; how a score is verified, to four numbered steps. And what adds nothing was taken out of search: pages that are tools (creating a party, deleting the account) and days with fewer than three players, which were an almost empty table.",
+      } },
+      { tipo: "p", texto: {
+        es: "Todavía no sabemos si alcanza: la siguiente solicitud será cuando Google haya indexado lo nuevo. Pero la lección ya vale sin AdSense: una página con los datos del juego le sirve más a quien la abre que tres párrafos sobre él.",
+        en: "We don't know yet whether it's enough: the next application will go in once Google has indexed the new pages. But the lesson holds without AdSense: a page with the game's data serves whoever opens it better than three paragraphs about it.",
+      } },
+    ],
+  },
 ];
 
 export function notaPorId(id: string): Nota | undefined {

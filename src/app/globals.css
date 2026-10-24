@@ -907,3 +907,7 @@ a.camino-titulo:hover { text-decoration: underline; }
 .dib-celda-b { --c: #e8c84a; }
 .dib-leyenda { list-style: none; padding: 0; margin: 0.6rem 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.9rem; color: var(--tinta-2); }
 .dib-muestra { display: inline-block; width: 0.9rem; height: 0.9rem; vertical-align: -0.1rem; border: 1px solid var(--linea); background: var(--c, var(--curso-suave)); }
+
+/* Código en línea dentro de los párrafos de las notas (`menu_vistas`): la letra de los datos, un poco más chica, y que
+   un nombre largo pueda partirse en el teléfono en vez de empujar la página de lado. */
+.prosa p code, .prosa li code { font-family: var(--fuente-dato); font-size: 0.9em; overflow-wrap: anywhere; }
