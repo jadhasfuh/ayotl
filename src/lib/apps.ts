@@ -177,8 +177,8 @@ export const APPS: App[] = [
       en: "Build your city, raise an army and outrun the lava.",
     },
     descripcion: {
-      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Solo contra la computadora o en línea, en un reto semanal de hasta 50 naciones o en una sala con código para tus amigos. En la web y en Android, gratis.",
-      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. Solo against the computer or online, in a weekly challenge for up to 50 nations or a room with a code for your friends. On the web and Android, free.",
+      es: "Estrategia en tiempo real en una isla con volcán: obreros, tropas, niebla de guerra y una erupción que se come el mapa. Solo contra la computadora o en línea, en el reto de la isla (hasta 12 naciones, con rondas de lunes a jueves y de jueves a lunes) o en una sala con código para tus amigos. En la web y en Android, gratis.",
+      en: "Real-time strategy on a volcano island: workers, troops, fog of war and an eruption that eats the map. Solo against the computer or online, in the island challenge (up to 12 nations, with rounds from Monday to Thursday and Thursday to Monday) or a room with a code for your friends. On the web and Android, free.",
     },
     datos: [
       { valor: "12", etiqueta: { es: "edificios", en: "buildings" } },
