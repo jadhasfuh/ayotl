@@ -1,0 +1,79 @@
+{
+ "voz": "es-US-Chirp3-HD-Laomedeia",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Estrategia en tiempo real",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Gratis, en el navegador"
+ },
+ "bpm": 84,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-cpu-short.mp4",
+ "escenas": [
+  {
+   "video": "kazan-cpu/corto-1.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 8.5,
+   "texto": "KAZAN · 8 CPU",
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. En esta isla de Kazan, ocho computadoras juegan solas.",
+   "dice": "¡Hola! Soy LeIA. En esta isla de Kazan, ocho computadoras juegan solas."
+  },
+  {
+   "video": "kazan-cpu/corto-2.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 10.0,
+   "texto": "PRIMER EJÉRCITO",
+   "cara": "normal",
+   "voz": "La amarilla arma su ejército, y sale a buscar pelea."
+  },
+  {
+   "video": "kazan-cpu/corto-4.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 8.7,
+   "texto": "ERUPCIÓN",
+   "cara": "sorpresa",
+   "voz": "¡Pero el volcán despierta, y la lava empieza a bajar!"
+  },
+  {
+   "video": "kazan-cpu/corto-3.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 9.7,
+   "texto": "CAE LA MORADA",
+   "cara": "enojo",
+   "voz": "La amarilla no perdona: una ciudad tras otra."
+  },
+  {
+   "video": "kazan-cpu/corto-5.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 9.7,
+   "texto": "UNA SOLA NACIÓN",
+   "cara": "feliz",
+   "voz": "Y al final, queda una sola nación. ¿Tu ciudad aguantaría?"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Juega gratis en Kazan punto Daily Challenge punto click.",
+   "dice": "Juega gratis en kazan.dailychallenge.click"
+  }
+ ]
+}

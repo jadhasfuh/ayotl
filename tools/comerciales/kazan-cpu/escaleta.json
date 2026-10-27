@@ -1,0 +1,555 @@
+{
+  "titulo": "Kazan: la CPU nunca descansa",
+  "partida": {
+    "semilla": 2,
+    "bioma": "desierto",
+    "naciones": [
+      {
+        "nombre": "CPU 1",
+        "color": "amarilla",
+        "termina": "gana"
+      },
+      {
+        "nombre": "CPU 2",
+        "color": "azul",
+        "termina": "cae a los 16:40 (por la lava)"
+      },
+      {
+        "nombre": "CPU 3",
+        "color": "rosa",
+        "termina": "cae a los 10:04 (conquistada por CPU 1 (amarilla))"
+      },
+      {
+        "nombre": "CPU 4",
+        "color": "blanca",
+        "termina": "cae a los 18:00 (conquistada por CPU 1 (amarilla))"
+      },
+      {
+        "nombre": "CPU 5",
+        "color": "naranja",
+        "termina": "cae a los 5:13 (conquistada por CPU 4 (blanca))"
+      },
+      {
+        "nombre": "CPU 6",
+        "color": "roja",
+        "termina": "cae a los 9:34 (por la lava)"
+      },
+      {
+        "nombre": "CPU 7",
+        "color": "morada",
+        "termina": "cae a los 12:07 (conquistada por CPU 1 (amarilla))"
+      },
+      {
+        "nombre": "CPU 8",
+        "color": "cian",
+        "termina": "cae a los 16:23 (conquistada por CPU 4 (blanca))"
+      }
+    ],
+    "minutos_de_partida": 20,
+    "isla_casillas": "144x144",
+    "idioma_del_juego": "es",
+    "duracion_real_de_juego": "18:00",
+    "como": "Las ocho naciones las juega la IA del juego (sim/ia.js): nuevaLocal con 7 CPU y a la nación 0 se le da su propia IA en el mismo instante; la cámara es de espectador (sin niebla). Abajo dice VIENDO LA PARTIDA."
+  },
+  "largo": {
+    "archivo": "largo.mp4",
+    "resolucion": "960x540 (3x sin suavizar; la vista general y los viajes con zoom, suavizados)",
+    "fps": 30,
+    "duracion_s": 307.63,
+    "audio": "ninguno",
+    "notas": "HUD arriba (LAVA % y FIN), minimapa arriba a la derecha y los avisos del propio juego (EL VOLCAN HIZO ERUPCION, LA CIUDAD X CAYO, PERDIO SU BASE). El reloj del HUD cuenta lo que falta para el fin de 20 min, no para el final real.",
+    "eventos": [
+      {
+        "t": 0,
+        "tick": 0,
+        "juego": "0:00",
+        "tipo": "inicio",
+        "texto": "Empieza la partida: 8 naciones, todas de la computadora, cada una con su base y 4 obreros."
+      },
+      {
+        "t": 13.4,
+        "tick": 966,
+        "juego": "1:37",
+        "tipo": "primer_disparo",
+        "texto": "Primer disparo de la partida (CPU 5 (naranja)).",
+        "en_camara": false
+      },
+      {
+        "t": 18.83,
+        "tick": 1440,
+        "juego": "2:24",
+        "tipo": "primer_ejercito",
+        "texto": "Sale el primer ejército: CPU 1 (amarilla) va contra CPU 3 (rosa).",
+        "en_camara": false
+      },
+      {
+        "t": 38.83,
+        "tick": 2205,
+        "juego": "3:41",
+        "tipo": "primer_ataque",
+        "texto": "Primer ataque a una ciudad: el ejército de CPU 4 (blanca) llega a la base de CPU 5 (naranja).",
+        "en_camara": true
+      },
+      {
+        "t": 65.33,
+        "tick": 3000,
+        "juego": "5:00",
+        "tipo": "erupcion",
+        "texto": "El volcán hace erupción: la lava empieza a bajar.",
+        "en_camara": true
+      },
+      {
+        "t": 69.7,
+        "tick": 3131,
+        "juego": "5:13",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 5 (naranja), conquistada por CPU 4 (blanca) (también le pegaban CPU 6 (roja)).",
+        "en_camara": true
+      },
+      {
+        "t": 120.83,
+        "tick": 4665,
+        "juego": "7:47",
+        "tipo": "lava_base",
+        "texto": "La lava se traga la base de CPU 6 (roja) (sigue viva un rato con su gente).",
+        "en_camara": true
+      },
+      {
+        "t": 156.67,
+        "tick": 5740,
+        "juego": "9:34",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 6 (roja): la lava ya le había quitado la base y muere su última gente.",
+        "en_camara": false
+      },
+      {
+        "t": 166.6,
+        "tick": 6038,
+        "juego": "10:04",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 3 (rosa), conquistada por CPU 1 (amarilla).",
+        "en_camara": true
+      },
+      {
+        "t": 178.33,
+        "tick": 6400,
+        "juego": "10:40",
+        "tipo": "lava_25",
+        "texto": "La lava cubre el 25 % de la isla (el HUD dice LAVA 25%).",
+        "en_camara": true
+      },
+      {
+        "t": 202.4,
+        "tick": 7272,
+        "juego": "12:07",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 7 (morada), conquistada por CPU 1 (amarilla).",
+        "en_camara": true
+      },
+      {
+        "t": 227.87,
+        "tick": 8195,
+        "juego": "13:40",
+        "tipo": "lava_50",
+        "texto": "La lava cubre el 50 % de la isla (el HUD dice LAVA 50%).",
+        "en_camara": true
+      },
+      {
+        "t": 271.1,
+        "tick": 9660,
+        "juego": "16:06",
+        "tipo": "lava_base",
+        "texto": "La lava se traga la base de CPU 2 (azul) (sigue viva un rato con su gente).",
+        "en_camara": true
+      },
+      {
+        "t": 276.83,
+        "tick": 9832,
+        "juego": "16:23",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 8 (cian), conquistada por CPU 4 (blanca) (también le pegaban CPU 2 (azul) y CPU 1 (amarilla)).",
+        "en_camara": true
+      },
+      {
+        "t": 282.43,
+        "tick": 10000,
+        "juego": "16:40",
+        "tipo": "cae_ciudad",
+        "texto": "Cae CPU 2 (azul): la lava ya le había quitado la base y muere su última gente.",
+        "en_camara": false
+      },
+      {
+        "t": 286.43,
+        "tick": 10130,
+        "juego": "16:53",
+        "tipo": "lava_75",
+        "texto": "La lava cubre el 75 % de la isla (el HUD dice LAVA 75%).",
+        "en_camara": true
+      },
+      {
+        "t": 301.6,
+        "tick": 10800,
+        "juego": "18:00",
+        "tipo": "ultima_caida",
+        "texto": "Cae CPU 4 (blanca), conquistada por CPU 1 (amarilla).",
+        "en_camara": true
+      },
+      {
+        "t": 301.6,
+        "tick": 10800,
+        "juego": "18:00",
+        "tipo": "ganador",
+        "texto": "Queda una sola nación: gana CPU 1 (amarilla). Sale el cartel final con la tabla (se queda 6 s)."
+      }
+    ],
+    "velocidad": [
+      {
+        "desde": 0,
+        "hasta": 4.03,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 4.03,
+        "hasta": 18.37,
+        "velocidad": "9x"
+      },
+      {
+        "desde": 18.37,
+        "hasta": 24.37,
+        "velocidad": "6x"
+      },
+      {
+        "desde": 24.37,
+        "hasta": 178.03,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 178.03,
+        "hasta": 183.37,
+        "velocidad": "6x"
+      },
+      {
+        "desde": 183.37,
+        "hasta": 216.1,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 216.1,
+        "hasta": 221.07,
+        "velocidad": "6x"
+      },
+      {
+        "desde": 221.07,
+        "hasta": 227.57,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 227.57,
+        "hasta": 233.5,
+        "velocidad": "6x"
+      },
+      {
+        "desde": 233.5,
+        "hasta": 286.13,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 286.13,
+        "hasta": 293.63,
+        "velocidad": "6x"
+      },
+      {
+        "desde": 293.63,
+        "hasta": 301.63,
+        "velocidad": "3x"
+      },
+      {
+        "desde": 301.63,
+        "hasta": 307.63,
+        "velocidad": "quieto"
+      }
+    ],
+    "tomas": [
+      {
+        "desde": 0,
+        "hasta": 4,
+        "tipo": "apertura",
+        "juego": "0:00-0:12",
+        "que_se_ve": "la isla entera: ocho naciones, todas de la computadora"
+      },
+      {
+        "desde": 4,
+        "hasta": 11.13,
+        "tipo": "ciudad",
+        "juego": "0:12-1:16",
+        "que_se_ve": "la ciudad de CPU 1 (amarilla)"
+      },
+      {
+        "desde": 11.13,
+        "hasta": 18.33,
+        "tipo": "ciudad",
+        "juego": "1:16-2:21",
+        "que_se_ve": "la ciudad de CPU 7 (morada)"
+      },
+      {
+        "desde": 18.33,
+        "hasta": 24.33,
+        "tipo": "marcha",
+        "juego": "2:21-2:57",
+        "que_se_ve": "sale el primer ejército: CPU 1 (amarilla) va contra CPU 3 (rosa)"
+      },
+      {
+        "desde": 24.33,
+        "hasta": 39.67,
+        "tipo": "combate",
+        "juego": "2:57-3:43",
+        "que_se_ve": "combate junto a la base de CPU 5 (naranja); disparan CPU 5 (naranja), CPU 8 (cian), CPU 4 (blanca), CPU 6 (roja)"
+      },
+      {
+        "desde": 39.67,
+        "hasta": 51.67,
+        "tipo": "combate",
+        "juego": "3:43-4:19",
+        "que_se_ve": "combate junto a la base de CPU 3 (rosa); disparan CPU 3 (rosa), CPU 1 (amarilla), CPU 7 (morada)"
+      },
+      {
+        "desde": 51.67,
+        "hasta": 63,
+        "tipo": "combate",
+        "juego": "4:19-4:53",
+        "que_se_ve": "combate junto a la base de CPU 5 (naranja); disparan CPU 5 (naranja), CPU 8 (cian), CPU 4 (blanca), CPU 6 (roja)"
+      },
+      {
+        "desde": 63,
+        "hasta": 66.37,
+        "tipo": "erupcion",
+        "juego": "4:53-5:03",
+        "que_se_ve": "el volcán hace erupción"
+      },
+      {
+        "desde": 66.37,
+        "hasta": 76.33,
+        "tipo": "conquista",
+        "juego": "5:03-5:33",
+        "que_se_ve": "cae CPU 5 (naranja), conquistada por CPU 4 (blanca)"
+      },
+      {
+        "desde": 76.33,
+        "hasta": 87.67,
+        "tipo": "combate",
+        "juego": "5:33-6:07",
+        "que_se_ve": "combate junto a la base de CPU 3 (rosa); disparan CPU 1 (amarilla), CPU 7 (morada), CPU 3 (rosa)"
+      },
+      {
+        "desde": 87.67,
+        "hasta": 96,
+        "tipo": "combate",
+        "juego": "6:07-6:32",
+        "que_se_ve": "combate junto a la base de CPU 6 (roja); disparan CPU 6 (roja), CPU 2 (azul), CPU 8 (cian)"
+      },
+      {
+        "desde": 96,
+        "hasta": 103,
+        "tipo": "combate",
+        "juego": "6:32-6:53",
+        "que_se_ve": "combate junto a la base de CPU 3 (rosa); disparan CPU 3 (rosa), CPU 1 (amarilla)"
+      },
+      {
+        "desde": 103,
+        "hasta": 117.17,
+        "tipo": "combate",
+        "juego": "6:53-7:36",
+        "que_se_ve": "combate junto a la base de CPU 3 (rosa); disparan CPU 1 (amarilla), CPU 3 (rosa)"
+      },
+      {
+        "desde": 117.17,
+        "hasta": 122.17,
+        "tipo": "sinBase",
+        "juego": "7:36-7:51",
+        "que_se_ve": "la lava se traga la base de CPU 6 (roja)"
+      },
+      {
+        "desde": 122.17,
+        "hasta": 134.17,
+        "tipo": "combate",
+        "juego": "7:51-8:27",
+        "que_se_ve": "combate junto a la base de CPU 3 (rosa); disparan CPU 1 (amarilla), CPU 8 (cian), CPU 3 (rosa), CPU 7 (morada)"
+      },
+      {
+        "desde": 134.17,
+        "hasta": 143,
+        "tipo": "combate",
+        "juego": "8:27-8:53",
+        "que_se_ve": "combate en campo abierto; disparan CPU 4 (blanca), CPU 8 (cian), CPU 2 (azul)"
+      },
+      {
+        "desde": 143,
+        "hasta": 158.6,
+        "tipo": "combate",
+        "juego": "8:53-9:40",
+        "que_se_ve": "combate junto a la base de CPU 5 (naranja); disparan CPU 8 (cian), CPU 2 (azul), CPU 3 (rosa)"
+      },
+      {
+        "desde": 158.6,
+        "hasta": 168.27,
+        "tipo": "conquista",
+        "juego": "9:40-10:09",
+        "que_se_ve": "cae CPU 3 (rosa), conquistada por CPU 1 (amarilla)"
+      },
+      {
+        "desde": 168.27,
+        "hasta": 178,
+        "tipo": "combate",
+        "juego": "10:09-10:38",
+        "que_se_ve": "combate junto a la base de CPU 7 (morada); disparan CPU 7 (morada), CPU 4 (blanca)"
+      },
+      {
+        "desde": 178,
+        "hasta": 183.33,
+        "tipo": "lava25",
+        "juego": "10:38-11:10",
+        "que_se_ve": "vista general: la lava cubre el 25 % de la isla"
+      },
+      {
+        "desde": 183.33,
+        "hasta": 194.4,
+        "tipo": "combate",
+        "juego": "11:10-11:43",
+        "que_se_ve": "combate junto a la base de CPU 7 (morada); disparan CPU 1 (amarilla), CPU 7 (morada), CPU 4 (blanca)"
+      },
+      {
+        "desde": 194.4,
+        "hasta": 204.07,
+        "tipo": "conquista",
+        "juego": "11:43-12:12",
+        "que_se_ve": "cae CPU 7 (morada), conquistada por CPU 1 (amarilla)"
+      },
+      {
+        "desde": 204.07,
+        "hasta": 216.07,
+        "tipo": "combate",
+        "juego": "12:12-12:48",
+        "que_se_ve": "combate junto a la base de CPU 8 (cian); disparan CPU 2 (azul), CPU 8 (cian), CPU 4 (blanca), CPU 1 (amarilla)"
+      },
+      {
+        "desde": 216.07,
+        "hasta": 221.03,
+        "tipo": "marcha",
+        "juego": "12:48-13:18",
+        "que_se_ve": "marcha: un ejército de CPU 1 (amarilla) cruza la isla (lo mandaron contra CPU 7 (morada))"
+      },
+      {
+        "desde": 221.03,
+        "hasta": 227.53,
+        "tipo": "combate",
+        "juego": "13:18-13:38",
+        "que_se_ve": "combate en campo abierto; disparan CPU 1 (amarilla), CPU 2 (azul)"
+      },
+      {
+        "desde": 227.53,
+        "hasta": 233.47,
+        "tipo": "lava50",
+        "juego": "13:38-14:13",
+        "que_se_ve": "vista general: la lava cubre el 50 % de la isla"
+      },
+      {
+        "desde": 233.47,
+        "hasta": 245.43,
+        "tipo": "combate",
+        "juego": "14:13-14:49",
+        "que_se_ve": "combate junto a la base de CPU 4 (blanca); disparan CPU 2 (azul), CPU 4 (blanca)"
+      },
+      {
+        "desde": 245.43,
+        "hasta": 255.1,
+        "tipo": "combate",
+        "juego": "14:49-15:18",
+        "que_se_ve": "combate junto a la base de CPU 8 (cian); disparan CPU 2 (azul), CPU 8 (cian), CPU 4 (blanca), CPU 1 (amarilla)"
+      },
+      {
+        "desde": 255.1,
+        "hasta": 267.43,
+        "tipo": "combate",
+        "juego": "15:18-15:55",
+        "que_se_ve": "combate junto a la base de CPU 8 (cian); disparan CPU 2 (azul), CPU 1 (amarilla), CPU 4 (blanca), CPU 8 (cian)"
+      },
+      {
+        "desde": 267.43,
+        "hasta": 272.1,
+        "tipo": "sinBase",
+        "juego": "15:55-16:09",
+        "que_se_ve": "la lava se traga la base de CPU 2 (azul)"
+      },
+      {
+        "desde": 272.1,
+        "hasta": 278.5,
+        "tipo": "conquista",
+        "juego": "16:09-16:28",
+        "que_se_ve": "cae CPU 8 (cian), conquistada por CPU 4 (blanca)"
+      },
+      {
+        "desde": 278.5,
+        "hasta": 286.1,
+        "tipo": "combate",
+        "juego": "16:28-16:51",
+        "que_se_ve": "combate junto a la base de CPU 4 (blanca); disparan CPU 1 (amarilla), CPU 4 (blanca)"
+      },
+      {
+        "desde": 286.1,
+        "hasta": 293.6,
+        "tipo": "lava75",
+        "juego": "16:51-17:36",
+        "que_se_ve": "vista general: la lava cubre el 75 % de la isla"
+      },
+      {
+        "desde": 293.6,
+        "hasta": 307.63,
+        "tipo": "final",
+        "juego": "17:36-18:00",
+        "que_se_ve": "cae CPU 4 (blanca), conquistada por CPU 1 (amarilla)"
+      }
+    ]
+  },
+  "cortos": [
+    {
+      "archivo": "corto-1.mp4",
+      "resolucion": "1080x1920",
+      "fps": 30,
+      "duracion_s": 8.5,
+      "juego": "0:00-2:07",
+      "que_se_ve": "La ciudad de CPU 1 (amarilla) crece sola desde el primer segundo: obreros a la madera y al hierro, granjas, casas, aserradero, cuartel. Velocidad 15x (los primeros 2 min de juego en 8,5 s), zoom 6x."
+    },
+    {
+      "archivo": "corto-2.mp4",
+      "resolucion": "1080x1920",
+      "fps": 30,
+      "duracion_s": 10,
+      "juego": "2:18-3:49",
+      "que_se_ve": "Sale el primer ejército de CPU 1 (amarilla): 8 tropas dejan la base (velocidad 6x), cruzan la isla (15x, desde los 2,5 s) y llegan a la ciudad de CPU 3 (rosa) (3x, en los últimos 3 s). Zoom 5x."
+    },
+    {
+      "archivo": "corto-3.mp4",
+      "resolucion": "1080x1920",
+      "fps": 30,
+      "duracion_s": 9.7,
+      "juego": "11:44-12:13",
+      "que_se_ve": "El asalto a la base de CPU 7 (morada): las tropas de CPU 1 (amarilla) la rodean y le disparan; a los 7,7 s la base explota y con ella todos sus edificios. Velocidad 3x, zoom 6x."
+    },
+    {
+      "archivo": "corto-4.mp4",
+      "resolucion": "1080x1920",
+      "fps": 30,
+      "duracion_s": 8.7,
+      "juego": "4:57-7:10",
+      "que_se_ve": "El volcán: a 1 s hace erupción (sacudida, fogonazo, chispas); desde los 3 s se acelera hasta 24x y la cámara se abre (zoom de 6x a 2,5x) para ver la lava extenderse en cuadro por la isla."
+    },
+    {
+      "archivo": "corto-5.mp4",
+      "resolucion": "1080x1920",
+      "fps": 30,
+      "duracion_s": 9.7,
+      "juego": "17:39-18:00",
+      "que_se_ve": "El final: CPU 1 (amarilla) tumba la última base, la de CPU 4 (blanca) (a los 7 s), con la lava ya en la orilla de abajo, y sale el cartel «QUEDO UNA SOLA NACION» con la tabla: gana CPU 1 (amarilla). Velocidad 3x, zoom 6x."
+    }
+  ]
+}

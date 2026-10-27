@@ -1,0 +1,211 @@
+{
+ "voz": "es-US-Chirp3-HD-Laomedeia",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Estrategia en tiempo real",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Gratis, en el navegador"
+ },
+ "formato": "horizontal",
+ "bpm": 80,
+ "volumen_musica": 0.8,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-cpu-largo.mp4",
+ "escenas": [
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 0,
+   "dur": 18.83,
+   "texto": "KAZAN · 8 CPU",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Kazan: una isla, un volcán, y ocho naciones jugadas por la computadora. Nadie las controla: van solas.",
+   "capitulo": "Ocho naciones",
+   "dice": "¡Hola! Soy LeIA. Hoy, en Kazan: una isla, un volcán y ocho naciones jugadas por la computadora. Nadie las controla: van solas."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 18.83,
+   "dur": 20.0,
+   "texto": "2:24 · PRIMER EJÉRCITO",
+   "etiqueta_y": 90,
+   "cara": "normal",
+   "voz": "Al minuto dos, la amarilla ya manda su primer ejército, contra la rosa.",
+   "capitulo": "Primer ejército"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 38.83,
+   "dur": 24.17,
+   "texto": "3:41 · PRIMER ATAQUE",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "La blanca ataca a la naranja, y cuatro ejércitos terminan rodeándola."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 63.0,
+   "dur": 6.7,
+   "texto": "5:00 · ERUPCIÓN",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "¡Y en el minuto cinco, el volcán despierta!",
+   "capitulo": "La erupción"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 69.7,
+   "dur": 26.3,
+   "texto": "CAE LA NARANJA",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "Con la lava bajando, la blanca conquista a la naranja. Primera nación fuera.",
+   "capitulo": "Cae la naranja"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 96.0,
+   "dur": 24.83,
+   "texto": "LA ROSA AGUANTA",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "Mientras, la amarilla sitia a la rosa. La ciudad aguanta… por ahora."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 120.83,
+   "dur": 35.84,
+   "texto": "LA LAVA",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "La lava se traga la base roja. Sin base, su gente no aguanta mucho.",
+   "capitulo": "La lava"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 156.67,
+   "dur": 9.93,
+   "texto": "CAE LA ROJA",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "Y la roja cae."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 166.6,
+   "dur": 11.73,
+   "texto": "CAE LA ROSA",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "¡La amarilla por fin conquista a la rosa!",
+   "capitulo": "La amarilla avanza"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 178.33,
+   "dur": 24.07,
+   "texto": "LAVA 25 %",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "La lava ya cubre un cuarto de la isla. El espacio se acaba."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 202.4,
+   "dur": 25.47,
+   "texto": "CAE LA MORADA",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "¡Y la amarilla conquista también a la morada! Ya son tres."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 227.87,
+   "dur": 43.23,
+   "texto": "LAVA 50 %",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "Media isla en lava. Quedan la amarilla, la blanca, la azul y la cian.",
+   "capitulo": "Media isla en lava"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 271.1,
+   "dur": 15.33,
+   "texto": "CAEN LA AZUL Y LA CIAN",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "La lava se traga la base azul, y la blanca se queda con la cian."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 286.43,
+   "dur": 15.17,
+   "texto": "LAVA 75 %",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "Tres cuartos de la isla en lava. Ya sólo quedan dos: la amarilla contra la blanca.",
+   "capitulo": "El final"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 301.6,
+   "dur": 6.0,
+   "texto": "GANA LA AMARILLA",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "¡La amarilla gana! Queda una sola nación.",
+   "capitulo": "Gana la amarilla"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Juega gratis",
+   "voz": "¿Tu ciudad aguantaría? Juega gratis en Kazan punto Daily Challenge punto click.",
+   "dice": "¿Tu ciudad aguantaría? Juega gratis en kazan.dailychallenge.click"
+  }
+ ]
+}

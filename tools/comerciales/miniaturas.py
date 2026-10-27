@@ -62,8 +62,8 @@ def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
     d = ImageDraw.Draw(im)
     y = 120
     if logo:   # el logo del juego, en pixel art: se agranda sin suavizar
-        lg = Image.open(os.path.join(AQUI, logo)).convert('RGBA'); k = 300 / lg.size[1]
-        lg = lg.resize((round(lg.size[0] * k), 300), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 370
+        lg = Image.open(os.path.join(AQUI, logo)).convert('RGBA'); k = min(300 / lg.size[1], 620 / lg.size[0])
+        lg = lg.resize((round(lg.size[0] * k), round(lg.size[1] * k)), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 70 + lg.size[1]
     for linea in titulo.split('\n'):
         d.text((70, y), linea, font=ImageFont.truetype(PIXEL, 74), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
     d.text((74, y + 20), sub, font=av('heavy', 52), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
@@ -81,4 +81,6 @@ if __name__ == '__main__':
     t = float(sys.argv[sys.argv.index('--wz') + 1]) if '--wz' in sys.argv else 138.6
     fondo = cuadro(os.path.join(AQUI, 'warzone-cpu/largo-editado.mp4'), t)
     juego('warzone-cpu-largo', fondo, 'CPU vs CPU', '4 contra 4 en el volcán', 'sorpresa', (232, 224, 122), logo='warzone/logo.png')
+    fondo = cuadro(os.path.join(AQUI, 'kazan-cpu/largo.mp4'), 295.0, (0, 30, 960, 438))
+    juego('kazan-cpu-largo', fondo, '8 CPU\n1 VOLCÁN', 'sólo una sobrevive', 'sorpresa', (242, 160, 61), logo='kazan/logo.png')
     print('miniaturas en', SAL)

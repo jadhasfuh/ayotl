@@ -103,5 +103,40 @@
    "Atari 2600",
    "CPU vs CPU"
   ]
+ },
+ {
+  "clave": "kazan-cpu-largo",
+  "video": "salida/kazan-cpu-largo.mp4",
+  "miniatura": "salida/kazan-cpu-largo.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-03T18:00:00-06:00",
+  "titulo": "Kazan: 8 computadoras, una isla y un volcán (partida completa)",
+  "descripcion": "Ocho naciones jugadas por la computadora en una isla del desierto: construyen, entrenan ejércitos, se conquistan unas a otras… y a los cinco minutos despierta el volcán. LeIA comenta la partida completa, del primer ejército a la última ciudad en pie.\n\nKazan es estrategia en tiempo real con estilo retro: levanta tu ciudad, arma tu ejército y escapa de la lava. Cada semana hay un reto de la isla en línea.\n\nJuega gratis en el navegador: https://kazan.dailychallenge.click\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "cierre": "#Kazan #Estrategia #RTS #RetroGaming #Videojuegos #IndieGame",
+  "etiquetas": [
+   "Kazan",
+   "estrategia en tiempo real",
+   "RTS",
+   "juego retro",
+   "pixel art",
+   "CPU vs CPU",
+   "indie game",
+   "Daily Challenge"
+  ]
+ },
+ {
+  "clave": "kazan-cpu-short",
+  "video": "salida/kazan-cpu-short.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T18:00:00-06:00",
+  "titulo": "Ocho computadoras, una isla, un volcán 🌋 #shorts",
+  "descripcion": "Una partida de Kazan jugada sólo por la CPU, con LeIA. Juega gratis en https://kazan.dailychallenge.click",
+  "cierre": "#Kazan #RTS #RetroGaming",
+  "etiquetas": [
+   "Kazan",
+   "estrategia",
+   "RTS",
+   "juego retro"
+  ]
  }
 ]
