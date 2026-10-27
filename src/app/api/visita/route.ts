@@ -23,6 +23,8 @@ export const dynamic = "force-dynamic";
 const SITIOS: Record<string, string[]> = {
   "ayotl.dev": ["ayotl"],
   "dailychallenge.click": ["dc", "warzone", "kazan", "procesion"],
+  // Kazan se juega en su subdominio desde el 24-oct-2026 (DC manda allá): sin esto no se contaba.
+  "kazan.dailychallenge.click": ["kazan"],
   "jlptest.org": ["jlptest"],
   "mercadito.cx": ["mercadito"],
 };
@@ -100,6 +102,7 @@ function origenDe(o: unknown, primera: boolean, app: boolean, host: string, siti
   if (desdeApp) h = h.slice("android-app:".length);
   h = h.replace(/^www\./, "").replace(/^m\./, "").slice(0, 100);
   if (h === host) return EXTRAS.has(sitio) ? "dc" : "interno";
+  if (h === "dailychallenge.click" && EXTRAS.has(sitio)) return "dc";   // a Kazan, desde Daily
   for (const [re, nombre] of CONOCIDOS) if (re.test(h)) return nombre;
   // Una app de Android que no conocemos: si es la nuestra (TWA), 'app'.
   if (desdeApp) return app ? "app" : "otra app";
