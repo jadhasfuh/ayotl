@@ -1,0 +1,121 @@
+{
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-kazan.mp4",
+ "formato": "horizontal",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "bpm": 112,
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 456,
+  "lema": "Estrategia en tiempo real",
+  "sitio": "Juega gratis",
+  "pie": "También en el navegador: kazan.dailychallenge.click"
+ },
+ "escenas": [
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 5.0,
+   "texto": "KAZAN · estrategia en tiempo real",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "Esto es Kazan: estrategia en tiempo real.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 5.0,
+   "dur": 5.5,
+   "texto": "Levanta tu ciudad",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "Levanta tu ciudad.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.5,
+   "dur": 5.5,
+   "texto": "Arma tu ejército",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "Arma tu ejército.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 16.0,
+   "dur": 7.0,
+   "texto": "El volcán despierta",
+   "pixel": true,
+   "cara": "sorpresa",
+   "voz": "¡Y cuidado: el volcán despierta!",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 23.0,
+   "dur": 5.5,
+   "texto": "La lava se lo come todo",
+   "pixel": true,
+   "cara": "triste",
+   "voz": "La lava se lo come todo.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 28.5,
+   "dur": 8.5,
+   "texto": "Conquista a las demás naciones",
+   "pixel": true,
+   "cara": "enojo",
+   "voz": "Conquista a las demás naciones.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 37.0,
+   "dur": 6.5,
+   "texto": "Cada semana, la isla en línea: 12 naciones",
+   "pixel": true,
+   "cara": "pensando",
+   "voz": "Cada semana, doce naciones en línea.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 43.5,
+   "dur": 7.0,
+   "texto": "Sólo una sobrevive",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "Sólo una sobrevive.",
+   "etiqueta_y": 160
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "guino",
+   "voz": "¡Juega gratis!"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}

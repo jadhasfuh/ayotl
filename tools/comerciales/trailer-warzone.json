@@ -1,0 +1,108 @@
+{
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-warzone.mp4",
+ "formato": "horizontal",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 600,
+  "lema": "Artillería por turnos",
+  "sitio": "Juega gratis",
+  "pie": "También en el navegador: dailychallenge.click/warzone"
+ },
+ "musica": {
+  "archivo": "warzone-cpu/trailer-base.mp4",
+  "desde": 0,
+  "volumen": 0.1
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 6.0,
+   "texto": "WAR ZONE · artillería por turnos",
+   "cara": "feliz",
+   "voz": "¡Esto es Guar Zon! Artillería por turnos.",
+   "dice": "¡Esto es War Zone! Artillería por turnos.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 6.0,
+   "dur": 4.1,
+   "texto": "Láser, bazuca, granadas… y la bota",
+   "cara": "sorpresa",
+   "voz": "¡Láser, bazuca, granadas…!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.1,
+   "dur": 5.6,
+   "texto": "El terreno se destruye",
+   "cara": "feliz",
+   "voz": "Y el terreno se destruye.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 15.7,
+   "dur": 5.5,
+   "texto": "Manda a volar a tus rivales",
+   "cara": "sorpresa",
+   "voz": "¡Manda a volar a tus rivales!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 21.2,
+   "dur": 4.8,
+   "texto": "Tiro a la cabeza",
+   "cara": "sorpresa",
+   "voz": "¡Tiro a la cabeza!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 26.0,
+   "dur": 7.1,
+   "texto": "Campaña, retos y batallas de hasta 6 contra 6",
+   "cara": "normal",
+   "voz": "Campaña, retos, y batallas de hasta seis contra seis.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 33.1,
+   "dur": 9.3,
+   "texto": "En línea con tus amigos",
+   "cara": "guino",
+   "voz": "Y en línea, con tus amigos.",
+   "etiqueta_y": 120
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "feliz",
+   "voz": "¡Juega gratis!"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}
