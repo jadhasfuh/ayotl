@@ -190,6 +190,10 @@ ul { padding-left: 1.2em; }
 .hero h1 { margin-bottom: 0.65em; }
 .hero p.grande { font-size: 19px; line-height: 1.55; color: var(--tinta-2); max-width: 30em; }
 .hero-botones { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+/* La insignia de Google Play de una app ya publicada: tal cual la da Google, con la nota de marca debajo */
+.insignia-tienda { display: flex; flex-direction: column; align-items: flex-start; gap: 0.35rem; margin-top: 1rem; }
+.insignia-tienda a { line-height: 0; }
+.insignia-tienda small { font-size: 0.7rem; opacity: 0.6; }
 .hero-tortuga { display: none; justify-self: center; color: var(--caparazon); }
 .hero-tortuga svg { width: min(320px, 60vw); height: auto; }
 .gracias svg, .no-encontrado svg, .prosa svg { width: auto; }

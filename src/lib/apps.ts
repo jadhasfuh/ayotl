@@ -23,6 +23,11 @@ export type App = {
    * ahí, la ficha de la app no abre y la instalación no cuenta.
    */
   playTester?: string;
+  /**
+   * El paquete de Android. En cuanto su ficha de Play es pública (ver
+   * lib/en-play), la página de la app pone la insignia oficial de Google Play.
+   */
+  paquetePlay?: string;
   /** Color de acento de la tarjeta (par claro/oscuro, ver globals.css). */
   acento: "agua" | "caparazon" | "tierra";
   lema: Record<Idioma, string>;
@@ -89,6 +94,7 @@ export const APPS: App[] = [
     dominio: "jlptest.org",
     url: "https://jlptest.org",
     playTester: "https://play.google.com/apps/testing/org.jlptest.twa",
+    paquetePlay: "org.jlptest.twa",
     acento: "agua",
     lema: {
       es: "Japonés del N5 al N1, en unidades de 20 palabras.",
@@ -130,6 +136,7 @@ export const APPS: App[] = [
     dominio: "dailychallenge.click",
     url: "https://dailychallenge.click",
     playTester: "https://play.google.com/apps/testing/click.dailychallenge.twa",
+    paquetePlay: "click.dailychallenge.twa",
     acento: "caparazon",
     lema: {
       es: "Un reto arcade nuevo cada día, estilo Atari 2600.",
@@ -170,6 +177,7 @@ export const APPS: App[] = [
     dominio: "kazan.dailychallenge.click",
     url: "https://kazan.dailychallenge.click",
     playTester: "https://play.google.com/apps/testing/dev.ayotl.kazan",
+    paquetePlay: "dev.ayotl.kazan",
     acento: "agua",
     apaisada: true,
     lema: {
@@ -216,6 +224,7 @@ export const APPS: App[] = [
     nombre: "War Zone",
     dominio: "dailychallenge.click/warzone",
     url: "https://dailychallenge.click/warzone",
+    paquetePlay: "dev.ayotl.warzone",
     acento: "caparazon",
     apaisada: true,
     lema: {

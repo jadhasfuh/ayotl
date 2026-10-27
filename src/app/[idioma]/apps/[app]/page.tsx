@@ -5,17 +5,22 @@ import { Cabecera } from "@/components/Cabecera";
 import { MarcaApp } from "@/components/MarcaApp";
 import { Telefono } from "@/components/Telefono";
 import { APPS, type App } from "@/lib/apps";
+import { enPlay, fichaPlay } from "@/lib/en-play";
 import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
 import { sitio } from "@/lib/sitio";
 
 type Props = { params: Promise<{ idioma: string; app: string }> };
 
-/** Una página por app y por idioma, todas estáticas. */
+/**
+ * Una página por app y por idioma, todas estáticas; se regeneran cada hora
+ * para que la insignia de Google Play salga sola cuando una app se publique.
+ */
 export function generateStaticParams() {
   return IDIOMAS.flatMap((i) => APPS.map((a) => ({ idioma: i.id, app: a.id })));
 }
 export const dynamicParams = false;
+export const revalidate = 3600;
 
 async function appDe(params: Props["params"]): Promise<[App, Idioma]> {
   const { app } = await params;
@@ -52,6 +57,7 @@ export default async function PaginaApp({ params }: Props) {
   const [app, idioma] = await appDe(params);
   const x = t(idioma);
   const otras = APPS.filter((a) => a.id !== app.id);
+  const play = app.paquetePlay && (await enPlay(app.paquetePlay)) ? app.paquetePlay : null;
 
   return (
     <>
@@ -92,6 +98,16 @@ export default async function PaginaApp({ params }: Props) {
             )}
             <Link href={ruta("negocios", idioma)} className="boton secundario">{x("navNegocios")}</Link>
           </p>
+          {play && (
+            <p className="insignia-tienda">
+              {/* la insignia oficial, tal cual la da Google */}
+              <a href={fichaPlay(play)} target="_blank" rel="noopener">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={`/insignias/google-play-${idioma}.png`} alt={idioma === "es" ? "Disponible en Google Play" : "Get it on Google Play"} width={155} height={60} />
+              </a>
+              <small>Google Play {idioma === "es" ? "y el logotipo de Google Play son marcas de Google LLC." : "and the Google Play logo are trademarks of Google LLC."}</small>
+            </p>
+          )}
 
           <h2 style={{ marginTop: "3rem" }}>{x("appPantallas")}</h2>
           <ul className="pantallas">
