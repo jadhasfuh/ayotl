@@ -1,0 +1,16 @@
+{
+  "salida": "~/Documents/jlptest/public/social/reels/comercial-jlptest-1.mp4",
+  "voz": "es-US-Chirp3-HD-Aoede",
+  "idioma": "es-US",
+  "bpm": 88,
+  "colores": { "fondo": "#161826", "acento": "#9184d9", "texto": "#ffffff", "tenue": "#8a8aa0" },
+  "marca": { "nombre": "jlptest", "punto": "#d7263d", "lema": "Prepara el JLPT", "sitio": "jlptest.org", "pie": "Empieza gratis" },
+  "escenas": [
+    { "imagen": "jlptest/1-inicio.jpg", "texto": "¿Estudias japonés para el JLPT?", "voz": "¿Estudias japonés para el jota ele pe te?" },
+    { "imagen": "jlptest/2-unidad.jpg", "texto": "Casi 10 000 palabras, del N5 al N1", "voz": "En jota ele pe test tienes casi diez mil palabras, del ene cinco al ene uno, con su audio y sus ejemplos." },
+    { "imagen": "jlptest/4-noticia.jpg", "texto": "Noticias de Japón a tu nivel", "voz": "Lee noticias de Japón a tu nivel, con furigana y diccionario con un toque." },
+    { "imagen": "jlptest/5-examen.jpg", "texto": "Exámenes como el real", "voz": "Practica con exámenes como el real, con escucha y la explicación de cada respuesta." },
+    { "imagen": "jlptest/6-deck.jpg", "texto": "Tus propios mazos", "voz": "Arma tus propios mazos y repasa justo cuando te toca." },
+    { "final": true, "voz": "Empieza gratis en jota ele pe test punto org." }
+  ]
+}
