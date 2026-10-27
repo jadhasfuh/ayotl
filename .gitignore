@@ -27,3 +27,5 @@ PROMPT-INICIAL.md
 
 # Respaldos antes de borrados masivos: datos personales, no van al repo.
 respaldos/
+tools/comerciales/salida/
+__pycache__/

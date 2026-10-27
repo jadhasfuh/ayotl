@@ -1,0 +1,234 @@
+{
+ "voz": "es-US-Chirp3-HD-Aoede",
+ "idioma": "es-US",
+ "colores": {
+  "fondo": "#161826",
+  "acento": "#9184d9",
+  "texto": "#ffffff",
+  "tenue": "#8a8aa0"
+ },
+ "marca": {
+  "nombre": "jlptest",
+  "punto": "#d7263d",
+  "lema": "Prepara el JLPT",
+  "sitio": "jlptest.org",
+  "pie": "Empieza gratis"
+ },
+ "bpm": 84,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/jlptest-n5-short.mp4",
+ "escenas": [
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "毎日",
+    "lectura": "まいにち",
+    "es": "que usarás todos los días"
+   },
+   "voz": "Diez palabras del N5 que vas a usar todos los días."
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "水",
+    "lectura": "みず",
+    "es": "agua",
+    "num": "1 / 10"
+   },
+   "voces": [
+    {
+     "texto": "みず",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "agua"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "ご飯",
+    "lectura": "ごはん",
+    "es": "arroz, comida",
+    "num": "2 / 10"
+   },
+   "voces": [
+    {
+     "texto": "ごはん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "arroz, comida"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "食べる",
+    "lectura": "たべる",
+    "es": "comer",
+    "num": "3 / 10"
+   },
+   "voces": [
+    {
+     "texto": "たべる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "comer"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "飲む",
+    "lectura": "のむ",
+    "es": "beber",
+    "num": "4 / 10"
+   },
+   "voces": [
+    {
+     "texto": "のむ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "beber"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "行く",
+    "lectura": "いく",
+    "es": "ir",
+    "num": "5 / 10"
+   },
+   "voces": [
+    {
+     "texto": "いく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "ir"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "帰る",
+    "lectura": "かえる",
+    "es": "volver a casa",
+    "num": "6 / 10"
+   },
+   "voces": [
+    {
+     "texto": "かえる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "volver a casa"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "今日",
+    "lectura": "きょう",
+    "es": "hoy",
+    "num": "7 / 10"
+   },
+   "voces": [
+    {
+     "texto": "きょう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "hoy"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "明日",
+    "lectura": "あした",
+    "es": "mañana",
+    "num": "8 / 10"
+   },
+   "voces": [
+    {
+     "texto": "あした",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "mañana"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "友達",
+    "lectura": "ともだち",
+    "es": "amigo",
+    "num": "9 / 10"
+   },
+   "voces": [
+    {
+     "texto": "ともだち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "amigo"
+    }
+   ]
+  },
+  {
+   "texto": "10 palabras del N5",
+   "palabra": {
+    "jp": "好き",
+    "lectura": "すき",
+    "es": "que te gusta",
+    "num": "10 / 10"
+   },
+   "voces": [
+    {
+     "texto": "すき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.4
+    },
+    {
+     "texto": "que te gusta"
+    }
+   ]
+  },
+  {
+   "final": true,
+   "voz": "Más palabras, con su audio, en jota ele pe test punto org."
+  }
+ ]
+}

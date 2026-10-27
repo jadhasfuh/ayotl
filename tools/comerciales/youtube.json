@@ -1,0 +1,73 @@
+[
+ {
+  "clave": "jlptest-n5-largo",
+  "video": "salida/jlptest-n5-largo.mp4",
+  "miniatura": "salida/jlptest-n5-largo.jpg",
+  "categoria": "27",
+  "publicar": "2026-10-28T18:00:00-06:00",
+  "titulo": "Vocabulario JLPT N5: 100 palabras esenciales con audio (escucha y repite)",
+  "descripcion": "Las 100 palabras del JLPT N5 que más vas a usar, en diez temas: familia, cuerpo, comida, casa, ropa, ciudad, tiempo, verbos, adjetivos y clima. Escucha cada palabra en japonés, repítela en voz alta en la pausa, y escúchala otra vez con su significado en español.\n\nPractica estas palabras con su audio, ejemplos y repaso espaciado en https://jlptest.org (la primera sección de cada nivel es gratis).",
+  "cierre": "#JLPT #JLPTN5 #japonés #aprenderjaponés #vocabulariojaponés #日本語",
+  "etiquetas": [
+   "JLPT",
+   "JLPT N5",
+   "vocabulario japonés",
+   "aprender japonés",
+   "japonés para principiantes",
+   "japonés en español",
+   "nihongo",
+   "jlptest"
+  ]
+ },
+ {
+  "clave": "jlptest-n5-short",
+  "video": "salida/jlptest-n5-short.mp4",
+  "categoria": "27",
+  "publicar": "2026-10-29T18:00:00-06:00",
+  "titulo": "10 palabras del JLPT N5 que usarás todos los días #shorts",
+  "descripcion": "Agua, comer, ir, hoy, amigo… diez palabras del N5 con su pronunciación. Más vocabulario con audio en https://jlptest.org",
+  "cierre": "#JLPT #japonés #aprenderjaponés #日本語",
+  "etiquetas": [
+   "JLPT",
+   "JLPT N5",
+   "japonés",
+   "aprender japonés",
+   "nihongo"
+  ]
+ },
+ {
+  "clave": "dc-semana-largo",
+  "video": "salida/dc-semana-largo.mp4",
+  "miniatura": "salida/dc-semana-largo.jpg",
+  "categoria": "20",
+  "publicar": "2026-10-30T18:00:00-06:00",
+  "titulo": "7 días, 7 juegos retro: una semana de Daily Challenge",
+  "descripcion": "En Daily Challenge hay un reto nuevo cada día: un juego retro, el mismo nivel para todos y una sola tabla. LeIA te enseña las partidas ganadoras de la última semana: Galaga, Mr. Do!, Jewels, BurgerTime, Pac-Man, Rally-X y Asteroids.\n\nJuega gratis, en el navegador y sin descargar: https://dailychallenge.click\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade #Videojuegos #IndieGame",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "Galaga",
+   "Pac-Man",
+   "Asteroids",
+   "reto diario",
+   "retro gaming"
+  ]
+ },
+ {
+  "clave": "dc-semana-short",
+  "video": "salida/dc-semana-short.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T18:00:00-06:00",
+  "titulo": "Un juego retro distinto cada día 🕹️ #shorts",
+  "descripcion": "La última semana de Daily Challenge, con LeIA. Juega gratis en https://dailychallenge.click",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming"
+  ]
+ }
+]

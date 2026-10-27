@@ -1,0 +1,127 @@
+{
+ "asteroids": {
+  "titulo": "ASTEROIDS",
+  "fecha": "2026-10-26",
+  "fechas": 2
+ },
+ "basket": {
+  "titulo": "BASKET",
+  "fecha": null,
+  "fechas": 3
+ },
+ "battlecity": {
+  "titulo": "BATTLE CITY",
+  "fecha": null,
+  "fechas": 4
+ },
+ "boulder": {
+  "titulo": "BOULDER",
+  "fecha": null,
+  "fechas": 1
+ },
+ "breakout": {
+  "titulo": "BREAKOUT",
+  "fecha": null,
+  "fechas": 3
+ },
+ "burgertime": {
+  "titulo": "BURGERTIME",
+  "fecha": "2026-10-23",
+  "fechas": 1
+ },
+ "centipede": {
+  "titulo": "CENTIPEDE",
+  "fecha": null,
+  "fechas": 1
+ },
+ "columns": {
+  "titulo": "JEWELS",
+  "fecha": "2026-10-22",
+  "fechas": 3
+ },
+ "digdug": {
+  "titulo": "DIG DUG",
+  "fecha": null,
+  "fechas": 1
+ },
+ "frogger": {
+  "titulo": "FROGGER",
+  "fecha": null,
+  "fechas": 2
+ },
+ "galaga": {
+  "titulo": "GALAGA",
+  "fecha": "2026-10-20",
+  "fechas": 3
+ },
+ "joust": {
+  "titulo": "JOUST",
+  "fecha": null,
+  "fechas": 1
+ },
+ "lunar": {
+  "titulo": "LUNAR LANDER",
+  "fecha": null,
+  "fechas": 1
+ },
+ "missile": {
+  "titulo": "MISSILE CMD",
+  "fecha": null,
+  "fechas": 3
+ },
+ "mrdo": {
+  "titulo": "MR. DO!",
+  "fecha": "2026-10-21",
+  "fechas": 1
+ },
+ "nibbler": {
+  "titulo": "NIBBLER",
+  "fecha": null,
+  "fechas": 3
+ },
+ "pacman": {
+  "titulo": "PAC-MAN",
+  "fecha": "2026-10-24",
+  "fechas": 3
+ },
+ "pang": {
+  "titulo": "PANG",
+  "fecha": null,
+  "fechas": 1
+ },
+ "pipe": {
+  "titulo": "PIPE MANIA",
+  "fecha": null,
+  "fechas": 1
+ },
+ "qix": {
+  "titulo": "QIX",
+  "fecha": null,
+  "fechas": 1
+ },
+ "rallyx": {
+  "titulo": "RALLY-X",
+  "fecha": "2026-10-25",
+  "fechas": 1
+ },
+ "rapidroll": {
+  "titulo": "RAPID ROLL",
+  "fecha": null,
+  "fechas": 1
+ },
+ "snake": {
+  "titulo": "SNAKE",
+  "fecha": null,
+  "fechas": 2
+ },
+ "spaceimpact": {
+  "titulo": "SPACE IMPACT",
+  "fecha": null,
+  "fechas": 1
+ },
+ "tetris": {
+  "titulo": "TETRIS",
+  "fecha": null,
+  "fechas": 2
+ }
+}

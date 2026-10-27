@@ -1,0 +1,198 @@
+{
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/dc-semana-largo.mp4",
+ "formato": "horizontal",
+ "voz": "es-US-Chirp3-HD-Laomedeia",
+ "idioma": "es-US",
+ "bpm": 104,
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#93e2dd",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "dc/logo.png",
+  "logo_ancho": 708,
+  "lema": "Un reto nuevo cada día",
+  "sitio": "dailychallenge.click",
+  "pie": "Gratis, en el navegador y sin descargar"
+ },
+ "escenas": [
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "Una semana en Daily Challenge",
+   "cara": "feliz",
+   "capitulo": "Qué es Daily Challenge",
+   "voz": "¡Hola! Soy Leia. En Daily Challenge hay un reto nuevo cada día: un juego retro, el mismo nivel para todos, y una sola tabla.",
+   "hasta": 8.0,
+   "dice": "¡Hola! Soy LeIA. En Daily Challenge hay un reto nuevo cada día: un juego retro, el mismo nivel para todos, y una sola tabla."
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "Un reto nuevo cada día",
+   "cara": "normal",
+   "voz": "Gana el mejor puntaje del día, y la partida ganadora queda grabada. Estas son las de la última semana.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "MARTES · GALAGA",
+   "cara": "normal",
+   "voz": "El martes tocó Galaga: la formación baja en picada y hay que derribarla antes de que te alcance.",
+   "dur": 8.6,
+   "capitulo": "Galaga",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/mrdo.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "MIÉRCOLES · MR. DO!",
+   "cara": "sorpresa",
+   "voz": "¡Miércoles, Mister Do! Cavas el huerto, juntas cerezas, y aplastas monstruos con manzanas.",
+   "dur": 8.6,
+   "capitulo": "Mr. Do!",
+   "dice": "¡Miércoles, Mr. Do! Cavas el huerto, juntas cerezas y aplastas monstruos con manzanas.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/columns.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "JUEVES · JEWELS",
+   "cara": "pensando",
+   "voz": "El jueves, Jewels: tres gemas iguales en línea, y si encadenas combos, los puntos se disparan.",
+   "dur": 8.6,
+   "capitulo": "Jewels",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/burgertime.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "VIERNES · BURGERTIME",
+   "cara": "feliz",
+   "voz": "Viernes de Burger Taim. Pisas los ingredientes para armar hamburguesas, mientras te persiguen.",
+   "dur": 8.6,
+   "capitulo": "Burgertime",
+   "dice": "Viernes de BurgerTime. Pisas los ingredientes para armar hamburguesas mientras te persiguen.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "SÁBADO · PAC-MAN",
+   "cara": "guino",
+   "voz": "El sábado, Pac-Man. No necesita presentación: laberinto, puntos y fantasmas.",
+   "dur": 8.6,
+   "capitulo": "Pac-Man",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/rallyx.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "DOMINGO · RALLY-X",
+   "cara": "sorpresa",
+   "voz": "Domingo de Rally X: diez banderas que juntar, con los coches rojos pisándote los talones.",
+   "dur": 8.6,
+   "capitulo": "Rally-X",
+   "dice": "Domingo de Rally-X: diez banderas que juntar, con los coches rojos pisándote los talones.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/asteroids.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "LUNES · ASTEROIDS",
+   "cara": "enojo",
+   "voz": "Y el lunes, Asteroids. Giras, aceleras, y partes las rocas en pedazos. ¡Sin chocar!",
+   "dur": 8.6,
+   "capitulo": "Asteroids",
+   "hasta": 8.0
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Juega gratis",
+   "voz": "¿Qué juego toca mañana? Entra y descúbrelo. Es gratis, en el navegador, en Daily Challenge punto click.",
+   "dice": "¿Qué juego toca mañana? Entra y descúbrelo. Es gratis, en el navegador: dailychallenge.click"
+  }
+ ]
+}

@@ -1,0 +1,2748 @@
+{
+ "voz": "es-US-Chirp3-HD-Aoede",
+ "idioma": "es-US",
+ "colores": {
+  "fondo": "#161826",
+  "acento": "#9184d9",
+  "texto": "#ffffff",
+  "tenue": "#8a8aa0"
+ },
+ "marca": {
+  "nombre": "jlptest",
+  "punto": "#d7263d",
+  "lema": "Prepara el JLPT",
+  "sitio": "jlptest.org",
+  "pie": "Empieza gratis"
+ },
+ "formato": "horizontal",
+ "bpm": 76,
+ "volumen_musica": 0.6,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/jlptest-n5-largo.mp4",
+ "escenas": [
+  {
+   "texto": "Vocabulario JLPT N5",
+   "palabra": {
+    "jp": "日本語",
+    "lectura": "にほんご",
+    "es": "100 palabras esenciales"
+   },
+   "capitulo": "Introducción",
+   "voz": "Cien palabras esenciales del N5, en diez temas. Escucha cada palabra, repítela en voz alta, y escúchala otra vez."
+  },
+  {
+   "texto": "Capítulo 1",
+   "palabra": {
+    "jp": "La familia",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "La familia",
+   "voz": "La familia.",
+   "dur": 2.6
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "家族",
+    "lectura": "かぞく",
+    "es": "familia",
+    "num": "1 / 100"
+   },
+   "voces": [
+    {
+     "texto": "かぞく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "かぞく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "familia"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "父",
+    "lectura": "ちち",
+    "es": "mi padre",
+    "num": "2 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ちち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ちち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mi padre"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "母",
+    "lectura": "はは",
+    "es": "mi madre",
+    "num": "3 / 100"
+   },
+   "voces": [
+    {
+     "texto": "はは",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "はは",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mi madre"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "お父さん",
+    "lectura": "おとうさん",
+    "es": "papá",
+    "num": "4 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おとうさん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おとうさん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "papá"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "お母さん",
+    "lectura": "おかあさん",
+    "es": "mamá",
+    "num": "5 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おかあさん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おかあさん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mamá"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "兄",
+    "lectura": "あに",
+    "es": "hermano mayor",
+    "num": "6 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あに",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あに",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hermano mayor"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "姉",
+    "lectura": "あね",
+    "es": "hermana mayor",
+    "num": "7 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あね",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あね",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hermana mayor"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "弟",
+    "lectura": "おとうと",
+    "es": "hermano menor",
+    "num": "8 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おとうと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おとうと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hermano menor"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "妹",
+    "lectura": "いもうと",
+    "es": "hermana menor",
+    "num": "9 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いもうと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いもうと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hermana menor"
+    }
+   ]
+  },
+  {
+   "texto": "La familia",
+   "palabra": {
+    "jp": "両親",
+    "lectura": "りょうしん",
+    "es": "padres",
+    "num": "10 / 100"
+   },
+   "voces": [
+    {
+     "texto": "りょうしん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "りょうしん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "padres"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 2",
+   "palabra": {
+    "jp": "Personas y cuerpo",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "Personas y cuerpo",
+   "voz": "Personas y cuerpo.",
+   "dur": 2.6
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "人",
+    "lectura": "ひと",
+    "es": "persona",
+    "num": "11 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ひと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ひと",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "persona"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "友達",
+    "lectura": "ともだち",
+    "es": "amigo",
+    "num": "12 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ともだち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ともだち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "amigo"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "男",
+    "lectura": "おとこ",
+    "es": "hombre",
+    "num": "13 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おとこ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おとこ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hombre"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "女",
+    "lectura": "おんな",
+    "es": "mujer",
+    "num": "14 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おんな",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おんな",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mujer"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "頭",
+    "lectura": "あたま",
+    "es": "cabeza",
+    "num": "15 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あたま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あたま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cabeza"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "顔",
+    "lectura": "かお",
+    "es": "cara",
+    "num": "16 / 100"
+   },
+   "voces": [
+    {
+     "texto": "かお",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "かお",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cara"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "目",
+    "lectura": "め",
+    "es": "ojo",
+    "num": "17 / 100"
+   },
+   "voces": [
+    {
+     "texto": "め",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "め",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ojo"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "口",
+    "lectura": "くち",
+    "es": "boca",
+    "num": "18 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "boca"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "手",
+    "lectura": "て",
+    "es": "mano",
+    "num": "19 / 100"
+   },
+   "voces": [
+    {
+     "texto": "て",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "て",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mano"
+    }
+   ]
+  },
+  {
+   "texto": "Personas y cuerpo",
+   "palabra": {
+    "jp": "足",
+    "lectura": "あし",
+    "es": "pie, pierna",
+    "num": "20 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あし",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あし",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "pie, pierna"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 3",
+   "palabra": {
+    "jp": "Comida y bebida",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "Comida y bebida",
+   "voz": "Comida y bebida.",
+   "dur": 2.6
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "ご飯",
+    "lectura": "ごはん",
+    "es": "arroz, comida",
+    "num": "21 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ごはん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ごはん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "arroz, comida"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "パン",
+    "lectura": "パン",
+    "es": "pan",
+    "num": "22 / 100"
+   },
+   "voces": [
+    {
+     "texto": "パン",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "パン",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "pan"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "肉",
+    "lectura": "にく",
+    "es": "carne",
+    "num": "23 / 100"
+   },
+   "voces": [
+    {
+     "texto": "にく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "にく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "carne"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "魚",
+    "lectura": "さかな",
+    "es": "pescado",
+    "num": "24 / 100"
+   },
+   "voces": [
+    {
+     "texto": "さかな",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "さかな",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "pescado"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "野菜",
+    "lectura": "やさい",
+    "es": "verdura",
+    "num": "25 / 100"
+   },
+   "voces": [
+    {
+     "texto": "やさい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "やさい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "verdura"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "果物",
+    "lectura": "くだもの",
+    "es": "fruta",
+    "num": "26 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くだもの",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くだもの",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "fruta"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "卵",
+    "lectura": "たまご",
+    "es": "huevo",
+    "num": "27 / 100"
+   },
+   "voces": [
+    {
+     "texto": "たまご",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "たまご",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "huevo"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "お茶",
+    "lectura": "おちゃ",
+    "es": "té",
+    "num": "28 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おちゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おちゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "té"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "牛乳",
+    "lectura": "ぎゅうにゅう",
+    "es": "leche",
+    "num": "29 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ぎゅうにゅう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ぎゅうにゅう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "leche"
+    }
+   ]
+  },
+  {
+   "texto": "Comida y bebida",
+   "palabra": {
+    "jp": "朝御飯",
+    "lectura": "あさごはん",
+    "es": "desayuno",
+    "num": "30 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あさごはん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あさごはん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "desayuno"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 4",
+   "palabra": {
+    "jp": "La casa",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "La casa",
+   "voz": "La casa.",
+   "dur": 2.6
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "家",
+    "lectura": "いえ",
+    "es": "casa",
+    "num": "31 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いえ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いえ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "casa"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "部屋",
+    "lectura": "へや",
+    "es": "cuarto, habitación",
+    "num": "32 / 100"
+   },
+   "voces": [
+    {
+     "texto": "へや",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "へや",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cuarto, habitación"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "台所",
+    "lectura": "だいどころ",
+    "es": "cocina",
+    "num": "33 / 100"
+   },
+   "voces": [
+    {
+     "texto": "だいどころ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "だいどころ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cocina"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "トイレ",
+    "lectura": "トイレ",
+    "es": "baño",
+    "num": "34 / 100"
+   },
+   "voces": [
+    {
+     "texto": "トイレ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "トイレ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "baño"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "机",
+    "lectura": "つくえ",
+    "es": "escritorio",
+    "num": "35 / 100"
+   },
+   "voces": [
+    {
+     "texto": "つくえ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "つくえ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "escritorio"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "椅子",
+    "lectura": "いす",
+    "es": "silla",
+    "num": "36 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いす",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いす",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "silla"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "テーブル",
+    "lectura": "テーブル",
+    "es": "mesa",
+    "num": "37 / 100"
+   },
+   "voces": [
+    {
+     "texto": "テーブル",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "テーブル",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mesa"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "ドア",
+    "lectura": "ドア",
+    "es": "puerta",
+    "num": "38 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ドア",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ドア",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "puerta"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "窓",
+    "lectura": "まど",
+    "es": "ventana",
+    "num": "39 / 100"
+   },
+   "voces": [
+    {
+     "texto": "まど",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "まど",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ventana"
+    }
+   ]
+  },
+  {
+   "texto": "La casa",
+   "palabra": {
+    "jp": "時計",
+    "lectura": "とけい",
+    "es": "reloj",
+    "num": "40 / 100"
+   },
+   "voces": [
+    {
+     "texto": "とけい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "とけい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "reloj"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 5",
+   "palabra": {
+    "jp": "La ropa",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "La ropa",
+   "voz": "La ropa.",
+   "dur": 2.6
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "服",
+    "lectura": "ふく",
+    "es": "ropa",
+    "num": "41 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ふく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ふく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ropa"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "シャツ",
+    "lectura": "シャツ",
+    "es": "camisa",
+    "num": "42 / 100"
+   },
+   "voces": [
+    {
+     "texto": "シャツ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "シャツ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "camisa"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "ズボン",
+    "lectura": "ズボン",
+    "es": "pantalones",
+    "num": "43 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ズボン",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ズボン",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "pantalones"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "スカート",
+    "lectura": "スカート",
+    "es": "falda",
+    "num": "44 / 100"
+   },
+   "voces": [
+    {
+     "texto": "スカート",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "スカート",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "falda"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "靴",
+    "lectura": "くつ",
+    "es": "zapatos",
+    "num": "45 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くつ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くつ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "zapatos"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "靴下",
+    "lectura": "くつした",
+    "es": "calcetines",
+    "num": "46 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くつした",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くつした",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "calcetines"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "帽子",
+    "lectura": "ぼうし",
+    "es": "sombrero, gorra",
+    "num": "47 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ぼうし",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ぼうし",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "sombrero, gorra"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "コート",
+    "lectura": "コート",
+    "es": "abrigo",
+    "num": "48 / 100"
+   },
+   "voces": [
+    {
+     "texto": "コート",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "コート",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "abrigo"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "ネクタイ",
+    "lectura": "ネクタイ",
+    "es": "corbata",
+    "num": "49 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ネクタイ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ネクタイ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "corbata"
+    }
+   ]
+  },
+  {
+   "texto": "La ropa",
+   "palabra": {
+    "jp": "財布",
+    "lectura": "さいふ",
+    "es": "cartera",
+    "num": "50 / 100"
+   },
+   "voces": [
+    {
+     "texto": "さいふ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "さいふ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cartera"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 6",
+   "palabra": {
+    "jp": "La ciudad",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "La ciudad",
+   "voz": "La ciudad.",
+   "dur": 2.6
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "駅",
+    "lectura": "えき",
+    "es": "estación",
+    "num": "51 / 100"
+   },
+   "voces": [
+    {
+     "texto": "えき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "えき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "estación"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "電車",
+    "lectura": "でんしゃ",
+    "es": "tren",
+    "num": "52 / 100"
+   },
+   "voces": [
+    {
+     "texto": "でんしゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "でんしゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "tren"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "車",
+    "lectura": "くるま",
+    "es": "coche",
+    "num": "53 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くるま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くるま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "coche"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "自転車",
+    "lectura": "じてんしゃ",
+    "es": "bicicleta",
+    "num": "54 / 100"
+   },
+   "voces": [
+    {
+     "texto": "じてんしゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "じてんしゃ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "bicicleta"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "地下鉄",
+    "lectura": "ちかてつ",
+    "es": "metro",
+    "num": "55 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ちかてつ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ちかてつ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "metro"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "飛行機",
+    "lectura": "ひこうき",
+    "es": "avión",
+    "num": "56 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ひこうき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ひこうき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "avión"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "公園",
+    "lectura": "こうえん",
+    "es": "parque",
+    "num": "57 / 100"
+   },
+   "voces": [
+    {
+     "texto": "こうえん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "こうえん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "parque"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "図書館",
+    "lectura": "としょかん",
+    "es": "biblioteca",
+    "num": "58 / 100"
+   },
+   "voces": [
+    {
+     "texto": "としょかん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "としょかん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "biblioteca"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "病院",
+    "lectura": "びょういん",
+    "es": "hospital",
+    "num": "59 / 100"
+   },
+   "voces": [
+    {
+     "texto": "びょういん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "びょういん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hospital"
+    }
+   ]
+  },
+  {
+   "texto": "La ciudad",
+   "palabra": {
+    "jp": "郵便局",
+    "lectura": "ゆうびんきょく",
+    "es": "oficina de correos",
+    "num": "60 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ゆうびんきょく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ゆうびんきょく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "oficina de correos"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 7",
+   "palabra": {
+    "jp": "El tiempo",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "El tiempo",
+   "voz": "El tiempo.",
+   "dur": 2.6
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "今",
+    "lectura": "いま",
+    "es": "ahora",
+    "num": "61 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ahora"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "今日",
+    "lectura": "きょう",
+    "es": "hoy",
+    "num": "62 / 100"
+   },
+   "voces": [
+    {
+     "texto": "きょう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "きょう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hoy"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "明日",
+    "lectura": "あした",
+    "es": "mañana",
+    "num": "63 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あした",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あした",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mañana"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "昨日",
+    "lectura": "きのう",
+    "es": "ayer",
+    "num": "64 / 100"
+   },
+   "voces": [
+    {
+     "texto": "きのう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "きのう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ayer"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "毎日",
+    "lectura": "まいにち",
+    "es": "todos los días",
+    "num": "65 / 100"
+   },
+   "voces": [
+    {
+     "texto": "まいにち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "まいにち",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "todos los días"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "朝",
+    "lectura": "あさ",
+    "es": "la mañana",
+    "num": "66 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あさ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あさ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "la mañana"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "夜",
+    "lectura": "よる",
+    "es": "la noche",
+    "num": "67 / 100"
+   },
+   "voces": [
+    {
+     "texto": "よる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "よる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "la noche"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "時間",
+    "lectura": "じかん",
+    "es": "tiempo, horas",
+    "num": "68 / 100"
+   },
+   "voces": [
+    {
+     "texto": "じかん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "じかん",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "tiempo, horas"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "いつも",
+    "lectura": "いつも",
+    "es": "siempre",
+    "num": "69 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いつも",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いつも",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "siempre"
+    }
+   ]
+  },
+  {
+   "texto": "El tiempo",
+   "palabra": {
+    "jp": "もう",
+    "lectura": "もう",
+    "es": "ya",
+    "num": "70 / 100"
+   },
+   "voces": [
+    {
+     "texto": "もう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "もう",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ya"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 8",
+   "palabra": {
+    "jp": "Verbos de todos los días",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "Verbos de todos los días",
+   "voz": "Verbos de todos los días.",
+   "dur": 2.6
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "行く",
+    "lectura": "いく",
+    "es": "ir",
+    "num": "71 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ir"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "来る",
+    "lectura": "くる",
+    "es": "venir",
+    "num": "72 / 100"
+   },
+   "voces": [
+    {
+     "texto": "くる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "くる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "venir"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "帰る",
+    "lectura": "かえる",
+    "es": "volver a casa",
+    "num": "73 / 100"
+   },
+   "voces": [
+    {
+     "texto": "かえる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "かえる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "volver a casa"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "食べる",
+    "lectura": "たべる",
+    "es": "comer",
+    "num": "74 / 100"
+   },
+   "voces": [
+    {
+     "texto": "たべる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "たべる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "comer"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "飲む",
+    "lectura": "のむ",
+    "es": "beber",
+    "num": "75 / 100"
+   },
+   "voces": [
+    {
+     "texto": "のむ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "のむ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "beber"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "見る",
+    "lectura": "みる",
+    "es": "ver, mirar",
+    "num": "76 / 100"
+   },
+   "voces": [
+    {
+     "texto": "みる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "みる",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ver, mirar"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "聞く",
+    "lectura": "きく",
+    "es": "escuchar, preguntar",
+    "num": "77 / 100"
+   },
+   "voces": [
+    {
+     "texto": "きく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "きく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "escuchar, preguntar"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "話す",
+    "lectura": "はなす",
+    "es": "hablar",
+    "num": "78 / 100"
+   },
+   "voces": [
+    {
+     "texto": "はなす",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "はなす",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "hablar"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "読む",
+    "lectura": "よむ",
+    "es": "leer",
+    "num": "79 / 100"
+   },
+   "voces": [
+    {
+     "texto": "よむ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "よむ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "leer"
+    }
+   ]
+  },
+  {
+   "texto": "Verbos de todos los días",
+   "palabra": {
+    "jp": "書く",
+    "lectura": "かく",
+    "es": "escribir",
+    "num": "80 / 100"
+   },
+   "voces": [
+    {
+     "texto": "かく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "かく",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "escribir"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 9",
+   "palabra": {
+    "jp": "Adjetivos",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "Adjetivos",
+   "voz": "Adjetivos.",
+   "dur": 2.6
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "大きい",
+    "lectura": "おおきい",
+    "es": "grande",
+    "num": "81 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おおきい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おおきい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "grande"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "小さい",
+    "lectura": "ちいさい",
+    "es": "pequeño",
+    "num": "82 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ちいさい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ちいさい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "pequeño"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "新しい",
+    "lectura": "あたらしい",
+    "es": "nuevo",
+    "num": "83 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あたらしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あたらしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "nuevo"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "古い",
+    "lectura": "ふるい",
+    "es": "viejo (cosas)",
+    "num": "84 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ふるい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ふるい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "viejo (cosas)"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "高い",
+    "lectura": "たかい",
+    "es": "alto, caro",
+    "num": "85 / 100"
+   },
+   "voces": [
+    {
+     "texto": "たかい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "たかい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "alto, caro"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "安い",
+    "lectura": "やすい",
+    "es": "barato",
+    "num": "86 / 100"
+   },
+   "voces": [
+    {
+     "texto": "やすい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "やすい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "barato"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "おいしい",
+    "lectura": "おいしい",
+    "es": "rico, delicioso",
+    "num": "87 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おいしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おいしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "rico, delicioso"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "面白い",
+    "lectura": "おもしろい",
+    "es": "interesante, divertido",
+    "num": "88 / 100"
+   },
+   "voces": [
+    {
+     "texto": "おもしろい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "おもしろい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "interesante, divertido"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "忙しい",
+    "lectura": "いそがしい",
+    "es": "ocupado",
+    "num": "89 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いそがしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いそがしい",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "ocupado"
+    }
+   ]
+  },
+  {
+   "texto": "Adjetivos",
+   "palabra": {
+    "jp": "好き",
+    "lectura": "すき",
+    "es": "que te gusta",
+    "num": "90 / 100"
+   },
+   "voces": [
+    {
+     "texto": "すき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "すき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "que te gusta"
+    }
+   ]
+  },
+  {
+   "texto": "Capítulo 10",
+   "palabra": {
+    "jp": "Clima y naturaleza",
+    "lectura": "",
+    "es": "10 palabras"
+   },
+   "capitulo": "Clima y naturaleza",
+   "voz": "Clima y naturaleza.",
+   "dur": 2.6
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "天気",
+    "lectura": "てんき",
+    "es": "el tiempo (clima)",
+    "num": "91 / 100"
+   },
+   "voces": [
+    {
+     "texto": "てんき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "てんき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "el tiempo (clima)"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "雨",
+    "lectura": "あめ",
+    "es": "lluvia",
+    "num": "92 / 100"
+   },
+   "voces": [
+    {
+     "texto": "あめ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "あめ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "lluvia"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "雪",
+    "lectura": "ゆき",
+    "es": "nieve",
+    "num": "93 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ゆき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ゆき",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "nieve"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "晴れ",
+    "lectura": "はれ",
+    "es": "cielo despejado",
+    "num": "94 / 100"
+   },
+   "voces": [
+    {
+     "texto": "はれ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "はれ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cielo despejado"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "空",
+    "lectura": "そら",
+    "es": "cielo",
+    "num": "95 / 100"
+   },
+   "voces": [
+    {
+     "texto": "そら",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "そら",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "cielo"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "海",
+    "lectura": "うみ",
+    "es": "mar",
+    "num": "96 / 100"
+   },
+   "voces": [
+    {
+     "texto": "うみ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "うみ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "mar"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "山",
+    "lectura": "やま",
+    "es": "montaña",
+    "num": "97 / 100"
+   },
+   "voces": [
+    {
+     "texto": "やま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "やま",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "montaña"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "川",
+    "lectura": "かわ",
+    "es": "río",
+    "num": "98 / 100"
+   },
+   "voces": [
+    {
+     "texto": "かわ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "かわ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "río"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "犬",
+    "lectura": "いぬ",
+    "es": "perro",
+    "num": "99 / 100"
+   },
+   "voces": [
+    {
+     "texto": "いぬ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "いぬ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "perro"
+    }
+   ]
+  },
+  {
+   "texto": "Clima y naturaleza",
+   "palabra": {
+    "jp": "猫",
+    "lectura": "ねこ",
+    "es": "gato",
+    "num": "100 / 100"
+   },
+   "voces": [
+    {
+     "texto": "ねこ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 1.9
+    },
+    {
+     "texto": "ねこ",
+     "voz": "ja-JP-Neural2-B",
+     "idioma": "ja-JP",
+     "despues": 0.5
+    },
+    {
+     "texto": "gato"
+    }
+   ]
+  },
+  {
+   "final": true,
+   "capitulo": "Sigue practicando",
+   "voz": "Practica estas palabras, con su audio y ejemplos, en jota ele pe test punto org. La primera sección de cada nivel es gratis."
+  }
+ ]
+}
