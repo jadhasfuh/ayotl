@@ -218,8 +218,8 @@ class Escena:
     def abajo(self):
         """Hasta dónde puede bajar la pantalla: con presentadora, deja sitio al cuadro de diálogo."""
         if horizontal():
-            return H - (310 if self.g.get('presentadora') else 40)
-        return 1150 if self.g.get('presentadora') else 1560
+            return H - (350 if self.g.get('presentadora') else 40)
+        return 1100 if self.g.get('presentadora') else 1560
 
     def dibujo(self, f):
         g = self.g; c = g['colores']
@@ -288,9 +288,9 @@ class Escena:
         if aparece <= 0:
             return
         if horizontal():
-            x0, y0, x1, y1, esc, tam = 60, H - 285, W - 60, H - 40, 3, 30
+            x0, y0, x1, y1, tam = 60, H - 330, W - 60, H - 36, 30
         else:
-            x0, y0, x1, y1, esc, tam = 40, 1190, W - 40, 1490, 3, 27
+            x0, y0, x1, y1, tam = 40, 1150, W - 40, 1470, 27
         d = ImageDraw.Draw(im, 'RGBA')
         # la ventana: borde blanco doble y fondo azul de SNES, un poco transparente
         a = round(235 * aparece)
@@ -298,8 +298,9 @@ class Escena:
         d.rectangle([x0, y0, x1, y1], outline=(255, 255, 255, a), width=5)
         d.rectangle([x0 + 9, y0 + 9, x1 - 9, y1 - 9], outline=(120, 140, 220, a), width=2)
         # el retrato
-        lado = 64 * esc; px, py = x0 + 26, y0 + (y1 - y0 - lado) // 2
         cara = Image.open(os.path.join(pr['caras'], f"{pr['nombre'].lower()}-{self.e.get('cara', 'normal')}.png")).convert('RGBA')
+        lado = cara.size[0] * max(1, 256 // cara.size[0])   # a escala entera, cerca de 256 px (64 x4, 128 x2)
+        px, py = x0 + 22, y0 + (y1 - y0 - lado) // 2
         cara = cara.resize((lado, lado), Image.NEAREST)
         d.rectangle([px - 6, py - 6, px + lado + 5, py + lado + 5], fill=(40, 52, 120, a), outline=(255, 255, 255, a), width=3)
         if aparece < 1:
@@ -323,7 +324,7 @@ class Escena:
                 actual = prueba
         lineas.append(actual)
         cuantas = round(len(texto) * min(1, max(0, (t - 0.15) / max(0.3, self.voz_dur * 0.92))))
-        y = y0 + 52; resto = cuantas
+        y = y0 + 58; resto = cuantas
         for linea in lineas:
             if resto <= 0:
                 break

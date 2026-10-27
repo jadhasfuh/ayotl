@@ -29,9 +29,14 @@ def cuadro(video, t, recorte=None):
     return im.crop(recorte) if recorte else im
 
 
-def leia(cara, escala=6):
+def leia(cara, alto=440):
     im = Image.open(os.path.join(AQUI, 'avatar', f'leia-{cara}.png')).convert('RGBA')
-    return im.resize((64 * escala, 64 * escala), Image.NEAREST)
+    # el retrato de la IA trae fondo azul liso: se quita rellenando desde las esquinas de arriba, para recortarla
+    for xy in ((0, 0), (im.size[0] - 1, 0), (0, im.size[1] // 2), (im.size[0] - 1, im.size[1] // 2)):
+        if im.getpixel(xy)[3]:
+            ImageDraw.floodfill(im, xy, (0, 0, 0, 0), thresh=60)
+    k = max(1, alto // im.size[1])   # a escala entera (el retrato de la IA mide 128)
+    return im.resize((im.size[0] * k, im.size[1] * k), Image.NEAREST)
 
 
 def jlptest():
@@ -67,7 +72,7 @@ def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
     for linea in titulo.split('\n'):
         d.text((70, y), linea, font=ImageFont.truetype(PIXEL, 74), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
     d.text((74, y + 20), sub, font=av('heavy', 52), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
-    l = leia(cara, 7); im.alpha_composite(l, (W - l.size[0] - 10, H - l.size[1] + 40))
+    l = leia(cara); im.alpha_composite(l, (W - l.size[0] - 20, H - l.size[1]))
     d.text((W - 250, 40), 'LeIA', font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
     im.convert('RGB').save(os.path.join(SAL, f'{nombre}.jpg'), quality=92)
 

@@ -7,6 +7,9 @@ larga y cuello largo). Retrato de 64x64 hecho a mano con primitivas sin suavizar
 paleta corta, contorno oscuro), una imagen por cara en avatar/leia-<cara>.png. Sin animación de boca: en el
 vídeo sólo cambia la cara según la frase.
 
+Desde el 27-oct LeIA es la de la IA (generar-ia.py, a partir del retrato de Anna); esta versión hecha a mano
+queda en avatar/mano/ por si hace falta sin API.
+
   python3 tools/comerciales/avatar/dibujar.py     (y avatar/muestra.png con todas, a 6x, para revisar)
 """
 import os
@@ -168,7 +171,8 @@ if __name__ == '__main__':
     caras = list(CARAS)
     muestra = Image.new('RGBA', (len(caras) * (N * 6 + 12), N * 6), (24, 28, 60, 255))
     for i, nombre in enumerate(caras):
-        im = cara(nombre); im.save(os.path.join(AQUI, f'leia-{nombre}.png'))
+        os.makedirs(os.path.join(AQUI, 'mano'), exist_ok=True)
+        im = cara(nombre); im.save(os.path.join(AQUI, 'mano', f'leia-{nombre}.png'))
         muestra.alpha_composite(im.resize((N * 6, N * 6), Image.NEAREST), (i * (N * 6 + 12), 0))
-    muestra.save(os.path.join(AQUI, 'muestra.png'))
+    muestra.save(os.path.join(AQUI, 'mano', 'muestra.png'))
     print('caras:', ', '.join(caras))
