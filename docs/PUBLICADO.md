@@ -96,6 +96,17 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
   - 3 y 4-nov: Kazan, 8 CPU.
 - **Estado al 27-oct:** todavía no se ha subido ninguno. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
 
+## Tráileres de las fichas de Play (YouTube, subidos por Adrián el 27-oct)
+
+| App | Vídeo | Fuente |
+|---|---|---|
+| Daily Challenge | https://youtu.be/D9vSbcUIHtY | `tools/comerciales/dc-semana-largo.json` (LeIA, 7 días) |
+| War Zone | https://youtu.be/A5wIP6_OnHg | `trailer-warzone.json` (LeIA, 48 s) |
+| Kazan | https://youtu.be/qz9cRh8ILt8 | `trailer-kazan.json` (LeIA, 56 s) |
+| jlptest | https://youtu.be/YHSgSiGq2bk | `trailer-jlptest.json` (pantallas, 36 s) |
+
+Van en el campo «Video» de cada ficha de Play. No se vuelven a subir.
+
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
 **Al 27-oct-2026:**
