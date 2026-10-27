@@ -87,12 +87,6 @@ def musica(dur, bpm=92):
 
 
 # ---------------------------------------------------------------- dibujo
-def redondear(im, r):
-    mask = Image.new('L', im.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, im.size[0] - 1, im.size[1] - 1], r, fill=255)
-    out = Image.new('RGBA', im.size); out.paste(im, (0, 0), mask); return out
-
-
 def partir(d, texto, f, ancho):
     # en líneas parejas: con el mismo número de líneas, la que deje el renglón más largo más corto
     lineas = []
@@ -105,19 +99,58 @@ def partir(d, texto, f, ancho):
     return lineas
 
 
+class Clip:
+    """Un trozo de vídeo como pantalla: desde `desde` s, recortado a `recorte` [x, y, an, al] y escalado a
+    `ancho`. Los cuadros se leen en orden con ffmpeg (el bucle principal pide siempre hacia adelante);
+    si el trozo se acaba, se queda en el último."""
+    def __init__(self, ruta, desde, recorte, ancho, dur, pixel=False):
+        x, y, an, al = recorte
+        self.ancho, self.alto = ancho, round(al * ancho / an / 2) * 2
+        filtro = f'crop={an}:{al}:{x}:{y},scale={self.ancho}:{self.alto}:flags={"neighbor" if pixel else "lanczos"},fps={FPS}'   # pixel: sin suavizar
+        self.p = subprocess.Popen([FF, '-loglevel', 'error', '-ss', str(desde), '-t', f'{dur + 0.5:.2f}', '-i', ruta,
+                                   '-vf', filtro, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+                                  stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)   # se corta a media lectura
+        self.n, self.ultimo = -1, None
+        self.cuadro(0)
+
+    def cuadro(self, k):
+        while self.n < k:
+            b = self.p.stdout.read(self.ancho * self.alto * 3)
+            if len(b) < self.ancho * self.alto * 3:
+                break
+            self.ultimo = Image.frombytes('RGB', (self.ancho, self.alto), b); self.n += 1
+        return self.ultimo
+
+
 class Escena:
-    def __init__(self, e, g):
-        self.e, self.g = e, g
+    def __init__(self, e, g, dur):
+        self.e, self.g, self.dur = e, g, dur
         self.fondo = color(g['colores']['fondo'])
         if e.get('final'):
             return
-        im = Image.open(e['imagen']).convert('RGB')
-        self.ancho = 700   # para que la parte de abajo (el pie y los botones de Instagram) no tape la pantalla
-        alto = round(im.size[1] * self.ancho / im.size[0])
-        self.tarjeta = redondear(im.resize((self.ancho, alto), Image.LANCZOS), 40)
+        # ancho de la pantalla: 700 para una de teléfono, para que el pie y los botones de Instagram no la
+        # tapen; las de juego, apaisadas, caben más anchas
+        self.ancho = e.get('ancho', 700)
+        if e.get('video'):
+            self.clip = Clip(e['video'], e.get('desde', 0), e['recorte'], self.ancho, dur, e.get('pixel', False))
+            alto = self.clip.alto
+        else:
+            self.clip = None
+            im = Image.open(e['imagen']).convert('RGB')
+            if e.get('recorte'):
+                x, y, an, al = e['recorte']; im = im.crop((x, y, x + an, y + al))
+            alto = round(im.size[1] * self.ancho / im.size[0])
+            self.imagen = im.resize((self.ancho, alto), Image.LANCZOS)
+        self.radio = e.get('radio', 40)
+        self.mascara = Image.new('L', (self.ancho, alto), 0)
+        ImageDraw.Draw(self.mascara).rounded_rectangle([0, 0, self.ancho - 1, alto - 1], self.radio, fill=255)
         sombra = Image.new('RGBA', (self.ancho + 80, alto + 80), (0, 0, 0, 0))
-        ImageDraw.Draw(sombra).rounded_rectangle([40, 50, self.ancho + 40, alto + 40], 40, fill=(0, 0, 0, 150))
+        ImageDraw.Draw(sombra).rounded_rectangle([40, 50, self.ancho + 40, alto + 40], self.radio, fill=(0, 0, 0, 150))
         self.sombra = sombra.filter(ImageFilter.GaussianBlur(22))
+
+    def tarjeta(self, f):
+        im = self.clip.cuadro(round(f * self.dur * FPS)) if self.clip else self.imagen
+        t = im.convert('RGBA'); t.putalpha(self.mascara); return t
 
     def cuadro(self, f):   # f: 0..1 dentro de la escena
         g = self.g; c = g['colores']
@@ -129,13 +162,19 @@ class Escena:
         for linea in partir(d, self.e['texto'], ft, W - 160):
             d.text((W / 2, y), linea, font=ft, fill=color(c['texto']), anchor='ma'); y += 88
         d.rounded_rectangle([W / 2 - 60, y + 14, W / 2 + 60, y + 22], 4, fill=color(c['acento']))
-        # la pantalla, con un acercamiento lento
-        z = 1 + 0.035 * f
-        tw = round(self.ancho * z); th = round(self.tarjeta.size[1] * z)
-        tar = self.tarjeta.resize((tw, th), Image.BILINEAR)
-        x0 = (W - tw) // 2; y0 = y + 80 - round((th - self.tarjeta.size[1]) / 2)
-        im.paste(self.sombra.resize((tw + 80, th + 80)), (x0 - 40, y0 - 40), self.sombra.resize((tw + 80, th + 80)))
+        # la pantalla, con un acercamiento lento; una apaisada va centrada en el hueco que queda
+        tar = self.tarjeta(f); z = 1 + 0.035 * f
+        tw = round(tar.size[0] * z); th = round(tar.size[1] * z)
+        tar = tar.resize((tw, th), Image.BILINEAR)
+        arriba = y + 80 if tar.size[1] > 1000 else round((y + 60 + 1560 - self.mascara.size[1]) / 2)
+        x0 = (W - tw) // 2; y0 = arriba - round((th - self.mascara.size[1]) / 2)
+        som = self.sombra.resize((tw + 80, th + 80))
+        im.paste(som, (x0 - 40, y0 - 40), som)
         im.paste(tar, (x0, y0), tar)
+        if c.get('borde'):   # sobre fondo negro, una pantalla de juego negra no se distingue sin él
+            d.rounded_rectangle([x0 - 3, y0 - 3, x0 + tw + 2, y0 + th + 2], round(self.radio * z) + 3, outline=color(c['borde']), width=3)
+        if self.e.get('nota'):   # una línea chica debajo de la pantalla
+            d.text((W / 2, y0 + th + 50), self.e['nota'], font=fuente('medium', 44), fill=color(c['tenue']), anchor='ma')
         return im
 
     def final(self, im, d, f):
@@ -144,14 +183,28 @@ class Escena:
         def mezcla(col):
             base = self.fondo; col = color(col)
             return tuple(round(base[i] + (col[i] - base[i]) * a) for i in range(3))
-        fm = fuente('heavy', 150); w = d.textlength(m['nombre'], font=fm)
-        d.text(((W - w) / 2 - 20, 700), m['nombre'], font=fm, fill=mezcla(c['texto']))
-        r = 20; cx = (W + w) / 2 + 10; cy = 700 + 128
-        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=mezcla(m.get('punto', c['acento'])))
+        if m.get('logo'):   # la imagen del logo (pixel art: se agranda sin suavizar)
+            lg = Image.open(m['logo']).convert('RGBA'); k = min(m.get('logo_ancho', 760) / lg.size[0], 420 / lg.size[1])
+            lg = lg.resize((round(lg.size[0] * k), round(lg.size[1] * k)), Image.NEAREST)
+            lg.putalpha(lg.getchannel('A').point(lambda v: round(v * a)))
+            im.paste(lg, ((W - lg.size[0]) // 2, 880 - lg.size[1]), lg)
+        else:
+            tam = 150
+            while True:
+                fm = fuente('heavy', tam); w = d.textlength(m['nombre'], font=fm)
+                if w <= W - 200 or tam <= 60:
+                    break
+                tam -= 6
+            d.text(((W - w) / 2 - (20 if m.get('punto') else 0), 850), m['nombre'], font=fm, fill=mezcla(c['texto']), anchor='ls')
+            if m.get('punto'):
+                r = 20; cx = (W + w) / 2 + 10; cy = 850 - r
+                d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=mezcla(m['punto']))
         d.text((W / 2, 930), m['lema'], font=fuente('demi', 64), fill=mezcla(c['acento']), anchor='ma')
         fs = fuente('bold', 72); ws = d.textlength(m['sitio'], font=fs)
+        if ws > W - 200:
+            fs = fuente('bold', round(72 * (W - 200) / ws)); ws = d.textlength(m['sitio'], font=fs)
         d.rounded_rectangle([W / 2 - ws / 2 - 50, 1080, W / 2 + ws / 2 + 50, 1210], 65, fill=mezcla(c['acento']))
-        d.text((W / 2, 1100), m['sitio'], font=fs, fill=mezcla(c['fondo']), anchor='ma')
+        d.text((W / 2, 1145), m['sitio'], font=fs, fill=mezcla(c.get('sobre_acento', c['fondo'])), anchor='mm')
         if m.get('pie'):
             d.text((W / 2, 1300), m['pie'], font=fuente('medium', 44), fill=mezcla(c['tenue']), anchor='ma')
         return im
@@ -161,8 +214,13 @@ def main():
     g = json.load(open(sys.argv[1], encoding='utf-8'))
     base = os.path.dirname(os.path.abspath(sys.argv[1]))
     for e in g['escenas']:
-        if e.get('imagen'):
-            e['imagen'] = os.path.join(base, os.path.expanduser(e['imagen']))
+        for k in ('imagen', 'video'):
+            if e.get(k):
+                e[k] = os.path.join(base, os.path.expanduser(e[k]))
+    if g.get('musica'):
+        g['musica']['archivo'] = os.path.join(base, os.path.expanduser(g['musica']['archivo']))
+    if g['marca'].get('logo'):
+        g['marca']['logo'] = os.path.join(base, os.path.expanduser(g['marca']['logo']))
     with tempfile.TemporaryDirectory() as tmp:
         os.chmod(tmp, 0o700)
         cab = os.path.join(tmp, 'h.txt')
@@ -171,8 +229,13 @@ def main():
         os.chmod(cab, 0o600)
         voces = [narrar(e['voz'], g['voz'], g['idioma'], cab, tmp, i) for i, e in enumerate(g['escenas'])]
         # duraciones: la frase más un respiro; la final, al menos 4 s
-        durs = [len(v) / SR + RESPIRO + (1.2 if e.get('final') else 0) for v, e in zip(voces, g['escenas'])]
+        # (`dur` en una escena la alarga, para seguir los cortes de un vídeo)
+        durs = [max(len(v) / SR + RESPIRO + (1.2 if e.get('final') else 0), e.get('dur', 0)) for v, e in zip(voces, g['escenas'])]
         durs[-1] = max(durs[-1], 4.0)
+        for i, (v, e, d_) in enumerate(zip(voces, g['escenas'], durs)):
+            if e.get('dur') and d_ > e['dur'] + 0.01:
+                print(f'  ojo: la voz de la escena {i + 1} ({len(v) / SR:.2f} s) no cabe en sus {e["dur"]} s')
+        print('  escenas:', ' '.join(f'{d_:.2f}' for d_ in durs))
         inicio = [0.5]
         for d_ in durs[:-1]:
             inicio.append(inicio[-1] + d_)
@@ -184,7 +247,18 @@ def main():
             voz[i0:i0 + k] += v[:k]; hay[i0:i0 + k] = 1
         suav = int(0.25 * SR)
         hay = np.convolve(hay, np.ones(suav) / suav, mode='same')
-        mus = musica(total, g.get('bpm', 92)) * (0.9 - 0.62 * np.clip(hay, 0, 1))
+        if g.get('musica'):   # el sonido de un vídeo (el del juego), desde que empieza la primera escena
+            mu = g['musica']
+            crudo = subprocess.run([FF, '-loglevel', 'error', '-ss', str(mu.get('desde', 0)), '-i', mu['archivo'],
+                                    '-f', 's16le', '-ac', '1', '-ar', str(SR), '-'], capture_output=True, check=True).stdout
+            pista = np.frombuffer(crudo, dtype=np.int16).astype(np.float32) / 32768
+            pista *= mu.get('volumen', 0.07) / max(1e-6, np.sqrt(np.mean(pista ** 2)))
+            fondo_ = np.zeros(n, dtype=np.float32); i0 = int(inicio[0] * SR); k = min(len(pista), n - i0)
+            fondo_[i0:i0 + k] = pista[:k]
+            fade = int(0.8 * SR); fondo_[-fade:] *= np.linspace(1, 0, fade)
+        else:
+            fondo_ = musica(total, g.get('bpm', 92))
+        mus = fondo_ * (0.9 - 0.62 * np.clip(hay, 0, 1))
         mezcla = voz * 0.95 + mus
         mezcla /= max(1e-6, np.abs(mezcla).max() / 0.89)
         wav = os.path.join(tmp, 'mezcla.wav')
@@ -192,7 +266,7 @@ def main():
         subprocess.run([FF, '-loglevel', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '2', '-i', '-', wav],
                        input=crudo, check=True)
         # video
-        escenas = [Escena(e, g) for e in g['escenas']]
+        escenas = [Escena(e, g, d_) for e, d_ in zip(g['escenas'], durs)]
         salida = os.path.expanduser(g['salida']); os.makedirs(os.path.dirname(salida), exist_ok=True)
         cmd = [FF, '-loglevel', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS),
                '-i', '-', '-i', wav, '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-pix_fmt', 'yuv420p',

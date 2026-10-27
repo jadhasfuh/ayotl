@@ -1,0 +1,72 @@
+{
+  "salida": "~/Documents/daily challenge/public/marketing/comercial-kazan.mp4",
+  "voz": "es-US-Chirp3-HD-Despina",
+  "idioma": "es-US",
+  "bpm": 84,
+  "colores": {
+    "fondo": "#000000",
+    "acento": "#f2a03d",
+    "texto": "#ffffff",
+    "tenue": "#9a9aa8",
+    "sobre_acento": "#000000",
+    "borde": "#3a3a48"
+  },
+  "marca": {
+    "logo": "kazan/logo.png",
+    "logo_ancho": 684,
+    "lema": "Estrategia en tiempo real",
+    "sitio": "kazan.dailychallenge.click",
+    "pie": "Gratis, en el navegador"
+  },
+  "escenas": [
+    {
+      "video": "kazan/ciudad.mp4",
+      "desde": 0,
+      "recorte": [
+        90,
+        30,
+        480,
+        408
+      ],
+      "ancho": 960,
+      "radio": 12,
+      "texto": "Levanta tu ciudad",
+      "voz": "Kazan. Levanta tu ciudad en una isla con un volcán.",
+      "pixel": true
+    },
+    {
+      "video": "kazan/tropas.mp4",
+      "desde": 0,
+      "recorte": [
+        90,
+        30,
+        480,
+        408
+      ],
+      "ancho": 960,
+      "radio": 12,
+      "texto": "Arma tu ejército",
+      "voz": "Entrena tu ejército y sal a buscar a las otras naciones.",
+      "pixel": true
+    },
+    {
+      "video": "kazan/lava.mp4",
+      "desde": 0,
+      "recorte": [
+        240,
+        30,
+        480,
+        408
+      ],
+      "ancho": 960,
+      "radio": 12,
+      "texto": "Escapa de la lava",
+      "voz": "Pero date prisa: el volcán despierta, y la lava se come todo a su paso.",
+      "pixel": true
+    },
+    {
+      "final": true,
+      "voz": "Juega gratis en Kazan punto Daily Challenge punto click."
+    }
+  ]
+}

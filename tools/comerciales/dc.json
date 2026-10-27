@@ -1,0 +1,66 @@
+{
+  "salida": "~/Documents/daily challenge/public/marketing/comercial-dc.mp4",
+  "voz": "es-US-Chirp3-HD-Algenib",
+  "idioma": "es-US",
+  "bpm": 100,
+  "colores": {
+    "fondo": "#000000",
+    "acento": "#93e2dd",
+    "texto": "#ffffff",
+    "tenue": "#9a9aa8",
+    "sobre_acento": "#000000",
+    "borde": "#3a3a48"
+  },
+  "marca": {
+    "logo": "dc/logo.png",
+    "logo_ancho": 944,
+    "lema": "Un reto nuevo cada día",
+    "sitio": "dailychallenge.click",
+    "pie": "Gratis, en el navegador y sin descargar"
+  },
+  "escenas": [
+    {
+      "video": "dc/reel-2026-10-20.mp4",
+      "desde": 0.8,
+      "recorte": [
+        60,
+        408,
+        960,
+        1160
+      ],
+      "radio": 16,
+      "texto": "Un juego retro cada día",
+      "voz": "Cada día, un juego retro distinto y un solo reto para todos."
+    },
+    {
+      "video": "dc/reel-2026-10-24.mp4",
+      "desde": 1.5,
+      "recorte": [
+        60,
+        408,
+        960,
+        1160
+      ],
+      "radio": 16,
+      "texto": "Pelea por el primer lugar",
+      "voz": "Haz tu mejor puntaje y pelea por el primer lugar de la tabla."
+    },
+    {
+      "video": "dc/reel-2026-10-22.mp4",
+      "desde": 2.0,
+      "recorte": [
+        60,
+        408,
+        960,
+        1160
+      ],
+      "radio": 16,
+      "texto": "Casi 30 juegos para practicar",
+      "voz": "Son casi treinta juegos, y puedes practicar cuando quieras."
+    },
+    {
+      "final": true,
+      "voz": "Juega gratis en Daily Challenge punto click."
+    }
+  ]
+}

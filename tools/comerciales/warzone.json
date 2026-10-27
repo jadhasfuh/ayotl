@@ -1,0 +1,76 @@
+{
+  "salida": "~/Documents/daily challenge/public/marketing/comercial-warzone.mp4",
+  "voz": "es-US-Chirp3-HD-Charon",
+  "idioma": "es-US",
+  "colores": {
+    "fondo": "#000000",
+    "acento": "#e8e07a",
+    "texto": "#ffffff",
+    "tenue": "#9a9aa8",
+    "sobre_acento": "#000000",
+    "borde": "#3a3a48"
+  },
+  "marca": {
+    "logo": "warzone/logo.png",
+    "logo_ancho": 744,
+    "lema": "Artillería por turnos",
+    "sitio": "dailychallenge.click/warzone",
+    "pie": "Gratis, en el navegador y sin descargar"
+  },
+  "musica": {
+    "archivo": "~/Documents/territorio war/shots/anuncio-warzone.mp4",
+    "desde": 0,
+    "volumen": 0.08
+  },
+  "escenas": [
+    {
+      "video": "~/Documents/territorio war/shots/anuncio-warzone.mp4",
+      "desde": 0,
+      "dur": 5.0,
+      "recorte": [
+        54,
+        636,
+        972,
+        552
+      ],
+      "ancho": 1000,
+      "radio": 16,
+      "texto": "Elige tu arma y dispara",
+      "voz": "Elige tu arma: granada, bazuca… o la bota."
+    },
+    {
+      "video": "~/Documents/territorio war/shots/anuncio-warzone.mp4",
+      "desde": 5.0,
+      "dur": 6.07,
+      "recorte": [
+        54,
+        636,
+        972,
+        552
+      ],
+      "ancho": 1000,
+      "radio": 16,
+      "texto": "El terreno se destruye",
+      "voz": "Cada explosión se come el terreno… y si todo sale mal, te lo llevas contigo."
+    },
+    {
+      "video": "~/Documents/territorio war/shots/anuncio-warzone.mp4",
+      "desde": 11.07,
+      "dur": 5.0,
+      "recorte": [
+        54,
+        636,
+        972,
+        552
+      ],
+      "ancho": 1000,
+      "radio": 16,
+      "texto": "Reta a tus amigos en línea",
+      "voz": "Reta a tus amigos en línea, y búrlate con emotes."
+    },
+    {
+      "final": true,
+      "voz": "Juega gratis en Daily Challenge punto click."
+    }
+  ]
+}
