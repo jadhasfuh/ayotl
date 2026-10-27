@@ -200,13 +200,23 @@ class Escena:
                 r = 20; cx = (W + w) / 2 + 10; cy = 850 - r
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=mezcla(m['punto']))
         d.text((W / 2, 930), m['lema'], font=fuente('demi', 64), fill=mezcla(c['acento']), anchor='ma')
-        fs = fuente('bold', 72); ws = d.textlength(m['sitio'], font=fs)
-        if ws > W - 200:
-            fs = fuente('bold', round(72 * (W - 200) / ws)); ws = d.textlength(m['sitio'], font=fs)
-        d.rounded_rectangle([W / 2 - ws / 2 - 50, 1080, W / 2 + ws / 2 + 50, 1210], 65, fill=mezcla(c['acento']))
-        d.text((W / 2, 1145), m['sitio'], font=fs, fill=mezcla(c.get('sobre_acento', c['fondo'])), anchor='mm')
+        if m.get('insignia'):
+            # la insignia oficial de la tienda, tal cual (sólo se escala, con suavizado), en lugar de la píldora
+            # del sitio, y la nota de marca abajo, como piden las reglas de la insignia de Google Play
+            ins = Image.open(m['insignia']).convert('RGBA'); k = m.get('insignia_ancho', 560) / ins.size[0]
+            ins = ins.resize((round(ins.size[0] * k), round(ins.size[1] * k)), Image.LANCZOS)
+            ins.putalpha(ins.getchannel('A').point(lambda v: round(v * a)))
+            im.paste(ins, ((W - ins.size[0]) // 2, 1040), ins)
+            if m.get('legal'):
+                d.text((W / 2, 1480), m['legal'], font=fuente('regular', 30), fill=mezcla(c['tenue']), anchor='ma')
+        else:
+            fs = fuente('bold', 72); ws = d.textlength(m['sitio'], font=fs)
+            if ws > W - 200:
+                fs = fuente('bold', round(72 * (W - 200) / ws)); ws = d.textlength(m['sitio'], font=fs)
+            d.rounded_rectangle([W / 2 - ws / 2 - 50, 1080, W / 2 + ws / 2 + 50, 1210], 65, fill=mezcla(c['acento']))
+            d.text((W / 2, 1145), m['sitio'], font=fs, fill=mezcla(c.get('sobre_acento', c['fondo'])), anchor='mm')
         if m.get('pie'):
-            d.text((W / 2, 1300), m['pie'], font=fuente('medium', 44), fill=mezcla(c['tenue']), anchor='ma')
+            d.text((W / 2, 1300 if not m.get('insignia') else 1320), m['pie'], font=fuente('medium', 44), fill=mezcla(c['tenue']), anchor='ma')
         return im
 
 
@@ -219,8 +229,9 @@ def main():
                 e[k] = os.path.join(base, os.path.expanduser(e[k]))
     if g.get('musica'):
         g['musica']['archivo'] = os.path.join(base, os.path.expanduser(g['musica']['archivo']))
-    if g['marca'].get('logo'):
-        g['marca']['logo'] = os.path.join(base, os.path.expanduser(g['marca']['logo']))
+    for k in ('logo', 'insignia'):
+        if g['marca'].get(k):
+            g['marca'][k] = os.path.join(base, os.path.expanduser(g['marca'][k]))
     with tempfile.TemporaryDirectory() as tmp:
         os.chmod(tmp, 0o700)
         cab = os.path.join(tmp, 'h.txt')
