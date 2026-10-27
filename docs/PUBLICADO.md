@@ -42,17 +42,14 @@ Al borrar copias locales para liberar disco, se anota aquí qué era cada vídeo
 | 2026-10-24 | interview/number-of-islands | `IHn8dlRUd1w` | `gs4mN4SRGrU` |
 | 2026-10-25 | interview/search-in-rotated-sorted-array | `YgqPlU9-kfk` | `CQ8_5ULO5QU` |
 
-**Siguen en local porque no se han subido:**
-- `interview/merge-intervals`, 26-oct.
-- `interview/longest-palindromic-substring`, 27-oct.
-- La recopilación `out/recopilaciones/interview-vol-1.mp4`, 28-oct.
+**Al 27-oct-2026:** subidos y programados hasta el 9-nov. Los ids de cada uno están en su `challenges/<sección>/<reto>/meta.json` y en `src/content/retos.json` de ayotl, así que la tabla de arriba ya no se sigue llenando a mano. Falta subir los dos vídeos del 10-nov (`lru-cache`).
 
 ## Daily Stat (dato del día de Daily Challenge): Instagram y Facebook, 11:00 de México
 
 **Cómo se genera:** lo genera el servidor al momento (`/stat/<fecha>/reel.mp4`). No hay copias locales.
 
 **Dónde está el registro:**
-- qué dato sale cada día: `public/content/stats/stats.json`. Son 20 datos, ciclo del 8 al 27-oct-2026;
+- qué dato sale cada día: `public/content/stats/stats.json`. Son 40 datos, hasta el 16-nov-2026 (nunca se repite uno);
 - qué ya salió: tabla `arcade.publicaciones` (Supabase).
 
 **Nuevos datos:** que no repitan los del JSON.
@@ -73,7 +70,38 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
 - **Copia local:** la de `shots/anuncio-warzone.mp4` sobra.
 - **Copia que se queda:** `daily challenge/public/marketing/warzone-reel.mp4`. Daily Challenge la sirve, y otro anuncio igual sería repetir.
 
+## Anuncios de Daily Challenge: Instagram y Facebook, 13:00
+
+**Dónde está el registro:**
+- el calendario es `daily challenge/public/content/anuncios/calendario.txt`;
+- cada clip está en `public/marketing/<clip>.mp4`, con su pie en `<clip>.txt`;
+- lo que ya salió está en `arcade.publicaciones` (tipo `anuncio`).
+
+| Fecha | Clip | Qué es |
+|---|---|---|
+| 29-oct | `leia-semana` | LeIA presenta la última semana de juegos |
+| 31-oct | `leia-warzone-cpu` | War Zone, CPU contra CPU, con LeIA |
+| 3-nov | `comercial-dc` | comercial de DC (voz Algenib) |
+| 5-nov | `leia-kazan-cpu` | Kazan con 8 CPU, con LeIA |
+| 10-nov | `comercial-warzone` | sale `comercial-warzone-play` si la ficha de Play ya es pública |
+| 17-nov | `comercial-kazan` | comercial de Kazan (voz Despina) |
+
+## YouTube: vídeos de juegos y de jlptest (canal de Adrián), 18:00
+
+- **El plan:** `ayotl/tools/comerciales/youtube.json`. Al subirse, cada vídeo apunta ahí su id. Los sube `subir-youtube.py` según la cuota del día.
+- **Las fechas:**
+  - 28 y 29-oct: jlptest N5, el largo y el short;
+  - 30 y 31-oct: DC, la semana;
+  - 1 y 2-nov: War Zone, CPU contra CPU;
+  - 3 y 4-nov: Kazan, 8 CPU.
+- **Estado al 27-oct:** todavía no se ha subido ninguno. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
+
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
+
+**Al 27-oct-2026:**
+- el calendario manda: `mercadito/src/lib/reels.ts`, uno por día, del 13-oct al 9-nov (reels 01 a 29);
+- las copias y los pies están en `~/Desktop/mercadito-reels/`, cada tanda con su LEEME;
+- la tabla de abajo es la historia de la primera tanda.
 
 **Dónde está el registro:**
 - calendario y archivos: `mercadito/src/lib/reels.ts` y `public/reels/`, en git. Ahí viven los vídeos que el cron publica;
@@ -106,6 +134,11 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
 
 **Copias locales:** no se borra nada, porque son la fuente del cron.
 
+**Fuera de la serie del reto:**
+- el 19 (27-oct) es el comercial de jlptest;
+- el 21 (29-oct) es el de 10 palabras del N5;
+- los retos se recorrieron, así que la tanda 5 llega al 14-nov.
+
 ## Compilaciones de la app (lo que se guarda)
 
 Se guardan sólo las dos últimas versiones de cada app.
@@ -114,7 +147,14 @@ Se guardan sólo las dos últimas versiones de cada app.
 - se quedan los AAB 1.0.87 y 1.0.88 y los IPA 1.0.81 y 1.0.83;
 - sobran los AAB 1.0.79, 1.0.80, 1.0.81 y 1.0.83 y los IPA 1.0.79 y 1.0.80.
 
-**War Zone:** en el Escritorio sólo queda `warzone-1.0.12.aab`.
+**War Zone:**
+- en el Escritorio está `warzone-1.0.21-22.aab`, que se sube cuando Google apruebe la 1.0.20 en producción;
+- la iOS 1.0.21 (24) ya está en App Store Connect;
+- el tráiler de lanzamiento en Play (es/en) espera en `~/Desktop/warzone-trailer-play/`.
+
+**Daily Challenge:** producción en Play concedida el 27-oct. Se publica la 1.0.3 (vc 4) desde la biblioteca de la consola.
+
+**jlptest:** la 1.0.7 (vc 9), firmada, está en `~/Desktop/jlptest-1.0.7-9.aab` y va a la prueba cerrada.
 
 **La procesión de los dormidos:** `~/Desktop/procesion-1.0.0-1.aab` / `.apk`.
 

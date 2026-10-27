@@ -730,6 +730,47 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
       } },
     ],
   },
+  {
+    id: "play-produccion-una-version-cada-tres-dias",
+    fecha: "2026-10-27",
+    proyecto: "dailychallenge",
+    titulo: {
+      es: "Producción en Google Play: Google sólo ve lo que subes",
+      en: "Google Play production access: Google only sees what you upload",
+    },
+    entradilla: {
+      es: "Daily Challenge es una web empaquetada para Android: cambiaba todos los días y Play no veía nada. Nos negaron producción por «testers sin participación». Tres versiones después, nos la dieron.",
+      en: "Daily Challenge is a website packaged for Android: it changed every day and Play saw none of it. Production access was denied for «testers not engaged». Three versions later, it was granted.",
+    },
+    cuerpo: [
+      { tipo: "p", texto: {
+        es: "Las cuentas personales nuevas de Play no publican directo: antes hay una prueba cerrada con al menos doce testers durante catorce días, y luego se pide acceso a producción. El 11 de octubre Google contestó que no: los testers no participaban y no habíamos recogido comentarios ni actuado sobre ellos con actualizaciones. Que probáramos catorce días más.",
+        en: "New personal Play accounts can't publish straight away: first comes a closed test with at least twelve testers for fourteen days, then you apply for production access. On October 11 Google said no: the testers weren't engaged, and we hadn't collected feedback or acted on it with updates. Test fourteen more days.",
+      } },
+      { tipo: "p", texto: {
+        es: "Lo raro es que el juego había cambiado muchísimo en esas semanas: juegos nuevos, mapas, el modo party. Pero Daily Challenge es una TWA, una web dentro de una app de Android: todo eso vivía en el servidor, y lo que Play veía era una sola versión, la 1.0.0 del 15 de septiembre, sin ninguna actualización durante toda la prueba.",
+        en: "The odd part is that the game had changed enormously in those weeks: new games, maps, party mode. But Daily Challenge is a TWA, a website inside an Android app: all of that lived on the server, and what Play saw was a single version, 1.0.0 from September 15, with no update during the whole test.",
+      } },
+      { tipo: "lista", puntos: {
+        es: [
+          "Una versión nueva cada tres o cuatro días, aunque el paquete apenas cambie: en una TWA basta con subir el número de versión y volver a firmar.",
+          "Notas de versión de verdad, con lo que cambió en el juego desde la anterior (y sin nombres de juegos ajenos: son marcas).",
+          "Que los testers abran la app instalada desde Play, no la web, y que dejen sus comentarios en la ficha, donde llegan a la consola.",
+          "En la nueva solicitud, las versiones con su fecha y qué pidió cada tester.",
+        ],
+        en: [
+          "A new version every three or four days, even if the package barely changes: in a TWA, bumping the version number and signing again is enough.",
+          "Real release notes, with what changed in the game since the previous one (and no names of other companies' games: they're trademarks).",
+          "Testers open the app installed from Play, not the website, and leave feedback on the listing, where it reaches the console.",
+          "In the new application, the versions with their dates and what each tester asked for.",
+        ],
+      } },
+      { tipo: "p", texto: {
+        es: "Salieron la 1.0.1 el 11 de octubre, la 1.0.2 el 14 y la 1.0.3 el 20. El 27 llegó el acceso a producción. jlptest, que es la misma clase de app, sigue en prueba: entre su 1.0.6 y la siguiente pasaron nueve días, y la lección es la misma. El código de la web puede cambiar a diario; para Google, la app sólo existe en lo que subes a la consola.",
+        en: "Version 1.0.1 shipped on October 11, 1.0.2 on the 14th and 1.0.3 on the 20th. On the 27th, production access came through. jlptest, the same kind of app, is still in testing: nine days passed between its 1.0.6 and the next one, and the lesson is the same. The website's code can change daily; to Google, the app only exists in what you upload to the console.",
+      } },
+    ],
+  },
 ];
 
 export function notaPorId(id: string): Nota | undefined {
