@@ -262,9 +262,10 @@ class Escena:
         if texto and self.g.get('presentadora'):
             d = ImageDraw.Draw(im, 'RGBA'); c = self.g['colores']; ft = ImageFont.truetype(PIXEL, 26)
             w = d.textlength(texto, font=ft)
-            d.rectangle([40, 40, 40 + w + 40, 100], fill=(*self.fondo, 210))
-            d.rectangle([40, 40, 48, 100], fill=color(c['acento']))
-            d.text((68, 70), texto, font=ft, fill=color(c['texto']), anchor='lm')
+            y0 = self.e.get('etiqueta_y', 120)   # debajo de la barra de vida de los juegos (16 px del lienzo a 6x)
+            d.rectangle([40, y0, 40 + w + 40, y0 + 60], fill=(*self.fondo, 210))
+            d.rectangle([40, y0, 48, y0 + 60], fill=color(c['acento']))
+            d.text((68, y0 + 30), texto, font=ft, fill=color(c['texto']), anchor='lm')
         elif texto:
             t = f * self.dur; visible = min(1, t / 0.4, (self.e.get('rotulo', self.dur) - t) / 0.4)
             if visible > 0:

@@ -1,0 +1,146 @@
+{
+ "voz": "es-US-Chirp3-HD-Laomedeia",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Artillería por turnos",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Gratis, en el navegador y sin descargar"
+ },
+ "formato": "horizontal",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-largo.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/largo-editado.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 16.9,
+   "texto": "WAR ZONE · CPU CONTRA CPU",
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Guar Zon: batalla en el volcán, cuatro contra cuatro, y las dos computadoras pelean solas. Azul juega en normal, y rojo, en difícil.",
+   "capitulo": "La batalla",
+   "dice": "¡Hola! Soy LeIA. Hoy, en War Zone: batalla en el volcán, cuatro contra cuatro, y las dos computadoras pelean solas. Azul juega en normal y Rojo, en difícil."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 16.9,
+   "dur": 7.5,
+   "texto": "AZUL 3 · ROJO 4",
+   "cara": "sorpresa",
+   "voz": "¡Uy! Rudy abre con el láser, y Nino cae primero.",
+   "capitulo": "Primera baja"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 24.4,
+   "dur": 25.6,
+   "texto": "AZUL 3 · ROJO 3",
+   "cara": "feliz",
+   "voz": "Pero Chato responde con una bomba… ¡y Cuca sale volando al vacío! Tres contra tres."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 50.0,
+   "dur": 39.0,
+   "texto": "AZUL 3 · ROJO 3",
+   "cara": "pensando",
+   "voz": "Cada explosión se come el terreno. En el volcán, nadie está a salvo."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 89.0,
+   "dur": 12.2,
+   "texto": "AZUL 2 · ROJO 3",
+   "cara": "triste",
+   "voz": "¡Ay, no! Una bomba de Tito manda a Chato a volar ciento cincuenta y ocho píxeles.",
+   "capitulo": "Chato al vacío"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 101.2,
+   "dur": 5.9,
+   "texto": "AZUL 1 · ROJO 3",
+   "cara": "sorpresa",
+   "voz": "¡Headshot de Rudy! Nena se queda sola contra tres.",
+   "capitulo": "Headshot"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 107.1,
+   "dur": 31.1,
+   "texto": "AZUL 1 · ROJO 2",
+   "cara": "feliz",
+   "voz": "Pero Nena no se rinde. Granada… ¡y Beto al vacío!",
+   "capitulo": "Nena contra todos"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 138.2,
+   "dur": 19.6,
+   "texto": "AZUL 1 · ROJO 1",
+   "cara": "sorpresa",
+   "voz": "¡Otra! Rudy vuela doscientos veintiséis píxeles. Uno contra uno: Nena contra Tito.",
+   "capitulo": "Uno contra uno"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 157.8,
+   "dur": 6.57,
+   "texto": "AZUL 1 · ROJO 1",
+   "cara": "enojo",
+   "voz": "Tito juega en difícil, y se nota: cada granada suya duele."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 164.37,
+   "dur": 14.73,
+   "texto": "AZUL 1 · ROJO 1",
+   "cara": "triste",
+   "voz": "Nena se queda con seis de vida. Es su última oportunidad…"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 179.1,
+   "dur": 6.2,
+   "texto": "GANA ROJO",
+   "cara": "enojo",
+   "voz": "Y Tito la remata. ¡Gana Rojo!",
+   "capitulo": "Gana Rojo"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Juega gratis",
+   "voz": "¿Te atreves contra la difícil? Juega gratis en el navegador: Daily Challenge punto click, barra Guar Zon.",
+   "dice": "¿Te atreves contra la difícil? Juega gratis en el navegador: dailychallenge.click/warzone"
+  }
+ ]
+}

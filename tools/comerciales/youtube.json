@@ -69,5 +69,39 @@
    "arcade",
    "retro gaming"
   ]
+ },
+ {
+  "clave": "warzone-cpu-largo",
+  "video": "salida/warzone-cpu-largo.mp4",
+  "miniatura": "salida/warzone-cpu-largo.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-01T18:00:00-06:00",
+  "titulo": "War Zone: CPU contra CPU, 4 contra 4 en el volcán (batalla completa)",
+  "descripcion": "Dos computadoras se enfrentan en War Zone, artillería por turnos con estilo Atari 2600: Azul en dificultad normal contra Rojo en difícil, cuatro contra cuatro en el volcán. Bombas, granadas, un headshot y monigotes volando al vacío, comentados por LeIA. La música es la del juego.\n\nJuega gratis, en el navegador y sin descargar: https://dailychallenge.click/warzone\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "cierre": "#WarZone #RetroGaming #Atari2600 #Videojuegos #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "artillería por turnos",
+   "juego retro",
+   "Atari 2600",
+   "CPU vs CPU",
+   "indie game",
+   "Daily Challenge"
+  ]
+ },
+ {
+  "clave": "warzone-cpu-short",
+  "video": "salida/warzone-cpu-short.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T18:00:00-06:00",
+  "titulo": "CPU contra CPU: la difícil no perdona 💣 #shorts",
+  "descripcion": "Lo mejor de una batalla de War Zone entre dos computadoras, con LeIA. Juega gratis en https://dailychallenge.click/warzone",
+  "cierre": "#WarZone #RetroGaming #Atari2600",
+  "etiquetas": [
+   "War Zone",
+   "juego retro",
+   "Atari 2600",
+   "CPU vs CPU"
+  ]
  }
 ]

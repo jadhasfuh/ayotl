@@ -49,7 +49,7 @@ def jlptest():
     im.save(os.path.join(SAL, 'jlptest-n5-largo.jpg'), quality=92)
 
 
-def juego(nombre, fondo, titulo, sub, cara, acento):
+def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
     """Fondo de partida oscurecido, el título en letra pixel y LeIA a la derecha."""
     im = fondo.resize((W, round(fondo.size[1] * W / fondo.size[0])), Image.NEAREST)
     if im.size[1] < H:
@@ -61,6 +61,9 @@ def juego(nombre, fondo, titulo, sub, cara, acento):
     im.alpha_composite(velo)
     d = ImageDraw.Draw(im)
     y = 120
+    if logo:   # el logo del juego, en pixel art: se agranda sin suavizar
+        lg = Image.open(os.path.join(AQUI, logo)).convert('RGBA'); k = 300 / lg.size[1]
+        lg = lg.resize((round(lg.size[0] * k), 300), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 370
     for linea in titulo.split('\n'):
         d.text((70, y), linea, font=ImageFont.truetype(PIXEL, 74), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
     d.text((74, y + 20), sub, font=av('heavy', 52), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
@@ -74,6 +77,8 @@ if __name__ == '__main__':
     jlptest()
     fondo = cuadro(os.path.join(AQUI, 'dc/reels/pacman.mp4'), 3.0, (60, 470, 1020, 1568))
     juego('dc-semana-largo', fondo, '7 DÍAS\n7 JUEGOS', 'Daily Challenge', 'sorpresa', (147, 226, 221))
-    for extra in ('kazan-cpu-largo', 'warzone-cpu-largo'):
-        pass   # se hacen cuando esté su material (ver el guion de cada uno)
+    import sys
+    t = float(sys.argv[sys.argv.index('--wz') + 1]) if '--wz' in sys.argv else 138.6
+    fondo = cuadro(os.path.join(AQUI, 'warzone-cpu/largo-editado.mp4'), t)
+    juego('warzone-cpu-largo', fondo, 'CPU vs CPU', '4 contra 4 en el volcán', 'sorpresa', (232, 224, 122), logo='warzone/logo.png')
     print('miniaturas en', SAL)

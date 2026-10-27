@@ -29,3 +29,5 @@ PROMPT-INICIAL.md
 respaldos/
 tools/comerciales/salida/
 __pycache__/
+tools/comerciales/warzone-cpu/*.mp4
+tools/comerciales/kazan-cpu/*.mp4

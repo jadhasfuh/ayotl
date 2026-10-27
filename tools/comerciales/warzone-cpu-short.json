@@ -1,0 +1,87 @@
+{
+ "voz": "es-US-Chirp3-HD-Laomedeia",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Artillería por turnos",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Gratis, en el navegador y sin descargar"
+ },
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-short.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/cortos-juntos.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 0,
+   "dur": 8.0,
+   "ancho": 760,
+   "radio": 12,
+   "texto": "BOMBA · AL VACÍO",
+   "cara": "feliz",
+   "voz": "¡Mira esto! Una bomba de Chato… ¡y Cuca, al vacío!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 8.0,
+   "dur": 5.0,
+   "ancho": 760,
+   "radio": 12,
+   "texto": "HEADSHOT",
+   "cara": "sorpresa",
+   "voz": "¡Headshot! Directo a la cabeza."
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 13.0,
+   "dur": 5.7,
+   "ancho": 760,
+   "radio": 12,
+   "texto": "GRANADA",
+   "cara": "feliz",
+   "voz": "Nena contraataca… ¡adiós, Beto!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 18.7,
+   "dur": 7.8,
+   "ancho": 760,
+   "radio": 12,
+   "texto": "226 PÍXELES",
+   "cara": "sorpresa",
+   "voz": "¡Rudy vuela doscientos veintiséis píxeles!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 26.5,
+   "dur": 8.0,
+   "ancho": 760,
+   "radio": 12,
+   "texto": "GANA ROJO",
+   "cara": "enojo",
+   "voz": "Y al final, la difícil no perdona. ¡Gana Rojo!"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "CPU contra CPU en Guar Zon. Juega gratis: Daily Challenge punto click, barra Guar Zon.",
+   "dice": "CPU contra CPU en War Zone. Juega gratis: dailychallenge.click/warzone"
+  }
+ ]
+}
