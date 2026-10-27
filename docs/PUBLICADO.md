@@ -91,7 +91,7 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
 - **El plan:** `ayotl/tools/comerciales/youtube.json`. Al subirse, cada vídeo apunta ahí su id. Los sube `subir-youtube.py` según la cuota del día.
 - **Las fechas:**
   - 28 y 29-oct: jlptest N5, el largo y el short;
-  - 30 y 31-oct: DC, la semana;
+  - DC, la semana: el largo ya salió el 27-oct (Adrián, desde Studio: https://youtu.be/D9vSbcUIHtY, también en la ficha de Play); el short, el 31-oct;
   - 1 y 2-nov: War Zone, CPU contra CPU;
   - 3 y 4-nov: Kazan, 8 CPU.
 - **Estado al 27-oct:** todavía no se ha subido ninguno. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
