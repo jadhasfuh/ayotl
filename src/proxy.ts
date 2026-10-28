@@ -86,6 +86,7 @@ export function proxy(req: NextRequest) {
 export const config = {
   // Sólo páginas: ni la API, ni las muestras (viven fuera del idioma, en
   // `app/demo`, con su propio layout), ni lo estático, ni las imágenes, ni
-  // `/procesion`, que redirige a Daily Challenge (next.config.ts).
-  matcher: ["/((?!api|demo|procesion|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json|js|woff2|woff|html)$).*)"],
+  // `/procesion`, que redirige a Daily Challenge (next.config.ts). mp4/mp3: los Shorts de los retos en
+  // /media/retos/ (27-oct-2026); sin esto el proxy los reescribía a /es/… y daban 404.
+  matcher: ["/((?!api|demo|procesion|_next|og|icono|robots\\.txt|sitemap\\.xml|.*\\.(?:svg|png|ico|jpg|webp|txt|xml|json|js|woff2|woff|html|mp4|mp3)$).*)"],
 };
