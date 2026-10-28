@@ -78,6 +78,8 @@ ACENTOS = {'Á': 'A', 'É': 'E', 'Í': 'I', 'Ó': 'O', 'Ú': 'U'}
 def pintar(d, xy, s, font, fill, anchor='la'):
     """d.text, pero en modo pixel las mayúsculas con acento se pintan como la mayúscula entera y el acento
     encima: Press Start 2P las encoge para que quepan con el acento en sus 8 px, y «VACÍO» se leía «VACíO»."""
+    if JAPONES and font.path == MISAKI:
+        s = s.replace('·', '・')   # Misaki no trae el punto medio latino; el japonés es del mismo ancho
     if not TODO_PIXEL or not any(ch in ACENTOS for ch in s):
         d.text(xy, s, font=font, fill=fill, anchor=anchor); return
     base = ''.join(ACENTOS.get(ch, ch) for ch in s)
