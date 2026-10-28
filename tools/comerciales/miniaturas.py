@@ -13,6 +13,14 @@ SAL = os.path.join(AQUI, 'salida')
 AVENIR = '/System/Library/Fonts/Avenir Next.ttc'
 JAPONESA = os.path.expanduser('~/Documents/jlptest/fuentes/ipaexg.ttf')
 PIXEL = os.path.expanduser('~/Documents/daily challenge/src/fonts/PressStart2P-Regular.ttf')
+MISAKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fuentes', 'Misaki.ttf')   # la pixel japonesa, para las miniaturas en japonés
+
+
+def pixel(tam, texto):
+    """Press Start 2P, o Misaki un tercio más grande si el texto lleva kana o kanji (como en comercial.py)."""
+    if any(ord(ch) > 0x2E7F for ch in texto):
+        return ImageFont.truetype(MISAKI, max(16, int(tam * 4 / 3 / 8 + 0.5) * 8))
+    return ImageFont.truetype(PIXEL, tam)
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 W, H = 1280, 720
 
@@ -70,8 +78,8 @@ def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
         lg = Image.open(os.path.join(AQUI, logo)).convert('RGBA'); k = min(300 / lg.size[1], 620 / lg.size[0])
         lg = lg.resize((round(lg.size[0] * k), round(lg.size[1] * k)), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 70 + lg.size[1]
     for linea in titulo.split('\n'):
-        d.text((70, y), linea, font=ImageFont.truetype(PIXEL, 74), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
-    d.text((74, y + 20), sub, font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))   # también pixel: en los juegos nada de Avenir (27-oct)
+        d.text((70, y), linea, font=pixel(72, linea), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
+    d.text((74, y + 20), sub, font=pixel(40, sub), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))   # también pixel: en los juegos nada de Avenir (27-oct)
     l = leia(cara); im.alpha_composite(l, (W - l.size[0] - 20, H - l.size[1]))
     d.text((W - 250, 40), 'LeIA', font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
     im.convert('RGB').save(os.path.join(SAL, f'{nombre}.jpg'), quality=92)
@@ -82,10 +90,16 @@ if __name__ == '__main__':
     jlptest()
     fondo = cuadro(os.path.join(AQUI, 'dc/reels/pacman.mp4'), 3.0, (60, 470, 1020, 1568))
     juego('dc-semana-largo', fondo, '7 DÍAS\n7 JUEGOS', 'Daily Challenge', 'sorpresa', (147, 226, 221))
+    juego('dc-semana-largo-en', fondo, '7 DAYS\n7 GAMES', 'Daily Challenge', 'sorpresa', (147, 226, 221))
+    juego('dc-semana-largo-ja', fondo, '7日間\n7本のゲーム', 'Daily Challenge', 'sorpresa', (147, 226, 221))
     import sys
     t = float(sys.argv[sys.argv.index('--wz') + 1]) if '--wz' in sys.argv else 138.6
     fondo = cuadro(os.path.join(AQUI, 'warzone-cpu/largo-editado.mp4'), t)
     juego('warzone-cpu-largo', fondo, 'CPU vs CPU', '4 contra 4 en el volcán', 'sorpresa', (232, 224, 122), logo='warzone/logo.png')
+    juego('warzone-cpu-largo-en', fondo, 'CPU vs CPU', '4 on 4 on the volcano', 'sorpresa', (232, 224, 122), logo='warzone/logo.png')
+    juego('warzone-cpu-largo-ja', fondo, 'CPU対CPU', '火山で4対4', 'sorpresa', (232, 224, 122), logo='warzone/logo.png')
     fondo = cuadro(os.path.join(AQUI, 'kazan-cpu/largo.mp4'), 295.0, (0, 30, 960, 438))
     juego('kazan-cpu-largo', fondo, '8 CPU\n1 VOLCÁN', 'sólo una sobrevive', 'sorpresa', (242, 160, 61), logo='kazan/logo.png')
+    juego('kazan-cpu-largo-en', fondo, '8 CPU\n1 VOLCANO', 'only one survives', 'sorpresa', (242, 160, 61), logo='kazan/logo.png')
+    juego('kazan-cpu-largo-ja', fondo, 'CPU 8体\n火山ひとつ', '生き残るのは一国', 'sorpresa', (242, 160, 61), logo='kazan/logo.png')
     print('miniaturas en', SAL)

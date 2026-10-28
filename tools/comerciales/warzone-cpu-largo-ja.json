@@ -1,0 +1,147 @@
+{
+ "fuente": "pixel-ja",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "ターン制の砲撃バトル",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "無料・ブラウザで・ダウンロード不要"
+ },
+ "formato": "horizontal",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-largo-ja.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/largo-editado.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 16.9,
+   "texto": "WAR ZONE · CPU対CPU",
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のウォーゾーンは火山で四対四。コンピューター同士の戦いです。青はノーマル、赤はハード。",
+   "capitulo": "戦い",
+   "dice": "こんにちは！LeIAです。今日のWar Zoneは火山で4対4。コンピューター同士の戦いです。青はノーマル、赤はハード。"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 16.9,
+   "dur": 7.5,
+   "texto": "青3 · 赤4",
+   "cara": "sorpresa",
+   "voz": "おっと！ルディのレーザーで、ニノが最初に倒れる。",
+   "capitulo": "最初の脱落"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 24.4,
+   "dur": 25.6,
+   "texto": "青3 · 赤3",
+   "cara": "feliz",
+   "voz": "でもチャトが爆弾で返す…ククが奈落へ！三対三。"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 50.0,
+   "dur": 39.0,
+   "texto": "青3 · 赤3",
+   "cara": "pensando",
+   "voz": "爆発のたびに地面が削れる。火山では誰も安全じゃない。"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 89.0,
+   "dur": 12.2,
+   "texto": "青2 · 赤3",
+   "cara": "triste",
+   "voz": "ああ！ティトの爆弾で、チャトが百五十八ピクセル吹っ飛ぶ。",
+   "capitulo": "チャトが奈落へ"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 101.2,
+   "dur": 5.9,
+   "texto": "青1 · 赤3",
+   "cara": "sorpresa",
+   "voz": "ルディのヘッドショット！ネナはひとりで三人を相手に。",
+   "capitulo": "ヘッドショット"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 107.1,
+   "dur": 31.1,
+   "texto": "青1 · 赤2",
+   "cara": "feliz",
+   "voz": "でもネナはあきらめない。手りゅう弾…ベトが奈落へ！",
+   "capitulo": "ネナ対全員"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 138.2,
+   "dur": 19.6,
+   "texto": "青1 · 赤1",
+   "cara": "sorpresa",
+   "voz": "もう一発！ルディが二百二十六ピクセル飛ぶ。一対一、ネナ対ティト。",
+   "capitulo": "一対一"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 157.8,
+   "dur": 6.57,
+   "texto": "青1 · 赤1",
+   "cara": "enojo",
+   "voz": "ティトはハード。手りゅう弾の一発一発が痛い。"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 164.37,
+   "dur": 14.73,
+   "texto": "青1 · 赤1",
+   "cara": "triste",
+   "voz": "ネナの体力は残り六。最後のチャンス…"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 179.1,
+   "dur": 6.2,
+   "texto": "赤の勝ち",
+   "cara": "enojo",
+   "voz": "ティトがとどめ。赤の勝ち！",
+   "capitulo": "赤の勝ち"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "無料で遊ぶ",
+   "voz": "ハードに挑戦する？ブラウザで無料。デイリーチャレンジ・ドット・クリック、スラッシュ、ウォーゾーン。",
+   "dice": "ハードに挑戦する？ブラウザで無料: dailychallenge.click/warzone"
+  }
+ ]
+}

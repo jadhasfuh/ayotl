@@ -1,0 +1,163 @@
+{
+ "fuente": "pixel-ja",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/dc-semana-short-ja.mp4",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "bpm": 104,
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#93e2dd",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "dc/logo.png",
+  "logo_ancho": 944,
+  "lema": "毎日新しいチャレンジ",
+  "sitio": "dailychallenge.click",
+  "pie": "無料・ブラウザで・ダウンロード不要"
+ },
+ "escenas": [
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.5,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "Daily Challengeの一週間",
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今週のデイリーチャレンジは、毎日ちがうレトロゲーム。",
+   "hasta": 8.0,
+   "dice": "こんにちは！LeIAです。今週のDaily Challengeは、毎日ちがうレトロゲーム。"
+  },
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "火曜日 · GALAGA",
+   "cara": "normal",
+   "voz": "火曜日はギャラガ。急降下してくる編隊を撃ち落とせ。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/mrdo.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "水曜日 · MR. DO!",
+   "cara": "sorpresa",
+   "voz": "水曜日はミスター・ドゥ！リンゴでモンスターをつぶせ。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/columns.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "木曜日 · JEWELS",
+   "cara": "pensando",
+   "voz": "木曜日はジュエルズ。同じ宝石を三つそろえて、コンボをつなげよう。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/burgertime.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "金曜日 · BURGERTIME",
+   "cara": "feliz",
+   "voz": "金曜日はバーガータイム。つかまらずにハンバーガーを作れ。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "土曜日 · PAC-MAN",
+   "cara": "guino",
+   "voz": "土曜日はパックマン。おなじみの名作。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/rallyx.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "日曜日 · RALLY-X",
+   "cara": "sorpresa",
+   "voz": "日曜日はラリーX。赤い車がすぐ後ろに迫る。",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/asteroids.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "月曜日 · ASTEROIDS",
+   "cara": "enojo",
+   "voz": "そして月曜日はアステロイド。岩はひとりでに割れないよ！",
+   "hasta": 8.0
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "明日は？お楽しみに。デイリーチャレンジ・ドット・クリックで無料で遊べます。",
+   "dice": "明日は？お楽しみに。dailychallenge.click で無料で遊べます。"
+  }
+ ]
+}

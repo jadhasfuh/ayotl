@@ -62,6 +62,49 @@
   "actualizar": true
  },
  {
+  "clave": "dc-semana-largo-en",
+  "app": "dc",
+  "idioma": "en",
+  "video": "salida/dc-semana-largo-en.mp4",
+  "miniatura": "salida/dc-semana-largo-en.jpg",
+  "categoria": "20",
+  "publicar": "2026-10-30T18:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Week of Oct 20-26, 7 days, 7 retro games with LeIA",
+  "descripcion": "In Daily Challenge there's a new challenge every day: a retro game, the same level for everyone and one leaderboard. LeIA shows you the winning runs of the week of October 20 to 26: Galaga, Mr. Do!, Jewels, BurgerTime, Pac-Man, Rally-X and Asteroids.\n\nLeIA is the host of Ayotl's games.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade #IndieGame #Shorts",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "Galaga",
+   "Pac-Man",
+   "Asteroids",
+   "daily challenge",
+   "retro gaming"
+  ]
+ },
+ {
+  "clave": "dc-semana-largo-ja",
+  "app": "dc",
+  "idioma": "ja",
+  "video": "salida/dc-semana-largo-ja.mp4",
+  "miniatura": "salida/dc-semana-largo-ja.jpg",
+  "categoria": "20",
+  "publicar": "2026-10-30T18:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 10/20〜10/26の一週間、7日7本のレトロゲーム（LeIAと）",
+  "descripcion": "Daily Challengeは毎日新しいチャレンジ：レトロゲームひとつ、みんな同じステージ、ランキングはひとつ。10月20日〜26日の一週間の最高記録を、LeIAが紹介します：ギャラガ、ミスター・ドゥ、ジュエルズ、バーガータイム、パックマン、ラリーX、アステロイド。\n\nLeIAはAyotlのゲームの案内役です。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード #インディーゲーム",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "ギャラガ",
+   "パックマン",
+   "アステロイド",
+   "retro games"
+  ]
+ },
+ {
   "clave": "dc-semana-short",
   "app": "dc",
   "video": "salida/dc-semana-short.mp4",
@@ -75,6 +118,39 @@
    "juegos retro",
    "arcade",
    "retro gaming"
+  ]
+ },
+ {
+  "clave": "dc-semana-short-en",
+  "app": "dc",
+  "idioma": "en",
+  "video": "salida/dc-semana-short-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T18:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Week of Oct 20-26 in one minute 🕹️ #shorts",
+  "descripcion": "The week of October 20 to 26 in Daily Challenge, with LeIA: a different retro game every day.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming"
+  ]
+ },
+ {
+  "clave": "dc-semana-short-ja",
+  "app": "dc",
+  "idioma": "ja",
+  "video": "salida/dc-semana-short-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T18:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 10/20〜10/26の一週間を1分で 🕹️ #shorts",
+  "descripcion": "10月20日〜26日のDaily Challengeの一週間を、LeIAと。毎日ちがうレトロゲーム。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード"
   ]
  },
  {
@@ -98,6 +174,45 @@
   ]
  },
  {
+  "clave": "warzone-cpu-largo-en",
+  "app": "warzone",
+  "idioma": "en",
+  "video": "salida/warzone-cpu-largo-en.mp4",
+  "miniatura": "salida/warzone-cpu-largo-en.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-01T18:20:00-06:00",
+  "titulo": "WAR ZONE: CPU vs CPU, 4 on 4 on the volcano (full battle)",
+  "descripcion": "Two computers face off in War Zone, turn-based artillery with an Atari 2600 look: Blue on normal against Red on hard, four on four on the volcano. Bombs, grenades, a headshot and little guys flying into the void, with LeIA's commentary. The music is the game's own.\n\nLeIA is the host of Ayotl's games.",
+  "cierre": "#WarZone #Artillery #RetroGaming #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "artillery game",
+   "turn-based",
+   "CPU vs CPU",
+   "retro games",
+   "Atari 2600"
+  ]
+ },
+ {
+  "clave": "warzone-cpu-largo-ja",
+  "app": "warzone",
+  "idioma": "ja",
+  "video": "salida/warzone-cpu-largo-ja.mp4",
+  "miniatura": "salida/warzone-cpu-largo-ja.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-01T18:40:00-06:00",
+  "titulo": "WAR ZONE: CPU対CPU、火山で4対4（フルバトル）",
+  "descripcion": "Atari 2600風のターン制砲撃ゲームWar Zoneで、コンピューター同士が対決：ノーマルの青 対 ハードの赤、火山で4対4。爆弾、手りゅう弾、ヘッドショット、奈落へ吹っ飛ぶ兵士たちを、LeIAが実況します。音楽はゲームのもの。\n\nLeIAはAyotlのゲームの案内役です。",
+  "cierre": "#WarZone #砲撃ゲーム #レトロゲーム #インディーゲーム",
+  "etiquetas": [
+   "War Zone",
+   "砲撃ゲーム",
+   "ターン制",
+   "CPU対CPU",
+   "レトロゲーム"
+  ]
+ },
+ {
   "clave": "warzone-cpu-short",
   "app": "warzone",
   "video": "salida/warzone-cpu-short.mp4",
@@ -111,6 +226,40 @@
    "juego retro",
    "Atari 2600",
    "CPU vs CPU"
+  ]
+ },
+ {
+  "clave": "warzone-cpu-short-en",
+  "app": "warzone",
+  "idioma": "en",
+  "video": "salida/warzone-cpu-short-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T18:20:00-06:00",
+  "titulo": "WAR ZONE: CPU vs CPU, hard mode shows no mercy 💣 #shorts",
+  "descripcion": "The best of a War Zone battle between two computers, with LeIA.",
+  "cierre": "#WarZone #Artillery #RetroGaming",
+  "etiquetas": [
+   "War Zone",
+   "artillery game",
+   "CPU vs CPU",
+   "retro games"
+  ]
+ },
+ {
+  "clave": "warzone-cpu-short-ja",
+  "app": "warzone",
+  "idioma": "ja",
+  "video": "salida/warzone-cpu-short-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T18:40:00-06:00",
+  "titulo": "WAR ZONE: CPU対CPU、ハードは容赦なし 💣 #shorts",
+  "descripcion": "War Zoneのコンピューター同士のバトル、見どころをLeIAと。",
+  "cierre": "#WarZone #砲撃ゲーム #レトロゲーム",
+  "etiquetas": [
+   "War Zone",
+   "砲撃ゲーム",
+   "CPU対CPU",
+   "レトロゲーム"
   ]
  },
  {
@@ -135,6 +284,46 @@
   ]
  },
  {
+  "clave": "kazan-cpu-largo-en",
+  "app": "kazan",
+  "idioma": "en",
+  "video": "salida/kazan-cpu-largo-en.mp4",
+  "miniatura": "salida/kazan-cpu-largo-en.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-03T18:20:00-06:00",
+  "titulo": "KAZAN: 8 computers, one island and a volcano (full match)",
+  "descripcion": "Eight nations played by the computer on a desert island: they build, train armies, conquer each other… and at minute five the volcano wakes up. LeIA commentates the full match, from the first army to the last city standing.\n\nKazan is real-time strategy with a retro look: build your city, raise your army and escape the lava. Every week there's an online island challenge.\n\nLeIA is the host of Ayotl's games.",
+  "cierre": "#Kazan #RTS #RetroGaming #IndieGame",
+  "etiquetas": [
+   "Kazan",
+   "real-time strategy",
+   "RTS",
+   "CPU vs CPU",
+   "retro games",
+   "volcano"
+  ]
+ },
+ {
+  "clave": "kazan-cpu-largo-ja",
+  "app": "kazan",
+  "idioma": "ja",
+  "video": "salida/kazan-cpu-largo-ja.mp4",
+  "miniatura": "salida/kazan-cpu-largo-ja.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-03T18:40:00-06:00",
+  "titulo": "KAZAN: コンピューター8つ、島ひとつ、火山ひとつ（フル対戦）",
+  "descripcion": "砂漠の島で、コンピューターが動かす8つの国が建設し、軍を育て、互いを征服し…5分で火山が目を覚まします。最初の軍から最後に残る街まで、LeIAがフル対戦を実況します。\n\nKazanはレトロな見た目のリアルタイムストラテジー：街を築き、軍を育て、溶岩から逃げろ。毎週オンラインの「島のチャレンジ」があります。\n\nLeIAはAyotlのゲームの案内役です。",
+  "cierre": "#Kazan #RTS #レトロゲーム #インディーゲーム",
+  "etiquetas": [
+   "Kazan",
+   "リアルタイムストラテジー",
+   "RTS",
+   "CPU対CPU",
+   "レトロゲーム",
+   "火山"
+  ]
+ },
+ {
   "clave": "kazan-cpu-short",
   "app": "kazan",
   "video": "salida/kazan-cpu-short.mp4",
@@ -148,6 +337,40 @@
    "estrategia",
    "RTS",
    "juego retro"
+  ]
+ },
+ {
+  "clave": "kazan-cpu-short-en",
+  "app": "kazan",
+  "idioma": "en",
+  "video": "salida/kazan-cpu-short-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T18:20:00-06:00",
+  "titulo": "KAZAN: eight computers, one island, one volcano 🌋 #shorts",
+  "descripcion": "A Kazan match played only by the CPU, with LeIA.",
+  "cierre": "#Kazan #RTS #RetroGaming",
+  "etiquetas": [
+   "Kazan",
+   "real-time strategy",
+   "CPU vs CPU",
+   "retro games"
+  ]
+ },
+ {
+  "clave": "kazan-cpu-short-ja",
+  "app": "kazan",
+  "idioma": "ja",
+  "video": "salida/kazan-cpu-short-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T18:40:00-06:00",
+  "titulo": "KAZAN: コンピューター8つ、島ひとつ、火山ひとつ 🌋 #shorts",
+  "descripcion": "CPUだけで遊んだKazanの一戦を、LeIAと。",
+  "cierre": "#Kazan #RTS #レトロゲーム",
+  "etiquetas": [
+   "Kazan",
+   "リアルタイムストラテジー",
+   "CPU対CPU",
+   "レトロゲーム"
   ]
  }
 ]

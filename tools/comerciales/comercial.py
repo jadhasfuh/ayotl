@@ -48,17 +48,48 @@ PIXEL = os.path.expanduser('~/Documents/daily challenge/src/fonts/PressStart2P-R
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 CACHE = os.path.expanduser('~/Documents/ayotl-voces')   # lo ya narrado, por huella (texto, voz, idioma)
 TODO_PIXEL = False      # `"fuente": "pixel"` en el guion: todo el texto en Press Start 2P (los vídeos de los juegos)
+MISAKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fuentes', 'Misaki.ttf')   # 8x8 japonesa (美咲ゴシック第2)
+JAPONES = False         # `"fuente": "pixel-ja"`: lo que lleve kana o kanji va en Misaki (la pixel japonesa); lo latino, en Press Start 2P
 
 
-def fuente(peso, tam):
+def pixel(tam, texto=''):
+    """La fuente pixel para `texto`: Press Start 2P, o Misaki si el guion es japonés y el texto lleva kana o kanji
+    (Misaki mide 8 el carácter ancho y 4 el latino: con el mismo tamaño las dos casan en la rejilla)."""
+    ja = JAPONES and any(ord(ch) > 0x2E7F for ch in texto)
+    if ja:   # los kanji de Misaki son 7x7 y los kana más chicos: un tercio más grande para que se lea como la latina
+        tam = max(16, int(tam * 4 / 3 / 8 + 0.5) * 8)
+    return ImageFont.truetype(MISAKI if ja else PIXEL, tam)
+
+
+def fuente(peso, tam, texto=''):
     """La fuente del texto: Avenir con su peso o, en los vídeos de los juegos, Press Start 2P (un solo peso).
     Adrián, 27-oct-2026: en los vídeos de los juegos todo en fuente pixel, que estaban mezcladas; jlptest y
     Mercadito siguen con la normal. La pixel es cuadrada (cada letra avanza lo que mide de alto), así que
     va a 0,62 del tamaño pedido y en múltiplos de 8 px, donde sus píxeles caen enteros y no se emborrona."""
     if TODO_PIXEL:
-        return ImageFont.truetype(PIXEL, max(16, int(tam * 0.62 / 8 + 0.5) * 8))
+        return pixel(max(16, int(tam * 0.62 / 8 + 0.5) * 8), texto)
     idx = {'heavy': 8, 'bold': 0, 'demi': 2, 'medium': 5, 'regular': 7}[peso]
     return ImageFont.truetype(AVENIR, tam, index=idx)
+
+
+ACENTOS = {'Á': 'A', 'É': 'E', 'Í': 'I', 'Ó': 'O', 'Ú': 'U'}
+
+
+def pintar(d, xy, s, font, fill, anchor='la'):
+    """d.text, pero en modo pixel las mayúsculas con acento se pintan como la mayúscula entera y el acento
+    encima: Press Start 2P las encoge para que quepan con el acento en sus 8 px, y «VACÍO» se leía «VACíO»."""
+    if not TODO_PIXEL or not any(ch in ACENTOS for ch in s):
+        d.text(xy, s, font=font, fill=fill, anchor=anchor); return
+    base = ''.join(ACENTOS.get(ch, ch) for ch in s)
+    d.text(xy, base, font=font, fill=fill, anchor=anchor)
+    u = font.size / 8; w = d.textlength(base, font=font)
+    x0 = xy[0] - {'l': 0, 'm': w / 2, 'r': w}[anchor[0]]
+    top = xy[1] - {'a': 0, 't': 0, 'm': font.size / 2, 's': font.size, 'b': font.size, 'd': font.size}[anchor[1]]
+    for i, ch in enumerate(s):
+        if ch in ACENTOS:   # un acento agudo de dos píxeles en diagonal, sobre la letra (las mayúsculas llenan 7 de 8)
+            cx = x0 + d.textlength(base[:i], font=font)
+            d.rectangle([cx + 4 * u, top - 3 * u, cx + 5 * u - 1, top - 2 * u - 1], fill=fill)
+            d.rectangle([cx + 3 * u, top - 2 * u, cx + 4 * u - 1, top - u - 1], fill=fill)
 
 
 def color(h):
@@ -245,10 +276,10 @@ class Escena:
         if self.e.get('cuenta'):
             self.fija = self.cuenta(im, d); return self.fija.copy()
         # el texto arriba, con una raya del color de la marca
-        ft = fuente('bold', 70 if not horizontal() else 60); y = 230 if not horizontal() else 70
+        ft = fuente('bold', 70 if not horizontal() else 60, self.e['texto']); y = 230 if not horizontal() else 70
         salto = round(ft.size * 1.8) if TODO_PIXEL else (88 if not horizontal() else 76)
         for linea in partir(d, self.e['texto'], ft, W - 160):
-            d.text((W / 2, y), linea, font=ft, fill=color(c['texto']), anchor='ma'); y += salto
+            pintar(d, (W / 2, y), linea, ft, color(c['texto']), 'ma'); y += salto
         d.rounded_rectangle([W / 2 - 60, y + 14, W / 2 + 60, y + 22], 4, fill=color(c['acento']))
         # la pantalla, con un acercamiento lento; una apaisada va centrada en el hueco que queda
         tar = self.tarjeta(f); z = 1 + 0.035 * f
@@ -265,7 +296,7 @@ class Escena:
         if c.get('borde'):   # sobre fondo negro, una pantalla de juego negra no se distingue sin él
             d.rounded_rectangle([x0 - 3, y0 - 3, x0 + tw + 2, y0 + th + 2], round(self.radio * z) + 3, outline=color(c['borde']), width=3)
         if self.e.get('nota'):   # una línea chica debajo de la pantalla
-            d.text((W / 2, y0 + th + 50), self.e['nota'], font=fuente('medium', 44), fill=color(c['tenue']), anchor='ma')
+            pintar(d, (W / 2, y0 + th + 50), self.e['nota'], fuente('medium', 44, self.e['nota']), color(c['tenue']), 'ma')
         return im
 
     def completo(self, f):
@@ -273,24 +304,24 @@ class Escena:
         im = self.clip.cuadro(round(f * self.dur * FPS)).copy()
         texto = self.e.get('texto')
         if texto and self.g.get('presentadora'):
-            d = ImageDraw.Draw(im, 'RGBA'); c = self.g['colores']; ft = ImageFont.truetype(PIXEL, 26)
+            d = ImageDraw.Draw(im, 'RGBA'); c = self.g['colores']; ft = pixel(24, texto)
             w = d.textlength(texto, font=ft)
             y0 = self.e.get('etiqueta_y', 120)   # debajo de la barra de vida de los juegos (16 px del lienzo a 6x)
             d.rectangle([40, y0, 40 + w + 40, y0 + 60], fill=(*self.fondo, 210))
             d.rectangle([40, y0, 48, y0 + 60], fill=color(c['acento']))
-            d.text((68, y0 + 30), texto, font=ft, fill=color(c['texto']), anchor='lm')
+            pintar(d, (68, y0 + 30), texto, ft, color(c['texto']), 'lm')
         elif texto:
             t = f * self.dur; visible = min(1, t / 0.4, (self.e.get('rotulo', self.dur) - t) / 0.4)
             if visible > 0:
                 c = self.g['colores']; d = ImageDraw.Draw(im, 'RGBA')
-                ft = fuente('bold', 52 if horizontal() else 60)
+                ft = fuente('bold', 52 if horizontal() else 60, texto)
                 w = d.textlength(texto, font=ft); alto = 96
                 y0 = H - (150 if horizontal() else 520)
                 x0 = 80 if horizontal() else (W - w) / 2 - 40
                 fondo = (*self.fondo, round(200 * visible))
                 d.rounded_rectangle([x0, y0, x0 + w + 80, y0 + alto], 18, fill=fondo)
                 d.rectangle([x0, y0, x0 + 10, y0 + alto], fill=(*color(c['acento']), round(255 * visible)))
-                d.text((x0 + 45, y0 + alto / 2), texto, font=ft, fill=(*color(c['texto']), round(255 * visible)), anchor='lm')
+                pintar(d, (x0 + 45, y0 + alto / 2), texto, ft, (*color(c['texto']), round(255 * visible)), 'lm')
         return im
 
     def dialogo(self, im, t):
@@ -301,9 +332,9 @@ class Escena:
         if aparece <= 0:
             return
         if horizontal():
-            x0, y0, x1, y1, tam = 60, H - 330, W - 60, H - 36, 30
+            x0, y0, x1, y1, tam = 60, H - 330, W - 60, H - 36, 32 if JAPONES else 30   # en japonés, múltiplos de 8: Misaki no se emborrona
         else:
-            x0, y0, x1, y1, tam = 40, 1150, W - 40, 1470, 27
+            x0, y0, x1, y1, tam = 40, 1150, W - 40, 1470, 24 if JAPONES else 27
         d = ImageDraw.Draw(im, 'RGBA')
         # la ventana: borde blanco doble y fondo azul de SNES, un poco transparente
         a = round(235 * aparece)
@@ -320,14 +351,14 @@ class Escena:
             cara.putalpha(cara.getchannel('A').point(lambda v: round(v * aparece)))
         im.paste(cara, (px, py), cara)
         # la placa del nombre, montada en el borde de arriba
-        fn = ImageFont.truetype(PIXEL, 24); wn = d.textlength(pr['nombre'], font=fn)
+        fn = pixel(24, pr['nombre']); wn = d.textlength(pr['nombre'], font=fn)
         nx = px + lado + 40
         d.rectangle([nx, y0 - 26, nx + wn + 36, y0 + 18], fill=(*color(c['acento']), a), outline=(255, 255, 255, a), width=4)
         r_, g_, b_ = color(c['acento']); claro = 0.299 * r_ + 0.587 * g_ + 0.114 * b_ > 150   # con acento claro, letra oscura
         d.text((nx + 18, y0 - 4), pr['nombre'], font=fn, fill=((20, 20, 30, a) if claro else (255, 255, 255, a)), anchor='lm')
         # el texto, escribiéndose: termina un poco antes que la voz
         texto = self.e.get('dice') or self.e.get('voz') or ''
-        ft = ImageFont.truetype(PIXEL, tam); tx = px + lado + 40; ancho = x1 - 40 - tx
+        ft = pixel(tam, texto); tx = px + lado + 40; ancho = x1 - 40 - tx
         lineas, actual = [], ''
         for palabra in texto.split():
             prueba = (actual + ' ' + palabra).strip()
@@ -341,7 +372,7 @@ class Escena:
         for linea in lineas:
             if resto <= 0:
                 break
-            d.text((tx, y), linea[:resto], font=ft, fill=(255, 255, 255, a))
+            pintar(d, (tx, y), linea[:resto], ft, (255, 255, 255, a))
             resto -= len(linea) + 1; y += round(tam * 1.75)
         if cuantas >= len(texto) and int(t * 3) % 2 == 0:   # el ▼ de «sigue»
             vx, vy = x1 - 50, y1 - 46
@@ -403,15 +434,15 @@ class Escena:
         else:
             tam = 150 if not horizontal() else 120
             while True:
-                fm = fuente('heavy', tam); w = d.textlength(m['nombre'], font=fm)
+                fm = fuente('heavy', tam, m['nombre']); w = d.textlength(m['nombre'], font=fm)
                 if w <= W - 200 or tam <= 60:
                     break
                 tam -= 6
-            d.text(((W - w) / 2 - (20 if m.get('punto') else 0), Y(850)), m['nombre'], font=fm, fill=mezcla(c['texto']), anchor='ls')
+            pintar(d, ((W - w) / 2 - (20 if m.get('punto') else 0), Y(850)), m['nombre'], fm, mezcla(c['texto']), 'ls')
             if m.get('punto'):
                 r = 20; cx = (W + w) / 2 + 10; cy = Y(850) - r
                 d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=mezcla(m['punto']))
-        d.text((W / 2, Y(930)), m['lema'], font=fuente('demi', 64 if not horizontal() else 52), fill=mezcla(c['acento']), anchor='ma')
+        pintar(d, (W / 2, Y(930)), m['lema'], fuente('demi', 64 if not horizontal() else 52, m['lema']), mezcla(c['acento']), 'ma')
         if m.get('insignia'):
             # la insignia oficial de la tienda, tal cual (sólo se escala, con suavizado), en lugar de la píldora
             # del sitio, y la nota de marca abajo, como piden las reglas de la insignia de Google Play
@@ -420,26 +451,26 @@ class Escena:
             ins.putalpha(ins.getchannel('A').point(lambda v: round(v * a)))
             im.paste(ins, ((W - ins.size[0]) // 2, Y(1040)), ins)
             if m.get('legal'):
-                d.text((W / 2, Y(1480)), m['legal'], font=fuente('regular', 30 if not horizontal() else 24), fill=mezcla(c['tenue']), anchor='ma')
+                pintar(d, (W / 2, Y(1480)), m['legal'], fuente('regular', 30 if not horizontal() else 24, m['legal']), mezcla(c['tenue']), 'ma')
         else:
             t0 = 72 if not horizontal() else 58
-            fs = fuente('bold', t0); ws = d.textlength(m['sitio'], font=fs)
+            fs = fuente('bold', t0, m['sitio']); ws = d.textlength(m['sitio'], font=fs)
             if ws > W - 200:
-                fs = fuente('bold', round(t0 * (W - 200) / ws)); ws = d.textlength(m['sitio'], font=fs)
+                fs = fuente('bold', round(t0 * (W - 200) / ws), m['sitio']); ws = d.textlength(m['sitio'], font=fs)
             alto = 130 if not horizontal() else 104
             d.rounded_rectangle([W / 2 - ws / 2 - 50, Y(1080), W / 2 + ws / 2 + 50, Y(1080) + alto], alto / 2, fill=mezcla(c['acento']))
-            d.text((W / 2, Y(1080) + alto / 2), m['sitio'], font=fs, fill=mezcla(c.get('sobre_acento', c['fondo'])), anchor='mm')
+            pintar(d, (W / 2, Y(1080) + alto / 2), m['sitio'], fs, mezcla(c.get('sobre_acento', c['fondo'])), 'mm')
         if m.get('pie'):
-            d.text((W / 2, Y(1300 if not m.get('insignia') else 1320)), m['pie'], font=fuente('medium', 44 if not horizontal() else 36), fill=mezcla(c['tenue']), anchor='ma')
+            pintar(d, (W / 2, Y(1300 if not m.get('insignia') else 1320)), m['pie'], fuente('medium', 44 if not horizontal() else 36, m['pie']), mezcla(c['tenue']), 'ma')
         return im
 
 
 def main():
-    global W, H, TODO_PIXEL
+    global W, H, TODO_PIXEL, JAPONES
     g = json.load(open(sys.argv[1], encoding='utf-8'))
     if g.get('formato') == 'horizontal':
         W, H = 1920, 1080
-    TODO_PIXEL = g.get('fuente') == 'pixel'
+    TODO_PIXEL = g.get('fuente') in ('pixel', 'pixel-ja'); JAPONES = g.get('fuente') == 'pixel-ja'
     base = os.path.dirname(os.path.abspath(sys.argv[1]))
     for e in g['escenas']:
         for k in ('imagen', 'video'):

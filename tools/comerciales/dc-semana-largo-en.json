@@ -1,0 +1,195 @@
+{
+ "fuente": "pixel",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/dc-semana-largo-en.mp4",
+ "formato": "horizontal",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "bpm": 104,
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#93e2dd",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "dc/logo.png",
+  "logo_ancho": 708,
+  "lema": "A new challenge every day",
+  "sitio": "dailychallenge.click",
+  "pie": "Free, in the browser, no download"
+ },
+ "escenas": [
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "A week in Daily Challenge",
+   "cara": "feliz",
+   "capitulo": "What is Daily Challenge",
+   "voz": "Hi! I'm LeIA. In Daily Challenge there's a new challenge every day: a retro game, the same level for everyone, and one leaderboard.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "A new challenge every day",
+   "cara": "normal",
+   "voz": "Get the best score of the day, and the winning run gets recorded. These are last week's.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "TUESDAY · GALAGA",
+   "cara": "normal",
+   "voz": "Tuesday was Galaga: the formation dives at you, and you have to shoot it down before it reaches you.",
+   "dur": 8.6,
+   "capitulo": "Galaga",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/mrdo.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "WEDNESDAY · MR. DO!",
+   "cara": "sorpresa",
+   "voz": "Wednesday, Mr. Do! You dig the orchard, collect cherries, and squash monsters with apples.",
+   "dur": 8.6,
+   "capitulo": "Mr. Do!",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/columns.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "THURSDAY · JEWELS",
+   "cara": "pensando",
+   "voz": "Thursday, Jewels: three matching gems in a row, and if you chain combos, the score explodes.",
+   "dur": 8.6,
+   "capitulo": "Jewels",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/burgertime.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "FRIDAY · BURGERTIME",
+   "cara": "feliz",
+   "voz": "BurgerTime Friday. You walk over the ingredients to build burgers while they chase you.",
+   "dur": 8.6,
+   "capitulo": "BurgerTime",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "SATURDAY · PAC-MAN",
+   "cara": "guino",
+   "voz": "Saturday, Pac-Man. No introduction needed: maze, dots and ghosts.",
+   "dur": 8.6,
+   "capitulo": "Pac-Man",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/rallyx.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "SUNDAY · RALLY-X",
+   "cara": "sorpresa",
+   "voz": "Rally-X Sunday: ten flags to collect, with the red cars right on your tail.",
+   "dur": 8.6,
+   "capitulo": "Rally-X",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/asteroids.mp4",
+   "desde": 0.3,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 500,
+   "radio": 12,
+   "texto": "MONDAY · ASTEROIDS",
+   "cara": "enojo",
+   "voz": "And Monday, Asteroids. Turn, thrust, and blast the rocks to pieces. Don't crash!",
+   "dur": 8.6,
+   "capitulo": "Asteroids",
+   "hasta": 8.0
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Play free",
+   "voz": "Which game is up tomorrow? Come in and find out. It's free, in the browser, at dailychallenge dot click.",
+   "dice": "Which game is up tomorrow? Come in and find out. It's free, in the browser: dailychallenge.click"
+  }
+ ]
+}

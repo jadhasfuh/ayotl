@@ -1,0 +1,88 @@
+{
+ "fuente": "pixel-ja",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "ターン制の砲撃バトル",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "無料・ブラウザで・ダウンロード不要"
+ },
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-short-ja.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/cortos-juntos.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 0,
+   "dur": 8.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "爆弾 · 奈落へ",
+   "cara": "feliz",
+   "voz": "見て！チャトの爆弾で…ククが奈落へ！"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 8.0,
+   "dur": 5.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "ヘッドショット",
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！頭に直撃。"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 13.0,
+   "dur": 5.7,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "手りゅう弾",
+   "cara": "feliz",
+   "voz": "ネナの反撃…さよなら、ベト！"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 18.7,
+   "dur": 7.8,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "226ピクセル",
+   "cara": "sorpresa",
+   "voz": "ルディが二百二十六ピクセル吹っ飛んだ！"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 26.5,
+   "dur": 8.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "赤の勝ち",
+   "cara": "enojo",
+   "voz": "最後は、ハードが容赦なし。赤の勝ち！"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "ウォーゾーンでCPU対CPU。デイリーチャレンジ・ドット・クリック、スラッシュ、ウォーゾーンで無料。",
+   "dice": "War ZoneでCPU対CPU。無料で遊べます: dailychallenge.click/warzone"
+  }
+ ]
+}

@@ -13,7 +13,8 @@ Adrián, 27-oct-2026: el título empieza con la app en mayúsculas («DAILY CHAL
 «JLPTEST: Vocabulario N5»); la descripción lleva los enlaces a la página y, cuando la app ya es pública en la
 tienda, a Google Play y a la App Store (se comprueba al subir: la ficha de Play da 200, la de Apple sale en
 el lookup de iTunes); y cada vídeo va a la lista de reproducción de su app («Daily Challenge» ya existía; las
-otras se crean solas). Cada entrada del plan dice su `app` (dc, warzone, kazan, jlptest). Los capítulos salen
+otras se crean solas). Cada entrada del plan dice su `app` (dc, warzone, kazan, jlptest) y, si no es en español, su `idioma` (en, ja: las
+versiones de los vídeos de LeIA, que salen el mismo día que la española, a las 18:20 y 18:40). Los capítulos salen
 de <vídeo>.capitulos.json si existe. Una entrada con id y `"actualizar": true` no se sube: se le cambian
 título, descripción y lista (p. ej. la que Adrián subió a mano) y se le quita la marca.
 """
@@ -24,14 +25,19 @@ sys.path.insert(0, os.path.expanduser('~/Documents/code challenge'))
 PLAN = os.path.join(AQUI, 'youtube.json')
 
 APPS = {
-    'dc': {'nombre': 'Daily Challenge', 'web': 'https://dailychallenge.click', 'juega': 'Juega gratis en el navegador',
-           'play': 'click.dailychallenge.twa', 'ios': None},
-    'warzone': {'nombre': 'War Zone', 'web': 'https://dailychallenge.click/warzone', 'juega': 'Juega gratis en el navegador',
-                'play': 'dev.ayotl.warzone', 'ios': 'dev.ayotl.warzone'},
-    'kazan': {'nombre': 'Kazan', 'web': 'https://kazan.dailychallenge.click', 'juega': 'Juega gratis en el navegador',
-              'play': 'dev.ayotl.kazan', 'ios': 'dev.ayotl.kazan'},
-    'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'Practica gratis',
-                'play': 'org.jlptest.twa', 'ios': None},
+    'dc': {'nombre': 'Daily Challenge', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None},
+    'warzone': {'nombre': 'War Zone', 'web': 'https://dailychallenge.click/warzone', 'juega': 'juega', 'play': 'dev.ayotl.warzone', 'ios': 'dev.ayotl.warzone'},
+    'kazan': {'nombre': 'Kazan', 'web': 'https://kazan.dailychallenge.click', 'juega': 'juega', 'play': 'dev.ayotl.kazan', 'ios': 'dev.ayotl.kazan'},
+    'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'practica', 'play': 'org.jlptest.twa', 'ios': None},
+}
+# los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)
+TEXTOS = {
+    'es': {'juega': '▶ Juega gratis en el navegador', 'practica': '▶ Practica gratis', 'play': '📱 Android, en Google Play', 'ios': '🍎 iPhone y iPad, en la App Store',
+           'capitulos': 'Capítulos', 'mas': 'Más apps y juegos de Ayotl'},
+    'en': {'juega': '▶ Play free in the browser', 'practica': '▶ Practice for free', 'play': '📱 Android, on Google Play', 'ios': '🍎 iPhone and iPad, on the App Store',
+           'capitulos': 'Chapters', 'mas': 'More apps and games by Ayotl'},
+    'ja': {'juega': '▶ ブラウザで無料で遊べます', 'practica': '▶ 無料で練習', 'play': '📱 Android（Google Play）', 'ios': '🍎 iPhone・iPad（App Store）',
+           'capitulos': 'チャプター', 'mas': 'Ayotlのほかのアプリとゲーム'},
 }
 _tiendas = {}
 
@@ -57,28 +63,29 @@ def en_app_store(bundle):
     return res[0].get('trackViewUrl') if res else None
 
 
-def enlaces(app):
+def enlaces(app, idioma='es'):
     """Las líneas de enlaces de una app: la página siempre; las tiendas, cuando ya son públicas."""
-    a = APPS[app]
+    a = APPS[app]; t = TEXTOS[idioma]
     if app not in _tiendas:
         _tiendas[app] = (en_play(a['play']) if a['play'] else None, en_app_store(a['ios']) if a['ios'] else None)
     play, ios = _tiendas[app]
-    lineas = [f"▶ {a['juega']}: {a['web']}"]
+    lineas = [f"{t[a['juega']]}: {a['web']}"]
     if play:
-        lineas.append(f'📱 Android, en Google Play: {play}')
+        lineas.append(f"{t['play']}: {play}")
     if ios:
-        lineas.append(f'🍎 iPhone y iPad, en la App Store: {ios}')
+        lineas.append(f"{t['ios']}: {ios}")
     return '\n'.join(lineas)
 
 
 def descripcion(v):
-    partes = [v['descripcion'].rstrip(), enlaces(v['app'])]
+    idioma = v.get('idioma', 'es'); t = TEXTOS[idioma]
+    partes = [v['descripcion'].rstrip(), enlaces(v['app'], idioma)]
     caps = os.path.join(AQUI, v['video'][:-4] + '.capitulos.json')
     if os.path.exists(caps):
         lista = json.load(open(caps, encoding='utf-8'))
         if len(lista) >= 3 and lista[0]['t'] == 0:   # YouTube pide empezar en 0:00 y al menos tres
-            partes.append('Capítulos\n' + '\n'.join(f"{minuto(c['t'])} {c['titulo']}" for c in lista))
-    partes.append('Más apps y juegos de Ayotl: https://ayotl.dev')
+            partes.append(t['capitulos'] + '\n' + '\n'.join(f"{minuto(c['t'])} {c['titulo']}" for c in lista))
+    partes.append(f"{t['mas']}: https://ayotl.dev")
     if v.get('cierre'):
         partes.append(v['cierre'])
     return '\n\n'.join(partes)
@@ -109,7 +116,7 @@ def main():
     from ttcode.youtube import actualizar_video, subir_video
     for v in cambios:
         print('== actualizar', v['clave'], v['id'])
-        actualizar_video(v['id'], v['titulo'], descripcion(v), v['etiquetas'], categoria=v['categoria'], idioma='es',
+        actualizar_video(v['id'], v['titulo'], descripcion(v), v['etiquetas'], categoria=v['categoria'], idioma=v.get('idioma', 'es'),
                          lista=APPS[v['app']]['nombre'])
         del v['actualizar']
         json.dump(plan, open(PLAN, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -120,7 +127,7 @@ def main():
         print('==', v['clave'], '->', v['publicar'])
         mini = os.path.join(AQUI, v['miniatura']) if v.get('miniatura') else None
         v['id'] = subir_video(v['titulo'], descripcion(v), v['etiquetas'], mp4, mini, programar=v['publicar'],
-                              categoria=v['categoria'], idioma='es', lista=APPS[v['app']]['nombre'])
+                              categoria=v['categoria'], idioma=v.get('idioma', 'es'), lista=APPS[v['app']]['nombre'])
         json.dump(plan, open(PLAN, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('listo')
 

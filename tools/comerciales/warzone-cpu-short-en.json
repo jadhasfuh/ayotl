@@ -1,0 +1,88 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Turn-based artillery",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Free, in the browser, no download"
+ },
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-short-en.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/cortos-juntos.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 0,
+   "dur": 8.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "BOMB · INTO THE VOID",
+   "cara": "feliz",
+   "voz": "Look at this! A bomb from Chato… and Cuca goes into the void!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 8.0,
+   "dur": 5.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "HEADSHOT",
+   "cara": "sorpresa",
+   "voz": "Headshot! Right in the head."
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 13.0,
+   "dur": 5.7,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "GRENADE",
+   "cara": "feliz",
+   "voz": "Nena strikes back… bye, Beto!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 18.7,
+   "dur": 7.8,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "226 PIXELS",
+   "cara": "sorpresa",
+   "voz": "Rudy flies two hundred twenty-six pixels!"
+  },
+  {
+   "video": "warzone-cpu/cortos-juntos.mp4",
+   "desde": 26.5,
+   "dur": 8.0,
+   "ancho": 700,
+   "radio": 12,
+   "texto": "RED WINS",
+   "cara": "enojo",
+   "voz": "And in the end, hard mode shows no mercy. Red wins!"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "CPU versus CPU in War Zone. Play free: dailychallenge dot click, slash warzone.",
+   "dice": "CPU vs CPU in War Zone. Play free: dailychallenge.click/warzone"
+  }
+ ]
+}

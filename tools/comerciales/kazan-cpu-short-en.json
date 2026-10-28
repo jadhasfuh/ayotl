@@ -1,0 +1,79 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Real-time strategy",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Free, in the browser"
+ },
+ "bpm": 84,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-cpu-short-en.mp4",
+ "escenas": [
+  {
+   "video": "kazan-cpu/corto-1.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 8.5,
+   "texto": "KAZAN · 8 CPU",
+   "cara": "feliz",
+   "voz": "Hi! I'm LeIA. On this Kazan island, eight computers play on their own."
+  },
+  {
+   "video": "kazan-cpu/corto-2.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 10.0,
+   "texto": "FIRST ARMY",
+   "cara": "normal",
+   "voz": "Yellow builds an army and goes looking for a fight."
+  },
+  {
+   "video": "kazan-cpu/corto-4.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 8.7,
+   "texto": "ERUPTION",
+   "cara": "sorpresa",
+   "voz": "But the volcano wakes up, and the lava starts flowing!"
+  },
+  {
+   "video": "kazan-cpu/corto-3.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 9.7,
+   "texto": "PURPLE FALLS",
+   "cara": "enojo",
+   "voz": "Yellow shows no mercy: one city after another."
+  },
+  {
+   "video": "kazan-cpu/corto-5.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 9.7,
+   "texto": "ONE NATION LEFT",
+   "cara": "feliz",
+   "voz": "And in the end, a single nation remains. Would your city hold?"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Play free at kazan dot dailychallenge dot click.",
+   "dice": "Play free at kazan.dailychallenge.click"
+  }
+ ]
+}

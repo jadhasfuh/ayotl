@@ -1,0 +1,162 @@
+{
+ "fuente": "pixel",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/dc-semana-short-en.mp4",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "bpm": 104,
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#93e2dd",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "dc/logo.png",
+  "logo_ancho": 944,
+  "lema": "A new challenge every day",
+  "sitio": "dailychallenge.click",
+  "pie": "Free, in the browser, no download"
+ },
+ "escenas": [
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 0.5,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "A week in Daily Challenge",
+   "cara": "feliz",
+   "voz": "Hi! I'm LeIA. This is the latest week of Daily Challenge: a different retro game every day.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/galaga.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "TUESDAY · GALAGA",
+   "cara": "normal",
+   "voz": "Tuesday: Galaga. Shoot down the formation as it dives.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/mrdo.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "WEDNESDAY · MR. DO!",
+   "cara": "sorpresa",
+   "voz": "Wednesday: Mr. Do! Squash the monsters with apples.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/columns.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "THURSDAY · JEWELS",
+   "cara": "pensando",
+   "voz": "Thursday: Jewels. Match three gems, and chain those combos.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/burgertime.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "FRIDAY · BURGERTIME",
+   "cara": "feliz",
+   "voz": "Friday: BurgerTime. Build burgers without getting caught.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/pacman.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "SATURDAY · PAC-MAN",
+   "cara": "guino",
+   "voz": "Saturday: Pac-Man. The classic.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/rallyx.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "SUNDAY · RALLY-X",
+   "cara": "sorpresa",
+   "voz": "Sunday: Rally-X, with the red cars right on your tail.",
+   "hasta": 8.0
+  },
+  {
+   "video": "dc/reels/asteroids.mp4",
+   "desde": 1.2,
+   "recorte": [
+    60,
+    408,
+    960,
+    1160
+   ],
+   "ancho": 560,
+   "radio": 16,
+   "texto": "MONDAY · ASTEROIDS",
+   "cara": "enojo",
+   "voz": "And Monday: Asteroids. Those rocks won't break themselves!",
+   "hasta": 8.0
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "And tomorrow? Surprise. Play free at dailychallenge dot click.",
+   "dice": "And tomorrow? Surprise. Play free at dailychallenge.click"
+  }
+ ]
+}

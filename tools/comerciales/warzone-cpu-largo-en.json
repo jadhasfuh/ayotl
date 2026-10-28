@@ -1,0 +1,146 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Turn-based artillery",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Free, in the browser, no download"
+ },
+ "formato": "horizontal",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-cpu-largo-en.mp4",
+ "musica": {
+  "archivo": "warzone-cpu/largo-editado.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 0,
+   "dur": 16.9,
+   "texto": "WAR ZONE · CPU VS CPU",
+   "cara": "feliz",
+   "voz": "Hi! I'm LeIA. Today in War Zone: a battle on the volcano, four against four, and both computers fight on their own. Blue plays on normal, and Red on hard.",
+   "capitulo": "The battle"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 16.9,
+   "dur": 7.5,
+   "texto": "BLUE 3 · RED 4",
+   "cara": "sorpresa",
+   "voz": "Whoa! Rudy opens with the laser, and Nino falls first.",
+   "capitulo": "First down"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 24.4,
+   "dur": 25.6,
+   "texto": "BLUE 3 · RED 3",
+   "cara": "feliz",
+   "voz": "But Chato answers with a bomb… and Cuca flies into the void! Three on three."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 50.0,
+   "dur": 39.0,
+   "texto": "BLUE 3 · RED 3",
+   "cara": "pensando",
+   "voz": "Every explosion eats the ground. On the volcano, nobody is safe."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 89.0,
+   "dur": 12.2,
+   "texto": "BLUE 2 · RED 3",
+   "cara": "triste",
+   "voz": "Oh no! A bomb from Tito sends Chato flying a hundred and fifty-eight pixels.",
+   "capitulo": "Chato into the void"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 101.2,
+   "dur": 5.9,
+   "texto": "BLUE 1 · RED 3",
+   "cara": "sorpresa",
+   "voz": "Headshot by Rudy! Nena is alone against three.",
+   "capitulo": "Headshot"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 107.1,
+   "dur": 31.1,
+   "texto": "BLUE 1 · RED 2",
+   "cara": "feliz",
+   "voz": "But Nena doesn't give up. Grenade… and Beto into the void!",
+   "capitulo": "Nena against everyone"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 138.2,
+   "dur": 19.6,
+   "texto": "BLUE 1 · RED 1",
+   "cara": "sorpresa",
+   "voz": "Another one! Rudy flies two hundred twenty-six pixels. One on one: Nena versus Tito.",
+   "capitulo": "One on one"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 157.8,
+   "dur": 6.57,
+   "texto": "BLUE 1 · RED 1",
+   "cara": "enojo",
+   "voz": "Tito plays on hard, and it shows: every grenade of his hurts."
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 164.37,
+   "dur": 14.73,
+   "texto": "BLUE 1 · RED 1",
+   "cara": "triste",
+   "voz": "Nena is down to six health. It's her last chance…"
+  },
+  {
+   "video": "warzone-cpu/largo-editado.mp4",
+   "completo": true,
+   "desde": 179.1,
+   "dur": 6.2,
+   "texto": "RED WINS",
+   "cara": "enojo",
+   "voz": "And Tito finishes her. Red wins!",
+   "capitulo": "Red wins"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Play free",
+   "voz": "Dare to face hard mode? Play free in the browser: dailychallenge dot click, slash warzone.",
+   "dice": "Dare to face hard mode? Play free in the browser: dailychallenge.click/warzone"
+  }
+ ]
+}

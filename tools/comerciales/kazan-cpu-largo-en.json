@@ -1,0 +1,211 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Real-time strategy",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Free, in the browser"
+ },
+ "formato": "horizontal",
+ "bpm": 80,
+ "volumen_musica": 0.8,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-cpu-largo-en.mp4",
+ "escenas": [
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 0,
+   "dur": 18.83,
+   "texto": "KAZAN · 8 CPU",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "Hi! I'm LeIA. Today in Kazan: one island, one volcano, and eight nations played by the computer. Nobody controls them: they're on their own.",
+   "capitulo": "Eight nations"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 18.83,
+   "dur": 20.0,
+   "texto": "2:24 · FIRST ARMY",
+   "etiqueta_y": 90,
+   "cara": "normal",
+   "voz": "At minute two, Yellow already sends its first army, against Pink.",
+   "capitulo": "First army"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 38.83,
+   "dur": 24.17,
+   "texto": "3:41 · FIRST ATTACK",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "White attacks Orange, and four armies end up surrounding it."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 63.0,
+   "dur": 6.7,
+   "texto": "5:00 · ERUPTION",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "And at minute five, the volcano wakes up!",
+   "capitulo": "The eruption"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 69.7,
+   "dur": 26.3,
+   "texto": "ORANGE FALLS",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "With the lava coming down, White conquers Orange. First nation out.",
+   "capitulo": "Orange falls"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 96.0,
+   "dur": 24.83,
+   "texto": "PINK HOLDS",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "Meanwhile, Yellow lays siege to Pink. The city holds… for now."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 120.83,
+   "dur": 35.84,
+   "texto": "THE LAVA",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "The lava swallows the red base. Without a base, its people won't last long.",
+   "capitulo": "The lava"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 156.67,
+   "dur": 9.93,
+   "texto": "RED FALLS",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "And Red falls."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 166.6,
+   "dur": 11.73,
+   "texto": "PINK FALLS",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "Yellow finally conquers Pink!",
+   "capitulo": "Yellow advances"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 178.33,
+   "dur": 24.07,
+   "texto": "LAVA 25%",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "The lava already covers a quarter of the island. Space is running out."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 202.4,
+   "dur": 25.47,
+   "texto": "PURPLE FALLS",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "And Yellow conquers Purple too! That's three."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 227.87,
+   "dur": 43.23,
+   "texto": "LAVA 50%",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "Half the island in lava. Yellow, White, Blue and Cyan remain.",
+   "capitulo": "Half the island in lava"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 271.1,
+   "dur": 15.33,
+   "texto": "BLUE AND CYAN FALL",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "The lava swallows the blue base, and White takes Cyan."
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 286.43,
+   "dur": 15.17,
+   "texto": "LAVA 75%",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "Three quarters of the island in lava. Only two left: Yellow against White.",
+   "capitulo": "The end"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 301.6,
+   "dur": 6.0,
+   "texto": "YELLOW WINS",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "Yellow wins! A single nation remains.",
+   "capitulo": "Yellow wins"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "Play free",
+   "voz": "Would your city hold? Play free at kazan dot dailychallenge dot click.",
+   "dice": "Would your city hold? Play free at kazan.dailychallenge.click"
+  }
+ ]
+}

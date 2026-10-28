@@ -1,0 +1,212 @@
+{
+ "fuente": "pixel-ja",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "リアルタイムストラテジー",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "無料・ブラウザで遊べる"
+ },
+ "formato": "horizontal",
+ "bpm": 80,
+ "volumen_musica": 0.8,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-cpu-largo-ja.mp4",
+ "escenas": [
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 0,
+   "dur": 18.83,
+   "texto": "KAZAN · CPU 8体",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のカザンは、島ひとつ、火山ひとつ、そしてコンピューターが動かす八つの国。誰も操作しません。",
+   "capitulo": "八つの国",
+   "dice": "こんにちは！LeIAです。今日のKazanは、島ひとつ、火山ひとつ、そしてコンピューターが動かす8つの国。誰も操作しません。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 18.83,
+   "dur": 20.0,
+   "texto": "2:24 · 最初の軍",
+   "etiqueta_y": 90,
+   "cara": "normal",
+   "voz": "二分で、黄色がもう最初の軍をピンクへ送る。",
+   "capitulo": "最初の軍"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 38.83,
+   "dur": 24.17,
+   "texto": "3:41 · 最初の攻撃",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "白がオレンジを攻め、四つの軍に囲まれてしまう。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 63.0,
+   "dur": 6.7,
+   "texto": "5:00 · 噴火",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "そして五分、火山が目を覚ます！",
+   "capitulo": "噴火"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 69.7,
+   "dur": 26.3,
+   "texto": "オレンジが落ちる",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "溶岩が迫るなか、白がオレンジを征服。最初の脱落。",
+   "capitulo": "オレンジが落ちる"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 96.0,
+   "dur": 24.83,
+   "texto": "ピンクは耐える",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "その間、黄色がピンクを包囲。街はまだ…もっている。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 120.83,
+   "dur": 35.84,
+   "texto": "溶岩",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "溶岩が赤の本拠地を飲み込む。本拠地なしでは長くもたない。",
+   "capitulo": "溶岩"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 156.67,
+   "dur": 9.93,
+   "texto": "赤が落ちる",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "そして赤が落ちる。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 166.6,
+   "dur": 11.73,
+   "texto": "ピンクが落ちる",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "黄色がついにピンクを征服！",
+   "capitulo": "黄色が進む"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 178.33,
+   "dur": 24.07,
+   "texto": "溶岩 25%",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "溶岩はもう島の四分の一。場所がなくなっていく。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 202.4,
+   "dur": 25.47,
+   "texto": "紫が落ちる",
+   "etiqueta_y": 90,
+   "cara": "sorpresa",
+   "voz": "黄色は紫も征服！これで三つ。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 227.87,
+   "dur": 43.23,
+   "texto": "溶岩 50%",
+   "etiqueta_y": 90,
+   "cara": "pensando",
+   "voz": "島の半分が溶岩。残るは黄色、白、青、シアン。",
+   "capitulo": "島の半分が溶岩"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 271.1,
+   "dur": 15.33,
+   "texto": "青とシアンが落ちる",
+   "etiqueta_y": 90,
+   "cara": "triste",
+   "voz": "溶岩が青の本拠地を飲み込み、白がシアンを取る。"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 286.43,
+   "dur": 15.17,
+   "texto": "溶岩 75%",
+   "etiqueta_y": 90,
+   "cara": "enojo",
+   "voz": "島の四分の三が溶岩。残るは二つ、黄色対白。",
+   "capitulo": "終わり"
+  },
+  {
+   "video": "kazan-cpu/largo.mp4",
+   "completo": true,
+   "pixel": true,
+   "desde": 301.6,
+   "dur": 6.0,
+   "texto": "黄色の勝ち",
+   "etiqueta_y": 90,
+   "cara": "feliz",
+   "voz": "黄色の勝ち！残るは一国。",
+   "capitulo": "黄色の勝ち"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "capitulo": "無料で遊ぶ",
+   "voz": "あなたの街はもつ？カザン・ドット・デイリーチャレンジ・ドット・クリックで無料。",
+   "dice": "あなたの街はもつ？kazan.dailychallenge.click で無料で遊べます。"
+  }
+ ]
+}
