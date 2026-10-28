@@ -18,7 +18,8 @@
    "japonés en español",
    "nihongo",
    "jlptest"
-  ]
+  ],
+  "id": "-4IGR0ko8yI"
  },
  {
   "clave": "jlptest-n5-short",
@@ -35,7 +36,8 @@
    "japonés",
    "aprender japonés",
    "nihongo"
-  ]
+  ],
+  "id": "5UAk18KMqdM"
  },
  {
   "clave": "dc-semana-largo",
@@ -58,8 +60,7 @@
    "retro gaming"
   ],
   "id": "D9vSbcUIHtY",
-  "nota": "Lo subió Adrián desde Studio el 27-oct, público; es el vídeo de la ficha de Play de DC",
-  "actualizar": true
+  "nota": "Lo subió Adrián desde Studio el 27-oct, público; es el vídeo de la ficha de Play de DC"
  },
  {
   "clave": "dc-semana-largo-en",
@@ -81,7 +82,8 @@
    "Asteroids",
    "daily challenge",
    "retro gaming"
-  ]
+  ],
+  "id": "EMm4W3EDD_E"
  },
  {
   "clave": "dc-semana-largo-ja",
