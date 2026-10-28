@@ -51,6 +51,8 @@ export const hoyMx = () => new Date().toLocaleDateString("en-CA", { timeZone: "A
 export const publicados = (hoy = hoyMx()) => TODOS.filter((r) => r.fecha && r.fecha <= hoy);
 
 export const retoPorSlug = (slug: string) => publicados().find((r) => r.slug === slug);
+/** El reto que sale ese día (AAAA-MM-DD), publicado o programado: lo pide /api/reto-del-dia para el reel de Daily. */
+export const retoDelDia = (fecha: string) => TODOS.find((r) => r.fecha === fecha);
 
 /** Las secciones del canal, con el rótulo que llevan en el vídeo. */
 export const SECCIONES: Record<Reto["seccion"], string> = {
