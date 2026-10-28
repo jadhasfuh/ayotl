@@ -11,7 +11,8 @@ dura lo que su voz, más un respiro (o `dur`, si es más).
 
 El guion es un JSON:
 - `salida`, `voz`, `idioma`, `colores`, `marca`, `escenas`; opcionales `formato` («vertical», 1080x1920, o
-  «horizontal», 1920x1080), `bpm`, `musica` ({archivo, desde, volumen}: el sonido de un vídeo).
+  «horizontal», 1920x1080), `bpm`, `musica` ({archivo, desde, volumen}: el sonido de un vídeo) y `fuente`
+  («pixel»: todo el texto en Press Start 2P; va en los guiones de los juegos, no en jlptest ni Mercadito).
 - Una escena: `texto` (arriba) y su voz, que es `voz` (una frase con la voz del guion) o `voces` (una lista
   de {texto, voz?, idioma?, despues?}: varias frases seguidas, p. ej. el narrador en español y la palabra
   en japonés), o ninguna (sin narración; entonces dura `dur`). Lo que se ve:
@@ -46,9 +47,16 @@ JAPONESA = os.path.expanduser('~/Documents/jlptest/fuentes/ipaexg.ttf')
 PIXEL = os.path.expanduser('~/Documents/daily challenge/src/fonts/PressStart2P-Regular.ttf')   # la del diálogo
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 CACHE = os.path.expanduser('~/Documents/ayotl-voces')   # lo ya narrado, por huella (texto, voz, idioma)
+TODO_PIXEL = False      # `"fuente": "pixel"` en el guion: todo el texto en Press Start 2P (los vídeos de los juegos)
 
 
 def fuente(peso, tam):
+    """La fuente del texto: Avenir con su peso o, en los vídeos de los juegos, Press Start 2P (un solo peso).
+    Adrián, 27-oct-2026: en los vídeos de los juegos todo en fuente pixel, que estaban mezcladas; jlptest y
+    Mercadito siguen con la normal. La pixel es cuadrada (cada letra avanza lo que mide de alto), así que
+    va a 0,62 del tamaño pedido y en múltiplos de 8 px, donde sus píxeles caen enteros y no se emborrona."""
+    if TODO_PIXEL:
+        return ImageFont.truetype(PIXEL, max(16, int(tam * 0.62 / 8 + 0.5) * 8))
     idx = {'heavy': 8, 'bold': 0, 'demi': 2, 'medium': 5, 'regular': 7}[peso]
     return ImageFont.truetype(AVENIR, tam, index=idx)
 
@@ -238,8 +246,9 @@ class Escena:
             self.fija = self.cuenta(im, d); return self.fija.copy()
         # el texto arriba, con una raya del color de la marca
         ft = fuente('bold', 70 if not horizontal() else 60); y = 230 if not horizontal() else 70
+        salto = round(ft.size * 1.8) if TODO_PIXEL else (88 if not horizontal() else 76)
         for linea in partir(d, self.e['texto'], ft, W - 160):
-            d.text((W / 2, y), linea, font=ft, fill=color(c['texto']), anchor='ma'); y += 88 if not horizontal() else 76
+            d.text((W / 2, y), linea, font=ft, fill=color(c['texto']), anchor='ma'); y += salto
         d.rounded_rectangle([W / 2 - 60, y + 14, W / 2 + 60, y + 22], 4, fill=color(c['acento']))
         # la pantalla, con un acercamiento lento; una apaisada va centrada en el hueco que queda
         tar = self.tarjeta(f); z = 1 + 0.035 * f
@@ -426,10 +435,11 @@ class Escena:
 
 
 def main():
-    global W, H
+    global W, H, TODO_PIXEL
     g = json.load(open(sys.argv[1], encoding='utf-8'))
     if g.get('formato') == 'horizontal':
         W, H = 1920, 1080
+    TODO_PIXEL = g.get('fuente') == 'pixel'
     base = os.path.dirname(os.path.abspath(sys.argv[1]))
     for e in g['escenas']:
         for k in ('imagen', 'video'):

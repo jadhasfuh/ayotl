@@ -71,7 +71,7 @@ def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
         lg = lg.resize((round(lg.size[0] * k), round(lg.size[1] * k)), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 70 + lg.size[1]
     for linea in titulo.split('\n'):
         d.text((70, y), linea, font=ImageFont.truetype(PIXEL, 74), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
-    d.text((74, y + 20), sub, font=av('heavy', 52), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
+    d.text((74, y + 20), sub, font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))   # también pixel: en los juegos nada de Avenir (27-oct)
     l = leia(cara); im.alpha_composite(l, (W - l.size[0] - 20, H - l.size[1]))
     d.text((W - 250, 40), 'LeIA', font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
     im.convert('RGB').save(os.path.join(SAL, f'{nombre}.jpg'), quality=92)

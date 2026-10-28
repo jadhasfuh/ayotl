@@ -1,12 +1,13 @@
 [
  {
   "clave": "jlptest-n5-largo",
+  "app": "jlptest",
   "video": "salida/jlptest-n5-largo.mp4",
   "miniatura": "salida/jlptest-n5-largo.jpg",
   "categoria": "27",
   "publicar": "2026-10-28T18:00:00-06:00",
-  "titulo": "Vocabulario JLPT N5: 100 palabras esenciales con audio (escucha y repite)",
-  "descripcion": "Las 100 palabras del JLPT N5 que más vas a usar, en diez temas: familia, cuerpo, comida, casa, ropa, ciudad, tiempo, verbos, adjetivos y clima. Escucha cada palabra en japonés, repítela en voz alta en la pausa, y escúchala otra vez con su significado en español.\n\nPractica estas palabras con su audio, ejemplos y repaso espaciado en https://jlptest.org (la primera sección de cada nivel es gratis).",
+  "titulo": "JLPTEST: Vocabulario N5, 100 palabras esenciales con audio (escucha y repite)",
+  "descripcion": "Las 100 palabras del JLPT N5 que más vas a usar, en diez temas: familia, cuerpo, comida, casa, ropa, ciudad, tiempo, verbos, adjetivos y clima. Escucha cada palabra en japonés, repítela en voz alta en la pausa, y escúchala otra vez con su significado en español.\n\nEn jlptest practicas estas palabras con su audio, ejemplos y repaso espaciado; la primera sección de cada nivel es gratis.",
   "cierre": "#JLPT #JLPTN5 #japonés #aprenderjaponés #vocabulariojaponés #日本語",
   "etiquetas": [
    "JLPT",
@@ -21,11 +22,12 @@
  },
  {
   "clave": "jlptest-n5-short",
+  "app": "jlptest",
   "video": "salida/jlptest-n5-short.mp4",
   "categoria": "27",
   "publicar": "2026-10-29T18:00:00-06:00",
-  "titulo": "10 palabras del JLPT N5 que usarás todos los días #shorts",
-  "descripcion": "Agua, comer, ir, hoy, amigo… diez palabras del N5 con su pronunciación. Más vocabulario con audio en https://jlptest.org",
+  "titulo": "JLPTEST: 10 palabras del N5 que usarás todos los días #shorts",
+  "descripcion": "Agua, comer, ir, hoy, amigo… diez palabras del N5 con su pronunciación. En jlptest hay más vocabulario con audio.",
   "cierre": "#JLPT #japonés #aprenderjaponés #日本語",
   "etiquetas": [
    "JLPT",
@@ -37,12 +39,13 @@
  },
  {
   "clave": "dc-semana-largo",
+  "app": "dc",
   "video": "salida/dc-semana-largo.mp4",
   "miniatura": "salida/dc-semana-largo.jpg",
   "categoria": "20",
   "publicar": "2026-10-30T18:00:00-06:00",
-  "titulo": "7 días, 7 juegos retro: una semana de Daily Challenge",
-  "descripcion": "En Daily Challenge hay un reto nuevo cada día: un juego retro, el mismo nivel para todos y una sola tabla. LeIA te enseña las partidas ganadoras de la última semana: Galaga, Mr. Do!, Jewels, BurgerTime, Pac-Man, Rally-X y Asteroids.\n\nJuega gratis, en el navegador y sin descargar: https://dailychallenge.click\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "titulo": "DAILY CHALLENGE: Semana del 20/10 al 26/10, 7 días, 7 juegos retro con LeIA",
+  "descripcion": "En Daily Challenge hay un reto nuevo cada día: un juego retro, el mismo nivel para todos y una sola tabla. LeIA te enseña las partidas ganadoras de la semana del 20 al 26 de octubre: Galaga, Mr. Do!, Jewels, BurgerTime, Pac-Man, Rally-X y Asteroids.\n\nLeIA es la presentadora de los juegos de Ayotl.",
   "cierre": "#DailyChallenge #RetroGaming #Arcade #Videojuegos #IndieGame",
   "etiquetas": [
    "Daily Challenge",
@@ -55,15 +58,17 @@
    "retro gaming"
   ],
   "id": "D9vSbcUIHtY",
-  "nota": "Lo subió Adrián desde Studio el 27-oct, público; es el vídeo de la ficha de Play de DC"
+  "nota": "Lo subió Adrián desde Studio el 27-oct, público; es el vídeo de la ficha de Play de DC",
+  "actualizar": true
  },
  {
   "clave": "dc-semana-short",
+  "app": "dc",
   "video": "salida/dc-semana-short.mp4",
   "categoria": "20",
   "publicar": "2026-10-31T18:00:00-06:00",
-  "titulo": "Un juego retro distinto cada día 🕹️ #shorts",
-  "descripcion": "La última semana de Daily Challenge, con LeIA. Juega gratis en https://dailychallenge.click",
+  "titulo": "DAILY CHALLENGE: Semana del 20/10 al 26/10 en un minuto 🕹️ #shorts",
+  "descripcion": "La semana del 20 al 26 de octubre en Daily Challenge, con LeIA: un juego retro distinto cada día.",
   "cierre": "#DailyChallenge #RetroGaming #Arcade",
   "etiquetas": [
    "Daily Challenge",
@@ -74,12 +79,13 @@
  },
  {
   "clave": "warzone-cpu-largo",
+  "app": "warzone",
   "video": "salida/warzone-cpu-largo.mp4",
   "miniatura": "salida/warzone-cpu-largo.jpg",
   "categoria": "20",
   "publicar": "2026-11-01T18:00:00-06:00",
-  "titulo": "War Zone: CPU contra CPU, 4 contra 4 en el volcán (batalla completa)",
-  "descripcion": "Dos computadoras se enfrentan en War Zone, artillería por turnos con estilo Atari 2600: Azul en dificultad normal contra Rojo en difícil, cuatro contra cuatro en el volcán. Bombas, granadas, un headshot y monigotes volando al vacío, comentados por LeIA. La música es la del juego.\n\nJuega gratis, en el navegador y sin descargar: https://dailychallenge.click/warzone\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "titulo": "WAR ZONE: CPU contra CPU, 4 contra 4 en el volcán (batalla completa)",
+  "descripcion": "Dos computadoras se enfrentan en War Zone, artillería por turnos con estilo Atari 2600: Azul en dificultad normal contra Rojo en difícil, cuatro contra cuatro en el volcán. Bombas, granadas, un headshot y monigotes volando al vacío, comentados por LeIA. La música es la del juego.\n\nLeIA es la presentadora de los juegos de Ayotl.",
   "cierre": "#WarZone #RetroGaming #Atari2600 #Videojuegos #IndieGame",
   "etiquetas": [
    "War Zone",
@@ -93,11 +99,12 @@
  },
  {
   "clave": "warzone-cpu-short",
+  "app": "warzone",
   "video": "salida/warzone-cpu-short.mp4",
   "categoria": "20",
   "publicar": "2026-11-02T18:00:00-06:00",
-  "titulo": "CPU contra CPU: la difícil no perdona 💣 #shorts",
-  "descripcion": "Lo mejor de una batalla de War Zone entre dos computadoras, con LeIA. Juega gratis en https://dailychallenge.click/warzone",
+  "titulo": "WAR ZONE: CPU contra CPU, la difícil no perdona 💣 #shorts",
+  "descripcion": "Lo mejor de una batalla de War Zone entre dos computadoras, con LeIA.",
   "cierre": "#WarZone #RetroGaming #Atari2600",
   "etiquetas": [
    "War Zone",
@@ -108,12 +115,13 @@
  },
  {
   "clave": "kazan-cpu-largo",
+  "app": "kazan",
   "video": "salida/kazan-cpu-largo.mp4",
   "miniatura": "salida/kazan-cpu-largo.jpg",
   "categoria": "20",
   "publicar": "2026-11-03T18:00:00-06:00",
-  "titulo": "Kazan: 8 computadoras, una isla y un volcán (partida completa)",
-  "descripcion": "Ocho naciones jugadas por la computadora en una isla del desierto: construyen, entrenan ejércitos, se conquistan unas a otras… y a los cinco minutos despierta el volcán. LeIA comenta la partida completa, del primer ejército a la última ciudad en pie.\n\nKazan es estrategia en tiempo real con estilo retro: levanta tu ciudad, arma tu ejército y escapa de la lava. Cada semana hay un reto de la isla en línea.\n\nJuega gratis en el navegador: https://kazan.dailychallenge.click\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "titulo": "KAZAN: 8 computadoras, una isla y un volcán (partida completa)",
+  "descripcion": "Ocho naciones jugadas por la computadora en una isla del desierto: construyen, entrenan ejércitos, se conquistan unas a otras… y a los cinco minutos despierta el volcán. LeIA comenta la partida completa, del primer ejército a la última ciudad en pie.\n\nKazan es estrategia en tiempo real con estilo retro: levanta tu ciudad, arma tu ejército y escapa de la lava. Cada semana hay un reto de la isla en línea.\n\nLeIA es la presentadora de los juegos de Ayotl.",
   "cierre": "#Kazan #Estrategia #RTS #RetroGaming #Videojuegos #IndieGame",
   "etiquetas": [
    "Kazan",
@@ -128,11 +136,12 @@
  },
  {
   "clave": "kazan-cpu-short",
+  "app": "kazan",
   "video": "salida/kazan-cpu-short.mp4",
   "categoria": "20",
   "publicar": "2026-11-04T18:00:00-06:00",
-  "titulo": "Ocho computadoras, una isla, un volcán 🌋 #shorts",
-  "descripcion": "Una partida de Kazan jugada sólo por la CPU, con LeIA. Juega gratis en https://kazan.dailychallenge.click",
+  "titulo": "KAZAN: ocho computadoras, una isla, un volcán 🌋 #shorts",
+  "descripcion": "Una partida de Kazan jugada sólo por la CPU, con LeIA.",
   "cierre": "#Kazan #RTS #RetroGaming",
   "etiquetas": [
    "Kazan",
