@@ -473,6 +473,13 @@ def main():
     if g.get('formato') == 'horizontal':
         W, H = 1920, 1080
     TODO_PIXEL = g.get('fuente') in ('pixel', 'pixel-ja'); JAPONES = g.get('fuente') == 'pixel-ja'
+    if JAPONES:   # el punto medio latino no está en Misaki y mide distinto: se cambia antes de medir nada
+        ja = lambda t: t.replace('·', '・') if any(ord(ch) > 0x2E7F for ch in t) else t
+        for e in g['escenas']:
+            for k in ('texto', 'dice', 'nota', 'capitulo'):
+                if e.get(k): e[k] = ja(e[k])
+        for k in ('nombre', 'lema', 'pie', 'legal'):
+            if g['marca'].get(k): g['marca'][k] = ja(g['marca'][k])
     base = os.path.dirname(os.path.abspath(sys.argv[1]))
     for e in g['escenas']:
         for k in ('imagen', 'video'):
