@@ -361,10 +361,14 @@ class Escena:
         # el texto, escribiéndose: termina un poco antes que la voz
         texto = self.e.get('dice') or self.e.get('voz') or ''
         ft = pixel(tam, texto); tx = px + lado + 40; ancho = x1 - 40 - tx
+        # las líneas: por palabras; en japonés no hay espacios, así que por carácter (Adrián, 27-oct: las letras se
+        # salían del cuadro), sin empezar línea con 。、！？ ni cerrar paréntesis
+        ja = JAPONES and any(ord(ch) > 0x2E7F for ch in texto)
+        partes, sep = (list(texto), '') if ja else (texto.split(), ' ')
         lineas, actual = [], ''
-        for palabra in texto.split():
-            prueba = (actual + ' ' + palabra).strip()
-            if d.textlength(prueba, font=ft) > ancho and actual:
+        for palabra in partes:
+            prueba = (actual + sep + palabra) if actual else palabra
+            if d.textlength(prueba, font=ft) > ancho and actual and palabra not in '。、！？）」・':
                 lineas.append(actual); actual = palabra
             else:
                 actual = prueba
@@ -375,7 +379,7 @@ class Escena:
             if resto <= 0:
                 break
             pintar(d, (tx, y), linea[:resto], ft, (255, 255, 255, a))
-            resto -= len(linea) + 1; y += round(tam * 1.75)
+            resto -= len(linea) + len(sep); y += round(ft.size * 1.75)   # el salto va con la fuente real (Misaki sale un tercio más grande)
         if cuantas >= len(texto) and int(t * 3) % 2 == 0:   # el ▼ de «sigue»
             vx, vy = x1 - 50, y1 - 46
             d.polygon([(vx, vy), (vx + 22, vy), (vx + 11, vy + 14)], fill=(255, 255, 255, a))
