@@ -19,6 +19,8 @@ El guion es un JSON:
     una tarjeta debajo del texto;
   - `completo: true` con `video`: el vídeo llena el cuadro y el texto va abajo, en una franja;
   - `palabra: {jp, lectura, es, num?}`: la tarjeta de una palabra en japonés (fuente IPAex de jlptest);
+  - `cuenta: {numero, arriba, abajo}`: el número en grande (la cuenta regresiva al JLPT), con una línea
+    arriba y otra abajo;
   - `final: true`: la tarjeta de la marca.
   `capitulo` en una escena la apunta en `<salida>.capitulos.json` (minuto y título) para la descripción.
 - `presentadora` ({nombre, caras}: la carpeta con <nombre en minúsculas>-<cara>.png de 64x64): mientras habla
@@ -180,7 +182,7 @@ class Escena:
         self.e, self.g, self.dur, self.voz_dur = e, g, dur, voz_dur
         self.fondo = color(g['colores']['fondo'])
         self.fija = None   # el cuadro, si no cambia (la tarjeta de una palabra)
-        if e.get('final') or e.get('palabra'):
+        if e.get('final') or e.get('palabra') or e.get('cuenta'):
             return
         if e.get('completo'):   # el vídeo llena el cuadro
             self.clip = Clip(e['video'], e.get('desde', 0), e.get('recorte'), W, dur, e.get('pixel', False), alto=H, hasta=e.get('hasta'))
@@ -232,6 +234,8 @@ class Escena:
             return self.final(im, d, f)
         if self.e.get('palabra'):
             self.fija = self.palabra(im, d); return self.fija.copy()
+        if self.e.get('cuenta'):
+            self.fija = self.cuenta(im, d); return self.fija.copy()
         # el texto arriba, con una raya del color de la marca
         ft = fuente('bold', 70 if not horizontal() else 60); y = 230 if not horizontal() else 70
         for linea in partir(d, self.e['texto'], ft, W - 160):
@@ -334,6 +338,18 @@ class Escena:
             vx, vy = x1 - 50, y1 - 46
             d.polygon([(vx, vy), (vx + 22, vy), (vx + 11, vy + 14)], fill=(255, 255, 255, a))
 
+    def cuenta(self, im, d):
+        """La cuenta regresiva: «faltan», el número enorme, «días para el JLPT»."""
+        c = self.g['colores']; q = self.e['cuenta']
+        cx, cy = W / 2, H / 2 - (0 if horizontal() else 120)
+        d.text((cx, cy - (300 if horizontal() else 360)), q['arriba'], font=fuente('demi', 64 if horizontal() else 72), fill=color(c['tenue']), anchor='mm')
+        tam = 560 if horizontal() else 640
+        fn = fuente('heavy', tam); w = d.textlength(q['numero'], font=fn)
+        d.text((cx, cy + tam * 0.36), q['numero'], font=fn, fill=color(c['texto']), anchor='ms')
+        d.rounded_rectangle([cx - w / 2, cy + tam * 0.44, cx + w / 2, cy + tam * 0.44 + 12], 6, fill=color(c['acento']))
+        d.text((cx, cy + (400 if horizontal() else 480)), q['abajo'], font=fuente('bold', 64 if horizontal() else 76), fill=color(c['acento']), anchor='mm')
+        return im
+
     def palabra(self, im, d):
         """La tarjeta de una palabra: el japonés grande, la lectura encima y el significado debajo."""
         c = self.g['colores']; p = self.e['palabra']
@@ -343,6 +359,16 @@ class Escena:
         if self.e.get('texto'):
             d.text((cx, cy - (260 if horizontal() else 430)), self.e['texto'], font=fuente('bold', 50), fill=color(c['acento']), anchor='mm')
         tam = 230 if horizontal() else 250
+        if len(p['jp']) > 8:   # una frase, no una palabra: más chica y, si no cabe, en dos líneas por la coma o la mitad
+            tam = 110 if horizontal() else 96
+            fj = ImageFont.truetype(JAPONESA, tam)
+            if d.textlength(p['jp'], font=fj) > W - 160:
+                corte = p['jp'].find('、') + 1 or len(p['jp']) // 2
+                p = {**p, 'jp': p['jp'][:corte] + '\n' + p['jp'][corte:]}
+            d.multiline_text((cx, cy), p['jp'], font=fj, fill=color(c['texto']), anchor='mm', align='center', spacing=28)
+            if p.get('es'):
+                d.text((cx, cy + 200), p['es'], font=fuente('demi', 60), fill=color(c['acento']), anchor='mm')
+            return im
         fj = ImageFont.truetype(JAPONESA, tam)
         while d.textlength(p['jp'], font=fj) > W - 200 and tam > 90:
             tam -= 10; fj = ImageFont.truetype(JAPONESA, tam)
