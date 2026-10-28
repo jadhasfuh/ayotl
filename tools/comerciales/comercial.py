@@ -33,7 +33,7 @@ La clave de Google (GOOGLE_TTS_KEY, la de la cuenta de prueba que vence el 25-en
 jlptest/.env.local y va en una cabecera desde un archivo temporal: nunca se imprime. Necesita el Python de
 ttcode (pillow, numpy, imageio-ffmpeg). Las llamadas van con curl (el Python del sistema no trae certificados).
 """
-import base64, hashlib, json, os, subprocess, sys, tempfile
+import base64, hashlib, json, os, re, subprocess, sys, tempfile
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import imageio_ffmpeg
@@ -364,7 +364,7 @@ class Escena:
         # las líneas: por palabras; en japonés no hay espacios, así que por carácter (Adrián, 27-oct: las letras se
         # salían del cuadro), sin empezar línea con 。、！？ ni cerrar paréntesis
         ja = JAPONES and any(ord(ch) > 0x2E7F for ch in texto)
-        partes, sep = (list(texto), '') if ja else (texto.split(), ' ')
+        partes, sep = (re.findall(r'[A-Za-z0-9.:/]+|.', texto), '') if ja else (texto.split(), ' ')   # en japonés, las palabras latinas (LeIA, Daily Challenge, direcciones) enteras
         lineas, actual = [], ''
         for palabra in partes:
             prueba = (actual + sep + palabra) if actual else palabra
