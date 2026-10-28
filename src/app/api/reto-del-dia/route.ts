@@ -16,7 +16,7 @@ export async function GET(req: Request) {
   const fecha = /^\d{4}-\d{2}-\d{2}$/.test(q ?? "") ? q! : hoyMx();
   const reto = retoDelDia(fecha);
   if (!reto) return NextResponse.json({ fecha, sin_reto: true }, { status: 404 });
-  const video = `${sitio()}/retos/${reto.slug}.mp4`;
+  const video = `${sitio()}/media/retos/${reto.slug}.mp4`;   // fuera de /retos/, que es una ruta de páginas y el proxy de idioma la reescribe
   const dificultad = ({ easy: "fácil", medium: "medio", hard: "difícil" } as Record<string, string>)[reto.dificultad] ?? reto.dificultad;
   const pie = [
     `💻 Reto de código de hoy: ${reto.titulo} (${dificultad}).`,
