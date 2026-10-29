@@ -107,13 +107,13 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
 
 Van en el campo «Video» de cada ficha de Play. No se vuelven a subir.
 
-**Versiones en inglés y japonés (generadas el 28-oct, pendientes de que Adrián las suba):** `leia-idiomas.py` también traduce los tráileres (`trailer-warzone-en/ja.json`, `trailer-kazan-en/ja.json`, `trailer-jlptest-en.json`; jlptest sólo en inglés porque la app es en español e inglés). Los mp4 están en `tools/comerciales/salida/` y la copia en `~/Desktop/videos-leia/`. Van en el campo «Video» de la ficha en-US y ja-JP de cada app. El de Daily Challenge ya tiene sus versiones en el plan de YouTube (`dc-semana-largo-en`, 30-oct, y `-ja`).
+**Versiones en inglés y japonés (generadas y subidas por Adrián el 28-oct, públicas, y puestas en la ficha de Play):** `leia-idiomas.py` también traduce los tráileres (`trailer-warzone-en/ja.json`, `trailer-kazan-en/ja.json`, `trailer-jlptest-en.json`; jlptest sólo en inglés porque la app es en español e inglés). Los mp4 están en `tools/comerciales/salida/` y la copia en `~/Desktop/videos-leia/`. El de Daily Challenge ya tiene sus versiones en el plan de YouTube (`dc-semana-largo-en`, 30-oct, y `-ja`).
 
 | App | Inglés | Japonés |
 |---|---|---|
-| War Zone | `trailer-warzone-en.mp4` (47,9 s) | `trailer-warzone-ja.mp4` (47,9 s) |
-| Kazan | `trailer-kazan-en.mp4` (56 s) | `trailer-kazan-ja.mp4` (56 s) |
-| jlptest | `trailer-jlptest-en.mp4` (32 s) | — |
+| War Zone | https://youtu.be/Xw9UBKnriOQ (`trailer-warzone-en.mp4`, 48 s) | https://youtu.be/gWjfnu3iw_w (`trailer-warzone-ja.mp4`, 48 s) |
+| Kazan | https://youtu.be/9_eHseYivD0 (`trailer-kazan-en.mp4`, 56 s) | https://youtu.be/-UeC1hv7tLo (`trailer-kazan-ja.mp4`, 56 s) |
+| jlptest | https://youtu.be/po5QagWF2kE (`trailer-jlptest-en.mp4`, 32 s) | — |
 
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
