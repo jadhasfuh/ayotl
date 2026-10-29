@@ -374,5 +374,165 @@
    "CPU対CPU",
    "レトロゲーム"
   ]
+ },
+ {
+  "clave": "trailer-warzone",
+  "app": "warzone",
+  "id": "A5wIP6_OnHg",
+  "video": "salida/trailer-warzone.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-27T17:45:00-06:00",
+  "titulo": "WAR ZONE: artillería por turnos estilo retro (tráiler)",
+  "descripcion": "Tráiler de War Zone: artillería por turnos con estilo Atari 2600. Láser, bazuca, granadas y la bota; el terreno se destruye y tus rivales salen volando. Campaña, retos y batallas de hasta 6 contra 6, y en línea con tus amigos. Presenta LeIA.",
+  "cierre": "#WarZone #RetroGaming #Atari2600 #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "artillería por turnos",
+   "juego retro",
+   "Atari 2600",
+   "tráiler",
+   "indie game",
+   "Daily Challenge"
+  ]
+ },
+ {
+  "clave": "trailer-warzone-en",
+  "app": "warzone",
+  "idioma": "en",
+  "id": "Xw9UBKnriOQ",
+  "video": "salida/trailer-warzone-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-28T21:15:00-06:00",
+  "titulo": "WAR ZONE: retro-style turn-based artillery (trailer)",
+  "descripcion": "War Zone trailer: turn-based artillery with an Atari 2600 look. Laser, bazooka, grenades and the boot; the ground gets destroyed and your rivals go flying. Campaign, challenges and battles of up to 6 vs 6, and online with your friends. Hosted by LeIA.",
+  "cierre": "#WarZone #RetroGaming #Atari2600 #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "turn-based artillery",
+   "retro game",
+   "Atari 2600",
+   "trailer",
+   "indie game"
+  ]
+ },
+ {
+  "clave": "trailer-warzone-ja",
+  "app": "warzone",
+  "idioma": "ja",
+  "id": "gWjfnu3iw_w",
+  "video": "salida/trailer-warzone-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-28T21:15:00-06:00",
+  "titulo": "WAR ZONE: レトロ風ターン制砲撃バトル（トレーラー）",
+  "descripcion": "War Zoneのトレーラー：Atari 2600風のターン制砲撃バトル。レーザー、バズーカ、手りゅう弾、そしてブーツ。地形は壊れ、ライバルは吹っ飛ぶ。キャンペーン、チャレンジ、最大6対6のバトル、友だちとオンラインで。案内役はLeIA。",
+  "cierre": "#WarZone #レトロゲーム #Atari2600 #インディーゲーム",
+  "etiquetas": [
+   "War Zone",
+   "ターン制",
+   "砲撃",
+   "レトロゲーム",
+   "トレーラー",
+   "インディーゲーム"
+  ]
+ },
+ {
+  "clave": "trailer-kazan",
+  "app": "kazan",
+  "id": "qz9cRh8ILt8",
+  "video": "salida/trailer-kazan.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-27T17:45:00-06:00",
+  "titulo": "KAZAN: estrategia en tiempo real en una isla con volcán (tráiler)",
+  "descripcion": "Tráiler de Kazan: estrategia en tiempo real en una isla con volcán. Levanta tu ciudad, arma tu ejército y conquista a las demás naciones antes de que la lava se lo coma todo. Cada semana, la isla en línea con 12 naciones: sólo una sobrevive. Presenta LeIA.",
+  "cierre": "#Kazan #RTS #RetroGaming #IndieGame",
+  "etiquetas": [
+   "Kazan",
+   "estrategia en tiempo real",
+   "RTS",
+   "juego retro",
+   "volcán",
+   "tráiler"
+  ]
+ },
+ {
+  "clave": "trailer-kazan-en",
+  "app": "kazan",
+  "idioma": "en",
+  "id": "9_eHseYivD0",
+  "video": "salida/trailer-kazan-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-28T21:15:00-06:00",
+  "titulo": "KAZAN: real-time strategy on an island with a volcano (trailer)",
+  "descripcion": "Kazan trailer: real-time strategy on an island with a volcano. Build your city, raise your army and conquer the other nations before the lava eats everything. Every week, the online island with 12 nations: only one survives. Hosted by LeIA.",
+  "cierre": "#Kazan #RTS #RetroGaming #IndieGame",
+  "etiquetas": [
+   "Kazan",
+   "real-time strategy",
+   "RTS",
+   "retro game",
+   "volcano",
+   "trailer"
+  ]
+ },
+ {
+  "clave": "trailer-kazan-ja",
+  "app": "kazan",
+  "idioma": "ja",
+  "id": "-UeC1hv7tLo",
+  "video": "salida/trailer-kazan-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-28T21:15:00-06:00",
+  "titulo": "KAZAN: 火山の島のリアルタイムストラテジー（トレーラー）",
+  "descripcion": "Kazanのトレーラー：火山の島のリアルタイムストラテジー。街を築き、軍を育て、溶岩がすべてを飲み込む前にほかの国を征服せよ。毎週、12か国のオンラインの島：生き残るのは一国だけ。案内役はLeIA。",
+  "cierre": "#Kazan #RTS #レトロゲーム #インディーゲーム",
+  "etiquetas": [
+   "Kazan",
+   "リアルタイムストラテジー",
+   "RTS",
+   "レトロゲーム",
+   "火山",
+   "トレーラー"
+  ]
+ },
+ {
+  "clave": "trailer-jlptest",
+  "app": "jlptest",
+  "id": "YHSgSiGq2bk",
+  "video": "salida/trailer-jlptest.mp4",
+  "categoria": "27",
+  "publicar": "2026-10-27T17:45:00-06:00",
+  "titulo": "JLPTEST: prepara el JLPT del N5 al N1 (tráiler)",
+  "descripcion": "Tráiler de jlptest: prepara el JLPT del N5 al N1. Casi 10 000 palabras con audio y ejemplos, noticias de Japón a tu nivel con furigana y diccionario con un toque, exámenes como el real con escucha y la explicación de cada respuesta, y tus propios mazos para repasar justo cuando te toca.",
+  "cierre": "#JLPT #japonés #日本語",
+  "etiquetas": [
+   "jlptest",
+   "JLPT",
+   "japonés",
+   "vocabulario",
+   "N5",
+   "N1",
+   "examen"
+  ]
+ },
+ {
+  "clave": "trailer-jlptest-en",
+  "app": "jlptest",
+  "idioma": "en",
+  "id": "po5QagWF2kE",
+  "video": "salida/trailer-jlptest-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-10-28T21:15:00-06:00",
+  "titulo": "JLPTEST: get ready for the JLPT, from N5 to N1 (trailer)",
+  "descripcion": "jlptest trailer: get ready for the JLPT, from N5 to N1. Almost 10,000 words with audio and examples, news from Japan at your level with furigana and a one-tap dictionary, exams like the real one with listening and an explanation for every answer, and your own decks to review right when it's due.",
+  "cierre": "#JLPT #Japanese #日本語",
+  "etiquetas": [
+   "jlptest",
+   "JLPT",
+   "Japanese",
+   "vocabulary",
+   "N5",
+   "N1",
+   "exam"
+  ]
  }
 ]
