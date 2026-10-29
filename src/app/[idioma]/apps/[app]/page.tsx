@@ -5,7 +5,7 @@ import { Cabecera } from "@/components/Cabecera";
 import { MarcaApp } from "@/components/MarcaApp";
 import { Telefono } from "@/components/Telefono";
 import { APPS, type App } from "@/lib/apps";
-import { enPlay, fichaPlay } from "@/lib/en-play";
+import { enAppStore, enPlay, fichaAppStore, fichaPlay } from "@/lib/en-play";
 import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
 import { sitio } from "@/lib/sitio";
@@ -58,6 +58,7 @@ export default async function PaginaApp({ params }: Props) {
   const x = t(idioma);
   const otras = APPS.filter((a) => a.id !== app.id);
   const play = app.paquetePlay && (await enPlay(app.paquetePlay)) ? app.paquetePlay : null;
+  const appStore = app.bundleIos && app.appStoreId && (await enAppStore(app.bundleIos)) ? app.appStoreId : null;
 
   return (
     <>
@@ -106,6 +107,16 @@ export default async function PaginaApp({ params }: Props) {
                 <img src={`/insignias/google-play-${idioma}.png`} alt={idioma === "es" ? "Disponible en Google Play" : "Get it on Google Play"} width={155} height={60} />
               </a>
               <small>Google Play {idioma === "es" ? "y el logotipo de Google Play son marcas de Google LLC." : "and the Google Play logo are trademarks of Google LLC."}</small>
+            </p>
+          )}
+          {appStore && (
+            <p className="insignia-tienda">
+              {/* la insignia oficial, tal cual la da Apple (tools.applemediaservices.com); 119.66x40 de caja, a 60 de alto */}
+              <a href={fichaAppStore(appStore)} target="_blank" rel="noopener">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={`/insignias/app-store-${idioma}.svg`} alt={idioma === "es" ? "Consíguelo en el App Store" : "Download on the App Store"} width={180} height={60} />
+              </a>
+              <small>{idioma === "es" ? "Apple y el logotipo de Apple son marcas de Apple Inc. App Store es una marca de servicio de Apple Inc." : "Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc."}</small>
             </p>
           )}
 

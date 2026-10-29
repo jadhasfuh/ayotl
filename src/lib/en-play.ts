@@ -16,3 +16,20 @@ export async function enPlay(paquete: string): Promise<boolean> {
     return false;
   }
 }
+
+/**
+ * Lo mismo para la App Store (Kazan, aprobada el 29-oct-2026): el lookup de
+ * iTunes devuelve la app sólo cuando ya está a la venta; antes, cero
+ * resultados. La ficha va sin país: Apple manda a la tienda de quien la abre.
+ */
+export const fichaAppStore = (id: string) => `https://apps.apple.com/app/id${id}`;
+
+export async function enAppStore(bundle: string): Promise<boolean> {
+  try {
+    const r = await fetch(`https://itunes.apple.com/lookup?bundleId=${bundle}`, { signal: AbortSignal.timeout(4000) });
+    const d = (await r.json()) as { resultCount?: number };
+    return (d.resultCount ?? 0) > 0;
+  } catch {
+    return false;
+  }
+}
