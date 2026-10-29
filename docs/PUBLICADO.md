@@ -115,6 +115,8 @@ Van en el campo «Video» de cada ficha de Play. No se vuelven a subir.
 | Kazan | https://youtu.be/9_eHseYivD0 (`trailer-kazan-en.mp4`, 56 s) | https://youtu.be/-UeC1hv7tLo (`trailer-kazan-ja.mp4`, 56 s) |
 | jlptest | https://youtu.be/po5QagWF2kE (`trailer-jlptest-en.mp4`, 32 s) | — |
 
+Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …», descripción con el enlace al juego, etiquetas, categoría (20 juegos, 27 jlptest), idioma y lista de su app. Cuando una tienda se haga pública, ponerles `"actualizar": true` y correr `subir-youtube.py --max 0` para que la descripción gane el enlace a Play o App Store. Tarjetas y pantallas finales: no hay API, y un enlace externo en ellas pide el Programa de Partners; se hacen a mano en Studio (suscribirse, vídeo o lista).
+
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
 **Al 27-oct-2026:**
