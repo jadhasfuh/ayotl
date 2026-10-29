@@ -104,7 +104,8 @@
    "パックマン",
    "アステロイド",
    "retro games"
-  ]
+  ],
+  "id": "WdJcGldV9cE"
  },
  {
   "clave": "dc-semana-short",
@@ -120,7 +121,8 @@
    "juegos retro",
    "arcade",
    "retro gaming"
-  ]
+  ],
+  "id": "Ip3UIQYIwOg"
  },
  {
   "clave": "dc-semana-short-en",
@@ -137,7 +139,8 @@
    "retro games",
    "arcade",
    "retro gaming"
-  ]
+  ],
+  "id": "s2XRHVdYUvY"
  },
  {
   "clave": "dc-semana-short-ja",
@@ -153,7 +156,8 @@
    "Daily Challenge",
    "レトロゲーム",
    "アーケード"
-  ]
+  ],
+  "id": "SYK4hz1hPuU"
  },
  {
   "clave": "warzone-cpu-largo",
@@ -173,7 +177,8 @@
    "CPU vs CPU",
    "indie game",
    "Daily Challenge"
-  ]
+  ],
+  "id": "goMFVtFcJoQ"
  },
  {
   "clave": "warzone-cpu-largo-en",
