@@ -1,0 +1,110 @@
+{
+ "fuente": "pixel-ja",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-warzone-ja.mp4",
+ "formato": "horizontal",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 600,
+  "lema": "ターン制の砲撃バトル",
+  "sitio": "無料で遊べる",
+  "pie": "ブラウザでも: dailychallenge.click/warzone"
+ },
+ "musica": {
+  "archivo": "warzone-cpu/trailer-base.mp4",
+  "desde": 0,
+  "volumen": 0.1
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 6.0,
+   "texto": "WAR ZONE · ターン制の砲撃バトル",
+   "cara": "feliz",
+   "voz": "ウォーゾーン！ターン制の砲撃バトル。",
+   "etiqueta_y": 120,
+   "dice": "War Zone！ターン制の砲撃バトル。"
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 6.0,
+   "dur": 4.1,
+   "texto": "レーザー、バズーカ、手りゅう弾…そしてブーツ",
+   "cara": "sorpresa",
+   "voz": "レーザー、バズーカ、手りゅう弾…！",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.1,
+   "dur": 5.6,
+   "texto": "地形が壊れる",
+   "cara": "feliz",
+   "voz": "そして地形が壊れる。",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 15.7,
+   "dur": 5.5,
+   "texto": "ライバルを吹っ飛ばせ",
+   "cara": "sorpresa",
+   "voz": "ライバルを吹っ飛ばせ！",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 21.2,
+   "dur": 4.8,
+   "texto": "ヘッドショット",
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 26.0,
+   "dur": 7.1,
+   "texto": "キャンペーン、チャレンジ、最大6対6のバトル",
+   "cara": "normal",
+   "voz": "キャンペーン、チャレンジ、そして最大六対六のバトル。",
+   "etiqueta_y": 120,
+   "dice": "キャンペーン、チャレンジ、そして最大6対6のバトル。"
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 33.1,
+   "dur": 9.3,
+   "texto": "友だちとオンラインで",
+   "cara": "guino",
+   "voz": "そしてオンラインで、友だちと。",
+   "etiqueta_y": 120
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "feliz",
+   "voz": "無料で遊ぼう！"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}

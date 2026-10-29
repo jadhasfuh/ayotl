@@ -1,0 +1,122 @@
+{
+ "fuente": "pixel",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-kazan-en.mp4",
+ "formato": "horizontal",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "bpm": 112,
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 456,
+  "lema": "Real-time strategy",
+  "sitio": "Play free",
+  "pie": "Also in the browser: kazan.dailychallenge.click"
+ },
+ "escenas": [
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 5.0,
+   "texto": "KAZAN · real-time strategy",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "This is Kazan: real-time strategy.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 5.0,
+   "dur": 5.5,
+   "texto": "Build your city",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "Build your city.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.5,
+   "dur": 5.5,
+   "texto": "Raise your army",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "Raise your army.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 16.0,
+   "dur": 7.0,
+   "texto": "The volcano wakes up",
+   "pixel": true,
+   "cara": "sorpresa",
+   "voz": "And watch out: the volcano wakes up!",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 23.0,
+   "dur": 5.5,
+   "texto": "The lava eats everything",
+   "pixel": true,
+   "cara": "triste",
+   "voz": "The lava eats everything.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 28.5,
+   "dur": 8.5,
+   "texto": "Conquer the other nations",
+   "pixel": true,
+   "cara": "enojo",
+   "voz": "Conquer the other nations.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 37.0,
+   "dur": 6.5,
+   "texto": "Every week, the island online: 12 nations",
+   "pixel": true,
+   "cara": "pensando",
+   "voz": "Every week, twelve nations online.",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 43.5,
+   "dur": 7.0,
+   "texto": "Only one survives",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "Only one survives.",
+   "etiqueta_y": 160
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "guino",
+   "voz": "Play free!"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}

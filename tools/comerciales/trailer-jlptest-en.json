@@ -1,0 +1,58 @@
+{
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-jlptest-en.mp4",
+ "voz": "en-US-Chirp3-HD-Aoede",
+ "idioma": "en-US",
+ "bpm": 88,
+ "colores": {
+  "fondo": "#161826",
+  "acento": "#9184d9",
+  "texto": "#ffffff",
+  "tenue": "#8a8aa0"
+ },
+ "marca": {
+  "nombre": "jlptest",
+  "punto": "#d7263d",
+  "lema": "Get ready for the JLPT",
+  "sitio": "jlptest.org",
+  "pie": "Start for free"
+ },
+ "escenas": [
+  {
+   "imagen": "jlptest/1-inicio.jpg",
+   "texto": "Studying Japanese for the JLPT?",
+   "voz": "Studying Japanese for the JLPT?",
+   "ancho": 470
+  },
+  {
+   "imagen": "jlptest/2-unidad.jpg",
+   "texto": "Almost 10,000 words, from N5 to N1",
+   "voz": "In JLP test you get almost ten thousand words, from N5 to N1, with audio and examples.",
+   "ancho": 470,
+   "dice": "In jlptest you get almost ten thousand words, from N5 to N1, with audio and examples."
+  },
+  {
+   "imagen": "jlptest/4-noticia.jpg",
+   "texto": "News from Japan at your level",
+   "voz": "Read news from Japan at your level, with furigana and a one-tap dictionary.",
+   "ancho": 470
+  },
+  {
+   "imagen": "jlptest/5-examen.jpg",
+   "texto": "Exams like the real one",
+   "voz": "Practice with exams like the real one, with listening and an explanation for every answer.",
+   "ancho": 470
+  },
+  {
+   "imagen": "jlptest/6-deck.jpg",
+   "texto": "Your own decks",
+   "voz": "Build your own decks and review right when it is due.",
+   "ancho": 470
+  },
+  {
+   "final": true,
+   "voz": "Start for free at JLP test dot org.",
+   "dice": "Start for free at jlptest.org"
+  }
+ ],
+ "formato": "horizontal"
+}

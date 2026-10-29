@@ -1,0 +1,108 @@
+{
+ "fuente": "pixel",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-warzone-en.mp4",
+ "formato": "horizontal",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 600,
+  "lema": "Turn-based artillery",
+  "sitio": "Play free",
+  "pie": "Also in the browser: dailychallenge.click/warzone"
+ },
+ "musica": {
+  "archivo": "warzone-cpu/trailer-base.mp4",
+  "desde": 0,
+  "volumen": 0.1
+ },
+ "escenas": [
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 6.0,
+   "texto": "WAR ZONE · turn-based artillery",
+   "cara": "feliz",
+   "voz": "This is War Zone! Turn-based artillery.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 6.0,
+   "dur": 4.1,
+   "texto": "Laser, bazooka, grenades… and the boot",
+   "cara": "sorpresa",
+   "voz": "Laser, bazooka, grenades…!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.1,
+   "dur": 5.6,
+   "texto": "The ground gets destroyed",
+   "cara": "feliz",
+   "voz": "And the ground gets destroyed.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 15.7,
+   "dur": 5.5,
+   "texto": "Send your rivals flying",
+   "cara": "sorpresa",
+   "voz": "Send your rivals flying!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 21.2,
+   "dur": 4.8,
+   "texto": "Headshot",
+   "cara": "sorpresa",
+   "voz": "Headshot!",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 26.0,
+   "dur": 7.1,
+   "texto": "Campaign, challenges and battles up to 6 vs 6",
+   "cara": "normal",
+   "voz": "Campaign, challenges, and battles of up to six against six.",
+   "etiqueta_y": 120
+  },
+  {
+   "video": "warzone-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 33.1,
+   "dur": 9.3,
+   "texto": "Online with your friends",
+   "cara": "guino",
+   "voz": "And online, with your friends.",
+   "etiqueta_y": 120
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "feliz",
+   "voz": "Play free!"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}

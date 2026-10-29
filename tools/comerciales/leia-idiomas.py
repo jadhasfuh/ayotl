@@ -10,6 +10,11 @@ vídeos de LeIA para inglés y japonés, para tener las 3 versiones en YouTube»
 La voz es la misma Achernar de LeIA en cada idioma (Chirp 3 HD en-US y ja-JP). En japonés los nombres y las
 direcciones se dicen en katakana (`voz`) y se escriben en latino (`dice`); el texto va en Misaki, la pixel
 japonesa (`fuente: pixel-ja`). Las escenas con `dur` fija avisan al generar si la voz no cabe: acortar la frase.
+
+Desde el 28-oct-2026 también los tráileres de las fichas de Play (trailer-warzone y trailer-kazan en inglés y
+japonés; trailer-jlptest sólo en inglés, que la app es en español e inglés). La voz sale del guion en español
+con el idioma cambiado (Aoede sigue siendo Aoede), la fuente sólo se toca si el guion la fija, y la tarjeta de la
+marca de cada tráiler (lema, «Juega gratis» y el pie) tiene su traducción en MARCA_GUION.
 """
 import json, os, subprocess, sys
 
@@ -24,6 +29,14 @@ MARCA = {
                 'ja': {'lema': 'ターン制の砲撃バトル', 'pie': '無料・ブラウザで・ダウンロード不要'}},
     'kazan': {'en': {'lema': 'Real-time strategy', 'pie': 'Free, in the browser'},
               'ja': {'lema': 'リアルタイムストラテジー', 'pie': '無料・ブラウザで遊べる'}},
+    'jlptest': {'en': {'lema': 'Get ready for the JLPT', 'pie': 'Start for free'}},
+}
+# la tarjeta de un guion concreto, cuando no es la de la app (los tráileres dicen «Juega gratis» en `sitio`)
+MARCA_GUION = {
+    'trailer-warzone': {'en': {'lema': 'Turn-based artillery', 'sitio': 'Play free', 'pie': 'Also in the browser: dailychallenge.click/warzone'},
+                        'ja': {'lema': 'ターン制の砲撃バトル', 'sitio': '無料で遊べる', 'pie': 'ブラウザでも: dailychallenge.click/warzone'}},
+    'trailer-kazan': {'en': {'lema': 'Real-time strategy', 'sitio': 'Play free', 'pie': 'Also in the browser: kazan.dailychallenge.click'},
+                      'ja': {'lema': 'リアルタイムストラテジー', 'sitio': '無料で遊べる', 'pie': 'ブラウザでも: kazan.dailychallenge.click'}},
 }
 
 # por vídeo e idioma, una entrada por escena en el mismo orden que el guion en español:
@@ -178,19 +191,78 @@ E['kazan-cpu-largo'] = {
   (None, 'あなたの街はもつ？カザン・ドット・デイリーチャレンジ・ドット・クリックで無料。', 'あなたの街はもつ？kazan.dailychallenge.click で無料で遊べます。', '無料で遊ぶ'),
  ]}
 
+# ---- los tráileres de las fichas de Play (28-oct-2026). Las escenas tienen `dur` fija: frases cortas.
+E['trailer-warzone'] = {
+ 'en': [
+  ('WAR ZONE · turn-based artillery', 'This is War Zone! Turn-based artillery.', None, None),
+  ('Laser, bazooka, grenades… and the boot', 'Laser, bazooka, grenades…!', None, None),
+  ('The ground gets destroyed', 'And the ground gets destroyed.', None, None),
+  ('Send your rivals flying', 'Send your rivals flying!', None, None),
+  ('Headshot', 'Headshot!', None, None),
+  ('Campaign, challenges and battles up to 6 vs 6', 'Campaign, challenges, and battles of up to six against six.', None, None),
+  ('Online with your friends', 'And online, with your friends.', None, None),
+  (None, 'Play free!', None, None),
+ ],
+ 'ja': [
+  ('WAR ZONE · ターン制の砲撃バトル', 'ウォーゾーン！ターン制の砲撃バトル。', 'War Zone！ターン制の砲撃バトル。', None),
+  ('レーザー、バズーカ、手りゅう弾…そしてブーツ', 'レーザー、バズーカ、手りゅう弾…！', None, None),
+  ('地形が壊れる', 'そして地形が壊れる。', None, None),
+  ('ライバルを吹っ飛ばせ', 'ライバルを吹っ飛ばせ！', None, None),
+  ('ヘッドショット', 'ヘッドショット！', None, None),
+  ('キャンペーン、チャレンジ、最大6対6のバトル', 'キャンペーン、チャレンジ、そして最大六対六のバトル。', 'キャンペーン、チャレンジ、そして最大6対6のバトル。', None),
+  ('友だちとオンラインで', 'そしてオンラインで、友だちと。', None, None),
+  (None, '無料で遊ぼう！', None, None),
+ ]}
+E['trailer-kazan'] = {
+ 'en': [
+  ('KAZAN · real-time strategy', 'This is Kazan: real-time strategy.', None, None),
+  ('Build your city', 'Build your city.', None, None),
+  ('Raise your army', 'Raise your army.', None, None),
+  ('The volcano wakes up', 'And watch out: the volcano wakes up!', None, None),
+  ('The lava eats everything', 'The lava eats everything.', None, None),
+  ('Conquer the other nations', 'Conquer the other nations.', None, None),
+  ('Every week, the island online: 12 nations', 'Every week, twelve nations online.', None, None),
+  ('Only one survives', 'Only one survives.', None, None),
+  (None, 'Play free!', None, None),
+ ],
+ 'ja': [
+  ('KAZAN · リアルタイムストラテジー', 'これがカザン。リアルタイムストラテジー。', 'これがKazan。リアルタイムストラテジー。', None),
+  ('街を築け', '街を築け。', None, None),
+  ('軍を育てろ', '軍を育てろ。', None, None),
+  ('火山が目を覚ます', '気をつけて。火山が目を覚ます！', None, None),
+  ('溶岩がすべてを飲み込む', '溶岩がすべてを飲み込む。', None, None),
+  ('ほかの国を征服せよ', 'ほかの国を征服せよ。', None, None),
+  ('毎週、オンラインの島：12か国', '毎週、オンラインで十二か国。', '毎週、オンラインで12か国。', None),
+  ('生き残るのは一国だけ', '生き残るのは一国だけ。', None, None),
+  (None, '無料で遊ぼう！', None, None),
+ ]}
+E['trailer-jlptest'] = {
+ 'en': [
+  ('Studying Japanese for the JLPT?', 'Studying Japanese for the JLPT?', None, None),
+  ('Almost 10,000 words, from N5 to N1', 'In JLP test you get almost ten thousand words, from N5 to N1, with audio and examples.', 'In jlptest you get almost ten thousand words, from N5 to N1, with audio and examples.', None),
+  ('News from Japan at your level', 'Read news from Japan at your level, with furigana and a one-tap dictionary.', None, None),
+  ('Exams like the real one', 'Practice with exams like the real one, with listening and an explanation for every answer.', None, None),
+  ('Your own decks', 'Build your own decks and review right when it is due.', None, None),
+  (None, 'Start for free at JLP test dot org.', 'Start for free at jlptest.org', None),
+ ]}
+
 
 def guiones():
     hechos = []
     for clave, idiomas in E.items():
-        app = clave.split('-')[0]
+        app = clave.split('-')[1] if clave.startswith('trailer-') else clave.split('-')[0]
         base = json.load(open(os.path.join(AQUI, clave + '.json'), encoding='utf-8'))
         for idioma, escenas in idiomas.items():
             g = json.loads(json.dumps(base))
             assert len(escenas) == len(g['escenas']), f'{clave} {idioma}: {len(escenas)} escenas por {len(g["escenas"])}'
-            g['voz'], g['idioma'] = VOZ[idioma]
-            g['fuente'] = FUENTE[idioma]
+            # la misma voz que en español, en el otro idioma (Achernar para LeIA, Aoede en jlptest)
+            g['voz'] = VOZ[idioma][0][:-len('Achernar')] + base['voz'].split('-')[-1]
+            g['idioma'] = VOZ[idioma][1]
+            if 'fuente' in base:
+                g['fuente'] = FUENTE[idioma]
             g['salida'] = os.path.join(os.path.dirname(base['salida']), f'{clave}-{idioma}.mp4')
             g['marca'].update(MARCA[app][idioma])
+            g['marca'].update(MARCA_GUION.get(clave, {}).get(idioma, {}))
             for e, (texto, voz, dice, cap) in zip(g['escenas'], escenas):
                 if texto is not None:
                     e['texto'] = texto

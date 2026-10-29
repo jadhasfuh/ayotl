@@ -1,0 +1,124 @@
+{
+ "fuente": "pixel-ja",
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-kazan-ja.mp4",
+ "formato": "horizontal",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "bpm": 112,
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 456,
+  "lema": "リアルタイムストラテジー",
+  "sitio": "無料で遊べる",
+  "pie": "ブラウザでも: kazan.dailychallenge.click"
+ },
+ "escenas": [
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 0.0,
+   "dur": 5.0,
+   "texto": "KAZAN · リアルタイムストラテジー",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "これがカザン。リアルタイムストラテジー。",
+   "etiqueta_y": 160,
+   "dice": "これがKazan。リアルタイムストラテジー。"
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 5.0,
+   "dur": 5.5,
+   "texto": "街を築け",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "街を築け。",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 10.5,
+   "dur": 5.5,
+   "texto": "軍を育てろ",
+   "pixel": true,
+   "cara": "normal",
+   "voz": "軍を育てろ。",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 16.0,
+   "dur": 7.0,
+   "texto": "火山が目を覚ます",
+   "pixel": true,
+   "cara": "sorpresa",
+   "voz": "気をつけて。火山が目を覚ます！",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 23.0,
+   "dur": 5.5,
+   "texto": "溶岩がすべてを飲み込む",
+   "pixel": true,
+   "cara": "triste",
+   "voz": "溶岩がすべてを飲み込む。",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 28.5,
+   "dur": 8.5,
+   "texto": "ほかの国を征服せよ",
+   "pixel": true,
+   "cara": "enojo",
+   "voz": "ほかの国を征服せよ。",
+   "etiqueta_y": 160
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 37.0,
+   "dur": 6.5,
+   "texto": "毎週、オンラインの島：12か国",
+   "pixel": true,
+   "cara": "pensando",
+   "voz": "毎週、オンラインで十二か国。",
+   "etiqueta_y": 160,
+   "dice": "毎週、オンラインで12か国。"
+  },
+  {
+   "video": "kazan-cpu/trailer-base.mp4",
+   "completo": true,
+   "desde": 43.5,
+   "dur": 7.0,
+   "texto": "生き残るのは一国だけ",
+   "pixel": true,
+   "cara": "feliz",
+   "voz": "生き残るのは一国だけ。",
+   "etiqueta_y": 160
+  },
+  {
+   "final": true,
+   "dur": 5.0,
+   "cara": "guino",
+   "voz": "無料で遊ぼう！"
+  }
+ ],
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ }
+}
