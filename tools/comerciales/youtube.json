@@ -198,7 +198,8 @@
    "CPU vs CPU",
    "retro games",
    "Atari 2600"
-  ]
+  ],
+  "id": "aW5BMyrQEfs"
  },
  {
   "clave": "warzone-cpu-largo-ja",
@@ -217,7 +218,8 @@
    "ターン制",
    "CPU対CPU",
    "レトロゲーム"
-  ]
+  ],
+  "id": "UvmLSvPZH6A"
  },
  {
   "clave": "warzone-cpu-short",
@@ -233,7 +235,8 @@
    "juego retro",
    "Atari 2600",
    "CPU vs CPU"
-  ]
+  ],
+  "id": "LJ60WJ_bVgU"
  },
  {
   "clave": "warzone-cpu-short-en",
@@ -250,7 +253,8 @@
    "artillery game",
    "CPU vs CPU",
    "retro games"
-  ]
+  ],
+  "id": "rTWmaQo88q8"
  },
  {
   "clave": "warzone-cpu-short-ja",
@@ -267,7 +271,8 @@
    "砲撃ゲーム",
    "CPU対CPU",
    "レトロゲーム"
-  ]
+  ],
+  "id": "vswGPCs-6s4"
  },
  {
   "clave": "kazan-cpu-largo",
