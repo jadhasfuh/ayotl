@@ -3,7 +3,8 @@ import type { App } from "@/lib/apps";
 import { t, type Idioma } from "@/lib/idioma";
 import { MarcaApp } from "./MarcaApp";
 
-export function TarjetaApp({ app, idioma }: { app: App; idioma: Idioma }) {
+/** `play`: la ficha pública de Google Play, si ya la hay (lo decide la portada con lib/en-play). */
+export function TarjetaApp({ app, idioma, play = null }: { app: App; idioma: Idioma; play?: string | null }) {
   const x = t(idioma);
   return (
     <li className="tarjeta" data-acento={app.acento}>
@@ -38,6 +39,11 @@ export function TarjetaApp({ app, idioma }: { app: App; idioma: Idioma }) {
         </a>
       ) : (
         <span className="abrir-fuera">{x("appProximamente")}</span>
+      )}
+      {play && (
+        <a className="abrir-fuera" href={play} target="_blank" rel="noopener">
+          {x("appEnLaTienda")} <span aria-hidden="true">↗</span>
+        </a>
       )}
     </li>
   );

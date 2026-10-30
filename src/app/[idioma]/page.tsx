@@ -6,8 +6,11 @@ import { Tortuga } from "@/components/Tortuga";
 import { APPS } from "@/lib/apps";
 import { ruta, t } from "@/lib/idioma";
 import { idiomaDe, metadatosDe } from "@/lib/paginas";
+import { enPlay, fichaPlay } from "@/lib/en-play";
 
 type Props = { params: Promise<{ idioma: string }> };
+
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const idioma = await idiomaDe(params);
@@ -18,6 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Inicio({ params }: Props) {
   const idioma = await idiomaDe(params);
   const x = t(idioma);
+  // La ficha de Play de cada app, si ya es pública: la tarjeta suma «En Google Play ↗» (29-oct-2026, Daily
+  // Challenge). La portada se regenera cada hora, así que las siguientes salen solas.
+  const enTienda = await Promise.all(APPS.map(async (a) => (a.paquetePlay && (await enPlay(a.paquetePlay)) ? fichaPlay(a.paquetePlay) : null)));
   return (
     <>
       <a href="#contenido" className="salto">{x("irAlContenido")}</a>
@@ -45,7 +51,7 @@ export default async function Inicio({ params }: Props) {
               <p>{x("appsTexto")}</p>
             </div>
             <ul className="tarjetas">
-              {APPS.map((app) => <TarjetaApp key={app.id} app={app} idioma={idioma} />)}
+              {APPS.map((app, k) => <TarjetaApp key={app.id} app={app} idioma={idioma} play={enTienda[k]} />)}
             </ul>
           </div>
         </section>
