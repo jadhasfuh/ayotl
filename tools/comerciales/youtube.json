@@ -544,5 +544,57 @@
    "N1",
    "exam"
   ]
+ },
+ {
+  "clave": "mejor-2026-10-29",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-29.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 29 de octubre: 450 puntos en Q*BERT 🕹️ #shorts",
+  "descripcion": "El mejor del 29 de octubre en Daily Challenge fue ELVIS TECK, con 450 puntos en Q*BERT. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "Q*BERT"
+  ]
+ },
+ {
+  "clave": "mejor-2026-10-29-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-29-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of October 29: 450 points in Q*BERT 🕹️ #shorts",
+  "descripcion": "The best run of October 29 on Daily Challenge was by ELVIS TECK, with 450 points in Q*BERT. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "Q*BERT"
+  ],
+  "idioma": "en"
+ },
+ {
+  "clave": "mejor-2026-10-29-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-29-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-10-31T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 10月29日のベスト、Q*BERTで450点 🕹️ #shorts",
+  "descripcion": "10月29日のDaily Challengeでいちばんだったのは、Q*BERTで450点のELVIS TECKさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "キューバート"
+  ],
+  "idioma": "ja"
  }
 ]

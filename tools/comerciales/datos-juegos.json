@@ -1,0 +1,461 @@
+{
+ "_nota": "Lo que cuenta LeIA de cada juego en el Short del «mejor del día» (leia-mejor-del-dia.py, 30-oct-2026). Adrián: que siempre diga el dato del juego; el largo, si la partida duró muy poco (o mucho), y el corto si no. Sale del `origen` de las guías de DC (src/lib/guias.ts) y de la historia conocida de cada recreativa: si se agrega un juego al reto diario, se agrega aquí. {lo que se lee|lo que se pronuncia}: la pantalla muestra lo primero y la voz dice lo segundo.",
+ "nombres": {
+  "ADRIAN": {"es": "Adrián", "en": "Adrian", "ja": "アドリアン"},
+  "ELI": {"es": "Eli", "en": "Eli", "ja": "エリ"},
+  "ELVIS TECK": {"es": "Elvis Teck", "en": "Elvis Teck", "ja": "エルビス・テック"},
+  "FERXO17": {"es": "Ferxo diecisiete", "en": "Ferxo seventeen", "ja": "フェルクソ・じゅうなな"}
+ },
+ "juegos": {
+  "snake": {
+   "voz": {"es": "Snake", "en": "Snake", "ja": "スネーク"},
+   "es": {
+    "corto": "La idea viene de {Blockade|Bloqueid}, una recreativa de Gremlin de 1976, y se hizo famosa como Snake en los teléfonos Nokia.",
+    "largo": "La idea viene de {Blockade|Bloqueid}, una recreativa de Gremlin de 1976 para dos jugadores: cada uno dejaba una pared detrás y perdía el primero en chocar. En 1997 llegó a los Nokia como Snake y se volvió de los juegos más jugados del mundo. Aquí, cada cuatro frutas la serpiente acelera, y a toda velocidad cada fruta vale más del triple."
+   },
+   "en": {
+    "corto": "It comes from Blockade, a 1976 arcade game by Gremlin, and it became famous as Snake on Nokia phones.",
+    "largo": "It comes from Blockade, a 1976 arcade game by Gremlin for two players: each one left a wall behind, and the first to crash lost. In 1997 it reached Nokia phones as Snake and became one of the most played games in the world. Here, every four fruits the snake speeds up, and at top speed each fruit is worth more than three times as much."
+   },
+   "ja": {
+    "corto": "もとになったのは、1976年にグレムリンが作ったアーケードゲーム「ブロッケード」。ノキアの携帯電話の「スネーク」で有名になりました。",
+    "largo": "もとになったのは、1976年にグレムリンが作った二人用のアーケードゲーム「ブロッケード」。おたがいに後ろに壁を残して、先にぶつかった方の負けでした。1997年にノキアの携帯電話に「スネーク」として入り、世界でいちばん遊ばれたゲームのひとつになりました。このゲームでは、フルーツを4つ食べるごとにヘビが速くなり、最高速度ではフルーツ1個の点数が3倍以上になります。"
+   }
+  },
+  "breakout": {
+   "voz": {"es": "Breikaut", "en": "Breakout", "ja": "ブレイクアウト"},
+   "es": {
+    "corto": "{Breakout|Breikaut} es de Atari, de 1976: rompe el muro de ladrillos con la pelota sin dejarla caer.",
+    "largo": "{Breakout|Breikaut} es de Atari, de 1976. El prototipo lo hizo Steve Wozniak en cuatro noches, con Steve Jobs, antes de que fundaran Apple. La idea era sencilla: una paleta, una pelota y un muro de ladrillos que hay que romper sin dejarla caer."
+   },
+   "en": {
+    "corto": "Breakout is from Atari, 1976: smash the brick wall with the ball without letting it drop.",
+    "largo": "Breakout is from Atari, 1976. Steve Wozniak built the prototype in four nights, together with Steve Jobs, before they founded Apple. The idea was simple: a paddle, a ball and a wall of bricks to break without letting the ball drop."
+   },
+   "ja": {
+    "corto": "ブレイクアウトは1976年のアタリのゲーム。ボールを落とさずに、レンガの壁をこわしていきます。",
+    "largo": "ブレイクアウトは1976年のアタリのゲーム。試作品は、スティーブ・ウォズニアックがスティーブ・ジョブズと一緒に、たった4晩で作りました。ふたりがアップルを作る前のことです。パドルとボールとレンガの壁だけの、シンプルなゲームです。"
+   }
+  },
+  "pacman": {
+   "voz": {"es": "Pac-Man", "en": "Pac-Man", "ja": "パックマン"},
+   "es": {
+    "corto": "Pac-Man es de Namco, de 1980. Su creador, Toru Iwatani, cuenta que se le ocurrió viendo una pizza a la que le faltaba una rebanada.",
+    "largo": "Pac-Man es de Namco, de 1980. Su creador, Toru Iwatani, cuenta que se le ocurrió viendo una pizza a la que le faltaba una rebanada. Cada fantasma persigue a su manera: Blinky va directo hacia ti, Pinky intenta adelantarse, Inky es el más difícil de leer y Clyde anda a su aire. En Japón salió primero como {Puck-Man|Puc Man}."
+   },
+   "en": {
+    "corto": "Pac-Man is from Namco, 1980. Its creator, Toru Iwatani, says the idea came from a pizza with a slice missing.",
+    "largo": "Pac-Man is from Namco, 1980. Its creator, Toru Iwatani, says the idea came from a pizza with a slice missing. Each ghost hunts in its own way: Blinky comes straight at you, Pinky tries to get ahead of you, Inky is the hardest to read and Clyde just wanders. In Japan it first came out as Puck-Man."
+   },
+   "ja": {
+    "corto": "パックマンは1980年のナムコのゲーム。作者の岩谷徹さんは、ひと切れ欠けたピザを見て思いついたそうです。",
+    "largo": "パックマンは1980年のナムコのゲーム。作者の岩谷徹さんは、ひと切れ欠けたピザを見て思いついたそうです。モンスターはそれぞれ追いかけ方がちがって、アカベイはまっすぐ、ピンキーは先回り、アオスケは読みにくく、グズタはきまぐれ。最初の英語の表記は「PUCK-MAN」でした。"
+   }
+  },
+  "nibbler": {
+   "voz": {"es": "Níbler", "en": "Nibbler", "ja": "ニブラー"},
+   "es": {
+    "corto": "{Nibbler|Níbler} es de Rock-Ola, de 1982, y fue el primer videojuego con un marcador de nueve dígitos.",
+    "largo": "{Nibbler|Níbler} es de Rock-Ola, de 1982, y fue el primer videojuego con un marcador de nueve dígitos. En 1984, Tim McVey fue el primero en pasar los mil millones de puntos, en una partida de más de cuarenta horas."
+   },
+   "en": {
+    "corto": "Nibbler is from Rock-Ola, 1982, and it was the first video game with a nine-digit score counter.",
+    "largo": "Nibbler is from Rock-Ola, 1982, and it was the first video game with a nine-digit score counter. In 1984, Tim McVey became the first player to pass one billion points, in a game that lasted more than forty hours."
+   },
+   "ja": {
+    "corto": "ニブラーは1982年のロックオラのゲーム。9けたのスコアが表示できた、はじめてのビデオゲームです。",
+    "largo": "ニブラーは1982年のロックオラのゲーム。9けたのスコアが表示できた、はじめてのビデオゲームです。1984年、ティム・マクベイが40時間以上遊びつづけて、はじめて10億点をこえました。"
+   }
+  },
+  "tetris": {
+   "voz": {"es": "Tetris", "en": "Tetris", "ja": "テトリス"},
+   "es": {
+    "corto": "Tetris lo creó Alekséi Pázhitnov en 1984, en un centro de cómputo de la Academia de Ciencias, en Moscú.",
+    "largo": "Tetris lo creó Alekséi Pázhitnov en 1984, en un centro de cómputo de la Academia de Ciencias, en Moscú. El nombre junta tetra, porque cada pieza tiene cuatro cuadros, y tenis, su deporte favorito. Se volvió un fenómeno mundial en 1989, con la Game Boy."
+   },
+   "en": {
+    "corto": "Tetris was created by Alexey Pajitnov in 1984, at a computer center of the Academy of Sciences in Moscow.",
+    "largo": "Tetris was created by Alexey Pajitnov in 1984, at a computer center of the Academy of Sciences in Moscow. The name mixes tetra, because every piece has four squares, and tennis, his favorite sport. It became a worldwide hit in 1989, with the Game Boy."
+   },
+   "ja": {
+    "corto": "テトリスは1984年、モスクワの科学アカデミーの計算センターで、アレクセイ・パジトノフが作りました。",
+    "largo": "テトリスは1984年、モスクワの科学アカデミーの計算センターで、アレクセイ・パジトノフが作りました。名前は、ブロックが4つの四角でできているから「テトラ」と、彼の好きなスポーツの「テニス」を合わせたもの。1989年、ゲームボーイで世界中に広まりました。"
+   }
+  },
+  "columns": {
+   "voz": {"es": "Yúuels", "en": "Jewels", "ja": "ジュエルズ"},
+   "es": {
+    "corto": "{Jewels|Yúuels} viene de Columns, de Sega, de 1990: junta tres joyas del mismo color en línea y desaparecen.",
+    "largo": "{Jewels|Yúuels} viene de Columns, de Sega, de 1990: junta tres joyas del mismo color en línea y desaparecen. Sega lo lanzó como su respuesta a Tetris, en recreativas y en la Mega Drive. Cuando unas joyas desaparecen, las de arriba caen y pueden formar otra línea: así se encadenan los combos."
+   },
+   "en": {
+    "corto": "Jewels comes from Columns, by Sega, 1990: line up three jewels of the same color and they vanish.",
+    "largo": "Jewels comes from Columns, by Sega, 1990: line up three jewels of the same color and they vanish. Sega launched it as its answer to Tetris, in arcades and on the Mega Drive. When jewels vanish, the ones above fall and can make another line: that is how combos chain."
+   },
+   "ja": {
+    "corto": "ジュエルズのもとは、1990年のセガの「コラムス」。同じ色の宝石を3つ並べると消えます。",
+    "largo": "ジュエルズのもとは、1990年のセガの「コラムス」。同じ色の宝石を3つ並べると消えます。セガがテトリスに対抗して出したゲームで、アーケードとメガドライブで遊ばれました。宝石が消えると上の宝石が落ちて、また並ぶことがあります。これが連鎖です。"
+   }
+  },
+  "galaga": {
+   "voz": {"es": "Gálaga", "en": "Galaga", "ja": "ギャラガ"},
+   "es": {
+    "corto": "{Galaga|Gálaga} es de Namco, de 1981, y es la secuela de {Galaxian|Galáxian}.",
+    "largo": "{Galaga|Gálaga} es de Namco, de 1981, y es la secuela de {Galaxian|Galáxian}. En la original, el jefe {Galaga|Gálaga} podía capturar tu nave con un rayo: si lo derribabas, la recuperabas y disparabas con dos naves a la vez."
+   },
+   "en": {
+    "corto": "Galaga is from Namco, 1981, and it is the sequel to Galaxian.",
+    "largo": "Galaga is from Namco, 1981, and it is the sequel to Galaxian. In the original, the Boss Galaga could capture your ship with a tractor beam: shoot it down and you got your ship back, firing with two ships at once."
+   },
+   "ja": {
+    "corto": "ギャラガは1981年のナムコのゲームで、ギャラクシアンの続編です。",
+    "largo": "ギャラガは1981年のナムコのゲームで、ギャラクシアンの続編です。オリジナルでは、ボスギャラガがビームで自分の機体をつかまえます。ボスを倒して取り返すと、2機ならんで撃てるデュアルファイターになりました。"
+   }
+  },
+  "invaders": {
+   "voz": {"es": "Inváders", "en": "Invaders", "ja": "インベーダー"},
+   "es": {
+    "corto": "Viene de {Space Invaders|Speis Inváders}, de Taito, de 1978, creado por Tomohiro Nishikado.",
+    "largo": "Viene de {Space Invaders|Speis Inváders}, de Taito, de 1978, creado por Tomohiro Nishikado. Los invasores aceleran cuando quedan pocos porque la máquina tenía menos que dibujar y corría más rápido: un límite del hardware que se volvió la gracia del juego."
+   },
+   "en": {
+    "corto": "It comes from Space Invaders, by Taito, 1978, created by Tomohiro Nishikado.",
+    "largo": "It comes from Space Invaders, by Taito, 1978, created by Tomohiro Nishikado. The invaders speed up when only a few are left because the machine had less to draw and ran faster: a hardware limit that became the heart of the game."
+   },
+   "ja": {
+    "corto": "もとは1978年のタイトーの「スペースインベーダー」。作ったのは西角友宏さんです。",
+    "largo": "もとは1978年のタイトーの「スペースインベーダー」。作ったのは西角友宏さんです。インベーダーが減るほど速くなるのは、描くものが少なくなって、機械の処理が速くなったから。ハードの限界が、そのままゲームのおもしろさになりました。"
+   }
+  },
+  "frogger": {
+   "voz": {"es": "Fróguer", "en": "Frogger", "ja": "フロッガー"},
+   "es": {
+    "corto": "{Frogger|Fróguer} es de Konami, de 1981: cruza la carretera y el río para llevar a cada rana a su casa.",
+    "largo": "{Frogger|Fróguer} es de Konami, de 1981: cruza la carretera y el río para llevar a cada rana a su casa. En Estados Unidos lo distribuyó Sega. En el río la rana no puede nadar: hay que saltar de tronco en tronco y sobre las tortugas, que a veces se sumergen."
+   },
+   "en": {
+    "corto": "Frogger is from Konami, 1981: cross the road and the river to bring each frog home.",
+    "largo": "Frogger is from Konami, 1981: cross the road and the river to bring each frog home. In the United States it was distributed by Sega. The frog cannot swim: in the river you hop from log to log and onto the turtles, which sometimes dive."
+   },
+   "ja": {
+    "corto": "フロッガーは1981年のコナミのゲーム。道路と川をわたって、カエルを家まで連れていきます。",
+    "largo": "フロッガーは1981年のコナミのゲーム。道路と川をわたって、カエルを家まで連れていきます。アメリカではセガが販売しました。カエルは泳げないので、川では丸太やカメの上を跳んでわたります。でも、カメはときどき潜ってしまいます。"
+   }
+  },
+  "asteroids": {
+   "voz": {"es": "Ásteroids", "en": "Asteroids", "ja": "アステロイド"},
+   "es": {
+    "corto": "{Asteroids|Ásteroids} es de Atari, de 1979, con gráficos vectoriales: líneas dibujadas directo en la pantalla.",
+    "largo": "{Asteroids|Ásteroids} es de Atari, de 1979, con gráficos vectoriales: líneas dibujadas directo en la pantalla. Lo hicieron Lyle Rains y Ed Logg, y fue la recreativa más vendida de Atari. Cada roca grande se parte en dos medianas y cada mediana en dos chicas: disparar sin pensar llena la pantalla de peligros."
+   },
+   "en": {
+    "corto": "Asteroids is from Atari, 1979, with vector graphics: lines drawn straight onto the screen.",
+    "largo": "Asteroids is from Atari, 1979, with vector graphics: lines drawn straight onto the screen. Lyle Rains and Ed Logg made it, and it was Atari's best-selling arcade game. Each big rock splits into two medium ones, and each medium one into two small ones: shooting without thinking fills the screen with danger."
+   },
+   "ja": {
+    "corto": "アステロイドは1979年のアタリのゲーム。画面に直接線をえがく、ベクタースキャンのグラフィックです。",
+    "largo": "アステロイドは1979年のアタリのゲーム。画面に直接線をえがく、ベクタースキャンのグラフィックです。ライル・レインズとエド・ログが作り、アタリでいちばん売れたアーケードゲームになりました。大きな岩は中くらいの岩2つに、中くらいの岩は小さな岩2つに割れます。むやみに撃つと、画面が危険だらけになります。"
+   }
+  },
+  "pang": {
+   "voz": {"es": "Pang", "en": "Pang", "ja": "パン"},
+   "es": {
+    "corto": "Pang salió en 1989, hecho por Mitchell y distribuido por Capcom; en Estados Unidos se llamó {Buster Bros|Báster Bros}.",
+    "largo": "Pang salió en 1989, hecho por Mitchell y distribuido por Capcom; en Estados Unidos se llamó {Buster Bros|Báster Bros}. Cada globo que revientas se parte en dos más chicos, hasta que desaparecen. En Super Pang, de 1990, llegó el modo pánico: globos sin fin."
+   },
+   "en": {
+    "corto": "Pang came out in 1989, made by Mitchell and released by Capcom; in the United States it was called Buster Bros.",
+    "largo": "Pang came out in 1989, made by Mitchell and released by Capcom; in the United States it was called Buster Bros. Every balloon you pop splits into two smaller ones, until they vanish. Super Pang, in 1990, added the Panic mode: endless balloons."
+   },
+   "ja": {
+    "corto": "パンは1989年、ミッチェルが作り、カプコンが出したゲーム。日本では「ポンピングワールド」という名前でした。",
+    "largo": "パンは1989年、ミッチェルが作り、カプコンが出したゲーム。日本では「ポンピングワールド」という名前でした。風船を割ると、小さな風船2つに分かれて、最後に消えます。1990年の「スーパーパン」では、風船が終わらないパニックモードが加わりました。"
+   }
+  },
+  "digdug": {
+   "voz": {"es": "Dig Dag", "en": "Dig Dug", "ja": "ディグダグ"},
+   "es": {
+    "corto": "{Dig Dug|Dig Dag} es de Namco, de 1982: cava túneles y revienta a los monstruos inflándolos con una bomba de aire.",
+    "largo": "{Dig Dug|Dig Dag} es de Namco, de 1982: cava túneles y revienta a los monstruos inflándolos con una bomba de aire. Los monstruos se llaman {Pooka|Púka} y {Fygar|Fáigar}, el dragón que escupe fuego. Dejar caer una roca sobre varios a la vez da muchos más puntos que inflarlos uno por uno."
+   },
+   "en": {
+    "corto": "Dig Dug is from Namco, 1982: dig tunnels and pop the monsters by pumping them full of air.",
+    "largo": "Dig Dug is from Namco, 1982: dig tunnels and pop the monsters by pumping them full of air. The monsters are called Pooka and Fygar, the fire-breathing dragon. Dropping a rock on several at once is worth far more than pumping them one by one."
+   },
+   "ja": {
+    "corto": "ディグダグは1982年のナムコのゲーム。トンネルを掘って、モンスターをポンプでふくらませて割ります。",
+    "largo": "ディグダグは1982年のナムコのゲーム。トンネルを掘って、モンスターをポンプでふくらませて割ります。モンスターの名前はプーカと、火をふくドラゴンのファイガー。岩を落として何匹もまとめてつぶすと、一匹ずつ割るよりずっと高い点になります。"
+   }
+  },
+  "centipede": {
+   "voz": {"es": "Séntipid", "en": "Centipede", "ja": "センチピード"},
+   "es": {
+    "corto": "{Centipede|Séntipid} es de Atari, de 1980. Lo diseñaron Dona Bailey y Ed Logg, y ella fue de las primeras mujeres en diseñar una recreativa.",
+    "largo": "{Centipede|Séntipid} es de Atari, de 1980. Lo diseñaron Dona Bailey y Ed Logg, y ella fue de las primeras mujeres en diseñar una recreativa. Se jugaba con una bola de control, el {trackball|trac bol}. Cuando le das al ciempiés, se parte en dos y cada mitad sigue bajando por su cuenta entre los hongos."
+   },
+   "en": {
+    "corto": "Centipede is from Atari, 1980. It was designed by Dona Bailey and Ed Logg, and she was one of the first women to design an arcade game.",
+    "largo": "Centipede is from Atari, 1980. It was designed by Dona Bailey and Ed Logg, and she was one of the first women to design an arcade game. It was played with a trackball. When you hit the centipede, it splits in two and each half keeps coming down on its own, through the mushrooms."
+   },
+   "ja": {
+    "corto": "センチピードは1980年のアタリのゲーム。ドナ・ベイリーとエド・ログが作り、ドナはアーケードゲームを作った最初の女性のひとりです。",
+    "largo": "センチピードは1980年のアタリのゲーム。ドナ・ベイリーとエド・ログが作り、ドナはアーケードゲームを作った最初の女性のひとりです。操作はトラックボールでした。ムカデに弾を当てると二つに分かれて、それぞれがキノコの間を下りてきます。"
+   }
+  },
+  "missile": {
+   "voz": {"es": "Mísail Comand", "en": "Missile Command", "ja": "ミサイルコマンド"},
+   "es": {
+    "corto": "{Missile Command|Mísail Comand} es de Atari, de 1980: defiende seis ciudades de una lluvia de misiles.",
+    "largo": "{Missile Command|Mísail Comand} es de Atari, de 1980: defiende seis ciudades de una lluvia de misiles con tres baterías. Su creador, Dave Theurer, contó que mientras lo hacía tenía pesadillas con la guerra nuclear. En el original la partida siempre acaba con un The End: la pregunta es cuánto aguantas."
+   },
+   "en": {
+    "corto": "Missile Command is from Atari, 1980: defend six cities from a rain of missiles.",
+    "largo": "Missile Command is from Atari, 1980: defend six cities from a rain of missiles with three batteries. Its creator, Dave Theurer, said he had nightmares about nuclear war while making it. In the original, every game ends with THE END: the only question is how long you last."
+   },
+   "ja": {
+    "corto": "ミサイルコマンドは1980年のアタリのゲーム。ふりそそぐミサイルから、6つの街を守ります。",
+    "largo": "ミサイルコマンドは1980年のアタリのゲーム。3つの基地で、ふりそそぐミサイルから6つの街を守ります。作者は、作っている間、核戦争の悪夢を見たと話しています。オリジナルでは、最後はかならず「THE END」。どこまで耐えられるかの勝負です。"
+   }
+  },
+  "kaboom": {
+   "voz": {"es": "Kabum", "en": "Kaboom", "ja": "カブーム"},
+   "es": {
+    "corto": "{Kaboom!|Kabum} es de Activision, de 1981, para la Atari 2600: atrapa las bombas que suelta el Bombardero Loco.",
+    "largo": "{Kaboom!|Kabum} es de Activision, de 1981, para la Atari 2600: atrapa las bombas que suelta el Bombardero Loco. Lo hicieron Larry Kaplan y David Crane, y se jugaba con el control de rueda, el {paddle|pádel}. Cada bomba que se te escapa te cuesta una cubeta."
+   },
+   "en": {
+    "corto": "Kaboom! is from Activision, 1981, for the Atari 2600: catch the bombs the Mad Bomber drops.",
+    "largo": "Kaboom! is from Activision, 1981, for the Atari 2600: catch the bombs the Mad Bomber drops. Larry Kaplan and David Crane made it, and it was played with the paddle controller. Every bomb you miss costs you a bucket."
+   },
+   "ja": {
+    "corto": "カブームは1981年、アクティビジョンがアタリ2600向けに出したゲーム。マッドボマーが落とす爆弾をキャッチします。",
+    "largo": "カブームは1981年、アクティビジョンがアタリ2600向けに出したゲーム。マッドボマーが落とす爆弾をキャッチします。作ったのはラリー・カプランとデビッド・クレーンで、ダイヤルを回すパドルで遊びました。爆弾をひとつ取りのがすと、バケツがひとつ減ります。"
+   }
+  },
+  "battlecity": {
+   "voz": {"es": "Bátel Siti", "en": "Battle City", "ja": "バトルシティー"},
+   "es": {
+    "corto": "{Battle City|Bátel Siti} es de Namco, de 1985, para la Famicom: defiende tu base, el águila, de los tanques enemigos.",
+    "largo": "{Battle City|Bátel Siti} es de Namco, de 1985, para la Famicom: defiende tu base, el águila, de los tanques enemigos. Traía un editor para construir tus propios mapas, algo raro en esa época. Los muros de ladrillo se rompen a balazos, pero los de acero aguantan mucho más."
+   },
+   "en": {
+    "corto": "Battle City is from Namco, 1985, for the Famicom: defend your base, the eagle, from the enemy tanks.",
+    "largo": "Battle City is from Namco, 1985, for the Famicom: defend your base, the eagle, from the enemy tanks. It came with an editor to build your own maps, something rare at the time. Brick walls break under fire, but steel walls hold out much longer."
+   },
+   "ja": {
+    "corto": "バトルシティーは1985年、ナムコのファミコンのゲーム。敵の戦車から、ワシのマークの基地を守ります。",
+    "largo": "バトルシティーは1985年、ナムコのファミコンのゲーム。敵の戦車から、ワシのマークの基地を守ります。自分でステージを作れるコンストラクションモードがあって、当時はめずらしい機能でした。レンガの壁は弾でこわせますが、鉄の壁はずっとがんじょうです。"
+   }
+  },
+  "basket": {
+   "voz": {"es": "Básket", "en": "Basket", "ja": "バスケット"},
+   "es": {
+    "corto": "Viene de {Basketball|Básketbol}, de Atari, de 1978, para la Atari 2600: de los primeros juegos de baloncesto en casa.",
+    "largo": "Viene de {Basketball|Básketbol}, de Atari, de 1978, para la Atari 2600: de los primeros juegos de baloncesto en casa, uno contra uno. Lo programó Alan Miller, que un año después fundó Activision con otros programadores que salieron de Atari."
+   },
+   "en": {
+    "corto": "It comes from Basketball, by Atari, 1978, for the Atari 2600: one of the first basketball games at home.",
+    "largo": "It comes from Basketball, by Atari, 1978, for the Atari 2600: one of the first basketball games at home, one on one. Alan Miller programmed it, and a year later he founded Activision with other programmers who left Atari."
+   },
+   "ja": {
+    "corto": "もとは1978年、アタリ2600の「バスケットボール」。家で遊べる、最初期のバスケットボールゲームです。",
+    "largo": "もとは1978年、アタリ2600の「バスケットボール」。家で遊べる、最初期の1対1のバスケットボールゲームです。作ったアラン・ミラーは、翌年、アタリをやめたプログラマーたちとアクティビジョンを作りました。"
+   }
+  },
+  "spaceimpact": {
+   "voz": {"es": "Speis Ímpact", "en": "Space Impact", "ja": "スペースインパクト"},
+   "es": {
+    "corto": "{Space Impact|Speis Ímpact} venía en los teléfonos Nokia, como el 3310: una nave contra oleadas de alienígenas.",
+    "largo": "{Space Impact|Speis Ímpact} venía en los teléfonos Nokia, como el 3310, cuya pantalla medía apenas 84 por 48 píxeles. Una nave contra oleadas de alienígenas, y un jefe al final de cada nivel. Para mucha gente fue el primer matamarcianos que jugó, y en el bolsillo."
+   },
+   "en": {
+    "corto": "Space Impact came on Nokia phones, like the 3310: one ship against waves of aliens.",
+    "largo": "Space Impact came on Nokia phones, like the 3310, whose screen was just 84 by 48 pixels. One ship against waves of aliens, and a boss at the end of every level. For a lot of people it was the first shoot 'em up they ever played, right in their pocket."
+   },
+   "ja": {
+    "corto": "スペースインパクトは、ノキア3310などの携帯電話に入っていたゲーム。1機で宇宙人の大群とたたかいます。",
+    "largo": "スペースインパクトは、ノキア3310などの携帯電話に入っていたゲーム。画面はたった84×48ドットでした。1機で宇宙人の大群とたたかい、ステージの最後にはボスが待っています。たくさんの人にとって、ポケットで遊んだはじめてのシューティングでした。"
+   }
+  },
+  "bomberman": {
+   "voz": {"es": "Bómberman", "en": "Bomberman", "ja": "ボンバーマン"},
+   "es": {
+    "corto": "{Bomberman|Bómberman} es de Hudson Soft: salió en 1983 en computadoras y se hizo famoso en la Famicom en 1985.",
+    "largo": "{Bomberman|Bómberman} es de Hudson Soft: salió en 1983 en computadoras y se hizo famoso en la Famicom en 1985. Las bombas explotan en forma de cruz, y los poderes te dan más bombas o explosiones más largas. Su modo para varios jugadores lo volvió un clásico de las fiestas."
+   },
+   "en": {
+    "corto": "Bomberman is from Hudson Soft: it came out on home computers in 1983 and became famous on the Famicom in 1985.",
+    "largo": "Bomberman is from Hudson Soft: it came out on home computers in 1983 and became famous on the Famicom in 1985. Bombs explode in a cross, and power-ups give you more bombs or longer blasts. Its multiplayer mode made it a party classic."
+   },
+   "ja": {
+    "corto": "ボンバーマンはハドソンのゲーム。1983年にパソコンで生まれ、1985年のファミコン版で有名になりました。",
+    "largo": "ボンバーマンはハドソンのゲーム。1983年にパソコンで生まれ、1985年のファミコン版で有名になりました。爆弾は十字に爆発して、アイテムで爆弾の数や火力が増えます。みんなで遊べる対戦モードで、パーティーの定番になりました。"
+   }
+  },
+  "rapidroll": {
+   "voz": {"es": "Rápid Rol", "en": "Rapid Roll", "ja": "ラピッドロール"},
+   "es": {
+    "corto": "{Rapid Roll|Rápid Rol} venía en los teléfonos Nokia: una pelota que baja entre plataformas sin tocar los picos.",
+    "largo": "{Rapid Roll|Rápid Rol} venía en los teléfonos Nokia: una pelota que baja entre plataformas sin tocar los picos. Las plataformas suben sin parar, así que si te quedas arriba te pinchas, y si caes al fondo, pierdes. Era el juego perfecto para matar el tiempo en cualquier fila."
+   },
+   "en": {
+    "corto": "Rapid Roll came on Nokia phones: a ball rolling down between platforms without touching the spikes.",
+    "largo": "Rapid Roll came on Nokia phones: a ball rolling down between platforms without touching the spikes. The platforms keep rising, so if you stay at the top you hit the spikes, and if you fall to the bottom, you lose. It was the perfect game for killing time in any line."
+   },
+   "ja": {
+    "corto": "ラピッドロールはノキアの携帯電話に入っていたゲーム。トゲにさわらないように、ボールで足場をおりていきます。",
+    "largo": "ラピッドロールはノキアの携帯電話に入っていたゲーム。トゲにさわらないように、ボールで足場をおりていきます。足場はどんどん上がってくるので、上にいるとトゲにささり、下に落ちるとアウト。ちょっとした待ち時間にぴったりのゲームでした。"
+   }
+  },
+  "lunar": {
+   "voz": {"es": "Lunar Lánder", "en": "Lunar Lander", "ja": "ルナランダー"},
+   "es": {
+    "corto": "{Lunar Lander|Lunar Lánder} es de Atari, de 1979, y fue su primer juego con gráficos vectoriales.",
+    "largo": "{Lunar Lander|Lunar Lánder} es de Atari, de 1979, y fue su primer juego con gráficos vectoriales. La idea venía de un juego de texto de 1969, el mismo año en que el Apolo 11 llegó a la Luna. Hay que bajar despacio y derecho: el combustible se acaba y el suelo no perdona."
+   },
+   "en": {
+    "corto": "Lunar Lander is from Atari, 1979, and it was their first game with vector graphics.",
+    "largo": "Lunar Lander is from Atari, 1979, and it was their first game with vector graphics. The idea came from a text game from 1969, the same year Apollo 11 landed on the Moon. Come down slow and straight: the fuel runs out and the ground is not forgiving."
+   },
+   "ja": {
+    "corto": "ルナランダーは1979年のアタリのゲームで、アタリではじめてのベクタースキャンのゲームです。",
+    "largo": "ルナランダーは1979年のアタリのゲームで、アタリではじめてのベクタースキャンのゲームです。もとになったのは1969年の文字だけのゲームで、アポロ11号が月に着いたのと同じ年でした。燃料には限りがあるので、ゆっくり、まっすぐ降りるのがコツです。"
+   }
+  },
+  "joust": {
+   "voz": {"es": "Yaust", "en": "Joust", "ja": "ジャウスト"},
+   "es": {
+    "corto": "{Joust|Yaust} es de Williams, de 1982: un caballero montado en un avestruz que vuela a puro aleteo.",
+    "largo": "{Joust|Yaust} es de Williams, de 1982: un caballero montado en un avestruz que vuela a puro aleteo. En cada choque gana la lanza que va más alta. Los rivales derrotados dejan un huevo, y si no lo recoges a tiempo, nace otro jinete."
+   },
+   "en": {
+    "corto": "Joust is from Williams, 1982: a knight riding an ostrich that flies by flapping.",
+    "largo": "Joust is from Williams, 1982: a knight riding an ostrich that flies by flapping. In every clash, the higher lance wins. Defeated riders leave an egg, and if you do not grab it in time, a new rider hatches."
+   },
+   "ja": {
+    "corto": "ジャウストは1982年のウィリアムズのゲーム。ダチョウに乗った騎士が、羽ばたいて空を飛びます。",
+    "largo": "ジャウストは1982年のウィリアムズのゲーム。ダチョウに乗った騎士が、羽ばたいて空を飛びます。ぶつかったときは、ランスが高い方の勝ち。倒した敵はタマゴを残し、早く取らないと、また新しい騎士が生まれます。"
+   }
+  },
+  "boulder": {
+   "voz": {"es": "Bólder", "en": "Boulder", "ja": "ボルダー"},
+   "es": {
+    "corto": "Viene de {Boulder Dash|Bólder Dash}, de First Star, de 1984: Rockford cava en busca de diamantes.",
+    "largo": "Viene de {Boulder Dash|Bólder Dash}, de First Star, de 1984: Rockford cava en busca de diamantes. Lo crearon Peter Liepa y Chris Gray. Las rocas y los diamantes caen si les quitas la tierra de abajo, así que cada paso puede provocar un derrumbe."
+   },
+   "en": {
+    "corto": "It comes from Boulder Dash, by First Star, 1984: Rockford digs for diamonds.",
+    "largo": "It comes from Boulder Dash, by First Star, 1984: Rockford digs for diamonds. Peter Liepa and Chris Gray created it. Rocks and diamonds fall when you clear the dirt below them, so every step can start a cave-in."
+   },
+   "ja": {
+    "corto": "もとは1984年、ファーストスターの「ボルダーダッシュ」。ロックフォードがダイヤモンドを掘りあてます。",
+    "largo": "もとは1984年、ファーストスターの「ボルダーダッシュ」。ロックフォードがダイヤモンドを掘りあてます。作ったのはピーター・リーパとクリス・グレイ。下の土を掘ると、岩やダイヤモンドが落ちてくるので、一歩ごとに落盤に注意です。"
+   }
+  },
+  "pipe": {
+   "voz": {"es": "Paip Manía", "en": "Pipe Mania", "ja": "パイプマニア"},
+   "es": {
+    "corto": "{Pipe Mania|Paip Manía} es de 1989, del estudio británico The Assembly Line: conecta tuberías antes de que llegue el líquido.",
+    "largo": "{Pipe Mania|Paip Manía} es de 1989, del estudio británico The Assembly Line: conecta tuberías antes de que llegue el líquido. En Estados Unidos se llamó {Pipe Dream|Paip Drim} y lo publicó Lucasfilm Games. Mientras más largo el camino que recorre el líquido, más puntos."
+   },
+   "en": {
+    "corto": "Pipe Mania is from 1989, by the British studio The Assembly Line: connect the pipes before the liquid gets there.",
+    "largo": "Pipe Mania is from 1989, by the British studio The Assembly Line: connect the pipes before the liquid gets there. In the United States it was called Pipe Dream and published by Lucasfilm Games. The longer the path the liquid travels, the more points."
+   },
+   "ja": {
+    "corto": "パイプマニアは1989年、イギリスのアセンブリーラインのゲーム。水が流れてくる前に、パイプをつなぎます。",
+    "largo": "パイプマニアは1989年、イギリスのアセンブリーラインのゲーム。水が流れてくる前に、パイプをつなぎます。アメリカでは「パイプドリーム」という名前で、ルーカスフィルム・ゲームズが出しました。水が長い道を流れるほど、点数が上がります。"
+   }
+  },
+  "qix": {
+   "voz": {"es": "Kix", "en": "Kicks", "ja": "クイックス"},
+   "es": {
+    "corto": "{Qix|Kix} es de Taito, de 1981: traza líneas para reclamar terreno sin que te toque el {Qix|Kix}.",
+    "largo": "{Qix|Kix} es de Taito, de 1981: traza líneas para reclamar terreno sin que te toque el {Qix|Kix}. Lo crearon Randy y Sandy Pfeiffer. En el original, si trazas despacio el área vale el doble, pero el {Qix|Kix} tiene más tiempo para atraparte."
+   },
+   "en": {
+    "corto": "{Qix|Kicks} is from Taito, 1981: draw lines to claim territory without letting the {Qix|Kicks} touch you.",
+    "largo": "{Qix|Kicks} is from Taito, 1981: draw lines to claim territory without letting the {Qix|Kicks} touch you. Randy and Sandy Pfeiffer created it. In the original, drawing slowly makes the area worth double, but it gives the {Qix|Kicks} more time to catch you."
+   },
+   "ja": {
+    "corto": "クイックスは1981年のタイトーのゲーム。クイックスにふれないように線を引いて、陣地を広げます。",
+    "largo": "クイックスは1981年のタイトーのゲーム。クイックスにふれないように線を引いて、陣地を広げます。作ったのはランディとサンディのファイファー夫妻。オリジナルでは、ゆっくり線を引くと点数が倍になりますが、そのぶんクイックスにつかまりやすくなります。"
+   }
+  },
+  "qbert": {
+   "voz": {"es": "Kiubert", "en": "Cue-bert", "ja": "キューバート"},
+   "es": {
+    "corto": "{Q*bert|Kiubert} es de Gottlieb, de 1982: salta sobre los cubos de la pirámide para cambiarles el color.",
+    "largo": "{Q*bert|Kiubert} es de Gottlieb, de 1982: salta sobre los cubos de la pirámide para cambiarles el color. Lo crearon Warren Davis y Jeff Lee. Cuando lo atrapan suelta una grosería ilegible en un globo de cómic, y la máquina hablaba con una voz sintetizada que sólo decía sonidos sin sentido."
+   },
+   "en": {
+    "corto": "{Q*bert|Cue-bert} is from Gottlieb, 1982: hop on the pyramid's cubes to change their color.",
+    "largo": "{Q*bert|Cue-bert} is from Gottlieb, 1982: hop on the pyramid's cubes to change their color. Warren Davis and Jeff Lee created it. When he gets caught he lets out an unreadable curse in a comic balloon, and the machine talked with a speech chip that only made nonsense sounds."
+   },
+   "ja": {
+    "corto": "キューバートは1982年のゴットリーブのゲーム。ピラミッドのキューブをとびうつって、色を変えていきます。",
+    "largo": "キューバートは1982年のゴットリーブのゲーム。ピラミッドのキューブをとびうつって、色を変えていきます。作ったのはウォーレン・デイビスとジェフ・リー。つかまると、マンガのふきだしで読めない悪口を言います。マシンの音声合成は、意味のない音しかしゃべりませんでした。"
+   }
+  },
+  "mrdo": {
+   "voz": {"es": "Míster Du", "en": "Mister Do", "ja": "ミスタードゥ"},
+   "es": {
+    "corto": "{Mr. Do!|Míster Du} es de Universal, de 1982: un payaso que cava túneles y aplasta monstruos con manzanas.",
+    "largo": "{Mr. Do!|Míster Du} es de Universal, de 1982: un payaso que cava túneles y aplasta monstruos con manzanas. Si juntas las letras de la palabra EXTRA ganas una vida, y comer ocho cerezas seguidas da un bono."
+   },
+   "en": {
+    "corto": "{Mr. Do!|Mister Do} is from Universal, 1982: a clown who digs tunnels and squashes monsters with apples.",
+    "largo": "{Mr. Do!|Mister Do} is from Universal, 1982: a clown who digs tunnels and squashes monsters with apples. Collect the letters of the word EXTRA to win a life, and eating eight cherries in a row gives a bonus."
+   },
+   "ja": {
+    "corto": "ミスタードゥは1982年のユニバーサルのゲーム。ピエロがトンネルを掘って、リンゴでモンスターをつぶします。",
+    "largo": "ミスタードゥは1982年のユニバーサルのゲーム。ピエロがトンネルを掘って、リンゴでモンスターをつぶします。EXTRAの5文字をそろえると1機ふえて、サクランボを8個つづけて取るとボーナスです。"
+   }
+  },
+  "rallyx": {
+   "voz": {"es": "Rali Ex", "en": "Rally X", "ja": "ラリーエックス"},
+   "es": {
+    "corto": "{Rally-X|Rali Ex} es de Namco, de 1980: maneja por un laberinto juntando banderas.",
+    "largo": "{Rally-X|Rali Ex} es de Namco, de 1980: maneja por un laberinto juntando banderas. Fue de los primeros juegos con música de fondo continua y traía un radar para ver dónde están las banderas. Si te persiguen, suelta humo: los coches rojos que lo tocan se quedan girando."
+   },
+   "en": {
+    "corto": "Rally-X is from Namco, 1980: drive through a maze collecting flags.",
+    "largo": "Rally-X is from Namco, 1980: drive through a maze collecting flags. It was one of the first games with continuous background music, and it had a radar to show where the flags are. If they chase you, drop smoke: the red cars that hit it spin out."
+   },
+   "ja": {
+    "corto": "ラリーエックスは1980年のナムコのゲーム。迷路を走って、旗を集めます。",
+    "largo": "ラリーエックスは1980年のナムコのゲーム。迷路を走って、旗を集めます。BGMがずっと流れる、最初期のゲームのひとつで、旗の場所がわかるレーダーもありました。追いかけられたら煙幕を出しましょう。ふれた赤い車はスピンします。"
+   }
+  },
+  "burgertime": {
+   "voz": {"es": "Bérguer Taim", "en": "BurgerTime", "ja": "バーガータイム"},
+   "es": {
+    "corto": "{BurgerTime|Bérguer Taim} es de Data East, de 1982: el chef Peter Pepper arma hamburguesas caminando sobre los ingredientes.",
+    "largo": "{BurgerTime|Bérguer Taim} es de Data East, de 1982: el chef Peter Pepper arma hamburguesas caminando sobre los ingredientes. Lo persiguen Mister Hot Dog, Mister Pickle y Mister Egg, y con la pimienta los paralizas un momento. Si dejas caer un pan con enemigos encima, ganas muchos más puntos."
+   },
+   "en": {
+    "corto": "BurgerTime is from Data East, 1982: Chef Peter Pepper builds burgers by walking over the ingredients.",
+    "largo": "BurgerTime is from Data East, 1982: Chef Peter Pepper builds burgers by walking over the ingredients. Mr. Hot Dog, Mr. Pickle and Mr. Egg chase him, and a shake of pepper freezes them for a moment. Drop a bun with enemies on it and you score a lot more."
+   },
+   "ja": {
+    "corto": "バーガータイムは1982年のデータイーストのゲーム。コックのピーターペッパーが、具の上を歩いてハンバーガーを作ります。",
+    "largo": "バーガータイムは1982年のデータイーストのゲーム。日本での最初の名前は「ハンバーガー」でした。コックのピーターペッパーが具の上を歩いてハンバーガーを作り、ソーセージやピクルスや目玉焼きに追いかけられます。コショウをかけると少しの間止められます。敵を乗せたまま具を落とすと、高得点です。"
+   }
+  },
+  "mappy": {
+   "voz": {"es": "Mápi", "en": "Mappy", "ja": "マッピー"},
+   "es": {
+    "corto": "{Mappy|Mápi} es de Namco, de 1983: un ratón policía que recupera cosas robadas en la mansión de los gatos.",
+    "largo": "{Mappy|Mápi} es de Namco, de 1983: un ratón policía que recupera cosas robadas en la mansión de los gatos. Se mueve entre pisos rebotando en trampolines, y las puertas sirven para noquear a los gatos, los {Meowky|Miáuki} y su jefe, Goro."
+   },
+   "en": {
+    "corto": "Mappy is from Namco, 1983: a police mouse who recovers stolen goods in the cats' mansion.",
+    "largo": "Mappy is from Namco, 1983: a police mouse who recovers stolen goods in the cats' mansion. He moves between floors by bouncing on trampolines, and the doors knock out the cats, the Meowkies and their boss, Goro."
+   },
+   "ja": {
+    "corto": "マッピーは1983年のナムコのゲーム。ネズミの警官が、ネコの屋敷から盗まれた品物を取りもどします。",
+    "largo": "マッピーは1983年のナムコのゲーム。ネズミの警官が、ネコの屋敷から盗まれた品物を取りもどします。トランポリンで階を移動して、ドアでミューキーズや親分のニャームコをはじきとばします。"
+   }
+  }
+ }
+}

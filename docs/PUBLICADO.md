@@ -105,7 +105,8 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
   - 28 y 29-oct: jlptest N5, el largo y el short;
   - DC, la semana: el largo ya salió el 27-oct (Adrián, desde Studio: https://youtu.be/D9vSbcUIHtY, también en la ficha de Play); el short, el 31-oct;
   - 1 y 2-nov: War Zone, CPU contra CPU;
-  - 3 y 4-nov: Kazan, 8 CPU.
+  - 3 y 4-nov: Kazan, 8 CPU;
+  - desde el 31-oct, todos los días: **el mejor del día**. Es la partida del campeón de Daily Challenge, entera y narrada por LeIA. Sale dos días después de jugarse, a las 19:00 (es), 19:20 (en) y 19:40 (ja). Las claves son `mejor-<fecha>[-en|-ja]`. Lo arma `leia-mejor-del-dia.py` cada mañana. Las partidas se rehacen desde `arcade.partidas`, así que el mp4 sobra en cuanto está en YouTube y en TikTok.
 - **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git. Su copia de `~/Desktop/videos-leia/` se borró el 30-oct, cuando ya estaban programados en TikTok.
 
 ## Tráileres de las fichas de Play (YouTube, subidos por Adrián el 27-oct)

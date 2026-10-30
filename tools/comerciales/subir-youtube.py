@@ -19,6 +19,7 @@ de <vídeo>.capitulos.json si existe. Una entrada con id y `"actualizar": true` 
 título, descripción y lista (p. ej. la que Adrián subió a mano) y se le quita la marca.
 """
 import json, os, subprocess, sys
+from datetime import datetime, timedelta, timezone
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.expanduser('~/Documents/code challenge'))
@@ -105,7 +106,13 @@ def main():
     tope = int(sys.argv[sys.argv.index('--max') + 1]) if '--max' in sys.argv else 3
     seco = '--seco' in sys.argv
     plan = json.load(open(PLAN, encoding='utf-8'))
-    pendientes = [v for v in plan if not v.get('id')]
+    # por fecha de salida: el «mejor del día» se agrega cada mañana al final del plan y sale antes que lo programado para después
+    pendientes = sorted((v for v in plan if not v.get('id')), key=lambda v: v['publicar'])
+    ahora = datetime.now(timezone.utc) + timedelta(minutes=20)
+    vencidos = [v for v in pendientes if datetime.fromisoformat(v['publicar']) < ahora]
+    for v in vencidos:
+        print(f"  ojo: {v['clave']} tenía que salir el {v['publicar']}: no se sube; cámbiale `publicar` en youtube.json")
+    pendientes = [v for v in pendientes if v not in vencidos]
     cambios = [v for v in plan if v.get('id') and v.get('actualizar')]
     print(f'{len(pendientes)} por subir (esta vez hasta {tope}); {len(cambios)} por actualizar')
     for v in cambios + pendientes[:tope]:

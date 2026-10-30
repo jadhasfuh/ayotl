@@ -24,6 +24,10 @@ El guion es un JSON:
     arriba y otra abajo;
   - `final: true`: la tarjeta de la marca.
   `capitulo` en una escena la apunta en `<salida>.capitulos.json` (minuto y título) para la descripción.
+  `continua: true` en una escena: sigue el mismo vídeo que la anterior, así que entra sin cruce (la partida
+  entera del «mejor del día», partida en tramos por lo que dice LeIA). `"acercamiento": false` en el guion
+  quita el acercamiento lento de la pantalla: entre tramos seguidos se notaría el salto, y a escala entera
+  el pixel art no se emborrona.
 - `presentadora` ({nombre, caras}: la carpeta con <nombre en minúsculas>-<cara>.png de 64x64): mientras habla
   sale un cuadro de diálogo de RPG de 16 bits con su retrato, la cara de la escena (`cara`: normal, feliz,
   sorpresa, enojo, triste, pensando, guino) y lo que dice escribiéndose al ritmo de la voz (`dice`, si lo que
@@ -284,7 +288,7 @@ class Escena:
             pintar(d, (W / 2, y), linea, ft, color(c['texto']), 'ma'); y += salto
         d.rounded_rectangle([W / 2 - 60, y + 14, W / 2 + 60, y + 22], 4, fill=color(c['acento']))
         # la pantalla, con un acercamiento lento; una apaisada va centrada en el hueco que queda
-        tar = self.tarjeta(f); z = 1 + 0.035 * f
+        tar = self.tarjeta(f); z = 1 + 0.035 * f if g.get('acercamiento', True) else 1
         tw = round(tar.size[0] * z); th = round(tar.size[1] * z)
         tar = tar.resize((tw, th), Image.BILINEAR)
         if horizontal():
@@ -571,7 +575,7 @@ def main():
                 f = (t - inicio[i]) / durs[i]
                 im = escena(i).cuadro(min(1, f))
                 # cruce con la siguiente al final de la escena
-                if i + 1 < len(durs) and t > inicio[i + 1] - FUNDIDO:
+                if i + 1 < len(durs) and t > inicio[i + 1] - FUNDIDO and not g['escenas'][i + 1].get('continua'):
                     a = (t - (inicio[i + 1] - FUNDIDO)) / FUNDIDO
                     im = Image.blend(im, escena(i + 1).cuadro(0), min(1, a))
                 if i == len(durs) - 1 and total - t < 0.6:
