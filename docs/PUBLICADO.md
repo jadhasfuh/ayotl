@@ -106,7 +106,7 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
   - DC, la semana: el largo ya salió el 27-oct (Adrián, desde Studio: https://youtu.be/D9vSbcUIHtY, también en la ficha de Play); el short, el 31-oct;
   - 1 y 2-nov: War Zone, CPU contra CPU;
   - 3 y 4-nov: Kazan, 8 CPU.
-- **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git. Su copia de `~/Desktop/videos-leia/` sobra desde que quedaron programados en TikTok (30-oct).
+- **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git. Su copia de `~/Desktop/videos-leia/` se borró el 30-oct, cuando ya estaban programados en TikTok.
 
 ## Tráileres de las fichas de Play (YouTube, subidos por Adrián el 27-oct)
 
@@ -134,7 +134,7 @@ Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …�
 - **Qué va:** lo mismo que en YouTube, a la misma hora y con el mismo título y la misma descripción (en TikTok van juntos en la descripción, sin `#shorts`): el Short de cada reto de ttcode a las 13:00 y los vídeos de LeIA a las 18:00, 18:20 y 18:40 (es/en/ja). El Daily Stat no va, porque no está en YouTube.
 - **Cómo se arma:** `tools/comerciales/tiktok-espejo.py` deja en `~/Desktop/tiktok/` los vídeos de los próximos 10 días y `textos.html`.
 - **Al 30-oct:** Adrián programó la primera tanda, del 30-oct a las 18:00 al 9-nov a las 13:00. Son 28 vídeos: 10 retos (de `coin-change` a `subsets-permutations`) y 18 de LeIA (la semana de DC, War Zone CPU y Kazan CPU, largos y Shorts en los tres idiomas). Diez los bajó de YouTube Studio porque la limpieza de ese día ya los había borrado. Los de Kazan llevan el texto que tendrán en YouTube, donde suben el 31-oct y el 1-nov.
-- **Copias locales:** desde que quedaron programados sobran los 18 de la carpeta, las copias de Kazan en `~/Desktop/videos-leia/` y los Daily Stat que se hicieron para TikTok antes de descartarlo (30-oct: script para que Adrián los borre). Los originales de Kazan en `tools/comerciales/salida/` y sus crudos en `tools/comerciales/kazan-cpu/` sobran en cuanto estén en YouTube. Se quedan `public/media/retos/` (los sirve ayotl.dev) y `public/marketing` de DC (los publica el cron).
+- **Copias locales:** el 30-oct, ya programados, se borraron 33 vídeos (387 MB): los 18 de la carpeta, las copias de Kazan en `~/Desktop/videos-leia/` y los Daily Stat que se hicieron para TikTok antes de descartarlo. Los de la carpeta son clones (`cp -c`) y casi no ocupaban espacio aparte. Los originales de Kazan en `tools/comerciales/salida/` y sus crudos en `tools/comerciales/kazan-cpu/` sobran en cuanto estén en YouTube. Se quedan `public/media/retos/` (los sirve ayotl.dev) y `public/marketing` de DC (los publica el cron).
 - **Siguiente tanda:** `--desde 2026-11-10`, antes del 10-nov. Por ahora sólo trae `lru-cache` (10-nov): la cola de ttcode se acaba ese día y no hay vídeos de LeIA después del 4-nov.
 
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
