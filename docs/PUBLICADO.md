@@ -106,7 +106,7 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
   - DC, la semana: el largo ya salió el 27-oct (Adrián, desde Studio: https://youtu.be/D9vSbcUIHtY, también en la ficha de Play); el short, el 31-oct;
   - 1 y 2-nov: War Zone, CPU contra CPU;
   - 3 y 4-nov: Kazan, 8 CPU.
-- **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
+- **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git. Su copia de `~/Desktop/videos-leia/` sobra desde que quedaron programados en TikTok (30-oct).
 
 ## Tráileres de las fichas de Play (YouTube, subidos por Adrián el 27-oct)
 
@@ -119,7 +119,7 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
 
 Van en el campo «Video» de cada ficha de Play. No se vuelven a subir.
 
-**Versiones en inglés y japonés (generadas y subidas por Adrián el 28-oct, públicas, y puestas en la ficha de Play):** `leia-idiomas.py` también traduce los tráileres (`trailer-warzone-en/ja.json`, `trailer-kazan-en/ja.json`, `trailer-jlptest-en.json`; jlptest sólo en inglés porque la app es en español e inglés). Los mp4 están en `tools/comerciales/salida/` y la copia en `~/Desktop/videos-leia/`. El de Daily Challenge ya tiene sus versiones en el plan de YouTube (`dc-semana-largo-en`, 30-oct, y `-ja`).
+**Versiones en inglés y japonés (generadas y subidas por Adrián el 28-oct, públicas, y puestas en la ficha de Play):** `leia-idiomas.py` también traduce los tráileres (`trailer-warzone-en/ja.json`, `trailer-kazan-en/ja.json`, `trailer-jlptest-en.json`; jlptest sólo en inglés porque la app es en español e inglés). Los mp4 se borraron con la limpieza del 30-oct; se rehacen con su guion. El de Daily Challenge ya tiene sus versiones en el plan de YouTube (`dc-semana-largo-en`, 30-oct, y `-ja`).
 
 | App | Inglés | Japonés |
 |---|---|---|
@@ -128,6 +128,14 @@ Van en el campo «Video» de cada ficha de Play. No se vuelven a subir.
 | jlptest | https://youtu.be/po5QagWF2kE (`trailer-jlptest-en.mp4`, 32 s) | — |
 
 Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …», descripción con el enlace al juego, etiquetas, categoría (20 juegos, 27 jlptest), idioma y lista de su app. Cuando una tienda se haga pública, ponerles `"actualizar": true` y correr `subir-youtube.py --max 0` para que la descripción gane el enlace a Play o App Store. Tarjetas y pantallas finales: no hay API, y un enlace externo en ellas pide el Programa de Partners; se hacen a mano en Studio (suscribirse, vídeo o lista).
+
+## TikTok: espejo del canal de YouTube, programado a mano en TikTok Studio
+
+- **Qué va:** lo mismo que en YouTube, a la misma hora y con el mismo título y la misma descripción (en TikTok van juntos en la descripción, sin `#shorts`): el Short de cada reto de ttcode a las 13:00 y los vídeos de LeIA a las 18:00, 18:20 y 18:40 (es/en/ja). El Daily Stat no va, porque no está en YouTube.
+- **Cómo se arma:** `tools/comerciales/tiktok-espejo.py` deja en `~/Desktop/tiktok/` los vídeos de los próximos 10 días y `textos.html`.
+- **Al 30-oct:** Adrián programó la primera tanda, del 30-oct a las 18:00 al 9-nov a las 13:00. Son 28 vídeos: 10 retos (de `coin-change` a `subsets-permutations`) y 18 de LeIA (la semana de DC, War Zone CPU y Kazan CPU, largos y Shorts en los tres idiomas). Diez los bajó de YouTube Studio porque la limpieza de ese día ya los había borrado. Los de Kazan llevan el texto que tendrán en YouTube, donde suben el 31-oct y el 1-nov.
+- **Copias locales:** desde que quedaron programados sobran los 18 de la carpeta, las copias de Kazan en `~/Desktop/videos-leia/` y los Daily Stat que se hicieron para TikTok antes de descartarlo (30-oct: script para que Adrián los borre). Los originales de Kazan en `tools/comerciales/salida/` y sus crudos en `tools/comerciales/kazan-cpu/` sobran en cuanto estén en YouTube. Se quedan `public/media/retos/` (los sirve ayotl.dev) y `public/marketing` de DC (los publica el cron).
+- **Siguiente tanda:** `--desde 2026-11-10`, antes del 10-nov. Por ahora sólo trae `lru-cache` (10-nov): la cola de ttcode se acaba ese día y no hay vídeos de LeIA después del 4-nov.
 
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
