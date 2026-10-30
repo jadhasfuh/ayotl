@@ -94,6 +94,7 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
 |---|---|---|
 | 29-oct | `kazan-app-store` | Kazan ya está en la App Store (id 6826747985) |
 | 29-oct | `dc-google-play` | Daily Challenge ya es pública en Google Play |
+| 30-oct | `warzone-google-play` | War Zone ya es pública en Google Play (SQL en `~/Desktop/cartel-warzone-play.sql`) |
 
 ## YouTube: vídeos de juegos y de jlptest (canal de Adrián), 18:00
 
