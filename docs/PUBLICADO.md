@@ -86,6 +86,15 @@ Lo genera el servidor (`/dia/...`). El registro está en `arcade.publicaciones`.
 | 10-nov | `comercial-warzone` | sale `comercial-warzone-play` si la ficha de Play ya es pública |
 | 17-nov | `comercial-kazan` | comercial de Kazan (voz Despina) |
 
+**Carteles pixel art (imagen JPEG, fuera del calendario y sin fila en `arcade.publicaciones`):** se disparan a mano con
+`/api/cron/social?tipo=cartel&clip=<clip>` (imagen en `public/marketing/<clip>.jpg`, pie en `public/content/anuncios/<clip>.txt`),
+van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave del Vault (`~/Desktop/carteles-tiendas.sql`).
+
+| Fecha | Cartel | Qué es |
+|---|---|---|
+| 29-oct | `kazan-app-store` | Kazan ya está en la App Store (id 6826747985) |
+| 29-oct | `dc-google-play` | Daily Challenge ya es pública en Google Play |
+
 ## YouTube: vídeos de juegos y de jlptest (canal de Adrián), 18:00
 
 - **El plan:** `ayotl/tools/comerciales/youtube.json`. Al subirse, cada vídeo apunta ahí su id. Los sube `subir-youtube.py` según la cuota del día.
