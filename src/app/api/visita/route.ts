@@ -7,7 +7,8 @@ export const dynamic = "force-dynamic";
  * juegos extra), jlptest y Mercadito mandan aquí un beacon por página vista
  * (`src/components/Visitas.tsx` en cada repo, `public/visita.js` en los juegos
  * de Daily) y aquí se suma uno en `ayotl.visitas` / `ayotl.visitantes`. Ver la
- * migración 20261021230000_ayotl_visitas.sql para las consultas.
+ * migración 20261021230000_ayotl_visitas.sql para las consultas. Los eventos
+ * (`e`, sólo los de `EVENTOS`) van a `ayotl.eventos` (20261030190000_ayotl_eventos.sql).
  *
  * Vive en ayotl.dev porque es el único sitio detrás de Cloudflare: el país lo
  * pone Cloudflare en `cf-ipcountry` y la IP no se mira para nada más que para
@@ -29,6 +30,13 @@ const SITIOS: Record<string, string[]> = {
   "mercadito.cx": ["mercadito"],
 };
 const EXTRAS = new Set(["warzone", "kazan", "procesion"]);
+
+// Lo que se cuenta además de las páginas, por sitio: crear una cuenta en jlptest… Sólo cuántas veces
+// por día, con el sitio del que llegó esa persona ese día y su país; nunca quién (ver la migración
+// 20261030190000_ayotl_eventos.sql). Un evento que no esté aquí no se anota.
+const EVENTOS: Record<string, string[]> = {
+  jlptest: ["cuenta"],
+};
 
 // Lo que no es una persona con un navegador (los que no corren JS ni llegan aquí).
 const BOT = /bot\b|bot\/|crawl|spider|slurp|headless|lighthouse|pagespeed|preview|facebookexternalhit|whatsapp|telegram|curl|wget|python|node-fetch|undici|axios|go-http|java\//i;
@@ -125,11 +133,25 @@ export async function POST(req: Request) {
   if (!c || typeof c !== "object") return nada();
 
   const sitio = typeof c.s === "string" && SITIOS[host].includes(c.s) ? c.s : null;
+  const app = c.a === true;
+  const pais = (req.headers.get("cf-ipcountry") ?? "").toUpperCase();
+  const paisLimpio = /^[A-Z0-9]{2}$/.test(pais) ? pais : "XX";
+
+  // Un evento («e»): de dónde llegó es la entrada de esa persona ese día, que guarda su navegador.
+  if (typeof c.e === "string") {
+    const evento = sitio && EVENTOS[sitio]?.includes(c.e) ? c.e : null;
+    const base = ayotl();
+    if (!sitio || !evento || !base) return nada();
+    const { error } = await base.rpc("sumar_evento", {
+      p_sitio: sitio, p_evento: evento, p_origen: origenDe(c.o, true, app, host, sitio), p_pais: paisLimpio, p_app: app,
+    });
+    if (error) console.warn("evento:", error.message);
+    return nada();
+  }
+
   const ruta = limpiarRuta(c.r);
   if (!sitio || !ruta) return nada();
-  const app = c.a === true;
   const primera = c.p === true;
-  const pais = (req.headers.get("cf-ipcountry") ?? "").toUpperCase();
   const idioma = typeof c.i === "string" ? c.i.toLowerCase().split("-")[0] : "";
 
   const base = ayotl();
@@ -140,7 +162,7 @@ export async function POST(req: Request) {
     p_origen: origenDe(c.o, primera, app, host, sitio),
     p_app: app,
     p_nuevo: c.n === true,
-    p_pais: /^[A-Z0-9]{2}$/.test(pais) ? pais : "XX",
+    p_pais: paisLimpio,
     p_idioma: /^[a-z]{2,3}$/.test(idioma) ? idioma : "?",
     p_movil: c.m === true,
   });
