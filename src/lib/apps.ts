@@ -30,7 +30,7 @@ export type App = {
   paquetePlay?: string;
   /**
    * El bundle de iOS y el id numérico de la App Store (Kazan: 6826747985,
-   * aprobada el 29-oct-2026). En cuanto el lookup de iTunes devuelve la app
+   * aprobada el 29-oct-2026; War Zone: 6827221095, en revisión). En cuanto el lookup de iTunes devuelve la app
    * (ver lib/en-play), la página pone la insignia oficial de la App Store.
    */
   bundleIos?: string;
@@ -226,14 +226,17 @@ export const APPS: App[] = [
   },
   {
     // Se juega en la web dentro de Daily Challenge (como «juego extra», sin
-    // anuncios) y va en camino a Google Play y App Store con AdMob (octubre
-    // de 2026). Las cifras salen del código: www/game/weapons.js, maps.js y
-    // campaign.js del repo jadhasfuh/warzone.
+    // anuncios). La app, con AdMob, es pública en Google Play desde el
+    // 30-oct-2026; en la App Store, en revisión (con bundleIos y appStoreId la
+    // insignia sale sola cuando Apple la apruebe). Las cifras salen del
+    // código: www/game/weapons.js, maps.js y campaign.js del repo jadhasfuh/warzone.
     id: "warzone",
     nombre: "War Zone",
     dominio: "dailychallenge.click/warzone",
     url: "https://dailychallenge.click/warzone",
     paquetePlay: "dev.ayotl.warzone",
+    bundleIos: "dev.ayotl.warzone",
+    appStoreId: "6827221095",   // «War Zone» en App Store Connect; la 1.0 en revisión desde el 27-oct-2026
     acento: "caparazon",
     apaisada: true,
     lema: {
