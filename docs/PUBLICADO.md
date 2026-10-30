@@ -103,7 +103,7 @@ van a Instagram y Facebook. Para repetir uno: SQL `net.http_post` con la llave d
   - DC, la semana: el largo ya salió el 27-oct (Adrián, desde Studio: https://youtu.be/D9vSbcUIHtY, también en la ficha de Play); el short, el 31-oct;
   - 1 y 2-nov: War Zone, CPU contra CPU;
   - 3 y 4-nov: Kazan, 8 CPU.
-- **Estado al 27-oct:** todavía no se ha subido ninguno. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
+- **Estado al 30-oct:** subidos y programados todos menos los seis de Kazan (3 y 4-nov), que van cinco el 31-oct y uno el 1-nov. War Zone ya es pública en Google Play: sus vídeos nuevos llevan el enlace y a los cuatro que ya estaban (el CPU largo y los tres tráileres) se les puso el 30-oct. Los mp4 están en `tools/comerciales/salida/`, que no va a git, y la copia en `~/Desktop/videos-leia/`.
 
 ## Tráileres de las fichas de Play (YouTube, subidos por Adrián el 27-oct)
 
