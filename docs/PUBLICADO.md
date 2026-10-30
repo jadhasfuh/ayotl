@@ -8,6 +8,8 @@ Antes de generar o publicar un vídeo, buscarlo aquí y en el registro de su pro
 
 Al borrar copias locales para liberar disco, se anota aquí qué era cada vídeo. El 16-oct-2026 el disco quedó al 99 %: las copias locales de lo ya publicado sobran y se pueden borrar.
 
+**30-oct-2026, disco lleno otra vez (Claude Code no podía correr nada): borrados 218 vídeos locales, 805 MB** (Adrián: «revisa qué vídeos ya publicaste y bórralos, deja sólo las referencias de cómo los hiciste»). Se fue: los vídeos de LeIA y tráileres que ya tienen id en `tools/comerciales/youtube.json` (y su copia en `~/Desktop/videos-leia`), los crudos de `tools/comerciales/warzone-cpu/`, las copias de la cuenta regresiva en `tools/comerciales/cuenta/mp4/` (las que usa el cron siguen en jlptest.org), los mp4 de ttcode con sus dos ids en `meta.json` y la recopilación vol. 1 (`l7Iuj_ZTStU`), las pruebas locales del Daily Stat de los 23 datos publicados (8 al 30-oct), los crudos de los reels 15-17 de Mercadito y el reel de War Zone del 11-oct (`territorio war/shots/anuncio-warzone.mp4`; la copia que se sirve está en DC `public/marketing`). Se quedan: los 6 vídeos de Kazan para YouTube (suben el 31-oct y 1-nov, y sus crudos en `tools/comerciales/kazan-cpu/`), el tráiler de War Zone en Google Play (sin publicar como reel), todo lo que sirven los sitios para los posts programados y las recetas (guiones, JSON, miniaturas, ids). Rehacer cualquiera: su guion sigue en el repo de su producto.
+
 ## ttcode (retos de código): YouTube
 
 **Dónde está el registro:** `challenges/<sección>/<slug>/meta.json`, en `youtube.desktop` / `youtube.mobile` y `published`. También en `src/content/retos.json` de ayotl.
