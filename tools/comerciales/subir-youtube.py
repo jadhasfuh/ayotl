@@ -55,12 +55,13 @@ def en_play(paquete):
 
 def en_app_store(bundle):
     """La ficha de la App Store, si la app ya está publicada (el lookup de iTunes la devuelve)."""
-    r = subprocess.run(['curl', '-s', '--max-time', '20', f'https://itunes.apple.com/lookup?bundleId={bundle}'], capture_output=True, text=True)
+    r = subprocess.run(['curl', '-s', '--max-time', '20', f'https://itunes.apple.com/lookup?bundleId={bundle}&country=us'], capture_output=True, text=True)
     try:
         res = json.loads(r.stdout).get('results') or []
     except ValueError:
         res = []
-    return res[0].get('trackViewUrl') if res else None
+    # la ficha sin país ni ?uo=4: Apple manda a la tienda de quien la abre
+    return f"https://apps.apple.com/app/id{res[0]['trackId']}" if res and res[0].get('trackId') else None
 
 
 def enlaces(app, idioma='es'):
