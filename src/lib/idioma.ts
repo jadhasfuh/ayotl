@@ -135,6 +135,7 @@ const TEXTOS = {
   // Página de cada app
   appAbrir: { es: "Abrir", en: "Open" },
   appEnLaTienda: { es: "En Google Play", en: "On Google Play" },
+  appEnAppStore: { es: "En la App Store", en: "On the App Store" },
   appProximamente: { es: "Próximamente", en: "Coming soon" },
   appVolver: { es: "Todas las apps", en: "All apps" },
   appPantallas: { es: "Por dentro", en: "A look inside" },

@@ -6,7 +6,7 @@ import { Tortuga } from "@/components/Tortuga";
 import { APPS } from "@/lib/apps";
 import { ruta, t } from "@/lib/idioma";
 import { idiomaDe, metadatosDe } from "@/lib/paginas";
-import { enPlay, fichaPlay } from "@/lib/en-play";
+import { enAppStore, enPlay, fichaAppStore, fichaPlay } from "@/lib/en-play";
 
 type Props = { params: Promise<{ idioma: string }> };
 
@@ -24,6 +24,7 @@ export default async function Inicio({ params }: Props) {
   // La ficha de Play de cada app, si ya es pública: la tarjeta suma «En Google Play ↗» (29-oct-2026, Daily
   // Challenge). La portada se regenera cada hora, así que las siguientes salen solas.
   const enTienda = await Promise.all(APPS.map(async (a) => (a.paquetePlay && (await enPlay(a.paquetePlay)) ? fichaPlay(a.paquetePlay) : null)));
+  const enApple = await Promise.all(APPS.map(async (a) => (a.bundleIos && a.appStoreId && (await enAppStore(a.bundleIos)) ? fichaAppStore(a.appStoreId) : null)));
   return (
     <>
       <a href="#contenido" className="salto">{x("irAlContenido")}</a>
@@ -51,7 +52,7 @@ export default async function Inicio({ params }: Props) {
               <p>{x("appsTexto")}</p>
             </div>
             <ul className="tarjetas">
-              {APPS.map((app, k) => <TarjetaApp key={app.id} app={app} idioma={idioma} play={enTienda[k]} />)}
+              {APPS.map((app, k) => <TarjetaApp key={app.id} app={app} idioma={idioma} play={enTienda[k]} appStore={enApple[k]} />)}
             </ul>
           </div>
         </section>

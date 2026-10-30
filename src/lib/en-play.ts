@@ -26,7 +26,8 @@ export const fichaAppStore = (id: string) => `https://apps.apple.com/app/id${id}
 
 export async function enAppStore(bundle: string): Promise<boolean> {
   try {
-    const r = await fetch(`https://itunes.apple.com/lookup?bundleId=${bundle}`, { signal: AbortSignal.timeout(4000) });
+    // con el país: sin él, el lookup dio 0 resultados horas después de que la ficha ya respondía (Kazan, 29-oct-2026)
+    const r = await fetch(`https://itunes.apple.com/lookup?bundleId=${bundle}&country=us`, { signal: AbortSignal.timeout(4000) });
     const d = (await r.json()) as { resultCount?: number };
     return (d.resultCount ?? 0) > 0;
   } catch {
