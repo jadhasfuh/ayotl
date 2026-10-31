@@ -2,12 +2,15 @@
 """Sube a YouTube (el canal de Adrián, el mismo de los retos de ttcode) los vídeos de youtube.json que aún no
 tengan id, programados a su fecha: privados con publishAt, que YouTube hace públicos a esa hora.
 
-  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/subir-youtube.py [--max 3] [--seco]
+  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/subir-youtube.py [--max 15] [--solo prefijo] [--seco]
 
 Usa ttcode/youtube.py (el permiso OAuth vive allí y vence cada 7 días mientras la app de Google Cloud esté en
-«Prueba»: si venció, abre el navegador para volver a darlo). Cuota: 10 000 al día; cada subida cuesta 1 600,
-más 50 del update, 50 de la miniatura y 50 de la lista: caben 5 al día, y menos si ese día también suben
-retos de ttcode. El id se apunta en youtube.json.
+«Prueba»: si venció, abre el navegador para volver a darlo). Cuota: desde el 1-jun-2026 (historial de cambios
+de la API) videos.insert tiene su propia cubeta de 100 subidas al día; el update, la miniatura y la lista
+(50 cada uno) salen de las 10 000 unidades de todo lo demás: unos 66 vídeos al día. Antes una subida costaba
+1 600 y no cabían más de 5. Lo que topa ahora es el límite diario del canal, que YouTube no publica
+(uploadLimitExceeded): con ese error, o con el de cuota, se para y lo demás sube al día siguiente. El id se
+apunta en youtube.json.
 
 Adrián, 27-oct-2026: el título empieza con la app en mayúsculas («DAILY CHALLENGE: Semana del 20/10 al 26/10»,
 «JLPTEST: Vocabulario N5»); la descripción lleva los enlaces a la página y, cuando la app ya es pública en la
@@ -103,11 +106,12 @@ def revisar(v):
 
 
 def main():
-    tope = int(sys.argv[sys.argv.index('--max') + 1]) if '--max' in sys.argv else 3
+    tope = int(sys.argv[sys.argv.index('--max') + 1]) if '--max' in sys.argv else 15
     seco = '--seco' in sys.argv
+    solo = sys.argv[sys.argv.index('--solo') + 1] if '--solo' in sys.argv else ''   # sólo las claves que empiezan así
     plan = json.load(open(PLAN, encoding='utf-8'))
     # por fecha de salida: el «mejor del día» se agrega cada mañana al final del plan y sale antes que lo programado para después
-    pendientes = sorted((v for v in plan if not v.get('id')), key=lambda v: v['publicar'])
+    pendientes = sorted((v for v in plan if not v.get('id') and v['clave'].startswith(solo)), key=lambda v: v['publicar'])
     ahora = datetime.now(timezone.utc) + timedelta(minutes=20)
     vencidos = [v for v in pendientes if datetime.fromisoformat(v['publicar']) < ahora]
     for v in vencidos:
@@ -121,6 +125,7 @@ def main():
         for v in cambios + pendientes[:tope]:
             print('\n==', v['clave'], v['publicar'], '| lista:', APPS[v['app']]['nombre']); print(v['titulo']); print(descripcion(v))
         return
+    from googleapiclient.errors import HttpError
     from ttcode.youtube import actualizar_video, subir_video
     for v in cambios:
         print('== actualizar', v['clave'], v['id'])
@@ -134,8 +139,15 @@ def main():
             print('falta', mp4); continue
         print('==', v['clave'], '->', v['publicar'])
         mini = os.path.join(AQUI, v['miniatura']) if v.get('miniatura') else None
-        v['id'] = subir_video(v['titulo'], descripcion(v), v['etiquetas'], mp4, mini, programar=v['publicar'],
-                              categoria=v['categoria'], idioma=v.get('idioma', 'es'), lista=APPS[v['app']]['nombre'])
+        try:
+            v['id'] = subir_video(v['titulo'], descripcion(v), v['etiquetas'], mp4, mini, programar=v['publicar'],
+                                  categoria=v['categoria'], idioma=v.get('idioma', 'es'), lista=APPS[v['app']]['nombre'])
+        except HttpError as e:
+            # el tope diario del canal o la cuota: lo que falta se sube mañana
+            if 'uploadlimitexceeded' in str(e).lower() or 'quota' in str(e).lower():
+                print(f'  tope del día ({e.status_code}): lo demás se sube mañana')
+                break
+            raise
         json.dump(plan, open(PLAN, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('listo')
 

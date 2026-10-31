@@ -293,7 +293,8 @@
    "CPU vs CPU",
    "indie game",
    "Daily Challenge"
-  ]
+  ],
+  "id": "GD6rysNYZdQ"
  },
  {
   "clave": "kazan-cpu-largo-en",
@@ -313,7 +314,8 @@
    "CPU vs CPU",
    "retro games",
    "volcano"
-  ]
+  ],
+  "id": "Iv27UXU9m3k"
  },
  {
   "clave": "kazan-cpu-largo-ja",
@@ -333,7 +335,8 @@
    "CPU対CPU",
    "レトロゲーム",
    "火山"
-  ]
+  ],
+  "id": "q4Uoe4TxYbM"
  },
  {
   "clave": "kazan-cpu-short",
@@ -349,7 +352,8 @@
    "estrategia",
    "RTS",
    "juego retro"
-  ]
+  ],
+  "id": "zv-CAUYc4P4"
  },
  {
   "clave": "kazan-cpu-short-en",
@@ -366,7 +370,8 @@
    "real-time strategy",
    "CPU vs CPU",
    "retro games"
-  ]
+  ],
+  "id": "rf-6oV9VcH8"
  },
  {
   "clave": "kazan-cpu-short-ja",
@@ -383,7 +388,8 @@
    "リアルタイムストラテジー",
    "CPU対CPU",
    "レトロゲーム"
-  ]
+  ],
+  "id": "BRslG8V723c"
  },
  {
   "clave": "trailer-warzone",
