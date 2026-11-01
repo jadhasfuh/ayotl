@@ -19,6 +19,13 @@ salida/ o, los Shorts en español, de public/marketing de DC. Los títulos y las
 YouTube (1 unidad de cuota cada 50 vídeos, con el permiso de ttcode); lo que aún no está subido, de youtube.json
 con la misma descripción que le pondrá subir-youtube.py. Un vídeo que ya no está en la compu sale en la página
 con el enlace a YouTube Studio para bajarlo (menú ⋮ → Descargar).
+
+Los atrasados (1-nov-2026): lo de youtube.json que entra a una tanda queda marcado con `en_tiktok` (cuándo sale
+allí). El mejor del día se arma dos días antes de salir y una tanda abarca 10, así que sale en YouTube sin haber
+entrado a ninguna: la siguiente tanda lo mete a su misma hora, en el primer día libre desde el suyo y en orden
+(Adrián, 30-oct: «a su misma hora pero en los días siguientes»); los de esa serie que salen dentro de la tanda
+también se forman, para no adelantarse a los viejos. Nada sale en TikTok antes que en YouTube, y lo que no cabe
+queda para la tanda siguiente. Como leia-mejor-del-dia.py y subir-youtube.py, escribe youtube.json: nunca a la vez.
 """
 import datetime as dt, glob, html, importlib.util, json, os, re, subprocess, sys, urllib.parse
 
@@ -41,6 +48,9 @@ SECO = '--seco' in sys.argv
 COPIAS = {'dc-semana-short': f'{DCMK}/leia-semana.mp4', 'warzone-cpu-short': f'{DCMK}/leia-warzone-cpu.mp4',
           'kazan-cpu-short': f'{DCMK}/leia-kazan-cpu.mp4'}
 IDIOMAS = {'es': 'Español', 'en': 'Inglés', 'ja': 'Japonés'}
+INICIO = dt.datetime.fromisoformat('2026-10-30T18:00:00-06:00')   # la primera tanda; lo de antes no va a TikTok
+# la serie de una clave: sin el idioma ni la fecha («mejor-2026-11-01-en» → «mejor»)
+serie = lambda clave: re.sub(r'-\d{4}-\d{2}-\d{2}$', '', re.sub(r'-(en|ja)$', '', clave))
 
 items = []
 for ruta in glob.glob(f'{TTCODE}/challenges/*/*/meta.json'):
@@ -49,17 +59,32 @@ for ruta in glob.glob(f'{TTCODE}/challenges/*/*/meta.json'):
         continue
     cuando = dt.datetime.fromisoformat(m['published'] + 'T13:00:00-06:00')
     if DESDE <= cuando <= HASTA:
-        items.append({'clave': f"reto {m['slug']}", 'cuando': cuando, 'id': m['youtube']['mobile'], 'idioma': 'en',
-                      'ia': False, 'origen': f"{AYOTL}/public/media/retos/{m['slug']}.mp4"})
+        items.append({'clave': f"reto {m['slug']}", 'cuando': cuando, 'yt_cuando': cuando, 'id': m['youtube']['mobile'],
+                      'idioma': 'en', 'ia': False, 'origen': f"{AYOTL}/public/media/retos/{m['slug']}.mp4"})
+en_tanda, cola = [], []
 for v in json.load(open(f'{COM}/youtube.json', encoding='utf-8')):
     cuando = dt.datetime.fromisoformat(v['publicar'])
-    if DESDE <= cuando <= HASTA:
-        origen = f"{COM}/{v['video']}"
-        if not os.path.exists(origen):
-            origen = COPIAS.get(v['clave'], origen)
-        # los de LeIA: su imagen y su voz son de IA, TikTok pide marcarlo
-        items.append({'clave': v['clave'], 'cuando': cuando, 'id': v.get('id'), 'idioma': v.get('idioma', 'es'),
-                      'ia': True, 'origen': origen, 'plan': v})
+    if v.get('en_tiktok') or not INICIO <= cuando <= HASTA:
+        continue
+    origen = f"{COM}/{v['video']}"
+    if not os.path.exists(origen):
+        origen = COPIAS.get(v['clave'], origen)
+    # los de LeIA: su imagen y su voz son de IA, TikTok pide marcarlo
+    (cola if cuando < DESDE else en_tanda).append({'clave': v['clave'], 'cuando': cuando, 'yt_cuando': cuando, 'id': v.get('id'),
+                                                    'idioma': v.get('idioma', 'es'), 'ia': True, 'origen': origen, 'plan': v})
+atrasadas = {serie(x['clave']) for x in cola}
+cola += [x for x in en_tanda if serie(x['clave']) in atrasadas]
+items += [x for x in en_tanda if serie(x['clave']) not in atrasadas]
+ocupado = {x['cuando'] for x in items}
+for x in sorted(cola, key=lambda x: (x['yt_cuando'], x['clave'])):
+    dia = max(DESDE, x['yt_cuando']).date()
+    while (hueco := dt.datetime.combine(dia, x['yt_cuando'].timetz())) <= HASTA:
+        if hueco >= DESDE and hueco >= x['yt_cuando'] and hueco not in ocupado:
+            x['cuando'], x['atrasado'] = hueco, True
+            ocupado.add(hueco)
+            items.append(x)
+            break
+        dia += dt.timedelta(days=1)
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -108,9 +133,11 @@ for x in items:
         x['yt_estado'] = v['status']['privacyStatus']
         if v['status'].get('publishAt'):
             cuando = dt.datetime.fromisoformat(v['status']['publishAt'].replace('Z', '+00:00')).astimezone(MX)
-            if cuando != x['cuando']:
-                avisos.append(f"{x['clave']}: en YouTube sale el {cuando:%d-%m %H:%M}, no el {x['cuando']:%d-%m %H:%M}")
-                x['cuando'] = cuando
+            if cuando != x['yt_cuando']:
+                avisos.append(f"{x['clave']}: en YouTube sale el {cuando:%d-%m %H:%M}, no el {x['yt_cuando']:%d-%m %H:%M}")
+                x['yt_cuando'] = cuando
+                if not x.get('atrasado'):
+                    x['cuando'] = cuando
     else:
         x['titulo'], x['descripcion'] = x['plan']['titulo'], subir.descripcion(x['plan'])
         x['yt_seg'], x['yt_estado'] = None, 'sin subir'
@@ -126,7 +153,8 @@ for x in items:
 items.sort(key=lambda x: (x['cuando'], x['clave']))
 
 for x in items:
-    print(f"{x['cuando']:%a %d-%m %H:%M}  {'OK   ' if x['existe'] else 'FALTA'}  {x['clave']:<40} {x['yt_estado']:<10} {x['titulo'][:56]}")
+    atraso = f"(YouTube {x['yt_cuando']:%d-%m}) " if x.get('atrasado') else ''
+    print(f"{x['cuando']:%a %d-%m %H:%M}  {'OK   ' if x['existe'] else 'FALTA'}  {x['clave']:<40} {x['yt_estado']:<10} {atraso}{x['titulo'][:56]}")
 for a in avisos:
     print('OJO', a)
 if SECO or not items:
@@ -142,6 +170,8 @@ for n, x in enumerate(items):
         tarjetas.append(f'<h2>{e(dia)}</h2>')
         dia_actual = dia
     chips = f'<span class="chip">{IDIOMAS[x["idioma"]]}</span>' + ('<span class="chip ia">Marcar «Contenido generado por IA»</span>' if x['ia'] else '')
+    if x.get('atrasado'):
+        chips += f'<span class="chip">En YouTube salió el {x["yt_cuando"].day}-{MESES[x["yt_cuando"].month - 1]}</span>'
     studio = f'https://studio.youtube.com/video/{x["id"]}/edit' if x['id'] else ''
     if x['existe']:
         medio = f'<video controls preload="metadata" src="{urllib.parse.quote(x["nombre"])}"></video>'
@@ -200,7 +230,7 @@ button.ok {{ outline: 2px solid #2e9d4f; }}
 </style></head>
 <body><main>
 <h1>TikTok: espejo de YouTube</h1>
-<p class="resumen">{listos} vídeos listos en esta carpeta{f', {faltan} por bajar de YouTube Studio' if faltan else ''}. Misma hora que en YouTube (hora de México). Hecho el {AHORA:%d-%m-%Y %H:%M}.</p>
+<p class="resumen">{listos} vídeos listos en esta carpeta{f', {faltan} por bajar de YouTube Studio' if faltan else ''}. Misma hora que en YouTube (hora de México); lo que ya salió allí y aún no está aquí, como el mejor del día, va a su misma hora en los días siguientes. Hecho el {AHORA:%d-%m-%Y %H:%M}.</p>
 <ol class="pasos">
   <li>En TikTok Studio, <b>Subir</b> y arrastra el vídeo de esta carpeta (el nombre empieza con la fecha y la hora).</li>
   <li><b>Copiar para TikTok</b> y pégalo en la descripción: es el título y la descripción de YouTube, sin el #shorts.</li>
@@ -241,4 +271,11 @@ for x in items:
         subprocess.run(['cp', '-c', x['origen'], os.path.join(SALIDA, x['nombre'])], check=True)
 with open(os.path.join(SALIDA, 'textos.html'), 'w', encoding='utf-8') as f:
     f.write(pagina)
+# lo que entró a esta tanda queda marcado: no se repite ni se da por atrasado en la siguiente
+marcas = {x['clave']: x['cuando'].isoformat() for x in items if 'plan' in x}
+plan = json.load(open(f'{COM}/youtube.json', encoding='utf-8'))
+for v in plan:
+    if v['clave'] in marcas:
+        v['en_tiktok'] = marcas[v['clave']]
+json.dump(plan, open(f'{COM}/youtube.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(f'listo: {listos} vídeos y textos.html en {SALIDA}' + (f'; {faltan} por bajar de YouTube Studio' if faltan else ''))
