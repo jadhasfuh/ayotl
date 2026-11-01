@@ -6,7 +6,9 @@ cabecera) y <id>-2.mp3 (el remate), más cierre.mp3, la misma invitación para t
 las mezcla al generar el reel (tools/stat-reel.js); si un dato no tiene voz, el reel sale como antes.
 Idempotente: sólo graba lo que falte.
 
-  python3 tools/comerciales/stat-voz.py [--rehacer]
+  python3 tools/comerciales/stat-voz.py [--rehacer [id,id…]]
+
+--rehacer a secas vuelve a grabar todo; con ids, sólo esos datos (al corregir su título o su remate).
 
 Lo que se dice sale de stats.json: el título y el subtítulo tal cual («Las empresas más viejas, y qué hacían
 cuando nacieron») y el remate. Los números se leen como están: Chirp los dice bien en español.
@@ -32,6 +34,8 @@ def frases(s):
 
 def main():
     rehacer = '--rehacer' in sys.argv
+    sigue = sys.argv[sys.argv.index('--rehacer') + 1:] if rehacer else []
+    solo = set(sigue[0].split(',')) if sigue and not sigue[0].startswith('-') else set()
     stats = json.load(open(STATS, encoding='utf-8'))['stats']
     os.makedirs(VOZ, exist_ok=True)
     hechas = 0
@@ -46,7 +50,7 @@ def main():
             pendientes += [(f"{s['id']}-{k}", texto) for k, texto in enumerate(frases(s), 1)]
         for nombre, texto in pendientes:
             destino = os.path.join(VOZ, f'{nombre}.mp3')
-            if os.path.exists(destino) and not rehacer:
+            if os.path.exists(destino) and not (rehacer and (not solo or nombre.rsplit('-', 1)[0] in solo)):
                 continue
             C.narrar(texto, NOMBRE, IDIOMA, cab)   # queda en la caché de comercial.py, por huella
             huella = hashlib.sha1(f'{NOMBRE}|{IDIOMA}|{texto}'.encode()).hexdigest()[:20]
