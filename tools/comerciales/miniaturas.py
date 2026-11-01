@@ -79,8 +79,20 @@ def juego(nombre, fondo, titulo, sub, cara, acento, logo=None):
         lg = lg.resize((round(lg.size[0] * k), round(lg.size[1] * k)), Image.NEAREST); im.alpha_composite(lg, (60, 40)); y = 70 + lg.size[1]
     for linea in titulo.split('\n'):
         d.text((70, y), linea, font=pixel(72, linea), fill=(255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0)); y += 110
-    d.text((74, y + 20), sub, font=pixel(40, sub), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))   # también pixel: en los juegos nada de Avenir (27-oct)
-    l = leia(cara); im.alpha_composite(l, (W - l.size[0] - 20, H - l.size[1]))
+    l = leia(cara); tope = W - l.size[0] - 30
+    # el subtítulo no se mete bajo LeIA (el del mejor del día, «RAPID ROLL · 5,195 PUNTOS», se tapaba: 31-oct):
+    # si no cabe en un renglón va en dos, partido en el «·», y si aun así no cabe se achica en múltiplos de 8
+    # para que la letra pixel no se emborrone
+    lineas = [sub]
+    if 74 + d.textlength(sub, font=pixel(40, sub)) > tope and ' · ' in sub:
+        lineas = sub.split(' · ', 1)
+    for tam in (40, 32, 24):
+        fs = pixel(tam, sub)
+        if all(74 + d.textlength(t, font=fs) <= tope for t in lineas):
+            break
+    for t in lineas:   # también pixel: en los juegos nada de Avenir (27-oct)
+        d.text((74, y + 20), t, font=fs, fill=acento, stroke_width=3, stroke_fill=(0, 0, 0)); y += round(tam * 1.5)
+    im.alpha_composite(l, (W - l.size[0] - 20, H - l.size[1]))
     d.text((W - 250, 40), 'LeIA', font=ImageFont.truetype(PIXEL, 40), fill=acento, stroke_width=3, stroke_fill=(0, 0, 0))
     im.convert('RGB').save(os.path.join(SAL, f'{nombre}.jpg'), quality=92)
 

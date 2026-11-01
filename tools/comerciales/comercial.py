@@ -37,7 +37,7 @@ La clave de Google (GOOGLE_TTS_KEY, la de la cuenta de prueba que vence el 25-en
 jlptest/.env.local y va en una cabecera desde un archivo temporal: nunca se imprime. Necesita el Python de
 ttcode (pillow, numpy, imageio-ffmpeg). Las llamadas van con curl (el Python del sistema no trae certificados).
 """
-import base64, hashlib, json, os, re, subprocess, sys, tempfile
+import base64, hashlib, json, os, re, subprocess, sys, tempfile, time
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 import imageio_ffmpeg
@@ -124,12 +124,17 @@ def narrar(texto, voz, idioma, cabecera):
     if not os.path.exists(mp3):
         cuerpo = json.dumps({'input': {'text': texto}, 'voice': {'languageCode': idioma, 'name': voz},
                              'audioConfig': {'audioEncoding': 'MP3', 'sampleRateHertz': 24000}})
-        r = subprocess.run(['curl', '-sS', 'https://texttospeech.googleapis.com/v1/text:synthesize',
-                            '-H', '@' + cabecera, '-H', 'Content-Type: application/json', '-d', cuerpo],
-                           capture_output=True, text=True)
-        d = json.loads(r.stdout or '{}')
+        # con tope de tiempo y tres intentos: si la Mac se duerme a media llamada, curl se queda colgado (31-oct)
+        for intento in range(3):
+            r = subprocess.run(['curl', '-sS', '--max-time', '60', 'https://texttospeech.googleapis.com/v1/text:synthesize',
+                                '-H', '@' + cabecera, '-H', 'Content-Type: application/json', '-d', cuerpo],
+                               capture_output=True, text=True)
+            d = json.loads(r.stdout or '{}')
+            if r.stdout:   # Google contestó (con audio o con su error): no se reintenta
+                break
+            time.sleep(5)
         if 'audioContent' not in d:
-            sys.exit('Google no devolvió audio: ' + json.dumps(d)[:200])
+            sys.exit('Google no devolvió audio: ' + (json.dumps(d)[:200] if d else r.stderr.strip()[:200]))
         open(mp3, 'wb').write(base64.b64decode(d['audioContent']))
     crudo = subprocess.run([FF, '-loglevel', 'error', '-i', mp3, '-f', 's16le', '-ac', '1', '-ar', str(SR), '-'],
                            capture_output=True, check=True).stdout
