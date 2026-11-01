@@ -50,7 +50,8 @@ TEXTOS = {
         'dato': 'Un dato: {dato}',
         'van': ['Van {min} y {pts} puntos.', '¡{min} y sigue! Ya lleva {pts} puntos.', '{min} de partida: {pts} puntos y contando.'],
         'fin': '¡Y se acabó! {pts} puntos en {dur}.',
-        'cierre': '¿Puedes superarlo? Cada día hay un juego nuevo: juega gratis en {sitio}.',
+        # el final de todo lo que va a YouTube (Adrián, 31-oct): «¿ya estás suscrito? síguenos para más videos como este»
+        'cierre': '¿Puedes superarlo? Cada día hay un juego nuevo: juega gratis en {sitio}. ¿Ya estás suscrito? Síguenos para más videos como este.',
         'leia': ('LeIA', 'Leia'), 'dc': ('Daily Challenge', 'Daily Challenge'), 'sitio': ('dailychallenge.click', 'Daily Challenge punto click'),
     },
     'en': {
@@ -61,7 +62,7 @@ TEXTOS = {
         'dato': 'Fun fact: {dato}',
         'van': ['{min} in: {pts} points.', '{min} and still going: {pts} points.', '{min} of play: {pts} points and counting.'],
         'fin': "And it's over! {pts} points in {dur}.",
-        'cierre': "Think you can beat it? There's a new game every day: play free at {sitio}.",
+        'cierre': "Think you can beat it? There's a new game every day: play free at {sitio}. Are you subscribed yet? Follow us for more videos like this.",
         'leia': ('LeIA', 'Leia'), 'dc': ('Daily Challenge', 'Daily Challenge'), 'sitio': ('dailychallenge.click', 'dailychallenge dot click'),
     },
     'ja': {
@@ -73,7 +74,7 @@ TEXTOS = {
         'dato': '豆知識：{dato}',
         'van': ['{min}経過、{pts}点！', '{min}たっても、まだまだ続きます。{pts}点！', '{min}で{pts}点。まだまだいけます！'],
         'fin': 'ゲームオーバー！{dur}で{pts}点でした！',
-        'cierre': 'きみはこれを超えられる？毎日ちがうゲームが無料で遊べるよ。{sitio}で待ってるね！',
+        'cierre': 'きみはこれを超えられる？毎日ちがうゲームが無料で遊べるよ。{sitio}で待ってるね！チャンネル登録はもうした？こういう動画をもっと見たいなら、フォローしてね！',
         'leia': ('LeIA', 'レイア'), 'dc': ('Daily Challenge', 'デイリーチャレンジ'), 'sitio': ('dailychallenge.click', 'デイリーチャレンジ・ドット・クリック'),
     },
 }
