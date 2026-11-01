@@ -663,5 +663,60 @@
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-10-30-ja.jpg",
   "id": "zHo36u5xO9A"
+ },
+ {
+  "clave": "mejor-2026-10-31",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-31.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 31 de octubre: 1,550 puntos en INVADERS 🕹️ #shorts",
+  "descripcion": "El mejor del 31 de octubre en Daily Challenge fue ADRIAN, con 1,550 puntos en INVADERS. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "INVADERS"
+  ],
+  "id": "TlJWhRyc0OM"
+ },
+ {
+  "clave": "mejor-2026-10-31-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-31-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of October 31: 1,550 points in INVADERS 🕹️ #shorts",
+  "descripcion": "The best run of October 31 on Daily Challenge was by ADRIAN, with 1,550 points in INVADERS. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "INVADERS"
+  ],
+  "idioma": "en",
+  "id": "NkNC-Xr81EI"
+ },
+ {
+  "clave": "mejor-2026-10-31-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-10-31-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-02T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 10月31日のベスト、INVADERSで1,550点 🕹️ #shorts",
+  "descripcion": "10月31日のDaily Challengeでいちばんだったのは、INVADERSで1,550点のADRIANさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "インベーダー"
+  ],
+  "idioma": "ja",
+  "id": "PCSc8AKaHJQ"
  }
 ]
