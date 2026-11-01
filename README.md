@@ -28,7 +28,7 @@ prueba de Turnstile están en `.env.example`.
 ## Estructura
 
 ```
-src/proxy.ts                     idioma por URL: / → /es/… por dentro, /en/about → /en/acerca, www → apex, cookie ayotl.idioma
+src/proxy.ts                     idioma por URL: / → /es/… por dentro, /en/about → /en/acerca, /challenges/… → /en/challenges/…, www → apex, cookie ayotl.idioma
 src/app/[idioma]/layout.tsx      raíz: <html lang>, Inter, script de tema, metadatos comunes, pie
 src/app/[idioma]/page.tsx        inicio: hero + tarjetas + teasers
 src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio de Turnstile al servir)

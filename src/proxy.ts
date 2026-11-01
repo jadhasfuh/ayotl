@@ -44,6 +44,15 @@ export function proxy(req: NextRequest) {
     destino.pathname = INTERNAS_EN[pathname];
     return NextResponse.redirect(destino, 308);
   }
+  // Las públicas en inglés sin el /en no existen en español y daban 404; los
+  // Shorts de ttcode enseñan `ayotl.dev/challenges/<slug>` al final. Se manda
+  // a la de inglés con lo que cuelgue de ella.
+  const SECCIONES_EN = ["about", "business", "notes", "challenges", "learn"];
+  if (SECCIONES_EN.includes(pathname.split("/")[1])) {
+    const destino = req.nextUrl.clone();
+    destino.pathname = `/en${pathname}`;
+    return NextResponse.redirect(destino, 308);
+  }
   if (pathname === "/" && !esIdioma(cookie)
       && idiomaDeCabecera(req.headers.get("accept-language")) === "en") {
     const destino = req.nextUrl.clone();
