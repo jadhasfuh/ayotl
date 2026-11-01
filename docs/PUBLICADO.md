@@ -44,7 +44,7 @@ Al borrar copias locales para liberar disco, se anota aquí qué era cada vídeo
 | 2026-10-24 | interview/number-of-islands | `IHn8dlRUd1w` | `gs4mN4SRGrU` |
 | 2026-10-25 | interview/search-in-rotated-sorted-array | `YgqPlU9-kfk` | `CQ8_5ULO5QU` |
 
-**Al 27-oct-2026:** subidos y programados hasta el 9-nov. Los ids de cada uno están en su `challenges/<sección>/<reto>/meta.json` y en `src/content/retos.json` de ayotl, así que la tabla de arriba ya no se sigue llenando a mano. Falta subir los dos vídeos del 10-nov (`lru-cache`).
+**Al 27-oct-2026:** subidos y programados hasta el 9-nov. Los ids de cada uno están en su `challenges/<sección>/<reto>/meta.json` y en `src/content/retos.json` de ayotl, así que la tabla de arriba ya no se sigue llenando a mano. Se subieron el 28-oct los dos vídeos del 10-nov (`lru-cache`). **Al 1-nov-2026:** subidos y programados hasta el 17-nov (la tanda del 11 al 17: reverse-a-string, fibonacci-series, print-odd-even-with-two-threads, prime-number-check, first-non-repeating-character, armstrong-number y producer-consumer) y la recopilación `interview-vol-2` (retos 21 a 40, 22.7 min), que sale el 17-nov a las 13:00 (`XgXubD8raWc`; vol. 1: `l7Iuj_ZTStU`, 28-oct).
 
 ## Daily Stat (dato del día de Daily Challenge): Instagram y Facebook, 11:00 de México
 
@@ -136,7 +136,7 @@ Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …�
 - **Cómo se arma:** `tools/comerciales/tiktok-espejo.py` deja en `~/Desktop/tiktok/` los vídeos de los próximos 10 días y `textos.html`.
 - **Al 30-oct:** Adrián programó la primera tanda, del 30-oct a las 18:00 al 9-nov a las 13:00. Son 28 vídeos: 10 retos (de `coin-change` a `subsets-permutations`) y 18 de LeIA (la semana de DC, War Zone CPU y Kazan CPU, largos y Shorts en los tres idiomas). Diez los bajó de YouTube Studio porque la limpieza de ese día ya los había borrado. Los de Kazan llevan el texto que tendrán en YouTube, donde suben el 31-oct y el 1-nov.
 - **Copias locales:** el 30-oct, ya programados, se borraron 33 vídeos (387 MB): los 18 de la carpeta, las copias de Kazan en `~/Desktop/videos-leia/` y los Daily Stat que se hicieron para TikTok antes de descartarlo. Los de la carpeta son clones (`cp -c`) y casi no ocupaban espacio aparte. Los originales de Kazan en `tools/comerciales/salida/` y sus crudos en `tools/comerciales/kazan-cpu/` sobran en cuanto estén en YouTube. Se quedan `public/media/retos/` (los sirve ayotl.dev) y `public/marketing` de DC (los publica el cron).
-- **Siguiente tanda:** `--desde 2026-11-10`, antes del 10-nov. Por ahora sólo trae `lru-cache` (10-nov): la cola de ttcode se acaba ese día y no hay vídeos de LeIA después del 4-nov.
+- **Siguiente tanda:** `--desde 2026-11-10`, antes del 10-nov. Trae los retos del 10 al 19-nov y, desde el 1-nov, los mejores del día que ya salieron en YouTube, a su misma hora en los días siguientes (marcados con `en_tiktok` en youtube.json).
 
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
