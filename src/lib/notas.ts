@@ -1,4 +1,5 @@
 import type { Idioma } from "./idioma";
+import { NOTA_BITACORA_OCTUBRE } from "./nota-bitacora-octubre";
 
 /**
  * Notas técnicas: problemas reales de los tres productos, contados por
@@ -8,10 +9,35 @@ import type { Idioma } from "./idioma";
  * El cuerpo se escribe como una lista de bloques para no meter Markdown ni
  * su intérprete: son unas pocas notas, no un blog.
  */
+export type BloqueGrafica = {
+  tipo: "grafica";
+  forma: "columnas" | "barras";           // columnas: una serie en el tiempo o por orden; barras: categorías de mayor a menor
+  titulo: Record<Idioma, string>;
+  unidad: Record<Idioma, string>;          // para la descripción y la tabla: «vueltas»
+  datos: {
+    etiqueta: string | Record<Idioma, string>;
+    valor: number | null;                  // null: sin dato (sale en gris y dice por qué en `falta`)
+    falta?: Record<Idioma, string>;
+    gris?: boolean;                        // una marca que no es la historia (contexto)
+  }[];
+  pie?: Record<Idioma, string>;
+  cadaEtiqueta?: number;                   // columnas: rotular una de cada N en el eje
+  anchoEtiqueta?: number;                  // barras: espacio para el nombre de la categoría
+  sufijo?: string;                         // barras: lo que va pegado al valor («%»)
+};
+
+export type BloqueCifras = {
+  tipo: "cifras";
+  cifras: { valor: string | Record<Idioma, string>; etiqueta: Record<Idioma, string> }[];
+};
+
 export type Bloque =
   | { tipo: "p"; texto: Record<Idioma, string> }
+  | { tipo: "h2"; texto: Record<Idioma, string> }
   | { tipo: "codigo"; texto: string; pie?: Record<Idioma, string> }
-  | { tipo: "lista"; puntos: Record<Idioma, string[]> };
+  | { tipo: "lista"; puntos: Record<Idioma, string[]> }
+  | BloqueGrafica
+  | BloqueCifras;
 
 export type Nota = {
   id: string;
@@ -771,6 +797,7 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
       } },
     ],
   },
+  NOTA_BITACORA_OCTUBRE,   // el estudio de octubre del piloto, con gráficas (2-nov-2026): en su propio archivo
 ];
 
 export function notaPorId(id: string): Nota | undefined {

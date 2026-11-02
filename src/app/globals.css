@@ -915,3 +915,29 @@ a.camino-titulo:hover { text-decoration: underline; }
 /* Código en línea dentro de los párrafos de las notas (`menu_vistas`): la letra de los datos, un poco más chica, y que
    un nombre largo pueda partirse en el teléfono en vez de empujar la página de lado. */
 .prosa p code, .prosa li code { font-family: var(--fuente-dato); font-size: 0.9em; overflow-wrap: anywhere; }
+
+/* ---- Gráficas de las notas (2-nov-2026): una serie en el acento, lo que no tiene dato en gris, rejilla de
+   un pixel; el texto nunca lleva el color de la serie. La tabla de datos va siempre debajo. ---- */
+.grafica { margin: 2rem 0; --grafica: #00899b; }   /* el --agua de la marca es tan apagado que se lee gris (validado: croma 0.076) */
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .grafica { --grafica: #20a4b6; } }
+:root[data-tema="oscuro"] .grafica { --grafica: #20a4b6; }
+.grafica svg { display: block; width: 100%; max-width: 560px; height: auto; overflow: visible; }
+.grafica-titulo { font-weight: 600; margin-bottom: 0.6rem; color: var(--tinta); }
+.grafica path { fill: var(--grafica); }
+.grafica path.gris { fill: var(--tinta-2); opacity: 0.45; }
+.grafica text { fill: var(--tinta-2); font: 13px var(--fuente); }
+.grafica .grafica-valor { fill: var(--tinta); font-weight: 600; }
+.grafica .grafica-cat { fill: var(--tinta); font-size: 15px; }
+.grafica-eje line, .grafica-base { stroke: var(--linea); stroke-width: 1; }
+.grafica-falta line { stroke: var(--tinta-2); stroke-width: 2; opacity: 0.5; }
+.grafica-marca:hover path { opacity: 0.8; }
+.grafica-pie { font-size: 0.9rem; color: var(--tinta-2); margin-top: 0.5rem; }
+.grafica-tabla { margin-top: 0.4rem; font-size: 0.9rem; }
+.grafica-tabla summary { cursor: pointer; color: var(--agua); padding-block: 0.4rem; }
+.grafica-tabla table { border-collapse: collapse; margin-top: 0.4rem; }
+.grafica-tabla th, .grafica-tabla td { text-align: left; padding: 0.2rem 1rem 0.2rem 0; border-bottom: 1px solid var(--linea); font-variant-numeric: tabular-nums; }
+.grafica-tabla th { font-weight: 400; color: var(--tinta-2); }
+.cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.cifras div { border: 1px solid var(--linea); border-radius: var(--radio); padding: 0.8rem 1rem; }
+.cifras dt { font-size: 0.85rem; color: var(--tinta-2); }
+.cifras dd { margin: 0.2rem 0 0; font-size: 1.6rem; font-weight: 600; color: var(--tinta); }

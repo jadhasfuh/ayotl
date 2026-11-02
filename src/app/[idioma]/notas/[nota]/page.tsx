@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Cabecera } from "@/components/Cabecera";
+import { Cifras, Grafica } from "@/components/Grafica";
 import { APPS } from "@/lib/apps";
 import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
 import { NOTAS, notaPorId, type Nota } from "@/lib/notas";
@@ -61,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-/** Una nota. Texto, alguna lista y algún trozo de código; nada más. */
+/** Una nota. Texto, alguna lista, algún trozo de código y, desde el estudio de octubre del piloto, gráficas. */
 export default async function PaginaNota({ params }: Props) {
   const [nota, idioma] = await notaDe(params);
   const x = t(idioma);
@@ -86,6 +87,9 @@ export default async function PaginaNota({ params }: Props) {
 
           {nota.cuerpo.map((b, i) => {
             if (b.tipo === "p") return <p key={i}>{conCodigo(b.texto[idioma])}</p>;
+            if (b.tipo === "h2") return <h2 key={i}>{b.texto[idioma]}</h2>;
+            if (b.tipo === "grafica") return <Grafica key={i} g={b} idioma={idioma} />;
+            if (b.tipo === "cifras") return <Cifras key={i} b={b} idioma={idioma} />;
             if (b.tipo === "lista") {
               return (
                 <ul key={i}>
