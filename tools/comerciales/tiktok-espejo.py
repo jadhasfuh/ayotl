@@ -8,9 +8,13 @@ ocupan disco) y con la fecha y la hora en el nombre, y textos.html con el títul
 YouTube, un botón para copiarlos juntos (TikTok sólo tiene descripción; sin el #shorts) y una casilla para marcar
 los ya programados.
 
-  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/tiktok-espejo.py [--desde AAAA-MM-DD] [--seco]
+  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/tiktok-espejo.py [--desde AAAA-MM-DD]
+      [--retos-desde AAAA-MM-DD] [--seco]
 
 --desde: la primera fecha (para no repetir lo de la tanda anterior); sin ella, dentro de 20 minutos.
+--retos-desde: la primera fecha sólo para los retos de ttcode, que se programan semanas antes y no se marcan
+  (2-nov-2026: los retos ya estaban programados hasta el 9-nov y los mejores del día atrasados podían salir
+  desde ese mismo día: --retos-desde 2026-11-10 sin --desde).
 --seco: sólo la lista, sin copiar ni escribir la página.
 
 Qué entra: el Short de cada reto de ttcode (13:00; el horizontal es el mismo vídeo y en TikTok saldría repetido),
@@ -42,6 +46,9 @@ DESDE = AHORA + dt.timedelta(minutes=20)    # TikTok pide al menos 15 minutos
 if '--desde' in sys.argv:
     DESDE = max(DESDE, dt.datetime.fromisoformat(sys.argv[sys.argv.index('--desde') + 1] + 'T00:00:00-06:00'))
 HASTA = AHORA + dt.timedelta(days=10, minutes=-30)   # y como mucho 10 días
+RETOS_DESDE = DESDE
+if '--retos-desde' in sys.argv:
+    RETOS_DESDE = max(DESDE, dt.datetime.fromisoformat(sys.argv[sys.argv.index('--retos-desde') + 1] + 'T00:00:00-06:00'))
 SECO = '--seco' in sys.argv
 
 # Los Shorts en español de LeIA también los sirve DC para Instagram: copia por si salida/ ya se limpió.
@@ -58,7 +65,7 @@ for ruta in glob.glob(f'{TTCODE}/challenges/*/*/meta.json'):
     if not m.get('published') or not (m.get('youtube') or {}).get('mobile'):
         continue
     cuando = dt.datetime.fromisoformat(m['published'] + 'T13:00:00-06:00')
-    if DESDE <= cuando <= HASTA:
+    if RETOS_DESDE <= cuando <= HASTA:
         items.append({'clave': f"reto {m['slug']}", 'cuando': cuando, 'yt_cuando': cuando, 'id': m['youtube']['mobile'],
                       'idioma': 'en', 'ia': False, 'origen': f"{AYOTL}/public/media/retos/{m['slug']}.mp4"})
 en_tanda, cola = [], []
