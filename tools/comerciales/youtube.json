@@ -273,7 +273,7 @@
   "idioma": "ja",
   "video": "salida/warzone-cpu-short-ja.mp4",
   "categoria": "20",
-  "publicar": "2026-11-02T18:40:00-06:00",
+  "publicar": "2026-11-01T21:52:00-06:00",
   "titulo": "WAR ZONE: CPU対CPU、ハードは容赦なし 💣 #shorts",
   "descripcion": "War Zoneのコンピューター同士のバトル、見どころをLeIAと。",
   "cierre": "#WarZone #砲撃ゲーム #レトロゲーム",
@@ -736,5 +736,60 @@
   ],
   "idioma": "ja",
   "id": "PCSc8AKaHJQ"
+ },
+ {
+  "clave": "mejor-2026-11-01",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-01.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-03T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 1 de noviembre: 21 puntos en BASKET 🕹️ #shorts",
+  "descripcion": "El mejor del 1 de noviembre en Daily Challenge fue ELI, con 21 puntos en BASKET. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "BASKET"
+  ],
+  "id": "qToHvCCVM3w"
+ },
+ {
+  "clave": "mejor-2026-11-01-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-01-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-03T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 1: 21 points in BASKET 🕹️ #shorts",
+  "descripcion": "The best run of November 1 on Daily Challenge was by ELI, with 21 points in BASKET. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "BASKET"
+  ],
+  "idioma": "en",
+  "id": "NmtsjS0_cmw"
+ },
+ {
+  "clave": "mejor-2026-11-01-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-01-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-03T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月1日のベスト、BASKETで21点 🕹️ #shorts",
+  "descripcion": "11月1日のDaily Challengeでいちばんだったのは、BASKETで21点のELIさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "バスケット"
+  ],
+  "idioma": "ja",
+  "id": "oXgJbwbiA90"
  }
 ]
