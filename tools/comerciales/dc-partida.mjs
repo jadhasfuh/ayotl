@@ -7,7 +7,10 @@
 // --info sólo simula y dice cuánto dura. --minimo repite la partida hasta llenar esos segundos, para una
 // partida muy corta en la que LeIA habla más de lo que dura.
 // Lee NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SECRET_KEY del entorno (las pone leia-mejor-del-dia.py; nunca se
-// imprimen). Escribe un JSON con {fecha, juego, titulo, nombre, puntaje, segundos, fin, vueltas, salida}.
+// imprimen). Escribe un JSON con {fecha, juego, titulo, nombre, puntaje, segundos, fin, vueltas, salida}; con --info,
+// además `marcador` (los puntos de cada segundo), `eventos` (vidas perdidas o ganadas, nivel u oleada nueva, sustos)
+// y `contexto` (los datos de Daily Challenge: récord del juego hasta hoy y antes de ese día, quién quedó segundo,
+// cuántos jugaron, en qué intento lo logró…), para que LeIA no se quede callada (Adrián, 1-nov-2026).
 import { spawn } from 'node:child_process';
 import { readFileSync, writeFileSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
@@ -55,7 +58,7 @@ async function retoDe(fecha) {
   return { ...r, musica: musicaVigente(r.musica, r.juego), semilla: hashString(fecha) };
 }
 
-const [campeon] = await rest(`partidas?select=log,puntaje,perfiles(nombre)&fecha=eq.${fecha}&order=puntaje.desc&limit=1`);
+const [campeon] = await rest(`partidas?select=log,puntaje,usuario,intento,perfiles(nombre)&fecha=eq.${fecha}&order=puntaje.desc&limit=1`);
 if (!campeon?.log) { console.log(JSON.stringify({ fecha, sin_partidas: true })); process.exit(0); }
 const perfil = Array.isArray(campeon.perfiles) ? campeon.perfiles[0] : campeon.perfiles;
 const reto = await retoDe(fecha);
@@ -66,17 +69,62 @@ const opciones = { param: reto.param, mapas: ordenMapas(CONTENT.maps[reto.juego]
 const nuevo = () => new Game(seeds(reto.semilla).game, contenido('maps', `${reto.mapa}.txt`), opciones);
 
 // Una pasada sin dibujar: en qué tick acaba la partida, con cuántos puntos y cuántos llevaba cada segundo
-// (en una partida larga, LeIA dice cada tanto cuántos puntos van).
+// (LeIA dice cada tanto cuántos puntos van), y lo que pasa en ella: vidas que se pierden o se ganan, el nivel o la
+// oleada que sube (el primer campo de NIVELES que tenga el juego) y los sustos ('hurt': un tapón, un golpe, la
+// paleta a la mitad), para que LeIA reaccione («¡chispas, ahí va una vida!»). Los juegos vacían `events` en cada tick.
+const NIVELES = ['wave', 'oleada', 'ronda', 'stage', 'nivel', 'level'];
 const g0 = nuevo();
-let fin = 0;
-const marcador = [];
-while (fin < log.length && !g0.over) { if (fin % FPS === 0) marcador.push(g0.score); g0.update(log[fin++]); }
+const campoNivel = NIVELES.find(k => typeof g0[k] === 'number');
+let fin = 0, vidas = typeof g0.lives === 'number' ? g0.lives : null, nivel = campoNivel ? g0[campoNivel] : null, susto = -99;
+const marcador = [], eventos = [];
+while (fin < log.length && !g0.over) {
+  if (fin % FPS === 0) marcador.push(g0.score);
+  g0.update(log[fin++]);
+  if (g0.over) break;
+  const t = +(fin / FPS).toFixed(2);
+  if (vidas !== null && typeof g0.lives === 'number' && g0.lives !== vidas) {
+    eventos.push({ t, tipo: g0.lives < vidas ? 'vida' : 'vidamas', quedan: g0.lives }); vidas = g0.lives;
+  }
+  if (campoNivel && g0[campoNivel] !== nivel) {
+    if (g0[campoNivel] > nivel) eventos.push({ t, tipo: 'nivel', campo: campoNivel, n: g0[campoNivel] });
+    nivel = g0[campoNivel];
+  }
+  if (g0.events?.includes('hurt') && t - susto > 3) { eventos.push({ t, tipo: 'uy' }); susto = t; }
+}
 const vuelta = fin + PAUSA * FPS;   // cuadros de una vuelta: la partida y la pantalla final
 const vueltas = Math.max(1, Math.ceil(minimo * FPS / vuelta));
 const datos = { fecha, juego: reto.juego, titulo: Game.title, nombre: perfil?.nombre ?? '', puntaje: campeon.puntaje,
                 puntaje_simulado: g0.score, segundos: +(vuelta * vueltas / FPS).toFixed(2), fin: +(fin / FPS).toFixed(2), vueltas, salida: salida ?? null };
 if (g0.score !== campeon.puntaje) console.error(`ojo: la simulación da ${g0.score} y la base ${campeon.puntaje}`);
-if (info) { console.log(JSON.stringify({ ...datos, marcador })); process.exit(0); }
+if (info) { console.log(JSON.stringify({ ...datos, marcador, eventos, contexto: await contexto() })); process.exit(0); }
+
+/** Lo que LeIA puede contar de Daily Challenge mientras corre la partida: el récord del juego hasta hoy (y quién lo
+ *  tiene) y el de antes de ese día, cuántas veces ha salido el juego, cuántos jugaron ese día, quién quedó segundo,
+ *  en qué intento lo logró el campeón y cuántos días ha sido el mejor. */
+async function contexto() {
+  const hoy = new Date(Date.now() - 6 * 3600e3).toISOString().slice(0, 10);   // hora de México
+  const nombre = p => (Array.isArray(p.perfiles) ? p.perfiles[0] : p.perfiles)?.nombre ?? '';
+  const fechas = (await rest(`retos?select=fecha&juego=eq.${reto.juego}&fecha=lte.${hoy}&order=fecha.asc`)).map(x => x.fecha);
+  if (!fechas.includes(fecha)) fechas.push(fecha);
+  const mejor = async fs => {
+    if (!fs.length) return null;
+    const [p] = await rest(`partidas?select=fecha,puntaje,usuario,perfiles(nombre)&fecha=in.(${fs.join(',')})&order=puntaje.desc&limit=1`);
+    return p ? { fecha: p.fecha, puntaje: p.puntaje, nombre: nombre(p), suyo: p.usuario === campeon.usuario } : null;
+  };
+  const delDia = await rest(`partidas?select=usuario,puntaje,perfiles(nombre)&fecha=eq.${fecha}&order=puntaje.desc`);
+  const segundo = delDia.find(p => p.usuario !== campeon.usuario);
+  // los días que ha sido el mejor, hasta hoy: la partida de más puntos de cada día
+  const todas = await rest(`partidas?select=fecha,usuario,puntaje&fecha=lte.${hoy}&order=puntaje.desc`);
+  const ganador = {};
+  for (const p of todas) if (!(p.fecha in ganador)) ganador[p.fecha] = p.usuario;
+  return {
+    hoy, vez: fechas.filter(f => f <= fecha).length, veces: fechas.length,
+    record_hoy: await mejor(fechas), record_antes: await mejor(fechas.filter(f => f < fecha)),
+    partidas: delDia.length, jugadores: new Set(delDia.map(p => p.usuario)).size,
+    segundo: segundo ? { nombre: nombre(segundo), puntaje: segundo.puntaje } : null,
+    intento: campeon.intento ?? 1, dias_ganados: Object.values(ganador).filter(u => u === campeon.usuario).length,
+  };
+}
 
 const ffmpeg = await binarioFfmpeg();
 const wav = `${salida}.wav`;

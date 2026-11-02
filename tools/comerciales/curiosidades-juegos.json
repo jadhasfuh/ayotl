@@ -1,0 +1,693 @@
+{
+  "_nota": "Frases con las que LeIA rellena los silencios del mejor del día (2-nov-2026): 5 por juego e idioma; la 1 a la 3, historia del juego original (sólo hechos bien establecidos); la 4 y la 5, reglas de la versión de DC leídas de public/arcade/games/<id>.js. No repiten el corto ni el largo de datos-juegos.json. {lo que se lee|lo que se pronuncia}, como allí.",
+  "snake": {
+    "es": [
+      "Snake de Nokia lo programó Taneli Armanto, un ingeniero de la empresa, en 1997, para el Nokia 6110.",
+      "El Nokia 3310, del año 2000, traía {Snake II|Snake dos}, la versión que mucha gente recuerda.",
+      "Antes de Nokia, {MS-DOS|eme ese dos} 5 traía {Nibbles|Níbols}, una serpiente escrita en {QBasic|Kiu Béisic}, de 1991.",
+      "Aquí, cada cinco frutas aparece un bicho de premio por cinco segundos: vale entre 55 y 75 puntos, más cuanto antes te lo comas.",
+      "Aquí la serpiente tiene hambre: si pasas 30 segundos sin comer, se acaba la partida. La barra de arriba marca cuánto te queda."
+    ],
+    "en": [
+      "Nokia's Snake was programmed in 1997 by Taneli Armanto, an engineer at the company, for the Nokia 6110.",
+      "The Nokia 3310, from 2000, came with Snake II, the version a lot of people remember.",
+      "Before Nokia, MS-DOS 5 shipped with Nibbles, a snake game written in QBasic, back in 1991.",
+      "Here, every five fruits a bonus bug shows up for five seconds: it's worth 55 to 75 points, more the sooner you eat it.",
+      "Here the snake gets hungry: go 30 seconds without eating and the game is over. The bar at the top shows how long you have."
+    ],
+    "ja": [
+      "ノキアのスネークは1997年、社員のタネリ・アルマントが、ノキア6110のために作りました。",
+      "2000年のノキア3310には「スネークII」が入っていて、多くの人の思い出になりました。",
+      "ノキアより前、1991年のMS-DOS 5には、QBasicで書かれたヘビのゲーム「ニブルズ」が入っていました。",
+      "ここでは、フルーツを5つ食べるごとに虫が5秒だけ出ます。早く食べるほど高く、55点から75点です。",
+      "ここではヘビがおなかをすかせます。30秒何も食べないとゲームオーバー。上のバーが残り時間です。"
+    ]
+  },
+  "breakout": {
+    "es": [
+      "La idea de {Breakout|Breikaut} fue de Nolan Bushnell y Steve Bristow, de Atari: convertir Pong en un juego para una sola persona.",
+      "La recreativa original tenía pantalla en blanco y negro: los colores de las filas eran tiras de celofán pegadas sobre el vidrio.",
+      "Su secuela, {Super Breakout|Súper Breikaut}, salió en 1978, y en 1986 Taito retomó la idea con Arkanoid.",
+      "Aquí los ladrillos valen de 10 a 50 puntos según su color, y los grises de acero aguantan dos golpes y valen 100.",
+      "Aquí la bola acelera a los 3 y a los 8 golpes de paleta, y si toca el techo, tu paleta se encoge a la mitad."
+    ],
+    "en": [
+      "Breakout was Nolan Bushnell and Steve Bristow's idea at Atari: turn Pong into a game for one player.",
+      "The original arcade had a black and white screen: the colored rows were strips of cellophane stuck over the glass.",
+      "Its sequel, Super Breakout, came out in 1978, and in 1986 Taito picked up the idea with Arkanoid.",
+      "Here bricks are worth 10 to 50 points depending on their color, and the gray steel ones take two hits and are worth 100.",
+      "Here the ball speeds up at 3 and 8 paddle hits, and if it touches the ceiling, your paddle shrinks to half."
+    ],
+    "ja": [
+      "ブレイクアウトは、アタリのノーラン・ブッシュネルとスティーブ・ブリストウが、ポンを一人用にしようと考えたゲームです。",
+      "元のアーケードは白黒画面で、レンガの列の色は、ガラスにはったカラーのセロハンでした。",
+      "続編のスーパーブレイクアウトは1978年。1986年には、タイトーが同じアイデアでアルカノイドを出しました。",
+      "ここでは、レンガは色によって10点から50点。灰色の鉄のレンガは2回当てると壊れて、100点です。",
+      "ここでは、パドルに3回と8回当てたところでボールが速くなり、天井に当たるとパドルが半分になります。"
+    ]
+  },
+  "pacman": {
+    "es": [
+      "Toru Iwatani quería un juego que llevara a las mujeres a las arcades, no sólo a los hombres, y por eso eligió algo tan amable como comer.",
+      "La pantalla 256 de Pac-Man no se puede jugar: un error del programa llena media pantalla de símbolos sin sentido.",
+      "Su secuela más famosa, {Ms. Pac-Man|Mis Pac-Man}, salió en 1982 en Estados Unidos y trajo cuatro laberintos distintos.",
+      "Aquí, con una misma pastilla de poder, los fantasmas valen 200, 400, 800 y 1600 si te los comes uno tras otro.",
+      "Aquí ganas una vida extra a los 10 mil puntos, y cuando quedan 20 puntos por comer, Blinky acelera y ya no se dispersa."
+    ],
+    "en": [
+      "Toru Iwatani wanted a game that would bring women into arcades, not just men, so he picked something as friendly as eating.",
+      "Level 256 of Pac-Man can't be played: a bug fills half the screen with garbled symbols.",
+      "Its most famous sequel, Ms. Pac-Man, came out in 1982 in the United States with four different mazes.",
+      "Here, with a single power pellet, ghosts are worth 200, 400, 800 and 1600 if you eat them one after another.",
+      "Here you get an extra life at 10,000 points, and when 20 dots are left, Blinky speeds up and stops scattering."
+    ],
+    "ja": [
+      "岩谷徹さんは女性にもゲームセンターに来てほしいと考え、食べるというやさしいテーマを選びました。",
+      "パックマンの256面は遊べません。プログラムのバグで、画面の半分がおかしな文字だらけになります。",
+      "いちばん有名な続編はミズ・パックマン。1982年にアメリカで出て、迷路が4種類になりました。",
+      "ここでは、同じパワーエサの間にモンスターを続けて食べると、200、400、800、1600点です。",
+      "ここでは1万点で1機ふえます。残りのエサが20個になると、アカベイが速くなって追いかけ続けます。"
+    ]
+  },
+  "nibbler": {
+    "es": [
+      "Rock-Ola era una fábrica de rocolas, las máquinas de discos, y llegó a hacer unas cuantas recreativas, como {Nibbler|Níbler}.",
+      "En 2015 se estrenó {Man vs Snake|Man versus Sneik}, un documental sobre los jugadores que buscaban mil millones de puntos en {Nibbler|Níbler}.",
+      "En el {Nibbler|Níbler} original los muros no matan: la serpiente dobla sola las esquinas, y lo que mata es morderse o quedarse sin tiempo.",
+      "Aquí puedes detenerte en un cruce hasta 10 segundos sin castigo; después, el reloj corre cada vez más rápido, hasta 16 veces.",
+      "Aquí cada bocado y cada segundo que te sobra valen 10 puntos por el número de pantalla, y cada cuatro pantallas ganas una vida."
+    ],
+    "en": [
+      "Rock-Ola was a jukebox maker, and it made a handful of arcade games, like Nibbler.",
+      "In 2015 the documentary Man vs Snake came out, about the players chasing a billion points in Nibbler.",
+      "In the original Nibbler, walls don't kill: the snake turns corners on its own, and what gets you is biting yourself or running out of time.",
+      "Here you can stop at a junction for up to 10 seconds for free; after that, the clock runs faster and faster, up to 16 times.",
+      "Here every bite and every second you have left are worth 10 points times the screen number, and every four screens you get a life."
+    ],
+    "ja": [
+      "ロックオラはジュークボックスの会社で、ニブラーのようなアーケードゲームをいくつか作りました。",
+      "2015年には、ニブラーで10億点を目指す人たちのドキュメンタリー「マン・バーサス・スネーク」が公開されました。",
+      "元のニブラーは、壁にぶつかっても平気です。角は自動で曲がり、こわいのは自分をかむことと時間切れです。",
+      "ここでは、分かれ道で10秒までは止まっても平気。それをすぎると時計がどんどん速く、最大16倍で進みます。",
+      "ここでは、エサ1つと残り時間1秒が、それぞれ10点×面の数。4面ごとに1機ふえます。"
+    ]
+  },
+  "tetris": {
+    "es": [
+      "La primera versión de Tetris corría en una computadora soviética, la Elektronika 60, y no tenía gráficos: las piezas eran corchetes de texto.",
+      "La música más famosa de Tetris, la de la Game Boy, es Korobéiniki, una canción popular rusa del siglo diecinueve.",
+      "En diciembre de 2023, {Willis Gibson|Uílis Guíbson}, un chico de 13 años, fue el primero en jugar el Tetris de la NES hasta hacer que se trabara.",
+      "Aquí todos reciben las mismas piezas en el mismo orden cada día, así que el récord depende sólo de cómo las acomodes.",
+      "Aquí una línea vale 10, dos 25, tres 75 y cuatro de golpe 300, todo por el nivel; y cada 10 líneas subes de nivel."
+    ],
+    "en": [
+      "The first version of Tetris ran on a Soviet computer, the Elektronika 60, with no graphics: the pieces were text brackets.",
+      "Tetris's most famous tune, the Game Boy one, is Korobeiniki, a Russian folk song from the 19th century.",
+      "In December 2023, Willis Gibson, a 13-year-old, became the first person to play NES Tetris until the game crashed.",
+      "Here everyone gets the same pieces in the same order each day, so the record depends only on how you stack them.",
+      "Here one line is worth 10, two 25, three 75 and four at once 300, times the level; every 10 lines you level up."
+    ],
+    "ja": [
+      "最初のテトリスはソ連のコンピューター、エレクトロニカ60で動き、絵はなく、ブロックは文字のカッコでした。",
+      "ゲームボーイ版の有名な曲は「コロブチカ」。19世紀のロシアの民謡です。",
+      "2023年12月、13歳のウィリス・ギブソンさんが、NES版テトリスを止まるまで進めた最初の人になりました。",
+      "ここでは、その日はみんな同じブロックが同じ順番で来ます。差がつくのは置き方だけです。",
+      "ここでは1列10点、2列25点、3列75点、4列同時は300点で、レベルをかけます。10列ごとにレベルアップ。"
+    ]
+  },
+  "columns": {
+    "es": [
+      "Columns lo creó {Jay Geertsen|Yei Guértsen} como juego de computadora, y después Sega le compró los derechos.",
+      "Tuvo secuelas: {Columns II|Columns dos} salió en 1990 en recreativas y {Columns III|Columns tres}, en 1993, para la Mega Drive.",
+      "En la Famicom hubo un clon sin licencia, {Magic Jewelry|Máyic Yúelri}, y de él vienen el comodín y los cambios de canción de esta versión.",
+      "Aquí, cada 70 gemas que eliminas llega una columna mágica: al caer borra todas las gemas del color que toque, y subes de nivel.",
+      "Aquí las gemas cuentan en diagonal, y en una cadena el segundo grupo vale el doble, el tercero el triple, y así."
+    ],
+    "en": [
+      "Columns was created by Jay Geertsen as a computer game, and Sega later bought the rights.",
+      "It got sequels: Columns II hit arcades in 1990, and Columns III came to the Mega Drive in 1993.",
+      "The Famicom had an unlicensed clone, Magic Jewelry, and this version borrows its wild column and its song changes.",
+      "Here, every 70 jewels you clear, a magic column arrives: when it lands it wipes out every jewel of the color it touches, and you level up.",
+      "Here jewels count diagonally, and in a chain the second group is worth double, the third triple, and so on."
+    ],
+    "ja": [
+      "コラムスは、ジェイ・ギアーツェンがパソコン用に作ったゲームで、のちにセガが権利を買いました。",
+      "続編は、1990年のアーケードのコラムスIIと、1993年のメガドライブのコラムスIIIです。",
+      "ファミコンには無許可のマジックジュエリーがあり、魔法の宝石や曲が変わるしくみは、そこから来ています。",
+      "ここでは宝石を70個消すたびに魔法の宝石が落ちてきます。ふれた色の宝石を全部消して、レベルアップです。",
+      "ここでは斜めにそろえても消えます。連鎖では、2回目が2倍、3回目が3倍と点数が上がります。"
+    ]
+  },
+  "galaga": {
+    "es": [
+      "{Galaga|Gálaga} lo diseñó Shigeru Yokoyama, de Namco, y en Estados Unidos lo distribuyó {Midway|Mídwei}.",
+      "En la película Juegos de guerra, de 1983, el personaje de {Matthew Broderick|Mátiu Bróderik} aparece jugando {Galaga|Gálaga} en una arcade.",
+      "En 1987, Namco sacó {Galaga '88|Gálaga ochenta y ocho}, una nueva versión del juego.",
+      "Aquí el jefe aguanta dos tiros: vale 150 en la formación y 400 si lo derribas en picada; los demás valen el doble en picada.",
+      "Aquí, en la oleada 3 y luego cada cuatro, hay fase de desafío: 40 enemigos que no disparan, y derribarlos todos da 1000 extra."
+    ],
+    "en": [
+      "Galaga was designed by Shigeru Yokoyama at Namco, and Midway distributed it in the United States.",
+      "In the 1983 movie WarGames, Matthew Broderick's character is seen playing Galaga at an arcade.",
+      "In 1987, Namco released Galaga '88, a new take on the game.",
+      "Here the boss takes two hits: it's worth 150 in formation and 400 if you shoot it down mid-dive; the others are worth double mid-dive.",
+      "Here, on wave 3 and every fourth wave after, there's a challenge stage: 40 enemies that don't shoot, and getting them all is worth 1000 extra."
+    ],
+    "ja": [
+      "ギャラガをデザインしたのはナムコの横山茂さん。アメリカではミッドウェイが販売しました。",
+      "1983年の映画「ウォー・ゲーム」では、マシュー・ブロデリックの役がゲームセンターでギャラガを遊んでいます。",
+      "1987年には、ナムコから新しいギャラガとして「ギャラガ'88」が出ました。",
+      "ここではボスは2発でたおれます。編隊では150点、急降下中なら400点。ほかの敵も急降下中は2倍です。",
+      "ここでは3面目とその後4面ごとにチャレンジステージ。撃ってこない40機を全部たおすと1000点ボーナス。"
+    ]
+  },
+  "invaders": {
+    "es": [
+      "Tomohiro Nishikado se inspiró en {Breakout|Breikaut} y en La guerra de los mundos, la novela de {H. G. Wells|Hache Ge Uels}.",
+      "Al principio los enemigos iban a ser tanques, aviones y soldados, pero dispararle a personas no parecía bien y se volvieron extraterrestres.",
+      "En 1980 llegó a la Atari 2600, de las primeras recreativas adaptadas con licencia a una consola, y disparó sus ventas.",
+      "Aquí el platillo de arriba vale 300 si le das con tu disparo número 8, 23, 38 y así cada 15; si no, entre 50 y 150.",
+      "Aquí uno de cada tres disparos enemigos sale de la columna que tienes encima, y a los 1500 puntos ganas una vida extra."
+    ],
+    "en": [
+      "Tomohiro Nishikado was inspired by Breakout and by The War of the Worlds, the novel by H. G. Wells.",
+      "At first the enemies were going to be tanks, planes and soldiers, but shooting people didn't sit right, so they became aliens.",
+      "In 1980 it came to the Atari 2600, one of the first arcade games licensed for a home console, and it sent sales soaring.",
+      "Here the saucer up top is worth 300 if you hit it with your 8th, 23rd or 38th shot, and so on every 15; otherwise, 50 to 150.",
+      "Here one in three enemy shots comes from the column right above you, and at 1500 points you get an extra life."
+    ],
+    "ja": [
+      "西角友宏さんは、ブレイクアウトと、H・G・ウェルズの小説「宇宙戦争」をヒントにしました。",
+      "最初、敵は戦車や飛行機や兵隊の予定でしたが、人を撃つのはよくないと、宇宙人になりました。",
+      "1980年にはアタリ2600に移植されました。アーケードの公式移植のさきがけで、本体の売れ行きを大きくのばしました。",
+      "ここでは上のUFOは、8発目、23発目、38発目と15発ごとの弾で当てると300点。ほかは50点から150点です。",
+      "ここでは敵の弾の3発に1発が、自分の真上の列から飛んできます。1500点で1機ふえます。"
+    ]
+  },
+  "frogger": {
+    "es": [
+      "La música principal de {Frogger|Fróguer} es Inu no Omawari-san, una canción infantil japonesa sobre un perro policía.",
+      "En un episodio de {Seinfeld|Sáinfeld} de 1998, {George|Yorch} intenta cruzar la calle con una máquina de {Frogger|Fróguer} para no perder su récord.",
+      "En la recreativa original había una rana dama: si la llevabas hasta su casa, ganabas puntos extra.",
+      "Aquí cada fila nueva que avanzas vale 10, y llegar a casa vale 200 más 10 por cada segundo que te sobre de los 40 del cruce.",
+      "Aquí a veces se posa una mosca en una casa vacía: entrar ahí vale 200 extra. Llenar todas las casas da 1000 y sube la velocidad."
+    ],
+    "en": [
+      "Frogger's main tune is Inu no Omawari-san, a Japanese children's song about a police dog.",
+      "In a 1998 Seinfeld episode, George tries to push a Frogger machine across the street to save his high score.",
+      "The original arcade had a lady frog: bring her home and you scored extra points.",
+      "Here every new row you reach is worth 10, and getting home is worth 200 plus 10 for every second left of the 40 per crossing.",
+      "Here a fly sometimes lands in an empty home: hop in there for 200 extra. Fill every home for 1000, and things speed up."
+    ],
+    "ja": [
+      "フロッガーのメインの曲は、日本の童謡「犬のおまわりさん」です。",
+      "1998年の「となりのサインフェルド」では、ジョージが記録を守ろうと、フロッガーの台を道の向こうへ運びます。",
+      "元のアーケードにはメスのカエルもいて、家まで連れていくとボーナス点がもらえました。",
+      "ここでは新しい列に進むごとに10点。家に着くと200点と、40秒の残り1秒ごとに10点です。",
+      "ここでは空いた家にハエがとまることがあり、入ると200点プラス。家を全部うめると1000点で、速くなります。"
+    ]
+  },
+  "asteroids": {
+    "es": [
+      "{Asteroids|Ásteroids} fue de las primeras recreativas que dejaban escribir tus iniciales en la tabla de récords.",
+      "En la recreativa, la trampa más famosa era dejar viva una sola roca y quedarse cazando platillos.",
+      "Su secuela, {Asteroids Deluxe|Ásteroids Delúx}, salió en 1981 y cambió el hiperespacio por un escudo.",
+      "Aquí las rocas grandes valen 20, las medianas 50 y las chicas 100; el platillo grande vale 200 y el chico, que apunta, 1000.",
+      "Aquí la flecha hacia abajo es el hiperespacio: reapareces en otro lado, pero una de cada ocho veces no vuelves."
+    ],
+    "en": [
+      "Asteroids was one of the first arcade games to let you enter your initials on the high score table.",
+      "In the arcade, the most famous trick was to leave a single rock alive and hang around hunting saucers.",
+      "Its sequel, Asteroids Deluxe, came out in 1981 and swapped hyperspace for a shield.",
+      "Here big rocks are worth 20, medium 50 and small 100; the big saucer is worth 200, and the small one, which aims, 1000.",
+      "Here the down arrow is hyperspace: you pop up somewhere else, but one time in eight you don't come back."
+    ],
+    "ja": [
+      "アステロイドは、ハイスコアにイニシャルを入れられた、最初期のアーケードゲームのひとつです。",
+      "アーケードでいちばん有名な裏ワザは、岩を1つだけ残して、UFOを撃ち続けることでした。",
+      "続編の「アステロイド・デラックス」は1981年。ハイパースペースのかわりにシールドがつきました。",
+      "ここでは大きな岩20点、中くらい50点、小さい岩100点。大きいUFOは200点、ねらってくる小さいUFOは1000点。",
+      "ここでは下ボタンでハイパースペース。どこかに出てきますが、8回に1回はもどってこられません。"
+    ]
+  },
+  "pang": {
+    "es": [
+      "En el original viajas por el mundo: cada fase tiene de fondo un lugar famoso, como el monte Fuji o el Taj Mahal.",
+      "Se podía jugar de a dos al mismo tiempo, cada quien con su arpón.",
+      "La serie siguió con {Pang! 3|Pang tres}, de 1995.",
+      "Aquí las burbujas más chicas valen más: 20 puntos, contra 5 de las más grandes. Romper un bloque vale 20.",
+      "Aquí cada ronda tiene reloj: si se acaba, pierdes una vida. El objeto del reloj frena las burbujas y detiene el tiempo un rato."
+    ],
+    "en": [
+      "In the original you travel the world: each stage has a famous place in the background, like Mount Fuji or the Taj Mahal.",
+      "Two people could play at the same time, each with their own harpoon.",
+      "The series carried on with Pang! 3, in 1995.",
+      "Here the smaller bubbles are worth more: 20 points, against 5 for the biggest. Breaking a block is worth 20.",
+      "Here every round has a clock: if it runs out, you lose a life. The clock item slows the bubbles and stops the timer for a while."
+    ],
+    "ja": [
+      "オリジナルは世界旅行。各ステージの背景には、富士山やタージ・マハルのような名所がえがかれています。",
+      "2人同時に遊べて、それぞれがモリを撃てました。",
+      "シリーズは1995年の「パン3」へと続きました。",
+      "ここでは小さい風船ほど高く、いちばん小さいのは20点、いちばん大きいのは5点。ブロックを壊すと20点です。",
+      "ここでは各ラウンドに制限時間があり、切れると1機減ります。時計のアイテムは、風船をおそくして時間も止めます。"
+    ]
+  },
+  "digdug": {
+    "es": [
+      "El protagonista de {Dig Dug|Dig Dag} se llama Taizo Hori, que en japonés suena a quiero cavar.",
+      "En la serie {Mr. Driller|Míster Dríler}, de Namco, el protagonista es Susumu Hori, hijo de Taizo, el de {Dig Dug|Dig Dag}.",
+      "En Estados Unidos lo distribuyó Atari, y en 1985 salió su secuela, {Dig Dug II|Dig Dag dos}.",
+      "Aquí un {Pooka|Púka} vale de 200 a 500 según lo hondo que revienta; un {Fygar|Fáigar}, el doble, y si lo bombeas de lado, el doble otra vez.",
+      "Aquí, al caer la segunda roca aparece una verdura donde empezaste: vale de 400 a 3000 puntos, más en cada pantalla."
+    ],
+    "en": [
+      "Dig Dug's hero is named Taizo Hori, which in Japanese sounds like I want to dig.",
+      "In Namco's Mr. Driller series, the hero is Susumu Hori, the son of Taizo from Dig Dug.",
+      "Atari distributed it in the United States, and its sequel, Dig Dug II, came out in 1985.",
+      "Here a Pooka is worth 200 to 500 depending on how deep it pops; a Fygar, double that, and if you pump it from the side, double again.",
+      "Here, when the second rock falls, a vegetable appears where you started: it's worth 400 to 3000 points, more on each screen."
+    ],
+    "ja": [
+      "ディグダグの主人公の名前は堀泰三。「掘りたいぞう」のしゃれです。",
+      "ナムコのミスタードリラーの主人公、ホリ・ススムは、ディグダグの泰三の息子です。",
+      "アメリカではアタリが販売し、1985年には続編のディグダグIIが出ました。",
+      "ここではプーカは深さで200点から500点。ファイガーはその2倍で、横からふくらませるとさらに2倍です。",
+      "ここでは岩が2つ落ちると、スタート地点に野菜が出ます。面が進むほど高く、400点から3000点です。"
+    ]
+  },
+  "centipede": {
+    "es": [
+      "{Centipede|Séntipid} fue de las primeras recreativas con muchísimas jugadoras mujeres.",
+      "Su secuela, {Millipede|Mílipid}, salió en 1982 y sumó nuevos insectos.",
+      "Ed Logg, que lo hizo con Dona Bailey, programó {Asteroids|Ásteroids} y, años después, {Gauntlet|Góntlet}.",
+      "Aquí la cabeza del ciempiés vale 100 y cada segmento 10; un hongo aguanta cuatro tiros y sólo da 1 punto.",
+      "Aquí la araña vale 300, 600 o 900, más cuanto más cerca de ti la derribes, y el escorpión que envenena hongos vale 1000."
+    ],
+    "en": [
+      "Centipede was one of the first arcade games with a big crowd of women players.",
+      "Its sequel, Millipede, came out in 1982 and added new bugs.",
+      "Ed Logg, who made it with Dona Bailey, worked on Asteroids and, years later, Gauntlet.",
+      "Here the centipede's head is worth 100 and each segment 10; a mushroom takes four shots and gives just 1 point.",
+      "Here the spider is worth 300, 600 or 900, more the closer to you it goes down, and the scorpion that poisons mushrooms is worth 1000."
+    ],
+    "ja": [
+      "センチピードは、女性のプレイヤーがとても多かった、最初期のアーケードゲームです。",
+      "続編のミリピードは1982年に出て、新しい虫がふえました。",
+      "ドナ・ベイリーと作ったエド・ログは、アステロイドや、のちのガントレットを手がけました。",
+      "ここではムカデの頭は100点、体は1節10点。キノコは4発で壊れて、たった1点です。",
+      "ここではクモは300点、600点、900点で、近くで倒すほど高得点。キノコに毒をまくサソリは1000点です。"
+    ]
+  },
+  "missile": {
+    "es": [
+      "Se jugaba con un {trackball|trac bol} y tres botones, uno para disparar desde cada base.",
+      "Su creador, Dave Theurer, hizo después Tempest, de 1981, con gráficos vectoriales a color.",
+      "Salió en 1980, en plena Guerra Fría, cuando el miedo a una guerra nuclear estaba en todos lados.",
+      "Aquí tienes 20 antimisiles por oleada: cada misil derribado vale 25, y al final cada ciudad viva 100 y cada antimisil sin usar 5.",
+      "Aquí cada dos oleadas recuperas una ciudad perdida, y desde la oleada 3 algunos misiles se dividen en dos a media altura."
+    ],
+    "en": [
+      "It was played with a trackball and three buttons, one to fire from each base.",
+      "Its creator, Dave Theurer, went on to make Tempest in 1981, with color vector graphics.",
+      "It came out in 1980, in the middle of the Cold War, when fear of nuclear war was everywhere.",
+      "Here you get 20 counter missiles per wave: each missile you stop is worth 25, and at the end each city left is 100 and each unused shot 5.",
+      "Here you get a lost city back every two waves, and from wave 3 some missiles split in two halfway down."
+    ],
+    "ja": [
+      "トラックボールと、3つの基地それぞれの発射ボタンで遊びました。",
+      "作者のデイブ・セウラーは、のちに1981年の「テンペスト」を作りました。カラーのベクターゲームです。",
+      "発売は1980年。冷戦のまっただ中で、核戦争へのこわさが身近だった時代です。",
+      "ここでは1回の攻撃に迎撃ミサイルが20発。1発落とすと25点、最後に残った街1つ100点、残り弾1発5点。",
+      "ここでは2回ごとに街が1つもどります。3回目からは、空中で2つに分かれるミサイルも出てきます。"
+    ]
+  },
+  "kaboom": {
+    "es": [
+      "Larry Kaplan y David Crane estaban entre los programadores de Atari que en 1979 fundaron Activision.",
+      "David Crane hizo después {Pitfall!|Pítfol}, de 1982, uno de los juegos más famosos de la Atari 2600.",
+      "Como en otros juegos de Activision, quien mandaba una foto de una puntuación alta recibía un parche bordado.",
+      "Aquí cada bomba vale tantos puntos como el número de la oleada, hasta 20, y cada mil puntos recuperas una cubeta perdida.",
+      "Aquí cada oleada trae dos bombas más, que caen más rápido, y si se te escapa una, la oleada vuelve a empezar."
+    ],
+    "en": [
+      "Larry Kaplan and David Crane were among the Atari programmers who founded Activision in 1979.",
+      "David Crane went on to make Pitfall! in 1982, one of the most famous Atari 2600 games.",
+      "Like other Activision games, if you mailed in a photo of a high score, you got an embroidered patch.",
+      "Here each bomb is worth as many points as the wave number, up to 20, and every thousand points you get a lost bucket back.",
+      "Here each wave brings two more bombs that fall faster, and if one gets past you, the wave starts over."
+    ],
+    "ja": [
+      "ラリー・カプランとデビッド・クレーンは、1979年にアタリをやめてアクティビジョンを作った人たちです。",
+      "デビッド・クレーンは、のちに1982年の「ピットフォール」を作りました。アタリ2600の名作です。",
+      "アクティビジョンのゲームでは、高得点の写真を送ると、ししゅうのワッペンがもらえました。",
+      "ここでは爆弾1個の点数は面の数と同じで、最高20点。1000点ごとに、なくしたバケツがもどります。",
+      "ここでは面ごとに爆弾が2個ふえて、落ちるのも速くなります。1個でも落とすと、その面はやり直しです。"
+    ]
+  },
+  "battlecity": {
+    "es": [
+      "{Battle City|Bátel Siti} se basa en {Tank Battalion|Tank Batálion}, una recreativa de Namco de 1980.",
+      "El juego original tiene 35 fases, y al terminarlas vuelve a empezar.",
+      "En Rusia se volvió muy popular gracias a las consolas Dendy, copias de la Famicom.",
+      "Aquí los tanques grises valen 100, los blancos rápidos 200 y los verdes pesados, que aguantan tres balas, 300, todo por el número de oleada.",
+      "Aquí cada cuarto tanque enemigo sale parpadeando: si lo destruyes deja un poder, como la granada o la pala, y recogerlo vale 500."
+    ],
+    "en": [
+      "Battle City is based on Tank Battalion, a 1980 Namco arcade game.",
+      "The original has 35 stages, and once you clear them it starts over.",
+      "In Russia it became hugely popular thanks to Dendy consoles, Famicom clones.",
+      "Here gray tanks are worth 100, fast white ones 200 and heavy green ones, which take three shots, 300, all times the wave number.",
+      "Here every fourth enemy tank comes out flashing: destroy it and it drops a power-up, like the grenade or the shovel, worth 500 to grab."
+    ],
+    "ja": [
+      "バトルシティーのもとは、1980年のナムコのアーケードゲーム「タンクバタリアン」です。",
+      "オリジナルは35ステージで、全部クリアすると最初にもどります。",
+      "ロシアでは、ファミコンの互換機「デンディ」で大人気になりました。",
+      "ここでは灰色の戦車100点、速い白200点、3発たえる重い緑300点。どれも面の数をかけます。",
+      "ここでは4台目ごとに光る戦車が出ます。倒すと手りゅう弾やスコップなどのアイテムを落とし、取ると500点。"
+    ]
+  },
+  "basket": {
+    "es": [
+      "La Atari 2600 salió en 1977, y al principio se llamaba Atari VCS.",
+      "Alan Miller, su programador, hizo después Tennis e {Ice Hockey|Ais Jóqui} para Activision.",
+      "En 1983, {One on One|Uan on Uan}, de {Electronic Arts|Electrónic Arts}, fue de los primeros juegos de basquetbol con jugadores reales: {Julius Erving|Yúlius Érving} y {Larry Bird|Lárri Berd}.",
+      "Aquí cada canasta vale 2 puntos, o 3 desde lejos, y el secreto es soltar el balón justo en lo más alto del salto.",
+      "Aquí, si te quedas pegado al defensor con el balón más de un segundo y medio, te lo roba; y cuando saltas, a veces salta a taparte."
+    ],
+    "en": [
+      "The Atari 2600 came out in 1977, and at first it was called the Atari VCS.",
+      "Alan Miller, who programmed it, later made Tennis and Ice Hockey for Activision.",
+      "In 1983, Electronic Arts' One on One was one of the first basketball games with real players: Julius Erving and Larry Bird.",
+      "Here each basket is worth 2 points, or 3 from far out, and the trick is to release at the very top of your jump.",
+      "Here, if you stay stuck to the defender with the ball for more than a second and a half, he steals it; and when you jump, he sometimes jumps to block."
+    ],
+    "ja": [
+      "アタリ2600は1977年発売で、最初はアタリVCSという名前でした。",
+      "作ったアラン・ミラーは、のちにアクティビジョンで「テニス」や「アイスホッケー」を作りました。",
+      "1983年のエレクトロニック・アーツ「ワン・オン・ワン」は、実在の選手が出た最初期のバスケットゲームです。",
+      "ここではシュートは2点、遠くからなら3点。コツは、ジャンプのいちばん高いところでボールをはなすことです。",
+      "ここではボールを持ってディフェンスに1.5秒以上くっついていると取られます。ジャンプすると、ブロックに来ることも。"
+    ]
+  },
+  "spaceimpact": {
+    "es": [
+      "El Nokia 3310, donde mucha gente lo jugó por primera vez, salió en el año 2000.",
+      "Del Nokia 3310 se vendieron más de 100 millones de teléfonos.",
+      "En 2017, Nokia volvió a lanzar el 3310 con un diseño nuevo.",
+      "Aquí cada nivel termina con un jefe distinto: la Nodriza, la Serpiente, la Fortaleza, la Tenaza y el Centinela; luego vuelven con más vida.",
+      "Aquí la cápsula amarilla te da disparo triple por 10 segundos, y desde el nivel 2 aparece una cruz verde que es una vida extra."
+    ],
+    "en": [
+      "The Nokia 3310, where a lot of people first played it, came out in 2000.",
+      "The Nokia 3310 sold more than 100 million phones.",
+      "In 2017, Nokia relaunched the 3310 with a new design.",
+      "Here every level ends with a different boss: the Mothership, the Serpent, the Fortress, the Pincer and the Sentinel; then they come back tougher.",
+      "Here the yellow capsule gives you triple shot for 10 seconds, and from level 2 a green cross shows up that's an extra life."
+    ],
+    "ja": [
+      "多くの人がはじめてこのゲームを遊んだノキア3310は、2000年に発売されました。",
+      "ノキア3310は、1億台以上売れました。",
+      "2017年、ノキアは新しいデザインで3310を復活させました。",
+      "ここではステージの最後にボス。マザーシップ、サーペント、フォートレス、ピンサー、センチネルの順で、そのあと強くなって再登場。",
+      "ここでは黄色いカプセルで10秒間3方向に撃てます。ステージ2からは、緑の十字が出て1機ふえます。"
+    ]
+  },
+  "bomberman": {
+    "es": [
+      "En Japón, el primer {Bomberman|Bómberman}, de 1983, se llamaba Bakudan Otoko, que quiere decir el hombre bomba.",
+      "Al final de la versión de Famicom, {Bomberman|Bómberman} se vuelve humano y resulta ser el héroe de {Lode Runner|Loud Ráner}.",
+      "{Saturn Bomberman|Sáturn Bómberman}, de 1996, dejaba jugar hasta a 10 personas a la vez.",
+      "Aquí {Bomberman|Bómberman} se juega en grupo, de 2 a 5 personas: cada rival que eliminas vale 100 y el último en pie suma 300.",
+      "Aquí la ronda dura dos minutos, y bajo los bloques hay bombas extra, hasta 6, fuego más largo y una sola vida extra escondida."
+    ],
+    "en": [
+      "In Japan, the first Bomberman, from 1983, was called Bakudan Otoko, which means bomb man.",
+      "At the end of the Famicom version, Bomberman becomes human and turns out to be the hero of Lode Runner.",
+      "Saturn Bomberman, from 1996, let up to 10 people play at once.",
+      "Here Bomberman is a group game for 2 to 5 people: each rival you knock out is worth 100, and the last one standing gets 300.",
+      "Here a round lasts two minutes, and under the blocks you'll find extra bombs, up to 6, longer flames and a single hidden extra life."
+    ],
+    "ja": [
+      "最初のボンバーマンは1983年。日本での名前は「爆弾男」でした。",
+      "ファミコン版のエンディングでは、ボンバーマンが人間になり、ロードランナーの主人公だとわかります。",
+      "1996年の「サターンボンバーマン」は、最大10人で同時に遊べました。",
+      "ここでは2人から5人で対戦。相手を1人倒すと100点、最後まで残ると300点です。",
+      "ここでは1回2分。ブロックの下には、最大6個までふえる爆弾、火力アップ、ひとつだけの1UPがあります。"
+    ]
+  },
+  "rapidroll": {
+    "es": [
+      "Nokia es una empresa de Finlandia que empezó en 1865 como fábrica de pulpa de papel.",
+      "Entre 1998 y 2011, Nokia fue el mayor fabricante de teléfonos celulares del mundo.",
+      "{Rapid Roll|Rápid Rol} venía de fábrica en el teléfono, en una época en la que todavía no había tiendas de aplicaciones.",
+      "Aquí cada plataforma nueva en la que caes vale 10 puntos más un extra por la velocidad, y la velocidad sube cada 12 segundos.",
+      "Aquí a veces aparece un corazón sobre una plataforma: es una vida extra, y si ya tienes cinco, vale 100 puntos."
+    ],
+    "en": [
+      "Nokia is a Finnish company that started in 1865 as a paper pulp mill.",
+      "From 1998 to 2011, Nokia was the biggest cell phone maker in the world.",
+      "Rapid Roll came built into the phone, back when app stores didn't exist yet.",
+      "Here each new platform you land on is worth 10 points plus a bonus for speed, and the speed goes up every 12 seconds.",
+      "Here a heart sometimes shows up on a platform: it's an extra life, and if you already have five, it's worth 100 points."
+    ],
+    "ja": [
+      "ノキアはフィンランドの会社で、1865年に製紙用パルプの工場として始まりました。",
+      "ノキアは1998年から2011年まで、世界一の携帯電話メーカーでした。",
+      "ラピッドロールは、アプリストアがまだない時代に、最初から携帯電話に入っていたゲームです。",
+      "ここでは新しい足場に乗るたびに10点と速さのボーナス。速さは12秒ごとに上がります。",
+      "ここでは足場の上にハートが出ることがあります。1機ふえて、もう5機あれば100点です。"
+    ]
+  },
+  "lunar": {
+    "es": [
+      "El primer {Lunar Lander|Lunar Lánder} lo escribió en 1969 {Jim Storer|Yim Estórer}, un estudiante de preparatoria, y era sólo texto.",
+      "La recreativa de Atari no tenía botón de motor: se aceleraba con una palanca grande.",
+      "Poco después, Atari usó la misma tecnología de gráficos vectoriales para hacer {Asteroids|Ásteroids}.",
+      "Aquí las plataformas multiplican por 2, 3 o 5: aterrizar vale 100 por el multiplicador, más el combustible que te sobra entre 10.",
+      "Aquí un aterrizaje perfecto, de pie y casi sin velocidad, da 50 extra por multiplicador; cada aterrizaje sólo te devuelve 50 de combustible."
+    ],
+    "en": [
+      "The first Lunar Lander was written in 1969 by Jim Storer, a high school student, and it was text only.",
+      "Atari's arcade had no thrust button: you throttled with a big lever.",
+      "Soon after, Atari used the same vector graphics tech to make Asteroids.",
+      "Here pads multiply by 2, 3 or 5: landing is worth 100 times the multiplier, plus your leftover fuel divided by 10.",
+      "Here a perfect landing, upright and barely moving, gets 50 extra per multiplier; each landing only gives you back 50 fuel."
+    ],
+    "ja": [
+      "最初のルナランダーは1969年、高校生のジム・ストーラーが書いた、文字だけのゲームでした。",
+      "アタリのアーケード版にはエンジンのボタンがなく、大きなレバーで噴射を調節しました。",
+      "アタリはすぐあと、同じベクタースキャンの技術でアステロイドを作りました。",
+      "ここでは着陸台は2倍、3倍、5倍。着陸すると100点×倍率と、残り燃料の10分の1がもらえます。",
+      "ここでは、まっすぐでほぼ止まった完璧な着陸なら、倍率×50点プラス。燃料は着陸1回で50しかもどりません。"
+    ]
+  },
+  "joust": {
+    "es": [
+      "{Joust|Yaust} lo diseñó {John Newcomer|Yon Niúcomer}, de Williams.",
+      "Se podía jugar de a dos: el primer jugador montaba un avestruz y el segundo, una cigüeña.",
+      "En el original, al pterodáctilo sólo se le podía derribar dándole con la lanza justo en la boca abierta.",
+      "Aquí derribar a un jinete vale 75, recoger su huevo 100 y limpiar la oleada 200; si el huevo se queda 8 segundos en el suelo, nace otro jinete.",
+      "Aquí, si una oleada se alarga o te quedas pegado al techo, cruza un pterodáctilo a tu altura que no se puede derribar."
+    ],
+    "en": [
+      "Joust was designed by John Newcomer at Williams.",
+      "Two people could play: player one rode an ostrich, and player two, a stork.",
+      "In the original, the only way to take down the pterodactyl was to hit it with your lance right in its open mouth.",
+      "Here knocking a rider down is worth 75, grabbing the egg 100 and clearing the wave 200; leave an egg on the ground 8 seconds and a new rider hatches.",
+      "Here, if a wave drags on or you hug the ceiling, a pterodactyl flies across at your height, and it can't be taken down."
+    ],
+    "ja": [
+      "ジャウストをデザインしたのは、ウィリアムズのジョン・ニューカマーです。",
+      "2人で遊べて、1人目はダチョウ、2人目はコウノトリに乗りました。",
+      "オリジナルの翼竜は、開いた口にランスを当てたときだけ倒せました。",
+      "ここでは騎士を倒すと75点、タマゴを取ると100点、面クリアで200点。タマゴは地面で8秒たつとかえります。",
+      "ここでは面が長引いたり天井にはりついたりすると、倒せない翼竜が自分の高さを飛んできます。"
+    ]
+  },
+  "boulder": {
+    "es": [
+      "{Boulder Dash|Bólder Dash} salió primero para las computadoras Atari de 8 bits.",
+      "El original tiene 16 cuevas, de la A a la P, y cuatro intermedios.",
+      "Si dejas a Rockford quieto un rato, se pone a golpear el piso con el pie, impaciente.",
+      "Aquí cada gema vale 25, y con la puerta ya abierta, el doble; al salir te dan 150 más 5 por cada segundo que te sobre.",
+      "Aquí, si una roca aplasta a una luciérnaga, la explosión deja hueco; si aplasta a una mariposa, deja gemas."
+    ],
+    "en": [
+      "Boulder Dash first came out for Atari 8-bit computers.",
+      "The original has 16 caves, lettered A to P, plus four intermissions.",
+      "Leave Rockford still for a while and he starts tapping his foot, impatient.",
+      "Here each gem is worth 25, double once the door is open; getting out pays 150 plus 5 for every second left.",
+      "Here, if a rock crushes a firefly, the blast leaves empty space; if it crushes a butterfly, it leaves gems."
+    ],
+    "ja": [
+      "ボルダーダッシュは、最初はアタリの8ビットパソコン向けに出ました。",
+      "オリジナルには、AからPまで16の洞窟と、4つのおまけステージがあります。",
+      "ロックフォードをしばらく放っておくと、待ちくたびれて足で床をトントンします。",
+      "ここでは宝石1個25点、出口が開いたあとは2倍。脱出すると150点と、残り1秒ごとに5点です。",
+      "ここでは岩でホタルをつぶすと爆発のあとは空っぽに、チョウをつぶすと宝石に変わります。"
+    ]
+  },
+  "pipe": {
+    "es": [
+      "El minijuego de hackeo de {BioShock|Baióshok}, de 2007, está inspirado en {Pipe Mania|Paip Manía}.",
+      "En el original, el líquido que avanza por los tubos se llama {flooz|fluz}.",
+      "En la NES y la Game Boy salió con el nombre de {Pipe Dream|Paip Drim}.",
+      "Aquí cada casilla que recorre el agua vale 10 más 2 por ronda, y si cruza dos veces la misma cruz, cierras un lazo y ganas 500.",
+      "Aquí cambiar un tubo que el agua no ha tocado es gratis, y en cada ronda el agua sale antes, corre más rápido y pide más casillas."
+    ],
+    "en": [
+      "The hacking minigame in BioShock, from 2007, is inspired by Pipe Mania.",
+      "In the original, the liquid running through the pipes is called flooz.",
+      "On the NES and the Game Boy it came out as Pipe Dream.",
+      "Here each square the water runs through is worth 10 plus 2 per round, and if it crosses the same cross piece twice, you close a loop for 500.",
+      "Here swapping a pipe the water hasn't reached is free, and each round the water starts sooner, flows faster and needs more squares."
+    ],
+    "ja": [
+      "2007年のバイオショックのハッキングのミニゲームは、パイプマニアがもとになっています。",
+      "オリジナルでは、パイプを流れる液体を「フルーズ」と呼びます。",
+      "NESとゲームボーイでは「パイプドリーム」という名前で出ました。",
+      "ここでは水が1マス進むと10点と、ラウンド×2点。十字のパイプを2回通ると輪ができて500点です。",
+      "ここでは水の来ていないパイプは、置きかえても損はありません。ラウンドごとに水は早く出て、速く流れます。"
+    ]
+  },
+  "qix": {
+    "es": [
+      "{Qix|Kix} lo hizo {Taito America|Taito Amérika}, la filial de Taito en Estados Unidos.",
+      "En 1990 salió en la Game Boy, publicado por Nintendo.",
+      "Inspiró todo un género de juegos de recortar el tablero, como {Volfied|Vólfid}, de la misma Taito.",
+      "Aquí, si te detienes a media línea, al segundo sale una mecha desde el inicio del trazo, y te alcanza si no te mueves.",
+      "Aquí cada ronda tiene plazo, 40 segundos en la primera; al pasarlo, los {Sparx|Sparks} van directo a ti y cada 10 segundos sale otro."
+    ],
+    "en": [
+      "{Qix|Kicks} was made by Taito America, Taito's branch in the United States.",
+      "In 1990 it came out on the Game Boy, published by Nintendo.",
+      "It started a whole genre of claim-the-board games, like Volfied, by Taito itself.",
+      "Here, if you stop halfway through a line, after a second a fuse runs along it from the start, and it gets you if you don't move.",
+      "Here every round has a deadline, 40 seconds in the first; after that, the Sparx come straight for you and another one shows up every 10 seconds."
+    ],
+    "ja": [
+      "クイックスを作ったのは、タイトーのアメリカの会社、タイトーアメリカです。",
+      "1990年には、任天堂からゲームボーイ版が出ました。",
+      "陣取りゲームというジャンルを生み、同じタイトーのヴォルフィードなどが続きました。",
+      "ここでは線の途中で止まると、1秒で導火線の火が線の始まりから追いかけてきます。動けば止まります。",
+      "ここでは各ラウンドに時間制限があり、最初は40秒。すぎるとスパークスがまっすぐ向かってきて、10秒ごとにふえます。"
+    ]
+  },
+  "qbert": {
+    "es": [
+      "Gottlieb fabricaba pinball, y la recreativa traía un golpeador que pegaba en el mueble cada vez que {Q*bert|Kiubert} caía de la pirámide.",
+      "{Q*bert|Kiubert} tuvo su propia caricatura en 1983, dentro del programa {Saturday Supercade|Sáturdei Súperkeid}.",
+      "En la película {Ralph|Ralf}, el demoledor, de 2012, {Q*bert|Kiubert} aparece entre los personajes que se quedaron sin juego.",
+      "Aquí la regla de los colores cambia cada ronda: primero un salto pinta el cubo, luego hacen falta dos, y luego otro salto lo despinta.",
+      "Aquí, si {Coily|Cóili} te sigue cuando saltas a un disco, cae al vacío y ganas 500; atrapar a Slick o a Sam vale 300."
+    ],
+    "en": [
+      "Gottlieb made pinball machines, and the arcade had a knocker that thumped the cabinet every time {Q*bert|Cue-bert} fell off the pyramid.",
+      "{Q*bert|Cue-bert} got his own cartoon in 1983, as part of the show Saturday Supercade.",
+      "In the 2012 movie Wreck-It Ralph, {Q*bert|Cue-bert} shows up among the characters left without a game.",
+      "Here the color rule changes every round: first one hop paints a cube, then it takes two, then a second hop undoes it.",
+      "Here, if Coily follows you as you jump onto a disc, he falls into the void and you get 500; catching Slick or Sam is worth 300."
+    ],
+    "ja": [
+      "ゴットリーブはピンボールの会社で、キューバートが落ちるたびに、台の中の装置がドンと音を立てました。",
+      "キューバートは1983年、テレビ番組「サタデー・スーパーケード」でアニメになりました。",
+      "2012年の映画「シュガー・ラッシュ」には、ゲームがなくなったキャラクターとしてキューバートが出てきます。",
+      "ここではラウンドごとに色のルールが変わります。1回で色が変わり、次は2回、その次はもう1回で元にもどります。",
+      "ここでは円盤に乗るときにコイリーがついてくると落ちて500点。スリックとサムをつかまえると300点です。"
+    ]
+  },
+  "mrdo": {
+    "es": [
+      "{Mr. Do!|Míster Du} se vendió mucho como kit de conversión: con él, una máquina vieja se transformaba en este juego.",
+      "Tuvo varias secuelas; la primera fue {Mr. Do's Castle|Míster Dus Cásel}, de 1983.",
+      "Universal, la empresa de {Mr. Do!|Míster Du}, hizo antes {Lady Bug|Léidi Bag}, de 1981, un laberinto con puertas giratorias.",
+      "Aquí cada cereza vale 10, y comerte ocho seguidas sin detenerte da 100 más; si te paras, la cuenta vuelve a empezar.",
+      "Aquí la bola de poder vale 100, pero cada vez que mata tarda más en volver; aplastar con una manzana vale 200, y a varios, 300 extra."
+    ],
+    "en": [
+      "{Mr. Do!|Mister Do} sold a lot as a conversion kit: with it, an old cabinet turned into this game.",
+      "It got several sequels; the first was Mr. Do's Castle, in 1983.",
+      "Universal, the company behind {Mr. Do!|Mister Do}, had made Lady Bug in 1981, a maze game with revolving gates.",
+      "Here each cherry is worth 10, and eating eight in a row without stopping gives 100 more; stop and the count starts over.",
+      "Here the power ball is worth 100, but each time it kills it takes longer to come back; squashing with an apple is worth 200, and several at once, 300 extra."
+    ],
+    "ja": [
+      "ミスタードゥは、古い台を作りかえるコンバージョンキットとしてよく売れました。",
+      "続編がいくつか出て、最初は1983年の、お城が舞台のゲームでした。",
+      "ミスタードゥのユニバーサルは、1981年に回転ドアのある迷路ゲーム「レディバグ」を出しています。",
+      "ここではサクランボ1個10点。止まらずに8個続けて取ると100点プラス。止まると数え直しです。",
+      "ここではボールで倒すと100点ですが、倒すたびにもどるのがおそくなります。リンゴは1匹200点、まとめてなら300点プラス。"
+    ]
+  },
+  "rallyx": {
+    "es": [
+      "Al año siguiente salió {New Rally-X|Niú Rali Ex}, una versión mejorada que tuvo más éxito que la original.",
+      "En Estados Unidos, {Rally-X|Rali Ex} lo distribuyó {Midway|Mídwei}, igual que Pac-Man.",
+      "En la feria donde se presentó, en 1980, muchos apostaban más por {Rally-X|Rali Ex} que por Pac-Man.",
+      "Aquí cada bandera vale 20 por su número de orden, y tras la bandera especial, el doble; la de la suerte duplica el bono de combustible.",
+      "Aquí el humo gasta combustible, y sin combustible vas a media marcha; pasado el minuto, cada 20 segundos entra otro coche rojo."
+    ],
+    "en": [
+      "The next year brought New Rally-X, an improved version that did better than the original.",
+      "In the United States, Rally-X was distributed by Midway, just like Pac-Man.",
+      "At the trade show where it debuted in 1980, a lot of people bet on Rally-X over Pac-Man.",
+      "Here each flag is worth 20 times its order, double after the special flag; the lucky flag doubles your fuel bonus.",
+      "Here smoke burns fuel, and with no fuel you crawl at half speed; after the first minute, another red car joins every 20 seconds."
+    ],
+    "ja": [
+      "翌年には改良版のニューラリーXが出て、元のゲームより人気になりました。",
+      "アメリカでは、パックマンと同じくミッドウェイが販売しました。",
+      "1980年の展示会では、パックマンよりラリーXのほうが売れると考えた人が多かったそうです。",
+      "ここでは旗は取った順番×20点。スペシャルフラッグのあとは2倍、ラッキーフラッグは燃料ボーナスが2倍です。",
+      "ここでは煙幕は燃料を使い、燃料がないとスピード半分。1分すぎると、20秒ごとに赤い車がふえます。"
+    ]
+  },
+  "burgertime": {
+    "es": [
+      "En Estados Unidos, {BurgerTime|Bérguer Taim} lo distribuyó {Bally Midway|Báli Mídwei}.",
+      "En Japón salió para el sistema {DECO Cassette|Deco Casét} de Data East, que cargaba el juego desde una cinta.",
+      "Su secuela, {Peter Pepper's Ice Cream Factory|Píter Pépers Ais Crim Fáctori}, salió en 1984.",
+      "Aquí tienes cinco pimientas por pantalla, y cada una que te sobre al terminar vale 50 puntos más.",
+      "Aquí, cada cuatro ingredientes que sueltas aparece un premio, helado, café o papas: vale 500 y te da una pimienta más."
+    ],
+    "en": [
+      "In the United States, BurgerTime was distributed by Bally Midway.",
+      "In Japan it came out on Data East's DECO Cassette System, which loaded the game from a tape.",
+      "Its sequel, Peter Pepper's Ice Cream Factory, came out in 1984.",
+      "Here you get five shots of pepper per screen, and each one left at the end is worth 50 more points.",
+      "Here, every four ingredients you drop, a prize shows up, ice cream, coffee or fries: it's worth 500 and gives you one more pepper."
+    ],
+    "ja": [
+      "アメリカでは、バリー・ミッドウェイが販売しました。",
+      "日本ではデータイーストの「デコカセットシステム」で、テープからゲームを読みこんで動きました。",
+      "続編は1984年の「ピーターペッパーのアイスクリームファクトリー」です。",
+      "ここではコショウは1面5回。面クリアのとき、残ったコショウ1回につき50点です。",
+      "ここでは具を4つ落とすごとに、アイスやコーヒーやポテトが出ます。取ると500点で、コショウが1回ふえます。"
+    ]
+  },
+  "mappy": {
+    "es": [
+      "El nombre de {Mappy|Mápi} viene de mappo, una forma coloquial de decir policía en japonés.",
+      "En el original había rondas de bonus en las que {Mappy|Mápi} reventaba globos rebotando en los trampolines.",
+      "En 1986 tuvo una secuela en la Famicom, {Mappy-Land|Mápi Land}.",
+      "Aquí los objetos valen de 100 a 500, y si tomas los dos de una pareja seguidos, el segundo vale el doble.",
+      "Aquí la puerta que abres de golpe manda a volar a los gatos, 100, 200, 400 u 800 según cuántos; y el cuarto bote seguido rompe el trampolín."
+    ],
+    "en": [
+      "Mappy's name comes from mappo, a slang word for police in Japanese.",
+      "The original had bonus rounds where Mappy popped balloons bouncing on the trampolines.",
+      "In 1986 it got a Famicom sequel, Mappy-Land.",
+      "Here items are worth 100 to 500, and if you grab both of a pair in a row, the second is worth double.",
+      "Here a door you slam open sends the cats flying, 100, 200, 400 or 800 depending on how many; and the fourth bounce in a row breaks the trampoline."
+    ],
+    "ja": [
+      "マッピーという名前は、警察のことを指す俗語「マッポ」から来ています。",
+      "オリジナルには、トランポリンで跳ねて風船を割るボーナスステージがありました。",
+      "1986年には、ファミコンで続編の「マッピーランド」が出ました。",
+      "ここではアイテムは100点から500点。同じ種類の2つを続けて取ると、2つ目は2倍です。",
+      "ここではドアで飛ばしたネコの数で100、200、400、800点。トランポリンは続けて4回跳ねると破れます。"
+    ]
+  }
+}

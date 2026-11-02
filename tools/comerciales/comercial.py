@@ -32,7 +32,8 @@ El guion es un JSON:
   sale un cuadro de diálogo de RPG de 16 bits con su retrato, la cara de la escena (`cara`: normal, feliz,
   sorpresa, enojo, triste, pensando, guino) y lo que dice escribiéndose al ritmo de la voz (`dice`, si lo que
   se lee no es lo que se pronuncia: «jota ele pe test» se lee jlptest). Adrián, 27-oct: como los canales de
-  gameplays con avatar.
+  gameplays con avatar. Adrián, 1-nov: si se queda callada más de 3 s, el cuadro se oculta; en una pausa más
+  corta se queda con el texto completo (también en el tramo sin voz que sigue, si es `continua`).
 La clave de Google (GOOGLE_TTS_KEY, la de la cuenta de prueba que vence el 25-ene-2027) se lee de
 jlptest/.env.local y va en una cabecera desde un archivo temporal: nunca se imprime. Necesita el Python de
 ttcode (pillow, numpy, imageio-ffmpeg). Las llamadas van con curl (el Python del sistema no trae certificados).
@@ -46,6 +47,7 @@ W, H, FPS = 1080, 1920, 30          # el formato lo cambia main() si el guion es
 SR = 48000
 FUNDIDO = 0.35          # cruce entre escenas (s)
 RESPIRO = 0.55          # silencio después de cada frase (s)
+CALLADA = 3.0           # tras tantos segundos sin voz, el cuadro de diálogo se oculta
 AVENIR = '/System/Library/Fonts/Avenir Next.ttc'
 JAPONESA = os.path.expanduser('~/Documents/jlptest/fuentes/ipaexg.ttf')
 PIXEL = os.path.expanduser('~/Documents/daily challenge/src/fonts/PressStart2P-Regular.ttf')   # la del diálogo
@@ -228,8 +230,9 @@ class Clip:
 
 
 class Escena:
-    def __init__(self, e, g, dur, voz_dur=0):
+    def __init__(self, e, g, dur, voz_dur=0, eco=None):
         self.e, self.g, self.dur, self.voz_dur = e, g, dur, voz_dur
+        self.eco = eco   # (escena anterior, lo que duró su voz, lo que duró ella): su cuadro sigue un rato en este tramo sin voz
         self.fondo = color(g['colores']['fondo'])
         self.fija = None   # el cuadro, si no cambia (la tarjeta de una palabra)
         if e.get('final') or e.get('palabra') or e.get('cuenta'):
@@ -265,6 +268,9 @@ class Escena:
         im = self.dibujo(f)
         if self.g.get('presentadora') and self.voz_dur and not self.e.get('final'):
             self.dialogo(im, f * self.dur)
+        elif self.g.get('presentadora') and self.eco:   # una pausa: el cuadro anterior, completo, hasta que pasen CALLADA s
+            e, vd, d = self.eco
+            self.dialogo(im, d + f * self.dur, e, vd)
         return im
 
     def abajo(self):
@@ -335,11 +341,13 @@ class Escena:
                 pintar(d, (x0 + 45, y0 + alto / 2), texto, ft, (*color(c['texto']), round(255 * visible)), 'lm')
         return im
 
-    def dialogo(self, im, t):
+    def dialogo(self, im, t, e=None, voz_dur=None):
         """El cuadro de diálogo de RPG: aparece al empezar la voz, el texto se escribe a su ritmo y al acabar
-        parpadea el ▼. El retrato con la cara de la escena va a la izquierda y el nombre en una placa."""
+        parpadea el ▼; si ella se queda callada CALLADA s, se va. El retrato con la cara de la escena va a la
+        izquierda y el nombre en una placa. `e` y `voz_dur`: los de otra escena (la anterior, en una pausa)."""
+        e = e or self.e; voz_dur = self.voz_dur if voz_dur is None else voz_dur
         pr = self.g['presentadora']; c = self.g['colores']
-        aparece = min(1, max(0, (t + 0.05) / 0.2))
+        aparece = min(1, max(0, (t + 0.05) / 0.2), max(0, (voz_dur + CALLADA + 0.25 - t) / 0.25))
         if aparece <= 0:
             return
         if horizontal():
@@ -353,7 +361,7 @@ class Escena:
         d.rectangle([x0, y0, x1, y1], outline=(255, 255, 255, a), width=5)
         d.rectangle([x0 + 9, y0 + 9, x1 - 9, y1 - 9], outline=(120, 140, 220, a), width=2)
         # el retrato
-        cara = Image.open(os.path.join(pr['caras'], f"{pr['nombre'].lower()}-{self.e.get('cara', 'normal')}.png")).convert('RGBA')
+        cara = Image.open(os.path.join(pr['caras'], f"{pr['nombre'].lower()}-{e.get('cara', 'normal')}.png")).convert('RGBA')
         lado = cara.size[0] * max(1, 256 // cara.size[0])   # a escala entera, cerca de 256 px (64 x4, 128 x2)
         px, py = x0 + 22, y0 + (y1 - y0 - lado) // 2
         cara = cara.resize((lado, lado), Image.NEAREST)
@@ -368,7 +376,7 @@ class Escena:
         r_, g_, b_ = color(c['acento']); claro = 0.299 * r_ + 0.587 * g_ + 0.114 * b_ > 150   # con acento claro, letra oscura
         d.text((nx + 18, y0 - 4), pr['nombre'], font=fn, fill=((20, 20, 30, a) if claro else (255, 255, 255, a)), anchor='lm')
         # el texto, escribiéndose: termina un poco antes que la voz
-        texto = self.e.get('dice') or self.e.get('voz') or ''
+        texto = e.get('dice') or e.get('voz') or ''
         ft = pixel(tam, texto); tx = px + lado + 40; ancho = x1 - 40 - tx
         # las líneas: por palabras; en japonés no hay espacios, así que por carácter (Adrián, 27-oct: las letras se
         # salían del cuadro), sin empezar línea con 。、！？ ni cerrar paréntesis
@@ -382,7 +390,7 @@ class Escena:
             else:
                 actual = prueba
         lineas.append(actual)
-        cuantas = round(len(texto) * min(1, max(0, (t - 0.15) / max(0.3, self.voz_dur * 0.92))))
+        cuantas = round(len(texto) * min(1, max(0, (t - 0.15) / max(0.3, voz_dur * 0.92))))
         y = y0 + 58; resto = cuantas
         for linea in lineas:
             if resto <= 0:
@@ -565,7 +573,9 @@ def main():
         abiertas = {}
         def escena(j):
             if j not in abiertas:
-                abiertas[j] = Escena(g['escenas'][j], g, durs[j], len(voces[j]) / SR)
+                e = g['escenas'][j]
+                eco = (g['escenas'][j - 1], len(voces[j - 1]) / SR, durs[j - 1]) if j and e.get('continua') and not len(voces[j]) and len(voces[j - 1]) else None
+                abiertas[j] = Escena(e, g, durs[j], len(voces[j]) / SR, eco)
                 for viejo in [x for x in abiertas if x < j - 1]:
                     del abiertas[viejo]
             return abiertas[j]
