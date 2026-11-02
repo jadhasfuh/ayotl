@@ -9,12 +9,15 @@ YouTube, un botón para copiarlos juntos (TikTok sólo tiene descripción; sin e
 los ya programados.
 
   "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/tiktok-espejo.py [--desde AAAA-MM-DD]
-      [--retos-desde AAAA-MM-DD] [--seco]
+      [--retos-desde AAAA-MM-DD] [--reemplazar clave,clave] [--seco]
 
 --desde: la primera fecha (para no repetir lo de la tanda anterior); sin ella, dentro de 20 minutos.
 --retos-desde: la primera fecha sólo para los retos de ttcode, que se programan semanas antes y no se marcan
   (2-nov-2026: los retos ya estaban programados hasta el 9-nov y los mejores del día atrasados podían salir
   desde ese mismo día: --retos-desde 2026-11-10 sin --desde).
+--reemplazar: sólo esas claves (cada una con sus versiones -en y -ja), ya programadas en TikTok, a la hora de su
+  `en_tiktok`, para cambiar el vídeo por uno rehecho (2-nov-2026: los mejores del día del 31-oct y el 1-nov, con
+  LeIA sin tiempos muertos). Sus casillas son otras, así que no salen marcadas como programadas, y no cambia marcas.
 --seco: sólo la lista, sin copiar ni escribir la página.
 
 Qué entra: el Short de cada reto de ttcode (13:00; el horizontal es el mismo vídeo y en TikTok saldría repetido),
@@ -50,6 +53,7 @@ RETOS_DESDE = DESDE
 if '--retos-desde' in sys.argv:
     RETOS_DESDE = max(DESDE, dt.datetime.fromisoformat(sys.argv[sys.argv.index('--retos-desde') + 1] + 'T00:00:00-06:00'))
 SECO = '--seco' in sys.argv
+REEMPLAZAR = sys.argv[sys.argv.index('--reemplazar') + 1].split(',') if '--reemplazar' in sys.argv else []
 
 # Los Shorts en español de LeIA también los sirve DC para Instagram: copia por si salida/ ya se limpió.
 COPIAS = {'dc-semana-short': f'{DCMK}/leia-semana.mp4', 'warzone-cpu-short': f'{DCMK}/leia-warzone-cpu.mp4',
@@ -60,7 +64,7 @@ INICIO = dt.datetime.fromisoformat('2026-10-30T18:00:00-06:00')   # la primera t
 serie = lambda clave: re.sub(r'-\d{4}-\d{2}-\d{2}$', '', re.sub(r'-(en|ja)$', '', clave))
 
 items = []
-for ruta in glob.glob(f'{TTCODE}/challenges/*/*/meta.json'):
+for ruta in ([] if REEMPLAZAR else glob.glob(f'{TTCODE}/challenges/*/*/meta.json')):
     m = json.load(open(ruta, encoding='utf-8'))
     if not m.get('published') or not (m.get('youtube') or {}).get('mobile'):
         continue
@@ -71,6 +75,12 @@ for ruta in glob.glob(f'{TTCODE}/challenges/*/*/meta.json'):
 en_tanda, cola = [], []
 for v in json.load(open(f'{COM}/youtube.json', encoding='utf-8')):
     cuando = dt.datetime.fromisoformat(v['publicar'])
+    if REEMPLAZAR:   # sólo esas, a la hora que ya tienen en TikTok
+        if any(v['clave'] == c or v['clave'] in (c + '-en', c + '-ja') for c in REEMPLAZAR):
+            tt = dt.datetime.fromisoformat(v.get('en_tiktok') or v['publicar'])
+            items.append({'clave': v['clave'], 'cuando': tt, 'yt_cuando': cuando, 'id': v.get('id'), 'idioma': v.get('idioma', 'es'),
+                          'ia': True, 'origen': f"{COM}/{v['video']}", 'plan': v, 'atrasado': tt != cuando, 'reemplazo': True})
+        continue
     if v.get('en_tiktok') or not INICIO <= cuando <= HASTA:
         continue
     origen = f"{COM}/{v['video']}"
@@ -178,7 +188,9 @@ for n, x in enumerate(items):
         dia_actual = dia
     chips = f'<span class="chip">{IDIOMAS[x["idioma"]]}</span>' + ('<span class="chip ia">Marcar «Contenido generado por IA»</span>' if x['ia'] else '')
     if x.get('atrasado'):
-        chips += f'<span class="chip">En YouTube salió el {x["yt_cuando"].day}-{MESES[x["yt_cuando"].month - 1]}</span>'
+        chips += f'<span class="chip">En YouTube sale el {x["yt_cuando"].day}-{MESES[x["yt_cuando"].month - 1]}</span>'
+    if x.get('reemplazo'):
+        chips += '<span class="chip ia">Reemplaza al que ya programaste a esta hora</span>'
     studio = f'https://studio.youtube.com/video/{x["id"]}/edit' if x['id'] else ''
     if x['existe']:
         medio = f'<video controls preload="metadata" src="{urllib.parse.quote(x["nombre"])}"></video>'
@@ -186,7 +198,7 @@ for n, x in enumerate(items):
         medio = ('<div class="falta"><b>Falta el vídeo.</b> Ya no está en la compu, pero sí en YouTube. '
                  + (f'Ábrelo en <a href="{studio}" target="_blank" rel="noopener">YouTube Studio</a>, ' if studio else '')
                  + 'menú ⋮ → Descargar, y súbelo desde Descargas.</div>')
-    tarjetas.append(f'''<article class="tarjeta" data-k="{e(x['clave'])}">
+    tarjetas.append(f'''<article class="tarjeta" data-k="{e(x['clave'] + ('|reemplazo' if x.get('reemplazo') else ''))}">
   <header><span class="hora">{x['cuando']:%H:%M}</span><span class="archivo">{e(x['nombre'])}</span>{chips}
     <label class="hecho"><input type="checkbox"> Programado</label></header>
   <div class="cuerpo">{medio}
@@ -238,6 +250,7 @@ button.ok {{ outline: 2px solid #2e9d4f; }}
 <body><main>
 <h1>TikTok: espejo de YouTube</h1>
 <p class="resumen">{listos} vídeos listos en esta carpeta{f', {faltan} por bajar de YouTube Studio' if faltan else ''}. Misma hora que en YouTube (hora de México); lo que ya salió allí y aún no está aquí, como el mejor del día, va a su misma hora en los días siguientes. Hecho el {AHORA:%d-%m-%Y %H:%M}.</p>
+{'<p class="resumen"><b>Reemplazos:</b> en TikTok Studio, en «Publicaciones» → «Programadas», borra el vídeo viejo de cada tarjeta (mismo día y hora) y programa este en su lugar.</p>' if REEMPLAZAR else ''}
 <ol class="pasos">
   <li>En TikTok Studio, <b>Subir</b> y arrastra el vídeo de esta carpeta (el nombre empieza con la fecha y la hora).</li>
   <li><b>Copiar para TikTok</b> y pégalo en la descripción: es el título y la descripción de YouTube, sin el #shorts.</li>
@@ -279,7 +292,7 @@ for x in items:
 with open(os.path.join(SALIDA, 'textos.html'), 'w', encoding='utf-8') as f:
     f.write(pagina)
 # lo que entró a esta tanda queda marcado: no se repite ni se da por atrasado en la siguiente
-marcas = {x['clave']: x['cuando'].isoformat() for x in items if 'plan' in x}
+marcas = {x['clave']: x['cuando'].isoformat() for x in items if 'plan' in x and not x.get('reemplazo')}
 plan = json.load(open(f'{COM}/youtube.json', encoding='utf-8'))
 for v in plan:
     if v['clave'] in marcas:
