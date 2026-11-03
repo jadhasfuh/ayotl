@@ -116,6 +116,26 @@ export const NOTA_BITACORA_OCTUBRE: Nota = {
       en: "Jiquilpan, the neighbouring town, got 36 % of the trips, nearly nine in ten of them to a single neighbourhood. Two in three trips to Jiquilpan start in Sahuayo: bought here, delivered there. It's trade between two towns that runs entirely over WhatsApp.",
     } },
 
+    { tipo: "grafica", forma: "barras", anchoEtiqueta: 200,
+      titulo: { es: "Las vueltas que terminaron en Sahuayo, por zona", en: "Trips that ended in Sahuayo, by area" },
+      unidad: { es: "vueltas", en: "trips" },
+      datos: [
+        { etiqueta: { es: "CP 5902x", en: "Postcode 5902x" }, valor: 56 },
+        { etiqueta: { es: "CP 5901x", en: "Postcode 5901x" }, valor: 20 },
+        { etiqueta: { es: "Centro (CP 5900x)", en: "Centre (5900x)" }, valor: 9 },
+        { etiqueta: { es: "Otras zonas", en: "Other areas" }, valor: 18 },
+        { etiqueta: { es: "Sin zona asignada", en: "No area assigned" }, valor: 8, gris: true },
+        { etiqueta: { es: "No dijo la colonia", en: "Neighbourhood not stated" }, valor: 42, gris: true },
+      ],
+      pie: {
+        es: "Las colonias se juntan por código postal y nunca se publican una por una. «Otras zonas» suma las de CP 5903x, 5904x, 5905x y 591xx, que por separado tenían de 3 a 6 vueltas. Jiquilpan va como una sola zona.",
+        en: "Neighbourhoods are grouped by postcode and never published one by one. 'Other areas' adds up postcodes 5903x, 5904x, 5905x and 591xx, which had 3 to 6 trips each. Jiquilpan counts as a single area.",
+      } },
+    { tipo: "p", texto: {
+      es: "De las 153 vueltas que terminaron en Sahuayo, 111 dicen la colonia, y la mitad de ésas fue a una misma zona. En Jiquilpan pasa lo mismo, más marcado: por eso cuenta como una sola zona, porque partirla dejaría ver casas concretas. Del origen se sabe menos: sólo cuatro de cada diez vueltas dicen de qué colonia salió la compra, y la mitad de ésas salió del bulevar o del centro de Sahuayo, donde están los comercios.",
+      en: "Of the 153 trips that ended in Sahuayo, 111 name the neighbourhood, and half of those went to a single area. Jiquilpan shows the same, more sharply: that's why it counts as one area, since splitting it would point to specific homes. Less is known about origins: only four trips in ten say which neighbourhood the purchase came from, and half of those came from Sahuayo's main boulevard or centre, where the shops are.",
+    } },
+
     { tipo: "h2", texto: { es: "Cuándo", en: "When" } },
     { tipo: "grafica", forma: "columnas",
       titulo: { es: "Vueltas por día trabajado, según el día de la semana", en: "Trips per day worked, by weekday" },
