@@ -4,8 +4,9 @@ import type { Nota } from "./notas";
  * El estudio de octubre de la bitácora del piloto de Mercadito (2-nov-2026). Los números salen del conjunto
  * vuelta por vuelta de mercadito/datos/bitacora-octubre-2026.json (fuera de git), codificado desde los reportes
  * de WhatsApp del colaborador y cuadrado contra las notas de la bitácora. Reglas de PILOTO-JICA.md: sin su nombre,
- * sin colonias, calles ni negocios, sin cuánto ganó por día ni en el mes (sólo la tarifa por vuelta, en rangos, y
- * proporciones), y con n = 1 dicho en voz alta: son indicios, no conclusiones. La misma página, en español, vive
+ * sin colonias, calles ni negocios, y NADA de dinero (§4.3, y el anteproyecto: «no billing, commission or revenue data
+ * is collected or analysed»; la primera versión publicó tarifas por vuelta y se quitaron el mismo día, 2-nov), y con
+ * n = 1 dicho en voz alta: son indicios, no conclusiones. La misma página, en español, vive
  * en mercadito.cx/piloto/octubre-2026.
  */
 const NO_SALIO = { es: "No salió", en: "Didn't work" };
@@ -27,12 +28,12 @@ export const NOTA_BITACORA_OCTUBRE: Nota = {
   },
   cuerpo: [
     { tipo: "p", texto: {
-      es: "Es una de las fuentes del piloto de Mercadito: un diario de campo. Mercadito no reparte —dejó de hacerlo en agosto de 2026—; el colaborador trabaja por su cuenta, con sus clientes y por WhatsApp, y al final del día mandaba qué hizo. De cada mensaje se apuntó sólo lo que el piloto permite guardar: la ciudad, el tipo de encargo, el giro del lugar y lo que cobró por la vuelta. Ni nombres, ni calles, ni colonias, ni qué medicina.",
-      en: "It's one of the sources of Mercadito's pilot: a field diary. Mercadito doesn't deliver — it stopped in August 2026; the collaborator works on his own, with his own customers, over WhatsApp, and at the end of the day he sent what he'd done. From each message we kept only what the pilot allows: the city, the kind of errand, the kind of place and what he charged for the trip. No names, no streets, no neighbourhoods, no which-medicine.",
+      es: "Es una de las fuentes del piloto de Mercadito: un diario de campo. Mercadito no reparte —dejó de hacerlo en agosto de 2026—; el colaborador trabaja por su cuenta, con sus clientes y por WhatsApp, y al final del día mandaba qué hizo. De cada mensaje, este estudio usa sólo la ciudad, el tipo de encargo y el giro del lugar. Ni nombres, ni calles, ni colonias, ni qué medicina, ni dinero.",
+      en: "It's one of the sources of Mercadito's pilot: a field diary. Mercadito doesn't deliver — it stopped in August 2026; the collaborator works on his own, with his own customers, over WhatsApp, and at the end of the day he sent what he'd done. From each message, this study uses only the city, the kind of errand and the kind of place. No names, no streets, no neighbourhoods, no which-medicine, no money.",
     } },
     { tipo: "p", texto: {
-      es: "Es una sola persona (n = 1) en un solo mes. Lo de abajo son indicios para formular preguntas y decidir a quién entrevistar, no conclusiones sobre el reparto en Sahuayo. Tampoco se publica cuánto ganó por día ni en el mes: sólo la tarifa por vuelta, en rangos, y proporciones.",
-      en: "It's one person (n = 1) over one month. What follows are leads for framing questions and deciding whom to interview, not conclusions about delivery work in Sahuayo. Nor do we publish how much he made per day or in the month: only the fee per trip, in ranges, and proportions.",
+      es: "Es una sola persona (n = 1) en un solo mes. Lo de abajo son indicios para formular preguntas y decidir a quién entrevistar, no conclusiones sobre el reparto en Sahuayo. Y no se analiza dinero: el piloto no estudia cobros ni ingresos de nadie, tampoco los de él.",
+      en: "It's one person (n = 1) over one month. What follows are leads for framing questions and deciding whom to interview, not conclusions about delivery work in Sahuayo. And no money is analysed: the pilot doesn't study anyone's fees or income, his included.",
     } },
     { tipo: "cifras", cifras: [
       { valor: { es: "26 de 31", en: "26 of 31" }, etiqueta: { es: "días trabajados", en: "days worked" } },
@@ -111,26 +112,11 @@ export const NOTA_BITACORA_OCTUBRE: Nota = {
         { etiqueta: { es: "Las dos ciudades", en: "Both towns" }, valor: 3, gris: true },
       ] },
     { tipo: "p", texto: {
-      es: "Jiquilpan, la ciudad vecina, recibió el 36 % de las vueltas y dejó la mitad de lo que cobró en el mes, porque ahí la tarifa es casi fija y más del doble de la de una vuelta dentro de Sahuayo. Dos de cada tres vueltas a Jiquilpan empiezan en Sahuayo: se compra aquí y se entrega allá. Es comercio entre dos ciudades que pasa entero por WhatsApp.",
-      en: "Jiquilpan, the neighbouring town, got 36 % of the trips and brought in half of what he charged in the month, because the fee there is nearly fixed and more than double that of a trip within Sahuayo. Two in three trips to Jiquilpan start in Sahuayo: bought here, delivered there. It's trade between two towns that runs entirely over WhatsApp.",
+      es: "Jiquilpan, la ciudad vecina, recibió el 36 % de las vueltas, y casi nueve de cada diez fueron a una misma colonia. Dos de cada tres vueltas a Jiquilpan empiezan en Sahuayo: se compra aquí y se entrega allá. Es comercio entre dos ciudades que pasa entero por WhatsApp.",
+      en: "Jiquilpan, the neighbouring town, got 36 % of the trips, nearly nine in ten of them to a single neighbourhood. Two in three trips to Jiquilpan start in Sahuayo: bought here, delivered there. It's trade between two towns that runs entirely over WhatsApp.",
     } },
 
-    { tipo: "h2", texto: { es: "Cuánto cobra una vuelta", en: "What a trip costs" } },
-    { tipo: "grafica", forma: "columnas",
-      titulo: { es: "Vueltas por tarifa cobrada", en: "Trips by fee charged" },
-      unidad: { es: "vueltas", en: "trips" },
-      datos: [
-        { etiqueta: { es: "Hasta $30", en: "Up to $30" }, valor: 44 },
-        { etiqueta: "$31–60", valor: 102 },
-        { etiqueta: "$61–100", valor: 89 },
-        { etiqueta: "$101–200", valor: 30 },
-        { etiqueta: { es: "Más de $200", en: "Over $200" }, valor: 3 },
-      ],
-      pie: { es: "Pesos mexicanos por vuelta, lo que cobró él (no el ticket del cliente).", en: "Mexican pesos per trip, his fee (not the customer's ticket)." } },
-    { tipo: "p", texto: {
-      es: "Más de la mitad de las vueltas cobró 60 pesos o menos, y una de cada seis, 30 o menos. Las rutas de ropa dejaron entre 15 y 42 pesos por parada. La vuelta mejor pagada del mes fue un encargo con forma de evento —bebidas y botana para una cancha—, y sola fue la mitad de ese día.",
-      en: "More than half of the trips charged 60 pesos or less, and one in six, 30 or less. The clothing routes paid between 15 and 42 pesos per stop. The best-paid trip of the month looked like an event order — drinks and snacks for a sports court — and on its own it was half of that day.",
-    } },
+    { tipo: "h2", texto: { es: "Cuándo", en: "When" } },
     { tipo: "grafica", forma: "columnas",
       titulo: { es: "Vueltas por día trabajado, según el día de la semana", en: "Trips per day worked, by weekday" },
       unidad: { es: "vueltas por día", en: "trips per day" },
@@ -150,19 +136,17 @@ export const NOTA_BITACORA_OCTUBRE: Nota = {
       es: [
         "La hora. Sólo seis días trajeron horas, y sin la franja (mañana, comida, tarde, noche) no se puede decir cuándo entra el trabajo, que es lo primero que un negocio quiere saber.",
         "El destino. Quince vueltas no dicen a qué ciudad fueron; un campo obligatorio no las deja perderse.",
-        "Las líneas, no el total. En dos días el total escrito no coincidía con la suma de sus vueltas. Basta con las vueltas: la suma la hace la herramienta.",
+        "Rangos, no cifras. La bitácora se diseñó para pedir el rango del monto, no la cantidad; por WhatsApp llegaban cifras exactas. Con el formulario sólo se captura el rango, que es lo que el estudio declara.",
         "El texto libre trae de más: nombres de negocios, colonias, medicinas. Todo se quitó al capturarlo, pero lo mejor es no recibirlo: el formulario de la bitácora pregunta sólo lo que el piloto puede guardar.",
         "Los huecos. Tres días sin reporte: un recordatorio en la noche ayuda más que una regla.",
-        "«Por propina». Desde el día 25 aparece en algunas vueltas sin decir si el cliente pagó lo que quiso o si fue un extra. Hay que preguntarlo.",
         "Una sola persona. Con n = 1, cada hallazgo puede ser de él y no del oficio. Hacen falta más repartidores en la bitácora.",
       ],
       en: [
         "The time. Only six days came with times, and without the time slot (morning, lunch, afternoon, night) we can't say when the work comes in — the first thing a business wants to know.",
         "The destination. Fifteen trips don't say which town they went to; a required field keeps them from getting lost.",
-        "Line items, not the total. On two days the total he wrote didn't match the sum of his trips. The trips are enough: the tool can do the sum.",
+        "Bands, not figures. The log was designed to ask for an amount band, not the amount; over WhatsApp, exact figures came in. The form only captures the band, which is what the study declares.",
         "Free text brings too much: business names, neighbourhoods, medicines. All of it was stripped on entry, but better not to receive it at all: the log form asks only for what the pilot may keep.",
         "The gaps. Three days without a report: a reminder at night helps more than a rule.",
-        "'As a tip'. From the 25th it shows up on some trips without saying whether the customer paid what they liked or added something extra. We need to ask.",
         "One person. With n = 1, every finding may be about him rather than the trade. The log needs more couriers.",
       ],
     } },
@@ -171,18 +155,14 @@ export const NOTA_BITACORA_OCTUBRE: Nota = {
     { tipo: "lista", puntos: {
       es: [
         "Juntar los viajes a la otra ciudad: avisar por una lista de difusión de WhatsApp «salgo a Jiquilpan a tal hora» y llevar varios encargos en un solo viaje.",
-        "Cobrar la parada extra: una de cada seis vueltas junta dos o más lugares de compra.",
-        "Poner un mínimo por parada en las rutas de reparto: hubo paradas que dejaron menos de 20 pesos.",
-        "Decir la tarifa antes, en vez de dejarla a la propina: así el día se puede planear.",
+        "Aprovechar las vueltas que ya juntan varios lugares: una de cada seis pasa por dos o más tiendas; avisar «paso por el súper y la farmacia» atrae más encargos de camino.",
         "Acordar un horario fijo con los que más piden (la pollería, la tienda): el trabajo se vuelve predecible para los dos.",
         "Usar los días flojos —martes, viernes y domingo— para buscar clientes nuevos, por ejemplo en el tablón de repartidores de Mercadito, que es gratis.",
         "Cuidar el ritmo: la primera semana fue de 13 vueltas por día, y en la segunda se enfermó.",
       ],
       en: [
         "Bundle the trips to the other town: post on a WhatsApp broadcast list 'heading to Jiquilpan at such-and-such time' and carry several errands in one journey.",
-        "Charge for the extra stop: one in six trips combines two or more shops.",
-        "Set a minimum per stop on delivery routes: some stops paid under 20 pesos.",
-        "Quote the fee up front rather than leaving it to a tip: that way the day can be planned.",
+        "Build on the trips that already combine stops: one in six goes through two or more shops; posting 'stopping at the supermarket and the pharmacy' draws more errands along the way.",
         "Agree on fixed times with the biggest customers (the chicken shop, the clothing shop): the work becomes predictable for both sides.",
         "Use the slow days — Tuesday, Friday and Sunday — to find new customers, for instance on Mercadito's free couriers board.",
         "Mind the pace: the first week ran at 13 trips a day, and in the second he fell ill.",
