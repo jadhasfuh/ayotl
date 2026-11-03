@@ -356,8 +356,10 @@ def guion(fecha, lang, info, datos, video, medir):
 
     giro = {}
 
-    def variante(k):
+    def variante(k, corta=False):
         """La siguiente de las variantes de `k`, empezando en una distinta cada día, para no repetir la misma seguido."""
+        if corta:   # la más corta: cuando la de turno no cabe antes de otra reacción que importa más
+            return min(tx[k], key=len)
         i = giro.get(k, sum(map(ord, fecha)) % len(tx[k])); giro[k] = i + 1
         return tx[k][i % len(tx[k])]
 
@@ -370,10 +372,10 @@ def guion(fecha, lang, info, datos, video, medir):
             if e['tipo'] == 'vida' and e.get('quedan', 1) <= 0:
                 continue   # la última: la partida se acaba y eso lo dice el final
             if e['tipo'] in ('vida', 'vidamas', 'uy'):
-                en(e['tipo'], e['t'], lambda ahora, k=e['tipo']: variante(k))
+                en(e['tipo'], e['t'], lambda ahora, corta=False, k=e['tipo']: variante(k, corta))
             elif e['tipo'] == 'nivel':
                 k = 'oleada' if e['campo'] in ('wave', 'oleada') else 'nivel'
-                en('nivel', e['t'], lambda ahora, k=k, n=e['n']: marcar(variante(k), dict(valores, n=(str(n),) * 2)))
+                en('nivel', e['t'], lambda ahora, corta=False, k=k, n=e['n']: marcar(variante(k, corta), dict(valores, n=(str(n),) * 2)))
         if len(mk) > 4 and pts > 0:   # las rachas: lo que más puntos dio en 2 s, si es mucho
             prom = pts / len(mk) * 2; elegidos = []
             for d, i in sorted(((mk[i + 2] - mk[i], i + 2) for i in range(len(mk) - 2)), reverse=True):
@@ -381,18 +383,18 @@ def guion(fecha, lang, info, datos, video, medir):
                     break
                 if all(abs(i - x) >= 20 for x in elegidos):
                     elegidos.append(i)
-                    en('racha', i, lambda ahora, d=d: marcar(variante('racha'), dict(valores, pts=(f'{d:,}', str(d)))))
+                    en('racha', i, lambda ahora, corta=False, d=d: marcar(variante('racha', corta), dict(valores, pts=(f'{d:,}', str(d)))))
         ra, sg = ctx.get('record_antes'), ctx.get('segundo')
         if ra and pts > ra['puntaje']:   # rompe el récord que tenía el juego antes de ese día
             i = next((i for i, v in enumerate(mk) if v > ra['puntaje']), len(mk))
-            en('record', i, lambda ahora: marcar(tx['record'], dict(valores, pts=(f"{ra['puntaje']:,}", str(ra['puntaje'])))))
+            en('record', i, lambda ahora, corta=False: marcar(tx['record'], dict(valores, pts=(f"{ra['puntaje']:,}", str(ra['puntaje'])))))
         if sg and sg['puntaje'] < pts:   # pasa al segundo del día: desde ahí, es el mejor
             i = next((i for i, v in enumerate(mk) if v > sg['puntaje']), len(mk)); n2 = nombre_de(sg['nombre'], lang, datos)
-            en('lider', i, lambda ahora: marcar(tx['lider' if n2 else 'lider_sin_nombre'],
+            en('lider', i, lambda ahora, corta=False: marcar(tx['lider' if n2 else 'lider_sin_nombre'],
                                                 dict(valores, pts=(f"{sg['puntaje']:,}", str(sg['puntaje'])), nombre2=(sg['nombre'], n2))))
         if T > VAN_DESDE:   # cada minuto, cuántos puntos van
             for m in range(CADA, int(T - 15), CADA):
-                en('van', m, lambda ahora, m=m: marcar(variante('van'), dict(valores, min=(minutos(m // 60, lang),) * 2,
+                en('van', m, lambda ahora, corta=False, m=m: marcar(variante('van', corta), dict(valores, min=(minutos(m // 60, lang),) * 2,
                    pts=(f"{mk[min(int(ahora), len(mk) - 1)]:,}", str(mk[min(int(ahora), len(mk) - 1)])))))
         return sorted((e for e in ev if e['t'] < T - 2.5), key=lambda e: e['t'])
 
@@ -456,7 +458,10 @@ def guion(fecha, lang, info, datos, video, medir):
                 if e['tipo'] not in ('record', 'lider') and t - dicho.get(e['tipo'], -99) < 6:
                     continue
                 m = e['texto'](t); alto = min([x['t'] for x in ev if prio(x) > prio(e)] + [fin_voz])
-                if t + cuanto(m) <= min(alto + 0.5, fin_voz):
+                tope = min(alto + 0.5, fin_voz)
+                if t + cuanto(m) > tope:   # no cabe: la variante más corta (2-nov: en Pang se quedó callada 4.8 s por esto)
+                    m = e['texto'](t, True)
+                if t + cuanto(m) <= tope:
                     decir(REACCION[e['tipo']][2], m); dicho[e['tipo']] = t; vivas.remove(e); dicha = True
                     break
             if dicha:
