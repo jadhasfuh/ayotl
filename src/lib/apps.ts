@@ -11,7 +11,7 @@ import type { Idioma } from "./idioma";
  * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
-  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion" | "kazan";
+  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion" | "kazan" | "zanei";
   nombre: string;
   /** Lo que va bajo el nombre en la tarjeta: el dominio, o dónde está si aún no tiene web. */
   dominio: string;
@@ -319,6 +319,54 @@ export const APPS: App[] = [
       { imagen: "procesion-ayotl",
         titulo: { es: "Lo que hay abajo", en: "What's underneath" },
         texto: { es: "Cinemáticas rotoscopiadas con líneas, como las de FAITH, en los momentos que importan. Lo que despertó bajo el cerro no se ve nunca completo. Ficción: la Hermandad, la vasija y los túneles son invención.", en: "Rotoscoped line cinematics, FAITH style, at the moments that matter. What woke up under the hill is never fully seen. Fiction: the Brotherhood, the vessel and the tunnels are invented." } },
+    ],
+  },
+  {
+    // Shoot 'em up vertical de líneas de neón, séptimo producto (3-nov-2026): se
+    // juega en la web dentro de Daily Challenge como «juego extra»; la app con
+    // AdMob va camino de las tiendas (dev.ayotl.zanei). ZANEI es 残影, «la imagen
+    // que queda de lo que se fue». Las cifras salen del código: www/game/niveles.js,
+    // armas.js y enemigos.js del repo zanei.
+    id: "zanei",
+    nombre: "ZANEI",
+    dominio: "dailychallenge.click/zanei",
+    url: "https://dailychallenge.click/zanei",
+    paquetePlay: "dev.ayotl.zanei",
+    bundleIos: "dev.ayotl.zanei",
+    acento: "agua",
+    lema: {
+      es: "Una piloto sin cuerpo contra una invasión que sólo sabe repetirse.",
+      en: "A bodiless pilot against an invasion that only knows how to repeat itself.",
+    },
+    descripcion: {
+      es: "Shoot 'em up vertical dibujado con líneas de neón: doce niveles en tres actos, siete municiones, bombas, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. Música clásica pasada a techno. Gratis en la web.",
+      en: "A vertical shoot 'em up drawn in neon lines: twelve levels in three acts, seven weapons, bombs, bosses that break apart piece by piece and a radio story that reacts to how you play. Classical music turned into techno. Free on the web.",
+    },
+    datos: [
+      { valor: "12", etiqueta: { es: "niveles", en: "levels" } },
+      { valor: "7", etiqueta: { es: "municiones", en: "weapons" } },
+      { valor: "20", etiqueta: { es: "enemigos", en: "enemy types" } },
+    ],
+    etiquetas: { es: ["Juegos", "Web"], en: ["Games", "Web"] },
+    pantallas: [
+      { imagen: "zanei-titulo",
+        titulo: { es: "Líneas de neón sobre negro", en: "Neon lines on black" },
+        texto: { es: "Todo lo dibuja el juego en cada cuadro, con brillo de fósforo: la nave, la ciudad en ruinas, el mar, la luna, la colmena. La cámara va detrás y encima de la nave, y el camino se curva como visto desde un avión.", en: "The game draws everything every frame, with a phosphor glow: the ship, the ruined city, the sea, the moon, the hive. The camera sits behind and above the ship, and the road curves as if seen from a plane." } },
+      { imagen: "zanei-juego",
+        titulo: { es: "Un dedo y una ráfaga", en: "One finger and a burst" },
+        texto: { es: "Arrastras para mover la nave; un toque en DISPARO suelta una ráfaga y mantenerlo dispara seguido. Siete municiones que se cambian recogiendo el icono, potencia de cuatro niveles y bombas que borran las balas.", en: "Drag to move the ship; a tap on FIRE fires a burst and holding it fires nonstop. Seven weapons swapped by picking up the icon, four power levels and bombs that wipe the bullets." } },
+      { imagen: "zanei-jefe",
+        titulo: { es: "Jefes por partes", en: "Bosses in pieces" },
+        texto: { es: "Una barra de OBJETIVO se llena al acercarte al jefe y se vuelve su barra de vida. Torretas, vainas y espinas se rompen por separado; cuando no queda nada fuera, el núcleo se destapa y cambia de patrón.", en: "A TARGET bar fills as you approach the boss and becomes its health bar. Turrets, pods and spines break separately; when nothing is left outside, the core opens up and changes its pattern." } },
+      { imagen: "zanei-dialogo",
+        titulo: { es: "La historia por radio", en: "The story over the radio" },
+        texto: { es: "NOA, la piloto; VEGA, la doctora que dirige el proyecto; CONTROL, la torre. Hablan en cuadros que no pausan la partida, y lo que dicen depende de cómo juegas: la torre sólo confirma una transferencia si perdiste una nave.", en: "NOA, the pilot; VEGA, the doctor who runs the project; CONTROL, the tower. They talk in boxes that never pause the game, and what they say depends on how you play: the tower only confirms a transfer if you lost a ship." } },
+      { imagen: "zanei-interludio",
+        titulo: { es: "Entre nivel y nivel", en: "Between levels" },
+        texto: { es: "Al dar SIGUIENTE la nave vuelve a volar sola, la pantalla se funde a negro y sale un cuadro dibujado a línea con un pensamiento de la piloto. Las cinemáticas cambian con la historia: en el segundo acto la transmisión se corta; en el tercero, el dibujo se copia a sí mismo.", en: "When you press NEXT the ship flies on alone, the screen fades to black and a line-drawn frame appears with one thought from the pilot. The cutscenes change with the story: in the second act the transmission breaks up; in the third, the drawing copies itself." } },
+      { imagen: "zanei-resultado",
+        titulo: { es: "La ficha y los récords", en: "The score card and the records" },
+        texto: { es: "Al terminar: tiempo, destruidos, precisión, bombas, naves perdidas, bono y rango. Modo Historia con los doce niveles seguidos y modo Arcade por puntos, nivel a nivel, con récord por nivel. En español, inglés y japonés.", en: "At the end: time, kills, accuracy, bombs, ships lost, bonus and rank. Story mode with all twelve levels in a row and Arcade mode for points, level by level, with a record per level. In Spanish, English and Japanese." } },
     ],
   },
 ];

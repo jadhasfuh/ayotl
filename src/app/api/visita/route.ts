@@ -23,13 +23,13 @@ export const dynamic = "force-dynamic";
 // Qué sitios puede anotar cada origen. Los juegos extra viven dentro de Daily.
 const SITIOS: Record<string, string[]> = {
   "ayotl.dev": ["ayotl"],
-  "dailychallenge.click": ["dc", "warzone", "kazan", "procesion"],
+  "dailychallenge.click": ["dc", "warzone", "kazan", "procesion", "zanei"],
   // Kazan se juega en su subdominio desde el 24-oct-2026 (DC manda allá): sin esto no se contaba.
   "kazan.dailychallenge.click": ["kazan"],
   "jlptest.org": ["jlptest"],
   "mercadito.cx": ["mercadito"],
 };
-const EXTRAS = new Set(["warzone", "kazan", "procesion"]);
+const EXTRAS = new Set(["warzone", "kazan", "procesion", "zanei"]);
 
 // Lo que se cuenta además de las páginas, por sitio: crear una cuenta en jlptest… Sólo cuántas veces
 // por día, con el sitio del que llegó esa persona ese día y su país; nunca quién (ver la migración
