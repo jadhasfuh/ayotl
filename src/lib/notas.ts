@@ -1,5 +1,6 @@
 import type { Idioma } from "./idioma";
 import { NOTA_BITACORA_OCTUBRE } from "./nota-bitacora-octubre";
+import { NOTA_DNS } from "./nota-dns";
 
 /**
  * Notas técnicas: problemas reales de los tres productos, contados por
@@ -798,90 +799,7 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
     ],
   },
   NOTA_BITACORA_OCTUBRE,   // el estudio de octubre del piloto, con gráficas (2-nov-2026): en su propio archivo
-  {
-    // El dominio de Mercadito dejó de resolver para una parte de internet sin que nadie avisara; lo destapó un
-    // rechazo de Google Play. Escrita el 4-nov-2026 a partir del relato de Adrián y de lo que se hizo ese día.
-    id: "dns-a-medias-mercadito",
-    fecha: "2026-11-04",
-    proyecto: "mercadito",
-    titulo: {
-      es: "Mercadito: el dominio que abría para unos y para otros no",
-      en: "Mercadito: the domain that opened for some and not for others",
-    },
-    entradilla: {
-      es: "El servidor estaba perfecto y el chequeo decía «success» toda la noche. Aun así, para Cloudflare, OpenDNS y el verificador de Google, mercadito.cx no existía. Fue el DNS, y nos enteramos por un correo de otro lado. Posdata: ese mismo día les pasó a los otros dos dominios de la casa.",
-      en: "The server was fine and the health check said \"success\" all night. Still, for Cloudflare, OpenDNS and Google's checker, mercadito.cx did not exist. It was DNS, and we found out from an email about something else. Postscript: that same day it happened to our other two domains.",
-    },
-    cuerpo: [
-      { tipo: "p", texto: {
-        es: "El dominio apuntaba a Railway con un registro ALIAS en la raíz, en Hostinger. Railway te da un nombre, no una IP; en un subdominio eso se resuelve con un CNAME normal, pero el estándar DNS no permite CNAME en la raíz, así que algunos proveedores ofrecen un «ALIAS» que resuelve el nombre por detrás y devuelve la IP cada vez que alguien pregunta. Hostinger lo ofrece, y Railway documenta que ahí no funciona de forma confiable. Esa resolución fue la que falló.",
-        en: "The domain pointed at Railway with an ALIAS record at the apex, in Hostinger. Railway gives you a name, not an IP; on a subdomain that resolves with a normal CNAME, but the DNS standard doesn't allow a CNAME at the apex, so some providers offer an \"ALIAS\" that resolves the name behind the scenes and returns the IP every time someone asks. Hostinger offers it, and Railway documents that it doesn't work reliably there. That resolution is what broke.",
-      } },
-      { tipo: "p", texto: {
-        es: "La falla fue silenciosa y parcial. Los servidores de Hostinger seguían contestando el SOA, las TXT y los NS; sólo el registro A devolvía SERVFAIL. Y como los resolvedores grandes tienen varios puntos de presencia y guardan caché, unos seguían dando la IP y otros no: dos teléfonos abrían la página por caché, y Cloudflare, OpenDNS y el verificador de Google, no. Nadie recibió un aviso, ni de Hostinger, ni de Railway, ni del chequeo de salud en GitHub, porque el servidor estaba perfecto. Un fallo de DNS se ve desde fuera como cualquier otra cosa: en este caso, como «política de privacidad inválida».",
-        en: "The failure was silent and partial. Hostinger's servers kept answering the SOA, the TXT and the NS records; only the A record returned SERVFAIL. And since the big resolvers have several points of presence and keep caches, some kept giving the IP and others didn't: two phones opened the page from cache, while Cloudflare, OpenDNS and Google's checker couldn't. Nobody got a warning, not from Hostinger, not from Railway, not from the health check on GitHub, because the server was fine. From the outside, a DNS failure looks like anything else: in this case, like \"invalid privacy policy\".",
-      } },
-      { tipo: "p", texto: {
-        es: "Lo que lo destapó fue un correo de otro lado: Google Play rechazó la app porque su verificador no pudo abrir la URL de la política. Si esa revisión no hubiera estado en curso, la caída parcial habría seguido hasta que algún negocio dijera «no me abre el menú». El parche fue cambiar el ALIAS por un registro A con la IP que Railway daba en ese momento: funcionó en minutos, pero es frágil, porque Railway no promete que esa IP sea fija. El arreglo fue mover el DNS a Cloudflare, que sí aplana el CNAME en la raíz y que Railway soporta explícitamente, con los registros en «DNS only» para que el certificado lo siga manejando Railway.",
-        en: "What exposed it was an email about something else: Google Play rejected the app because its checker couldn't open the privacy policy URL. Had that review not been in progress, the partial outage would have gone on until some business said \"the menu won't open\". The patch was replacing the ALIAS with an A record holding the IP Railway was giving at that moment: it worked within minutes, but it's fragile, because Railway doesn't promise that IP stays fixed. The fix was moving DNS to Cloudflare, which does flatten the CNAME at the apex and which Railway supports explicitly, with the records set to \"DNS only\" so Railway keeps handling the certificate.",
-      } },
-      { tipo: "p", texto: {
-        es: "Qué hacer distinto en el próximo proyecto:",
-        en: "What to do differently in the next project:",
-      } },
-      { tipo: "lista", puntos: {
-        es: [
-          "Antes de apuntar una raíz a un PaaS (Railway, Render, Fly, Vercel…), leer su página de dominios y la lista de proveedores DNS que no soportan aplanado o ALIAS. Si el registrador está en la lista, no usar su DNS: Cloudflare gratis, en «DNS only», desde el día uno, o poner el sitio en www y redirigir la raíz. Hostinger, GoDaddy, Route 53, Azure DNS y Squarespace estaban en la lista de Railway.",
-          "Registrador y DNS son dos cosas. Comprar el dominio donde se quiera, pero llevar el DNS a un proveedor hecho para eso. Cambiar los servidores de nombres no mueve el dominio ni cuesta nada.",
-          "Nunca un A fijo a un PaaS, salvo como parche con TTL corto y anotado para quitarlo.",
-          "Vigilar el DNS, no sólo el servidor. Un chequeo externo que resuelva el dominio desde varios resolvedores (1.1.1.1, 8.8.8.8, 9.9.9.9) y abra la URL cada pocos minutos habría avisado antes que Google. Hay servicios gratuitos; uno basta por proyecto.",
-          "Cuando algo falle «a medias», a unos sí y a otros no, sospechar del DNS primero.",
-          "Cuando una tienda, Google o un cliente diga «no abre», no quedarse con su diagnóstico. «Política inválida» era un síntoma; el problema no estaba en la política.",
-        ],
-        en: [
-          "Before pointing an apex at a PaaS (Railway, Render, Fly, Vercel…), read its domains page and the list of DNS providers that don't support flattening or ALIAS. If the registrar is on the list, don't use its DNS: Cloudflare, free, in \"DNS only\", from day one, or put the site on www and redirect the apex. Hostinger, GoDaddy, Route 53, Azure DNS and Squarespace were on Railway's list.",
-          "Registrar and DNS are two different things. Buy the domain wherever you like, but take the DNS to a provider built for it. Changing name servers doesn't move the domain and costs nothing.",
-          "Never a fixed A record to a PaaS, except as a patch with a short TTL, noted down so it gets removed.",
-          "Watch the DNS, not just the server. An external check that resolves the domain from several resolvers (1.1.1.1, 8.8.8.8, 9.9.9.9) and opens the URL every few minutes would have warned before Google did. There are free services; one per project is enough.",
-          "When something fails \"halfway\", for some and not for others, suspect DNS first.",
-          "When a store, Google or a customer says \"it won't open\", don't settle for their diagnosis. \"Invalid policy\" was a symptom; the problem wasn't in the policy.",
-        ],
-      } },
-      { tipo: "codigo", texto: `# ¿contesta el servidor que manda?
-dig @ns1.dns-parking.com mercadito.cx A
-
-# ¿coinciden los resolvedores públicos?
-dig @1.1.1.1 mercadito.cx A
-dig @8.8.8.8 mercadito.cx A
-
-# ¿el servidor sirve si lo alcanzas directo, sin DNS?
-curl --resolve mercadito.cx:443:<IP> https://mercadito.cx/`, pie: {
-        es: "Tres comandos lo resuelven en un minuto. Si el tercero funciona y el primero no, el problema es DNS y no el código.",
-        en: "Three commands settle it in a minute. If the third one works and the first one doesn't, the problem is DNS, not the code.",
-      } },
-      { tipo: "p", texto: {
-        es: "Y una lección de otro tipo, que apareció en el camino: lo que no se mira no se actualiza. El manifest del sitio y la política de privacidad seguían describiendo el reparto a domicilio dos meses y medio después de quitarlo. Cada vez que un producto cambia de modelo, conviene una lista corta de «textos fuera de la app» (política, tiendas, manifest, metadatos, correos automáticos) para revisarlos el mismo día.",
-        en: "And a lesson of another kind that showed up along the way: what isn't looked at doesn't get updated. The site's manifest and the privacy policy were still describing home delivery two and a half months after it was removed. Every time a product changes its model, it pays to keep a short list of \"texts outside the app\" (policy, stores, manifest, metadata, automatic emails) and review them the same day.",
-      } },
-      { tipo: "p", texto: {
-        es: "Posdata del mismo día, a mediodía: pasó dos veces más. Primero en jlptest.org, otro dominio de la casa con la raíz en Hostinger apuntando a Railway con un ALIAS; se parchó igual, con un registro A y un TTL de cinco minutos. Y al correr los tres comandos sobre los demás dominios, dailychallenge.click estaba fallando en ese preciso momento: los dos servidores de nombres de Hostinger devolvían SERVFAIL en seis de cada ocho consultas del registro A de la raíz; Cloudflare, Google y OpenDNS ya no lo resolvían, y sólo Quad9 seguía contestando desde su caché. El servidor, perfecto; el chequeo, en verde; ninguna queja. La única huella era que la publicación automática de la mañana había salido en Facebook y no en Instagram: Instagram descarga la imagen desde el dominio, y no pudo resolverlo.",
-        en: "Postscript, same day, midday: it happened twice more. First on jlptest.org, another of our domains with its apex in Hostinger pointing at Railway through an ALIAS; it got the same patch, an A record with a five-minute TTL. And when the three commands were run against the remaining domains, dailychallenge.click was failing at that very moment: Hostinger's two name servers returned SERVFAIL on six of every eight queries for the A record at the apex; Cloudflare, Google and OpenDNS no longer resolved it, and only Quad9 was still answering from its cache. The server, fine; the check, green; no complaints. The only trace was that the morning's automatic post had gone out on Facebook and not on Instagram: Instagram fetches the image from the domain, and couldn't resolve it.",
-      } },
-      { tipo: "p", texto: {
-        es: "La lección se afina: no era un dominio con un registro mal puesto, era cada raíz que apuntaba a Railway desde el DNS de Hostinger, y fueron cayendo con días de diferencia. Cuando una falla así aparece en un dominio, hay que revisar a sus hermanos esa misma hora y moverlos todos, no sólo al que se rompió. Los dos restantes pasan a Cloudflare, en «DNS only», con los mismos registros: el CNAME aplanado en la raíz, el www, los subdominios y las verificaciones de Google, Facebook y TikTok que viven en TXT.",
-        en: "The lesson gets sharper: it wasn't one domain with a bad record, it was every apex pointing at Railway from Hostinger's DNS, and they went down days apart. When a failure like this shows up in one domain, check its siblings that same hour and move all of them, not just the one that broke. The remaining two go to Cloudflare, in \"DNS only\", with the same records: the flattened CNAME at the apex, the www, the subdomains and the Google, Facebook and TikTok verifications that live in TXT.",
-      } },
-      { tipo: "codigo", texto: `# los hermanos, de un tirón: un SERVFAIL en cualquiera es la falla
-for d in mercadito.cx jlptest.org dailychallenge.click; do
-  for r in 1.1.1.1 8.8.8.8 9.9.9.9; do
-    echo "$d @$r: $(dig @$r $d A +time=3 +tries=1 | grep -o 'status: [A-Z]*')"
-  done
-done`, pie: {
-        es: "Un minuto, nueve respuestas. Vale la pena correrlo cada vez que un dominio de la familia dé un susto; mejor aún, que lo corra solo un chequeo externo.",
-        en: "One minute, nine answers. Worth running every time one domain in the family gives a scare; better still, have an external check run it on its own.",
-      } },
-    ],
-  },
+  NOTA_DNS,   // los tres dominios que abrían para unos y para otros no (3 y 4-nov-2026): en su propio archivo
 ];
 
 export function notaPorId(id: string): Nota | undefined {
