@@ -809,8 +809,8 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
       en: "Mercadito: the domain that opened for some and not for others",
     },
     entradilla: {
-      es: "El servidor estaba perfecto y el chequeo decía «success» toda la noche. Aun así, para Cloudflare, OpenDNS y el verificador de Google, mercadito.cx no existía. Fue el DNS, y nos enteramos por un correo de otro lado.",
-      en: "The server was fine and the health check said \"success\" all night. Still, for Cloudflare, OpenDNS and Google's checker, mercadito.cx did not exist. It was DNS, and we found out from an email about something else.",
+      es: "El servidor estaba perfecto y el chequeo decía «success» toda la noche. Aun así, para Cloudflare, OpenDNS y el verificador de Google, mercadito.cx no existía. Fue el DNS, y nos enteramos por un correo de otro lado. Posdata: ese mismo día les pasó a los otros dos dominios de la casa.",
+      en: "The server was fine and the health check said \"success\" all night. Still, for Cloudflare, OpenDNS and Google's checker, mercadito.cx did not exist. It was DNS, and we found out from an email about something else. Postscript: that same day it happened to our other two domains.",
     },
     cuerpo: [
       { tipo: "p", texto: {
@@ -862,6 +862,23 @@ curl --resolve mercadito.cx:443:<IP> https://mercadito.cx/`, pie: {
       { tipo: "p", texto: {
         es: "Y una lección de otro tipo, que apareció en el camino: lo que no se mira no se actualiza. El manifest del sitio y la política de privacidad seguían describiendo el reparto a domicilio dos meses y medio después de quitarlo. Cada vez que un producto cambia de modelo, conviene una lista corta de «textos fuera de la app» (política, tiendas, manifest, metadatos, correos automáticos) para revisarlos el mismo día.",
         en: "And a lesson of another kind that showed up along the way: what isn't looked at doesn't get updated. The site's manifest and the privacy policy were still describing home delivery two and a half months after it was removed. Every time a product changes its model, it pays to keep a short list of \"texts outside the app\" (policy, stores, manifest, metadata, automatic emails) and review them the same day.",
+      } },
+      { tipo: "p", texto: {
+        es: "Posdata del mismo día, a mediodía: pasó dos veces más. Primero en jlptest.org, otro dominio de la casa con la raíz en Hostinger apuntando a Railway con un ALIAS; se parchó igual, con un registro A y un TTL de cinco minutos. Y al correr los tres comandos sobre los demás dominios, dailychallenge.click estaba fallando en ese preciso momento: los dos servidores de nombres de Hostinger devolvían SERVFAIL en seis de cada ocho consultas del registro A de la raíz; Cloudflare, Google y OpenDNS ya no lo resolvían, y sólo Quad9 seguía contestando desde su caché. El servidor, perfecto; el chequeo, en verde; ninguna queja. La única huella era que la publicación automática de la mañana había salido en Facebook y no en Instagram: Instagram descarga la imagen desde el dominio, y no pudo resolverlo.",
+        en: "Postscript, same day, midday: it happened twice more. First on jlptest.org, another of our domains with its apex in Hostinger pointing at Railway through an ALIAS; it got the same patch, an A record with a five-minute TTL. And when the three commands were run against the remaining domains, dailychallenge.click was failing at that very moment: Hostinger's two name servers returned SERVFAIL on six of every eight queries for the A record at the apex; Cloudflare, Google and OpenDNS no longer resolved it, and only Quad9 was still answering from its cache. The server, fine; the check, green; no complaints. The only trace was that the morning's automatic post had gone out on Facebook and not on Instagram: Instagram fetches the image from the domain, and couldn't resolve it.",
+      } },
+      { tipo: "p", texto: {
+        es: "La lección se afina: no era un dominio con un registro mal puesto, era cada raíz que apuntaba a Railway desde el DNS de Hostinger, y fueron cayendo con días de diferencia. Cuando una falla así aparece en un dominio, hay que revisar a sus hermanos esa misma hora y moverlos todos, no sólo al que se rompió. Los dos restantes pasan a Cloudflare, en «DNS only», con los mismos registros: el CNAME aplanado en la raíz, el www, los subdominios y las verificaciones de Google, Facebook y TikTok que viven en TXT.",
+        en: "The lesson gets sharper: it wasn't one domain with a bad record, it was every apex pointing at Railway from Hostinger's DNS, and they went down days apart. When a failure like this shows up in one domain, check its siblings that same hour and move all of them, not just the one that broke. The remaining two go to Cloudflare, in \"DNS only\", with the same records: the flattened CNAME at the apex, the www, the subdomains and the Google, Facebook and TikTok verifications that live in TXT.",
+      } },
+      { tipo: "codigo", texto: `# los hermanos, de un tirón: un SERVFAIL en cualquiera es la falla
+for d in mercadito.cx jlptest.org dailychallenge.click; do
+  for r in 1.1.1.1 8.8.8.8 9.9.9.9; do
+    echo "$d @$r: $(dig @$r $d A +time=3 +tries=1 | grep -o 'status: [A-Z]*')"
+  done
+done`, pie: {
+        es: "Un minuto, nueve respuestas. Vale la pena correrlo cada vez que un dominio de la familia dé un susto; mejor aún, que lo corra solo un chequeo externo.",
+        en: "One minute, nine answers. Worth running every time one domain in the family gives a scare; better still, have an external check run it on its own.",
       } },
     ],
   },
