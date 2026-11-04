@@ -606,6 +606,9 @@ def main():
                 plan = [x for x in plan if x['clave'] != v['clave']] + [v]
                 json.dump(plan, open(plan_ruta, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
                 print(f"  plan: {v['clave']} sale el {v['publicar']}")
+                if lang == 'es':   # el español también a Instagram y Facebook (dc-social.py: lo deja en el repo de DC y lo sube)
+                    r2 = subprocess.run([sys.executable, os.path.join(AQUI, 'dc-social.py'), v['clave']], capture_output=True, text=True)
+                    print(' ', (r2.stdout + r2.stderr).strip().replace('\n', '\n  ') or 'dc-social.py sin salida')
 
 
 if __name__ == '__main__':
