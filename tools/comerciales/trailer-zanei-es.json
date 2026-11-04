@@ -1,0 +1,27 @@
+{
+  "fuente": "pixel",
+  "voz": "es-US-Chirp3-HD-Achernar",
+  "idioma": "es-US",
+  "presentadora": { "nombre": "LeIA", "caras": "avatar" },
+  "colores": { "fondo": "#000000", "acento": "#6ef5ff", "texto": "#ffffff", "tenue": "#9fb8c8", "sobre_acento": "#000000", "borde": "#1a6f7a" },
+  "marca": { "logo": "zanei/logo.png", "logo_ancho": 420, "lema": "El vestigio de los ángeles", "sitio": "dailychallenge.click/zanei", "pie": "Gratis, en el navegador" },
+  "musica": { "archivo": "zanei/clips/musica.mp4", "desde": 2, "volumen": 0.55 },
+  "bpm": 165,
+  "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-zanei.mp4",
+  "escenas": [
+    { "video": "zanei/clips/nivel1.mp4", "completo": true, "desde": 0.5, "dur": 9, "texto": "ZANEI", "cara": "feliz",
+      "voz": "¡Hola! Soy Leia. Esto es Zanei: una piloto sin cuerpo contra una invasión de formas geométricas.",
+      "dice": "¡Hola! Soy LeIA. Esto es ZANEI: una piloto sin cuerpo contra una invasión de formas geométricas." },
+    { "video": "zanei/clips/mar.mp4", "completo": true, "desde": 0, "dur": 8, "texto": "SIETE MUNICIONES", "cara": "normal",
+      "voz": "Siete municiones, bombas y potencia de cuatro niveles. Todo dibujado con líneas de neón." },
+    { "video": "zanei/clips/jefe.mp4", "completo": true, "desde": 0, "dur": 8, "texto": "JEFES POR PARTES", "cara": "sorpresa",
+      "voz": "Los jefes se rompen por partes: torretas, vainas, espinas… y al final, el núcleo." },
+    { "video": "zanei/clips/interludio.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "UNA HISTORIA", "cara": "pensando",
+      "voz": "La historia va por radio mientras juegas, y reacciona a cómo juegas." },
+    { "video": "zanei/clips/luna.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "DOCE NIVELES", "cara": "feliz",
+      "voz": "Doce niveles, música clásica en techno, y en tres idiomas." },
+    { "video": "zanei/clips/final.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "¿SIGUES AHÍ?", "cara": "guino",
+      "voz": "Gratis en dailychallenge punto click, diagonal zanei. ¡Te espero!",
+      "dice": "Gratis en dailychallenge.click/zanei. ¡Te espero!" }
+  ]
+}

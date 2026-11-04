@@ -858,5 +858,119 @@
   ],
   "idioma": "ja",
   "id": "QcKcBEYmgNw"
+ },
+ {
+  "clave": "mejor-2026-11-03",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-03.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-05T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 3 de noviembre: 79 puntos en KABOOM! 🕹️ #shorts",
+  "descripcion": "El mejor del 3 de noviembre en Daily Challenge fue ADRIAN, con 79 puntos en KABOOM!. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "KABOOM!"
+  ],
+  "id": "zuNl7K-1aOc"
+ },
+ {
+  "clave": "mejor-2026-11-03-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-03-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-05T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 3: 79 points in KABOOM! 🕹️ #shorts",
+  "descripcion": "The best run of November 3 on Daily Challenge was by ADRIAN, with 79 points in KABOOM!. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "KABOOM!"
+  ],
+  "idioma": "en",
+  "id": "7hDez5NoDQ4"
+ },
+ {
+  "clave": "mejor-2026-11-03-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-03-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-05T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月3日のベスト、KABOOM!で79点 🕹️ #shorts",
+  "descripcion": "11月3日のDaily Challengeでいちばんだったのは、KABOOM!で79点のADRIANさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "カブーム"
+  ],
+  "idioma": "ja",
+  "id": "6X7ARyKbBrg"
+ },
+ {
+  "clave": "trailer-zanei",
+  "app": "zanei",
+  "video": "salida/trailer-zanei.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T11:30:00-06:00",
+  "titulo": "ZANEI: shoot 'em up vectorial con historia · Tráiler",
+  "descripcion": "Tráiler de ZANEI (残影), el shoot 'em up vertical de líneas de neón de Ayotl: una piloto sin cuerpo contra una invasión de formas geométricas. Doce niveles, siete municiones, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. LeIA presenta.",
+  "cierre": "#ZANEI #Shmup #RetroGaming",
+  "etiquetas": [
+   "ZANEI",
+   "shoot em up",
+   "shmup",
+   "juegos retro",
+   "vectorial",
+   "arcade"
+  ],
+  "id": "wTOykoZkA8I"
+ },
+ {
+  "clave": "trailer-zanei-en",
+  "app": "zanei",
+  "video": "salida/trailer-zanei-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T11:32:00-06:00",
+  "titulo": "ZANEI: a vector shoot 'em up with a story · Trailer",
+  "descripcion": "Trailer for ZANEI (残影), Ayotl's neon-line vertical shoot 'em up: a bodiless pilot against an invasion of geometric shapes. Twelve levels, seven weapons, bosses that break apart piece by piece and a radio story that reacts to how you play. Presented by LeIA.",
+  "cierre": "#ZANEI #Shmup #RetroGaming",
+  "etiquetas": [
+   "ZANEI",
+   "shoot em up",
+   "shmup",
+   "retro gaming",
+   "vector",
+   "arcade"
+  ],
+  "idioma": "en",
+  "id": "bnKO-QbOI0I"
+ },
+ {
+  "clave": "trailer-zanei-ja",
+  "app": "zanei",
+  "video": "salida/trailer-zanei-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-04T11:34:00-06:00",
+  "titulo": "ZANEI: ストーリー付きベクターシューティング · トレーラー",
+  "descripcion": "Ayotlのネオン線で描く縦スクロールシューティング「ZANEI（残影）」のトレーラー。体を持たないパイロットが幾何学の侵略者と戦う。全12ステージ、7種の武装、部位ごとに壊れるボス、遊び方に反応する無線のストーリー。LeIAが紹介します。",
+  "cierre": "#ZANEI #シューティング #レトロゲーム",
+  "etiquetas": [
+   "ZANEI",
+   "シューティング",
+   "STG",
+   "レトロゲーム",
+   "ベクター",
+   "アーケード"
+  ],
+  "idioma": "ja",
+  "id": "aXDRi-zjves"
  }
 ]

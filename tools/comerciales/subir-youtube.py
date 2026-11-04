@@ -32,6 +32,7 @@ APPS = {
     'dc': {'nombre': 'Daily Challenge', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None},
     'warzone': {'nombre': 'War Zone', 'web': 'https://dailychallenge.click/warzone', 'juega': 'juega', 'play': 'dev.ayotl.warzone', 'ios': 'dev.ayotl.warzone'},
     'kazan': {'nombre': 'Kazan', 'web': 'https://kazan.dailychallenge.click', 'juega': 'juega', 'play': 'dev.ayotl.kazan', 'ios': 'dev.ayotl.kazan'},
+    'zanei': {'nombre': 'ZANEI', 'web': 'https://dailychallenge.click/zanei', 'juega': 'juega', 'play': 'dev.ayotl.zanei', 'ios': 'dev.ayotl.zanei'},
     'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'practica', 'play': 'org.jlptest.twa', 'ios': None},
 }
 # los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)

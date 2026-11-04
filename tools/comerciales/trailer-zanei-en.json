@@ -1,0 +1,27 @@
+{
+  "fuente": "pixel",
+  "voz": "en-US-Chirp3-HD-Achernar",
+  "idioma": "en-US",
+  "presentadora": { "nombre": "LeIA", "caras": "avatar" },
+  "colores": { "fondo": "#000000", "acento": "#6ef5ff", "texto": "#ffffff", "tenue": "#9fb8c8", "sobre_acento": "#000000", "borde": "#1a6f7a" },
+  "marca": { "logo": "zanei/logo.png", "logo_ancho": 420, "lema": "Vestige of the angels", "sitio": "dailychallenge.click/zanei", "pie": "Free, in your browser" },
+  "musica": { "archivo": "zanei/clips/musica.mp4", "desde": 2, "volumen": 0.55 },
+  "bpm": 165,
+  "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-zanei-en.mp4",
+  "escenas": [
+    { "video": "zanei/clips/nivel1-en.mp4", "completo": true, "desde": 0.5, "dur": 9, "texto": "ZANEI", "cara": "feliz",
+      "voz": "Hi! I'm Leia. This is Zanei: a bodiless pilot against an invasion of geometric shapes.",
+      "dice": "Hi! I'm LeIA. This is ZANEI: a bodiless pilot against an invasion of geometric shapes." },
+    { "video": "zanei/clips/mar-en.mp4", "completo": true, "desde": 0, "dur": 7, "texto": "SEVEN WEAPONS", "cara": "normal",
+      "voz": "Seven weapons, bombs and four power levels. All drawn in neon lines." },
+    { "video": "zanei/clips/jefe-en.mp4", "completo": true, "desde": 0, "dur": 8, "texto": "BOSSES IN PIECES", "cara": "sorpresa",
+      "voz": "Bosses break apart piece by piece: turrets, pods, spines… and finally, the core." },
+    { "video": "zanei/clips/interludio-en.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "A STORY", "cara": "pensando",
+      "voz": "The story comes over the radio while you play, and it reacts to how you play." },
+    { "video": "zanei/clips/luna-en.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "TWELVE LEVELS", "cara": "feliz",
+      "voz": "Twelve levels, classical music turned into techno, in three languages." },
+    { "video": "zanei/clips/final-en.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "STILL THERE?", "cara": "guino",
+      "voz": "Free at dailychallenge dot click, slash zanei. See you there!",
+      "dice": "Free at dailychallenge.click/zanei. See you there!" }
+  ]
+}

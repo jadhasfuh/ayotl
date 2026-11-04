@@ -1,0 +1,29 @@
+{
+  "fuente": "pixel-ja",
+  "voz": "ja-JP-Chirp3-HD-Achernar",
+  "idioma": "ja-JP",
+  "presentadora": { "nombre": "LeIA", "caras": "avatar" },
+  "colores": { "fondo": "#000000", "acento": "#6ef5ff", "texto": "#ffffff", "tenue": "#9fb8c8", "sobre_acento": "#000000", "borde": "#1a6f7a" },
+  "marca": { "logo": "zanei/logo.png", "logo_ancho": 420, "lema": "天使の残影", "sitio": "dailychallenge.click/zanei", "pie": "無料・ブラウザで遊べる" },
+  "musica": { "archivo": "zanei/clips/musica.mp4", "desde": 2, "volumen": 0.55 },
+  "bpm": 165,
+  "salida": "~/Documents/ayotl/tools/comerciales/salida/trailer-zanei-ja.mp4",
+  "escenas": [
+    { "video": "zanei/clips/nivel1-ja.mp4", "completo": true, "desde": 0.5, "dur": 10, "texto": "ZANEI", "cara": "feliz",
+      "voz": "こんにちは！レイアです。これはザンエイ。体を持たないパイロットが、幾何学の侵略者と戦います。",
+      "dice": "こんにちは！LeIAです。これはZANEI。体を持たないパイロットが、幾何学の侵略者と戦います。" },
+    { "video": "zanei/clips/mar-ja.mp4", "completo": true, "desde": 0, "dur": 7, "texto": "7種の武装", "cara": "normal",
+      "voz": "七種の武装、ボム、四段階のパワー。すべてネオンの線で描かれます。",
+      "dice": "7種の武装、ボム、4段階のパワー。すべてネオンの線で描かれます。" },
+    { "video": "zanei/clips/jefe-ja.mp4", "completo": true, "desde": 0, "dur": 9, "texto": "部位ごとに壊れるボス", "cara": "sorpresa",
+      "voz": "ボスは部位ごとに壊れます。砲塔、ポッド、トゲ……そして最後に、核。" },
+    { "video": "zanei/clips/interludio-ja.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "ストーリー", "cara": "pensando",
+      "voz": "ストーリーは、遊びながら無線で語られ、遊び方に反応します。" },
+    { "video": "zanei/clips/luna-ja.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "全12ステージ", "cara": "feliz",
+      "voz": "十二のステージ、テクノに編曲したクラシック、三か国語対応。",
+      "dice": "12のステージ、テクノに編曲したクラシック、3か国語対応。" },
+    { "video": "zanei/clips/final-ja.mp4", "completo": true, "desde": 0, "dur": 7, "texto": "まだ、そこにいる？", "cara": "guino",
+      "voz": "dailychallenge ドット click スラッシュ zanei で、無料で遊べます。待ってるね！",
+      "dice": "dailychallenge.click/zanei で、無料で遊べます。待ってるね！" }
+  ]
+}
