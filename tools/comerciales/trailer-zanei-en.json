@@ -21,7 +21,7 @@
     { "video": "zanei/clips/luna-en.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "TWELVE LEVELS", "cara": "feliz",
       "voz": "Twelve levels, classical music turned into techno, in three languages." },
     { "video": "zanei/clips/final-en.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "STILL THERE?", "cara": "guino",
-      "voz": "Free at dailychallenge dot click, slash zanei. See you there!",
-      "dice": "Free at dailychallenge.click/zanei. See you there!" }
+      "voz": "Free at dailychallenge dot click. See you there!",
+      "dice": "Free at dailychallenge.click. See you there!" }
   ]
 }

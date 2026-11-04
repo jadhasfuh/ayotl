@@ -21,7 +21,7 @@
     { "video": "zanei/clips/luna.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "DOCE NIVELES", "cara": "feliz",
       "voz": "Doce niveles, música clásica en techno, y en tres idiomas." },
     { "video": "zanei/clips/final.mp4", "completo": true, "desde": 0, "dur": 6, "texto": "¿SIGUES AHÍ?", "cara": "guino",
-      "voz": "Gratis en dailychallenge punto click, diagonal zanei. ¡Te espero!",
-      "dice": "Gratis en dailychallenge.click/zanei. ¡Te espero!" }
+      "voz": "Gratis en dailychallenge punto click. ¡Te espero!",
+      "dice": "Gratis en dailychallenge.click. ¡Te espero!" }
   ]
 }
