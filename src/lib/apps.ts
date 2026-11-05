@@ -236,7 +236,7 @@ export const APPS: App[] = [
     url: "https://dailychallenge.click/warzone",
     paquetePlay: "dev.ayotl.warzone",
     bundleIos: "dev.ayotl.warzone",
-    appStoreId: "6827221095",   // «War Zone» en App Store Connect; la 1.0 en revisión desde el 27-oct-2026
+    appStoreId: "6827221095",   // «War Zone» en App Store Connect; la 1.0 (compilación 25) aprobada el 5-nov-2026 tras el «Information Needed» del 31-oct
     acento: "caparazon",
     apaisada: true,
     lema: {
