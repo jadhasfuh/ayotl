@@ -2,9 +2,10 @@
 """Las estadísticas de la semana de todas las apps, en un solo reporte (Adrián, 2-nov-2026: «dame las estadísticas
 de todas las apps de la última semana» y «pon las mejoras que detectes para estas estadísticas»).
 
-  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/estadisticas-semana.py [--hasta AAAA-MM-DD] [--sin-youtube]
+  "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/estadisticas-semana.py [--hasta AAAA-MM-DD] [--dias N] [--sin-youtube]
 
-La semana son los 7 días de México que acaban en --hasta (por omisión, ayer), y se compara con la anterior.
+El periodo son los N días de México (7 por omisión; --dias 15 para la quincena, 5-nov-2026) que acaban en --hasta (por
+omisión, ayer), y se compara con los N días anteriores.
 De dónde sale cada cosa (ninguna llave se imprime):
 - Visitas de los 7 sitios: ayotl.visitas_por_dia / visitantes / visitas (la base compartida, llave secreta de
   jlptest/.env.local). Las apps nativas (Kazan, War Zone, La procesión) no cuentan: su dominio es localhost.
@@ -12,6 +13,7 @@ De dónde sale cada cosa (ninguna llave se imprime):
 - jlptest: perfiles nuevos y el evento «cuenta» de ayotl.eventos.
 - War Zone: warzone.salas y jugadores, con la llave pública del juego (como el juego mismo).
 - Kazan: /rondas del servidor (desde el 2-nov-2026 apunta cada ronda del reto: personas, aparatos, entradas).
+- ZANEI: arcade.zanei_ranking (los récords del modo arcade que se mandan al ranking mundial, desde el 4-nov-2026).
 - Mercadito: menu_eventos y altas de su propia base (~/.pgpass, línea 1), sólo conteos.
 - YouTube: el canal y sus vídeos con el permiso de ttcode. La API de datos no da vistas por semana, así que cada
   corrida guarda una foto de las vistas de cada vídeo en tools/estadisticas/ (fuera de git) y la semana sale de
@@ -68,16 +70,18 @@ def cambio(a, b):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--hasta')
+    ap.add_argument('--dias', type=int, default=7)
     ap.add_argument('--sin-youtube', action='store_true')
     a = ap.parse_args()
     fin = date.fromisoformat(a.hasta) if a.hasta else datetime.now(MX).date() - timedelta(days=1)
-    ini, ant = fin - timedelta(days=6), fin - timedelta(days=13)
+    N = max(1, a.dias)
+    ini, ant = fin - timedelta(days=N - 1), fin - timedelta(days=2 * N - 1)
     I, F, A = ini.isoformat(), fin.isoformat(), ant.isoformat()
     tz = lambda d: f'{d.isoformat()}T06:00:00Z'   # el día de México empieza a las 06:00 UTC
     T0, T1, TA = tz(ini), tz(fin + timedelta(days=1)), tz(ant)
     sem = lambda f: I <= f <= F
     previa = lambda f: A <= f < I
-    print(f'# Estadísticas del {ini:%d-%m} al {fin:%d-%m-%Y}\n')
+    print(f'# Estadísticas del {ini:%d-%m} al {fin:%d-%m-%Y} ({N} días, comparados con los {N} anteriores)\n')
 
     # ---- visitas ----
     dias = rest(f'visitas_por_dia?select=*&fecha=gte.{A}&fecha=lte.{F}', 'ayotl')
@@ -123,7 +127,7 @@ def main():
     pw = rest(f'partidas?select=*', 'warzone', PUB)
     print('## War Zone (en línea)')
     print(f'- salas creadas: {len(salas)} ({dict(Counter(s["estado"] for s in salas))}); partidas en línea terminadas (total): {len(pw) if isinstance(pw, list) else pw}')
-    print(f'- nombres activos en la semana: {sum(T0 <= (j["actualizado"] or "") < T1 for j in jw)}\n')
+    print(f'- nombres activos en el periodo: {sum(T0 <= (j["actualizado"] or "") < T1 for j in jw)}\n')
 
     # ---- Kazan ----
     print('## Kazan (el reto de la isla)')
@@ -136,6 +140,18 @@ def main():
                   f'{r["entradas"]} entradas, máximo {r["pico"]} a la vez; va primero {p.get("nombre")}{" (CPU)" if p.get("cpu") else ""}')
     except Exception as e:
         print(f'- /rondas no contestó ({e.__class__.__name__}); el servidor anterior al 2-nov no lo tenía')
+    print()
+
+    # ---- ZANEI ----
+    print('## ZANEI (ranking mundial del arcade)')
+    zr = rest(f'zanei_ranking?select=nivel,modo,iniciales,puntos,creado_en&creado_en=gte.{T0}&creado_en=lt.{T1}', 'arcade')
+    if isinstance(zr, dict):
+        print(f'- la tabla no contestó ({zr})')
+    else:
+        niveles = Counter(r['nivel'] for r in zr)
+        print(f'- récords mandados: {len(zr)} de {len({r["iniciales"] for r in zr})} iniciales distintas' + (f'; por nivel: ' + ', '.join(f'{n}: {c}' for n, c in sorted(niveles.items())) if zr else ''))
+        if zr:
+            m = max(zr, key=lambda r: r['puntos']); print(f'- el mejor: {m["iniciales"]} con {m["puntos"]} en el nivel {m["nivel"]}')
     print()
 
     # ---- Mercadito ----
@@ -171,16 +187,16 @@ def main():
     hoy = datetime.now(MX).date()
     json.dump({'fecha': hoy.isoformat(), 'vistas': foto, 'suscriptores': int(ch['statistics']['subscriberCount'])},
               open(os.path.join(FOTOS, f'youtube-{hoy}.json'), 'w'))
-    app = lambda t: next((k for k in ('DAILY CHALLENGE', 'WAR ZONE', 'KAZAN', 'JLPTEST') if t.upper().startswith(k)), 'ttcode y otros')
+    app = lambda t: next((k for k in ('DAILY CHALLENGE', 'WAR ZONE', 'KAZAN', 'JLPTEST', 'ZANEI') if t.upper().startswith(k)), 'ttcode y otros')
     print(f'## YouTube ({ch["statistics"]["subscriberCount"]} suscriptores)')
     nuevos = [v for v in vids if T0 <= v['snippet']['publishedAt'] < T1 and v['status']['privacyStatus'] == 'public']
     porapp = defaultdict(lambda: [0, 0])
     for v in nuevos:
         porapp[app(v['snippet']['title'])][0] += 1; porapp[app(v['snippet']['title'])][1] += foto[v['id']]
     print(f'- salieron {len(nuevos)} vídeos con {sum(n for _, n in porapp.values())} vistas hasta hoy: ' + ', '.join(f'{k} {n} ({c})' for k, (c, n) in sorted(porapp.items(), key=lambda x: -x[1][1])))
-    # la semana de verdad: contra la foto más cercana a 7 días antes
+    # el periodo de verdad: contra la foto más cercana a N días antes; si no la hay, contra la más vieja (desde su fecha)
     antes = sorted(glob.glob(os.path.join(FOTOS, 'youtube-*.json')))
-    base = [f for f in antes if f < os.path.join(FOTOS, f'youtube-{hoy - timedelta(days=6)}.json')]
+    base = [f for f in antes if f < os.path.join(FOTOS, f'youtube-{hoy - timedelta(days=N - 1)}.json')] or [f for f in antes if f < os.path.join(FOTOS, f'youtube-{hoy}.json')][:1]
     if base:
         b = json.load(open(base[-1]))
         ganadas = defaultdict(int)
@@ -189,7 +205,7 @@ def main():
             ganadas[app(titulo[i])] += n - b['vistas'].get(i, 0)
         print(f'- vistas ganadas desde el {b["fecha"]}: {sum(ganadas.values())} (' + ', '.join(f'{k} {n}' for k, n in sorted(ganadas.items(), key=lambda x: -x[1])) + f'); suscriptores {b["suscriptores"]} → {ch["statistics"]["subscriberCount"]}')
     else:
-        print('- sin foto de hace una semana: desde la próxima corrida sale cuántas vistas ganó cada app en la semana')
+        print('- sin foto anterior: desde la próxima corrida sale cuántas vistas ganó cada app en el periodo')
 
 
 if __name__ == '__main__':
