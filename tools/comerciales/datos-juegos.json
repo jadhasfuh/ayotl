@@ -4,7 +4,8 @@
   "ADRIAN": {"es": "Adrián", "en": "Adrian", "ja": "アドリアン"},
   "ELI": {"es": "Eli", "en": "Eli", "ja": "エリ"},
   "ELVIS TECK": {"es": "Elvis Teck", "en": "Elvis Teck", "ja": "エルビス・テック"},
-  "FERXO17": {"es": "Ferxo diecisiete", "en": "Ferxo seventeen", "ja": "フェルクソ・じゅうなな"}
+  "FERXO17": {"es": "Ferxo diecisiete", "en": "Ferxo seventeen", "ja": "フェルクソ・じゅうなな"},
+  "POLINOMIOS": {"es": "Polinomios", "en": "Polinomios", "ja": "ポリノミオス"}
  },
  "juegos": {
   "snake": {

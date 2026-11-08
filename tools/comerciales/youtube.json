@@ -1097,5 +1097,60 @@
   "idioma": "ja",
   "id": "fr2Vc_tlmwY",
   "en_tiktok": "2026-11-08T19:40:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-06",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-06.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-08T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 6 de noviembre: 120 puntos en SNAKE 🕹️ #shorts",
+  "descripcion": "El mejor del 6 de noviembre en Daily Challenge fue POLINOMIOS, con 120 puntos en SNAKE. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "SNAKE"
+  ],
+  "id": "f8E7j7CkaAg"
+ },
+ {
+  "clave": "mejor-2026-11-06-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-06-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-08T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 6: 120 points in SNAKE 🕹️ #shorts",
+  "descripcion": "The best run of November 6 on Daily Challenge was by POLINOMIOS, with 120 points in SNAKE. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "SNAKE"
+  ],
+  "idioma": "en",
+  "id": "JloFqROb1Ac"
+ },
+ {
+  "clave": "mejor-2026-11-06-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-06-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-08T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月6日のベスト、SNAKEで120点 🕹️ #shorts",
+  "descripcion": "11月6日のDaily Challengeでいちばんだったのは、SNAKEで120点のPOLINOMIOSさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "スネーク"
+  ],
+  "idioma": "ja",
+  "id": "RoXj8gKOGvM"
  }
 ]
