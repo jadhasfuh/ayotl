@@ -2,7 +2,10 @@
 """Arma un Short de «Algoritmos en pixel» (9-nov-2026): un algoritmo con su código, su animación y LeIA.
 
   "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/algoritmos/armar.py burbuja
-      [--idioma es] [--cuadros 3,9.5]
+      [--idioma es|en] [--cuadros 3,9.5]
+
+Aprobado por Adrián el 9-nov-2026: en español e inglés («Algoritmos en pixel» / «Algorithms in pixels»), Shorts de
+hasta ~60 s; el inglés manda a la lección en inglés (ayotl.dev/en/learn).
 
 1. Lee algoritmos/<nombre>.py: el código (el mismo de la lección de ayotl.dev/aprende), el arreglo, pasos() y
    el guion de LeIA (ver burbuja.py, que es el modelo).
@@ -33,10 +36,13 @@ PY = os.path.expanduser('~/Documents/code challenge/.venv/bin/python')
 VOZ = {'es': ('es-US-Chirp3-HD-Achernar', 'es-US'), 'en': ('en-US-Chirp3-HD-Achernar', 'en-US'), 'ja': ('ja-JP-Chirp3-HD-Achernar', 'ja-JP')}
 SUF = {'es': '', 'en': '-en', 'ja': '-ja'}
 # cuánto pesa cada tipo de paso al repartir el tiempo de una escena, y lo menos que puede durar para que se vea
-PESO = {'pasada': 0.35, 'compara': 1.0, 'cambia': 1.0, 'fija': 0.7, 'marca': 0.6, 'linea': 0.5, 'fin': 3.0}
-MINIMO = {'pasada': 0.08, 'compara': 0.1, 'cambia': 0.12, 'fija': 0.12, 'marca': 0.1, 'linea': 0.08, 'fin': 1.3}
+PESO = {'pasada': 0.35, 'compara': 1.0, 'cambia': 1.0, 'mueve': 1.0, 'coloca': 0.6, 'fija': 0.7, 'marca': 0.6,
+        'linea': 0.5, 'rango': 0.5, 'fin': 3.0}
+MINIMO = {'pasada': 0.08, 'compara': 0.1, 'cambia': 0.12, 'mueve': 0.12, 'coloca': 0.08, 'fija': 0.12, 'marca': 0.1,
+          'linea': 0.08, 'rango': 0.1, 'fin': 1.3}
 # la tarjeta final (la de comercial.py): la serie y la dirección de las lecciones
-MARCA = {'es': {'lema': None, 'sitio': 'ayotl.dev/aprende', 'pie': 'Gratis, sin cuenta y en el navegador'}}
+MARCA = {'es': {'sitio': 'ayotl.dev/aprende', 'pie': 'Gratis, sin cuenta y en el navegador'},
+         'en': {'sitio': 'ayotl.dev/en/learn', 'pie': 'Free, no account, in your browser'}}
 COLORES = {'fondo': '#000000', 'acento': '#93e2dd', 'texto': '#ffffff', 'tenue': '#9a9aa8', 'sobre_acento': '#000000',
            'borde': '#3a3a48'}   # los de Daily Challenge (dc-semana-short.json)
 
@@ -90,7 +96,7 @@ def guion(alg, lang, escenas, final, video, wav, rms, logo, salida):
         'fuente': 'pixel', 'salida': salida, 'voz': VOZ[lang][0], 'idioma': VOZ[lang][1],
         'presentadora': {'nombre': 'LeIA', 'caras': os.path.join(COMERCIALES, 'avatar')},
         'colores': COLORES, 'acercamiento': False,
-        'marca': {'logo': logo, 'logo_ancho': 720, 'lema': m['lema'] or alg.EPISODIO[lang], 'sitio': m['sitio'], 'pie': m['pie']},
+        'marca': {'logo': logo, 'logo_ancho': 720, 'lema': alg.EPISODIO[lang], 'sitio': m['sitio'], 'pie': m['pie']},
         # los blips y la chiptune del fondo, tal como salen del renderizador (`volumen` = su RMS: comercial.py no
         # los reescala); con `agacha` 0.4 los blips se siguen oyendo mientras habla LeIA
         'musica': {'archivo': wav, 'desde': 0, 'volumen': round(rms, 6), 'agacha': 0.4},
@@ -129,6 +135,7 @@ def main():
     ap.add_argument('algoritmo')
     ap.add_argument('--idioma', default='es')
     ap.add_argument('--cuadros', help='segundos del fondo a guardar en PNG, sin armar el vídeo (p. ej. 2,9.5)')
+    ap.add_argument('--solo-hoja', action='store_true', help='rehace la hoja de cuadros del vídeo ya armado')
     a = ap.parse_args()
     alg = importlib.import_module(a.algoritmo); lang = a.idioma
     trabajo = os.path.join(AQUI, alg.CLAVE); os.makedirs(trabajo, exist_ok=True)
@@ -153,10 +160,12 @@ def main():
         for t, im in fondo.cuadros_sueltos([float(x) for x in a.cuadros.split(',')]):
             ruta = os.path.join(trabajo, f'cuadro-{t:05.1f}{suf}.png'); im.save(ruta); print(' ', ruta)
         return
-    video, wav, logo = (os.path.join(trabajo, n) for n in (f'fondo{suf}.mp4', f'fondo{suf}.wav', 'logo.png'))
-    R.logo(logo)
-    rms = fondo.guardar(video, wav)
+    video, wav, logo = (os.path.join(trabajo, n) for n in (f'fondo{suf}.mp4', f'fondo{suf}.wav', f'logo{suf}.png'))
     salida = os.path.join(COMERCIALES, 'salida', f'algoritmos-{alg.CLAVE}{suf}.mp4')
+    if a.solo_hoja:
+        return revisar(salida, escenas, fondo_dur)
+    R.logo(logo, lang)
+    rms = fondo.guardar(video, wav)
     g = guion(alg, lang, escenas, final, video, wav, rms, logo, salida)
     ruta_g = os.path.join(trabajo, f'algoritmos-{alg.CLAVE}{suf}.json')
     json.dump(g, open(ruta_g, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
@@ -166,18 +175,23 @@ def main():
         sys.exit('comercial.py falló')
     if 'ojo' in r.stdout:
         print('  AVISO: alguna voz no cupo en su escena: el fondo y la voz se desfasan')
+    revisar(salida, escenas, fondo_dur)
+
+
+def revisar(salida, escenas, fondo_dur):
+    """Que el audio y el vídeo midan lo mismo, y la hoja de seis cuadros."""
     sv, sa = medir_salida(salida)
     print(f'  vídeo {sv:.3f} s, audio {sa:.3f} s ({"iguales" if abs(sv - sa) < 0.05 else "DISTINTOS"})')
     # la hoja: el gancho, la idea, una comparación, un intercambio, la O grande y la lección
     t = lambda i, f: 0.5 + escenas[i]['t0'] + f * escenas[i]['dur']
     pasos_i = [i for i, s in enumerate(escenas) if s['vista'] == 'pasos']
     compara = next(e for s in escenas for e in s['eventos'] if e['tipo'] == 'compara')
-    cambia = next(e for s in escenas for e in s['eventos'] if e['tipo'] == 'cambia')
+    cambia = next(e for s in escenas for e in s['eventos'] if e['tipo'] == 'mueve' or (e['tipo'] == 'cambia' and e['j'] != e['k']))
     cuenta_i = [i for i, s in enumerate(escenas) if s['vista'] == 'cuenta']
     enlace_i = [i for i, s in enumerate(escenas) if s['vista'] == 'enlace']
     momentos = [(t(0, 0.7), 'gancho'), (t(1, 0.75), 'idea'),
                 (0.5 + compara['t0'] + 0.6 * compara['dur'], 'compara'),
-                (0.5 + cambia['t0'] + 0.3 * cambia['dur'], 'intercambia'),
+                (0.5 + cambia['t0'] + 0.3 * cambia['dur'], 'mueve'),
                 (t(cuenta_i[-1], 0.9) if cuenta_i else t(pasos_i[-1], 0.9), 'O grande'),
                 (t(enlace_i[0], 0.6) if enlace_i else 0.5 + fondo_dur + 2, 'la leccion')]
     hoja(salida, momentos, salida[:-4] + '-hoja.png')

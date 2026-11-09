@@ -1,20 +1,22 @@
 """Ordenamiento por burbuja: el episodio piloto de «Algoritmos en pixel» (9-nov-2026).
 
 Un archivo por algoritmo. renderizador.py y armar.py sólo usan lo de aquí:
-- CLAVE: el nombre de la salida (salida/algoritmos-<CLAVE>.mp4) y de su carpeta de trabajo;
-- TITULO: el rótulo de arriba, por idioma; ARCHIVO: el nombre que sale en la barra del editor;
+- CLAVE: el nombre de la salida (salida/algoritmos-<CLAVE>[-en].mp4), de su carpeta de trabajo y de su lección;
+- TITULO y EPISODIO: el rótulo de arriba y el lema de la tarjeta final, por idioma; ARCHIVO: el nombre que sale
+  en la barra del editor;
 - CODIGO: el programa en JavaScript. Es el MISMO de la lección de /aprende
   (src/lib/aprende/algoritmos/a01-ordenar.ts): si cambia uno, cambia el otro;
 - ARREGLO: los valores de las barras (de 8 a 10, del 1 al 10, para que se lean en el teléfono);
-- VARIABLE: la variable que sale a la izquierda de los contadores (rótulo por idioma, nombre en `vars`);
-- pasos(a): lo que hace el programa, paso por paso (ver renderizador.TIPOS);
-- comparaciones(n), FILAS y COMPLEJIDAD: la tabla de «por qué es lento»;
+- VARIABLE: la variable que sale a la izquierda de los contadores (rótulo por idioma, nombre en `vars` y, si se
+  quiere, su formato); CONTADORES, MARCAS: si los contadores o las marcas no son los de siempre (ver los otros);
+- pasos(a): lo que hace el programa, paso por paso (los tipos están en renderizador.py);
+- TABLA, COMPLEJIDAD y LEYENDA: la tabla de «por qué es lento» (o rápido), la O grande y su renglón;
 - GUION: lo que dice LeIA, renglón por renglón, con lo que se ve mientras lo dice.
 """
 
 CLAVE = 'burbuja'
-TITULO = {'es': 'ORDENAMIENTO POR BURBUJA'}
-EPISODIO = {'es': 'Ordenar: la burbuja'}   # el lema de la tarjeta final
+TITULO = {'es': 'ORDENAMIENTO POR BURBUJA', 'en': 'BUBBLE SORT'}
+EPISODIO = {'es': 'Ordenar: la burbuja', 'en': 'Sorting: bubble sort'}   # el lema de la tarjeta final
 ARCHIVO = 'burbuja.js'
 
 # Ninguna línea pasa de 37 caracteres: a 24 px (Press Start 2P x3) caben en el ancho del teléfono.
@@ -33,7 +35,7 @@ CODIGO = '''function burbuja(a) {
 }'''
 
 ARREGLO = [5, 2, 8, 3, 7, 1, 6, 4]   # 28 comparaciones y 15 intercambios
-VARIABLE = ({'es': 'PASADA'}, 'i')
+VARIABLE = ({'es': 'PASADA', 'en': 'PASS'}, 'i')
 
 
 def pasos(a):
@@ -57,8 +59,10 @@ def comparaciones(n):
     return n * (n - 1) // 2
 
 
-FILAS = [8, 100, 1000]
+TABLA = {'columnas': [{'es': 'NÚMEROS', 'en': 'NUMBERS'}, {'es': 'COMPARACIONES', 'en': 'COMPARISONS'}],
+         'filas': [[n, comparaciones(n)] for n in (8, 100, 1000)]}
 COMPLEJIDAD = 'O(n²)'
+LEYENDA = {'es': 'EL TRABAJO CRECE AL CUADRADO', 'en': 'THE WORK GROWS AS THE SQUARE'}
 
 # Lo que dice LeIA. Cada renglón es una página del cuadro de diálogo y dura lo que su voz (más el respiro de
 # comercial.py). Lo que se ve mientras lo dice:
@@ -91,3 +95,24 @@ GUION = {'es': [
      'voz': 'Pruébalo tú en la lección: áyotl punto dev, diagonal aprende.'},
     {'final': True, 'cara': 'guino', 'dice': '¿Ya estás suscrito? Síguenos para más.'},
 ]}
+
+GUION['en'] = [
+    {'vista': 'inicio', 'cara': 'feliz', 'dice': 'How does a computer sort a list? With bubble sort!'},
+    {'vista': 'codigo', 'cara': 'pensando', 'resalta': [([5], 0.2, 'compara'), ([6, 7, 8], 0.62, 'cambia')],
+     'dice': 'The idea: if two neighbors are out of order, swap them.'},
+    {'pasos': 2, 'cara': 'pensando', 'dice': 'Is 5 bigger than 2?', 'voz': 'Is five bigger than two?'},
+    {'pasos': 1, 'cara': 'feliz', 'dice': 'Yes, so they swap!'},
+    {'pasos': 1, 'cara': 'normal', 'dice': '5 and 8 are already in order.', 'voz': 'Five and eight are already in order.'},
+    {'pasos': 10, 'cara': 'sorpresa', 'dice': 'And the 8 keeps rising, like a bubble.', 'voz': 'And the eight keeps rising, like a bubble.'},
+    {'pasos': 1, 'cara': 'feliz', 'dice': 'First pass: the biggest one made it.'},
+    {'pasos': -2, 'cara': 'normal', 'dice': 'Then repeat: each pass places one more.'},
+    {'pasos': 'resto', 'cara': 'feliz', 'dice': 'Done, all sorted!'},
+    {'vista': 'cuenta', 'filas': [(0, 0.12), (1, 0.6), (2, 0.68)], 'cara': 'sorpresa',
+     'dice': 'But that took 28 comparisons for just 8 numbers! With a thousand, half a million!',
+     'voz': 'But that took twenty-eight comparisons for just eight numbers! With a thousand, half a million!'},
+    {'vista': 'cuenta', 'complejidad': 0.62, 'cara': 'pensando', 'dice': 'Twice the data, four times the work: O(n²).',
+     'voz': 'Twice the data, four times the work: O of n squared.'},
+    {'vista': 'enlace', 'cara': 'guino', 'dice': 'Try it yourself in the lesson: ayotl.dev/en/learn',
+     'voz': 'Try it yourself in the lesson, at Ah-yotl dot dev.'},
+    {'final': True, 'cara': 'guino', 'dice': 'Are you subscribed yet? Follow us for more.'},
+]
