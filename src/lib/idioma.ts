@@ -216,6 +216,7 @@ const TEXTOS = {
     en: "Short courses, in the style of language apps: one idea per card, code that runs right here and questions at the end. For me and for anyone who wants them; free and with no account.",
   },
   aprendeLecciones: { es: "lecciones", en: "lessons" },
+  aprendeLeccion: { es: "lección", en: "lesson" },
   aprendeUnidades: { es: "unidades", en: "units" },
   aprendeUnidad: { es: "Unidad", en: "Unit" },
   aprendeEn: { es: "en", en: "in" },

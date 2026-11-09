@@ -33,7 +33,8 @@ export default async function Aprende({ params }: Props) {
             {CURSOS.map((c) => (
               <li key={c.id} className="curso-tarjeta" data-acento={c.acento}>
                 <p className="dato">
-                  {c.lenguaje} · {c.unidades.length} {x("aprendeUnidades")} · {leccionesDe(c).length} {x("aprendeLecciones")}
+                  {c.lenguaje} · {c.unidades.length} {c.unidades.length === 1 ? x("aprendeUnidad").toLowerCase() : x("aprendeUnidades")} ·{" "}
+                  {leccionesDe(c).length} {x(leccionesDe(c).length === 1 ? "aprendeLeccion" : "aprendeLecciones")}
                 </p>
                 <h2><Link href={rutaCurso(c.id, idioma)}>{c.titulo[idioma]}</Link></h2>
                 <p>{c.resumen[idioma]}</p>

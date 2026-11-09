@@ -706,11 +706,13 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 }
 
 /* ---------------------------------------------------------------------------
-   Aprende: los cursos (/aprende). Cada curso trae su acento (agua o
-   caparazón) y el camino, la barra de avance y los dibujos lo heredan. El
-   editor es el de los retos, con el azul del vídeo, que no cambia con el tema. */
+   Aprende: los cursos (/aprende). Cada curso trae su acento (agua, caparazón
+   o tierra) y el camino, la barra de avance y los dibujos lo heredan. El
+   editor es el de los retos, con el azul del vídeo, que no cambia con el tema.
+   Tierra va con su tono de texto: el de relleno (#a67c4e) da 3.7:1 con blanco. */
 [data-acento="agua"] { --curso: var(--agua); --curso-solido: var(--agua-solido); --curso-suave: var(--agua-suave); }
 [data-acento="caparazon"] { --curso: var(--caparazon); --curso-solido: var(--caparazon); --curso-suave: var(--caparazon-suave); }
+[data-acento="tierra"] { --curso: var(--tierra-texto); --curso-solido: var(--tierra-texto); --curso-suave: var(--tierra-suave); }
 .enlace-boton { background: none; border: 0; padding: 0; font: inherit; color: var(--acento); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
 .cursos { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }

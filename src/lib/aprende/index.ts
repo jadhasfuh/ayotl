@@ -1,10 +1,11 @@
 import type { Idioma } from "../idioma";
+import { ALGORITMOS } from "./algoritmos";
 import { ESTRUCTURAS } from "./estructuras";
 import { SNAKE } from "./snake";
 import type { Curso, Leccion } from "./tipos";
 
 /** Los cursos, en el orden en que salen en /aprende. */
-export const CURSOS: Curso[] = [ESTRUCTURAS, SNAKE];
+export const CURSOS: Curso[] = [ESTRUCTURAS, SNAKE, ALGORITMOS];
 
 export const cursoPorId = (id: string) => CURSOS.find((c) => c.id === id);
 

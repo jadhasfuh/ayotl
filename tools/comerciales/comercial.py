@@ -11,8 +11,10 @@ dura lo que su voz, más un respiro (o `dur`, si es más).
 
 El guion es un JSON:
 - `salida`, `voz`, `idioma`, `colores`, `marca`, `escenas`; opcionales `formato` («vertical», 1080x1920, o
-  «horizontal», 1920x1080), `bpm`, `musica` ({archivo, desde, volumen}: el sonido de un vídeo) y `fuente`
-  («pixel»: todo el texto en Press Start 2P; va en los guiones de los juegos, no en jlptest ni Mercadito).
+  «horizontal», 1920x1080), `bpm`, `musica` ({archivo, desde, volumen, agacha?}: el sonido de un vídeo; `agacha`,
+  cuánto baja mientras habla la voz, 0.62 si no se dice: con 0.4 se siguen oyendo los blips de «Algoritmos en
+  pixel») y `fuente` («pixel»: todo el texto en Press Start 2P; va en los guiones de los juegos, no en jlptest ni
+  Mercadito).
 - Una escena: `texto` (arriba) y su voz, que es `voz` (una frase con la voz del guion) o `voces` (una lista
   de {texto, voz?, idioma?, despues?}: varias frases seguidas, p. ej. el narrador en español y la palabra
   en japonés), o ninguna (sin narración; entonces dura `dur`). Lo que se ve:
@@ -33,7 +35,9 @@ El guion es un JSON:
   sorpresa, enojo, triste, pensando, guino) y lo que dice escribiéndose al ritmo de la voz (`dice`, si lo que
   se lee no es lo que se pronuncia: «jota ele pe test» se lee jlptest). Adrián, 27-oct: como los canales de
   gameplays con avatar. Adrián, 1-nov: si se queda callada más de 3 s, el cuadro se oculta; en una pausa más
-  corta se queda con el texto completo (también en el tramo sin voz que sigue, si es `continua`).
+  corta se queda con el texto completo (también en el tramo sin voz que sigue, si es `continua`). Adrián, 30-oct:
+  si el juego llena la pantalla (escenas `completo` en vertical) el cuadro va pegado abajo, de ABAJO a ABAJO + 320,
+  y no a media pantalla, donde tapa la partida; más abajo ya no, que lo tapan el título y los botones de YouTube.
 La clave de Google (GOOGLE_TTS_KEY, la de la cuenta de prueba que vence el 25-ene-2027) se lee de
 jlptest/.env.local y va en una cabecera desde un archivo temporal: nunca se imprime. Necesita el Python de
 ttcode (pillow, numpy, imageio-ffmpeg). Las llamadas van con curl (el Python del sistema no trae certificados).
@@ -48,6 +52,7 @@ SR = 48000
 FUNDIDO = 0.35          # cruce entre escenas (s)
 RESPIRO = 0.55          # silencio después de cada frase (s)
 CALLADA = 3.0           # tras tantos segundos sin voz, el cuadro de diálogo se oculta
+ABAJO = 1270            # en vertical, dónde empieza el cuadro de diálogo de una escena `completo` (deja libres 330 px abajo)
 AVENIR = '/System/Library/Fonts/Avenir Next.ttc'
 JAPONESA = os.path.expanduser('~/Documents/jlptest/fuentes/ipaexg.ttf')
 PIXEL = os.path.expanduser('~/Documents/daily challenge/src/fonts/PressStart2P-Regular.ttf')   # la del diálogo
@@ -354,6 +359,8 @@ class Escena:
             x0, y0, x1, y1, tam = 60, H - 330, W - 60, H - 36, 32 if JAPONES else 30   # en japonés, múltiplos de 8: Misaki no se emborrona
         else:
             x0, y0, x1, y1, tam = 40, 1150, W - 40, 1470, 24 if JAPONES else 27
+            if e.get('completo'):   # el juego llena la pantalla: el cuadro, pegado abajo
+                y0, y1 = ABAJO, ABAJO + 320
         d = ImageDraw.Draw(im, 'RGBA')
         # la ventana: borde blanco doble y fondo azul de SNES, un poco transparente
         a = round(235 * aparece)
@@ -553,7 +560,8 @@ def main():
             fade = int(0.8 * SR); fondo_[-fade:] *= np.linspace(1, 0, fade)
         else:
             fondo_ = musica(total, g.get('bpm', 92)) * g.get('volumen_musica', 1.0)
-        mus = fondo_ * (0.9 - 0.62 * np.clip(hay, 0, 1))
+        agacha = (g.get('musica') or {}).get('agacha', 0.62)
+        mus = fondo_ * (0.9 - agacha * np.clip(hay, 0, 1))
         mezcla = voz * 0.95 + mus
         mezcla /= max(1e-6, np.abs(mezcla).max() / 0.89)
         wav = os.path.join(tmp, 'mezcla.wav')
