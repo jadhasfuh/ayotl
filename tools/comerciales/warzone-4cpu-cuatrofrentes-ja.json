@@ -1,0 +1,938 @@
+{
+ "fuente": "pixel-ja12",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "ターン制の砲撃バトル",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "ブラウザ・Android・iPhoneで無料"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-cuatrofrentes-ja.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-cuatrofrentes/marcador-ja.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 13.794,
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のウォーゾーンは、4チームのバトルロイヤル。マップはしほうのとりでです。4チームともコンピューターが、しかもハードで戦います。",
+   "dice": "こんにちは！LeIAです。今日のWar Zoneは、4チームのバトルロイヤル。マップは四方の砦です。4チームともコンピューターが、しかもハードで戦います。",
+   "capitulo": "4チームのバトル"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 13.794,
+   "dur": 8.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "青、赤、緑、黄。各チーム4人の兵士で、最後まで生き残れるのは1チームだけ。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 22.452,
+   "dur": 9.738,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "画面の左右を見てね。4つのチームと兵士たち、それぞれのHPが出ています。矢印は今撃っている兵士です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 32.19,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 32.64,
+   "dur": 6.426,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "あおチームはアパツィンガン、ソコリート、チュチェ・エル・アギラとエル・トレロ。",
+   "dice": "青チームはApatzingan、Socorrito、Chuche el AguilaとEl Torero。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 39.066,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 39.516,
+   "dur": 2.484,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.0,
+   "dur": 9.186,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "パコが170ピクセルふっ飛んで…奈落へ！ミランゴのばくだんです。きいろチームは残り3人。",
+   "dice": "Pacoが170ピクセルふっ飛んで…奈落へ！Milangoの爆弾です。黄チームは残り3人。",
+   "capitulo": "最初の脱落"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 51.186,
+   "dur": 10.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "マップはしほうのとりで。岩の階段がある土の砦が2つ、まん中に高い橋、そして中央には奈落へつづく谷があります。",
+   "dice": "マップは四方の砦。岩の階段がある土の砦が2つ、まん中に高い橋、そして中央には奈落へつづく谷があります。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 61.692,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 62.142,
+   "dur": 5.826,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "あかチームのメンバーはマルタ・マンテカス、ミランゴ、ナチョとラ・ビチョンガ。",
+   "dice": "赤チームのメンバーはMarta Mantecas、Milango、NachoとLa Bichonga。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 67.968,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.418,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "みどりチームはマヌエル・ガルベス、リオバス、ラロとジョジョ。",
+   "dice": "緑チームはManuel Galvez、Liobas、LaloとJojo。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 73.836,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.286,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "中央の谷に注意。はばは16ピクセル、その下には何もありません。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 81.312,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 81.762,
+   "dur": 10.098,
+   "continua": true,
+   "cara": "guino",
+   "voz": "コンピューターの兵士には、おなじみの名前もあります。リオバス、チュチェ・エル・アギラ、マヌエル・ガルベスとエル・トレロ…",
+   "dice": "コンピューターの兵士には、おなじみの名前もあります。Liobas、Chuche el Aguila、Manuel GalvezとEl Torero…"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 91.86,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 92.31,
+   "dur": 10.578,
+   "continua": true,
+   "cara": "normal",
+   "voz": "1分半経過。残りの兵士は15人：あおチーム4人、あかチーム4人、みどりチーム4人ときいろチーム3人。",
+   "dice": "1分半経過。残りの兵士は15人：青チーム4人、赤チーム4人、緑チーム4人と黄チーム3人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 102.888,
+   "dur": 6.594,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "高い橋の上からは全部見わたせます。でも、みんなからも丸見えです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 109.482,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 109.932,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "がんばれ！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 111.798,
+   "dur": 1.332,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 113.13,
+   "dur": 7.866,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "頭に命中！エル・トレロ、ニノのスナイパーにやられました。あおチーム、あと3人です。",
+   "dice": "頭に命中！El Torero、Ninoのスナイパーにやられました。青チーム、あと3人です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 120.996,
+   "dur": 8.178,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "チャト、脱落！マルタ・マンテカスのバズーカは容赦なし。きいろチームは残り2人。",
+   "dice": "Chato、脱落！Marta Mantecasのバズーカは容赦なし。黄チームは残り2人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 129.174,
+   "dur": 8.154,
+   "continua": true,
+   "cara": "guino",
+   "voz": "AIのダジャレ、聞きたい？グレネードに友だちがいないのはなぜ？すぐキレて爆発するから。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 137.328,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 137.778,
+   "dur": 0.292,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 138.07,
+   "dur": 8.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ダブルキル！ベトのばくだんでラロとマヌエル・ガルベスが奈落へ！みどりチーム、あと2人です。",
+   "dice": "ダブルキル！Betoの爆弾でLaloとManuel Galvezが奈落へ！緑チーム、あと2人です。",
+   "capitulo": "ダブルキル"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 146.128,
+   "dur": 6.138,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "ミランゴがスナイパーでニノにとどめ！きいろチームはベトひとりだけ。",
+   "dice": "MilangoがスナイパーでNinoにとどめ！黄チームはBetoひとりだけ。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 152.266,
+   "dur": 8.034,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "出た、リオバスのレーザー！チュチェ・エル・アギラ、一撃でダウン！あおチームは残り2人。",
+   "dice": "出た、Liobasのレーザー！Chuche el Aguila、一撃でダウン！青チームは残り2人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 160.3,
+   "dur": 2.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ベト、これで2人目！",
+   "dice": "Beto、これで2人目！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 163.174,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ミランゴが絶好調！もう2人たおしました。",
+   "dice": "Milangoが絶好調！もう2人たおしました。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 167.248,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "normal",
+   "voz": "砦の胸壁は、まっすぐな弾を少しだけ防いでくれます。少しだけ。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 173.914,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 174.364,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "1ターンでできるのは、少し歩いて、武器をえらんで、狙って撃つこと。そして次のチームの番です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 183.118,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 183.568,
+   "dur": 10.434,
+   "continua": true,
+   "cara": "normal",
+   "voz": "3分経過。残りの兵士は9人：あおチーム2人、あかチーム4人、みどりチーム2人ときいろチーム1人。",
+   "dice": "3分経過。残りの兵士は9人：青チーム2人、赤チーム4人、緑チーム2人と黄チーム1人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 194.002,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "triste",
+   "voz": "奈落に落ちても、もちろんアウト。HPが100あってもです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.42,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.87,
+   "dur": 0.76,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.63,
+   "dur": 8.514,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "アパツィンガン、奈落に落ちました！リオバスのグレネードです。あおチームに残るのはソコリートだけです。",
+   "dice": "Apatzingan、奈落に落ちました！Liobasのグレネードです。青チームに残るのはSocorritoだけです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 209.144,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！ベトがマルタ・マンテカスをたおしました。あかチーム、あと3人です。",
+   "dice": "ヘッドショット！BetoがMarta Mantecasをたおしました。赤チーム、あと3人です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 216.65,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "リオバス、2キル目！みどりチームに注目です。",
+   "dice": "Liobas、2キル目！緑チームに注目です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 221.588,
+   "dur": 0.442,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.03,
+   "dur": 7.554,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！ジョジョがスナイパーでベトの頭を撃ちぬきました！これできいろチームは全滅！",
+   "dice": "ヘッドショット！JojoがスナイパーでBetoの頭を撃ちぬきました！これで黄チームは全滅！",
+   "capitulo": "黄チーム脱落"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 229.584,
+   "dur": 7.794,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "頭に命中！リオバス、ソコリートのライフルにやられました。みどりチームはジョジョひとりだけ。",
+   "dice": "頭に命中！Liobas、Socorritoのライフルにやられました。緑チームはJojoひとりだけ。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 237.378,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ライフル、スナイパー、レーザーで頭を撃たれたら、HPがいくつあっても一発でアウトです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 245.124,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 245.574,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ハードのコンピューターは、ずれても3度まで。しかも10ターンに4回は頭をねらってきます。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 253.32,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 253.77,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "チームの順番は青、赤、緑、黄。兵士がいなくなったチームは飛ばされます。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 261.876,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 262.326,
+   "dur": 4.866,
+   "continua": true,
+   "cara": "guino",
+   "voz": "AIのジョークを言おうと思ったけど、まだ学習中です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 267.192,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 267.642,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 267.742,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！ジョジョがナチョをたおしました。あかチームは残り2人。",
+   "dice": "ヘッドショット！JojoがNachoをたおしました。赤チームは残り2人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 273.688,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ジョジョが絶好調！もう2人たおしました。",
+   "dice": "Jojoが絶好調！もう2人たおしました。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 278.002,
+   "dur": 9.594,
+   "continua": true,
+   "cara": "normal",
+   "voz": "4分半経過。残りの兵士は4人：あおチーム1人、あかチーム2人とみどりチーム1人。",
+   "dice": "4分半経過。残りの兵士は4人：青チーム1人、赤チーム2人と緑チーム1人。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 287.596,
+   "dur": 6.498,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "グレネードは使いほうだい。爆発まで3秒あるので、はねてころがります。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 294.094,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 294.544,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "爆弾はゲームでいちばん大きな爆発。でも、1チーム2個だけです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 300.898,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 301.348,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "爆発するたびに地形がけずれて、マップはどんどん変わっていきます。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 306.886,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 307.336,
+   "dur": 1.464,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.8,
+   "dur": 7.098,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "ジョジョのバズーカでラ・ビチョンガがダウン！あかチームに残るのはミランゴだけです。",
+   "dice": "JojoのバズーカでLa Bichongaがダウン！赤チームに残るのはMilangoだけです。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 315.898,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ジョジョ、3キル目！みどりチームに注目です。",
+   "dice": "Jojo、3キル目！緑チームに注目です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 320.332,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "スナイパーの弾はつらぬきます。2人ならんでいたら2人とも。弾は2発だけ。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 327.19,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 327.64,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "guino",
+   "voz": "わたしは人工知能だけど、ダジャレはぜんぶ天然です！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 332.386,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 332.836,
+   "dur": 5.898,
+   "continua": true,
+   "cara": "normal",
+   "voz": "バズーカは何かに当たったしゅんかんに爆発。1チーム3発です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 338.734,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 339.184,
+   "dur": 5.898,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "レーザーはキャンペーンで手に入ります。1発だけ、ダメージは100。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.082,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.532,
+   "dur": 0.298,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.83,
+   "dur": 5.298,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "うわっ！ジョジョが71ピクセルふっ飛んだけど、着地！",
+   "dice": "うわっ！Jojoが71ピクセルふっ飛んだけど、着地！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 351.128,
+   "dur": 2.298,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ドキドキするね！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 353.426,
+   "dur": 0.574,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 354.0,
+   "dur": 7.218,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "ドカーン！ジョジョのグレネードがミランゴをたおしました。あかチーム、脱落です！",
+   "dice": "ドカーン！JojoのグレネードがMilangoをたおしました。赤チーム、脱落です！",
+   "capitulo": "赤チーム脱落"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 361.218,
+   "dur": 3.498,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "一騎打ち！ソコリート対ジョジョ！",
+   "dice": "一騎打ち！Socorrito対Jojo！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 364.716,
+   "dur": 2.898,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ジョジョ、これで4人目！",
+   "dice": "Jojo、これで4人目！"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 367.614,
+   "dur": 7.074,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "コンピューターは、仲間に当たりそうなときはほとんど撃ちません。ほとんど、ね。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 374.688,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.138,
+   "dur": 0.432,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.57,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "すごい飛距離！ソコリート、72ピクセル飛んでもまだ生きてます。",
+   "dice": "すごい飛距離！Socorrito、72ピクセル飛んでもまだ生きてます。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 381.876,
+   "dur": 8.298,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ウォーゾーンはアタリ2600風。パレットは本物のゲーム機と同じ128色です。",
+   "dice": "War Zoneはアタリ2600風。パレットは本物のゲーム機と同じ128色です。"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 390.174,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 390.624,
+   "dur": 2.106,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.73,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.93,
+   "dur": 9.594,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ソコリート、奈落へ！試合終了！勝ったのはみどりチーム！ジョジョがHP15で生き残りました！",
+   "dice": "Socorrito、奈落へ！試合終了！勝ったのは緑チーム！JojoがHP15で生き残りました！"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "59ターンで、ジョジョが5人をたおしました。コンピューターに挑戦してみる？",
+   "dice": "59ターンで、Jojoが5人をたおしました。コンピューターに挑戦してみる？",
+   "capitulo": "無料で遊ぶ"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "ブラウザで無料：デイリーチャレンジ・ドット・クリック、スラッシュ、ウォーゾーン。AndroidとiPhoneでも遊べます。",
+   "dice": "ブラウザで無料：dailychallenge.click/warzone。AndroidとiPhoneでも遊べます。",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "チャンネル登録はもうした？こういう対戦をもっと見たいなら、フォローしてね！",
+   "continua": true
+  }
+ ]
+}

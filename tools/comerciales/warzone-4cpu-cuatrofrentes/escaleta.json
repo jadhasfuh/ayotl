@@ -1,0 +1,3398 @@
+{
+ "juego": "War Zone",
+ "modo": "4 equipos de la CPU, todos contra todos",
+ "mapa": "cuatrofrentes",
+ "semilla": 5,
+ "monigotesPorEquipo": 4,
+ "idioma": "es",
+ "pista": "hardcore",
+ "equipos": [
+  {
+   "nombre": "AZUL",
+   "dificultad": "dificil",
+   "monigotes": [
+    "APATZINGAN",
+    "SOCORRITO",
+    "CHUCHE EL AGUILA",
+    "EL TORERO"
+   ]
+  },
+  {
+   "nombre": "ROJO",
+   "dificultad": "dificil",
+   "monigotes": [
+    "MARTA MANTECAS",
+    "MILANGO",
+    "NACHO",
+    "LA BICHONGA"
+   ]
+  },
+  {
+   "nombre": "VERDE",
+   "dificultad": "dificil",
+   "monigotes": [
+    "MANUEL GALVEZ",
+    "LIOBAS",
+    "LALO",
+    "JOJO"
+   ]
+  },
+  {
+   "nombre": "AMARILLO",
+   "dificultad": "dificil",
+   "monigotes": [
+    "PACO",
+    "CHATO",
+    "BETO",
+    "NINO"
+   ]
+  }
+ ],
+ "ganador": "VERDE",
+ "resumen": {
+  "segundos": 399.4,
+  "turnos": 59,
+  "ganador": "VERDE",
+  "quedan": 1,
+  "vidaGanador": 15,
+  "explosiones": 38,
+  "pasa": 4,
+  "muertes": 10,
+  "alVacio": 5,
+  "headshots": 6,
+  "harakiri": 0,
+  "vuelos": 21,
+  "vueloMax": 170,
+  "subita": false,
+  "emotes": 14,
+  "armas": [
+   "bomba",
+   "franco",
+   "rifle",
+   "granada",
+   "laser",
+   "bazuca"
+  ],
+  "acelerado": 37.5,
+  "nota": 100,
+  "fuera": [
+   "AMARILLO@222.03",
+   "ROJO@354",
+   "AZUL@393.63"
+  ]
+ },
+ "leyenda": {
+  "t": "segundo del largo; enCorto: segundo dentro del corto",
+  "vida y vivos": "[AZUL, ROJO, VERDE, AMARILLO]: vida sumada y monigotes en pie al empezar el turno o tras la baja",
+  "tipos": "presentacion (la cámara recorre el mapa; con 3 o 4 equipos el juego no la hace), turno, disparo (quien y arma), pasa, explosion (arma por su tamaño), golpe (quien pierde cuánto y con cuánto queda), headshot, hara_kiri, muere, cae_al_vacio, sale_volando (distancia y alto en píxeles del juego: un monigote mide 10; va en el segundo en que sale), emote (jaja, grr, ups: las burlas de la CPU), muerte_subita y subita, equipo_fuera (con 3 o 4 equipos: a uno ya no le queda nadie), fin"
+ },
+ "momentos": [
+  {
+   "t": 0,
+   "texto": "Mapa CUATROFRENTES: AZUL (CPU difícil: APATZINGAN, SOCORRITO, CHUCHE EL AGUILA, EL TORERO) contra ROJO (CPU difícil: MARTA MANTECAS, MILANGO, NACHO, LA BICHONGA) contra VERDE (CPU difícil: MANUEL GALVEZ, LIOBAS, LALO, JOJO) contra AMARILLO (CPU difícil: PACO, CHATO, BETO, NINO)"
+  },
+  {
+   "t": 42,
+   "texto": "PACO (AMARILLO) sale volando 170 px y cae al vacío (BOMBA de MILANGO (ROJO))"
+  },
+  {
+   "t": 43.37,
+   "texto": "Baja: PACO (AMARILLO). Quedan AZUL 4 - ROJO 4 - VERDE 4 - AMARILLO 3"
+  },
+  {
+   "t": 113.13,
+   "texto": "HEADSHOT de NINO (AMARILLO) a EL TORERO (AZUL) con FRANCOTIRADOR"
+  },
+  {
+   "t": 113.13,
+   "texto": "EL TORERO (AZUL) muere (FRANCOTIRADOR de NINO (AMARILLO)). Quedan AZUL 3 - ROJO 4 - VERDE 4 - AMARILLO 3"
+  },
+  {
+   "t": 120.13,
+   "texto": "CHATO (AMARILLO) muere (BAZUCA de MARTA MANTECAS (ROJO)). Quedan AZUL 3 - ROJO 4 - VERDE 4 - AMARILLO 2"
+  },
+  {
+   "t": 138.07,
+   "texto": "MANUEL GALVEZ (VERDE) sale volando 146 px (BOMBA de BETO (AMARILLO))"
+  },
+  {
+   "t": 138.07,
+   "texto": "LALO (VERDE) sale volando 162 px y cae al vacío (BOMBA de BETO (AMARILLO))"
+  },
+  {
+   "t": 139.43,
+   "texto": "Baja: LALO (VERDE). Quedan AZUL 3 - ROJO 4 - VERDE 3 - AMARILLO 2"
+  },
+  {
+   "t": 139.5,
+   "texto": "MANUEL GALVEZ (VERDE) cae al vacío (BOMBA de BETO (AMARILLO)). Quedan AZUL 3 - ROJO 4 - VERDE 2 - AMARILLO 2"
+  },
+  {
+   "t": 145.67,
+   "texto": "NINO (AMARILLO) muere (FRANCOTIRADOR de MILANGO (ROJO)). Quedan AZUL 3 - ROJO 4 - VERDE 2 - AMARILLO 1"
+  },
+  {
+   "t": 149.43,
+   "texto": "HEADSHOT de LIOBAS (VERDE) a CHUCHE EL AGUILA (AZUL) con LASER"
+  },
+  {
+   "t": 149.43,
+   "texto": "CHUCHE EL AGUILA (AZUL) muere (LASER de LIOBAS (VERDE)). Quedan AZUL 2 - ROJO 4 - VERDE 2 - AMARILLO 1"
+  },
+  {
+   "t": 198.77,
+   "texto": "APATZINGAN (AZUL) sale volando 2 px y cae al vacío (GRANADA de LIOBAS (VERDE))"
+  },
+  {
+   "t": 200.63,
+   "texto": "Baja: APATZINGAN (AZUL). Quedan AZUL 1 - ROJO 4 - VERDE 2 - AMARILLO 1"
+  },
+  {
+   "t": 204.43,
+   "texto": "HEADSHOT de BETO (AMARILLO) a MARTA MANTECAS (ROJO) con RIFLE"
+  },
+  {
+   "t": 204.43,
+   "texto": "MARTA MANTECAS (ROJO) muere (RIFLE de BETO (AMARILLO)). Quedan AZUL 1 - ROJO 3 - VERDE 2 - AMARILLO 1"
+  },
+  {
+   "t": 222.03,
+   "texto": "HEADSHOT de JOJO (VERDE) a BETO (AMARILLO) con FRANCOTIRADOR"
+  },
+  {
+   "t": 222.03,
+   "texto": "BETO (AMARILLO) muere (FRANCOTIRADOR de JOJO (VERDE)). Quedan AZUL 1 - ROJO 3 - VERDE 2 - AMARILLO 0"
+  },
+  {
+   "t": 222.03,
+   "texto": "AMARILLO queda fuera: siguen AZUL, ROJO, VERDE"
+  },
+  {
+   "t": 224.2,
+   "texto": "HEADSHOT de SOCORRITO (AZUL) a LIOBAS (VERDE) con RIFLE"
+  },
+  {
+   "t": 224.2,
+   "texto": "LIOBAS (VERDE) muere (RIFLE de SOCORRITO (AZUL)). Quedan AZUL 1 - ROJO 3 - VERDE 1 - AMARILLO 0"
+  },
+  {
+   "t": 267.73,
+   "texto": "HEADSHOT de JOJO (VERDE) a NACHO (ROJO) con FRANCOTIRADOR"
+  },
+  {
+   "t": 267.73,
+   "texto": "NACHO (ROJO) muere (FRANCOTIRADOR de JOJO (VERDE)). Quedan AZUL 1 - ROJO 2 - VERDE 1 - AMARILLO 0"
+  },
+  {
+   "t": 308.8,
+   "texto": "LA BICHONGA (ROJO) muere (BAZUCA de JOJO (VERDE)). Quedan AZUL 1 - ROJO 1 - VERDE 1 - AMARILLO 0"
+  },
+  {
+   "t": 345.83,
+   "texto": "JOJO (VERDE) sale volando 71 px (GRANADA de MILANGO (ROJO))"
+  },
+  {
+   "t": 354,
+   "texto": "MILANGO (ROJO) muere (GRANADA de JOJO (VERDE)). Quedan AZUL 1 - ROJO 0 - VERDE 1 - AMARILLO 0: uno contra uno"
+  },
+  {
+   "t": 354,
+   "texto": "ROJO queda fuera: siguen AZUL, VERDE"
+  },
+  {
+   "t": 375.57,
+   "texto": "SOCORRITO (AZUL) sale volando 72 px (GRANADA de JOJO (VERDE))"
+  },
+  {
+   "t": 392.93,
+   "texto": "SOCORRITO (AZUL) sale volando 65 px y cae al vacío (GRANADA de JOJO (VERDE))"
+  },
+  {
+   "t": 393.63,
+   "texto": "Baja: SOCORRITO (AZUL). Quedan AZUL 0 - ROJO 0 - VERDE 1 - AMARILLO 0"
+  },
+  {
+   "t": 393.63,
+   "texto": "AZUL queda fuera"
+  },
+  {
+   "t": 395.43,
+   "texto": "GANA VERDE (CPU difícil) en 59 turnos: queda JOJO (VERDE) con 15"
+  }
+ ],
+ "largo": {
+  "archivo": "largo.mp4",
+  "segundos": 399.43,
+  "resolucion": "1280x720",
+  "fps": 30
+ },
+ "acelerados": {
+  "nota": "Apuntando (girar el brazo y cargar la barra), con todo lo demás quieto, va a 2 ticks por cuadro: x2. Nunca en vuelos, explosiones ni caídas. Tiempos en segundos del largo.",
+  "tramos": [
+   {
+    "desde": 4.2,
+    "hasta": 4.93,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 13.9,
+    "hasta": 14.53,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 24.5,
+    "hasta": 25.57,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 33.03,
+    "hasta": 33.4,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 36.87,
+    "hasta": 38.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 47.3,
+    "hasta": 47.97,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 55.63,
+    "hasta": 56.67,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 59.4,
+    "hasta": 60.87,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 69.83,
+    "hasta": 70.5,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 77.03,
+    "hasta": 77.97,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 85.43,
+    "hasta": 85.77,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 88.7,
+    "hasta": 89.5,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 97.47,
+    "hasta": 98.03,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 105.3,
+    "hasta": 105.63,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 112.47,
+    "hasta": 113.17,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 115.07,
+    "hasta": 115.47,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 119.37,
+    "hasta": 120.17,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 124.87,
+    "hasta": 125.87,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 133.17,
+    "hasta": 134.13,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 142.6,
+    "hasta": 143.27,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 145.17,
+    "hasta": 145.7,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 148.8,
+    "hasta": 149.47,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 153.13,
+    "hasta": 155.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 162.07,
+    "hasta": 162.77,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 165.77,
+    "hasta": 166.33,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 170.27,
+    "hasta": 170.6,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 172.87,
+    "hasta": 173.9,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 180.73,
+    "hasta": 181.23,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 185.93,
+    "hasta": 186.6,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 195.43,
+    "hasta": 195.83,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 204.23,
+    "hasta": 204.47,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 207.8,
+    "hasta": 208,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 213.57,
+    "hasta": 214.4,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 220.87,
+    "hasta": 222.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 223.97,
+    "hasta": 224.23,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 227.57,
+    "hasta": 228.67,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 236.43,
+    "hasta": 236.93,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 243.77,
+    "hasta": 244.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 254.9,
+    "hasta": 255.47,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 266.9,
+    "hasta": 267.77,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 269.67,
+    "hasta": 270.5,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 281.77,
+    "hasta": 282.3,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 289.6,
+    "hasta": 290.2,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 297.5,
+    "hasta": 298.03,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 304.63,
+    "hasta": 305,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 312.33,
+    "hasta": 313.03,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 321.37,
+    "hasta": 321.77,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 333.57,
+    "hasta": 334.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 342.37,
+    "hasta": 342.9,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 350.33,
+    "hasta": 351.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 358.5,
+    "hasta": 359.23,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 365.37,
+    "hasta": 365.8,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 372.03,
+    "hasta": 372.63,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 381.43,
+    "hasta": 382.07,
+    "ticksPorCuadro": 2
+   },
+   {
+    "desde": 389.37,
+    "hasta": 390,
+    "ticksPorCuadro": 2
+   }
+  ]
+ },
+ "cortos": [],
+ "eventos": [
+  {
+   "t": 0,
+   "tipo": "presentacion",
+   "mapa": "cuatrofrentes",
+   "equipos": [
+    {
+     "nombre": "AZUL",
+     "dificultad": "dificil",
+     "monigotes": [
+      "APATZINGAN",
+      "SOCORRITO",
+      "CHUCHE EL AGUILA",
+      "EL TORERO"
+     ]
+    },
+    {
+     "nombre": "ROJO",
+     "dificultad": "dificil",
+     "monigotes": [
+      "MARTA MANTECAS",
+      "MILANGO",
+      "NACHO",
+      "LA BICHONGA"
+     ]
+    },
+    {
+     "nombre": "VERDE",
+     "dificultad": "dificil",
+     "monigotes": [
+      "MANUEL GALVEZ",
+      "LIOBAS",
+      "LALO",
+      "JOJO"
+     ]
+    },
+    {
+     "nombre": "AMARILLO",
+     "dificultad": "dificil",
+     "monigotes": [
+      "PACO",
+      "CHATO",
+      "BETO",
+      "NINO"
+     ]
+    }
+   ]
+  },
+  {
+   "t": 1.23,
+   "tipo": "pasa",
+   "quien": "APATZINGAN (AZUL)"
+  },
+  {
+   "t": 1.87,
+   "tipo": "turno",
+   "turno": 2,
+   "quien": "MARTA MANTECAS (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    400,
+    400,
+    400,
+    400
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "t": 4.9,
+   "tipo": "disparo",
+   "quien": "MARTA MANTECAS (ROJO)",
+   "equipo": "ROJO",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 8.87,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 106,
+   "y": 153
+  },
+  {
+   "t": 8.87,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MANUEL GALVEZ (VERDE)",
+     "dano": 24,
+     "vida": 76
+    }
+   ]
+  },
+  {
+   "t": 8.87,
+   "tipo": "sale_volando",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "distancia": 40,
+   "alto": 5,
+   "termina": "aterriza"
+  },
+  {
+   "t": 9.53,
+   "tipo": "emote",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "emote": "grr"
+  },
+  {
+   "t": 11.1,
+   "tipo": "turno",
+   "turno": 3,
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    400,
+    400,
+    376,
+    400
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "t": 14.5,
+   "tipo": "disparo",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "equipo": "VERDE",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 18.47,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 432,
+   "y": 188
+  },
+  {
+   "t": 18.47,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MARTA MANTECAS (ROJO)",
+     "dano": 61,
+     "vida": 39
+    },
+    {
+     "quien": "MILANGO (ROJO)",
+     "dano": 51,
+     "vida": 49
+    },
+    {
+     "quien": "NACHO (ROJO)",
+     "dano": 21,
+     "vida": 79
+    },
+    {
+     "quien": "LA BICHONGA (ROJO)",
+     "dano": 1,
+     "vida": 99
+    }
+   ]
+  },
+  {
+   "t": 18.47,
+   "tipo": "sale_volando",
+   "quien": "NACHO (ROJO)",
+   "distancia": 26,
+   "alto": 4,
+   "termina": "aterriza"
+  },
+  {
+   "t": 18.47,
+   "tipo": "sale_volando",
+   "quien": "MILANGO (ROJO)",
+   "distancia": 11,
+   "alto": 32,
+   "termina": "aterriza"
+  },
+  {
+   "t": 18.47,
+   "tipo": "sale_volando",
+   "quien": "MARTA MANTECAS (ROJO)",
+   "distancia": 56,
+   "alto": 123,
+   "termina": "aterriza"
+  },
+  {
+   "t": 22.3,
+   "tipo": "turno",
+   "turno": 4,
+   "quien": "PACO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    400,
+    266,
+    376,
+    400
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "t": 25.53,
+   "tipo": "disparo",
+   "quien": "PACO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 29.5,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 399,
+   "y": 186
+  },
+  {
+   "t": 29.5,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MARTA MANTECAS (ROJO)",
+     "dano": 1,
+     "vida": 38
+    },
+    {
+     "quien": "MILANGO (ROJO)",
+     "dano": 9,
+     "vida": 40
+    }
+   ]
+  },
+  {
+   "t": 31.73,
+   "tipo": "turno",
+   "turno": 5,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    400,
+    256,
+    376,
+    400
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "t": 33.37,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 33.37,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "PACO (AMARILLO)",
+     "dano": 35,
+     "vida": 65
+    }
+   ]
+  },
+  {
+   "t": 35.2,
+   "tipo": "turno",
+   "turno": 6,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    400,
+    256,
+    376,
+    365
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "t": 38.03,
+   "tipo": "disparo",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 42,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 318,
+   "y": 160
+  },
+  {
+   "t": 42,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "PACO (AMARILLO)",
+     "dano": 46,
+     "vida": 19
+    },
+    {
+     "quien": "CHATO (AMARILLO)",
+     "dano": 27,
+     "vida": 73
+    },
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 2,
+     "vida": 98
+    }
+   ]
+  },
+  {
+   "t": 42,
+   "tipo": "sale_volando",
+   "quien": "PACO (AMARILLO)",
+   "distancia": 170,
+   "alto": 41,
+   "termina": "cae al vacio"
+  },
+  {
+   "t": 43.37,
+   "tipo": "cae_al_vacio",
+   "quien": "PACO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 44.03,
+   "tipo": "emote",
+   "quien": "MILANGO (ROJO)",
+   "emote": "jaja"
+  },
+  {
+   "t": 45.17,
+   "tipo": "turno",
+   "turno": 7,
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    400,
+    256,
+    376,
+    271
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 47.93,
+   "tipo": "disparo",
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 51.9,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 325,
+   "y": 172
+  },
+  {
+   "t": 51.9,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 2,
+     "vida": 96
+    }
+   ]
+  },
+  {
+   "t": 54.13,
+   "tipo": "turno",
+   "turno": 8,
+   "quien": "CHATO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    400,
+    256,
+    376,
+    269
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 56.63,
+   "tipo": "disparo",
+   "quien": "CHATO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 57.27,
+   "tipo": "turno",
+   "turno": 9,
+   "quien": "CHUCHE EL AGUILA (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    400,
+    256,
+    376,
+    269
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 60.83,
+   "tipo": "disparo",
+   "quien": "CHUCHE EL AGUILA (AZUL)",
+   "equipo": "AZUL",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 64.8,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 355,
+   "y": 150
+  },
+  {
+   "t": 64.8,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "CHATO (AMARILLO)",
+     "dano": 45,
+     "vida": 28
+    },
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 32,
+     "vida": 64
+    },
+    {
+     "quien": "NINO (AMARILLO)",
+     "dano": 46,
+     "vida": 54
+    }
+   ]
+  },
+  {
+   "t": 64.8,
+   "tipo": "sale_volando",
+   "quien": "BETO (AMARILLO)",
+   "distancia": 43,
+   "alto": 10,
+   "termina": "aterriza"
+  },
+  {
+   "t": 64.8,
+   "tipo": "sale_volando",
+   "quien": "CHATO (AMARILLO)",
+   "distancia": 39,
+   "alto": 20,
+   "termina": "aterriza"
+  },
+  {
+   "t": 64.8,
+   "tipo": "sale_volando",
+   "quien": "NINO (AMARILLO)",
+   "distancia": 38,
+   "alto": 21,
+   "termina": "aterriza"
+  },
+  {
+   "t": 67.7,
+   "tipo": "turno",
+   "turno": 10,
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    400,
+    256,
+    376,
+    146
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 70.47,
+   "tipo": "disparo",
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 73.43,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 310,
+   "y": 181
+  },
+  {
+   "t": 73.43,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "CHATO (AMARILLO)",
+     "dano": 21,
+     "vida": 7
+    },
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 6,
+     "vida": 58
+    },
+    {
+     "quien": "NINO (AMARILLO)",
+     "dano": 20,
+     "vida": 34
+    }
+   ]
+  },
+  {
+   "t": 75.73,
+   "tipo": "turno",
+   "turno": 11,
+   "quien": "LALO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    400,
+    256,
+    376,
+    99
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 77.93,
+   "tipo": "disparo",
+   "quien": "LALO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 80.9,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 275,
+   "y": 211
+  },
+  {
+   "t": 83.13,
+   "tipo": "turno",
+   "turno": 12,
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    400,
+    256,
+    376,
+    99
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 85.73,
+   "tipo": "disparo",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "LASER",
+   "id": "laser"
+  },
+  {
+   "t": 86.37,
+   "tipo": "turno",
+   "turno": 13,
+   "quien": "EL TORERO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    400,
+    256,
+    376,
+    99
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 89.47,
+   "tipo": "disparo",
+   "quien": "EL TORERO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 93.43,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 278,
+   "y": 192
+  },
+  {
+   "t": 93.43,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 2,
+     "vida": 56
+    }
+   ]
+  },
+  {
+   "t": 95.67,
+   "tipo": "turno",
+   "turno": 14,
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    400,
+    256,
+    376,
+    97
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 98,
+   "tipo": "disparo",
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 100.97,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 201,
+   "y": 189
+  },
+  {
+   "t": 103.2,
+   "tipo": "turno",
+   "turno": 15,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    400,
+    256,
+    376,
+    97
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 105.6,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 108.57,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 357,
+   "y": 159
+  },
+  {
+   "t": 110.8,
+   "tipo": "turno",
+   "turno": 16,
+   "quien": "NINO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    400,
+    256,
+    376,
+    97
+   ],
+   "vivos": [
+    4,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 113.13,
+   "tipo": "disparo",
+   "quien": "NINO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 113.13,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "EL TORERO (AZUL)",
+     "dano": 100,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 113.13,
+   "tipo": "headshot",
+   "quien": "NINO (AMARILLO)",
+   "a": "EL TORERO (AZUL)"
+  },
+  {
+   "t": 113.13,
+   "tipo": "muere",
+   "quien": "EL TORERO (AZUL)",
+   "equipo": "AZUL",
+   "vivos": [
+    3,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 113.77,
+   "tipo": "turno",
+   "turno": 17,
+   "quien": "APATZINGAN (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    300,
+    256,
+    376,
+    97
+   ],
+   "vivos": [
+    3,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 113.8,
+   "tipo": "emote",
+   "quien": "NINO (AMARILLO)",
+   "emote": "jaja"
+  },
+  {
+   "t": 115.43,
+   "tipo": "disparo",
+   "quien": "APATZINGAN (AZUL)",
+   "equipo": "AZUL",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 116.07,
+   "tipo": "turno",
+   "turno": 18,
+   "quien": "MARTA MANTECAS (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    300,
+    256,
+    376,
+    97
+   ],
+   "vivos": [
+    3,
+    4,
+    4,
+    3
+   ]
+  },
+  {
+   "t": 120.13,
+   "tipo": "disparo",
+   "quien": "MARTA MANTECAS (ROJO)",
+   "equipo": "ROJO",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 120.13,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 330,
+   "y": 181
+  },
+  {
+   "t": 120.13,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MARTA MANTECAS (ROJO)",
+     "dano": 33,
+     "vida": 5
+    },
+    {
+     "quien": "CHATO (AMARILLO)",
+     "dano": 7,
+     "vida": 0
+    },
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 1,
+     "vida": 55
+    },
+    {
+     "quien": "NINO (AMARILLO)",
+     "dano": 19,
+     "vida": 15
+    }
+   ]
+  },
+  {
+   "t": 120.13,
+   "tipo": "muere",
+   "quien": "CHATO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vivos": [
+    3,
+    4,
+    4,
+    2
+   ]
+  },
+  {
+   "t": 120.13,
+   "tipo": "sale_volando",
+   "quien": "NINO (AMARILLO)",
+   "distancia": 57,
+   "alto": 5,
+   "termina": "aterriza"
+  },
+  {
+   "t": 122.73,
+   "tipo": "turno",
+   "turno": 19,
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    300,
+    223,
+    376,
+    70
+   ],
+   "vivos": [
+    3,
+    4,
+    4,
+    2
+   ]
+  },
+  {
+   "t": 125.83,
+   "tipo": "disparo",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 128.8,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 300,
+   "y": 146
+  },
+  {
+   "t": 131.03,
+   "tipo": "turno",
+   "turno": 20,
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    300,
+    223,
+    376,
+    70
+   ],
+   "vivos": [
+    3,
+    4,
+    4,
+    2
+   ]
+  },
+  {
+   "t": 134.1,
+   "tipo": "disparo",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "BOMBA",
+   "id": "bomba"
+  },
+  {
+   "t": 138.07,
+   "tipo": "explosion",
+   "arma": "bomba",
+   "x": 153,
+   "y": 160
+  },
+  {
+   "t": 138.07,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MANUEL GALVEZ (VERDE)",
+     "dano": 39,
+     "vida": 37
+    },
+    {
+     "quien": "LIOBAS (VERDE)",
+     "dano": 41,
+     "vida": 59
+    },
+    {
+     "quien": "LALO (VERDE)",
+     "dano": 47,
+     "vida": 53
+    },
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 5,
+     "vida": 95
+    }
+   ]
+  },
+  {
+   "t": 138.07,
+   "tipo": "sale_volando",
+   "quien": "LIOBAS (VERDE)",
+   "distancia": 29,
+   "alto": 23,
+   "termina": "aterriza"
+  },
+  {
+   "t": 138.07,
+   "tipo": "sale_volando",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "distancia": 146,
+   "alto": 17,
+   "termina": "aterriza"
+  },
+  {
+   "t": 138.07,
+   "tipo": "sale_volando",
+   "quien": "LALO (VERDE)",
+   "distancia": 162,
+   "alto": 49,
+   "termina": "cae al vacio"
+  },
+  {
+   "t": 139.43,
+   "tipo": "cae_al_vacio",
+   "quien": "LALO (VERDE)",
+   "equipo": "VERDE",
+   "vivos": [
+    3,
+    4,
+    3,
+    2
+   ]
+  },
+  {
+   "t": 139.5,
+   "tipo": "cae_al_vacio",
+   "quien": "MANUEL GALVEZ (VERDE)",
+   "equipo": "VERDE",
+   "vivos": [
+    3,
+    4,
+    2,
+    2
+   ]
+  },
+  {
+   "t": 140.1,
+   "tipo": "emote",
+   "quien": "BETO (AMARILLO)",
+   "emote": "jaja"
+  },
+  {
+   "t": 141.3,
+   "tipo": "turno",
+   "turno": 21,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    300,
+    223,
+    154,
+    70
+   ],
+   "vivos": [
+    3,
+    4,
+    2,
+    2
+   ]
+  },
+  {
+   "t": 143.23,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "LASER",
+   "id": "laser"
+  },
+  {
+   "t": 143.87,
+   "tipo": "turno",
+   "turno": 22,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    300,
+    223,
+    154,
+    70
+   ],
+   "vivos": [
+    3,
+    4,
+    2,
+    2
+   ]
+  },
+  {
+   "t": 145.67,
+   "tipo": "disparo",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 145.67,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "NINO (AMARILLO)",
+     "dano": 15,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 145.67,
+   "tipo": "muere",
+   "quien": "NINO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vivos": [
+    3,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 146.3,
+   "tipo": "turno",
+   "turno": 23,
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    300,
+    223,
+    154,
+    55
+   ],
+   "vivos": [
+    3,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 149.43,
+   "tipo": "disparo",
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "arma": "LASER",
+   "id": "laser"
+  },
+  {
+   "t": 149.43,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "CHUCHE EL AGUILA (AZUL)",
+     "dano": 100,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 149.43,
+   "tipo": "headshot",
+   "quien": "LIOBAS (VERDE)",
+   "a": "CHUCHE EL AGUILA (AZUL)"
+  },
+  {
+   "t": 149.43,
+   "tipo": "muere",
+   "quien": "CHUCHE EL AGUILA (AZUL)",
+   "equipo": "AZUL",
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 150.07,
+   "tipo": "turno",
+   "turno": 24,
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    200,
+    223,
+    154,
+    55
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 150.1,
+   "tipo": "emote",
+   "quien": "LIOBAS (VERDE)",
+   "emote": "jaja"
+  },
+  {
+   "t": 155.03,
+   "tipo": "disparo",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 158,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 268,
+   "y": 222
+  },
+  {
+   "t": 158,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 2,
+     "vida": 53
+    }
+   ]
+  },
+  {
+   "t": 160.23,
+   "tipo": "turno",
+   "turno": 25,
+   "quien": "APATZINGAN (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    200,
+    223,
+    154,
+    53
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 162.73,
+   "tipo": "disparo",
+   "quien": "APATZINGAN (AZUL)",
+   "equipo": "AZUL",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 163.37,
+   "tipo": "turno",
+   "turno": 26,
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    200,
+    223,
+    154,
+    53
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 166.3,
+   "tipo": "disparo",
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 166.3,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 35,
+     "vida": 18
+    }
+   ]
+  },
+  {
+   "t": 166.97,
+   "tipo": "emote",
+   "quien": "BETO (AMARILLO)",
+   "emote": "grr"
+  },
+  {
+   "t": 168.13,
+   "tipo": "turno",
+   "turno": 27,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    200,
+    223,
+    154,
+    18
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 170.57,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 171.2,
+   "tipo": "turno",
+   "turno": 28,
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    200,
+    223,
+    154,
+    18
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 173.87,
+   "tipo": "disparo",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 176.83,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 356,
+   "y": 172
+  },
+  {
+   "t": 179.07,
+   "tipo": "turno",
+   "turno": 29,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    200,
+    223,
+    154,
+    18
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 181.2,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 181.2,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "LIOBAS (VERDE)",
+     "dano": 20,
+     "vida": 39
+    }
+   ]
+  },
+  {
+   "t": 183.23,
+   "tipo": "turno",
+   "turno": 30,
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    200,
+    223,
+    134,
+    18
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 186.57,
+   "tipo": "disparo",
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 189.53,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 435,
+   "y": 196
+  },
+  {
+   "t": 189.53,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "NACHO (ROJO)",
+     "dano": 22,
+     "vida": 57
+    },
+    {
+     "quien": "LA BICHONGA (ROJO)",
+     "dano": 36,
+     "vida": 63
+    }
+   ]
+  },
+  {
+   "t": 189.53,
+   "tipo": "sale_volando",
+   "quien": "NACHO (ROJO)",
+   "distancia": 31,
+   "alto": 20,
+   "termina": "aterriza"
+  },
+  {
+   "t": 190.2,
+   "tipo": "emote",
+   "quien": "LA BICHONGA (ROJO)",
+   "emote": "ups"
+  },
+  {
+   "t": 192.3,
+   "tipo": "turno",
+   "turno": 31,
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    200,
+    165,
+    134,
+    18
+   ],
+   "vivos": [
+    2,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 195.8,
+   "tipo": "disparo",
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 198.77,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 0,
+   "y": 199
+  },
+  {
+   "t": 198.77,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "APATZINGAN (AZUL)",
+     "dano": 40,
+     "vida": 60
+    },
+    {
+     "quien": "SOCORRITO (AZUL)",
+     "dano": 2,
+     "vida": 98
+    }
+   ]
+  },
+  {
+   "t": 198.77,
+   "tipo": "sale_volando",
+   "quien": "APATZINGAN (AZUL)",
+   "distancia": 2,
+   "alto": 69,
+   "termina": "cae al vacio"
+  },
+  {
+   "t": 199.43,
+   "tipo": "emote",
+   "quien": "APATZINGAN (AZUL)",
+   "emote": "grr"
+  },
+  {
+   "t": 200.63,
+   "tipo": "cae_al_vacio",
+   "quien": "APATZINGAN (AZUL)",
+   "equipo": "AZUL",
+   "vivos": [
+    1,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 202.43,
+   "tipo": "turno",
+   "turno": 32,
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vida": [
+    98,
+    165,
+    134,
+    18
+   ],
+   "vivos": [
+    1,
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 204.43,
+   "tipo": "disparo",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 204.43,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MARTA MANTECAS (ROJO)",
+     "dano": 5,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 204.43,
+   "tipo": "headshot",
+   "quien": "BETO (AMARILLO)",
+   "a": "MARTA MANTECAS (ROJO)"
+  },
+  {
+   "t": 204.43,
+   "tipo": "muere",
+   "quien": "MARTA MANTECAS (ROJO)",
+   "equipo": "ROJO",
+   "vivos": [
+    1,
+    3,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 205.07,
+   "tipo": "turno",
+   "turno": 33,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    160,
+    134,
+    18
+   ],
+   "vivos": [
+    1,
+    3,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 205.1,
+   "tipo": "emote",
+   "quien": "BETO (AMARILLO)",
+   "emote": "jaja"
+  },
+  {
+   "t": 207.97,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 208.97,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 100,
+   "y": 162
+  },
+  {
+   "t": 208.97,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "LIOBAS (VERDE)",
+     "dano": 35,
+     "vida": 4
+    }
+   ]
+  },
+  {
+   "t": 208.97,
+   "tipo": "sale_volando",
+   "quien": "LIOBAS (VERDE)",
+   "distancia": 27,
+   "alto": 21,
+   "termina": "aterriza"
+  },
+  {
+   "t": 209.63,
+   "tipo": "emote",
+   "quien": "LIOBAS (VERDE)",
+   "emote": "grr"
+  },
+  {
+   "t": 211.9,
+   "tipo": "turno",
+   "turno": 34,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    160,
+    99,
+    18
+   ],
+   "vivos": [
+    1,
+    3,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 214.37,
+   "tipo": "disparo",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 217.33,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 269,
+   "y": 139
+  },
+  {
+   "t": 219.57,
+   "tipo": "turno",
+   "turno": 35,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    160,
+    99,
+    18
+   ],
+   "vivos": [
+    1,
+    3,
+    2,
+    1
+   ]
+  },
+  {
+   "t": 222.03,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 222.03,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "BETO (AMARILLO)",
+     "dano": 18,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 222.03,
+   "tipo": "headshot",
+   "quien": "JOJO (VERDE)",
+   "a": "BETO (AMARILLO)"
+  },
+  {
+   "t": 222.03,
+   "tipo": "muere",
+   "quien": "BETO (AMARILLO)",
+   "equipo": "AMARILLO",
+   "vivos": [
+    1,
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "t": 222.03,
+   "tipo": "equipo_fuera",
+   "equipo": "AMARILLO",
+   "quedan": [
+    "AZUL",
+    "ROJO",
+    "VERDE"
+   ],
+   "vivos": [
+    1,
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "t": 222.67,
+   "tipo": "turno",
+   "turno": 36,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    160,
+    99,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "t": 222.7,
+   "tipo": "emote",
+   "quien": "JOJO (VERDE)",
+   "emote": "jaja"
+  },
+  {
+   "t": 224.2,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "RIFLE",
+   "id": "rifle"
+  },
+  {
+   "t": 224.2,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "LIOBAS (VERDE)",
+     "dano": 4,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 224.2,
+   "tipo": "headshot",
+   "quien": "SOCORRITO (AZUL)",
+   "a": "LIOBAS (VERDE)"
+  },
+  {
+   "t": 224.2,
+   "tipo": "muere",
+   "quien": "LIOBAS (VERDE)",
+   "equipo": "VERDE",
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 224.83,
+   "tipo": "turno",
+   "turno": 37,
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    160,
+    95,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 228.63,
+   "tipo": "disparo",
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 231.6,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 192,
+   "y": 199
+  },
+  {
+   "t": 231.6,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 39,
+     "vida": 56
+    }
+   ]
+  },
+  {
+   "t": 231.6,
+   "tipo": "sale_volando",
+   "quien": "JOJO (VERDE)",
+   "distancia": 15,
+   "alto": 42,
+   "termina": "aterriza"
+  },
+  {
+   "t": 232.27,
+   "tipo": "emote",
+   "quien": "JOJO (VERDE)",
+   "emote": "grr"
+  },
+  {
+   "t": 234.33,
+   "tipo": "turno",
+   "turno": 38,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    160,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 236.9,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 239.87,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 260,
+   "y": 230
+  },
+  {
+   "t": 242.1,
+   "tipo": "turno",
+   "turno": 39,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    160,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 244.03,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 249.17,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 424,
+   "y": 180
+  },
+  {
+   "t": 249.17,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MILANGO (ROJO)",
+     "dano": 5,
+     "vida": 35
+    },
+    {
+     "quien": "NACHO (ROJO)",
+     "dano": 26,
+     "vida": 31
+    },
+    {
+     "quien": "LA BICHONGA (ROJO)",
+     "dano": 30,
+     "vida": 33
+    }
+   ]
+  },
+  {
+   "t": 249.17,
+   "tipo": "sale_volando",
+   "quien": "NACHO (ROJO)",
+   "distancia": 30,
+   "alto": 9,
+   "termina": "aterriza"
+  },
+  {
+   "t": 251.87,
+   "tipo": "turno",
+   "turno": 40,
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    99,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 255.43,
+   "tipo": "disparo",
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 263.37,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 38,
+   "y": 199
+  },
+  {
+   "t": 265.6,
+   "tipo": "turno",
+   "turno": 41,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    99,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 267.73,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "FRANCOTIRADOR",
+   "id": "franco"
+  },
+  {
+   "t": 267.73,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "NACHO (ROJO)",
+     "dano": 31,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 267.73,
+   "tipo": "headshot",
+   "quien": "JOJO (VERDE)",
+   "a": "NACHO (ROJO)"
+  },
+  {
+   "t": 267.73,
+   "tipo": "muere",
+   "quien": "NACHO (ROJO)",
+   "equipo": "ROJO",
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 268.37,
+   "tipo": "turno",
+   "turno": 42,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    68,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 268.4,
+   "tipo": "emote",
+   "quien": "JOJO (VERDE)",
+   "emote": "jaja"
+  },
+  {
+   "t": 270.47,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 276.17,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 422,
+   "y": 192
+  },
+  {
+   "t": 276.17,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MILANGO (ROJO)",
+     "dano": 26,
+     "vida": 9
+    }
+   ]
+  },
+  {
+   "t": 276.17,
+   "tipo": "sale_volando",
+   "quien": "MILANGO (ROJO)",
+   "distancia": 33,
+   "alto": 9,
+   "termina": "aterriza"
+  },
+  {
+   "t": 278.57,
+   "tipo": "turno",
+   "turno": 43,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    42,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 279.83,
+   "tipo": "pasa",
+   "quien": "MILANGO (ROJO)"
+  },
+  {
+   "t": 280.47,
+   "tipo": "turno",
+   "turno": 44,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    42,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 282.27,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 285.23,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 536,
+   "y": 202
+  },
+  {
+   "t": 287.47,
+   "tipo": "turno",
+   "turno": 45,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    42,
+    56,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 290.17,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 293.13,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 245,
+   "y": 186
+  },
+  {
+   "t": 293.13,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 8,
+     "vida": 48
+    }
+   ]
+  },
+  {
+   "t": 295.37,
+   "tipo": "turno",
+   "turno": 46,
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    42,
+    48,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 298,
+   "tipo": "disparo",
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 300.97,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 198,
+   "y": 190
+  },
+  {
+   "t": 300.97,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 1,
+     "vida": 47
+    }
+   ]
+  },
+  {
+   "t": 303.2,
+   "tipo": "turno",
+   "turno": 47,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    42,
+    47,
+    0
+   ],
+   "vivos": [
+    1,
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 304.97,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 308.8,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 467,
+   "y": 198
+  },
+  {
+   "t": 308.8,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "LA BICHONGA (ROJO)",
+     "dano": 33,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 308.8,
+   "tipo": "muere",
+   "quien": "LA BICHONGA (ROJO)",
+   "equipo": "ROJO",
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 311.03,
+   "tipo": "turno",
+   "turno": 48,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    9,
+    47,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 313,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 315.97,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 242,
+   "y": 184
+  },
+  {
+   "t": 315.97,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 8,
+     "vida": 39
+    }
+   ]
+  },
+  {
+   "t": 318.2,
+   "tipo": "turno",
+   "turno": 49,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    9,
+    39,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 321.73,
+   "tipo": "disparo",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 329.67,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 50,
+   "y": 190
+  },
+  {
+   "t": 331.9,
+   "tipo": "turno",
+   "turno": 50,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    9,
+    39,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 334.03,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 336.5,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 362,
+   "y": 156
+  },
+  {
+   "t": 338.73,
+   "tipo": "turno",
+   "turno": 51,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    9,
+    39,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 340,
+   "tipo": "pasa",
+   "quien": "SOCORRITO (AZUL)"
+  },
+  {
+   "t": 340.63,
+   "tipo": "turno",
+   "turno": 52,
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vida": [
+    98,
+    9,
+    39,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 342.87,
+   "tipo": "disparo",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 345.83,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 207,
+   "y": 199
+  },
+  {
+   "t": 345.83,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "JOJO (VERDE)",
+     "dano": 24,
+     "vida": 15
+    }
+   ]
+  },
+  {
+   "t": 345.83,
+   "tipo": "sale_volando",
+   "quien": "JOJO (VERDE)",
+   "distancia": 71,
+   "alto": 8,
+   "termina": "aterriza"
+  },
+  {
+   "t": 348.4,
+   "tipo": "turno",
+   "turno": 53,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    9,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 351.03,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 354,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 426,
+   "y": 182
+  },
+  {
+   "t": 354,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "MILANGO (ROJO)",
+     "dano": 9,
+     "vida": 0
+    }
+   ]
+  },
+  {
+   "t": 354,
+   "tipo": "muere",
+   "quien": "MILANGO (ROJO)",
+   "equipo": "ROJO",
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 354,
+   "tipo": "equipo_fuera",
+   "equipo": "ROJO",
+   "quedan": [
+    "AZUL",
+    "VERDE"
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 356.23,
+   "tipo": "turno",
+   "turno": 54,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 359.2,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 362.43,
+   "tipo": "turno",
+   "turno": 55,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 365.77,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "BAZUCA",
+   "id": "bazuca"
+  },
+  {
+   "t": 366.1,
+   "tipo": "explosion",
+   "arma": "bazuca",
+   "x": 314,
+   "y": 154
+  },
+  {
+   "t": 368.33,
+   "tipo": "turno",
+   "turno": 56,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    98,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 369.6,
+   "tipo": "pasa",
+   "quien": "SOCORRITO (AZUL)"
+  },
+  {
+   "t": 370.23,
+   "tipo": "turno",
+   "turno": 57,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    98,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 372.6,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 375.57,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 19,
+   "y": 200
+  },
+  {
+   "t": 375.57,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "SOCORRITO (AZUL)",
+     "dano": 34,
+     "vida": 64
+    }
+   ]
+  },
+  {
+   "t": 375.57,
+   "tipo": "sale_volando",
+   "quien": "SOCORRITO (AZUL)",
+   "distancia": 72,
+   "alto": 34,
+   "termina": "aterriza"
+  },
+  {
+   "t": 378.3,
+   "tipo": "turno",
+   "turno": 58,
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vida": [
+    64,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 382.03,
+   "tipo": "disparo",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 385,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 305,
+   "y": 176
+  },
+  {
+   "t": 387.23,
+   "tipo": "turno",
+   "turno": 59,
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "vida": [
+    64,
+    0,
+    15,
+    0
+   ],
+   "vivos": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 389.97,
+   "tipo": "disparo",
+   "quien": "JOJO (VERDE)",
+   "equipo": "VERDE",
+   "arma": "GRANADA",
+   "id": "granada"
+  },
+  {
+   "t": 392.93,
+   "tipo": "explosion",
+   "arma": "granada",
+   "x": 58,
+   "y": 181
+  },
+  {
+   "t": 392.93,
+   "tipo": "golpe",
+   "golpes": [
+    {
+     "quien": "SOCORRITO (AZUL)",
+     "dano": 25,
+     "vida": 39
+    }
+   ]
+  },
+  {
+   "t": 392.93,
+   "tipo": "sale_volando",
+   "quien": "SOCORRITO (AZUL)",
+   "distancia": 65,
+   "alto": 8,
+   "termina": "cae al vacio"
+  },
+  {
+   "t": 393.6,
+   "tipo": "emote",
+   "quien": "SOCORRITO (AZUL)",
+   "emote": "grr"
+  },
+  {
+   "t": 393.63,
+   "tipo": "cae_al_vacio",
+   "quien": "SOCORRITO (AZUL)",
+   "equipo": "AZUL",
+   "vivos": [
+    0,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 393.63,
+   "tipo": "equipo_fuera",
+   "equipo": "AZUL",
+   "quedan": [
+    "VERDE"
+   ],
+   "vivos": [
+    0,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "t": 395.43,
+   "tipo": "fin",
+   "ganador": "VERDE",
+   "dificultad": "dificil",
+   "turnos": 59,
+   "quedan": [
+    {
+     "quien": "JOJO (VERDE)",
+     "vida": 15
+    }
+   ]
+  }
+ ]
+}

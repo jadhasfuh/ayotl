@@ -1262,5 +1262,72 @@
   ],
   "idioma": "ja",
   "id": "mkTe8KLFXK0"
+ },
+ {
+  "clave": "warzone-4cpu-cuatrofrentes",
+  "app": "warzone",
+  "video": "salida/warzone-4cpu-cuatrofrentes.mp4",
+  "miniatura": "salida/warzone-4cpu-cuatrofrentes.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-12T18:00:00-06:00",
+  "titulo": "WAR ZONE: 4 computadoras, todos contra todos en Cuatro Frentes (partida completa)",
+  "descripcion": "Cuatro equipos jugados por la computadora, todos en difícil y todos contra todos, en Cuatro Frentes, uno de los mapas nuevos de War Zone. LeIA comenta seis tiros a la cabeza, cinco soldados al vacío y a Jojo, del verde, que eliminó a cinco rivales. A los lados van los cuatro equipos con sus soldados. La música es la del juego.\n\nWar Zone es artillería por turnos con estilo Atari 2600: de dos a cuatro equipos, humanos o computadoras, en el mismo teléfono o en línea.\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "cierre": "#WarZone #RetroGaming #Atari2600 #Videojuegos #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "artillería por turnos",
+   "juego retro",
+   "Atari 2600",
+   "CPU vs CPU",
+   "todos contra todos",
+   "4 equipos",
+   "indie game",
+   "Daily Challenge"
+  ],
+  "id": "D4cMdLqkbKI"
+ },
+ {
+  "clave": "warzone-4cpu-cuatrofrentes-en",
+  "app": "warzone",
+  "video": "salida/warzone-4cpu-cuatrofrentes-en.mp4",
+  "miniatura": "salida/warzone-4cpu-cuatrofrentes-en.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-12T18:20:00-06:00",
+  "titulo": "WAR ZONE: 4 computers, free-for-all on Four Fronts (full match)",
+  "descripcion": "Four teams played by the computer, all on hard and every team for itself, on Four Fronts, one of the new War Zone maps. With LeIA's commentary: six headshots, five soldiers into the void and Jojo, from Green, taking out five rivals. The four teams and their soldiers are on the sides. The music is the game's own.\n\nWar Zone is turn-based artillery with an Atari 2600 look: two to four teams, humans or computers, on one phone or online.\n\nLeIA is the host of Ayotl's games.",
+  "cierre": "#WarZone #Artillery #RetroGaming #IndieGame",
+  "etiquetas": [
+   "War Zone",
+   "artillery game",
+   "turn-based",
+   "CPU vs CPU",
+   "free for all",
+   "4 teams",
+   "retro games",
+   "Atari 2600"
+  ],
+  "idioma": "en",
+  "id": "3qKr2Sc-TuM"
+ },
+ {
+  "clave": "warzone-4cpu-cuatrofrentes-ja",
+  "app": "warzone",
+  "video": "salida/warzone-4cpu-cuatrofrentes-ja.mp4",
+  "miniatura": "salida/warzone-4cpu-cuatrofrentes-ja.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-12T18:40:00-06:00",
+  "titulo": "WAR ZONE: コンピューター4チームのバトルロイヤル、四方の砦（フル対戦）",
+  "descripcion": "War Zoneの新しいマップ「四方の砦」で、コンピューターが動かす4チームが、全員ハードでバトルロイヤル。ヘッドショット6回、奈落に落ちた兵士5人、そして5人をたおした緑チームのJojo。LeIAが実況します。画面の左右には4チームの兵士たち。音楽はゲームのもの。\n\nWar ZoneはAtari 2600風のターン制砲撃ゲーム：2〜4チーム、人間でもコンピューターでも、1台のスマホでもオンラインでも。\n\nLeIAはAyotlのゲームの案内役です。",
+  "cierre": "#WarZone #砲撃ゲーム #レトロゲーム #インディーゲーム",
+  "etiquetas": [
+   "War Zone",
+   "砲撃ゲーム",
+   "ターン制",
+   "CPU対CPU",
+   "バトルロイヤル",
+   "レトロゲーム"
+  ],
+  "idioma": "ja",
+  "id": "4S0pgLRX9m4"
  }
 ]

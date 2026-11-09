@@ -21,6 +21,9 @@ El guion es un JSON:
   - `imagen` o `video` (+ `desde`, `recorte` [x, y, an, al], `ancho`, `pixel`, `radio`): la pantalla en
     una tarjeta debajo del texto;
   - `completo: true` con `video`: el vídeo llena el cuadro y el texto va abajo, en una franja;
+  - `arriba: true` con `video` (horizontal): el juego arriba, centrado y sin nada encima (`ancho`, 1280 por
+    omisión: un juego de 320x180 a 4x), el cuadro de diálogo debajo y, si el guion trae `marcador`, a los lados
+    los equipos con sus soldados (la partida larga de War Zone, 9-nov-2026; ver marcador());
   - `palabra: {jp, lectura, es, num?}`: la tarjeta de una palabra en japonés (fuente IPAex de jlptest);
   - `cuenta: {numero, arriba, abajo}`: el número en grande (la cuenta regresiva al JLPT), con una línea
     arriba y otra abajo;
@@ -61,12 +64,19 @@ CACHE = os.path.expanduser('~/Documents/ayotl-voces')   # lo ya narrado, por hue
 TODO_PIXEL = False      # `"fuente": "pixel"` en el guion: todo el texto en Press Start 2P (los vídeos de los juegos)
 MISAKI = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fuentes', 'Misaki.ttf')   # 8x8 japonesa (美咲ゴシック第2)
 JAPONES = False         # `"fuente": "pixel-ja"`: lo que lleve kana o kanji va en Misaki (la pixel japonesa); lo latino, en Press Start 2P
+# `"fuente": "pixel-ja12"` (9-nov-2026): en vez de Misaki, PixelMplus12 (12x12, kanji de 11, licencia M+): los kanji de 7x7
+# de Misaki se vuelven manchas (飛距離, 一騎打ち, 胸壁), y la esposa de Adrián ya no los leía en los juegos (6-nov; ver
+# feedback-japones-legible); va en múltiplos de 12, donde sus píxeles caen enteros
+PIXELMPLUS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fuentes', 'PixelMplus12-Regular.ttf')
+JAPONES_12 = False
 
 
 def pixel(tam, texto=''):
     """La fuente pixel para `texto`: Press Start 2P, o Misaki si el guion es japonés y el texto lleva kana o kanji
     (Misaki mide 8 el carácter ancho y 4 el latino: con el mismo tamaño las dos casan en la rejilla)."""
     ja = JAPONES and any(ord(ch) > 0x2E7F for ch in texto)
+    if ja and JAPONES_12:   # PixelMplus12, un poco más grande que la latina (su kana es más delgada)
+        return ImageFont.truetype(PIXELMPLUS, max(12, round(tam * 1.15 / 12) * 12))
     if ja:   # los kanji de Misaki son 7x7 y los kana más chicos: un tercio más grande para que se lea como la latina
         tam = max(16, int(tam * 4 / 3 / 8 + 0.5) * 8)
     return ImageFont.truetype(MISAKI if ja else PIXEL, tam)
@@ -108,6 +118,63 @@ def pintar(d, xy, s, font, fill, anchor='la'):
 def color(h):
     h = h.lstrip('#')
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def marcador(im, m, t, x0, ancho, alto, c):
+    """Los lados del juego en una escena `arriba` (la partida larga de War Zone, 9-nov-2026): cada equipo con su
+    nombre, la vida que le queda y sus soldados, vivos en su color (con su vida en una barrita) o caídos, en gris y
+    tachados; el que tira lleva una flecha. El primero y el tercero a la izquierda, el segundo y el cuarto a la derecha,
+    como las barras del juego. `m` (lo arma quien hace el guion): {equipos: [{nombre, color}], soldados: [[nombres]],
+    hp0, fuera, gana, estados: [{t, hp: [[vida de cada soldado]], activo: [equipo, soldado] | null, gana: equipo | null}]};
+    `t` es el segundo del vídeo del juego."""
+    import bisect
+    if '_ts' not in m:
+        m['_ts'] = [s['t'] for s in m['estados']]
+    est = m['estados'][max(0, bisect.bisect_right(m['_ts'], t + 1e-6) - 1)]
+    d = ImageDraw.Draw(im)
+    N = len(m['equipos']); filas = (N + 1) // 2; bloque = alto // filas
+    gris, apagado = (112, 112, 124), (58, 58, 70)
+    for e, q in enumerate(m['equipos']):
+        izq = e % 2 == 0
+        px = 0 if izq else x0 + ancho; py = (e // 2) * bloque
+        lx, rx = px + 24, px + x0 - 24     # el panel mide lo que sobra a cada lado del juego
+        hp = est['hp'][e]; vivos = sum(1 for v in hp if v > 0)
+        col = tuple(q['color']) if vivos else gris
+        y = py + 30
+        pintar(d, (lx, y), q['nombre'], pixel(24, q['nombre']), col)
+        if est.get('gana') == e:
+            pintar(d, (rx, y + 4), m['gana'], pixel(16, m['gana']), color(c['acento']), 'ra')
+        elif vivos:
+            s = str(sum(hp)); pintar(d, (rx, y + 4), s, pixel(16, s), col, 'ra')
+        # la vida del equipo, como la barra del juego; sin nadie en pie, en su lugar FUERA (a la derecha del nombre no
+        # cabe junto a AMARILLO)
+        y += 44
+        if not vivos:
+            pintar(d, (lx, y - 2), m['fuera'], pixel(16, m['fuera']), (226, 84, 84))
+        else:
+            d.rectangle([lx, y, rx, y + 13], fill=(0, 0, 0), outline=apagado, width=2)
+        llena = round((rx - lx - 6) * sum(hp) / max(1, m['hp0'] * len(hp)))
+        if llena > 0:
+            d.rectangle([lx + 3, y + 3, lx + 3 + llena, y + 10], fill=col)
+        # los soldados
+        y += 36
+        paso = min(52, (py + bloque - 16 - y) // max(1, len(hp)))
+        for k, nombre in enumerate(m['soldados'][e]):
+            vivo = hp[k] > 0; yk = y + k * paso
+            if est.get('activo') == [e, k] and vivo:   # el que tira
+                d.polygon([(px + 6, yk), (px + 6, yk + 14), (px + 15, yk + 7)], fill=(255, 255, 255))
+            if vivo:
+                d.rectangle([lx, yk, lx + 14, yk + 14], fill=tuple(q['color']))
+            else:
+                d.rectangle([lx, yk, lx + 14, yk + 14], outline=gris, width=2)
+            fn = pixel(16, nombre); w = d.textlength(nombre, font=fn)
+            if lx + 24 + w > rx + 16:   # un nombre que no cabe va más chico
+                fn = pixel(8, nombre); w = d.textlength(nombre, font=fn)
+            pintar(d, (lx + 24, yk), nombre, fn, (236, 236, 240) if vivo else gris)
+            if vivo:   # su vida, en una barrita debajo del nombre
+                d.rectangle([lx + 24, yk + 22, lx + 24 + round((rx - lx - 24) * min(1, hp[k] / m['hp0'])), yk + 25], fill=tuple(q['color']))
+            else:   # tachado
+                d.rectangle([lx + 20, yk + 7, lx + 28 + w, yk + 9], fill=gris)
 
 
 def horizontal():
@@ -245,6 +312,9 @@ class Escena:
         if e.get('completo'):   # el vídeo llena el cuadro
             self.clip = Clip(e['video'], e.get('desde', 0), e.get('recorte'), W, dur, e.get('pixel', False), alto=H, hasta=e.get('hasta'))
             return
+        if e.get('arriba'):   # el juego arriba y el cuadro de diálogo debajo, sin taparlo
+            self.clip = Clip(e['video'], e.get('desde', 0), e.get('recorte'), e.get('ancho', 1280), dur, e.get('pixel', False), hasta=e.get('hasta'))
+            return
         # ancho de la pantalla: en vertical, 700 para una de teléfono, para que el pie y los botones de
         # Instagram no la tapen; las de juego, apaisadas, caben más anchas
         self.ancho = e.get('ancho', 700 if not horizontal() else 1400)
@@ -288,6 +358,8 @@ class Escena:
         g = self.g; c = g['colores']
         if self.e.get('completo'):
             return self.completo(f)
+        if self.e.get('arriba'):
+            return self.arriba(f)
         if self.fija is not None:
             return self.fija.copy()
         im = Image.new('RGB', (W, H), self.fondo); d = ImageDraw.Draw(im)
@@ -319,6 +391,23 @@ class Escena:
             d.rounded_rectangle([x0 - 3, y0 - 3, x0 + tw + 2, y0 + th + 2], round(self.radio * z) + 3, outline=color(c['borde']), width=3)
         if self.e.get('nota'):   # una línea chica debajo de la pantalla
             pintar(d, (W / 2, y0 + th + 50), self.e['nota'], fuente('medium', 44, self.e['nota']), color(c['tenue']), 'ma')
+        return im
+
+    def arriba(self, f):
+        """El juego arriba, centrado y a escala entera, sin nada encima: en una partida larga LeIA habla casi todo el
+        tiempo, y su cuadro sobre el juego taparía lo de abajo, que en War Zone es donde caen al vacío (Adrián, 30-oct:
+        «tapa la acción»). El cuadro de diálogo va debajo, en su sitio de siempre, y a los lados el marcador."""
+        im = Image.new('RGB', (W, H), self.fondo)
+        juego = self.clip.cuadro(round(f * self.dur * FPS))
+        x0 = (W - juego.size[0]) // 2
+        im.paste(juego, (x0, 0))
+        c = self.g['colores']
+        if c.get('borde'):   # una raya a cada lado, para que el cielo negro de un mapa no se funda con el fondo
+            d = ImageDraw.Draw(im)
+            d.rectangle([x0 - 4, 0, x0 - 1, juego.size[1] - 1], fill=color(c['borde']))
+            d.rectangle([x0 + juego.size[0], 0, x0 + juego.size[0] + 3, juego.size[1] - 1], fill=color(c['borde']))
+        if self.g.get('marcador'):
+            marcador(im, self.g['marcador'], self.e.get('desde', 0) + f * self.dur, x0, juego.size[0], juego.size[1], c)
         return im
 
     def completo(self, f):
@@ -450,7 +539,8 @@ class Escena:
 
     def final(self, im, d, f):
         g = self.g; c = g['colores']; m = g['marca']
-        a = min(1, f * 3)   # aparece en el primer tercio
+        # aparece en el primer tercio; una tarjeta `continua` (la segunda página de lo que dice LeIA al final) ya está
+        a = 1 if self.e.get('continua') else min(1, f * 3)
         def mezcla(col):
             base = self.fondo; col = color(col)
             return tuple(round(base[i] + (col[i] - base[i]) * a) for i in range(3))
@@ -496,11 +586,12 @@ class Escena:
 
 
 def main():
-    global W, H, TODO_PIXEL, JAPONES
+    global W, H, TODO_PIXEL, JAPONES, JAPONES_12
     g = json.load(open(sys.argv[1], encoding='utf-8'))
     if g.get('formato') == 'horizontal':
         W, H = 1920, 1080
-    TODO_PIXEL = g.get('fuente') in ('pixel', 'pixel-ja'); JAPONES = g.get('fuente') == 'pixel-ja'
+    TODO_PIXEL = g.get('fuente') in ('pixel', 'pixel-ja', 'pixel-ja12'); JAPONES = g.get('fuente') in ('pixel-ja', 'pixel-ja12')
+    JAPONES_12 = g.get('fuente') == 'pixel-ja12'
     if JAPONES:   # el punto medio latino no está en Misaki y mide distinto: se cambia antes de medir nada
         ja = lambda t: t.replace('·', '・') if any(ord(ch) > 0x2E7F for ch in t) else t
         for e in g['escenas']:
@@ -520,6 +611,8 @@ def main():
             g['marca'][k] = os.path.join(base, os.path.expanduser(g['marca'][k]))
     if g.get('presentadora'):
         g['presentadora']['caras'] = os.path.join(base, os.path.expanduser(g['presentadora'].get('caras', 'avatar')))
+    if isinstance(g.get('marcador'), str):   # el marcador de los lados de las escenas `arriba`, en su JSON
+        g['marcador'] = json.load(open(os.path.join(base, os.path.expanduser(g['marcador'])), encoding='utf-8'))
     with tempfile.TemporaryDirectory() as tmp:
         os.chmod(tmp, 0o700)
         cab = os.path.join(tmp, 'h.txt')

@@ -1,0 +1,948 @@
+{
+ "fuente": "pixel",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Artillería por turnos",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Gratis en el navegador, Android y iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-cuatrofrentes.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-cuatrofrentes/marcador-es.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 11.706,
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Guar Zon: cuatro equipos, todos contra todos, en el mapa Cuatro Frentes. Las cuatro computadoras juegan solas, y todas en difícil.",
+   "dice": "¡Hola! Soy LeIA. Hoy, en War Zone: cuatro equipos, todos contra todos, en el mapa Cuatro Frentes. Las cuatro computadoras juegan solas, y todas en difícil.",
+   "capitulo": "Cuatro equipos"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 11.706,
+   "dur": 8.586,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Azul, rojo, verde y amarillo, con cuatro soldados cada uno. Sólo un equipo puede quedar en pie."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 20.292,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "triste",
+   "voz": "¡Auch! Marta Mantecas pierde 61 de vida."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 24.918,
+   "dur": 9.474,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Fíjate en los lados: ahí están los cuatro equipos, sus soldados y la vida de cada uno. La flechita marca quién tira."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 34.392,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 34.842,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "En el azul están Apatzingán, Socorrito, Chuche el Águila y El Torero."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 41.196,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 41.646,
+   "dur": 0.354,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.0,
+   "dur": 8.418,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Paco sale volando 170 píxeles… y cae al vacío! Fue la bomba de Milango. Al amarillo le quedan tres.",
+   "capitulo": "Primera baja"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 50.418,
+   "dur": 9.906,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El mapa es Cuatro Frentes: dos fuertes de tierra con su escalera de roca, un puente alto en medio y, en el centro, una garganta que da al vacío."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.324,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.774,
+   "dur": 6.066,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Por el rojo juegan Marta Mantecas, Milango, Nacho y La Bichonga."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 66.84,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 67.29,
+   "dur": 3.714,
+   "continua": true,
+   "cara": "triste",
+   "voz": "¡Uy! 45 de daño para Chato."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 71.004,
+   "dur": 5.754,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "En el verde están Manuel Gálvez, Liobas, Lalo y Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 76.758,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 77.208,
+   "dur": 7.338,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Ojo con la garganta del centro: dieciséis píxeles de ancho, y abajo, nada."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 84.546,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 84.996,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Algunos nombres de la computadora son de la casa: Liobas, Chuche el Águila, Manuel Gálvez y El Torero…"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 93.462,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 93.912,
+   "dur": 10.578,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Llevamos minuto y medio. Quedan quince soldados: el azul con cuatro, el rojo con cuatro, el verde con cuatro y el amarillo con tres."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 104.49,
+   "dur": 5.178,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Desde el puente alto se ve todo… y a ti también te ven todos."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 109.668,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 110.118,
+   "dur": 2.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Vamos!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 112.272,
+   "dur": 0.858,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 113.13,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡A la cabeza! El Torero cae con el francotirador de Nino. El azul se queda con tres."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 120.636,
+   "dur": 6.906,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡Fuera Chato! La bazuca de Marta Mantecas no perdona. Al amarillo le quedan dos."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 127.542,
+   "dur": 8.946,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cada turno, el soldado camina un poco, elige un arma, apunta y dispara. Luego le toca al siguiente equipo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.488,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.938,
+   "dur": 1.132,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 138.07,
+   "dur": 8.514,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Doble baja! La bomba de Beto manda al vacío a Lalo y Manuel Gálvez. El verde se queda con dos.",
+   "capitulo": "Doble baja"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 146.584,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡Milango remata a Nino con el francotirador! Al amarillo le queda uno solo: Beto."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 153.13,
+   "dur": 6.066,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Zas, el láser de Liobas! Chuche el Águila queda fuera. Al azul le quedan dos."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 159.196,
+   "dur": 2.946,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Beto ya lleva dos bajas."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 162.142,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Milango va que vuela: dos bajas!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 166.216,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Las almenas de los fuertes cubren un poco contra los tiros rectos. Un poco."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 171.754,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 172.204,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Te cuento un chiste malo de IA? ¿Por qué la granada no tiene amigos? Porque siempre explota."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 178.99,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 179.44,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Un tiro a la cabeza con rifle, francotirador o láser mata de un solo golpe, tenga la vida que tenga."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 188.194,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 188.644,
+   "dur": 10.914,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Llevamos tres minutos. Quedan nueve soldados: el azul con dos, el rojo con cuatro, el verde con dos y el amarillo con uno."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.558,
+   "dur": 1.072,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.63,
+   "dur": 7.386,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Apatzingán se cae al vacío! Fue la granada de Liobas. El azul se queda sólo con Socorrito."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 208.016,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Tiro a la cabeza! Beto elimina a Marta Mantecas. El rojo se queda con tres."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 214.682,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Liobas suma dos bajas. ¡Cuidado con el verde!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 218.54,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Beto ya lleva tres bajas."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 221.198,
+   "dur": 0.832,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.03,
+   "dur": 6.594,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Headshot! Jojo le da en la cabeza a Beto con el francotirador. ¡Y el amarillo queda fuera!",
+   "capitulo": "Fuera el amarillo"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 228.624,
+   "dur": 7.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡A la cabeza! Liobas cae con el rifle de Socorrito. Al verde le queda uno solo: Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 236.082,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Quedan tres equipos: el azul, el rojo y el verde."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 241.476,
+   "dur": 8.346,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "En difícil, la computadora falla cuando mucho por tres grados, y cuatro de cada diez turnos busca la cabeza."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 249.822,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 250.272,
+   "dur": 8.178,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Los equipos juegan en orden: azul, rojo, verde y amarillo. Al que se queda sin soldados, se lo saltan."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 258.45,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 258.9,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Caer al vacío también es morir, aunque tengas cien de vida."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 263.526,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 263.976,
+   "dur": 1.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué nervios!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.794,
+   "dur": 1.936,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 267.73,
+   "dur": 6.594,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Tiro a la cabeza! Jojo elimina a Nacho. Al rojo le quedan dos."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.324,
+   "dur": 3.474,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Jojo va que vuela: dos bajas!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.798,
+   "dur": 9.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Llevamos cuatro minutos y medio. Quedan cuatro soldados: el azul con uno, el rojo con dos y el verde con uno."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 287.104,
+   "dur": 6.138,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La granada nunca se acaba y tarda tres segundos en explotar: le da tiempo de rebotar."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 293.242,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 293.692,
+   "dur": 5.634,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Iba a contarte un chiste de inteligencia artificial, pero todavía lo estoy entrenando."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 299.326,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 299.776,
+   "dur": 5.778,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "La bomba hace la explosión más grande del juego, pero cada equipo sólo trae dos."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 305.554,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 306.004,
+   "dur": 2.226,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Esto se pone bueno!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.23,
+   "dur": 0.57,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.8,
+   "dur": 5.898,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡La Bichonga cae con la bazuca de Jojo! El rojo se queda sólo con Milango."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 314.698,
+   "dur": 4.338,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Jojo suma tres bajas. ¡Cuidado con el verde!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 319.036,
+   "dur": 5.298,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cada explosión se come el terreno: el mapa cambia en cada turno."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 324.334,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 324.784,
+   "dur": 7.458,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "El francotirador atraviesa: si hay dos en fila, les da a los dos. Sólo trae dos balas."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 332.242,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 332.692,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Dicen que soy artificial, pero mis chistes malos son cien por ciento naturales."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 338.638,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 339.088,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La bazuca explota en cuanto toca algo. Hay tres por equipo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 344.602,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.052,
+   "dur": 0.778,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.83,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Uf! Jojo sale volando 71 píxeles, pero aterriza."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 350.888,
+   "dur": 1.914,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Uy, uy, uy!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 352.802,
+   "dur": 1.198,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 354.0,
+   "dur": 6.426,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡Bum! La granada de Jojo acaba con Milango. ¡El rojo queda fuera de la partida!",
+   "capitulo": "Fuera el rojo"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 360.426,
+   "dur": 4.194,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "¡Uno contra uno! Socorrito contra Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 364.62,
+   "dur": 2.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Jojo ya lleva cuatro bajas."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 367.494,
+   "dur": 5.298,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La computadora casi nunca dispara si puede herir a los suyos. Casi."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 372.792,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 373.242,
+   "dur": 2.328,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.57,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Qué vuelo! Socorrito recorre 72 píxeles por el aire… y sigue en pie."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 381.924,
+   "dur": 8.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Guar Zon se ve como un juego de Atari 2600: la paleta tiene ciento veintiocho colores, como la consola.",
+   "dice": "War Zone se ve como un juego de Atari 2600: la paleta tiene ciento veintiocho colores, como la consola."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 390.798,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 391.248,
+   "dur": 1.482,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.73,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.93,
+   "dur": 8.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Socorrito, al vacío! ¡Y se acabó: gana el verde! Jojo queda en pie, con 15 de vida."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "En 59 turnos, Jojo eliminó a cinco rivales. ¿Te atreves contra la computadora?",
+   "capitulo": "Juega gratis"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Juega gratis en el navegador, en Daily Challenge punto click, barra Guar Zon, o en Android y iPhone.",
+   "dice": "Juega gratis en el navegador, en dailychallenge.click/warzone, o en Android y iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "¿Ya estás suscrito? Síguenos para más partidas como esta.",
+   "continua": true
+  }
+ ]
+}

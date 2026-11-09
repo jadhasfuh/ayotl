@@ -1,0 +1,1071 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Turn-based artillery",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Free in the browser, on Android and iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-cuatrofrentes-en.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-cuatrofrentes/marcador-en.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 10.554,
+   "cara": "feliz",
+   "voz": "Hi! I'm Leia. Today in War Zone: four teams, every team for itself, on the Four Fronts map. All four teams are played by the computer, on hard.",
+   "dice": "Hi! I'm LeIA. Today in War Zone: four teams, every team for itself, on the Four Fronts map. All four teams are played by the computer, on hard.",
+   "capitulo": "Four teams"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 10.554,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Blue, Red, Green and Yellow, with four soldiers each. Only one team can be left standing."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 17.58,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Check the sides of the screen: there are the four teams, their soldiers and everyone's health. The little arrow shows who's shooting."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 25.086,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 25.536,
+   "dur": 9.666,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The map is Four Fronts: two earth forts with rock stairs, a high bridge in the middle and, at the center, a gorge that drops into the void."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 35.202,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 35.652,
+   "dur": 5.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "On Blue: Apatzingán, Socorrito, Chuche el Águila and El Torero."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 41.526,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 41.976,
+   "dur": 7.554,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Paco flies 170 pixels… and into the void! That was Milango's bomb. Yellow has three left.",
+   "capitulo": "First down"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 49.53,
+   "dur": 5.466,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Playing for Red: Marta Mantecas, Milango, Nacho and La Bichonga."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 54.996,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 55.446,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "On Green: Manuel Gálvez, Liobas, Lalo and Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 61.152,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 61.602,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Watch out for the gorge in the middle: sixteen pixels wide, and nothing below."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 66.348,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 66.798,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Oof! 45 damage to Chato."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 69.936,
+   "dur": 7.986,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Some of the computer’s soldiers have house names: Liobas, Chuche el Águila, Manuel Gálvez and El Torero…"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 77.922,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 78.372,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Each turn, a soldier walks a bit, picks a weapon, aims and fires. Then it's the next team's turn."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 84.678,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 85.128,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Want to hear a bad AI joke? Why doesn't the grenade have any friends? It always blows up."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 91.482,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 91.932,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A minute and a half in. Fifteen soldiers left: Blue with four, Red with four, Green with four and Yellow with three."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 99.678,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "From the high bridge you can see everything… and everyone can see you."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 103.944,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 104.394,
+   "dur": 7.386,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A headshot with the rifle, the sniper rifle or the laser kills in one hit, no matter how much health is left."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 111.78,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 112.23,
+   "dur": 0.9,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 113.13,
+   "dur": 6.114,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Right in the head! El Torero goes down to Nino's sniper rifle. Blue is down to three."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 119.244,
+   "dur": 0.886,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 120.13,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Chato is out! Marta Mantecas' bazooka shows no mercy. Yellow has two left."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 127.156,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "On hard, the computer misses by three degrees at most, and four turns out of ten it goes for the head."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 134.422,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 134.872,
+   "dur": 0.954,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Come on!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 135.826,
+   "dur": 2.244,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 138.07,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Double kill! Beto's bomb sends Lalo and Manuel Gálvez into the void. Green is down to two.",
+   "capitulo": "Double kill"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 144.856,
+   "dur": 0.814,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 145.67,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Milango finishes off Nino with the sniper rifle! Yellow has just one left: Beto."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 152.216,
+   "dur": 5.634,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Zap! Liobas' laser takes out Chuche el Águila. Blue has two left."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 157.85,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Beto already has two kills."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 160.508,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Milango is on fire: two kills!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 163.646,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The battlements on the forts give a little cover from straight shots. A little."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 168.8,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 169.25,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Teams play in order: Blue, Red, Green and Yellow. A team with no soldiers left gets skipped."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 175.796,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.246,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Falling into the void is also death, even with a hundred health."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 180.704,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 181.154,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Three minutes in. Nine soldiers left: Blue with two, Red with four, Green with two and Yellow with one."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 189.26,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Grenades never run out, and they take three seconds to go off: plenty of time to bounce."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 194.774,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 195.224,
+   "dur": 4.866,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I was going to tell you a joke about artificial intelligence, but it's still training."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.09,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.54,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.64,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Apatzingán falls into the void! That was Liobas' grenade. Blue is down to Socorrito alone."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 207.186,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Clean headshot! Beto takes out Marta Mantecas. Red is down to three."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 212.604,
+   "dur": 3.426,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Close one! Liobas is down to 4 health."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 216.03,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Liobas has two kills. Watch out for Green!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 219.576,
+   "dur": 2.706,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Beto already has three kills."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.282,
+   "dur": 6.978,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Headshot! Jojo hits Beto right in the head with the sniper rifle. And Yellow is out!",
+   "capitulo": "Yellow is out"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 229.26,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Right in the head! Liobas goes down to Socorrito's rifle. Green has just one left: Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 236.406,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The bomb makes the biggest explosion in the game, but each team only gets two."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 241.68,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 242.13,
+   "dur": 4.554,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Every explosion eats away the ground: the map changes every turn."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 246.684,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 247.134,
+   "dur": 7.074,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The sniper rifle goes right through: line up two soldiers and it hits both. It only has two bullets."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 254.208,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 254.658,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "guino",
+   "voz": "They call me artificial, but my bad jokes are one hundred percent natural."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 259.812,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 260.262,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The bazooka blows up the moment it touches anything. Three per team."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.2,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.65,
+   "dur": 2.08,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 267.73,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Clean headshot! Jojo takes out Nacho. Red has two left."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 273.124,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Jojo is on fire: two kills!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 276.79,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Four and a half minutes in. Four soldiers left: Blue with one, Red with two and Green with one."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 283.816,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "War Zone looks like an Atari 2600 game: the palette has a hundred and twenty-eight colors, just like the console."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 290.962,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 291.412,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The computer almost never fires if it could hurt its own team. Almost."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 295.846,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 296.296,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The laser is unlocked in the campaign: a single shot, a hundred damage."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 301.57,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 302.02,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Why are robots never scared? They have nerves of steel."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 306.766,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 307.216,
+   "dur": 1.584,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.8,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "La Bichonga goes down to Jojo's bazooka! Red is down to Milango alone."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 314.026,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Jojo has three kills. Watch out for Green!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 318.1,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The rifle never runs out and does twenty damage… but a headshot kills."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 322.846,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 323.296,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "War Zone has a campaign: ten missions, and at the end, General Bones, who shows up in a helicopter."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 330.442,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 330.892,
+   "dur": 6.834,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The boot barely does damage, but it pushes. Next to a cliff, it's the deadliest weapon."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 337.726,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 338.176,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There are also challenges, with bronze, silver and gold medals."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 343.762,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 344.212,
+   "dur": 1.618,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.83,
+   "dur": 3.978,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Whoa! Jojo flies 71 pixels, but lands."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 349.808,
+   "dur": 1.434,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "This is tense!"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 351.242,
+   "dur": 2.758,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 354.0,
+   "dur": 4.986,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Boom! Jojo's grenade takes out Milango. Red is out of the match!",
+   "capitulo": "Red is out"
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 358.986,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "One on one! Socorrito against Jojo."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 363.084,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Jojo already has four kills."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 366.222,
+   "dur": 6.234,
+   "continua": true,
+   "cara": "guino",
+   "voz": "What does an AI do in an artillery war? Calculates the perfect arc… and misses anyway."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 372.456,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 372.906,
+   "dur": 2.664,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.57,
+   "dur": 6.378,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "What a flight! Socorrito travels 72 pixels through the air… and is still standing."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 381.948,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Online, up to four people can play, each with their own team. Or two on two."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 387.366,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 387.816,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The pickaxe digs tunnels, and the platform and the wall let you build."
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.274,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.724,
+   "dur": 0.206,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-cuatrofrentes/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.93,
+   "dur": 8.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Socorrito, into the void! And it's over: Green wins! Jojo is the last one standing, with 15 health."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "In 59 turns, Jojo took out five rivals. Think you can beat the computer?",
+   "capitulo": "Play free"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Play free in the browser at dailychallenge dot click, slash war zone, or on Android and iPhone.",
+   "dice": "Play free in the browser at dailychallenge.click/warzone, or on Android and iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Are you subscribed yet? Follow us for more matches like this one.",
+   "continua": true
+  }
+ ]
+}
