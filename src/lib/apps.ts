@@ -240,7 +240,7 @@ export const APPS: App[] = [
     acento: "caparazon",
     apaisada: true,
     lema: {
-      es: "Batallas por turnos de monigotes, estilo Atari 2600.",
+      es: "Batallas por turnos de soldados, estilo Atari 2600.",
       en: "Turn-based stick-figure battles, Atari 2600 style.",
     },
     descripcion: {
@@ -324,23 +324,26 @@ export const APPS: App[] = [
   {
     // Shoot 'em up vertical de líneas de neón, séptimo producto (3-nov-2026): se
     // juega en la web dentro de Daily Challenge como «juego extra»; la app con
-    // AdMob va camino de las tiendas (dev.ayotl.zanei). ZANEI es 残影, «la imagen
-    // que queda de lo que se fue». Las cifras salen del código: www/game/niveles.js,
-    // armas.js y enemigos.js del repo zanei.
+    // AdMob está a la venta en la App Store desde el 9-nov-2026 (la insignia sale
+    // con bundleIos + appStoreId) y en prueba cerrada en Google Play (la de Play
+    // sale sola cuando la ficha sea pública). ZANEI es 残影, «la imagen que queda de
+    // lo que se fue». Las cifras salen del código: www/game/niveles.js, armas.js y
+    // enemigos.js del repo zanei.
     id: "zanei",
     nombre: "ZANEI",
     dominio: "dailychallenge.click/zanei",
     url: "https://dailychallenge.click/zanei",
     paquetePlay: "dev.ayotl.zanei",
     bundleIos: "dev.ayotl.zanei",
+    appStoreId: "6830828241",   // https://apps.apple.com/app/id6830828241 («ZANEI»), la 1.0.9 aprobada el 8/9-nov-2026
     acento: "agua",
     lema: {
       es: "Una piloto sin cuerpo contra una invasión que sólo sabe repetirse.",
       en: "A bodiless pilot against an invasion that only knows how to repeat itself.",
     },
     descripcion: {
-      es: "Shoot 'em up vertical dibujado con líneas de neón: doce niveles en tres actos, siete municiones, bombas, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. Música clásica pasada a techno. Gratis en la web.",
-      en: "A vertical shoot 'em up drawn in neon lines: twelve levels in three acts, seven weapons, bombs, bosses that break apart piece by piece and a radio story that reacts to how you play. Classical music turned into techno. Free on the web.",
+      es: "Shoot 'em up vertical dibujado con líneas de neón: doce niveles en tres actos, siete municiones, bombas, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. Música clásica pasada a techno. Gratis en la web y en iPhone y iPad.",
+      en: "A vertical shoot 'em up drawn in neon lines: twelve levels in three acts, seven weapons, bombs, bosses that break apart piece by piece and a radio story that reacts to how you play. Classical music turned into techno. Free on the web and on iPhone and iPad.",
     },
     datos: [
       { valor: "12", etiqueta: { es: "niveles", en: "levels" } },
