@@ -1329,5 +1329,220 @@
   ],
   "idioma": "ja",
   "id": "4S0pgLRX9m4"
+ },
+ {
+  "clave": "algoritmos-burbuja",
+  "app": "algoritmos",
+  "video": "salida/algoritmos-burbuja.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-10T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Ordenamiento por burbuja en 1 minuto #Shorts",
+  "descripcion": "Ordenamiento por burbuja en 1 minuto: compara vecinos y los intercambia si están al revés, pasada tras pasada, hasta que todo queda en orden. Es el más fácil de explicar y el más lento: O(n²).\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/algoritmos/burbuja",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "ordenamiento",
+   "bubble sort",
+   "javascript",
+   "programación",
+   "estructuras de datos",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "04maLHUEZrU"
+ },
+ {
+  "clave": "algoritmos-burbuja-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "video": "salida/algoritmos-burbuja-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-10T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Bubble sort in 1 minute #Shorts",
+  "descripcion": "Bubble sort in 1 minute: it compares neighbors and swaps them if they are out of order, pass after pass, until everything is sorted. The easiest to explain and the slowest: O(n²).\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/algoritmos/burbuja",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "sorting",
+   "bubble sort",
+   "javascript",
+   "programming",
+   "data structures",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "rOYKd7D7QKs"
+ },
+ {
+  "clave": "algoritmos-insercion",
+  "app": "algoritmos",
+  "video": "salida/algoritmos-insercion.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-12T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Ordenamiento por inserción en 1 minuto #Shorts",
+  "descripcion": "Ordenamiento por inserción en 1 minuto: toma cada número y lo mete en su lugar entre los que ya están ordenados, como cuando acomodas cartas en la mano. Muy rápido si la lista ya viene casi ordenada.\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/algoritmos/insercion",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "ordenamiento",
+   "insertion sort",
+   "javascript",
+   "programación",
+   "estructuras de datos",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "bMW1WrOYbYo"
+ },
+ {
+  "clave": "algoritmos-insercion-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "video": "salida/algoritmos-insercion-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-12T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Insertion sort in 1 minute #Shorts",
+  "descripcion": "Insertion sort in 1 minute: it takes each number and slides it into place among the ones already sorted, like arranging cards in your hand. Very fast when the list is almost sorted.\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/algoritmos/insercion",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "sorting",
+   "insertion sort",
+   "javascript",
+   "programming",
+   "data structures",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "ISZtHWu6LQw"
+ },
+ {
+  "clave": "algoritmos-seleccion",
+  "app": "algoritmos",
+  "video": "salida/algoritmos-seleccion.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-14T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Ordenamiento por selección en 1 minuto #Shorts",
+  "descripcion": "Ordenamiento por selección en 1 minuto: busca el más chico de lo que falta y lo pone al frente, una y otra vez. Hace pocos intercambios, pero siempre las mismas comparaciones: O(n²).\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/algoritmos/seleccion",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "ordenamiento",
+   "selection sort",
+   "javascript",
+   "programación",
+   "estructuras de datos",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "K-VyGS1le_0"
+ },
+ {
+  "clave": "algoritmos-seleccion-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "video": "salida/algoritmos-seleccion-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-14T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Selection sort in 1 minute #Shorts",
+  "descripcion": "Selection sort in 1 minute: it finds the smallest of what is left and puts it in front, again and again. Few swaps, but always the same comparisons: O(n²).\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/algoritmos/seleccion",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "sorting",
+   "selection sort",
+   "javascript",
+   "programming",
+   "data structures",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "D3ePUQzHW7E"
+ },
+ {
+  "clave": "algoritmos-mezcla",
+  "app": "algoritmos",
+  "video": "salida/algoritmos-mezcla.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-16T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Ordenamiento por mezcla (merge sort) en 1 minuto #Shorts",
+  "descripcion": "Ordenamiento por mezcla (merge sort) en 1 minuto: parte la lista a la mitad, ordena cada mitad y las mezcla como dos filas que se juntan. Divide y vencerás: O(n log n).\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/algoritmos/mezcla",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "ordenamiento",
+   "merge sort",
+   "javascript",
+   "programación",
+   "estructuras de datos",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "io584-6PBQ0"
+ },
+ {
+  "clave": "algoritmos-mezcla-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "video": "salida/algoritmos-mezcla-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-16T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Merge sort in 1 minute #Shorts",
+  "descripcion": "Merge sort in 1 minute: it splits the list in half, sorts each half and merges them like two lines joining into one. Divide and conquer: O(n log n).\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/algoritmos/mezcla",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "sorting",
+   "merge sort",
+   "javascript",
+   "programming",
+   "data structures",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "0iS-YKK2TIc"
+ },
+ {
+  "clave": "algoritmos-rapido",
+  "app": "algoritmos",
+  "video": "salida/algoritmos-rapido.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-18T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Quicksort, el ordenamiento rápido, en 1 minuto #Shorts",
+  "descripcion": "Quicksort, el ordenamiento rápido, en 1 minuto: elige un pivote, pasa los chicos a un lado y los grandes al otro, y repite en cada lado. En promedio O(n log n), y el que usan casi todas las bibliotecas.\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/algoritmos/rapido",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "ordenamiento",
+   "quicksort",
+   "javascript",
+   "programación",
+   "estructuras de datos",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "qt9wmfuny8g"
+ },
+ {
+  "clave": "algoritmos-rapido-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "video": "salida/algoritmos-rapido-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-18T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Quicksort in 1 minute #Shorts",
+  "descripcion": "Quicksort in 1 minute: it picks a pivot, moves the smaller numbers to one side and the bigger ones to the other, and repeats on each side. O(n log n) on average.\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/algoritmos/rapido",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "sorting",
+   "quicksort",
+   "javascript",
+   "programming",
+   "data structures",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "hSXJn9peB1Q"
  }
 ]

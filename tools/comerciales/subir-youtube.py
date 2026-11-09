@@ -34,15 +34,18 @@ APPS = {
     'kazan': {'nombre': 'Kazan', 'web': 'https://kazan.dailychallenge.click', 'juega': 'juega', 'play': 'dev.ayotl.kazan', 'ios': 'dev.ayotl.kazan'},
     'zanei': {'nombre': 'ZANEI', 'web': 'https://dailychallenge.click/zanei', 'juega': 'juega', 'play': 'dev.ayotl.zanei', 'ios': 'dev.ayotl.zanei'},
     'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'practica', 'play': 'org.jlptest.twa', 'ios': None},
+    # «Algoritmos en pixel» (9-nov-2026): Shorts con su lección en ayotl.dev/aprende; una lista por idioma
+    'algoritmos': {'nombre': 'Algoritmos', 'web': 'https://ayotl.dev/aprende/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
+    'algorithms': {'nombre': 'Algorithms', 'web': 'https://ayotl.dev/en/learn/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
 }
 # los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)
 TEXTOS = {
     'es': {'juega': '▶ Juega gratis en el navegador', 'practica': '▶ Practica gratis', 'play': '📱 Android, en Google Play', 'ios': '🍎 iPhone y iPad, en la App Store',
-           'capitulos': 'Capítulos', 'mas': 'Más apps y juegos de Ayotl'},
+           'capitulos': 'Capítulos', 'mas': 'Más apps y juegos de Ayotl', 'aprende': '▶ El curso, con el código y ejercicios, gratis'},
     'en': {'juega': '▶ Play free in the browser', 'practica': '▶ Practice for free', 'play': '📱 Android, on Google Play', 'ios': '🍎 iPhone and iPad, on the App Store',
-           'capitulos': 'Chapters', 'mas': 'More apps and games by Ayotl'},
+           'capitulos': 'Chapters', 'mas': 'More apps and games by Ayotl', 'aprende': '▶ The course, with the code and exercises, free'},
     'ja': {'juega': '▶ ブラウザで無料で遊べます', 'practica': '▶ 無料で練習', 'play': '📱 Android（Google Play）', 'ios': '🍎 iPhone・iPad（App Store）',
-           'capitulos': 'チャプター', 'mas': 'Ayotlのほかのアプリとゲーム'},
+           'capitulos': 'チャプター', 'mas': 'Ayotlのほかのアプリとゲーム', 'aprende': '▶ コースとコード・練習問題（無料）'},
 }
 _tiendas = {}
 
