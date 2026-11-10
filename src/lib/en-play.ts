@@ -24,13 +24,22 @@ export async function enPlay(paquete: string): Promise<boolean> {
  */
 export const fichaAppStore = (id: string) => `https://apps.apple.com/app/id${id}`;
 
-export async function enAppStore(bundle: string): Promise<boolean> {
-  try {
-    // con el país: sin él, el lookup dio 0 resultados horas después de que la ficha ya respondía (Kazan, 29-oct-2026)
-    const r = await fetch(`https://itunes.apple.com/lookup?bundleId=${bundle}&country=us`, { signal: AbortSignal.timeout(4000) });
-    const d = (await r.json()) as { resultCount?: number };
-    return (d.resultCount ?? 0) > 0;
-  } catch {
-    return false;
+export async function enAppStore(bundle: string, id?: string): Promise<boolean> {
+  // con el país: sin él, el lookup dio 0 resultados horas después de que la ficha ya respondía (Kazan, 29-oct-2026).
+  // Y en dos países, y si no la ficha misma: mientras Apple publica una versión nueva, el lookup de un país puede
+  // contestar 0 un rato, y la página quedaba una hora sin la insignia (ZANEI 1.0.12, 9-nov-2026).
+  for (const pais of ["us", "mx"]) {
+    try {
+      const r = await fetch(`https://itunes.apple.com/lookup?bundleId=${bundle}&country=${pais}`, { signal: AbortSignal.timeout(4000) });
+      const d = (await r.json()) as { resultCount?: number };
+      if ((d.resultCount ?? 0) > 0) return true;
+    } catch {}
   }
+  if (id) {
+    try {
+      const r = await fetch(fichaAppStore(id), { method: "HEAD", signal: AbortSignal.timeout(4000) });
+      if (r.ok) return true;
+    } catch {}
+  }
+  return false;
 }

@@ -58,7 +58,7 @@ export default async function PaginaApp({ params }: Props) {
   const x = t(idioma);
   const otras = APPS.filter((a) => a.id !== app.id);
   const play = app.paquetePlay && (await enPlay(app.paquetePlay)) ? app.paquetePlay : null;
-  const appStore = app.bundleIos && app.appStoreId && (await enAppStore(app.bundleIos)) ? app.appStoreId : null;
+  const appStore = app.bundleIos && app.appStoreId && (await enAppStore(app.bundleIos, app.appStoreId)) ? app.appStoreId : null;
 
   return (
     <>

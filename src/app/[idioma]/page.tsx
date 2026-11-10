@@ -24,7 +24,7 @@ export default async function Inicio({ params }: Props) {
   // La ficha de Play de cada app, si ya es pública: la tarjeta suma «En Google Play ↗» (29-oct-2026, Daily
   // Challenge). La portada se regenera cada hora, así que las siguientes salen solas.
   const enTienda = await Promise.all(APPS.map(async (a) => (a.paquetePlay && (await enPlay(a.paquetePlay)) ? fichaPlay(a.paquetePlay) : null)));
-  const enApple = await Promise.all(APPS.map(async (a) => (a.bundleIos && a.appStoreId && (await enAppStore(a.bundleIos)) ? fichaAppStore(a.appStoreId) : null)));
+  const enApple = await Promise.all(APPS.map(async (a) => (a.bundleIos && a.appStoreId && (await enAppStore(a.bundleIos, a.appStoreId)) ? fichaAppStore(a.appStoreId) : null)));
   return (
     <>
       <a href="#contenido" className="salto">{x("irAlContenido")}</a>
