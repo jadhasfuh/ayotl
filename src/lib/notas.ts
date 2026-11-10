@@ -1,6 +1,7 @@
 import type { Idioma } from "./idioma";
 import { NOTA_BITACORA_OCTUBRE } from "./nota-bitacora-octubre";
 import { NOTA_DNS } from "./nota-dns";
+import { NOTAS_10_NOV } from "./notas-10-nov";
 
 /**
  * Notas técnicas: problemas reales de los tres productos, contados por
@@ -43,7 +44,7 @@ export type Bloque =
 export type Nota = {
   id: string;
   fecha: string;                       // AAAA-MM-DD, la del hallazgo
-  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl" | "warzone" | "kazan";
+  proyecto: "mercadito" | "jlptest" | "dailychallenge" | "ayotl" | "warzone" | "kazan" | "zanei";
   titulo: Record<Idioma, string>;
   entradilla: Record<Idioma, string>;
   cuerpo: Bloque[];
@@ -800,6 +801,7 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
   },
   NOTA_BITACORA_OCTUBRE,   // el estudio de octubre del piloto, con gráficas (2-nov-2026): en su propio archivo
   NOTA_DNS,   // los tres dominios que abrían para unos y para otros no (3 y 4-nov-2026): en su propio archivo
+  ...NOTAS_10_NOV,   // la victoria que no contaba, el volcán, el ranking de ZANEI y las reseñas de Mercadito (10-nov-2026)
 ];
 
 export function notaPorId(id: string): Nota | undefined {

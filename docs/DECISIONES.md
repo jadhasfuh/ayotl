@@ -374,3 +374,23 @@ retos sin las bases.
   salen el día que se publica su vídeo, como en `/retos`.
 - El curso de Snake cita el código real de `daily challenge/public/arcade`. Si
   Snake cambia, hay que revisarlo.
+
+## 2026-11-10 — Cuatro notas de un mismo día
+
+El 10-nov salieron War Zone 1.0.27, ZANEI 1.0.13 y Kazan 1.0.15, y Mercadito
+estrenó sellos y reseñas. Adrián pidió notas con lo hecho. Van cuatro, en
+`src/lib/notas-10-nov.ts` (su propio archivo, como la del DNS y la bitácora):
+
+- **War Zone**, la victoria que no contaba: el anfitrión reescribía los
+  asientos a media partida; ahora la base los congela con un disparador.
+- **Kazan**, el volcán que ya salía al azar: no se veía y no era parejo
+  (medido en 400 islas por tamaño), y la segunda base.
+- **ZANEI**, los doce niveles seguidos: un ranking donde nada de lo que da un
+  anuncio cuenta. Para eso `Nota.proyecto` admite ahora `zanei`.
+- **Mercadito**, reseñas sólo de quien compró: la prueba de compra es el sello
+  que confirma el negocio. Sin cifras del piloto ni nombres de negocios, y
+  diciendo que sellos y reseñas son producto y no instrumento
+  (`mercadito/docs/PILOTO-JICA.md`, 4.2).
+
+Ninguna nombra juegos de otros: «como en los clásicos del género» tampoco
+hizo falta.
