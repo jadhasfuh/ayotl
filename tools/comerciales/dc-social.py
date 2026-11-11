@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Manda a Instagram y Facebook (la página de Daily Challenge) un vídeo de LeIA en español que ya va a YouTube.
 
-    python3 tools/comerciales/dc-social.py <clave de youtube.json> [<clave>…] [--dia AAAA-MM-DD] [--seco] [--sin-push]
+    python3 tools/comerciales/dc-social.py <clave de youtube.json> [<clave>…] [--dia AAAA-MM-DD] [--hueco anuncio] [--seco] [--sin-push]
 
 Adrián, 3-nov-2026: «el que se programa de LeIA en español del Daily Challenge, Kazan, etc. a YouTube, también lánzalo
 al face/insta, solo el español, no se está lanzando». Lo publica el cron social de DC (tipo `leia`, 13:10 de México):
@@ -14,6 +14,12 @@ Facebook con el pie de public/content/anuncios/<clip>.txt. Este script deja todo
 4. Commit y push de Daily Challenge DESDE UN WORKTREE SOBRE origin/main (el main local de DC puede llevar trabajo
    sin push, como el Daily Stat), y borra el worktree. Con --sin-push deja el worktree para mirarlo.
 
+El hueco de las 13:10 (leia.txt) lleva UN vídeo por día, y casi todos los días es del mejor del día. Lo demás de LeIA
+en español (los Shorts de «Algoritmos en pixel», uno de Kazan o de War Zone) va con `--hueco anuncio`: el mismo clip y
+el mismo pie, pero apuntado en calendario.txt, que es el cron de las 13:00 (tipo `anuncio`). Si ese día ya hay algo en
+el hueco, se niega: se le busca otro día con --dia. Adrián, 11-nov-2026: «los vídeos de ordenamiento y todo lo nuevo
+de LeIA, ¿sí se estará publicando en Daily Challenge insta/face?» (no se estaban mandando).
+
 El mejor del día (leia-mejor-del-dia.py) lo llama solo para el español. Los pasados ya publicados en YouTube se
 pueden mandar también, uno por día, con --dia.
 """
@@ -24,7 +30,9 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 DC = os.path.expanduser('~/Documents/daily challenge')
 GIT = '/opt/homebrew/bin/git'
 WT = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'dc-social-worktree')
-CIERRE = {'dc': 'Juega gratis en dailychallenge.click', 'kazan': 'Juega gratis en kazan.dailychallenge.click', 'warzone': 'Juega gratis en dailychallenge.click/warzone'}
+CIERRE = {'dc': 'Juega gratis en dailychallenge.click', 'kazan': 'Juega gratis en kazan.dailychallenge.click', 'warzone': 'Juega gratis en dailychallenge.click/warzone',
+          'algoritmos': 'La lección completa, gratis, en ayotl.dev/aprende'}
+HUECOS = {'leia': ('leia.txt', '13:10'), 'anuncio': ('calendario.txt', '13:00')}
 
 
 def git(*args, cwd=DC):
@@ -44,6 +52,10 @@ def main():
     seco = '--seco' in args; sin_push = '--sin-push' in args
     dia = None
     if '--dia' in args: i = args.index('--dia'); dia = args[i + 1]; del args[i:i + 2]
+    hueco = 'leia'
+    if '--hueco' in args: i = args.index('--hueco'); hueco = args[i + 1]; del args[i:i + 2]
+    if hueco not in HUECOS: sys.exit(f'MAL: hueco {hueco}; vale leia o anuncio')
+    fichero, hora = HUECOS[hueco]
     claves = [a for a in args if not a.startswith('--')]
     if not claves: print(__doc__); sys.exit(2)
     plan = json.load(open(os.path.join(AQUI, 'youtube.json'), encoding='utf-8'))
@@ -57,23 +69,25 @@ def main():
         if not os.path.exists(mp4): sys.exit(f'MAL: no está el vídeo {mp4}')
         d = dia or (v.get('publicar') or '')[:10] or date.today().isoformat()
         trabajos.append((clave, v, mp4, d))
-        print(f'{clave}: sale en Instagram y Facebook el {d} a las 13:10 MX ({os.path.getsize(mp4) // 1024} KB)')
+        print(f'{clave}: sale en Instagram y Facebook el {d} a las {hora} MX ({os.path.getsize(mp4) // 1024} KB)')
     if seco: return
     # el worktree sobre origin/main
     if os.path.exists(WT): git('worktree', 'remove', '--force', WT)
     git('worktree', 'prune'); git('fetch', '-q', 'origin'); git('worktree', 'add', '-q', '--detach', WT, 'origin/main')
-    cal = os.path.join(WT, 'public', 'content', 'anuncios', 'leia.txt')
+    cal = os.path.join(WT, 'public', 'content', 'anuncios', fichero)
     lineas = open(cal, encoding='utf-8').read().splitlines() if os.path.exists(cal) else ['# Vídeos de LeIA en español a Instagram y Facebook («AAAA-MM-DD  clip»): el cron de las 13:10 MX', '# (/api/cron/social?tipo=leia) publica public/marketing/<clip>.mp4 con el pie de <clip>.txt. Los deja tools/comerciales/dc-social.py (ayotl).']
     for clave, v, mp4, d in trabajos:
         clip = f'leia-{clave}'
         shutil.copyfile(mp4, os.path.join(WT, 'public', 'marketing', f'{clip}.mp4'))
         with open(os.path.join(WT, 'public', 'content', 'anuncios', f'{clip}.txt'), 'w', encoding='utf-8') as f: f.write(pie_de(v))
         lineas = [l for l in lineas if not l.split()[1:2] == [clip]]   # si ya estaba, se cambia de día
+        ocupado = [l for l in lineas if l and not l.startswith('#') and l.split()[0] == d]
+        if ocupado: git('worktree', 'remove', '--force', WT, cwd=DC); sys.exit(f'MAL: el {d} ya tiene algo en {fichero}: {ocupado[0]}')
         lineas.append(f'{d}  {clip}')
     cuerpo = [l for l in lineas if l and not l.startswith('#')]; cabeza = [l for l in lineas if l.startswith('#')]
     with open(cal, 'w', encoding='utf-8') as f: f.write('\n'.join(cabeza + sorted(cuerpo)) + '\n')
     git('add', 'public/marketing', 'public/content/anuncios', cwd=WT)
-    msg = 'LeIA a Instagram y Facebook: ' + ', '.join(f'{c} el {d}' for c, _, _, d in trabajos) + '\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>'
+    msg = 'LeIA a Instagram y Facebook: ' + ', '.join(f'{c} el {d}' for c, _, _, d in trabajos) + '\n\nCo-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>'
     git('commit', '-q', '-m', msg, cwd=WT)
     if sin_push: print('sin push: el worktree queda en', WT); return
     git('push', '-q', 'origin', 'HEAD:main', cwd=WT)
