@@ -102,6 +102,8 @@ export const APPS: App[] = [
     url: "https://jlptest.org",
     playTester: "https://play.google.com/apps/testing/org.jlptest.twa",
     paquetePlay: "org.jlptest.twa",
+    bundleIos: "org.jlptest.app",
+    appStoreId: "6833284708",   // https://apps.apple.com/app/id6833284708 («jlptest»), la 1.1.0 aprobada el 11-nov-2026: primera vez en la App Store
     acento: "agua",
     lema: {
       es: "Japonés del N5 al N1, en unidades de 20 palabras.",
@@ -118,7 +120,7 @@ export const APPS: App[] = [
       { valor: "864", etiqueta: { es: "gramáticas", en: "grammar points" } },
       { valor: "600", etiqueta: { es: "unidades", en: "units" } },
     ],
-    etiquetas: { es: ["Japonés", "Android", "Web"], en: ["Japanese", "Android", "Web"] },
+    etiquetas: { es: ["Japonés", "iOS", "Android", "Web"], en: ["Japanese", "iOS", "Android", "Web"] },
     pantallas: [
       { imagen: "jlptest-inicio",
         titulo: { es: "Tu camino, por niveles", en: "Your path, level by level" },

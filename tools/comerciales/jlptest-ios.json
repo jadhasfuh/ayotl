@@ -1,0 +1,15 @@
+{
+  "salida": "~/Documents/jlptest-capacitor/public/social/reels/anuncio-ios.mp4",
+  "voz": "es-US-Chirp3-HD-Aoede",
+  "idioma": "es-US",
+  "bpm": 88,
+  "colores": { "fondo": "#161826", "acento": "#9184d9", "texto": "#ffffff", "tenue": "#8a8aa0" },
+  "marca": { "nombre": "jlptest", "punto": "#d7263d", "lema": "Prepara el JLPT", "sitio": "jlptest.org", "pie": "Gratis en la App Store" },
+  "escenas": [
+    { "imagen": "/Users/jadhasfuh/Documents/jlptest-capacitor/carcasa/tienda/appstore/es/01-portada.png", "texto": "jlptest ya está en el iPhone", "voz": "Jota ele pe test ya está en el iPhone." },
+    { "imagen": "/Users/jadhasfuh/Documents/jlptest-capacitor/carcasa/tienda/appstore/es/03-unidad.png", "texto": "Vocabulario del N5 al N1, con audio", "voz": "Todo el vocabulario del ene cinco al ene uno, con audio y ejemplos." },
+    { "imagen": "/Users/jadhasfuh/Documents/jlptest-capacitor/carcasa/tienda/appstore/es/07-examen.png", "texto": "Exámenes con escucha", "voz": "Exámenes como el de verdad, con escucha y con la explicación de cada respuesta." },
+    { "imagen": "/Users/jadhasfuh/Documents/jlptest-capacitor/carcasa/tienda/appstore/es/06-noticia.png", "texto": "Noticias de Japón a tu nivel", "voz": "Y noticias de Japón a tu nivel, con furigana." },
+    { "final": true, "voz": "Bájala gratis en la App Store. Búscala como jota ele pe test." }
+  ]
+}

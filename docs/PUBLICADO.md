@@ -181,6 +181,7 @@ Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …�
 
 **Fuera de la serie del reto:**
 - el 19 (27-oct) es el comercial de jlptest;
+- el 34 (11-nov) es el anuncio de que jlptest ya está en la App Store (`anuncio-ios.mp4`, 27 s, guion `tools/comerciales/jlptest-ios.json`); los que venían se recorrieron un día;
 - el 21 (29-oct) es el de 10 palabras del N5;
 - los retos se recorrieron, así que la tanda 5 llega al 14-nov.
 
