@@ -1740,5 +1740,60 @@
   "idioma": "ja",
   "id": "Xs2fNsvxTBg",
   "en_tiktok": "2026-11-14T19:40:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-12",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-12.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-14T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 12 de noviembre: 1,800 puntos en MAPPY 🕹️ #shorts",
+  "descripcion": "El mejor del 12 de noviembre en Daily Challenge fue ADRIAN, con 1,800 puntos en MAPPY. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "MAPPY"
+  ],
+  "id": "V1vBvsZul-0"
+ },
+ {
+  "clave": "mejor-2026-11-12-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-12-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-14T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 12: 1,800 points in MAPPY 🕹️ #shorts",
+  "descripcion": "The best run of November 12 on Daily Challenge was by ADRIAN, with 1,800 points in MAPPY. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "MAPPY"
+  ],
+  "idioma": "en",
+  "id": "G2-Bnaw4kcY"
+ },
+ {
+  "clave": "mejor-2026-11-12-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-12-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-14T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月12日のベスト、MAPPYで1,800点 🕹️ #shorts",
+  "descripcion": "11月12日のDaily Challengeでいちばんだったのは、MAPPYで1,800点のADRIANさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "マッピー"
+  ],
+  "idioma": "ja",
+  "id": "f7mooKvXurc"
  }
 ]
