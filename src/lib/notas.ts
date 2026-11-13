@@ -2,6 +2,7 @@ import type { Idioma } from "./idioma";
 import { NOTA_BITACORA_OCTUBRE } from "./nota-bitacora-octubre";
 import { NOTA_DNS } from "./nota-dns";
 import { NOTAS_10_NOV } from "./notas-10-nov";
+import { NOTAS_12_NOV } from "./notas-12-nov";
 
 /**
  * Notas técnicas: problemas reales de los tres productos, contados por
@@ -802,6 +803,7 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
   NOTA_BITACORA_OCTUBRE,   // el estudio de octubre del piloto, con gráficas (2-nov-2026): en su propio archivo
   NOTA_DNS,   // los tres dominios que abrían para unos y para otros no (3 y 4-nov-2026): en su propio archivo
   ...NOTAS_10_NOV,   // la victoria que no contaba, el volcán, el ranking de ZANEI y las reseñas de Mercadito (10-nov-2026)
+  ...NOTAS_12_NOV,   // la prueba con tropiezos, la puerta que entregaba las llaves y la moderación graduada de Eventos (12-nov-2026)
 ];
 
 export function notaPorId(id: string): Nota | undefined {
