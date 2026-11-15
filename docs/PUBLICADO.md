@@ -144,7 +144,7 @@ Los ocho están en `youtube.json` con su id (28-oct, noche): título «APP: …�
 ## Mercadito: Instagram (@mercadito.cx) y página de Facebook, 18:30
 
 **Al 27-oct-2026:**
-- el calendario manda: `mercadito/src/lib/reels.ts`, uno por día, del 13-oct al 9-nov (reels 01 a 29);
+- el calendario manda: `mercadito/src/lib/reels.ts`, uno por día, del 13-oct al 23-nov (reels 01 a 43; desde el 37, del 17-nov, también de Eventos: invitaciones digitales);
 - las copias y los pies están en `~/Desktop/mercadito-reels/`, cada tanda con su LEEME;
 - la tabla de abajo es la historia de la primera tanda.
 
