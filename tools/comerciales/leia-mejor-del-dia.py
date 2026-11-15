@@ -449,7 +449,11 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
         listas = {'dc': dc, 'cur': [('pensando', c) for c in (datos.get('curiosidades', {}).get(info['juego']) or {}).get(lang, [])],
                   'chiste': [('guino', c) for c in chistes], 'gen': [('normal', marcar(g, v)) for g in rota(list(tx['generales']), 1)],
                   'ia': comentarios}
-        patron = ['dc', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'cur', 'chiste']
+        patron = ['dc', 'cur', 'dc', 'chiste', 'cur', 'dc', 'gen', 'cur', 'dc', 'chiste', 'cur', 'dc', 'gen', 'cur', 'chiste']
+        if comentarios or fr.get('chistes'):
+            # con frases de la IA, lo de esa partida y el chiste nuevo van primero (15-nov: en una partida de 62 s
+            # caben cuatro o cinco rellenos y los de plantilla se los llevaban todos)
+            patron = ['ia', 'chiste', 'dc', 'ia', 'cur', 'dc', 'ia', 'chiste', 'cur', 'dc', 'ia', 'gen', 'cur', 'dc', 'chiste', 'cur', 'dc', 'gen', 'cur', 'chiste']
         orden = []
         while any(listas.values()):
             orden += [listas[k].pop(0) for k in patron if listas[k]]
@@ -590,7 +594,8 @@ def main():
             video = os.path.join(carpeta, 'partida.mp4')
             print(f"{fecha}: {info['titulo']}, {info['nombre']}, {info['puntaje']} puntos en {info['fin']:.0f} s")
             # chistes y comentarios nuevos para esta partida; None (sin sesión, sin crédito, sin red) = sólo plantillas
-            ia = None if a.sin_ia else leia_ia.frescos(fecha, info, datos, carpeta, plantilla={l: TEXTOS[l]['chistes'] for l in TEXTOS})
+            # (en una partida muy corta no hay huecos que rellenar: ni se pide)
+            ia = None if a.sin_ia or info['fin'] < CORTA else leia_ia.frescos(fecha, info, datos, carpeta, plantilla={l: TEXTOS[l]['chistes'] for l in TEXTOS})
             guiones, usa = {}, 0
             for lang in idiomas_f:
                 voz, idioma = VOZ[lang]

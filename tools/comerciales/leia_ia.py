@@ -46,7 +46,8 @@ política, religión, marcas ajenas ni personas reales, y nunca se burla del jug
 
 Vas a recibir los datos de una partida y devolverás, para español (de México), inglés y japonés:
 - `chistes`: 3 chistes malos nuevos. Al menos uno debe salir del juego del día (su tema, sus piezas, su nombre). \
-Cada idioma lleva su propio chiste pensado en ese idioma: un juego de palabras casi nunca sobrevive a la \
+Uno de los tres debe ser muy corto (menos de 60 letras; 30 en japonés): es el que cabe cuando la partida deja \
+poco hueco. Cada idioma lleva su propio chiste pensado en ese idioma: un juego de palabras casi nunca sobrevive a la \
 traducción, así que no traduzcas, escribe otro que funcione. En japonés, ダジャレ.
 - `comentarios`: 4 comentarios sobre ESTA partida, apoyados sólo en los datos recibidos (cuántos puntos llevaba a \
 la mitad, en qué segundo perdió una vida, por cuánto le ganó al segundo, cuánto mejoró el récord…). Cada uno trae \
