@@ -1,0 +1,999 @@
+{
+ "fuente": "pixel-ja12",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "リアルタイムストラテジー",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "ブラウザ・Android・iPhoneで無料"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-larga-ja.mp4",
+ "musica": {
+  "archivo": "kazan-larga/efectos.wav",
+  "desde": 0,
+  "volumen": 0.01901,
+  "agacha": 0.55
+ },
+ "marcador": "kazan-larga/marcador-ja.json",
+ "escenas": [
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 10.506,
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のカザンは、雪の島と火山、そして8か国。ぜんぶコンピューターが動かします。",
+   "dice": "こんにちは！LeIAです。今日のKazanは、雪の島と火山、そして8か国。ぜんぶコンピューターが動かします。",
+   "capitulo": "8か国"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 10.506,
+   "dur": 8.778,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "どの国も、本拠地ひとつと作業員4人からスタート。最後に残れるのは1か国だけです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 19.284,
+   "dur": 7.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "画面の左右を見てね。8か国のポイント、兵の数、建物の数が出ています。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 26.358,
+   "dur": 6.954,
+   "continua": true,
+   "cara": "normal",
+   "voz": "最初の軍が出発！みずいろのくにが8人の兵をオレンジのくにに向かわせました。",
+   "dice": "最初の軍が出発！水色の国が8人の兵をオレンジの国に向かわせました。",
+   "capitulo": "最初の軍"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 33.312,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "normal",
+   "voz": "むらさきのくにの本拠地の近くで戦いです。",
+   "dice": "紫の国の本拠地の近くで戦いです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 37.338,
+   "dur": 7.578,
+   "continua": true,
+   "cara": "normal",
+   "voz": "島は4種類。森、雪、砂漠、沼。今回は雪の島です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 44.916,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 45.166,
+   "dur": 4.866,
+   "continua": true,
+   "cara": "normal",
+   "voz": "カザンは、日本語の「火山」です。そのままですね。",
+   "dice": "Kazanは、日本語の「火山」です。そのままですね。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 50.032,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 50.282,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "normal",
+   "voz": "みずいろのくにが最初の工場を建てました。戦車が来ますよ。",
+   "dice": "水色の国が最初の工場を建てました。戦車が来ますよ。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 55.796,
+   "dur": 6.738,
+   "continua": true,
+   "cara": "normal",
+   "voz": "どの国も最初は同じ。作業員3人が木を、1人が鉄を集めます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 62.534,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 62.784,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "normal",
+   "voz": "みずいろのくにが、この試合で最初の戦車を出しました。",
+   "dice": "水色の国が、この試合で最初の戦車を出しました。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 67.722,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "上の時計に注目。もうすぐ噴火です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 72.18,
+   "dur": 2.298,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ドキドキするね！"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.478,
+   "dur": 0.692,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.17,
+   "dur": 7.098,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "火山が噴火！ここからは溶岩が流れ出して、島を1マスずつのみこんでいきます。",
+   "capitulo": "噴火"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 82.268,
+   "dur": 4.146,
+   "continua": true,
+   "cara": "normal",
+   "voz": "オレンジのくにの本拠地の近くで戦いです。",
+   "dice": "オレンジの国の本拠地の近くで戦いです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 86.414,
+   "dur": 7.674,
+   "continua": true,
+   "cara": "guino",
+   "voz": "AIのダジャレ、聞きたい？火山が口げんかに勝てないのはなぜ？すぐ噴火しちゃうから。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 94.088,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 94.338,
+   "dur": 8.418,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ゲーム開始から5分。残りは8か国。トップはしろのくに、1456点です。",
+   "dice": "ゲーム開始から5分。残りは8か国。トップは白の国、1456点です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 102.756,
+   "dur": 11.466,
+   "continua": true,
+   "cara": "normal",
+   "voz": "資源は3つ。木、鉄、食料です。食料は自動でふえます。本拠地が毎秒1、農場ひとつで毎秒2。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 114.222,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 114.472,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "normal",
+   "voz": "レーダーは14マス先まで見えます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.33,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.58,
+   "dur": 0.39,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.97,
+   "dur": 8.898,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "むらさきのくにが陥落！ピンクのくにが本拠地をこわして征服しました。残りは7か国。",
+   "dice": "紫の国が陥落！ピンクの国が本拠地をこわして征服しました。残りは7か国。",
+   "capitulo": "紫の国が陥落"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 127.868,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "normal",
+   "voz": "作業員は森を切って、1回に12ずつ運びます。木1本で、木材は120。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.334,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.584,
+   "dur": 3.834,
+   "continua": true,
+   "cara": "normal",
+   "voz": "しろのくにの都市の近くでバトル中。",
+   "dice": "白の国の都市の近くでバトル中。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 140.418,
+   "dur": 7.434,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "コンピューターは2秒ごとに自分の都市を見て、プレイヤーと同じように命令を出します。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 147.852,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 148.102,
+   "dur": 8.346,
+   "continua": true,
+   "cara": "normal",
+   "voz": "コンピューターは、兵が8人以上そろうと攻めます。5人につきメディックを1人つれていきます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 156.448,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 156.698,
+   "dur": 8.346,
+   "continua": true,
+   "cara": "guino",
+   "voz": "コンピューターに聞きました。なぜ8人で攻めるの？「7人だと、1バイトに1ビット足りないから」だそうです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 165.044,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 165.294,
+   "dur": 3.786,
+   "continua": true,
+   "cara": "normal",
+   "voz": "オレンジのくにの本拠地のそばで撃ち合い。",
+   "dice": "オレンジの国の本拠地のそばで撃ち合い。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 169.08,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "兵舎では、兵士、スナイパー、バイク、メディック、スカウトを訓練できます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.586,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.836,
+   "dur": 9.714,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "きいろのくにの本拠地が溶岩にのまれた！でも、まだ陥落ではありません。人が残っているかぎり生きています。",
+   "dice": "黄の国の本拠地が溶岩にのまれた！でも、まだ陥落ではありません。人が残っているかぎり生きています。",
+   "capitulo": "溶岩が本拠地をのみこむ"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 186.55,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ゲーム開始から9分。残りは7か国。トップはみずいろのくに、1751点です。",
+   "dice": "ゲーム開始から9分。残りは7か国。トップは水色の国、1751点です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 195.304,
+   "dur": 5.034,
+   "continua": true,
+   "cara": "normal",
+   "voz": "工場では、戦車、砲兵、ドローンを作れます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.338,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.588,
+   "dur": 1.746,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "来るよ！"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 202.334,
+   "dur": 1.066,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 203.4,
+   "dur": 7.458,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "きいろのくにに本拠地がもどった！作業員が、溶岩から遠い場所に建て直しました。",
+   "dice": "黄の国に本拠地がもどった！作業員が、溶岩から遠い場所に建て直しました。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 210.858,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "溶岩が島の4分の1をおおいました。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 214.956,
+   "dur": 6.714,
+   "continua": true,
+   "cara": "normal",
+   "voz": "また軍が動きます。しろのくにの兵12人があおのくにへ。",
+   "dice": "また軍が動きます。白の国の兵12人が青の国へ。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 221.67,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "戦車はとても丈夫で、建物へのダメージは2倍。でも足がおそいです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 228.936,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 229.186,
+   "dur": 3.186,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "きいろのくにの本拠地があぶない！",
+   "dice": "黄の国の本拠地があぶない！"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 232.372,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "オレンジのくにが引っこし。溶岩から遠い場所に、もうひとつ本拠地を建てました。",
+   "dice": "オレンジの国が引っこし。溶岩から遠い場所に、もうひとつ本拠地を建てました。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 239.23,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 239.33,
+   "dur": 8.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "オレンジのくにがきいろのくにを征服！最後の本拠地が落ちました。残りは6か国。",
+   "dice": "オレンジの国が黄の国を征服！最後の本拠地が落ちました。残りは6か国。",
+   "capitulo": "黄の国が陥落"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 247.388,
+   "dur": 9.474,
+   "continua": true,
+   "cara": "normal",
+   "voz": "この動画は早送りです。征服の場面は1.5倍、戦いは3倍、ほかは6倍の速さです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 256.862,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 257.112,
+   "dur": 0.318,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 257.43,
+   "dur": 8.298,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "溶岩がみずいろのくにの本拠地をのみこんだ！作業員が1人でも残っていれば、遠くに建て直せます。",
+   "dice": "溶岩が水色の国の本拠地をのみこんだ！作業員が1人でも残っていれば、遠くに建て直せます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.728,
+   "dur": 6.018,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "国の色は10色。緑はありません。草の上で見えなくなるからです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 271.746,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 271.996,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "溶岩がしろのくにの本拠地にせまっています。",
+   "dice": "溶岩が白の国の本拠地にせまっています。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 276.022,
+   "dur": 1.408,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.43,
+   "dur": 8.946,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "また本拠地が溶岩の下に。今度はしろのくに！本拠地はなくても、まだ試合に残っています。",
+   "dice": "また本拠地が溶岩の下に。今度は白の国！本拠地はなくても、まだ試合に残っています。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 286.376,
+   "dur": 6.138,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "しろのくに、助かりました！新しい本拠地が完成です。",
+   "dice": "白の国、助かりました！新しい本拠地が完成です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 292.514,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "あおのくにの本拠地が集中砲火をあびています。",
+   "dice": "青の国の本拠地が集中砲火をあびています。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 297.14,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "guino",
+   "voz": "溶岩なんてこわくないよ。わたし、クラウドに住んでるから。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 302.366,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 302.616,
+   "dur": 1.414,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 304.03,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "あおのくにが陥落！しろのくにが征服しました。",
+   "dice": "青の国が陥落！白の国が征服しました。",
+   "capitulo": "青の国が陥落"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.968,
+   "dur": 7.914,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "オレンジのくにが陥落！ピンクのくにが本拠地をこわして征服しました。残りは4か国。",
+   "dice": "オレンジの国が陥落！ピンクの国が本拠地をこわして征服しました。残りは4か国。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 316.882,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "みずいろのくににも、また本拠地ができました！",
+   "dice": "水色の国にも、また本拠地ができました！"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 321.196,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "島の半分がもう溶岩です！"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 324.862,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ピンクのくにが11人であかのくにを攻めます。",
+   "dice": "ピンクの国が11人で赤の国を攻めます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 330.256,
+   "dur": 8.514,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "溶岩は陸の上を進み、水で止まります。ふれたものは、建物も歩く兵も、おしまいです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 338.77,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 339.02,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "溶岩の前には、燃える岩がふってきます。溶岩がどこから来るかの合図です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.878,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 346.128,
+   "dur": 0.272,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 346.4,
+   "dur": 7.818,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ピンクのくにがあかのくにを征服！最後の本拠地が落ちました。残りは3か国。",
+   "dice": "ピンクの国が赤の国を征服！最後の本拠地が落ちました。残りは3か国。",
+   "capitulo": "赤の国が陥落"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 354.218,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ピンクのくにに新しい本拠地。火山からもっと遠い場所です。",
+   "dice": "ピンクの国に新しい本拠地。火山からもっと遠い場所です。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 360.572,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "normal",
+   "voz": "また軍が動きます。みずいろのくにの兵8人がしろのくにへ。",
+   "dice": "また軍が動きます。水色の国の兵8人が白の国へ。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 366.518,
+   "dur": 9.594,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "溶岩に本拠地をのまれても、まだ負けではありません。残った人で続けられて、作業員がいれば遠くに建て直せます。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 376.112,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 376.362,
+   "dur": 2.994,
+   "continua": true,
+   "cara": "normal",
+   "voz": "1マスは8ピクセルです。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 379.356,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 379.606,
+   "dur": 0.224,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 379.83,
+   "dur": 5.826,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "島の4分の3が溶岩に！もう立つ場所がほとんどありません。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 385.656,
+   "dur": 5.658,
+   "continua": true,
+   "cara": "guino",
+   "voz": "わたしも噴火します。メモリーが足りなくなったときに。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 391.314,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 391.564,
+   "dur": 0.806,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.37,
+   "dur": 9.786,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "さよなら、みずいろのくに！ピンクのくにが本拠地を落としました。残りは2か国。ピンク対しろです。",
+   "dice": "さよなら、水色の国！ピンクの国が本拠地を落としました。残りは2か国。ピンク対白です。",
+   "capitulo": "水色の国が陥落"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 402.156,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "しろのくにの本拠地が集中砲火をあびています。",
+   "dice": "白の国の本拠地が集中砲火をあびています。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 406.59,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "triste",
+   "voz": "陥落した国のポイントは、半分になります。"
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 410.856,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.106,
+   "dur": 0.664,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.77,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.97,
+   "dur": 11.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "試合終了！ピンクのくにがしろのくにを征服して、島を手に入れました！勝ったのはピンクのくに、1434点です。",
+   "dice": "試合終了！ピンクの国が白の国を征服して、島を手に入れました！勝ったのはピンクの国、1434点です。"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "ゲーム時間18分で、ピンクのくには5か国を征服しました。あなたの都市は、火山にたえられる？",
+   "dice": "ゲーム時間18分で、ピンクの国は5か国を征服しました。あなたの都市は、火山にたえられる？",
+   "capitulo": "無料で遊ぶ"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "カザンは無料。ブラウザならカザン・ドット・デイリーチャレンジ・ドット・クリック、AndroidとiPhoneでも遊べます。",
+   "dice": "Kazanは無料。ブラウザならkazan.dailychallenge.click、AndroidとiPhoneでも遊べます。",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "チャンネル登録はもうした？こういう対戦をもっと見たいなら、フォローしてね！",
+   "continua": true
+  }
+ ]
+}

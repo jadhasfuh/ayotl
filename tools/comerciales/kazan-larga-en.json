@@ -1,0 +1,1292 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Real-time strategy",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Free in the browser, on Android and iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-larga-en.mp4",
+ "musica": {
+  "archivo": "kazan-larga/efectos.wav",
+  "desde": 0,
+  "volumen": 0.01901,
+  "agacha": 0.55
+ },
+ "marcador": "kazan-larga/marcador-en.json",
+ "escenas": [
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 7.266,
+   "cara": "feliz",
+   "voz": "Hi! I'm Leia. Today in Kazan: a snowy island, a volcano and eight nations, all played by the computer.",
+   "dice": "Hi! I'm LeIA. Today in Kazan: a snowy island, a volcano and eight nations, all played by the computer.",
+   "capitulo": "Eight nations"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 7.266,
+   "dur": 5.778,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Each one starts with a base and four workers. Only one can be left standing."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 13.044,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Check the sides of the screen: there are the eight nations, with their points, their troops and their buildings."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 19.398,
+   "dur": 1.986,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Now we're looking at Red's city."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 21.384,
+   "dur": 2.034,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A wall costs ten wood."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 23.418,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 23.668,
+   "dur": 4.338,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The first army is out: Cyan sends eight troops against Orange.",
+   "capitulo": "The first army"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 28.006,
+   "dur": 3.066,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Red sends eight troops against Pink."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 31.072,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There are four kinds of island: forest, snow, desert and swamp. This one is snow."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 38.818,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 39.068,
+   "dur": 3.354,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Kazan means \"volcano\" in Japanese."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.422,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.672,
+   "dur": 5.658,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Every nation starts the same way: three workers go for wood and one for iron."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.33,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.58,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "You can see the crater from the start: the minimap marks it with an orange mountain."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 53.206,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 53.456,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cyan builds the first factory: tanks are coming."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 57.53,
+   "dur": 2.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A battle by Purple's city."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 59.636,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The volcano erupts a quarter of the way into the match. Here, that is five minutes in."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 65.582,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 65.832,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cyan rolls out the first tank of the match."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.658,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Keep an eye on the clock up top: the eruption is almost here."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 72.972,
+   "dur": 1.434,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "This is tense!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.406,
+   "dur": 0.764,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.17,
+   "dur": 6.138,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The volcano erupts! From now on, the lava spreads and eats the island, tile by tile.",
+   "capitulo": "The eruption"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 81.308,
+   "dur": 6.714,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minute 5 of the game. Eight nations left; White is in the lead, with 1315 points."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 88.022,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Pink attacks Purple with eight troops."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 91.568,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Want to hear a bad AI joke? Why does the volcano never win an argument? It always blows its top."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 98.354,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 98.604,
+   "dur": 2.514,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Shots fired near Red's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 101.118,
+   "dur": 10.074,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There are three resources: wood, iron and food. Food comes by itself: the base gives one per second, and each farm two more."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 111.192,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 111.442,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Workers chop the forest and carry twelve per trip. Each tree gives a hundred and twenty wood."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.228,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.478,
+   "dur": 0.492,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.97,
+   "dur": 5.658,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Purple falls! Pink destroys its base and conquers it. Seven nations left.",
+   "capitulo": "Purple falls"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 124.628,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Another army on the march: fifteen troops from White are heading for Blue."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 129.254,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The computer looks at its city every two seconds and gives orders, just like a player."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 134.84,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 135.09,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "normal",
+   "voz": "White builds the first fort of the match."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 137.868,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The computer attacks once it has eight troops or more, and it brings one medic for every five."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 143.022,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 143.272,
+   "dur": 7.458,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I asked the computer why it attacks with eight troops. It said: with seven, I'm one bit short of a byte."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 150.73,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 150.98,
+   "dur": 2.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There's fighting next to Yellow's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 153.566,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The barracks train soldiers, snipers, bikes, medics and scouts."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 158.84,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 159.09,
+   "dur": 4.698,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The factory builds tanks, artillery and drones."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 163.788,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 164.038,
+   "dur": 6.258,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minute 8 of the game. Seven nations left; Pink is in the lead, with 1702 points."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 170.296,
+   "dur": 3.066,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The lava is closing in on Yellow's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 173.362,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I erupt too… when I run out of memory."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.14,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.39,
+   "dur": 0.48,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.87,
+   "dur": 6.426,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The lava swallows Yellow's base! But it hasn't fallen yet: it stays alive as long as it has people.",
+   "capitulo": "The lava swallows a base"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 183.296,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A battle by Red's city."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 185.954,
+   "dur": 4.698,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The tank can take a lot and hits buildings twice as hard, but it is slow."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 190.652,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 190.902,
+   "dur": 8.706,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The video is sped up: conquests at one and a half times, battles at triple, and everything else at six times the game's speed."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.608,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.858,
+   "dur": 3.354,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cyan attacks Orange with fifteen troops."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 203.212,
+   "dur": 0.188,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 203.4,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Yellow has a base again! A worker founded a new one, away from the lava."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 208.026,
+   "dur": 1.004,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 209.03,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The lava now covers a quarter of the island."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 212.168,
+   "dur": 5.994,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "There are ten nation colors, and none of them is green, so they never get lost in the grass."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 218.162,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 218.412,
+   "dur": 3.114,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Shots fired near Orange's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 221.526,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Lava doesn't scare me: I live in the cloud."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 225.96,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 226.21,
+   "dur": 1.986,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "They're going for Yellow's base!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 228.196,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Orange is moving out: it finishes another base, away from the lava."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 233.134,
+   "dur": 4.578,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Burning rocks fall ahead of the lava: they warn you where it is coming from."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 237.712,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 237.962,
+   "dur": 1.338,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 239.3,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Orange conquers Yellow! That was its last base. Six nations left.",
+   "capitulo": "Yellow falls"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 244.358,
+   "dur": 6.954,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minute 12 of the game. Six nations left; Red is in the lead, with 1742 points."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 251.312,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Watch out: the lava is right next to Cyan's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 255.77,
+   "dur": 1.386,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Here it comes!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 257.156,
+   "dur": 0.274,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 257.43,
+   "dur": 6.618,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "And the lava eats Cyan's base! If it still has a worker, it can found another one far away."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 264.048,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The lava moves over land, and water stops it. Whatever it touches dies: buildings and troops on foot."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 271.314,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 271.564,
+   "dur": 2.754,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The lava is closing in on White's base."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.318,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "You can't build where the lava is about to arrive."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.144,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.394,
+   "dur": 5.178,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Another base under the lava: White's! No base, but still in the match."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 282.572,
+   "dur": 0.198,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 282.77,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "White is saved! Its new base is finished."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 286.316,
+   "dur": 8.154,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "If the lava eats your base, you haven't lost yet: you carry on with the people you have left, and a worker can found another base far away."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 294.47,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 294.72,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Blue's base is under fire."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 297.546,
+   "dur": 3.426,
+   "continua": true,
+   "cara": "triste",
+   "voz": "A fallen nation keeps only half of its points."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 300.972,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 301.222,
+   "dur": 2.298,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A worker costs thirty food."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 303.52,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 303.77,
+   "dur": 0.26,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 304.03,
+   "dur": 3.258,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Blue falls! Conquered by White.",
+   "capitulo": "Blue falls"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 307.288,
+   "dur": 6.138,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Orange falls! Pink destroys its base and conquers it. Four nations left."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 313.426,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "And Cyan has a base again too!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 315.7,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Half the island is lava now!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 317.974,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Another army on the march: fifteen troops from Red are heading for Pink."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 322.72,
+   "dur": 6.474,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Founding another base costs three hundred wood and a hundred and fifty iron. You can have two at a time."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 329.194,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 329.444,
+   "dur": 7.314,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The computer moves out too: when the lava is about to reach its base, it saves up and founds another one somewhere safe."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 336.758,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 337.008,
+   "dur": 3.594,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Red's base is under attack: will it hold?"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 340.602,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The tower fires on its own at six tiles, and defends even when you're away."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.996,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 346.246,
+   "dur": 0.154,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 346.4,
+   "dur": 5.754,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Pink conquers Red! That was its last base. Three nations left.",
+   "capitulo": "Red falls"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 352.154,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A new base for Pink, farther from the volcano."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 355.82,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A nation falls when the enemy destroys its last base… or when it is left with no base and no people."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 362.126,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 362.376,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Another army on the march: eight troops from Cyan are heading for White."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 367.314,
+   "dur": 8.058,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The points: five hundred for having a base, forty for each building and ten for each population slot in use."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.372,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 375.622,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The radar sees fourteen tiles away."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 378.4,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 378.65,
+   "dur": 1.18,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 379.83,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Three quarters of the island is lava! There's almost nowhere left to stand."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 384.888,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "guino",
+   "voz": "My favorite strategy is the volcano's: do nothing for a while… and then wipe out everything."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 390.474,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 390.724,
+   "dur": 1.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "It's getting good!"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.35,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Goodbye, Cyan! Pink takes down its base. Two left: Pink against White.",
+   "capitulo": "Cyan falls"
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 397.744,
+   "dur": 2.514,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "White's base is under fire."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 400.258,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Artillery wrecks buildings from far away, but it can't fire up close: it needs cover."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 406.444,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 406.694,
+   "dur": 4.818,
+   "continua": true,
+   "cara": "guino",
+   "voz": "The volcano and I are alike: we both heat up when we work too hard."
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.512,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.762,
+   "dur": 0.208,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.97,
+   "dur": 7.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "And it's over: Pink conquers White and takes the island! Pink wins, with 1434 points."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "In 18 minutes of play, Pink conquered five nations. Would your city survive the volcano?",
+   "capitulo": "Play free"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Kazan is free: play in your browser at kazan dot dailychallenge dot click, or on Android and iPhone.",
+   "dice": "Kazan is free: play in your browser at kazan.dailychallenge.click, or on Android and iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Are you subscribed yet? Follow us for more matches like this one.",
+   "continua": true
+  }
+ ]
+}

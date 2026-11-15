@@ -1,0 +1,16 @@
+{
+ "_nota": "Piloto de «¿Lo conoces?» (15-nov-2026): la trama de un juego retro poco conocido, con la fórmula de Adrián (imagina que eres… y tienes que…, pero hay un problema…, entonces ahora tú tendrás que… Este dilema le pasa a {protagonista} en {juego}, {consola, año, empresa}. ¿Lo conoces?). SIN vídeo todavía: falta decidir el formato (LeIA con escenas pixel hechas por nosotros; nada de capturas ni carátulas del juego) y que Adrián apruebe el piloto. Cada dato salió de las fuentes de abajo, leídas ese día.",
+ "juego": "Sweet Home",
+ "ficha": {"plataforma": "Famicom", "fecha": "1989-12-15", "empresa": "Capcom", "director": "Tokuro Fujiwara", "solo_en_japon": true},
+ "hechos": [
+  "Un equipo de cinco personas que hace un documental entra a una mansión abandonada a recuperar los frescos del pintor Ichirō Mamiya, que los escondió en 1959 y desapareció.",
+  "Al entrar, el fantasma de una mujer los deja atrapados; la casa amenaza con derrumbarse y está llena de monstruos.",
+  "Los cinco: Kazuo Hoshino (productor, encendedor), Akiko Hayakawa (directora, botiquín), Ryō Taguchi (camarógrafo, cámara), Asuka (reportera, aspiradora) y Emi Hoshino (hija de Kazuo, llave).",
+  "Quien muere se queda muerto el resto del juego; hay cinco finales según cuántos sobrevivan.",
+  "Salió sólo en Japón. Resident Evil (1996) empezó a desarrollarse en 1993 como una nueva versión de Sweet Home; Fujiwara lo produjo."
+ ],
+ "fuentes": ["https://en.wikipedia.org/wiki/Sweet_Home_(video_game)", "https://ja.wikipedia.org/wiki/スウィートホーム_(ゲーム)"],
+ "es": "Imagina que eres parte de un equipo de televisión y tienes que entrar a una mansión abandonada a fotografiar los frescos que un pintor escondió ahí hace treinta años. Pero hay un problema: en cuanto entran, el fantasma de una mujer les cierra la salida, y la casa se está cayendo a pedazos. Entonces ahora tú tendrás que buscar otra salida con cinco personas, y cada una carga una sola cosa: un encendedor, una cámara, un botiquín, una llave y una aspiradora. Y si alguien muere, no regresa: se queda muerto hasta el final. Este dilema le pasa a Kazuo Hoshino y a su equipo en Sweet Home, de Capcom, que salió para Famicom en 1989 y sólo en Japón. Años después, Capcom quiso rehacerlo… y de ahí nació Resident Evil. ¿Lo conocías?",
+ "en": "Imagine you're part of a TV crew, and you have to enter an abandoned mansion to photograph the frescoes a painter hid there thirty years ago. But there's a problem: as soon as you walk in, the ghost of a woman seals the exit, and the house is falling apart. So now you have to find another way out with five people, and each one carries a single tool: a lighter, a camera, a first-aid kit, a key, and a vacuum cleaner. And if someone dies, they stay dead for the rest of the game. This is what happens to Kazuo Hoshino and his crew in Sweet Home, by Capcom, released for the Famicom in 1989, only in Japan. Years later, Capcom set out to remake it… and that project became Resident Evil. Did you know it?",
+ "ja": "想像してみてください。あなたはテレビの取材班の一人です。30年前に画家が隠したフレスコ画を撮影するため、廃墟の屋敷に入ります。ところが、問題が起きます。入ったとたん、女の幽霊に出口をふさがれ、屋敷は今にも崩れそうです。そこであなたは、5人で別の出口を探すことになります。持ち物は一人ひとつだけ。ライター、カメラ、薬箱、鍵、そして掃除機です。しかも、仲間が死んだら、最後まで生き返りません。これは、カプコンの「スウィートホーム」で星野和夫たちに起きる出来事です。1989年にファミコンで、日本だけで発売されました。数年後、カプコンはこのゲームを作り直そうとして……そこから「バイオハザード」が生まれました。知っていましたか？"
+}

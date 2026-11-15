@@ -126,8 +126,10 @@ def marcador(im, m, t, x0, ancho, alto, c):
     tachados; el que tira lleva una flecha. El primero y el tercero a la izquierda, el segundo y el cuarto a la derecha,
     como las barras del juego. `m` (lo arma quien hace el guion): {equipos: [{nombre, color}], soldados: [[nombres]],
     hp0, fuera, gana, estados: [{t, hp: [[vida de cada soldado]], activo: [equipo, soldado] | null, gana: equipo | null}]};
-    `t` es el segundo del vídeo del juego."""
+    `t` es el segundo del vídeo del juego. Con `tipo: 'naciones'` es el marcador de Kazan (marcador_naciones)."""
     import bisect
+    if m.get('tipo') == 'naciones':
+        return marcador_naciones(im, m, t, x0, ancho, alto, c)
     if '_ts' not in m:
         m['_ts'] = [s['t'] for s in m['estados']]
     est = m['estados'][max(0, bisect.bisect_right(m['_ts'], t + 1e-6) - 1)]
@@ -175,6 +177,65 @@ def marcador(im, m, t, x0, ancho, alto, c):
                 d.rectangle([lx + 24, yk + 22, lx + 24 + round((rx - lx - 24) * min(1, hp[k] / m['hp0'])), yk + 25], fill=tuple(q['color']))
             else:   # tachado
                 d.rectangle([lx + 20, yk + 7, lx + 28 + w, yk + 9], fill=gris)
+
+
+def marcador_naciones(im, m, t, x0, ancho, alto, c):
+    """Los lados del juego en la partida larga de Kazan (15-nov-2026): cada nación con su color y su nombre, y mientras
+    vive, sus puntos (en una barra, contra el máximo de la partida), sus tropas y sus edificios; SIN BASE si la lava se
+    la tragó, y GANA al final. La que cayó va en gris y tachada, con cuándo cayó y por quién (o por la lava). Las pares
+    a la izquierda y las nones a la derecha. `m`: {tipo: 'naciones', naciones: [{nombre, color}], rotulos: {tropas,
+    edificios, sin_base, gana}, pmax, estados: [{t, n: [{v: vive, sb: sin base, p: puntos, tr: tropas, ed: edificios,
+    gana?, nota?: [renglones de la caída]}]}]}; `t` es el segundo del vídeo del juego."""
+    import bisect
+    if '_ts' not in m:
+        m['_ts'] = [s['t'] for s in m['estados']]
+    ie = max(0, bisect.bisect_right(m['_ts'], t + 1e-6) - 1); est = m['estados'][ie]
+    # el marcador sólo cambia cuando cambia el estado (cada 2 s de juego): los dos paneles ya pintados se guardan y se
+    # pegan en los cuadros siguientes (pintarlos cuesta 40 ms por cuadro, y el vídeo tiene 13 000)
+    if m.get('_pintado') == (ie, x0, ancho, alto):
+        im.paste(m['_izq'], (0, 0)); im.paste(m['_der'], (x0 + ancho + 4, 0)); return
+    d = ImageDraw.Draw(im)
+    N = len(m['naciones']); filas = (N + 1) // 2; bloque = alto // filas
+    gris, apagado, claro, rojo, naranja = (112, 112, 124), (58, 58, 70), (214, 214, 224), (226, 84, 84), (242, 160, 61)
+    rot = m['rotulos']; paso = min(48, (bloque - 36) // 4)
+    for e, q in enumerate(m['naciones']):
+        px = 0 if e % 2 == 0 else x0 + ancho; py = (e // 2) * bloque
+        lx, rx = px + 24, px + x0 - 24     # el panel mide lo que sobra a cada lado del juego
+        s = est['n'][e]; vivo = s['v']
+        col = tuple(q['color']) if vivo else gris
+        y = py + max(14, (bloque - 36 - 3 * paso) // 2)
+        fn = pixel(24, q['nombre'])
+        if vivo:
+            d.rectangle([lx, y + 2, lx + 19, y + 21], fill=col)
+        else:
+            d.rectangle([lx, y + 2, lx + 19, y + 21], outline=gris, width=2)
+        pintar(d, (lx + 32, y + (24 - fn.size) // 2), q['nombre'], fn, col)
+        if not vivo:   # tachada (en japonés no: la raya sobre un kanji solo, 黄 o 青, lo deja ilegible; va en gris y con CAYÓ debajo)
+            if not any(ord(ch) > 0x2E7F for ch in q['nombre']):
+                d.rectangle([lx + 28, y + 11, lx + 36 + d.textlength(q['nombre'], font=fn), y + 13], fill=gris)
+            y += paso
+            for k, linea in enumerate(s.get('nota') or []):
+                pintar(d, (lx, y), linea, pixel(16, linea), rojo if k == 0 else gris); y += paso - 8
+            continue
+        # los puntos: el número a la derecha y una barra contra el máximo de la partida
+        y += paso
+        pts = str(s['p']); fp = pixel(16, pts); wp = d.textlength(pts, font=fp)
+        pintar(d, (rx, y), pts, fp, col, 'ra')
+        bx = rx - wp - 12
+        d.rectangle([lx, y + 1, bx, y + 14], fill=(0, 0, 0), outline=apagado, width=2)
+        llena = round((bx - lx - 6) * min(1, s['p'] / max(1, m.get('pmax', 1))))
+        if llena > 0:
+            d.rectangle([lx + 3, y + 4, lx + 3 + llena, y + 11], fill=col)
+        # tropas y edificios
+        y += paso - 6
+        a, b = f"{rot['tropas']} {s['tr']}", f"{rot['edificios']} {s['ed']}"
+        pintar(d, (lx, y), a, pixel(16, a), claro); pintar(d, (rx, y), b, pixel(16, b), claro, 'ra')
+        y += paso - 8
+        if s.get('gana'):
+            pintar(d, (lx, y), rot['gana'], pixel(16, rot['gana']), color(c['acento']))
+        elif s['sb']:
+            pintar(d, (lx, y), rot['sin_base'], pixel(16, rot['sin_base']), naranja)
+    m['_izq'] = im.crop((0, 0, x0 - 4, alto)); m['_der'] = im.crop((x0 + ancho + 4, 0, im.size[0], alto)); m['_pintado'] = (ie, x0, ancho, alto)
 
 
 def horizontal():
@@ -661,6 +722,9 @@ def main():
         crudo = (np.repeat(mezcla[:, None], 2, axis=1) * 32767).astype('<i2').tobytes()
         subprocess.run([FF, '-loglevel', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '2', '-i', '-', wav],
                        input=crudo, check=True)
+        # el audio ya está en el wav: en un vídeo de 7 min estas pistas son ~700 MB que se quedarían en memoria todo el
+        # armado (15-nov-2026: con 8 GB de RAM la Mac se iba al intercambio y el disco bajaba 2 GB por vídeo)
+        del voz, hay, fondo_, mus, mezcla, crudo
         # capítulos, para la descripción de YouTube
         salida = os.path.expanduser(g['salida']); os.makedirs(os.path.dirname(salida), exist_ok=True)
         caps = [{'t': round(t0 if i else 0, 1), 'titulo': e['capitulo']} for i, (e, t0) in enumerate(zip(g['escenas'], inicio)) if e.get('capitulo')]

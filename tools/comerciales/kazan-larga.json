@@ -1,0 +1,1080 @@
+{
+ "fuente": "pixel",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#f2a03d",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "kazan/logo.png",
+  "logo_ancho": 684,
+  "lema": "Estrategia en tiempo real",
+  "sitio": "kazan.dailychallenge.click",
+  "pie": "Gratis en el navegador, Android y iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/kazan-larga.mp4",
+ "musica": {
+  "archivo": "kazan-larga/efectos.wav",
+  "desde": 0,
+  "volumen": 0.01901,
+  "agacha": 0.55
+ },
+ "marcador": "kazan-larga/marcador-es.json",
+ "escenas": [
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 9.834,
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Kazan: una isla nevada, un volcán y ocho naciones, todas jugadas por la computadora.",
+   "dice": "¡Hola! Soy LeIA. Hoy, en Kazan: una isla nevada, un volcán y ocho naciones, todas jugadas por la computadora.",
+   "capitulo": "Ocho naciones"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 9.834,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Cada una empieza con una base y cuatro obreros. Sólo puede quedar una."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 16.5,
+   "dur": 7.338,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Fíjate en los lados: ahí están las ocho naciones, con sus puntos, sus tropas y sus edificios."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 23.838,
+   "dur": 5.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Sale el primer ejército: la cian manda ocho tropas contra la naranja.",
+   "capitulo": "El primer ejército"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 29.592,
+   "dur": 3.978,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La rosa manda ocho tropas contra la morada."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 33.57,
+   "dur": 3.474,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Hay combate junto a la base de la morada."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 37.044,
+   "dur": 7.698,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Hay cuatro tipos de isla: bosque, nieve, desierto y pantano. Esta es de nieve."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 44.742,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 44.992,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Kazan significa «volcán» en japonés."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 49.45,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 49.7,
+   "dur": 5.178,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La cian levanta la primera fábrica: vienen los tanques."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 54.878,
+   "dur": 5.346,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cada nación empieza igual: tres obreros van a la madera y uno al hierro."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.224,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.474,
+   "dur": 5.874,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "El cráter se ve desde el principio: el minimapa lo marca con un monte naranja."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 66.348,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 66.598,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La cian saca el primer tanque de la partida."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 70.144,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La fábrica arma tanques, artillería y drones."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.65,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.9,
+   "dur": 0.27,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.17,
+   "dur": 7.098,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡El volcán hace erupción! Desde ahora, la lava baja y se come la isla, casilla por casilla.",
+   "capitulo": "La erupción"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 82.268,
+   "dur": 3.114,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Hay combate junto a la base de la naranja."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 85.382,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Te cuento un chiste malo de IA? ¿Por qué el volcán nunca gana una discusión? Porque siempre explota."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 92.048,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 92.298,
+   "dur": 7.818,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minuto 5 de juego. Quedan ocho naciones; va primero la blanca, con 1435 puntos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 100.116,
+   "dur": 9.354,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Hay tres recursos: madera, hierro y comida. La comida sale sola: la base da una por segundo, y cada granja, dos más."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 109.47,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 109.72,
+   "dur": 3.954,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Atacan la base de la morada: ¿aguantará?"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 113.674,
+   "dur": 3.786,
+   "continua": true,
+   "cara": "guino",
+   "voz": "A mí la lava no me asusta: yo vivo en la nube."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 117.46,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 117.71,
+   "dur": 1.26,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.97,
+   "dur": 6.906,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Cae la morada! La rosa le destruye la base y la conquista. Quedan siete naciones.",
+   "capitulo": "Cae la morada"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 125.876,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Otro ejército en marcha: quince tropas de la blanca van por la azul."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 131.582,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La blanca construye el primer fortín de la partida."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.016,
+   "dur": 3.114,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Pelea junto a la ciudad de la blanca."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 139.13,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Los obreros talan el bosque y cargan doce por viaje. Cada árbol da ciento veinte de madera."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 146.276,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 146.526,
+   "dur": 6.018,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La computadora mira su ciudad cada dos segundos y manda órdenes, como un jugador."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 152.544,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 152.794,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La computadora ataca cuando junta ocho tropas o más, y lleva un médico por cada cinco."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 158.98,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 159.23,
+   "dur": 8.274,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Le pregunté a la computadora por qué ataca con ocho tropas. Me dijo: porque con siete no completo el byte."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 167.504,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 167.754,
+   "dur": 6.714,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El cuartel entrena soldados, francotiradores, motos, médicos y exploradores."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 174.468,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 174.718,
+   "dur": 1.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué nervios!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.536,
+   "dur": 0.334,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.87,
+   "dur": 7.434,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡La lava se traga la base de la amarilla! Pero no cae todavía: sigue viva mientras le quede gente.",
+   "capitulo": "La lava se traga una base"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 184.304,
+   "dur": 8.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minuto 9 de juego. Quedan siete naciones; va primero la cian, con 1744 puntos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 192.842,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "El tanque aguanta mucho y pega el doble a los edificios, pero es lento."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 198.068,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 198.318,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La cian ataca a la naranja con quince tropas."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 202.824,
+   "dur": 0.576,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 203.4,
+   "dur": 5.826,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡La amarilla vuelve a tener base! Un obrero fundó otra, lejos de la lava."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 209.226,
+   "dur": 3.498,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La lava ya cubre la cuarta parte de la isla."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 212.724,
+   "dur": 9.234,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El vídeo va acelerado: las conquistas, a una vez y media; los combates, al triple; y lo demás, a seis veces la velocidad del juego."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 221.958,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.208,
+   "dur": 5.826,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Hay diez colores de nación, y ninguno es verde, para que no se pierdan en el pasto."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 228.034,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 228.284,
+   "dur": 2.946,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "¡Van por la base de la amarilla!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 231.23,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La naranja se muda: termina otra base, lejos de la lava."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 236.456,
+   "dur": 1.698,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Ahí viene!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 238.154,
+   "dur": 1.146,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 239.3,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡La naranja conquista a la amarilla! Le tumbó su última base. Quedan seis naciones.",
+   "capitulo": "Cae la amarilla"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 245.486,
+   "dur": 7.986,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La lava avanza por tierra, y el agua la para. Lo que pisa, muere: edificios y tropas de a pie."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 253.472,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 253.722,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Ojo: la lava ya está junto a la base de la cian."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 257.988,
+   "dur": 6.378,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Y la lava se come la base de la cian! Si le queda un obrero, puede fundar otra lejos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 264.366,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Por delante de la lava caen piedras ardiendo: avisan por dónde viene."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 269.424,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 269.674,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Yo también hago erupción… cuando se me acaba la memoria."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.132,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.382,
+   "dur": 3.378,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La lava se acerca a la base de la blanca."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.76,
+   "dur": 7.554,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otra base bajo la lava: la de la blanca! Sin base, pero sigue en la partida."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 285.314,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡La blanca se salva! Ya terminó su base nueva."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 289.628,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La base de la azul está bajo fuego."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 292.766,
+   "dur": 8.538,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Si la lava se come tu base, no pierdes todavía: sigues con la gente que te quede, y un obrero puede fundar otra base lejos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 301.304,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 301.554,
+   "dur": 2.226,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Esto se pone bueno!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 303.78,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 304.03,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Cae la azul! La conquista la blanca.",
+   "capitulo": "Cae la azul"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 308.056,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Cae la naranja! La rosa le destruye la base y la conquista. Quedan cuatro naciones."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 314.362,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Y la cian también tiene base otra vez!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 318.028,
+   "dur": 2.706,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Media isla ya es lava!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 320.734,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Fundar otra base cuesta trescientos de madera y ciento cincuenta de hierro. Se pueden tener dos a la vez."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 328.84,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 329.09,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La computadora también se muda: cuando la lava va a llegar a su base, ahorra y funda otra en un sitio seguro."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 337.196,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 337.446,
+   "dur": 8.394,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Minuto 15 de juego. Quedan cuatro naciones; va primero la roja, con 1952 puntos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 345.84,
+   "dur": 0.56,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 346.4,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡La rosa conquista a la roja! Le tumbó su última base. Quedan tres naciones.",
+   "capitulo": "Cae la roja"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 352.586,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Base nueva para la rosa, más lejos del volcán."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 357.092,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Una nación cae cuando el enemigo destruye su última base… o cuando se queda sin base y sin gente."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 363.878,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 364.128,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Otro ejército en marcha: ocho tropas de la cian van por la blanca."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 369.666,
+   "dur": 8.226,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Los puntos: quinientos por tener base, cuarenta por cada edificio y diez por cada lugar de población ocupado."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 377.892,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 378.142,
+   "dur": 1.688,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 379.83,
+   "dur": 6.978,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Tres cuartas partes de la isla ya son lava! Casi no queda dónde pararse."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 386.808,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Una nación caída se queda sólo con la mitad de sus puntos."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 391.962,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.212,
+   "dur": 0.158,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 392.37,
+   "dur": 6.978,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Adiós a la cian! La rosa acaba con su base. Quedan dos: la rosa contra la blanca.",
+   "capitulo": "Cae la cian"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 399.348,
+   "dur": 3.114,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "La base de la blanca está bajo fuego."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 402.462,
+   "dur": 6.834,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Mi estrategia favorita es la del volcán: no hacer nada un rato… y luego arrasar con todo."
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 409.296,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 409.546,
+   "dur": 1.698,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Atención!"
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.244,
+   "dur": 0.526,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.77,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "kazan-larga/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 411.97,
+   "dur": 8.826,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Y se acabó: la rosa conquista a la blanca y se queda con la isla! Gana la rosa, con 1434 puntos."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "En 18 minutos de juego, la rosa conquistó a cinco naciones. ¿Tu ciudad aguantaría al volcán?",
+   "capitulo": "Juega gratis"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Kazan es gratis: juega en el navegador, en Kazan punto Daily Challenge punto click, o en Android y iPhone.",
+   "dice": "Kazan es gratis: juega en el navegador, en kazan.dailychallenge.click, o en Android y iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "¿Ya estás suscrito? Síguenos para más partidas como esta.",
+   "continua": true
+  }
+ ]
+}
