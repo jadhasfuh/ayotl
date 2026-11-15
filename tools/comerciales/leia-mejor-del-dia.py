@@ -7,7 +7,7 @@ diga el dato del juego; sólo si el gameplay duró muy poco, ahí sí que dé el
 largo, no importa que lo dé completo». Y: «aún nos queda mucho Google Cloud: genera muchos vídeos con audio y LeIA».
 
   "/Users/jadhasfuh/Documents/code challenge/.venv/bin/python" tools/comerciales/leia-mejor-del-dia.py [AAAA-MM-DD ...]
-      [--idiomas es,en,ja] [--publicar AAAA-MM-DD] [--sin-plan] [--seco] [--rehacer]
+      [--idiomas es,en,ja] [--publicar AAAA-MM-DD] [--sin-plan] [--seco] [--rehacer] [--sin-ia]
 
 Sin fecha, ayer (hora de México). Por cada fecha:
 1. dc-partida.mjs re-simula la partida del campeón de ese día (la de más puntos en arcade.partidas) y la graba
@@ -30,6 +30,9 @@ Sin fecha, ayer (hora de México). Por cada fecha:
 3. comercial.py arma salida/mejor-<fecha>[-en|-ja].mp4: la partida entera, sin cortes, con el cuadro de diálogo.
 4. Salvo con --sin-plan, entra a youtube.json para salir el día --publicar (por omisión, dos días después de la
    partida, así queda un día para revisarlo) a las 19:00 (es), 19:20 (en) y 19:40 (ja). Lo sube subir-youtube.py.
+Desde el 14-nov-2026, leia_ia.py le pide a la API de Claude (créditos del plan Max, sesión de `ant auth login`)
+tres chistes nuevos y cuatro comentarios de esa partida por idioma, y los guarda en mejor/<fecha>/ia.json; si la
+API no contesta, el vídeo sale sólo con las plantillas, como antes. --sin-ia no la llama.
 --seco escribe los guiones y dice el plan, sin armar vídeos ni tocar youtube.json. --rehacer vuelve a armar los
 vídeos de un día aunque ya estén subidos, sin tocar youtube.json (para cambiarlos en YouTube).
 """
@@ -38,6 +41,7 @@ from datetime import date, datetime, timedelta, timezone
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
+import leia_ia     # lo nuevo de cada día, con la API de Claude; sin sesión o sin crédito devuelve None
 import comercial   # narrar(): la misma voz y la misma caché que el vídeo, para medir cuánto dura cada frase
 
 PY = os.path.expanduser('~/Documents/code challenge/.venv/bin/python')
@@ -307,7 +311,7 @@ def partida(fecha, salida=None, minimo=0):
     return json.loads(r.stdout.strip().splitlines()[-1])
 
 
-def guion(fecha, lang, info, datos, video, medir):
+def guion(fecha, lang, info, datos, video, medir, ia=None):
     """Las escenas de un idioma: la partida en tramos seguidos, partida por lo que dice LeIA, y la tarjeta final.
     Devuelve el guion y cuántos segundos de partida usa (si son más de los que dura, se repite)."""
     tx = TEXTOS[lang]; j = datos['juegos'][info['juego']]
@@ -431,12 +435,17 @@ def guion(fecha, lang, info, datos, video, medir):
                 dc.append(('feliz', marcar(tx['dc_ganados'], dict(v, n=(str(ctx['dias_ganados']),) * 2))))
         dia = date.fromisoformat(fecha).toordinal()
         rota = lambda l, k: l[(dia * k) % len(l):] + l[:(dia * k) % len(l)] if l else []
-        chistes = rota(list(tx['chistes']), 3)
+        # lo nuevo de cada día, escrito con la API de Claude (leia_ia.py, 14-nov): los chistes recién hechos van antes
+        # que los de plantilla, y los comentarios de esta partida se intercalan; sin `ia`, todo queda como antes
+        fr = (ia or {}).get(lang) or {}
+        nuevas = lambda k: [leia_ia.poner(c, v) for c in fr.get(k, []) if leia_ia.sirve(c, v)]
+        chistes = nuevas('chistes') + rota(list(tx['chistes']), 3)
         if chistes:
             chistes[0] = tx['chiste_intro'] + chistes[0]
         listas = {'dc': dc, 'cur': [('pensando', c) for c in (datos.get('curiosidades', {}).get(info['juego']) or {}).get(lang, [])],
-                  'chiste': [('guino', c) for c in chistes], 'gen': [('normal', marcar(g, v)) for g in rota(list(tx['generales']), 1)]}
-        patron = ['dc', 'cur', 'dc', 'chiste', 'cur', 'dc', 'gen', 'cur', 'dc', 'chiste', 'cur', 'dc', 'gen', 'cur', 'chiste']
+                  'chiste': [('guino', c) for c in chistes], 'gen': [('normal', marcar(g, v)) for g in rota(list(tx['generales']), 1)],
+                  'ia': [('feliz', c) for c in nuevas('comentarios')]}
+        patron = ['dc', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'cur', 'chiste']
         orden = []
         while any(listas.values()):
             orden += [listas[k].pop(0) for k in patron if listas[k]]
@@ -548,6 +557,7 @@ def main():
     ap.add_argument('--sin-plan', action='store_true')
     ap.add_argument('--seco', action='store_true')
     ap.add_argument('--rehacer', action='store_true')
+    ap.add_argument('--sin-ia', action='store_true')
     a = ap.parse_args()
     fechas = a.fechas or [(datetime.now(MX).date() - timedelta(days=1)).isoformat()]
     idiomas = a.idiomas.split(',')
@@ -575,11 +585,13 @@ def main():
             carpeta = os.path.join(AQUI, 'mejor', fecha); os.makedirs(carpeta, exist_ok=True)
             video = os.path.join(carpeta, 'partida.mp4')
             print(f"{fecha}: {info['titulo']}, {info['nombre']}, {info['puntaje']} puntos en {info['fin']:.0f} s")
+            # chistes y comentarios nuevos para esta partida; None (sin sesión, sin crédito, sin red) = sólo plantillas
+            ia = None if a.sin_ia else leia_ia.frescos(fecha, info, datos, carpeta, plantilla={l: TEXTOS[l]['chistes'] for l in TEXTOS})
             guiones, usa = {}, 0
             for lang in idiomas_f:
                 voz, idioma = VOZ[lang]
                 medir = lambda texto, voz=voz, idioma=idioma: len(comercial.narrar(texto, voz, idioma, cab)) / comercial.SR
-                guiones[lang], t = guion(fecha, lang, info, datos, video, medir)
+                guiones[lang], t = guion(fecha, lang, info, datos, video, medir, ia)
                 usa = max(usa, t)
             for lang, g in guiones.items():
                 ruta = os.path.join(carpeta, f'mejor-{fecha}{SUF[lang]}.json')

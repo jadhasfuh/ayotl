@@ -113,8 +113,9 @@ async function contexto() {
   };
   const delDia = await rest(`partidas?select=usuario,puntaje,perfiles(nombre)&fecha=eq.${fecha}&order=puntaje.desc`);
   const segundo = delDia.find(p => p.usuario !== campeon.usuario);
-  // los días que ha sido el mejor, hasta hoy: la partida de más puntos de cada día
-  const todas = await rest(`partidas?select=fecha,usuario,puntaje&fecha=lte.${hoy}&order=puntaje.desc`);
+  // los días que ha sido el mejor: la partida de más puntos de cada día ya cerrado (el de hoy sigue abierto: el 14-nov
+  // contó como ganado un día que a media mañana iba ganando y por la tarde ya no)
+  const todas = await rest(`partidas?select=fecha,usuario,puntaje&fecha=lt.${hoy}&order=puntaje.desc`);
   const ganador = {};
   for (const p of todas) if (!(p.fecha in ganador)) ganador[p.fecha] = p.usuario;
   return {
