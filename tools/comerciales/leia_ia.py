@@ -15,7 +15,7 @@ el tope del mes, frescos() devuelve None y leia-mejor-del-dia.py arma el vídeo 
 Qué pide, una vez por partida y en los tres idiomas a la vez:
 - chistes: chistes malos de IA nuevos, de preferencia con el juego del día (los de plantilla se repetían cada 11 días);
 - comentarios: lo que LeIA comenta de ESA partida, sólo con los datos que le pasamos (puntos por tramo, vidas,
-  rondas, el segundo lugar, el récord anterior…). Nada de historia del juego: eso sale de datos-juegos.json y
+  rondas, el segundo lugar, el récord anterior…), cada uno con el segundo desde el que ya se puede decir. Nada de historia del juego: eso sale de datos-juegos.json y
   curiosidades-juegos.json, que están revisados.
 Lo que ya dijo en días pasados va en ia-dichos.json para que no se repita. Cada llamada se apunta en ia-gasto.jsonl.
 """
@@ -31,7 +31,7 @@ TOPE_MES = 100.0            # USD: el crédito mensual del plan; pasado esto ni 
 GASTO = os.path.join(AQUI, 'ia-gasto.jsonl')
 DICHOS = os.path.join(AQUI, 'ia-dichos.json')
 RECORDAR = 60               # cuántos chistes pasados se le mandan para que no los repita
-LARGO = {'es': 190, 'en': 190, 'ja': 90}   # letras por frase: más largo no cabe en un hueco de la partida
+LARGO = {'es': 170, 'en': 170, 'ja': 80}   # letras por frase: más largo no cabe en un hueco de la partida
 FICHAS = ('nombre', 'juego', 'dc', 'leia')
 
 SISTEMA = """Escribes lo que dice LeIA, la presentadora de los vídeos cortos de Daily Challenge (dailychallenge.click): \
@@ -49,16 +49,22 @@ Vas a recibir los datos de una partida y devolverás, para español (de México)
 Cada idioma lleva su propio chiste pensado en ese idioma: un juego de palabras casi nunca sobrevive a la \
 traducción, así que no traduzcas, escribe otro que funcione. En japonés, ダジャレ.
 - `comentarios`: 4 comentarios sobre ESTA partida, apoyados sólo en los datos recibidos (cuántos puntos llevaba a \
-la mitad, en qué segundo perdió una vida, por cuánto le ganó al segundo, cuánto mejoró el récord…). Aquí los tres \
-idiomas dicen lo mismo, cada uno con naturalidad. No inventes nada que no esté en los datos y no cuentes historia \
+la mitad, en qué segundo perdió una vida, por cuánto le ganó al segundo, cuánto mejoró el récord…). Cada uno trae \
+el mismo comentario en los tres idiomas, dicho con naturalidad en cada uno, y `desde_segundo`: el segundo de la \
+partida a partir del cual ya se puede decir, que es el del último momento que menciona (si habla de lo que pasó \
+entre el segundo 67 y el 100, es 100; si vale para toda la partida, como el récord anterior, es 0). El programa lo \
+dice en el primer hueco que encuentre después de ese segundo, así que escríbelo en pasado, como quien acaba de \
+verlo. Que al menos dos se puedan decir en la primera mitad de la partida. Como mucho dos cifras por comentario: \
+se oyen, no se leen. No inventes nada que no esté en los datos, no supongas causas ni intenciones (por qué subió o bajó el ritmo, qué \
+estaba pensando) y no cuentes historia \
 ni curiosidades del juego: eso ya lo dice LeIA con textos revisados. No repitas lo que ya va a decir (viene en \
-`ya_dice`): ni el puntaje final con su tiempo, ni quién quedó segundo, ni cuántas personas jugaron. El programa \
-dice cada comentario en cualquier momento de la partida, en un hueco donde quepa: escríbelos como quien ya la vio \
-completa, de modo que tengan sentido al principio, a la mitad o al final, y que cada uno se entienda solo.
+`ya_dice`): ni el puntaje final con su tiempo, ni quién quedó segundo, ni cuántas personas jugaron. Tampoco \
+adelantes cómo acaba la partida ni el puntaje final: quien ve el vídeo todavía no lo sabe. Cada comentario se \
+entiende solo.
 
 Cómo se escribe cada frase:
 - Se oye en voz alta: frases cortas, de una o dos oraciones, sin paréntesis, sin emojis, sin comillas raras, sin \
-listas. Máximo 190 letras en español e inglés y 90 en japonés.
+listas. Máximo 170 letras en español e inglés y 80 en japonés.
 - Los chistes no llevan introducción («¿te cuento un chiste?»): eso lo pone el programa.
 - Para nombrar al jugador, al juego, al sitio o a ella misma usa estas fichas tal cual, con llaves: {nombre}, \
 {juego}, {dc}, {leia}. El programa las cambia por el nombre escrito y por su pronunciación. No escribas esos \
@@ -105,12 +111,13 @@ def _resumen(info, datos):
         'fecha': info['fecha'], 'puntaje_final': info['puntaje'], 'duracion_s': round(T),
         'puntos_al_segundo': {str(round(T * f)): en(T * f) for f in (0.25, 0.5, 0.75)},
         'eventos': [{k: v for k, v in e.items() if k in ('t', 'tipo', 'quedan', 'n', 'campo')} for e in info.get('eventos', [])][:40],
-        'veces_que_ha_salido_el_juego': ctx.get('veces'), 'record_anterior_del_juego': ctx.get('record_antes'),
+        'record_anterior_del_juego': ctx.get('record_antes'),
         'segundo_lugar': ctx.get('segundo'), 'jugadores_ese_dia': ctx.get('jugadores'),
         'intento_numero': ctx.get('intento'), 'dias_que_ha_ganado_el_jugador': ctx.get('dias_ganados'),
         'ya_dice': ['el puntaje final y cuánto duró la partida', 'quién quedó en segundo lugar y con cuántos puntos',
                     'cuántas personas jugaron ese día', 'en qué intento lo logró', 'cuántos días ha ganado',
-                    'cuando pierde una vida o pasa de nivel, en el momento', 'el récord del juego'],
+                    'cuando pierde una vida o pasa de nivel, en el momento', 'el récord del juego',
+                    'cuántas veces ha salido ese juego como juego del día'],
     }
 
 
@@ -145,7 +152,8 @@ def sirve(frase, valores):
 
 
 def frescos(fecha, info, datos, carpeta, rehacer=False, avisar=print, plantilla=None):
-    """{'es': {'chistes': [...], 'comentarios': [...]}, 'en': …, 'ja': …} para la partida, o None. Lo guarda en
+    """{'es': {'chistes': [frase…], 'comentarios': [{'texto', 'desde'}…]}, 'en': …, 'ja': …} para la partida, o None
+    (`desde`: el segundo de la partida a partir del cual el comentario ya se puede decir). Lo guarda en
     <carpeta>/ia.json: rehacer el vídeo de un día no vuelve a gastar ni cambia lo que dice. `plantilla`: los chistes
     fijos de cada idioma, que también cuentan como ya contados."""
     ruta = os.path.join(carpeta, 'ia.json')
@@ -162,14 +170,20 @@ def frescos(fecha, info, datos, carpeta, rehacer=False, avisar=print, plantilla=
         avisar('  IA: falta el paquete anthropic en el entorno: LeIA sigue con sus plantillas')
         return None
 
-    class Idioma(BaseModel):
-        chistes: list[str]
-        comentarios: list[str]
+    class Chistes(BaseModel):
+        es: list[str]
+        en: list[str]
+        ja: list[str]
+
+    class Comentario(BaseModel):
+        desde_segundo: int
+        es: str
+        en: str
+        ja: str
 
     class Frescos(BaseModel):
-        es: Idioma
-        en: Idioma
-        ja: Idioma
+        chistes: Chistes
+        comentarios: list[Comentario]
 
     dichos = json.load(open(DICHOS, encoding='utf-8')) if os.path.exists(DICHOS) else {}
     pedido = {'partida': _resumen(info, datos),
@@ -207,12 +221,15 @@ def frescos(fecha, info, datos, carpeta, rehacer=False, avisar=print, plantilla=
         avisar(f'  IA: la respuesta no sirvió ({r.stop_reason}): LeIA sigue con sus plantillas')
         return None
     crudo = r.parsed_output.model_dump()
-    sale = {l: {k: [x for x in (_limpia(f, l) for f in crudo[l][k]) if x] for k in ('chistes', 'comentarios')}
-            for l in ('es', 'en', 'ja')}
-    for l in sale:
-        tirados = sum(len(crudo[l][k]) - len(sale[l][k]) for k in sale[l])
+    T = info['fin']; sale = {}
+    for l in ('es', 'en', 'ja'):
+        coms = [{'texto': _limpia(c[l], l), 'desde': max(0, min(int(c['desde_segundo']), int(T)))} for c in crudo['comentarios']]
+        sale[l] = {'chistes': [x for x in (_limpia(f, l) for f in crudo['chistes'][l]) if x],
+                   # uno que sólo se podría decir en los últimos 12 s ya no cabe: fuera
+                   'comentarios': [c for c in coms if c['texto'] and c['desde'] <= T - 12]}
+        tirados = len(crudo['chistes'][l]) - len(sale[l]['chistes']) + len(coms) - len(sale[l]['comentarios'])
         if tirados:
-            avisar(f'  IA: {tirados} frases de {l} descartadas (largas, con llaves o con letras latinas)')
+            avisar(f'  IA: {tirados} frases de {l} descartadas (largas, tardías, con llaves o con letras latinas)')
     os.makedirs(carpeta, exist_ok=True)
     json.dump(sale, open(ruta, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     for l in sale:
@@ -240,9 +257,10 @@ def main():
         r = frescos(fecha, info, datos, os.path.join(AQUI, 'mejor', fecha), rehacer='--rehacer' in sys.argv)
         if r:
             for l in ('es', 'en', 'ja'):
-                for k in ('chistes', 'comentarios'):
-                    for f in r[l][k]:
-                        print(f'  {l} {k[:5]}: {f}')
+                for f in r[l]['chistes']:
+                    print(f'  {l} chiste: {f}')
+                for c in r[l]['comentarios']:
+                    print(f"  {l} desde {c['desde']:>3} s: {c['texto']}")
 
 
 if __name__ == '__main__':

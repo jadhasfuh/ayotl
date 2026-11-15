@@ -31,7 +31,7 @@ Sin fecha, ayer (hora de México). Por cada fecha:
 4. Salvo con --sin-plan, entra a youtube.json para salir el día --publicar (por omisión, dos días después de la
    partida, así queda un día para revisarlo) a las 19:00 (es), 19:20 (en) y 19:40 (ja). Lo sube subir-youtube.py.
 Desde el 14-nov-2026, leia_ia.py le pide a la API de Claude (créditos del plan Max, sesión de `ant auth login`)
-tres chistes nuevos y cuatro comentarios de esa partida por idioma, y los guarda en mejor/<fecha>/ia.json; si la
+tres chistes nuevos por idioma y cuatro comentarios de esa partida (cada uno espera al segundo del que habla), y los guarda en mejor/<fecha>/ia.json; si la
 API no contesta, el vídeo sale sólo con las plantillas, como antes. --sin-ia no la llama.
 --seco escribe los guiones y dice el plan, sin armar vídeos ni tocar youtube.json. --rehacer vuelve a armar los
 vídeos de un día aunque ya estén subidos, sin tocar youtube.json (para cambiarlos en YouTube).
@@ -359,6 +359,7 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
         return medidas[marcado]
 
     giro = {}
+    espera = {}   # los comentarios de la IA que no se pueden decir antes de cierto segundo de la partida
 
     def variante(k, corta=False):
         """La siguiente de las variantes de `k`, empezando en una distinta cada día, para no repetir la misma seguido."""
@@ -438,13 +439,16 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
         # lo nuevo de cada día, escrito con la API de Claude (leia_ia.py, 14-nov): los chistes recién hechos van antes
         # que los de plantilla, y los comentarios de esta partida se intercalan; sin `ia`, todo queda como antes
         fr = (ia or {}).get(lang) or {}
-        nuevas = lambda k: [leia_ia.poner(c, v) for c in fr.get(k, []) if leia_ia.sirve(c, v)]
-        chistes = nuevas('chistes') + rota(list(tx['chistes']), 3)
+        chistes = [leia_ia.poner(c, v) for c in fr.get('chistes', []) if leia_ia.sirve(c, v)] + rota(list(tx['chistes']), 3)
+        comentarios = []
+        for c in fr.get('comentarios', []):   # cada uno espera al segundo de la partida del que habla
+            if leia_ia.sirve(c['texto'], v):
+                m = leia_ia.poner(c['texto'], v); espera[m] = c['desde']; comentarios.append(('feliz', m))
         if chistes:
             chistes[0] = tx['chiste_intro'] + chistes[0]
         listas = {'dc': dc, 'cur': [('pensando', c) for c in (datos.get('curiosidades', {}).get(info['juego']) or {}).get(lang, [])],
                   'chiste': [('guino', c) for c in chistes], 'gen': [('normal', marcar(g, v)) for g in rota(list(tx['generales']), 1)],
-                  'ia': [('feliz', c) for c in nuevas('comentarios')]}
+                  'ia': comentarios}
         patron = ['dc', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'ia', 'cur', 'dc', 'chiste', 'ia', 'cur', 'dc', 'gen', 'cur', 'chiste']
         orden = []
         while any(listas.values()):
@@ -476,7 +480,7 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
             if dicha:
                 continue
             hueco = min([e['t'] for e in ev if REACCION[e['tipo']][0] >= 2] + [fin_voz]) - t
-            k = next((k for k, (c, m) in enumerate(pool) if cuanto(m) + PAUSA <= hueco), None) if hueco >= 2.5 else None
+            k = next((k for k, (c, m) in enumerate(pool) if cuanto(m) + PAUSA <= hueco and t >= espera.get(m, 0)), None) if hueco >= 2.5 else None
             if k is not None:
                 decir(*pool.pop(k))
                 tramo(PAUSA)
