@@ -8,7 +8,8 @@ Idempotente: sólo graba lo que falte.
 
   python3 tools/comerciales/stat-voz.py [--rehacer [id,id…]]
 
---rehacer a secas vuelve a grabar todo; con ids, sólo esos datos (al corregir su título o su remate).
+--rehacer a secas vuelve a grabar todo; con ids, sólo esos datos (al corregir su título o su remate). Con
+DC_RAIZ=<carpeta> trabaja sobre otra copia de Daily Challenge (un worktree sobre origin/main).
 
 Lo que se dice sale de stats.json: el título y el subtítulo tal cual («Las empresas más viejas, y qué hacían
 cuando nacieron») y el remate. Los números se leen como están: Chirp los dice bien en español.
@@ -19,7 +20,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
 import comercial as C
 
-DC = os.path.expanduser('~/Documents/daily challenge')
+DC = os.environ.get('DC_RAIZ') or os.path.expanduser('~/Documents/daily challenge')   # DC_RAIZ: un worktree sobre origin/main (el main local suele ir atrasado)
 STATS = os.path.join(DC, 'public/content/stats/stats.json')
 VOZ = os.path.join(DC, 'public/content/stats/voz')
 NOMBRE, IDIOMA = 'es-US-Chirp3-HD-Achernar', 'es-US'
@@ -27,8 +28,12 @@ CIERRE = 'Juega gratis en Daily Challenge punto click. ¡Y síguenos para el dat
 
 
 def frases(s):
-    titulo = f"{s['titulo']} {s['subtitulo']}".strip()
-    titulo = titulo[0] + titulo[1:].lower() if titulo.isupper() else titulo
+    # El título va en MAYÚSCULAS en stats.json y el subtítulo no: se baja el título solo. Antes se miraba si TODO
+    # (título y subtítulo) iba en mayúsculas, que nunca pasa, y a la voz le llegaba «LOS KICKSTARTERS más grandes…»:
+    # una palabra rara en mayúsculas la deletrea (16-nov-2026; Adrián: «leyó el título deletreado»).
+    t = s['titulo'].strip()
+    t = t[0] + t[1:].lower() if t.isupper() else t
+    titulo = f"{t} {s['subtitulo']}".strip()
     return [f'Daily Stat. {titulo}.', s['remate']]
 
 
