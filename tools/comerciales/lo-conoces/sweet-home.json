@@ -1,7 +1,13 @@
 {
- "_nota": "Piloto de «¿Lo conoces?» (15-nov-2026): la trama de un juego retro poco conocido, con la fórmula de Adrián (imagina que eres… y tienes que…, pero hay un problema…, entonces ahora tú tendrás que… Este dilema le pasa a {protagonista} en {juego}, {consola, año, empresa}. ¿Lo conoces?). SIN vídeo todavía: falta decidir el formato (LeIA con escenas pixel hechas por nosotros; nada de capturas ni carátulas del juego) y que Adrián apruebe el piloto. Cada dato salió de las fuentes de abajo, leídas ese día.",
+ "_nota": "Piloto de «¿Lo conoces?» (15-nov-2026): la trama de un juego retro poco conocido, con la fórmula de Adrián (imagina que eres… y tienes que…, pero hay un problema…, entonces ahora tú tendrás que… Este dilema le pasa a {protagonista} en {juego}, {consola, año, empresa}. ¿Lo conoces?). Formato del piloto: Short vertical, LeIA con seis escenas pixel dibujadas con código (arte_sweet_home.py; nada de capturas, carátulas ni sprites del juego) y la tarjeta de Daily Challenge; lo arma armar.py. Falta que Adrián lo apruebe. Cada dato salió de las fuentes de abajo, leídas ese día.",
  "juego": "Sweet Home",
- "ficha": {"plataforma": "Famicom", "fecha": "1989-12-15", "empresa": "Capcom", "director": "Tokuro Fujiwara", "solo_en_japon": true},
+ "ficha": {
+  "plataforma": "Famicom",
+  "fecha": "1989-12-15",
+  "empresa": "Capcom",
+  "director": "Tokuro Fujiwara",
+  "solo_en_japon": true
+ },
  "hechos": [
   "Un equipo de cinco personas que hace un documental entra a una mansión abandonada a recuperar los frescos del pintor Ichirō Mamiya, que los escondió en 1959 y desapareció.",
   "Al entrar, el fantasma de una mujer los deja atrapados; la casa amenaza con derrumbarse y está llena de monstruos.",
@@ -9,8 +15,194 @@
   "Quien muere se queda muerto el resto del juego; hay cinco finales según cuántos sobrevivan.",
   "Salió sólo en Japón. Resident Evil (1996) empezó a desarrollarse en 1993 como una nueva versión de Sweet Home; Fujiwara lo produjo."
  ],
- "fuentes": ["https://en.wikipedia.org/wiki/Sweet_Home_(video_game)", "https://ja.wikipedia.org/wiki/スウィートホーム_(ゲーム)"],
- "es": "Imagina que eres parte de un equipo de televisión y tienes que entrar a una mansión abandonada a fotografiar los frescos que un pintor escondió ahí hace treinta años. Pero hay un problema: en cuanto entran, el fantasma de una mujer les cierra la salida, y la casa se está cayendo a pedazos. Entonces ahora tú tendrás que buscar otra salida con cinco personas, y cada una carga una sola cosa: un encendedor, una cámara, un botiquín, una llave y una aspiradora. Y si alguien muere, no regresa: se queda muerto hasta el final. Este dilema le pasa a Kazuo Hoshino y a su equipo en Sweet Home, de Capcom, que salió para Famicom en 1989 y sólo en Japón. Años después, Capcom quiso rehacerlo… y de ahí nació Resident Evil. ¿Lo conocías?",
- "en": "Imagine you're part of a TV crew, and you have to enter an abandoned mansion to photograph the frescoes a painter hid there thirty years ago. But there's a problem: as soon as you walk in, the ghost of a woman seals the exit, and the house is falling apart. So now you have to find another way out with five people, and each one carries a single tool: a lighter, a camera, a first-aid kit, a key, and a vacuum cleaner. And if someone dies, they stay dead for the rest of the game. This is what happens to Kazuo Hoshino and his crew in Sweet Home, by Capcom, released for the Famicom in 1989, only in Japan. Years later, Capcom set out to remake it… and that project became Resident Evil. Did you know it?",
- "ja": "想像してみてください。あなたはテレビの取材班の一人です。30年前に画家が隠したフレスコ画を撮影するため、廃墟の屋敷に入ります。ところが、問題が起きます。入ったとたん、女の幽霊に出口をふさがれ、屋敷は今にも崩れそうです。そこであなたは、5人で別の出口を探すことになります。持ち物は一人ひとつだけ。ライター、カメラ、薬箱、鍵、そして掃除機です。しかも、仲間が死んだら、最後まで生き返りません。これは、カプコンの「スウィートホーム」で星野和夫たちに起きる出来事です。1989年にファミコンで、日本だけで発売されました。数年後、カプコンはこのゲームを作り直そうとして……そこから「バイオハザード」が生まれました。知っていましたか？"
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Sweet_Home_(video_game)",
+  "https://ja.wikipedia.org/wiki/スウィートホーム_(ゲーム)"
+ ],
+ "es": "Imagina que eres parte de un equipo de televisión. Tienes que entrar a una mansión abandonada y fotografiar los frescos que un pintor escondió ahí hace treinta años. Pero hay un problema: en cuanto entran, el fantasma de una mujer les cierra la salida. Y la casa se está cayendo a pedazos. Entonces ahora tú tendrás que buscar otra salida con cinco personas. Cada una carga una sola cosa: un encendedor, una cámara, un botiquín, una llave y una aspiradora. Y si alguien muere, no regresa: se queda muerto hasta el final. Este dilema le pasa a Kazuo Hoshino y a su equipo en Sweet Home, de Capcom. Salió para Famicom en 1989, y sólo en Japón. Años después, Capcom quiso rehacerlo… y de ahí nació Resident Evil.",
+ "en": "Imagine you're part of a TV crew. You have to enter an abandoned mansion and photograph the frescoes a painter hid there thirty years ago. But there's a problem: as soon as you walk in, the ghost of a woman seals the exit. And the house is falling apart. So now you have to find another way out with five people. Each one carries a single tool: a lighter, a camera, a first-aid kit, a key, and a vacuum cleaner. And if someone dies, they stay dead for the rest of the game. This is what happens to Kazuo Hoshino and his crew in Sweet Home, by Capcom. It came out for the Famicom in 1989, only in Japan. Years later, Capcom set out to remake it… and that project became Resident Evil.",
+ "ja": "想像してみてください。あなたはテレビの取材班の一人です。30年前に画家が隠したフレスコ画を撮影するため、廃墟の屋敷に入ります。ところが、問題が起きます。入ったとたん、女の幽霊に出口をふさがれてしまいます。しかも、屋敷は今にも崩れそうです。そこであなたは、5人で別の出口を探すことになります。持ち物は一人ひとつだけ。ライター、カメラ、薬箱、鍵、そして掃除機です。そして、仲間が死んだら、最後まで生き返りません。これは、カプコンの「スウィートホーム」で星野和夫たちに起きる出来事です。1989年にファミコンで、日本だけで発売されました。数年後、カプコンはこのゲームを作り直そうとして……そこから「バイオハザード」が生まれました。",
+ "clave": "lo-conoces-sweet-home",
+ "escenas": [
+  {
+   "imagen": "1-mansion.png",
+   "cara": "normal",
+   "es": {
+    "texto": "IMAGINA QUE ERES…",
+    "frases": [
+     "Imagina que eres parte de un equipo de televisión.",
+     "Tienes que entrar a una mansión abandonada y fotografiar los frescos que un pintor escondió ahí hace treinta años."
+    ]
+   },
+   "en": {
+    "texto": "IMAGINE YOU ARE…",
+    "frases": [
+     "Imagine you're part of a TV crew.",
+     "You have to enter an abandoned mansion and photograph the frescoes a painter hid there thirty years ago."
+    ]
+   },
+   "ja": {
+    "texto": "想像してみて…",
+    "frases": [
+     "想像してみてください。あなたはテレビの取材班の一人です。",
+     "30年前に画家が隠したフレスコ画を撮影するため、廃墟の屋敷に入ります。"
+    ]
+   }
+  },
+  {
+   "imagen": "2-fantasma.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "PERO HAY UN PROBLEMA",
+    "frases": [
+     "Pero hay un problema: en cuanto entran, el fantasma de una mujer les cierra la salida.",
+     "Y la casa se está cayendo a pedazos."
+    ]
+   },
+   "en": {
+    "texto": "BUT THERE'S A PROBLEM",
+    "frases": [
+     "But there's a problem: as soon as you walk in, the ghost of a woman seals the exit.",
+     "And the house is falling apart."
+    ]
+   },
+   "ja": {
+    "texto": "ところが、問題が…",
+    "frases": [
+     "ところが、問題が起きます。入ったとたん、女の幽霊に出口をふさがれてしまいます。",
+     "しかも、屋敷は今にも崩れそうです。"
+    ]
+   }
+  },
+  {
+   "imagen": "3-cinco.png",
+   "cara": "pensando",
+   "es": {
+    "texto": "5 PERSONAS, 5 COSAS",
+    "frases": [
+     "Entonces ahora tú tendrás que buscar otra salida con cinco personas.",
+     "Cada una carga una sola cosa: un encendedor, una cámara, un botiquín, una llave y una aspiradora."
+    ]
+   },
+   "en": {
+    "texto": "5 PEOPLE, 5 TOOLS",
+    "frases": [
+     "So now you have to find another way out with five people.",
+     "Each one carries a single tool: a lighter, a camera, a first-aid kit, a key, and a vacuum cleaner."
+    ]
+   },
+   "ja": {
+    "texto": "5人、持ち物はひとつ",
+    "frases": [
+     "そこであなたは、5人で別の出口を探すことになります。",
+     "持ち物は一人ひとつだけ。ライター、カメラ、薬箱、鍵、そして掃除機です。"
+    ]
+   }
+  },
+  {
+   "imagen": "4-quien-muere.png",
+   "cara": "triste",
+   "es": {
+    "texto": "QUIEN MUERE, NO REGRESA",
+    "frases": [
+     "Y si alguien muere, no regresa: se queda muerto hasta el final."
+    ]
+   },
+   "en": {
+    "texto": "NO ONE COMES BACK",
+    "frases": [
+     "And if someone dies, they stay dead for the rest of the game."
+    ]
+   },
+   "ja": {
+    "texto": "死んだら、戻らない",
+    "frases": [
+     "そして、仲間が死んだら、最後まで生き返りません。"
+    ]
+   }
+  },
+  {
+   "imagen": "5-cartucho.png",
+   "cara": "feliz",
+   "es": {
+    "texto": "SWEET HOME · FAMICOM",
+    "frases": [
+     "Este dilema le pasa a Kazuo Hoshino y a su equipo en Sweet Home, de Capcom.",
+     "Salió para Famicom en 1989, y sólo en Japón."
+    ]
+   },
+   "en": {
+    "texto": "SWEET HOME · FAMICOM",
+    "frases": [
+     "This is what happens to Kazuo Hoshino and his crew in Sweet Home, by Capcom.",
+     "It came out for the Famicom in 1989, only in Japan."
+    ]
+   },
+   "ja": {
+    "texto": "スウィートホーム",
+    "frases": [
+     "これは、カプコンの「スウィートホーム」で星野和夫たちに起きる出来事です。",
+     "1989年にファミコンで、日本だけで発売されました。"
+    ]
+   }
+  },
+  {
+   "imagen": "6-legado.png",
+   "cara": "guino",
+   "es": {
+    "texto": "…Y NACIÓ RESIDENT EVIL",
+    "frases": [
+     "Años después, Capcom quiso rehacerlo… y de ahí nació Resident Evil."
+    ]
+   },
+   "en": {
+    "texto": "…THEN: RESIDENT EVIL",
+    "frases": [
+     "Years later, Capcom set out to remake it… and that project became Resident Evil."
+    ]
+   },
+   "ja": {
+    "texto": "…そしてバイオハザードへ",
+    "frases": [
+     "数年後、カプコンはこのゲームを作り直そうとして……そこから「バイオハザード」が生まれました。"
+    ]
+   }
+  }
+ ],
+ "cierre": {
+  "es": {
+   "voz": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en Daily Challenge punto click.",
+   "dice": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en dailychallenge.click"
+  },
+  "en": {
+   "voz": "And if you like retro games, there's a different one every day, free, at Daily Challenge dot click.",
+   "dice": "And if you like retro games, there's a different one every day, free, at dailychallenge.click"
+  },
+  "ja": {
+   "voz": "レトロゲームが好きなら、デイリーチャレンジ・ドット・クリックで毎日ちがうゲームが無料で遊べるよ。",
+   "dice": "レトロゲームが好きなら、dailychallenge.clickで毎日ちがうゲームが無料で遊べるよ。"
+  }
+ },
+ "pregunta": {
+  "imagen": "5-cartucho.png",
+  "cara": "feliz",
+  "es": {
+   "texto": "¿LO CONOCÍAS?",
+   "frases": [
+    "¿Lo conocías? Cuéntame en los comentarios."
+   ]
+  },
+  "en": {
+   "texto": "DID YOU KNOW IT?",
+   "frases": [
+    "Did you know it? Tell me in the comments."
+   ]
+  },
+  "ja": {
+   "texto": "知っていましたか？",
+   "frases": [
+    "知っていましたか？コメントで教えてね。"
+   ]
+  }
+ }
 }
