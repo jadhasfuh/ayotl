@@ -2185,5 +2185,100 @@
   "idioma": "ja",
   "id": "tuUQR0cz-8w",
   "en_tiktok": "2026-11-18T19:40:00-06:00"
+ },
+ {
+  "clave": "algoritmos-pila",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/estructuras-de-datos",
+  "video": "salida/algoritmos-pila.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-20T16:00:00-06:00",
+  "titulo": "ALGORITMOS: La pila (stack) en 1 minuto #Shorts",
+  "descripcion": "La pila (stack) en 1 minuto: lo último que entra es lo primero que sale. Con push se mete arriba y con pop se saca lo de arriba; así se revisa si los paréntesis de un programa cierran bien, y así funcionan deshacer y el botón de atrás. Meter y sacar: O(1).\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/estructuras-de-datos/pilas",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "estructuras de datos",
+   "pila",
+   "stack",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "HvqSE5ObfY4",
+  "en_tiktok": "2026-11-20T16:00:00-06:00"
+ },
+ {
+  "clave": "algoritmos-pila-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/estructuras-de-datos",
+  "video": "salida/algoritmos-pila-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-20T16:20:00-06:00",
+  "titulo": "ALGORITHMS: The stack in 1 minute #Shorts",
+  "descripcion": "The stack in 1 minute: last in, first out. Push puts a box on top and pop takes the top one off; that is how you check whether the brackets in a program are balanced, and how undo and the back button work. Push and pop: O(1).\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/estructuras-de-datos/pilas",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "data structures",
+   "stack",
+   "balanced parentheses",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "OyqDa1N5ViY",
+  "en_tiktok": "2026-11-20T16:20:00-06:00"
+ },
+ {
+  "clave": "algoritmos-cola",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/estructuras-de-datos",
+  "video": "salida/algoritmos-cola.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-22T16:00:00-06:00",
+  "titulo": "ALGORITMOS: La cola (queue) en 1 minuto #Shorts",
+  "descripcion": "La cola (queue) en 1 minuto: el primero que llega es el primero al que atienden, como en la fila de las tortillas. Con push se entra por atrás y con shift se sale por delante; pero shift recorre a todos los que quedan, O(n), y el truco es un índice que avanza sin mover a nadie: O(1). Así trabajan la cola de impresión y tus mensajes.\n\nCon el código en JavaScript, la línea que corre resaltada y LeIA explicándolo paso a paso. Serie «Algoritmos en pixel».\n\n🧑‍💻 La lección, con este mismo código para correrlo y ejercicios: https://ayotl.dev/aprende/estructuras-de-datos/colas",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "estructuras de datos",
+   "cola",
+   "queue",
+   "fifo",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "IbXM--oqbQY",
+  "en_tiktok": "2026-11-22T16:00:00-06:00"
+ },
+ {
+  "clave": "algoritmos-cola-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/estructuras-de-datos",
+  "video": "salida/algoritmos-cola-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-22T16:20:00-06:00",
+  "titulo": "ALGORITHMS: The queue in 1 minute #Shorts",
+  "descripcion": "The queue in 1 minute: first come, first served, like the line at the tortilla shop. Push adds at the back and shift removes from the front; but shift moves everyone who is left, O(n), and the trick is an index that advances without moving anyone: O(1). That is how the print queue and your messages work.\n\nWith the JavaScript code, the running line highlighted and LeIA explaining it step by step. Series «Algorithms in pixels».\n\n🧑‍💻 The lesson, with this same code to run and exercises: https://ayotl.dev/en/learn/estructuras-de-datos/colas",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "data structures",
+   "queue",
+   "fifo",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "VuD8Vtiu8L4",
+  "en_tiktok": "2026-11-22T16:20:00-06:00"
  }
 ]
