@@ -8,7 +8,8 @@ Adrián del 14-nov-2026) a partir de su ficha: lo-conoces/<juego>.json, con los 
 
 Escribe salida/<clave>[-en|-ja].json (el guion de comercial.py) y arma salida/<clave>[-en|-ja].mp4. Con --publicar
 no arma nada: apunta en youtube.json los vídeos ya armados y revisados, ese día a las 13:00 (es), 13:20 (en) y 13:40
-(ja), con el título y la descripción de `youtube` en la ficha (app `loconoces`). Los sube subir-youtube.py. Como
+(ja), con el título y la descripción de `youtube` en la ficha (app `loconoces`), y manda el español a Instagram y
+Facebook con dc-social.py (--sin-social para no hacerlo). Los sube subir-youtube.py. Como
 los demás, escribe youtube.json: nunca a la vez. Adrián aprobó el formato con el piloto de Sweet Home (16-nov-2026).
 """
 import json, os, subprocess, sys
@@ -67,6 +68,11 @@ def planear(ficha, idiomas, fecha):
         plan = [x for x in plan if x['clave'] != clave] + [v]
         print(f"  plan: {clave} sale el {v['publicar']}")
     json.dump(plan, open(ruta, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    # el español también a Instagram y Facebook, ese día a las 13:00 (el hueco de los anuncios de Daily Challenge): el
+    # 16-nov-2026 los tres primeros no estaban apuntados y hubo que mandarlos a mano. Si el hueco está ocupado, dc-social
+    # se niega y lo dice: se le busca otro día con `dc-social.py <clave> --hueco anuncio --dia AAAA-MM-DD`.
+    if 'es' in idiomas and '--sin-social' not in sys.argv:
+        subprocess.run([sys.executable, os.path.join(COM, 'dc-social.py'), ficha['clave'], '--hueco', 'anuncio'])
 
 
 def main():

@@ -14,7 +14,7 @@ DC_RAIZ=<carpeta> trabaja sobre otra copia de Daily Challenge (un worktree sobre
 Lo que se dice sale de stats.json: el título y el subtítulo tal cual («Las empresas más viejas, y qué hacían
 cuando nacieron») y el remate. Los números se leen como están: Chirp los dice bien en español.
 """
-import hashlib, json, os, shutil, sys, tempfile
+import hashlib, json, os, re, shutil, statistics, subprocess, sys, tempfile
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, AQUI)
@@ -35,6 +35,28 @@ def frases(s):
     t = t[0] + t[1:].lower() if t.isupper() else t
     titulo = f"{t} {s['subtitulo']}".strip()
     return [f'Daily Stat. {titulo}.', s['remate']]
+
+
+def revisar(stats):
+    """Cuánto dura la voz del título por cada letra de su texto, contra la mediana. Una voz que deletrea tarda mucho
+    más que una que lee (16-nov-2026: «LOS KICKSTARTERS…» medía 1.61 veces lo normal; las buenas, de 0.79 a 1.16).
+    No sustituye a oírla, pero avisa sin tener que escuchar la tanda entera."""
+    import imageio_ffmpeg
+    ff = imageio_ffmpeg.get_ffmpeg_exe(); filas = []
+    for s in stats:
+        ruta = os.path.join(VOZ, f"{s['id']}-1.mp3")
+        if not os.path.exists(ruta):
+            continue
+        m = re.search(r'Duration: (\d+):(\d+):([\d.]+)', subprocess.run([ff, '-i', ruta], capture_output=True, text=True).stderr)
+        if m:
+            filas.append((s['id'], (int(m[2]) * 60 + float(m[3])) / len(frases(s)[0])))
+    if len(filas) < 5:
+        return
+    mediana = statistics.median(r for _, r in filas)
+    raras = [(i, r / mediana) for i, r in filas if r > mediana * 1.3]
+    for i, x in raras:
+        print(f'  ojo: la voz de «{i}» dura {x:.2f} veces lo normal para sus letras: ¿deletrea algo? Escúchala')
+    print(f'  duración por letra: mediana {mediana:.3f} s, {len(raras)} de {len(filas)} fuera de lo normal')
 
 
 def main():
@@ -61,6 +83,7 @@ def main():
             huella = hashlib.sha1(f'{NOMBRE}|{IDIOMA}|{texto}'.encode()).hexdigest()[:20]
             shutil.copy(os.path.join(C.CACHE, huella + '.mp3'), destino); hechas += 1
     print(f'{len(stats)} datos y el cierre, {hechas} frases grabadas, en {VOZ}')
+    revisar(stats)
 
 
 if __name__ == '__main__':

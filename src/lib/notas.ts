@@ -3,6 +3,7 @@ import { NOTA_BITACORA_OCTUBRE } from "./nota-bitacora-octubre";
 import { NOTA_DNS } from "./nota-dns";
 import { NOTAS_10_NOV } from "./notas-10-nov";
 import { NOTAS_12_NOV } from "./notas-12-nov";
+import { NOTAS_16_NOV } from "./notas-16-nov";
 
 /**
  * Notas técnicas: problemas reales de los tres productos, contados por
@@ -324,6 +325,15 @@ reason: INVALID_REQUEST_METADATA`, pie: {
       { tipo: "p", texto: {
         es: "Y una buena noticia que la documentación no deja clara: aunque el proyecto no haya pasado la auditoría de la API, un vídeo subido como privado con fecha de publicación se publica solo a su hora. La auditoría hace falta para subir más de seis vídeos al día, no para publicarlos.",
         en: "And some good news the documentation doesn't make clear: even if the project hasn't passed the API audit, a video uploaded as private with a publish date goes public on its own at that time. The audit is needed to upload more than six videos a day, not to publish them.",
+      } },
+      { tipo: "h2", texto: { es: "Actualización, 16 de noviembre", en: "Update, November 16" } },
+      { tipo: "p", texto: {
+        es: "Dos datos de esta nota envejecieron. Según el historial de cambios de la API, desde diciembre de 2025 una subida ya no cuesta 1 600 unidades sino unas 100, y desde junio de 2026 las subidas llevan su propio cupo diario, aparte de las 10 000 unidades. Lo comprobamos en la consola de Google Cloud el 30 de octubre, el día que subieron once vídeos sin tocar ningún tope: nuestro «seis al día» era una cuenta hecha con la tarifa vieja. La lección va más allá de YouTube: una cuota que uno se sabe de memoria hay que volver a leerla antes de planear con ella.",
+        en: "Two facts in this note have aged. According to the API's revision history, since December 2025 an upload no longer costs 1,600 units but about 100, and since June 2026 uploads have their own daily allowance, separate from the 10,000 units. We checked it in the Google Cloud console on October 30, the day eleven videos went up without hitting any cap: our “six a day” was arithmetic done with the old price. The lesson goes beyond YouTube: a quota you know by heart needs re-reading before you plan around it.",
+      } },
+      { tipo: "p", texto: {
+        es: "Y una cuarta trampa, que no falla el primer día sino el octavo. Mientras la pantalla de consentimiento del proyecto esté en modo de prueba, Google caduca el permiso a los siete días. El script que subía solo cada mañana se queda entonces esperando una ventana del navegador que nadie está mirando. No se arregla con código: o se publica la aplicación, o alguien vuelve a autorizar cada semana. Lo que sí se puede es apuntar en el calendario el día que vence.",
+        en: "And a fourth trap, one that doesn't fail on day one but on day eight. While the project's consent screen is in testing mode, Google expires the permission after seven days. The script that uploaded on its own every morning then sits waiting for a browser window nobody is looking at. Code doesn't fix it: either the app gets published, or someone authorizes again every week. What you can do is put the expiry date on the calendar.",
       } },
     ],
   },
@@ -648,6 +658,11 @@ if (a !== b || a !== c) process.exit(1);`, pie: { es: "La prueba que corre antes
         es: "Lo que hace que el curso se pueda mantener es una prueba: `npm run aprende` corre cada programa y cada solución de las 48 lecciones con el mismo ejecutor que usa la página, y falla si alguno no imprime lo que la lección dice que imprime. Un curso de programación con un ejemplo que no compila es peor que no tener curso.",
         en: "What makes the course maintainable is a test: `npm run aprende` runs every program and every solution in the 48 lessons with the same executor the page uses, and fails if any of them doesn't print what the lesson says it prints. A programming course with an example that doesn't run is worse than no course.",
       } },
+      { tipo: "h2", texto: { es: "Actualización, 16 de noviembre", en: "Update, November 16" } },
+      { tipo: "p", texto: {
+        es: "Las lecciones ya tienen compañía: los Shorts de «Algoritmos en pixel», donde el mismo programa corre línea por línea mientras una animación mueve las barras de un ordenamiento, las cajas de una pila o la fila de una cola. La regla es que el código del vídeo sea el de la lección, con las mismas palabras y en el mismo orden: cuando un renglón no cabe en la pantalla del teléfono se parte en dos, pero no se reescribe. Y se comprueba como lo demás, con un programa: se quitan espacios y comentarios a los dos y tienen que quedar iguales. Hoy cuadran los siete: burbuja, inserción, selección, mezcla, rápido, la pila y la cola.",
+        en: "The lessons now have company: the “Algorithms in pixels” Shorts, where the same program runs line by line while an animation moves the bars of a sort, the boxes of a stack or the line of a queue. The rule is that the video's code is the lesson's code, same words in the same order: when a line doesn't fit on a phone screen it gets split in two, but not rewritten. And it's checked like everything else, by a program: strip spaces and comments from both and they have to come out identical. All seven match today: bubble, insertion, selection, merge, quick, the stack and the queue.",
+      } },
     ],
   },
   {
@@ -804,6 +819,7 @@ db.from("ranking").select("fecha, puntaje, perfiles(nombre)").eq("puesto", 1).in
   NOTA_DNS,   // los tres dominios que abrían para unos y para otros no (3 y 4-nov-2026): en su propio archivo
   ...NOTAS_10_NOV,   // la victoria que no contaba, el volcán, el ranking de ZANEI y las reseñas de Mercadito (10-nov-2026)
   ...NOTAS_12_NOV,   // la prueba con tropiezos, la puerta que entregaba las llaves y la moderación graduada de Eventos (12-nov-2026)
+  ...NOTAS_16_NOV,   // la voz que deletreaba los títulos del Daily Stat y los dibujos con código de «¿Lo conoces?» (16-nov-2026)
 ];
 
 export function notaPorId(id: string): Nota | undefined {
