@@ -8,7 +8,7 @@ import { Leccion } from "@/components/aprende/Leccion";
 import { TextoRico } from "@/components/aprende/TextoRico";
 import { Cabecera } from "@/components/Cabecera";
 import { CURSOS, cursoPorId, leccionPorId, leccionesDe, rutaCurso, rutaLeccion } from "@/lib/aprende";
-import { en, urlEn } from "@/lib/aprende/tipos";
+import { en, urlEn, videoPublico } from "@/lib/aprende/tipos";
 import { IDIOMAS, t } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
 import { enlaceReto, publicados } from "@/lib/retos";
@@ -20,8 +20,9 @@ export function generateStaticParams() {
   return IDIOMAS.flatMap((i) => CURSOS.flatMap((c) => leccionesDe(c).map((l) => ({ idioma: i.id, curso: c.id, leccion: l.id }))));
 }
 export const dynamicParams = false;
-// Los retos enlazados aparecen el día que se publica su vídeo (ver lib/retos):
-// la página se rehace cada hora en vez de quedarse con los del build.
+// Los retos enlazados aparecen el día que se publica su vídeo (ver lib/retos),
+// y el vídeo de la lección, a la hora en que deja de ser privado: la página se
+// rehace cada hora en vez de quedarse con lo del build.
 export const revalidate = 3600;
 
 async function datosDe(params: Props["params"]) {
@@ -64,6 +65,7 @@ export default async function PaginaLeccion({ params }: Props) {
     .filter((r) => r !== undefined)
     .map((r) => ({ href: enlaceReto(r.slug, idioma), titulo: r.titulo }));
   const camino = rutaCurso(c.id, idioma);
+  const video = videoPublico(l, idioma);
 
   return (
     <>
@@ -75,6 +77,18 @@ export default async function PaginaLeccion({ params }: Props) {
             <Link href={camino}>← {c.titulo[idioma]}</Link> · {x("aprendeLeccionDe")} {numero}/{leccionesDe(c).length}
           </p>
           <h1 className="leccion-h1">{l.titulo[idioma]}</h1>
+
+          {video && (
+            <details className="leccion-video">
+              <summary>{x("aprendeVideo")}</summary>
+              <div className="reto-video vertical">
+                <iframe src={`https://www.youtube-nocookie.com/embed/${video}`} title={l.titulo[idioma]}
+                        loading="lazy" allowFullScreen
+                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" />
+              </div>
+              <p><a href={`https://www.youtube.com/shorts/${video}`} target="_blank" rel="noopener">{x("retosVerYoutube")} →</a></p>
+            </details>
+          )}
 
           <Leccion curso={c.id} leccion={l} idioma={idioma} camino={camino} retos={retos}
                    siguiente={siguiente && { href: rutaLeccion(c.id, siguiente.id, idioma), titulo: siguiente.titulo[idioma] }} />

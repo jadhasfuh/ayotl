@@ -6,6 +6,7 @@ export const U03: Unidad = {
   lecciones: [
     {
       id: "pilas",
+      video: { es: { id: "HvqSE5ObfY4", desde: "2026-11-20T16:00:00-06:00" }, en: { id: "OyqDa1N5ViY", desde: "2026-11-20T16:20:00-06:00" } },
       titulo: { es: "Pilas: el último en entrar sale primero", en: "Stacks: last in, first out" },
       resumen: {
         es: "Una pila de platos en código: push y pop, el botón de deshacer, la pila de llamadas y los paréntesis balanceados.",
@@ -119,6 +120,7 @@ export const U03: Unidad = {
     },
     {
       id: "colas",
+      video: { es: { id: "IbXM--oqbQY", desde: "2026-11-22T16:00:00-06:00" }, en: { id: "VuD8Vtiu8L4", desde: "2026-11-22T16:20:00-06:00" } },
       titulo: { es: "Colas: el primero en llegar sale primero", en: "Queues: first come, first served" },
       resumen: {
         es: "La fila de la tortillería en código, por qué shift sale caro y cómo hacer una cola O(1) con un índice.",

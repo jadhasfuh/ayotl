@@ -232,6 +232,7 @@ const TEXTOS = {
   aprendeTodosCursos: { es: "Todos los cursos", en: "All courses" },
   aprendeLeccionDe: { es: "Lección", en: "Lesson" },
   aprendeLeerTodo: { es: "Toda la lección en una página", en: "The whole lesson on one page" },
+  aprendeVideo: { es: "▶ Míralo en vídeo: un minuto con LeIA", en: "▶ Watch it as a video: one minute with LeIA" },
   aprendePractica: { es: "Practica con un reto en vídeo", en: "Practice with a video challenge" },
   aprendeLeerMas: { es: "Para leer más", en: "Further reading" },
   aprendeSalir: { es: "Salir de la lección", en: "Leave the lesson" },

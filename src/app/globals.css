@@ -841,6 +841,11 @@ a.camino-titulo:hover { text-decoration: underline; }
 .leccion-retos { margin: 1.5rem auto 0; max-width: 30rem; }
 .leccion-retos ul { list-style: none; padding: 0; }
 
+/* El Short de la lección: plegado bajo el título, para no empujar las tarjetas. */
+.leccion-video { margin: 0.25rem 0 1.5rem; }
+.leccion-video summary { cursor: pointer; font-weight: 600; color: var(--acento); }
+.leccion-video .reto-video { margin-top: 0.9rem; }
+.leccion-video p { margin-top: 0.6rem; }
 .leccion-entera { margin-top: 3rem; border-top: 1px solid var(--linea); padding-top: 1.25rem; }
 .leccion-entera summary { cursor: pointer; font-weight: 600; color: var(--acento); }
 .leccion-entera section { margin-top: 2rem; }

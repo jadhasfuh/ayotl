@@ -49,12 +49,21 @@ export type Paso =
   /** Escribir código que pasa unas pruebas, en el navegador de quien lo escribe. */
   | { tipo: "escribe"; pregunta: T; inicial: string | T; pruebas: Prueba[]; solucion: string; porque: T };
 
+/**
+ * El Short de YouTube que acompaña a una lección: el mismo programa, corriendo
+ * línea por línea con LeIA. Por idioma, el id y desde cuándo es público (ISO
+ * con zona): antes de esa hora el vídeo es privado y el reproductor diría
+ * «vídeo no disponible», así que la lección no lo enseña todavía.
+ */
+export type VideoLeccion = Record<Idioma, { id: string; desde: string }>;
+
 export type Leccion = {
   id: string;
   titulo: T;
   resumen: T;              // una línea: sale en el camino y en los buscadores
   pasos: Paso[];
   retos?: string[];        // slugs de /retos para practicar después (sólo salen los ya publicados)
+  video?: VideoLeccion;    // su Short de «Algoritmos en pixel», con el mismo código (sale desde que es público)
   enlaces?: Enlace[];      // para leer más
 };
 
@@ -82,4 +91,10 @@ export function urlEn(url: string, idioma: Idioma): string {
   for (const [es, en] of [["/notas/", "/en/notes/"], ["/retos/", "/en/challenges/"], ["/aprende/", "/en/learn/"]] as const)
     if (url.startsWith(es)) return en + url.slice(es.length);
   return url;
+}
+
+/** El id del vídeo de la lección en ese idioma, si ya es público. */
+export function videoPublico(l: Leccion, idioma: Idioma, ahora = Date.now()): string | null {
+  const v = l.video?.[idioma];
+  return v && Date.parse(v.desde) <= ahora ? v.id : null;
 }

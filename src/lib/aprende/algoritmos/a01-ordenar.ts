@@ -87,6 +87,7 @@ export const A01: Unidad = {
   lecciones: [
     {
       id: "burbuja",
+      video: { es: { id: "04maLHUEZrU", desde: "2026-11-10T16:00:00-06:00" }, en: { id: "rOYKd7D7QKs", desde: "2026-11-10T16:20:00-06:00" } },
       titulo: { es: "Ordenamiento por burbuja", en: "Bubble sort" },
       resumen: {
         es: "Comparar vecinos y cambiarlos si están al revés, pasada tras pasada: el ordenamiento más fácil de entender, y por qué es O(n²).",
@@ -261,6 +262,7 @@ export const A01: Unidad = {
     },
     {
       id: "insercion",
+      video: { es: { id: "bMW1WrOYbYo", desde: "2026-11-12T16:00:00-06:00" }, en: { id: "ISZtHWu6LQw", desde: "2026-11-12T16:20:00-06:00" } },
       titulo: { es: "Ordenamiento por inserción", en: "Insertion sort" },
       resumen: {
         es: "Como acomodar cartas en la mano: cada número se recorre a la izquierda hasta su lugar. O(n²), pero casi gratis si la lista ya viene ordenada.",
@@ -464,6 +466,7 @@ console.log("reversed:", comparaciones(alReves));`,
     },
     {
       id: "seleccion",
+      video: { es: { id: "K-VyGS1le_0", desde: "2026-11-14T16:00:00-06:00" }, en: { id: "D3ePUQzHW7E", desde: "2026-11-14T16:20:00-06:00" } },
       titulo: { es: "Ordenamiento por selección", en: "Selection sort" },
       resumen: {
         es: "Busca el más chico y ponlo al frente; luego el siguiente. Siempre n(n - 1)/2 comparaciones, pero sólo n - 1 intercambios.",
@@ -645,6 +648,7 @@ console.log("reversed:", cuenta([...ordenada].reverse()));`,
     },
     {
       id: "mezcla",
+      video: { es: { id: "io584-6PBQ0", desde: "2026-11-16T16:00:00-06:00" }, en: { id: "0iS-YKK2TIc", desde: "2026-11-16T16:20:00-06:00" } },
       titulo: { es: "Ordenamiento por mezcla", en: "Merge sort" },
       resumen: {
         es: "Parte a la mitad, ordena cada mitad con la misma función y mezcla las dos: O(n log n), a cambio de memoria extra.",
@@ -844,6 +848,7 @@ for (const n of [100, 1000]) {
     },
     {
       id: "rapido",
+      video: { es: { id: "qt9wmfuny8g", desde: "2026-11-18T16:00:00-06:00" }, en: { id: "hSXJn9peB1Q", desde: "2026-11-18T16:20:00-06:00" } },
       titulo: { es: "Ordenamiento rápido (quicksort)", en: "Quicksort" },
       resumen: {
         es: "Elige un pivote, deja a los menores a su izquierda y repite con cada lado: O(n log n) en promedio, sin memoria extra; O(n²) con un mal pivote.",
