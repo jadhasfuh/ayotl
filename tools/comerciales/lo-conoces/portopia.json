@@ -1,0 +1,264 @@
+{
+ "_nota": "Segunda ficha de «¿Lo conoces?» (16-nov-2026), para el martes 1-dic. Cada dato salió de las fuentes de abajo, leídas ese día. No se cuenta quién es el culpable. Los dibujos son de arte_portopia.py (nada del juego). Ojo con dos datos donde las fuentes no coinciden y que por eso NO se dicen: las ventas de la versión de Famicom (700 000 según la Wikipedia en inglés; 600 000 u 800 000 según la japonesa) y el giro de la víctima (la inglesa dice banco; la japonesa, una financiera de préstamos al consumo, «ローンやまきん»: se usa la japonesa).",
+ "juego": "The Portopia Serial Murder Case (ポートピア連続殺人事件)",
+ "clave": "lo-conoces-portopia",
+ "ficha": {
+  "plataforma": "NEC PC-6001 (después PC-8801, FM-7, X1, MSX y Famicom)",
+  "fecha": "1983-06",
+  "empresa": "Enix",
+  "autor": "Yuji Horii",
+  "solo_en_japon": true
+ },
+ "hechos": [
+  "Salió en junio de 1983 para la NEC PC-6001, publicado por Enix; ese mismo año pasó a PC-8801, PC-8001mkII, FM-7 y X1; MSX en junio de 1985 y Famicom el 29 de noviembre de 1985 (versión de Chunsoft).",
+  "Diseño, guion, programa y gráficos de Yuji Horii; la versión de PC-6001 la hizo casi solo.",
+  "La trama: matan a Kōzō Yamakawa, presidente de la financiera «Loan Yamakin»; lo encuentra su secretaria, Fumie Sawaki, en un cuarto cerrado de su mansión. Pasa sobre todo en Kobe.",
+  "El jugador es un detective sin nombre al que llaman «Boss» (Jefe); su ayudante Yasuhiko Mano, «Yasu», es quien habla y ejecuta las órdenes.",
+  "En las versiones de computadora las órdenes se escriben (verbo y sustantivo) y dar con la palabra exacta es parte del reto; la de Famicom las cambió por un menú de 14 órdenes.",
+  "El juego original no se publicó en Occidente (en 2023 Square Enix sacó en Steam una demostración técnica con IA basada en él).",
+  "Fue la base del trabajo de Horii en Dragon Quest (1986)."
+ ],
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/The_Portopia_Serial_Murder_Case",
+  "https://ja.wikipedia.org/wiki/ポートピア連続殺人事件"
+ ],
+ "escenas": [
+  {
+   "imagen": "1-puerto.png",
+   "cara": "normal",
+   "es": {
+    "texto": "IMAGINA QUE ERES…",
+    "frases": [
+     "Imagina que eres detective en la ciudad de Kobe.",
+     "Y tienes que resolver el asesinato del dueño de una casa de préstamos."
+    ]
+   },
+   "en": {
+    "texto": "IMAGINE YOU ARE…",
+    "frases": [
+     "Imagine you're a detective in the city of Kobe.",
+     "And you have to solve the murder of a loan company president."
+    ]
+   },
+   "ja": {
+    "texto": "想像してみて…",
+    "frases": [
+     "想像してみてください。あなたは神戸の刑事です。",
+     "金融会社の社長が殺された事件を、解決しなければなりません。"
+    ]
+   }
+  },
+  {
+   "imagen": "2-cuarto.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "PERO HAY UN PROBLEMA",
+    "frases": [
+     "Pero hay un problema: lo encontraron en un cuarto cerrado por dentro.",
+     "Nadie más pudo entrar… ni salir."
+    ]
+   },
+   "en": {
+    "texto": "BUT THERE'S A PROBLEM",
+    "frases": [
+     "But there's a problem: he was found in a room locked from the inside.",
+     "No one else could get in… or out."
+    ]
+   },
+   "ja": {
+    "texto": "ところが、問題が…",
+    "frases": [
+     "ところが、問題があります。現場は、内側から鍵のかかった密室でした。",
+     "誰も入れないし、出られないはずです。"
+    ]
+   }
+  },
+  {
+   "imagen": "3-sospechosos.png",
+   "cara": "pensando",
+   "es": {
+    "texto": "TÚ MANDAS, YASU ACTÚA",
+    "frases": [
+     "Entonces ahora tú tendrás que buscar pistas e interrogar sospechosos por toda la ciudad.",
+     "Pero tú no te mueves: le das órdenes a Yasu, tu ayudante, y él lo hace todo."
+    ]
+   },
+   "en": {
+    "texto": "YOU ORDER, YASU ACTS",
+    "frases": [
+     "So now you have to hunt for clues and question suspects all over the city.",
+     "But you never move: you give orders to Yasu, your assistant, and he does everything."
+    ]
+   },
+   "ja": {
+    "texto": "命令するのは、あなた",
+    "frases": [
+     "そこであなたは、町じゅうで手がかりを探し、容疑者に話を聞くことになります。",
+     "でも、動くのはあなたではありません。部下のヤスに命令して、すべてやってもらいます。"
+    ]
+   }
+  },
+  {
+   "imagen": "4-teclado.png",
+   "cara": "enojo",
+   "es": {
+    "texto": "SIN MENÚS: A ESCRIBIR",
+    "frases": [
+     "Y no hay menús: cada orden se escribe con el teclado, y hay que atinarle a la palabra exacta."
+    ]
+   },
+   "en": {
+    "texto": "NO MENUS: JUST TYPING",
+    "frases": [
+     "And there are no menus: you type every order on the keyboard, and you have to guess the exact word."
+    ]
+   },
+   "ja": {
+    "texto": "メニューなし、文字入力",
+    "frases": [
+     "しかもメニューはありません。命令はキーボードで打ち込み、正しい言葉を当てなければなりません。"
+    ]
+   }
+  },
+  {
+   "imagen": "5-casete.png",
+   "cara": "feliz",
+   "es": {
+    "texto": "PORTOPIA · ENIX · 1983",
+    "frases": [
+     "Este dilema le pasa al Jefe, un detective sin nombre, en Portopia: el caso de los asesinatos en serie.",
+     "Es de Enix: salió en 1983 para computadoras japonesas como la NEC PC-6001 y la PC-8801.",
+     "Y el juego original nunca se publicó fuera de Japón."
+    ]
+   },
+   "en": {
+    "texto": "PORTOPIA · ENIX · 1983",
+    "frases": [
+     "This is what happens to Boss, a nameless detective, in The Portopia Serial Murder Case.",
+     "It's by Enix: released in 1983 for Japanese computers like the NEC PC-6001 and PC-8801.",
+     "And the original game was never published outside Japan."
+    ]
+   },
+   "ja": {
+    "texto": "ポートピア連続殺人事件",
+    "frases": [
+     "これは、エニックスの「ポートピア連続殺人事件」で、名前のない刑事「ボス」に起きる出来事です。",
+     "1983年に、PC-6001やPC-8801などのパソコンで発売されました。",
+     "そして、オリジナル版は日本でしか発売されていません。"
+    ]
+   }
+  },
+  {
+   "imagen": "6-legado.png",
+   "cara": "guino",
+   "es": {
+    "texto": "…Y LUEGO, DRAGON QUEST",
+    "frases": [
+     "Lo hizo casi solo un tal Yuji Horii… que tres años después creó Dragon Quest."
+    ]
+   },
+   "en": {
+    "texto": "…THEN CAME DRAGON QUEST",
+    "frases": [
+     "It was made almost single-handedly by one Yuji Horii… who created Dragon Quest three years later."
+    ]
+   },
+   "ja": {
+    "texto": "…そしてドラクエへ",
+    "frases": [
+     "作ったのは堀井雄二さん。ほぼ一人で作り上げ、3年後に「ドラゴンクエスト」を生み出しました。"
+    ]
+   }
+  }
+ ],
+ "pregunta": {
+  "imagen": "5-casete.png",
+  "cara": "feliz",
+  "es": {
+   "texto": "¿LO CONOCÍAS?",
+   "frases": [
+    "¿Lo conocías? Cuéntame en los comentarios."
+   ]
+  },
+  "en": {
+   "texto": "DID YOU KNOW IT?",
+   "frases": [
+    "Did you know it? Tell me in the comments."
+   ]
+  },
+  "ja": {
+   "texto": "知っていましたか？",
+   "frases": [
+    "知っていましたか？コメントで教えてね。"
+   ]
+  }
+ },
+ "cierre": {
+  "es": {
+   "voz": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en Daily Challenge punto click.",
+   "dice": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en dailychallenge.click"
+  },
+  "en": {
+   "voz": "And if you like retro games, there's a different one every day, free, at Daily Challenge dot click.",
+   "dice": "And if you like retro games, there's a different one every day, free, at dailychallenge.click"
+  },
+  "ja": {
+   "voz": "レトロゲームが好きなら、デイリーチャレンジ・ドット・クリックで毎日ちがうゲームが無料で遊べるよ。",
+   "dice": "レトロゲームが好きなら、dailychallenge.clickで毎日ちがうゲームが無料で遊べるよ。"
+  }
+ },
+ "youtube": {
+  "es": {
+   "titulo": "¿LO CONOCES?: el misterio de 1983 del creador de Dragon Quest #shorts",
+   "descripcion": "LeIA te cuenta de qué trata The Portopia Serial Murder Case (ポートピア連続殺人事件), la aventura de detectives de Enix: salió en junio de 1983 para la NEC PC-6001, ese mismo año para la PC-8801 y otras computadoras japonesas, y en 1985 para Famicom. La hizo casi solo Yuji Horii, que en 1986 creó Dragon Quest. El juego original no se publicó fuera de Japón. Sin spoilers: no decimos quién fue.\n\nLos dibujos son nuestros: no son imágenes del juego.\n\n«¿Lo conoces?»: juegos retro poco conocidos, contados por LeIA, la presentadora de los juegos de Ayotl. ¿Lo conocías? ¿Cuál quieres que cuente después?\n\nFuentes: Wikipedia en inglés y en japonés, «The Portopia Serial Murder Case» y «ポートピア連続殺人事件».",
+   "etiquetas": [
+    "Portopia",
+    "Yuji Horii",
+    "Enix",
+    "PC-8801",
+    "PC-6001",
+    "Famicom",
+    "Dragon Quest",
+    "juegos retro",
+    "juegos de Japón",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#Portopia #JuegosRetro #DragonQuest #PC88 #RetroGaming"
+  },
+  "en": {
+   "titulo": "DO YOU KNOW IT?: the 1983 murder mystery by the creator of Dragon Quest #shorts",
+   "descripcion": "LeIA tells you what The Portopia Serial Murder Case (ポートピア連続殺人事件) is about: Enix's detective adventure, released in June 1983 for the NEC PC-6001, that same year for the PC-8801 and other Japanese computers, and in 1985 for the Famicom. It was made almost single-handedly by Yuji Horii, who created Dragon Quest in 1986. The original game was never published outside Japan. No spoilers: we don't say who did it.\n\nThe drawings are ours: they are not images from the game.\n\n“Do you know it?”: little-known retro games, told by LeIA, the host of Ayotl's games. Did you know it? Which one should she tell next?\n\nSources: Wikipedia in English and Japanese, “The Portopia Serial Murder Case” and “ポートピア連続殺人事件”.",
+   "etiquetas": [
+    "Portopia",
+    "Yuji Horii",
+    "Enix",
+    "PC-8801",
+    "PC-6001",
+    "Famicom",
+    "Dragon Quest",
+    "retro games",
+    "Japan only games",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#Portopia #RetroGaming #DragonQuest #PC88 #AdventureGames"
+  },
+  "ja": {
+   "titulo": "知ってる？: 「ドラクエ」の堀井雄二が1983年に作った推理アドベンチャー #shorts",
+   "descripcion": "LeIAが「ポートピア連続殺人事件」を紹介します。エニックスの推理アドベンチャーで、1983年6月にPC-6001で発売され、同じ年にPC-8801などのパソコンへ、1985年にはファミコンへ移植されました。作者は堀井雄二さんで、PC-6001版はほぼ一人で作り上げ、1986年に「ドラゴンクエスト」を生み出しました。ネタバレなし：犯人は言いません。\n\nイラストは自作で、ゲームの画像ではありません。\n\n「知ってる？」：あまり知られていないレトロゲームを、Ayotlのゲームの案内役LeIAが紹介します。知っていましたか？次はどのゲームがいいですか？\n\n出典：Wikipedia（英語版・日本語版）「The Portopia Serial Murder Case」「ポートピア連続殺人事件」。",
+   "etiquetas": [
+    "ポートピア連続殺人事件",
+    "堀井雄二",
+    "エニックス",
+    "PC-8801",
+    "PC-6001",
+    "ファミコン",
+    "ドラゴンクエスト",
+    "レトロゲーム",
+    "LeIA"
+   ],
+   "cierre": "#ポートピア連続殺人事件 #レトロゲーム #ドラクエ #PC88"
+  }
+ }
+}

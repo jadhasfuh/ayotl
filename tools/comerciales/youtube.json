@@ -2055,5 +2055,77 @@
   "cierre": "#スウィートホーム #ファミコン #レトロゲーム #バイオハザード",
   "idioma": "ja",
   "id": "FlA8wjXo9iQ"
+ },
+ {
+  "clave": "lo-conoces-portopia",
+  "app": "loconoces",
+  "video": "salida/lo-conoces-portopia.mp4",
+  "categoria": "20",
+  "publicar": "2026-12-01T13:00:00-06:00",
+  "titulo": "¿LO CONOCES?: el misterio de 1983 del creador de Dragon Quest #shorts",
+  "descripcion": "LeIA te cuenta de qué trata The Portopia Serial Murder Case (ポートピア連続殺人事件), la aventura de detectives de Enix: salió en junio de 1983 para la NEC PC-6001, ese mismo año para la PC-8801 y otras computadoras japonesas, y en 1985 para Famicom. La hizo casi solo Yuji Horii, que en 1986 creó Dragon Quest. El juego original no se publicó fuera de Japón. Sin spoilers: no decimos quién fue.\n\nLos dibujos son nuestros: no son imágenes del juego.\n\n«¿Lo conoces?»: juegos retro poco conocidos, contados por LeIA, la presentadora de los juegos de Ayotl. ¿Lo conocías? ¿Cuál quieres que cuente después?\n\nFuentes: Wikipedia en inglés y en japonés, «The Portopia Serial Murder Case» y «ポートピア連続殺人事件».",
+  "etiquetas": [
+   "Portopia",
+   "Yuji Horii",
+   "Enix",
+   "PC-8801",
+   "PC-6001",
+   "Famicom",
+   "Dragon Quest",
+   "juegos retro",
+   "juegos de Japón",
+   "retro gaming",
+   "LeIA"
+  ],
+  "cierre": "#Portopia #JuegosRetro #DragonQuest #PC88 #RetroGaming",
+  "id": "7cRXzCegJSE"
+ },
+ {
+  "clave": "lo-conoces-portopia-en",
+  "app": "loconoces",
+  "video": "salida/lo-conoces-portopia-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-12-01T13:20:00-06:00",
+  "titulo": "DO YOU KNOW IT?: the 1983 murder mystery by the creator of Dragon Quest #shorts",
+  "descripcion": "LeIA tells you what The Portopia Serial Murder Case (ポートピア連続殺人事件) is about: Enix's detective adventure, released in June 1983 for the NEC PC-6001, that same year for the PC-8801 and other Japanese computers, and in 1985 for the Famicom. It was made almost single-handedly by Yuji Horii, who created Dragon Quest in 1986. The original game was never published outside Japan. No spoilers: we don't say who did it.\n\nThe drawings are ours: they are not images from the game.\n\n“Do you know it?”: little-known retro games, told by LeIA, the host of Ayotl's games. Did you know it? Which one should she tell next?\n\nSources: Wikipedia in English and Japanese, “The Portopia Serial Murder Case” and “ポートピア連続殺人事件”.",
+  "etiquetas": [
+   "Portopia",
+   "Yuji Horii",
+   "Enix",
+   "PC-8801",
+   "PC-6001",
+   "Famicom",
+   "Dragon Quest",
+   "retro games",
+   "Japan only games",
+   "retro gaming",
+   "LeIA"
+  ],
+  "cierre": "#Portopia #RetroGaming #DragonQuest #PC88 #AdventureGames",
+  "idioma": "en",
+  "id": "UdmsFWBlSaM"
+ },
+ {
+  "clave": "lo-conoces-portopia-ja",
+  "app": "loconoces",
+  "video": "salida/lo-conoces-portopia-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-12-01T13:40:00-06:00",
+  "titulo": "知ってる？: 「ドラクエ」の堀井雄二が1983年に作った推理アドベンチャー #shorts",
+  "descripcion": "LeIAが「ポートピア連続殺人事件」を紹介します。エニックスの推理アドベンチャーで、1983年6月にPC-6001で発売され、同じ年にPC-8801などのパソコンへ、1985年にはファミコンへ移植されました。作者は堀井雄二さんで、PC-6001版はほぼ一人で作り上げ、1986年に「ドラゴンクエスト」を生み出しました。ネタバレなし：犯人は言いません。\n\nイラストは自作で、ゲームの画像ではありません。\n\n「知ってる？」：あまり知られていないレトロゲームを、Ayotlのゲームの案内役LeIAが紹介します。知っていましたか？次はどのゲームがいいですか？\n\n出典：Wikipedia（英語版・日本語版）「The Portopia Serial Murder Case」「ポートピア連続殺人事件」。",
+  "etiquetas": [
+   "ポートピア連続殺人事件",
+   "堀井雄二",
+   "エニックス",
+   "PC-8801",
+   "PC-6001",
+   "ファミコン",
+   "ドラゴンクエスト",
+   "レトロゲーム",
+   "LeIA"
+  ],
+  "cierre": "#ポートピア連続殺人事件 #レトロゲーム #ドラクエ #PC88",
+  "idioma": "ja",
+  "id": "iIu6RUdXAU4"
  }
 ]
