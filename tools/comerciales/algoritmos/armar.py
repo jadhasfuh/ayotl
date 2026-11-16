@@ -24,8 +24,9 @@ Para el siguiente algoritmo: copia burbuja.py con otro nombre, cambia CODIGO (y 
 GUION, y corre armar.py con ese nombre. Si necesita algo que las barras no tienen (un árbol, dos arreglos), se
 agrega su vista o su tipo de paso en renderizador.py.
 
-Las estructuras que no son barras (16-nov-2026: la pila; luego la cola) usan la vista de cajas.py: su archivo
-dice VISTA = 'cajas' (pila.py es el modelo) y aquí cambia sólo la hoja, que trae un cuadro por renglón del guion.
+Las estructuras que no son barras (16-nov-2026: la pila y la cola) usan la vista de cajas.py: su archivo dice
+VISTA = 'cajas' (pila.py y cola.py son los modelos) y aquí cambia sólo la hoja, que trae un cuadro por renglón
+del guion.
 """
 import argparse, importlib, json, math, os, re, subprocess, sys, tempfile
 
@@ -45,10 +46,10 @@ SUF = {'es': '', 'en': '-en', 'ja': '-ja'}
 # cuánto pesa cada tipo de paso al repartir el tiempo de una escena, y lo menos que puede durar para que se vea
 PESO = {'pasada': 0.35, 'compara': 1.0, 'cambia': 1.0, 'mueve': 1.0, 'coloca': 0.6, 'fija': 0.7, 'marca': 0.6,
         'linea': 0.5, 'rango': 0.5, 'fin': 3.0,
-        'caso': 1.0, 'lee': 0.5, 'mete': 1.0, 'saca': 1.6, 'resultado': 1.6}
+        'caso': 1.0, 'lee': 0.5, 'mete': 1.0, 'saca': 1.6, 'resultado': 1.6, 'imprime': 1.0}
 MINIMO = {'pasada': 0.08, 'compara': 0.1, 'cambia': 0.12, 'mueve': 0.12, 'coloca': 0.08, 'fija': 0.12, 'marca': 0.1,
           'linea': 0.08, 'rango': 0.1, 'fin': 1.3,
-          'caso': 0.3, 'lee': 0.15, 'mete': 0.3, 'saca': 0.6, 'resultado': 0.6}
+          'caso': 0.3, 'lee': 0.15, 'mete': 0.3, 'saca': 0.6, 'resultado': 0.6, 'imprime': 0.4}
 # la tarjeta final (la de comercial.py): la serie y la dirección de las lecciones
 MARCA = {'es': {'sitio': 'ayotl.dev/aprende', 'pie': 'Gratis, sin cuenta y en el navegador'},
          'en': {'sitio': 'ayotl.dev/en/learn', 'pie': 'Free, no account, in your browser'}}
@@ -74,12 +75,13 @@ def linea_de_tiempo(alg, lang, medir):
         minimo = sum(MINIMO[e['tipo']] for e in tomados)
         dur = cuadros_enteros(max(dura + comercial.RESPIRO + 0.004, minimo, r.get('dur', 0)))
         if tomados:   # los pasos, repartidos en lo que dura la escena
-            total = sum(PESO[e['tipo']] for e in tomados); x = t
+            peso = lambda e: e.get('peso', PESO[e['tipo']])   # `peso` en un paso: si ése necesita más (o menos) tiempo
+            total = sum(peso(e) for e in tomados); x = t
             for e in tomados:
-                e['t0'] = x; e['dur'] = dur * PESO[e['tipo']] / total; x += e['dur']
+                e['t0'] = x; e['dur'] = dur * peso(e) / total; x += e['dur']
         escenas.append({'t0': t, 'dur': dur, 'vista': r.get('vista', 'pasos' if tomados else 'codigo'),
                         'eventos': tomados, 'resalta': r.get('resalta', []), 'filas': r.get('filas', []),
-                        'usos': r.get('usos', []),
+                        'usos': r.get('usos', []), 'guion': r,   # `guion`: el renglón entero, por si la vista trae lo suyo
                         'complejidad': r.get('complejidad'), 'cara': r.get('cara', 'normal'), 'voz': voz,
                         'dice': r['dice'], 'voz_dur': dura})
         t += dur

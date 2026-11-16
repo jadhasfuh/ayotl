@@ -6,11 +6,17 @@ que el programa recorre letra por letra, con una flecha en la que lee. FondoCaja
 editor con el código, la línea que corre, los contadores, la tabla con la O grande y el enlace; lo suyo es el
 dibujo de abajo, sus pasos y su sonido.
 
-El archivo del algoritmo (pila.py es el modelo) la pide con VISTA = 'cajas' y además trae:
+El archivo del algoritmo (pila.py y cola.py son los modelos) la pide con VISTA = 'cajas' y además trae:
 - FORMA: 'pila' (un tubo de pie a la derecha: se entra y se sale por arriba) o 'cola' (un tubo acostado abajo: se
-  entra por la derecha y se sale por la izquierda, y las demás avanzan un lugar);
+  entra por atrás, la derecha, y se sale por delante, la izquierda; las demás avanzan un lugar, con una flecha
+  encima de cada una mientras se recorren). En la cola las cajas son tan anchas como quepan (200 px con tres):
+  caben nombres de cuatro letras a 40 px;
 - ARREGLO: las entradas de la cinta, una por caso (la primera está desde el principio; [] si no hay cinta);
 - ROTULO_CAJAS y ROTULO_CINTA: los letreros del contenedor y de la cinta, por idioma; ROTULO_RESULTADO;
+  ROTULO_EXTREMOS: los de las dos puntas de la cola (DELANTE y ATRÁS);
+- INDICE: {titulo, codigo, valores, nombre, O, leyenda}, la ventana de «un índice que avanza» (vista 'indice'
+  del guion, con `avanza` = [fracciones en las que el índice da un paso] y `remate` = cuándo sale la O grande):
+  las cajas no se mueven, se mueve la flecha;
 - COLORES: {texto de la caja: color de la paleta}, si cada clase de caja lleva el suyo (los paréntesis, cada
   pareja de un color: así se ve de lejos quién cierra a quién);
 - USOS: {titulo, filas: [(renglón, explicación)]}, la ventana de «para qué sirve» (vista 'usos' del guion, que
@@ -26,15 +32,18 @@ Los pasos (todos pueden llevar `lineas`, `vars` y `cuenta`, como los de las barr
   de la cinta se le pone al lado y `ok` dice si son pareja: verde y se van, o rojo y ahí se quedan;
 - resultado {valor, ok}: lo que devuelve el programa, en grande (verde si `ok`, rojo si no; con 'color': 'mal'
   su línea también va en rojo);
+- imprime {texto}: un renglón más en la consola (lo que escribe console.log; el texto puede ir por idioma). La
+  consola va donde iría la cinta: un episodio lleva una o la otra;
 - linea: sólo mueve el resaltado del código.
 Si un paso trae varias líneas y dura lo bastante, el código las recorre una por una (renderizador.cuadro) y la
 caja se mueve cuando llega la última: `pila.push(c)` se ilumina y en ese momento cae la caja.
 """
 import math
 import renderizador as R
-from renderizador import PAL, VIVO, NEGRO, BLANCO, W, atari, en, mezcla, nota, ruido, suave, texto, tono_de
+from renderizador import PAL, VIVO, NEGRO, BLANCO, W, atari, en, mascara, mezcla, nota, ruido, suave, texto, tono_de
 
-CAJA_W, CAJA_H, HUECO = 160, 72, 4   # una caja, y el aire entre dos
+CAJA_W, CAJA_H, HUECO = 160, 72, 4   # una caja de la pila (las de la cola se miden en medidas()), y el aire entre dos
+RENGLONES = 3                        # los de la consola
 PISO = 1190                          # el fondo del contenedor (su letrero va debajo; el diálogo de LeIA, desde 1244)
 CELDA, PASO_CINTA, CINTA_X = 80, 88, 80   # la cinta: el lado de una celda, de una a la siguiente y su izquierda
 FONDO_CELDA = atari(9, 1)
@@ -59,6 +68,10 @@ class FondoCajas(R.Fondo):
             n = 0 if e['tipo'] == 'caso' else n + (e['tipo'] == 'mete') - (e['tipo'] == 'saca')
             tope = max(tope, n)
         self.capacidad = max(3, tope)
+        self.caja_w, self.caja_h = CAJA_W, CAJA_H
+        self.hay_consola = any(e['tipo'] == 'imprime' for e in self.eventos)
+        if self.hay_consola and self.casos:
+            raise SystemExit('la consola va donde la cinta: el episodio lleva una o la otra')
         largo = max([len(c) for c in self.casos] + [1])
         self.paso_cinta = min(PASO_CINTA, 520 // largo); self.celda = self.paso_cinta - 8
         self.cinta_y = self.techo + 44   # la cinta, arriba a la izquierda, con su letrero encima
@@ -72,19 +85,37 @@ class FondoCajas(R.Fondo):
             self.fuga = (cx, self.boca[1] - 24)                        # la que sale sola se va hacia arriba
             self.resultado_xy = (CINTA_X + 260, self.cinta_y + CELDA + 96)
             self.rotulo_xy = (cx, PISO + 12)
-        else:   # la cola: acostada, abajo; el frente a la izquierda
-            ancho = self.capacidad * (CAJA_W + HUECO) + 8
-            x0 = (W - ancho) // 2 + 40
+        else:   # la cola: acostada, abajo; delante (por donde se sale) a la izquierda
+            cap = self.capacidad
+            # a la izquierda del tubo queda el lugar de la que atienden, del ancho de una caja: de 60 a 910
+            self.caja_w = min(200, (812 - 4 * cap) // (cap + 1) // 8 * 8)
+            ancho = cap * (self.caja_w + HUECO) + 8
+            x0 = 60 + self.caja_w + 30
             self.tubo = (x0, PISO - CAJA_H - 16, x0 + ancho, PISO)
             cy = PISO - 8 - CAJA_H // 2
-            self.boca = (x0 + ancho + 20 + CAJA_W // 2, cy)            # entran por atrás (la derecha)
-            self.salida = (x0 - 24 - CAJA_W // 2, cy)                  # y salen por el frente
+            self.boca = (x0 + ancho + 16 + self.caja_w // 2, cy)       # entran por atrás (la derecha)
+            self.fuera = (W + self.caja_w // 2 + 8, cy)                # la que no viene de la cinta llega de fuera
+            self.salida = (60 + self.caja_w // 2, cy)                  # y salen por delante
             self.junto = (self.salida[0], cy - CAJA_H - 8)
-            self.fuga = (self.salida[0] - 40, cy)
+            self.fuga = self.salida                                    # la que atienden se apaga ahí mismo
             self.resultado_xy = (830, self.cinta_y + 4)
             self.rotulo_xy = ((self.tubo[0] + self.tubo[2]) // 2, PISO + 12)
-        arriba = min(self.boca[1], self.junto[1]) - CAJA_H // 2 - 4 if self.forma == 'pila' else self.cinta_y + CELDA + 60
-        if arriba < self.techo or (self.forma == 'cola' and arriba > self.junto[1] - CAJA_H // 2):
+            extremos = en(getattr(alg, 'ROTULO_EXTREMOS', {'es': ('DELANTE', 'ATRÁS'), 'en': ('FRONT', 'BACK')}), lang)
+            self.rotulo_extremos = extremos if 24 * (sum(map(len, extremos)) + len(self.rotulo_cajas) + 4) <= ancho else None
+        # la letra de las cajas, la misma para todas: la que deja entrar al texto más largo
+        largo_caja = max([len(str(e['v'])) for e in self.eventos if e['tipo'] == 'mete'] + [1])
+        self.k_caja = max(2, min(7, (self.caja_w - 24) // (8 * largo_caja)))
+        # la consola: arriba, donde iría la cinta
+        self.consola = (60, self.techo + 42, W - 60, self.techo + 42 + 16 + 44 * RENGLONES)
+        largo_consola = max([len(en(e['texto'], lang)) for e in self.eventos if e['tipo'] == 'imprime'] + [1])
+        self.k_consola = 4 if largo_consola * 32 <= W - 160 else 3
+        if self.forma == 'pila':
+            arriba, abajo = min(self.boca[1], self.junto[1]) - CAJA_H // 2 - 4, PISO
+        elif self.hay_consola:
+            arriba, abajo = self.consola[1] - 32, self.consola[3] + 52   # debajo van las flechas de las que se recorren
+        else:
+            arriba, abajo = self.cinta_y - 36, self.cinta_y + CELDA + 60 + 52
+        if arriba < self.techo or (self.forma == 'cola' and abajo > self.tubo[1]) or largo_consola * 24 > W - 160:
             raise SystemExit(f'el código es muy largo para la vista de cajas: los contadores llegan a {self.techo} '
                              f'y el dibujo no cabe debajo (quítale renglones al código o cajas al ejemplo)')
         # cuándo sale cada renglón de la ventana de usos
@@ -93,12 +124,21 @@ class FondoCajas(R.Fondo):
             for fila, f in s.get('usos', []):
                 self.usos_t.setdefault(fila, s['t0'] + f * s['dur'])
         self.ventanas['usos'] = self.usos
+        # la ventana del índice: cuándo da cada paso y cuándo sale su O grande
+        self.indice_t, self.remate_t = [], None
+        for s in self.escenas:
+            if s['vista'] == 'indice':
+                g = s.get('guion', {})
+                self.indice_t += [s['t0'] + f * s['dur'] for f in g.get('avanza', [])]
+                if g.get('remate') is not None and self.remate_t is None:
+                    self.remate_t = s['t0'] + g['remate'] * s['dur']
+        self.ventanas['indice'] = self.indice
 
     def lugar(self, k):
         """El centro de la caja k del contenedor (la 0 es la de abajo de la pila o el frente de la cola)."""
         if self.forma == 'pila':
             return (self.boca[0], PISO - HUECO - CAJA_H // 2 - k * (CAJA_H + HUECO))
-        return (self.tubo[0] + 4 + HUECO + CAJA_W // 2 + k * (CAJA_W + HUECO), self.boca[1])
+        return (self.tubo[0] + 4 + HUECO + self.caja_w // 2 + k * (self.caja_w + HUECO), self.boca[1])
 
     def celda_xy(self, i):
         """El centro de la letra i de la cinta."""
@@ -110,11 +150,14 @@ class FondoCajas(R.Fondo):
     def tiempos(self, e):
         """(cuándo empieza a moverse la caja de un paso, cuánto tarda en llegar, cuándo acaba el paso). Si el código
         recorre sus líneas una por una, la caja espera a la última (la misma cuenta que renderizador.cuadro)."""
-        ls = e.get('lineas', []); t0 = e['t0']
+        ls = en(e.get('lineas', []), self.lang); t0 = e['t0']
         if len(ls) > 1 and e['dur'] >= 0.6:
             t0 += (len(ls) - 1) * e['dur'] * 0.8 / len(ls)
         fin = e['t0'] + e['dur']
-        return t0, max(0.12, min(0.5 if e['tipo'] == 'mete' else 0.4, (fin - t0) * (0.75 if e['tipo'] == 'mete' else 0.4))), fin
+        if e['tipo'] == 'mete':   # la que llega a la cola desde fuera viene de más lejos: con calma, que se vea llegar
+            tope = 0.9 if self.forma == 'cola' and 'de' not in e else 0.5
+            return t0, max(0.12, min(tope, (fin - t0) * 0.75)), fin
+        return t0, max(0.12, min(0.4, (fin - t0) * 0.4)), fin
 
     # -------------------------------------------------- lo que no cambia
     def pintar_piso(self, im, d):
@@ -125,21 +168,30 @@ class FondoCajas(R.Fondo):
             d.rectangle([x0 - 6, y1, x1 + 5, y1 + 5], fill=g)
         else:
             d.rectangle([x0, y0 - 6, x1, y0 - 1], fill=g); d.rectangle([x0, y1, x1, y1 + 5], fill=g)
-        texto(im, self.rotulo_xy[0], self.rotulo_xy[1], self.rotulo_cajas, PAL['gray'], 3, 'm')
+            if self.rotulo_extremos:   # por dónde se sale y por dónde se entra
+                texto(im, x0, self.rotulo_xy[1], self.rotulo_extremos[0], PAL['gray'], 3)
+                texto(im, x1, self.rotulo_xy[1], self.rotulo_extremos[1], PAL['gray'], 3, 'r')
+        texto(im, self.rotulo_xy[0], self.rotulo_xy[1], self.rotulo_cajas, PAL['lgray' if self.forma == 'cola' else 'gray'], 3, 'm')
         if self.casos:
             texto(im, CINTA_X, self.cinta_y - 36, self.rotulo_cinta, PAL['gray'], 3)
+        if self.hay_consola:   # una ventana como la del editor, más sobria
+            cx0, cy0, cx1, cy1 = self.consola
+            texto(im, cx0 + 4, cy0 - 32, en(getattr(self.alg, 'ROTULO_CONSOLA', {'es': 'CONSOLA', 'en': 'CONSOLE'}), self.lang),
+                  PAL['gray'], 3)
+            d.rectangle([cx0, cy0, cx1 - 1, cy1 - 1], fill=g); d.rectangle([cx0 + 4, cy0 + 4, cx1 - 5, cy1 - 5], fill=NEGRO)
 
     # -------------------------------------------------- el estado
     def estado(self):
         return {'cinta': self.casos[0] if self.casos else '', 'cinta_t': -9, 'i': None, 'cajas': [], 'par': None,
-                'resultado': None, 'vars': {}, 'cuenta': {'compara': 0, 'cambia': 0}, 'mas': {'compara': -9, 'cambia': -9}}
+                'resultado': None, 'consola': [], 'vars': {}, 'cuenta': {'compara': 0, 'cambia': 0},
+                'mas': {'compara': -9, 'cambia': -9}}
 
     def aplicar(self, e, st):
         tipo = e['tipo']
         if tipo == 'caso':   # otra llamada: todo limpio
             if e['texto'] != st['cinta']:
                 st['cinta_t'] = e['t0']   # la cinta nueva cae letra por letra
-            st.update(cinta=e['texto'], i=None, cajas=[], par=None, resultado=None, vars={},
+            st.update(cinta=e['texto'], i=None, cajas=[], par=None, resultado=None, consola=[], vars={},
                       cuenta={'compara': 0, 'cambia': 0})
         self.contar(e, st)
         if tipo == 'lee':
@@ -152,11 +204,17 @@ class FondoCajas(R.Fondo):
                 st['par'] = (e['sale'], st['cinta'][e['con']])
         elif tipo == 'resultado':
             st['resultado'] = (str(e['valor']), bool(e.get('ok', True)), e['t0'])
+        elif tipo == 'imprime':
+            st['consola'] = (st['consola'] + [(en(e['texto'], self.lang), e['t0'])])[-RENGLONES:]
 
     # -------------------------------------------------- un cuadro
     def dibujo(self, im, d, t, e, st, cae=None, apagadas=False):
         ver = (lambda c: mezcla(c, NEGRO, 0.75)) if apagadas else (lambda c: c)
         self.cinta(im, d, t, st, cae, ver)
+        for i, (s, t0) in enumerate(st['consola']):   # lo impreso: el renglón nuevo destella y luego queda en blanco
+            nuevo = i == len(st['consola']) - 1
+            color = VIVO['imprime'] if t - t0 < 0.16 else BLANCO if nuevo else PAL['lgray']
+            texto(im, self.consola[0] + 24, self.consola[1] + 16 + 44 * i, s, ver(color), self.k_consola)
         tipo = e['tipo'] if e else None
         cajas = st['cajas']; n = len(cajas)
         ta, tarda, fin = self.tiempos(e) if tipo in ('mete', 'saca') else (0, 1, 0)
@@ -168,6 +226,8 @@ class FondoCajas(R.Fondo):
             if avanza < 1:
                 bx, by = self.lugar(k + 1); ax, ay = bx + (ax - bx) * avanza, by + (ay - by) * avanza
             self.caja(im, d, ax, ay, s, ver(self.color_de(s)))
+            if tipo == 'saca' and self.forma == 'cola' and 0 <= t - ta < min(fin - ta, 1.1):   # ésta también se recorrió
+                texto(im, ax, self.tubo[1] - 40, '←', ver(VIVO['saca']), 3, 'm')
         if tipo == 'mete':   # la que entra: de su letra a la boca y de la boca a su lugar
             s = cajas[-1]; destino = self.lugar(n - 1); color = ver(self.color_de(s))
             if x >= 1:
@@ -177,6 +237,8 @@ class FondoCajas(R.Fondo):
                 tramos = [origen, self.boca, destino]
                 f = suave(x * 2) if x < 0.5 else suave(x * 2 - 1)
                 a, b = tramos[0:2] if x < 0.5 else tramos[1:3]
+                if self.forma == 'cola' and 'de' not in e:   # llega de fuera de la pantalla, de corrido
+                    a, b, f = self.fuera, destino, suave(x)
                 self.caja(im, d, a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f, s, color, borde=VIVO['mete'])
         elif tipo == 'saca' and t < fin:   # la que sale, y la que la cierra
             s = e['sale']; origen = self.lugar(n if self.forma == 'pila' else 0)
@@ -186,7 +248,8 @@ class FondoCajas(R.Fondo):
             elif 'con' not in e:   # sale sola: a la boca y se va, apagándose
                 a, b = (origen, self.boca if self.forma == 'pila' else self.salida)
                 cx, cy = a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f
-                ido = max(0.0, min(1.0, (t - ta - tarda - 0.25) / max(0.1, (fin - ta - tarda - 0.25) * 0.6)))
+                espera = 0.25 if self.forma == 'pila' else (fin - ta - tarda) * 0.45   # a la que atienden se le ve un rato
+                ido = max(0.0, min(1.0, (t - ta - tarda - espera) / max(0.1, (fin - ta - tarda - espera) * 0.6)))
                 if ido < 1:
                     cx, cy = cx + (self.fuga[0] - b[0]) * ido, cy + (self.fuga[1] - b[1]) * ido
                     self.caja(im, d, cx, cy, s, mezcla(color, NEGRO, ido), borde=mezcla(VIVO['saca'], NEGRO, ido))
@@ -243,15 +306,15 @@ class FondoCajas(R.Fondo):
 
     def caja(self, im, d, cx, cy, s, color, borde=None):
         """Una caja con el mismo bisel que las barras y su texto en medio; `borde`: un marco de ese color."""
-        x0, y0 = round(cx - CAJA_W / 2), round(cy - CAJA_H / 2); x1, y1 = x0 + CAJA_W, y0 + CAJA_H; p = 6
+        x0, y0 = round(cx - self.caja_w / 2), round(cy - self.caja_h / 2); x1, y1 = x0 + self.caja_w, y0 + self.caja_h; p = 6
         if borde:
             d.rectangle([x0 - 4, y0 - 4, x1 + 3, y1 + 3], fill=borde)
         d.rectangle([x0, y0, x1 - 1, y1 - 1], fill=color)
         d.rectangle([x0, y0, x1 - 1, y0 + 3], fill=mezcla(color, BLANCO, 0.5))
         d.rectangle([x0, y0, x0 + p - 1, y1 - 1], fill=mezcla(color, BLANCO, 0.35))
         d.rectangle([x1 - p, y0 + 4, x1 - 1, y1 - 1], fill=mezcla(color, NEGRO, 0.35))
-        k = max(2, min(7, (CAJA_W - 24) // (8 * max(1, len(s)))))
-        texto(im, round(cx), y0 + (CAJA_H - 8 * k) // 2 + k // 2, s, mezcla(color, NEGRO, 0.85), k, 'm')
+        k = min(self.k_caja, max(2, (self.caja_w - 24) // (8 * max(1, len(s)))))
+        texto(im, round(cx), y0 + (self.caja_h - 8 * k) // 2 + k // 2, s, mezcla(color, NEGRO, 0.85), k, 'm')
 
     # -------------------------------------------------- para qué sirve
     def usos(self, im, d, t, entra):
@@ -261,12 +324,46 @@ class FondoCajas(R.Fondo):
         u = self.alg.USOS; filas = u['filas']
         y = lambda f: y0 + round((y1 - y0) * f)
         texto(im, W // 2, y(0.09), en(u['titulo'], self.lang), PAL['gray'], 3, 'm')
-        alto = 0.76 / len(filas)
+        arriba, alto = (0.24, 0.76 / len(filas)) if len(filas) < 3 else (0.2, 0.8 / len(filas))   # con tres, más juntas
         for i, (grande, chico) in enumerate(filas):
             if i in self.usos_t and t >= self.usos_t[i]:
                 color = BLANCO if t - self.usos_t[i] < 0.12 else (PAL['yellow'], PAL['cyan'], PAL['pink'])[i % 3]
-                texto(im, W // 2, y(0.24 + alto * i), en(grande, self.lang), color, 5, 'm')
-                texto(im, W // 2, y(0.24 + alto * i) + 58, en(chico, self.lang), PAL['lgray'], 3, 'm')
+                texto(im, W // 2, y(arriba + alto * i), en(grande, self.lang), color, 5, 'm')
+                texto(im, W // 2, y(arriba + alto * i) + 58, en(chico, self.lang), PAL['lgray'], 3, 'm')
+
+    # -------------------------------------------------- un índice que avanza
+    def indice(self, im, d, t, entra):
+        """Las mismas cajas, quietas, y una flecha con el nombre del índice que da un paso cada vez que sale una: las
+        que ya salieron se apagan y nadie se mueve. Arriba, la línea de código; abajo, la O grande y su renglón."""
+        x0, y0, x1, y1 = self.ventana(d, entra)
+        if entra < 1:
+            return
+        cfg = self.alg.INDICE; valores = [str(v) for v in cfg['valores']]
+        y = lambda f: y0 + round((y1 - y0) * f)
+        texto(im, W // 2, y(0.07), en(cfg['titulo'], self.lang), PAL['gray'], 3, 'm')
+        codigo = en(cfg['codigo'], self.lang); x = W // 2 - 12 * len(codigo)
+        for tramo, clase in R.resaltar(codigo):   # con los colores del editor
+            if clase != 'ws':
+                im.paste(R.SINTAXIS[clase], (x, y(0.175) - 9), mascara(tramo, 3))
+            x += 24 * len(tramo)
+        paso = self.caja_w + 8
+        cxs = [W // 2 + round((i - (len(valores) - 1) / 2) * paso) for i in range(len(valores))]
+        dados = [ti for ti in self.indice_t if t >= ti]
+        p = min(len(dados), len(valores) - 1)
+        for i, s in enumerate(valores):
+            color = self.color_de(s)
+            self.caja(im, d, cxs[i], y(0.385), s, mezcla(color, NEGRO, 0.72) if i < p else color,
+                      borde=VIVO['lee'] if i == p else None)
+        fx = cxs[p]
+        if dados and p > 0:   # la flecha se desliza a la caja siguiente
+            fx = cxs[p - 1] + (cxs[p] - cxs[p - 1]) * suave((t - dados[-1]) / 0.25)
+        nombre = f"{cfg['nombre']} = {p}"
+        texto(im, fx, y(0.385) + self.caja_h // 2 + 12, '▲', VIVO['lee'], 3, 'm')
+        texto(im, min(max(fx, x0 + 24 + 12 * len(nombre)), x1 - 24 - 12 * len(nombre)), y(0.385) + self.caja_h // 2 + 42,
+              nombre, BLANCO if dados and t - dados[-1] < 0.14 else VIVO['lee'], 3, 'm')
+        if self.remate_t is not None and t >= self.remate_t:
+            texto(im, W // 2, y(0.69), en(cfg['O'], self.lang), PAL['lgreen'], 7, 'm')
+            texto(im, W // 2, y(0.86), en(cfg['leyenda'], self.lang), PAL['lgray'], 3, 'm')
 
     # -------------------------------------------------- el sonido
     def sonido_pasos(self, sfx):
@@ -280,6 +377,15 @@ class FondoCajas(R.Fondo):
                 ruido(sfx, s['t0'], 0.05, 0.12, 2500); nota(sfx, s['t0'], 500, 0.04, 'triangle', 0.25, hasta=900)
         for ts in self.usos_t.values():
             nota(sfx, ts, 880, 0.04, 'square', 0.13)
+        if any(s['vista'] == 'indice' for s in self.escenas):   # su ventana, un tic por paso y 'fruta' con la O
+            t0 = self.primera('indice')['t0']
+            ruido(sfx, t0, 0.05, 0.12, 2500); nota(sfx, t0, 500, 0.04, 'triangle', 0.25, hasta=900)
+            for i, ts in enumerate(self.indice_t):
+                nota(sfx, ts, tono_de(i + 3), 0.06, 'triangle', 0.35)
+            if self.remate_t is not None:
+                for i, fr in enumerate([880, 1174, 1568]):
+                    nota(sfx, self.remate_t + i * 0.05, fr, 0.07, 'triangle', 0.25)
+                nota(sfx, self.remate_t + 0.15, 1568, 0.18, 'square', 0.15)
         n = 0; cinta = self.casos[0] if self.casos else ''
         for e in self.eventos:
             t0, tipo = e['t0'], e['tipo']
@@ -305,6 +411,8 @@ class FondoCajas(R.Fondo):
                 elif e.get('ok') is False:   # 'perder'
                     for i, fr in enumerate([440, 392, 330, 262]):
                         nota(sfx, ta + tarda + i * 0.1, fr, 0.12, 'square', 0.12)
+            elif tipo == 'imprime':   # dos teclas
+                nota(sfx, t0, 880, 0.03, 'square', 0.10); nota(sfx, t0 + 0.06, 1174, 0.04, 'square', 0.10)
             elif tipo == 'resultado':
                 if e.get('ok', True):   # 'win'
                     for i, fr in enumerate([523, 659, 784, 1046, 784, 1046]):

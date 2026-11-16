@@ -66,11 +66,11 @@ ORDEN = atari(12, 5)            # ya ordenada dentro de su tramo, pero todavía 
 # cada tipo de paso con su color: el de las barras, el de su línea de código y el de su contador
 TONO = {'compara': 1, 'cambia': 4, 'mueve': 4, 'coloca': 12, 'fija': 13, 'fin': 13, 'marca': 7, 'pasada': 11,
         'linea': 11, 'rango': 11,
-        'caso': 11, 'lee': 11, 'mete': 13, 'saca': 2, 'resultado': 13, 'mal': 4}   # los de cajas.py
+        'caso': 11, 'lee': 11, 'mete': 13, 'saca': 2, 'resultado': 13, 'mal': 4, 'imprime': 7}   # los de cajas.py
 VIVO = {'compara': PAL['yellow'], 'cambia': PAL['red'], 'mueve': PAL['red'], 'coloca': ORDEN, 'fija': PAL['lgreen'],
         'fin': PAL['lgreen'], 'marca': atari(7, 6), 'pasada': PAL['cyan'], 'linea': PAL['cyan'], 'rango': PAL['cyan'],
         'caso': PAL['cyan'], 'lee': PAL['cyan'], 'mete': PAL['lgreen'], 'saca': PAL['orange'],
-        'resultado': PAL['lgreen'], 'mal': PAL['red']}
+        'resultado': PAL['lgreen'], 'mal': PAL['red'], 'imprime': atari(7, 6)}
 # qué contador suma cada tipo (en las cajas, el primero cuenta lo que entra y el segundo lo que sale)
 CUENTA = {'compara': ['compara'], 'cambia': ['cambia'], 'mueve': ['cambia'], 'mete': ['compara'], 'saca': ['cambia']}
 SINTAXIS = {'kw': PAL['pink'], 'func': PAL['cyan'], 'type': PAL['cyan'], 'builtin': PAL['orange'],
@@ -240,7 +240,7 @@ class Fondo:
     def __init__(self, alg, lang, escenas, cola=0.0):
         self.alg, self.lang, self.escenas = alg, lang, escenas
         self.r = ROTULOS[lang]
-        self.lineas = alg.CODIGO.split('\n')
+        self.lineas = en(alg.CODIGO, lang).split('\n')   # el código puede cambiar con el idioma (los textos de la cola)
         largo = max(map(len, self.lineas))
         if CODIGO_X + 8 * K_CODIGO * largo > PANEL_X1 - 20:
             raise SystemExit(f'una línea del código mide {largo} caracteres: a 24 px caben {(PANEL_X1 - 20 - CODIGO_X) // 24}')
@@ -384,7 +384,8 @@ class Fondo:
                 if f >= desde:
                     lineas, tipo = ls, tp
         elif e is not None and vista == 'pasos':
-            tipo, ls = e.get('color', e['tipo']), e.get('lineas', [])   # `color`: si el paso se pinta como otro tipo
+            # `color`: si el paso se pinta como otro tipo; `lineas` puede ir por idioma, si el código cambia con él
+            tipo, ls = e.get('color', e['tipo']), en(e.get('lineas', []), self.lang)
             if len(ls) > 1 and e['dur'] >= 0.6:   # despacio: una línea tras otra (t = a[j]; a[j] = …; a[j + 1] = t)
                 i = min(len(ls) - 1, int((t - e['t0']) / (e['dur'] * 0.8 / len(ls))))
                 lineas = [ls[i]]
@@ -558,8 +559,13 @@ class Fondo:
                 for v, x, color in zip(fila, derechas, colores):
                     texto(im, x, y(0.19 + 0.152 * i), self.valor(v), color, 5, 'r')
         if self.complejidad_t is not None and t >= self.complejidad_t:
-            texto(im, W // 2, y(0.69), self.alg.COMPLEJIDAD, PAL['red'] if 'n²' in self.alg.COMPLEJIDAD else PAL['lgreen'], 7, 'm')
+            texto(im, W // 2, y(0.69), self.alg.COMPLEJIDAD, PAL['red'] if self.complejidad_mala() else PAL['lgreen'], 7, 'm')
             texto(im, W // 2, y(0.86), en(self.alg.LEYENDA, self.lang), PAL['lgray'], 3, 'm')
+
+    def complejidad_mala(self):
+        """Si la O grande de la tabla es la mala noticia (roja y con el sonido de perder): las n², o lo que diga el
+        algoritmo con COMPLEJIDAD_MALA (el O(n) del shift de la cola)."""
+        return getattr(self.alg, 'COMPLEJIDAD_MALA', 'n²' in self.alg.COMPLEJIDAD)
 
     def enlace(self, im, d, t, entra):
         x0, y0, x1, y1 = self.ventana(d, entra)
@@ -628,7 +634,7 @@ class Fondo:
         for i, ts in sorted(self.filas_t.items()):   # 'blip' al salir cada fila de la tabla
             nota(sfx, ts, 880, 0.04, 'square', 0.13)
         if self.complejidad_t is not None:
-            if 'n²' in self.alg.COMPLEJIDAD:   # 'perder': lento es malo
+            if self.complejidad_mala():   # 'perder': lento es malo
                 for i, fr in enumerate([440, 392, 330, 262]):
                     nota(sfx, self.complejidad_t + i * 0.1, fr, 0.12, 'square', 0.12)
             else:   # 'fruta': rápido es bueno

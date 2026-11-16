@@ -76,9 +76,10 @@ def en_app_store(bundle):
     return f"https://apps.apple.com/app/id{res[0]['trackId']}" if res and res[0].get('trackId') else None
 
 
-def enlaces(app, idioma='es'):
-    """Las líneas de enlaces de una app: la página siempre; las tiendas, cuando ya son públicas."""
-    a = APPS[app]; t = TEXTOS[idioma]
+def enlaces(app, idioma='es', web=None):
+    """Las líneas de enlaces de una app: la página siempre; las tiendas, cuando ya son públicas. `web`: otra página
+    para esta entrada (`web` en youtube.json): la pila es de «Algoritmos en pixel» pero su curso es el de estructuras."""
+    a = dict(APPS[app], **({'web': web} if web else {})); t = TEXTOS[idioma]
     if app not in _tiendas:
         _tiendas[app] = (en_play(a['play']) if a['play'] else None, en_app_store(a['ios']) if a['ios'] else None)
     play, ios = _tiendas[app]
@@ -92,7 +93,7 @@ def enlaces(app, idioma='es'):
 
 def descripcion(v):
     idioma = v.get('idioma', 'es'); t = TEXTOS[idioma]
-    partes = [v['descripcion'].rstrip(), enlaces(v['app'], idioma)]
+    partes = [v['descripcion'].rstrip(), enlaces(v['app'], idioma, v.get('web'))]
     caps = os.path.join(AQUI, v['video'][:-4] + '.capitulos.json')
     if os.path.exists(caps):
         lista = json.load(open(caps, encoding='utf-8'))
