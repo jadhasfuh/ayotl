@@ -1,0 +1,263 @@
+{
+ "_nota": "Tercera ficha de «¿Lo conoces?» (16-nov-2026), para el sábado 5-dic (orden que aprobó Adrián: Clock Tower, Snatcher, Otogirisō, Metal Slader Glory). Cada dato salió de las fuentes de abajo, leídas ese día. No se dice quién es el de las tijeras ni cómo acaba. Ojo: ya NO es «sólo en Japón»: en 2024 salió oficialmente en todo el mundo como Clock Tower: Rewind (29 u 31 de octubre según la fuente: se dice sólo el año). La edad de Jennifer (14) viene de la Wikipedia japonesa.",
+ "juego": "Clock Tower (クロックタワー)",
+ "clave": "lo-conoces-clock-tower",
+ "ficha": {
+  "plataforma": "Super Famicom",
+  "fecha": "1995-09-14",
+  "empresa": "Human Entertainment",
+  "director": "Hifumi Kono",
+  "solo_en_japon": "hasta 2024 (Clock Tower: Rewind)"
+ },
+ "hechos": [
+  "Salió el 14 de septiembre de 1995 para Super Famicom, desarrollado y publicado por Human Entertainment y dirigido por Hifumi Kono; después, Windows y PlayStation (1997, The First Fear) y WonderSwan (1999), todo sólo en Japón.",
+  "El original no se publicó oficialmente fuera de Japón hasta Clock Tower: Rewind (2024), su primera localización internacional oficial.",
+  "Jennifer Simpson, huérfana de 14 años del orfanato Granite, es adoptada junto con sus amigas Laura, Anne y Lotte por Simon Barrows; su mansión es conocida como la «Clock Tower». Mary, quien las lleva, va a buscar al señor Barrows; Jennifer oye un grito y al volver las luces están apagadas y las niñas ya no están.",
+  "Las persigue Scissorman, que lleva unas tijeras enormes. Jennifer no puede pelear: tiene que esconderse o usar trampas.",
+  "Es una aventura de apuntar y hacer clic; tiene nueve finales.",
+  "Kono quiso hacer un homenaje a Dario Argento, sobre todo a Phenomena (1985); el diseño de Jennifer se inspiró en el personaje de Jennifer Connelly en esa película.",
+  "Se le considera pionero del survival horror."
+ ],
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Clock_Tower_(1995_video_game)",
+  "https://ja.wikipedia.org/wiki/クロックタワー"
+ ],
+ "escenas": [
+  {
+   "imagen": "1-torre.png",
+   "cara": "normal",
+   "es": {
+    "texto": "IMAGINA QUE ERES…",
+    "frases": [
+     "Imagina que eres una huérfana de catorce años.",
+     "Una familia rica te adopta junto con tus tres amigas.",
+     "Tienes que mudarte a su mansión: la llaman la Torre del Reloj."
+    ]
+   },
+   "en": {
+    "texto": "IMAGINE YOU ARE…",
+    "frases": [
+     "Imagine you're a fourteen-year-old orphan.",
+     "A rich family adopts you and your three friends.",
+     "You have to move into their mansion: people call it the Clock Tower."
+    ]
+   },
+   "ja": {
+    "texto": "想像してみて…",
+    "frases": [
+     "想像してみてください。あなたは14歳の孤児で、3人の友だちといっしょに、お金持ちの家に引き取られます。",
+     "向かう先は、時計塔のある大きな屋敷です。"
+    ]
+   }
+  },
+  {
+   "imagen": "2-vestibulo.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "PERO HAY UN PROBLEMA",
+    "frases": [
+     "Pero hay un problema: apenas llegan, se oye un grito y se apagan las luces…",
+     "…y tus amigas desaparecen."
+    ]
+   },
+   "en": {
+    "texto": "BUT THERE'S A PROBLEM",
+    "frases": [
+     "But there's a problem: right after you arrive, there's a scream and the lights go out…",
+     "…and your friends are gone."
+    ]
+   },
+   "ja": {
+    "texto": "ところが、問題が…",
+    "frases": [
+     "ところが、問題が起きます。着いてすぐ、悲鳴が聞こえ、明かりが消えて……友だちがいなくなってしまいます。"
+    ]
+   }
+  },
+  {
+   "imagen": "3-tijeras.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "NO PUEDES PELEAR",
+    "frases": [
+     "Y por la casa anda alguien con unas tijeras enormes.",
+     "Entonces ahora tú tendrás que escapar… sin poder pelear.",
+     "Sólo puedes correr y esconderte."
+    ]
+   },
+   "en": {
+    "texto": "YOU CAN'T FIGHT",
+    "frases": [
+     "And someone is roaming the house with a giant pair of scissors.",
+     "So now you have to escape… and you can't fight back.",
+     "You can only run and hide."
+    ]
+   },
+   "ja": {
+    "texto": "戦うことはできない",
+    "frases": [
+     "しかも屋敷の中を、巨大なハサミを持った誰かが歩き回っています。",
+     "そこであなたは、逃げ出すことになります。でも戦うことはできません。走って、隠れるだけです。"
+    ]
+   }
+  },
+  {
+   "imagen": "4-escondite.png",
+   "cara": "pensando",
+   "es": {
+    "texto": "NUEVE FINALES",
+    "frases": [
+     "Según dónde te escondas y lo que descubras, la historia acaba de nueve formas distintas."
+    ]
+   },
+   "en": {
+    "texto": "NINE ENDINGS",
+    "frases": [
+     "Depending on where you hide and what you find, the story can end in nine different ways."
+    ]
+   },
+   "ja": {
+    "texto": "エンディングは9種類",
+    "frases": [
+     "どこに隠れ、何を見つけるかで、物語の結末は9通りに変わります。"
+    ]
+   }
+  },
+  {
+   "imagen": "5-cartucho.png",
+   "cara": "feliz",
+   "es": {
+    "texto": "CLOCK TOWER · 1995",
+    "frases": [
+     "Este dilema le pasa a Jennifer Simpson en Clock Tower, de Human.",
+     "Salió para Super Famicom en 1995.",
+     "Durante casi treinta años sólo existió en Japón.",
+     "Su versión oficial para el resto del mundo llegó hasta 2024."
+    ]
+   },
+   "en": {
+    "texto": "CLOCK TOWER · 1995",
+    "frases": [
+     "This is what happens to Jennifer Simpson in Clock Tower, by Human.",
+     "It came out for the Super Famicom in 1995.",
+     "For almost thirty years it only existed in Japan.",
+     "Its official worldwide release didn't come until 2024."
+    ]
+   },
+   "ja": {
+    "texto": "クロックタワー · 1995",
+    "frases": [
+     "これは、ヒューマンの「クロックタワー」でジェニファー・シンプソンに起きる出来事です。1995年にスーパーファミコンで発売されました。",
+     "海外で正式に発売されたのは、なんと約30年後の2024年でした。"
+    ]
+   }
+  },
+  {
+   "imagen": "6-legado.png",
+   "cara": "guino",
+   "es": {
+    "texto": "UN HOMENAJE AL CINE",
+    "frases": [
+     "Su director lo hizo como homenaje al cine de terror de Dario Argento.",
+     "Sobre todo, a su película Phenomena."
+    ]
+   },
+   "en": {
+    "texto": "A HORROR FILM TRIBUTE",
+    "frases": [
+     "Its director made it as a tribute to Dario Argento's horror films.",
+     "Above all, his movie Phenomena."
+    ]
+   },
+   "ja": {
+    "texto": "ホラー映画へのオマージュ",
+    "frases": [
+     "ディレクターは、ダリオ・アルジェント監督のホラー映画、とくに「フェノミナ」へのオマージュとして作りました。"
+    ]
+   }
+  }
+ ],
+ "pregunta": {
+  "imagen": "5-cartucho.png",
+  "cara": "feliz",
+  "es": {
+   "texto": "¿LO CONOCÍAS?",
+   "frases": [
+    "¿Lo conocías? Cuéntame en los comentarios."
+   ]
+  },
+  "en": {
+   "texto": "DID YOU KNOW IT?",
+   "frases": [
+    "Did you know it? Tell me in the comments."
+   ]
+  },
+  "ja": {
+   "texto": "知っていましたか？",
+   "frases": [
+    "知っていましたか？コメントで教えてね。"
+   ]
+  }
+ },
+ "cierre": {
+  "es": {
+   "voz": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en Daily Challenge punto click.",
+   "dice": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en dailychallenge.click"
+  },
+  "en": {
+   "voz": "And if you like retro games, there's a different one every day, free, at Daily Challenge dot click.",
+   "dice": "And if you like retro games, there's a different one every day, free, at dailychallenge.click"
+  },
+  "ja": {
+   "voz": "レトロゲームが好きなら、デイリーチャレンジ・ドット・クリックで毎日ちがうゲームが無料で遊べるよ。",
+   "dice": "レトロゲームが好きなら、dailychallenge.clickで毎日ちがうゲームが無料で遊べるよ。"
+  }
+ },
+ "youtube": {
+  "es": {
+   "titulo": "¿LO CONOCES?: el juego de terror donde no puedes pelear, sólo esconderte #shorts",
+   "descripcion": "LeIA te cuenta de qué trata Clock Tower (クロックタワー), el juego de terror de Human Entertainment para Super Famicom: salió el 14 de septiembre de 1995, dirigido por Hifumi Kono, como homenaje al cine de Dario Argento. Jennifer no puede pelear: sólo correr y esconderse, y hay nueve finales. Durante casi treinta años sólo existió en Japón; su primera versión oficial para el resto del mundo, Clock Tower: Rewind, llegó en 2024. Sin spoilers.\n\nLos dibujos son nuestros: no son imágenes del juego.\n\n«¿Lo conoces?»: juegos retro poco conocidos, contados por LeIA, la presentadora de los juegos de Ayotl. ¿Lo conocías? ¿Cuál quieres que cuente después?\n\nFuentes: Wikipedia en inglés y en japonés, «Clock Tower (1995 video game)» y «クロックタワー».",
+   "etiquetas": [
+    "Clock Tower",
+    "Super Famicom",
+    "Human Entertainment",
+    "survival horror",
+    "juegos retro",
+    "juegos de Japón",
+    "SNES",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#ClockTower #SuperFamicom #JuegosRetro #SurvivalHorror #RetroGaming"
+  },
+  "en": {
+   "titulo": "DO YOU KNOW IT?: the horror game where you can't fight, only hide #shorts",
+   "descripcion": "LeIA tells you what Clock Tower (クロックタワー) is about: Human Entertainment's horror game for the Super Famicom, released on September 14, 1995, directed by Hifumi Kono as a tribute to Dario Argento's films. Jennifer can't fight: she can only run and hide, and there are nine endings. For almost thirty years it only existed in Japan; its first official worldwide release, Clock Tower: Rewind, came in 2024. No spoilers.\n\nThe drawings are ours: they are not images from the game.\n\n“Do you know it?”: little-known retro games, told by LeIA, the host of Ayotl's games. Did you know it? Which one should she tell next?\n\nSources: Wikipedia in English and Japanese, “Clock Tower (1995 video game)” and “クロックタワー”.",
+   "etiquetas": [
+    "Clock Tower",
+    "Super Famicom",
+    "Human Entertainment",
+    "survival horror",
+    "retro games",
+    "Japan only games",
+    "SNES",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#ClockTower #SuperFamicom #RetroGaming #SurvivalHorror #SNES"
+  },
+  "ja": {
+   "titulo": "知ってる？: 戦えない、隠れるだけ。スーパーファミコンのホラーゲーム #shorts",
+   "descripcion": "LeIAが「クロックタワー」を紹介します。ヒューマンのスーパーファミコン用ホラーゲームで、1995年9月14日に発売されました。ディレクターは河野一二三さんで、ダリオ・アルジェント監督の映画へのオマージュとして作られました。ジェニファーは戦えず、逃げて隠れるだけ。エンディングは9種類。海外での正式な発売は、2024年の「Clock Tower: Rewind」が初めてでした。ネタバレなし。\n\nイラストは自作で、ゲームの画像ではありません。\n\n「知ってる？」：あまり知られていないレトロゲームを、Ayotlのゲームの案内役LeIAが紹介します。知っていましたか？次はどのゲームがいいですか？\n\n出典：Wikipedia（英語版・日本語版）「Clock Tower (1995 video game)」「クロックタワー」。",
+   "etiquetas": [
+    "クロックタワー",
+    "スーパーファミコン",
+    "ヒューマン",
+    "ホラーゲーム",
+    "レトロゲーム",
+    "LeIA"
+   ],
+   "cierre": "#クロックタワー #スーパーファミコン #レトロゲーム #ホラーゲーム"
+  }
+ }
+}
