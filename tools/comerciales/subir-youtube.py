@@ -37,6 +37,10 @@ APPS = {
     # «Algoritmos en pixel» (9-nov-2026): Shorts con su lección en ayotl.dev/aprende; una lista por idioma
     'algoritmos': {'nombre': 'Algoritmos', 'web': 'https://ayotl.dev/aprende/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
     'algorithms': {'nombre': 'Algorithms', 'web': 'https://ayotl.dev/en/learn/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
+    # «¿Lo conoces?» (16-nov-2026): la trama de un juego retro poco conocido, contada por LeIA; una sola lista, y los
+    # enlaces de Daily Challenge (es a quien le gustan los juegos retro). `prefijos`: cómo empieza el título en en/ja
+    'loconoces': {'nombre': '¿Lo conoces?', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None,
+                  'prefijos': ['¿LO CONOCES?:', 'DO YOU KNOW IT?:', '知ってる？:']},
 }
 # los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)
 TEXTOS = {
@@ -105,7 +109,7 @@ def revisar(v):
         sys.exit(f"{v['clave']}: el título pasa de 100 caracteres ({len(v['titulo'])})")
     if v.get('app') not in APPS:
         sys.exit(f"{v['clave']}: sin app conocida ({v.get('app')})")
-    if not v['titulo'].startswith(APPS[v['app']]['nombre'].upper() + ':'):
+    if not v['titulo'].startswith(tuple(APPS[v['app']].get('prefijos') or [APPS[v['app']]['nombre'].upper() + ':'])):
         print(f"  ojo: {v['clave']} no empieza con «{APPS[v['app']]['nombre'].upper()}:»")
 
 
