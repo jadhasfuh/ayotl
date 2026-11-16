@@ -26,6 +26,12 @@ casilla más para ese tramo) y `cuenta` (qué contadores suma, si no son los de 
 - marca, pasada, linea, rango: sólo mueven el resaltado del código, las marcas, el tramo y las variables;
 - fin: todas en su lugar, con un barrido de notas y la fanfarria de ganar de DC.
 Un algoritmo que necesite otra cosa (dos arreglos, un árbol) agrega aquí su tipo de paso o su vista.
+
+Otra vista (16-nov-2026): la pila y la cola no son barras, sino cajas que entran y salen. Van en cajas.py, en una
+clase que hereda de Fondo y cambia sólo lo suyo: medidas() (las medidas de su dibujo), pintar_piso() (lo que no se
+mueve), estado() y aplicar() (lo que cambia cada paso), dibujo() (la animación de un cuadro), sonido_pasos() (un
+sonido por paso) y, si quiere, más ventanas en self.ventanas. El editor, el resaltado, los contadores, la tabla
+con la O grande y el enlace son los de aquí. El archivo del algoritmo la pide con VISTA = 'cajas' (ver pila.py).
 """
 import colorsys, math, os, re, subprocess, wave
 import numpy as np
@@ -59,10 +65,14 @@ BARRA = PAL['lblue']            # una barra cualquiera
 ORDEN = atari(12, 5)            # ya ordenada dentro de su tramo, pero todavía se puede mover
 # cada tipo de paso con su color: el de las barras, el de su línea de código y el de su contador
 TONO = {'compara': 1, 'cambia': 4, 'mueve': 4, 'coloca': 12, 'fija': 13, 'fin': 13, 'marca': 7, 'pasada': 11,
-        'linea': 11, 'rango': 11}
+        'linea': 11, 'rango': 11,
+        'caso': 11, 'lee': 11, 'mete': 13, 'saca': 2, 'resultado': 13, 'mal': 4}   # los de cajas.py
 VIVO = {'compara': PAL['yellow'], 'cambia': PAL['red'], 'mueve': PAL['red'], 'coloca': ORDEN, 'fija': PAL['lgreen'],
-        'fin': PAL['lgreen'], 'marca': atari(7, 6), 'pasada': PAL['cyan'], 'linea': PAL['cyan'], 'rango': PAL['cyan']}
-CUENTA = {'compara': ['compara'], 'cambia': ['cambia'], 'mueve': ['cambia']}   # qué contador suma cada tipo
+        'fin': PAL['lgreen'], 'marca': atari(7, 6), 'pasada': PAL['cyan'], 'linea': PAL['cyan'], 'rango': PAL['cyan'],
+        'caso': PAL['cyan'], 'lee': PAL['cyan'], 'mete': PAL['lgreen'], 'saca': PAL['orange'],
+        'resultado': PAL['lgreen'], 'mal': PAL['red']}
+# qué contador suma cada tipo (en las cajas, el primero cuenta lo que entra y el segundo lo que sale)
+CUENTA = {'compara': ['compara'], 'cambia': ['cambia'], 'mueve': ['cambia'], 'mete': ['compara'], 'saca': ['cambia']}
 SINTAXIS = {'kw': PAL['pink'], 'func': PAL['cyan'], 'type': PAL['cyan'], 'builtin': PAL['orange'],
             'number': PAL['lgreen'], 'string': PAL['lblue'], 'comment': PAL['gray'], 'punct': PAL['lgray'],
             'ident': PAL['white'], 'ws': PAL['white']}
@@ -230,7 +240,6 @@ class Fondo:
     def __init__(self, alg, lang, escenas, cola=0.0):
         self.alg, self.lang, self.escenas = alg, lang, escenas
         self.r = ROTULOS[lang]
-        self.valores = list(alg.ARREGLO); self.n = len(self.valores)
         self.lineas = alg.CODIGO.split('\n')
         largo = max(map(len, self.lineas))
         if CODIGO_X + 8 * K_CODIGO * largo > PANEL_X1 - 20:
@@ -239,12 +248,11 @@ class Fondo:
         self.panel_y1 = self.codigo_y + len(self.lineas) * LINEA_H + 14
         self.cont_y = self.panel_y1 + 18
         self.techo = max(TECHO, self.cont_y + 96)
-        self.unidad = min(40, (BASE_Y - self.techo) // max(self.valores))
-        self.slot = (ESC_X1 - ESC_X0) / self.n
-        self.ancho_barra = int(self.slot * 0.76 / 4) * 4
         self.duracion = escenas[-1]['t0'] + escenas[-1]['dur']
         self.cola = cola
         self.eventos = [e for s in escenas for e in s['eventos']]
+        self.ventanas = {'cuenta': self.cuenta, 'enlace': self.enlace}   # las vistas que tapan el dibujo
+        self.medidas()
         var = alg.VARIABLE
         self.var_rotulo, self.var_nombre = en(var[0], lang), var[1]
         self.var_formato = var[2] if len(var) > 2 else var[1] + ' = {}'
@@ -259,6 +267,17 @@ class Fondo:
                 self.filas_t.setdefault(fila, s['t0'] + f * s['dur'])
             if s.get('complejidad') is not None and self.complejidad_t is None:
                 self.complejidad_t = s['t0'] + s['complejidad'] * s['dur']
+
+    # el contador que parpadea en la primera escena de la tabla (el que nombra LeIA) y el color de cada uno
+    PARPADEA = 'compara'
+    COLOR_CUENTA = {'compara': 'compara', 'cambia': 'cambia'}
+
+    def medidas(self):
+        """Las medidas de las barras (cajas.py pone aquí las suyas)."""
+        self.valores = list(self.alg.ARREGLO); self.n = len(self.valores)
+        self.unidad = min(40, (BASE_Y - self.techo) // max(self.valores))
+        self.slot = (ESC_X1 - ESC_X0) / self.n
+        self.ancho_barra = int(self.slot * 0.76 / 4) * 4
 
     # -------------------------------------------------- lo que no cambia
     def pintar_base(self):
@@ -277,9 +296,12 @@ class Fondo:
         # los rótulos de los contadores
         for clave, cx in self.columnas():
             texto(im, cx, self.cont_y, self.var_rotulo if clave == 'var' else self.rotulos[clave], PAL['gray'], 3, 'm')
-        # el piso de las barras
-        d.rectangle([ESC_X0 - 16, BASE_Y, ESC_X1 + 15, BASE_Y + 3], fill=PAL['dgray'])
+        self.pintar_piso(im, d)
         return im
+
+    def pintar_piso(self, im, d):
+        """El piso de las barras."""
+        d.rectangle([ESC_X0 - 16, BASE_Y, ESC_X1 + 15, BASE_Y + 3], fill=PAL['dgray'])
 
     def columnas(self):
         return [('var', 190), ('compara', 530), ('cambia', 870)]
@@ -305,8 +327,7 @@ class Fondo:
 
     def cuadros(self):
         """Los cuadros en orden; el estado de las barras avanza con los pasos que ya empezaron."""
-        st = {'a': list(range(self.n)), 'fijas': set(), 'destellos': {}, 'vars': {}, 'marcas': {}, 'rango': None,
-              'ordenados': set(), 'cuenta': {'compara': 0, 'cambia': 0}, 'mas': {'compara': -9, 'cambia': -9}}
+        st = self.estado()
         pendientes = list(self.eventos); actual = None
         for f in range(int(round(self.duracion * FPS))):
             t = f / FPS
@@ -315,12 +336,21 @@ class Fondo:
                 self.aplicar(actual, st)
             yield self.cuadro(t, self.escena_en(t), actual, st)
 
+    def estado(self):
+        """El estado antes del primer paso. `vars`, `cuenta` y `mas` (cuándo sumó cada contador) son de todas las vistas."""
+        return {'a': list(range(self.n)), 'fijas': set(), 'destellos': {}, 'vars': {}, 'marcas': {}, 'rango': None,
+                'ordenados': set(), 'cuenta': {'compara': 0, 'cambia': 0}, 'mas': {'compara': -9, 'cambia': -9}}
+
+    def contar(self, e, st):
+        """Las variables que trae el paso y los contadores que suma."""
+        st['vars'].update(e.get('vars', {}))
+        for c in e.get('cuenta', CUENTA.get(e['tipo'], [])):
+            st['cuenta'][c] += 1; st['mas'][c] = e['t0']
+
     def aplicar(self, e, st):
         """Lo que cambia un paso al empezar: el arreglo, los contadores, las marcas, el tramo y lo ya ordenado."""
         tipo, a = e['tipo'], st['a']
-        st['vars'].update(e.get('vars', {}))
-        for c in e.get('cuenta', CUENTA.get(tipo, [])):
-            st['cuenta'][c] += 1; st['mas'][c] = e['t0']
+        self.contar(e, st)
         if tipo == 'cambia':
             a[e['j']], a[e['k']] = a[e['k']], a[e['j']]
         elif tipo == 'mueve':
@@ -354,7 +384,7 @@ class Fondo:
                 if f >= desde:
                     lineas, tipo = ls, tp
         elif e is not None and vista == 'pasos':
-            tipo, ls = e['tipo'], e.get('lineas', [])
+            tipo, ls = e.get('color', e['tipo']), e.get('lineas', [])   # `color`: si el paso se pinta como otro tipo
             if len(ls) > 1 and e['dur'] >= 0.6:   # despacio: una línea tras otra (t = a[j]; a[j] = …; a[j + 1] = t)
                 i = min(len(ls) - 1, int((t - e['t0']) / (e['dur'] * 0.8 / len(ls))))
                 lineas = [ls[i]]
@@ -373,18 +403,23 @@ class Fondo:
                 v = st['vars'].get(self.var_nombre)
                 s = self.var_formato.format(v if v is not None else '-'); color = PAL['cyan']
             else:
-                s = str(st['cuenta'][clave]); color = VIVO[clave]
-                if t - st['mas'][clave] < 0.16 or (esc is primera_cuenta and clave == 'compara' and int(t * 4) % 2 == 0):
+                s = str(st['cuenta'][clave]); color = VIVO[self.COLOR_CUENTA[clave]]
+                if t - st['mas'][clave] < 0.16 or (esc is primera_cuenta and clave == self.PARPADEA and int(t * 4) % 2 == 0):
                     color = BLANCO
             texto(im, cx, self.cont_y + 34, s, color, 5, 'm')
         # 3. las barras, o lo que las tapa
-        if vista in ('cuenta', 'enlace'):
-            self.barras(im, d, t, None, st, apagadas=True)
+        if vista in self.ventanas:
+            self.dibujo(im, d, t, None, st, apagadas=True)
             entra = min(1, (t - self.primera(vista)['t0']) / 0.22)
-            (self.cuenta if vista == 'cuenta' else self.enlace)(im, d, t, entra)
+            self.ventanas[vista](im, d, t, entra)
         else:
-            self.barras(im, d, t, e if vista == 'pasos' else None, st, cae=esc if vista == 'inicio' else None)
+            self.dibujo(im, d, t, e if vista == 'pasos' else None, st, cae=esc if vista == 'inicio' else None)
         return im
+
+    def dibujo(self, im, d, t, e, st, cae=None, apagadas=False):
+        """La animación de un cuadro: aquí, las barras. `e`: el paso que corre (o None); `cae`: la escena de
+        entrada, si es ésa; `apagadas`: lo va a tapar una ventana."""
+        self.barras(im, d, t, e, st, cae=cae, apagadas=apagadas)
 
     def primera(self, vista):
         return next(s for s in self.escenas if s['vista'] == vista)
@@ -534,7 +569,8 @@ class Fondo:
         url = self.r['url']; w = 8 * 5 * len(url)
         d.rectangle([W // 2 - w // 2 - 36, y0 + 118, W // 2 + w // 2 + 35, y0 + 222], fill=PAL['cyan'])
         texto(im, W // 2, y0 + 150, url, NEGRO, 5, 'm')
-        texto(im, W // 2, y0 + 262, self.r['ruta'] + self.alg.CLAVE, PAL['cyan'], 3, 'm')
+        ruta = getattr(self.alg, 'RUTA', None)   # la lección de otro curso (la pila está en estructuras de datos)
+        texto(im, W // 2, y0 + 262, en(ruta, self.lang) if ruta else self.r['ruta'] + self.alg.CLAVE, PAL['cyan'], 3, 'm')
         texto(im, W // 2, y0 + 318, self.r['gratis'], PAL['gray'], 3, 'm')
 
     # -------------------------------------------------- el sonido
@@ -543,6 +579,16 @@ class Fondo:
         largo = self.duracion + self.cola
         base = chiptune(largo) * 0.29   # la base, unos 30 dB bajo cero: 16 o 17 dB abajo de la voz de LeIA
         sfx = np.zeros(int(largo * SR) + SR, dtype=np.float32)
+        self.sonido_pasos(sfx)
+        self.sonido_ventanas(sfx)
+        n = int(largo * SR)
+        mezcla_ = base[:n] + sfx[:n]
+        fade = int(0.6 * SR); mezcla_[-fade:] *= np.linspace(1, 0, fade)
+        # sin normalizar: armar.py le pasa a comercial.py `volumen` = este RMS, así que suena tal cual
+        return mezcla_ / max(1.0, np.abs(mezcla_).max() / 0.95)
+
+    def sonido_pasos(self, sfx):
+        """El sonido de la entrada y el de cada paso de las barras."""
         a = list(self.valores)   # los valores en su orden, para la nota de cada barra
         for s in self.escenas:
             if s['vista'] == 'inicio':
@@ -576,6 +622,9 @@ class Fondo:
                     nota(sfx, t0 + pos * 0.07, tono_de(a[pos]), 0.07, 'square', 0.11)
                 for i, fr in enumerate([523, 659, 784, 1046, 784, 1046]):
                     nota(sfx, t0 + self.n * 0.07 + 0.08 + i * 0.09, fr, 0.09, 'square', 0.14)
+
+    def sonido_ventanas(self, sfx):
+        """El de la tabla (cada fila y la O grande) y el del enlace."""
         for i, ts in sorted(self.filas_t.items()):   # 'blip' al salir cada fila de la tabla
             nota(sfx, ts, 880, 0.04, 'square', 0.13)
         if self.complejidad_t is not None:
@@ -593,11 +642,6 @@ class Fondo:
         if any(s['vista'] == 'cuenta' for s in self.escenas):
             t0 = self.primera('cuenta')['t0']   # la ventana que se abre: un 'pop'
             ruido(sfx, t0, 0.05, 0.12, 2500); nota(sfx, t0, 500, 0.04, 'triangle', 0.25, hasta=900)
-        n = int(largo * SR)
-        mezcla_ = base[:n] + sfx[:n]
-        fade = int(0.6 * SR); mezcla_[-fade:] *= np.linspace(1, 0, fade)
-        # sin normalizar: armar.py le pasa a comercial.py `volumen` = este RMS, así que suena tal cual
-        return mezcla_ / max(1.0, np.abs(mezcla_).max() / 0.95)
 
     # -------------------------------------------------- a disco
     def guardar(self, mp4, wav):

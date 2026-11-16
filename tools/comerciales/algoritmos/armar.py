@@ -23,6 +23,9 @@ Con --cuadros sólo guarda esos segundos del fondo en PNG, sin armar nada (para 
 Para el siguiente algoritmo: copia burbuja.py con otro nombre, cambia CODIGO (y su lección), ARREGLO, pasos() y
 GUION, y corre armar.py con ese nombre. Si necesita algo que las barras no tienen (un árbol, dos arreglos), se
 agrega su vista o su tipo de paso en renderizador.py.
+
+Las estructuras que no son barras (16-nov-2026: la pila; luego la cola) usan la vista de cajas.py: su archivo
+dice VISTA = 'cajas' (pila.py es el modelo) y aquí cambia sólo la hoja, que trae un cuadro por renglón del guion.
 """
 import argparse, importlib, json, math, os, re, subprocess, sys, tempfile
 
@@ -31,15 +34,21 @@ COMERCIALES = os.path.dirname(AQUI)
 sys.path.insert(0, COMERCIALES); sys.path.insert(0, AQUI)
 import comercial   # noqa: E402  narrar() y RESPIRO: los mismos que usará el vídeo
 import renderizador as R   # noqa: E402
+import cajas   # noqa: E402
+
+# la vista de cada algoritmo: las barras de siempre o, con VISTA = 'cajas' en su archivo, la pila y la cola
+FONDOS = {'barras': R.Fondo, 'cajas': cajas.FondoCajas}
 
 PY = os.path.expanduser('~/Documents/code challenge/.venv/bin/python')
 VOZ = {'es': ('es-US-Chirp3-HD-Achernar', 'es-US'), 'en': ('en-US-Chirp3-HD-Achernar', 'en-US'), 'ja': ('ja-JP-Chirp3-HD-Achernar', 'ja-JP')}
 SUF = {'es': '', 'en': '-en', 'ja': '-ja'}
 # cuánto pesa cada tipo de paso al repartir el tiempo de una escena, y lo menos que puede durar para que se vea
 PESO = {'pasada': 0.35, 'compara': 1.0, 'cambia': 1.0, 'mueve': 1.0, 'coloca': 0.6, 'fija': 0.7, 'marca': 0.6,
-        'linea': 0.5, 'rango': 0.5, 'fin': 3.0}
+        'linea': 0.5, 'rango': 0.5, 'fin': 3.0,
+        'caso': 1.0, 'lee': 0.5, 'mete': 1.0, 'saca': 1.6, 'resultado': 1.6}
 MINIMO = {'pasada': 0.08, 'compara': 0.1, 'cambia': 0.12, 'mueve': 0.12, 'coloca': 0.08, 'fija': 0.12, 'marca': 0.1,
-          'linea': 0.08, 'rango': 0.1, 'fin': 1.3}
+          'linea': 0.08, 'rango': 0.1, 'fin': 1.3,
+          'caso': 0.3, 'lee': 0.15, 'mete': 0.3, 'saca': 0.6, 'resultado': 0.6}
 # la tarjeta final (la de comercial.py): la serie y la dirección de las lecciones
 MARCA = {'es': {'sitio': 'ayotl.dev/aprende', 'pie': 'Gratis, sin cuenta y en el navegador'},
          'en': {'sitio': 'ayotl.dev/en/learn', 'pie': 'Free, no account, in your browser'}}
@@ -70,6 +79,7 @@ def linea_de_tiempo(alg, lang, medir):
                 e['t0'] = x; e['dur'] = dur * PESO[e['tipo']] / total; x += e['dur']
         escenas.append({'t0': t, 'dur': dur, 'vista': r.get('vista', 'pasos' if tomados else 'codigo'),
                         'eventos': tomados, 'resalta': r.get('resalta', []), 'filas': r.get('filas', []),
+                        'usos': r.get('usos', []),
                         'complejidad': r.get('complejidad'), 'cara': r.get('cara', 'normal'), 'voz': voz,
                         'dice': r['dice'], 'voz_dur': dura})
         t += dur
@@ -114,7 +124,8 @@ def medir_salida(mp4):
 
 
 def hoja(mp4, momentos, ruta):
-    """Seis cuadros del vídeo armado, a la mitad (540x960), en una hoja de 3 x 2 con el segundo de cada uno."""
+    """Cuadros del vídeo armado, a la mitad (540x960), en una hoja de tres por renglón (seis: 3 x 2) con el
+    segundo de cada uno."""
     from PIL import Image
     ims = []
     with tempfile.TemporaryDirectory() as tmp:
@@ -122,7 +133,8 @@ def hoja(mp4, momentos, ruta):
             png = os.path.join(tmp, f'{i}.png')
             subprocess.run([R.FF, '-loglevel', 'error', '-y', '-ss', f'{t:.3f}', '-i', mp4, '-frames:v', '1', png], check=True)
             ims.append(Image.open(png).convert('RGB').resize((540, 960), Image.LANCZOS))
-    h = Image.new('RGB', (540 * 3 + 40, 960 * 2 + 30 + 2 * 44), (24, 24, 32))
+    filas = math.ceil(len(ims) / 3)
+    h = Image.new('RGB', (540 * 3 + 40, 1014 * filas + 10), (24, 24, 32))
     for i, (im, (t, nota)) in enumerate(zip(ims, momentos)):
         x, y = 10 + (i % 3) * 550, 10 + (i // 3) * (960 + 54)
         R.texto(h, x + 4, y + 8, f'{t:.1f} s  {nota}', (230, 230, 240), 2)
@@ -154,7 +166,7 @@ def main():
           f'= {0.5 + fondo_dur + final_dur:.1f} s')
     for s in escenas:
         print(f"  {s['t0']:5.1f} +{s['dur']:4.1f}  voz {s['voz_dur']:4.1f}  {s['vista']:7} {len(s['eventos']):2} pasos  {s['dice']}")
-    fondo = R.Fondo(alg, lang, escenas, cola=final_dur + 0.5)
+    fondo = FONDOS[getattr(alg, 'VISTA', 'barras')](alg, lang, escenas, cola=final_dur + 0.5)
     suf = SUF[lang]
     if a.cuadros:
         for t, im in fondo.cuadros_sueltos([float(x) for x in a.cuadros.split(',')]):
@@ -184,6 +196,12 @@ def revisar(salida, escenas, fondo_dur):
     print(f'  vídeo {sv:.3f} s, audio {sa:.3f} s ({"iguales" if abs(sv - sa) < 0.05 else "DISTINTOS"})')
     # la hoja: el gancho, la idea, una comparación, un intercambio, la O grande y la lección
     t = lambda i, f: 0.5 + escenas[i]['t0'] + f * escenas[i]['dur']
+    if not any(e['tipo'] == 'compara' for s in escenas for e in s['eventos']):
+        # otra vista (las cajas): un cuadro de cada renglón del guion, ya avanzado, y la tarjeta final
+        momentos = [(t(i, 0.8), s['vista']) for i, s in enumerate(escenas)] + [(0.5 + fondo_dur + 2, 'tarjeta')]
+        hoja(salida, momentos, salida[:-4] + '-hoja.png')
+        print(' ', salida[:-4] + '-hoja.png')
+        return
     pasos_i = [i for i, s in enumerate(escenas) if s['vista'] == 'pasos']
     compara = next(e for s in escenas for e in s['eventos'] if e['tipo'] == 'compara')
     cambia = next(e for s in escenas for e in s['eventos'] if e['tipo'] == 'mueve' or (e['tipo'] == 'cambia' and e['j'] != e['k']))
