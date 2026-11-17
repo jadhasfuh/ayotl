@@ -5,7 +5,10 @@
   "Yo no tengo tuberías, pero flujo me sobra. Flujo de datos, claro.",
   "¿Por qué el ciempiés no juega futbol? Porque cuando termina de ponerse los tenis, ya se acabó el partido.",
   "¿Por qué el ciempiés nunca gana a las escondidas? Porque siempre se le asoma un pie.",
-  "¿Qué le dijo el mouse al teclado? Tú sí eres mi tipo."
+  "¿Qué le dijo el mouse al teclado? Tú sí eres mi tipo.",
+  "¿Qué estudia la pelota de {juego}? Plataformas digitales.",
+  "¿Por qué los picos de {juego} no tienen amigos? Porque se ponen muy puntiagudos con todos.",
+  "¿Cuál es el colmo de una IA? Tener una idea brillante y olvidar guardarla."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -13,7 +16,10 @@
   "Pipes never argue. They just go with the flow.",
   "Why was the mushroom invited to every party? Because he's a fun guy.",
   "Why did the centipede miss the game? It was still lacing up its shoes.",
-  "Why did the robot go to school? To improve its byte-size knowledge."
+  "Why did the robot go to school? To improve its byte-size knowledge.",
+  "That ball really knows how to roll with it.",
+  "Why did the ball in {juego} avoid the spikes? It didn't want to get to the point.",
+  "Why do AIs love gardening? They're great at growing decision trees."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -21,6 +27,8 @@
   "キーボードのキー、きーにしないでください！",
   "ムカデにむかって、撃って撃って撃ちまくれ！",
   "キノコって、木の子なんです！",
-  "メモリがいっぱいで、もりもり元気です！"
+  "メモリがいっぱいで、もりもり元気です！",
+  "ボールがボーッとしてたら、落ちちゃいます！",
+  "{juego}の台に乗ったら、だいじょうぶ！"
  ]
 }

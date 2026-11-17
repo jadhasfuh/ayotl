@@ -43,6 +43,10 @@ def guion(ficha, juego, lang):
             escenas.append({'imagen': os.path.join(AQUI, juego, e['imagen']), 'ancho': 750, 'radio': 12, 'cara': e['cara'], 'texto': e[lang]['texto'], 'voz': frase})
     escenas.append({'final': True, 'cara': 'guino', **ficha['cierre'][lang]})
     for e in escenas:
+        # el título, en un renglón: con dos, la tarjeta baja y el cuadro de diálogo le tapa el borde (Snatcher, 17-nov-2026)
+        ancho = sum(1 if ord(ch) > 0x2E7F else 0.5 for ch in e.get('texto', '')) if lang == 'ja' else len(e.get('texto', ''))   # en japonés, lo latino mide la mitad
+        if ancho > (13 if lang == 'ja' else 23):
+            sys.exit(f"{clave}: el título no cabe en un renglón ({ancho:g} letras): {e['texto']}")
         if renglones(e.get('dice') or e['voz'], lang) > 5:
             sys.exit(f"{clave}: no cabe en el cuadro de diálogo (más de 5 renglones): {e['voz']}")
     return clave, {

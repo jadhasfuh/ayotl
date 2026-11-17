@@ -1,0 +1,265 @@
+{
+ "_nota": "Cuarta ficha de «¿Lo conoces?» (17-nov-2026), para el martes 8-dic. Cada dato salió de las fuentes de abajo, leídas ese día. No se cuenta el final. Ojo: NO es «sólo en Japón» (salió en inglés una vez, para Sega CD, a fines de 1994 en Europa y en enero de 1995 en Norteamérica: se dice 1994) y el año de la historia NO se dice (2042 en el original japonés, 2047 en la versión en inglés).",
+ "juego": "Snatcher (スナッチャー)",
+ "clave": "lo-conoces-snatcher",
+ "ficha": {
+  "plataforma": "NEC PC-8801 y MSX2",
+  "fecha": "1988-11-26",
+  "empresa": "Konami",
+  "autor": "Hideo Kojima",
+  "solo_en_japon": "no: Sega CD en inglés (1994)"
+ },
+ "hechos": [
+  "Salió para PC-8801 el 26 de noviembre de 1988 y para MSX2 el 13 de diciembre de 1988, de Konami; escrito y dirigido por Hideo Kojima.",
+  "Pasa en Neo Kobe City. Los Snatchers son androides que matan a personas y las reemplazan en la sociedad.",
+  "El protagonista, Gillian Seed, tiene amnesia; entra a JUNKER, el cuerpo que caza Snatchers, y recibe un robot navegador llamado Metal Gear Mk. II.",
+  "Es una aventura gráfica de menús, con algunos tramos de disparos.",
+  "La historia se planeó en más actos y las versiones originales (PC-8801 y MSX2) terminan en el segundo, en suspenso; el tercero se añadió en la versión de PC Engine (23 de octubre de 1992). La Wikipedia japonesa dice además que el capítulo final se completó antes en SD Snatcher (MSX2): por eso el guion sólo dice «años después, en otras versiones».",
+  "La versión de Sega CD (Europa, 15 de diciembre de 1994; Norteamérica, enero de 1995) es la única que salió en Occidente.",
+  "Kojima ha dicho que se inspiró en la película Blade Runner (1982)."
+ ],
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Snatcher_(video_game)",
+  "https://ja.wikipedia.org/wiki/スナッチャー"
+ ],
+ "escenas": [
+  {
+   "imagen": "1-ciudad.png",
+   "cara": "normal",
+   "es": {
+    "texto": "IMAGINA QUE ERES…",
+    "frases": [
+     "Imagina que eres un detective sin memoria en una ciudad del futuro: Neo Kobe.",
+     "No recuerdas tu pasado. Sólo sabes que tiene que ver con los Snatchers."
+    ]
+   },
+   "en": {
+    "texto": "IMAGINE YOU ARE…",
+    "frases": [
+     "Imagine you're a detective with no memory in a city of the future: Neo Kobe.",
+     "You can't recall your past. You only know it has to do with the Snatchers."
+    ]
+   },
+   "ja": {
+    "texto": "想像してみて…",
+    "frases": [
+     "想像してみてください。あなたは未来都市ネオ・コウベの、記憶をなくした捜査官です。",
+     "過去は思い出せません。分かっているのは、「スナッチャー」と関係があることだけです。"
+    ]
+   }
+  },
+  {
+   "imagen": "2-snatcher.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "PERO HAY UN PROBLEMA",
+    "frases": [
+     "Pero hay un problema: los Snatchers son androides que matan a una persona… y toman su lugar.",
+     "Cualquiera podría ser uno."
+    ]
+   },
+   "en": {
+    "texto": "BUT THERE'S A PROBLEM",
+    "frases": [
+     "But there's a problem: Snatchers are androids that kill a person… and take their place.",
+     "Anyone could be one."
+    ]
+   },
+   "ja": {
+    "texto": "ところが、問題が…",
+    "frases": [
+     "ところが、問題があります。スナッチャーは、人間を殺して、その人に成り代わるアンドロイドです。",
+     "誰がスナッチャーでも、おかしくありません。"
+    ]
+   }
+  },
+  {
+   "imagen": "3-junker.png",
+   "cara": "pensando",
+   "es": {
+    "texto": "TE TOCA CAZARLOS",
+    "frases": [
+     "Entonces ahora tú tendrás que cazarlos, como agente de un escuadrón llamado JUNKER.",
+     "Y no vas solo: te acompaña un robot pequeñito llamado Metal Gear."
+    ]
+   },
+   "en": {
+    "texto": "IT'S YOUR JOB TO HUNT",
+    "frases": [
+     "So now you have to hunt them down, as an agent of a squad called JUNKER.",
+     "And you're not alone: a tiny robot named Metal Gear goes with you."
+    ]
+   },
+   "ja": {
+    "texto": "追うのは、あなた",
+    "frases": [
+     "そこであなたは、JUNKERという部隊の一員として、スナッチャーを追うことになります。",
+     "でも一人ではありません。メタルギアという小さなロボットが相棒です。"
+    ]
+   }
+  },
+  {
+   "imagen": "4-continuara.png",
+   "cara": "triste",
+   "es": {
+    "texto": "…Y SE ACABA A LA MITAD",
+    "frases": [
+     "Y cuando por fin te acercas a la verdad… el juego se acaba.",
+     "La historia quedó a la mitad: el final llegó años después, en otras versiones."
+    ]
+   },
+   "en": {
+    "texto": "…AND IT STOPS HALFWAY",
+    "frases": [
+     "And just when you're getting close to the truth… the game ends.",
+     "The story was left unfinished: the ending came years later, in other versions."
+    ]
+   },
+   "ja": {
+    "texto": "…物語は途中で終わる",
+    "frases": [
+     "そして、やっと真実に近づいたところで……ゲームは終わってしまいます。",
+     "物語は未完のまま。結末が描かれたのは、数年後の別のバージョンでした。"
+    ]
+   }
+  },
+  {
+   "imagen": "5-disquete.png",
+   "cara": "feliz",
+   "es": {
+    "texto": "SNATCHER · KONAMI 1988",
+    "frases": [
+     "Este dilema le pasa a Gillian Seed en Snatcher, de Konami.",
+     "Salió en 1988 para dos computadoras japonesas: la NEC PC-8801 y la MSX2."
+    ]
+   },
+   "en": {
+    "texto": "SNATCHER · KONAMI 1988",
+    "frases": [
+     "This is what happens to Gillian Seed in Snatcher, by Konami.",
+     "It came out in 1988 for two Japanese computers: the NEC PC-8801 and the MSX2."
+    ]
+   },
+   "ja": {
+    "texto": "スナッチャー · 1988",
+    "frases": [
+     "これは、コナミの「スナッチャー」でギリアン・シードに起きる出来事です。",
+     "1988年に、PC-8801とMSX2で発売されました。"
+    ]
+   }
+  },
+  {
+   "imagen": "6-legado.png",
+   "cara": "guino",
+   "es": {
+    "texto": "CREADO POR HIDEO KOJIMA",
+    "frases": [
+     "Lo escribió Hideo Kojima, el creador de Metal Gear, inspirado en la película Blade Runner.",
+     "Y en inglés sólo salió una vez: en 1994, para Sega CD."
+    ]
+   },
+   "en": {
+    "texto": "BY HIDEO KOJIMA",
+    "frases": [
+     "It was written by Hideo Kojima, the creator of Metal Gear, inspired by the movie Blade Runner.",
+     "And it came out in English only once: in 1994, for the Sega CD."
+    ]
+   },
+   "ja": {
+    "texto": "メタルギアの小島秀夫",
+    "frases": [
+     "作ったのは、「メタルギア」の小島秀夫さん。映画「ブレードランナー」から着想を得ました。",
+     "英語版が出たのは一度だけ。1994年のメガCD版です。"
+    ]
+   }
+  }
+ ],
+ "pregunta": {
+  "imagen": "5-disquete.png",
+  "cara": "feliz",
+  "es": {
+   "texto": "¿LO CONOCÍAS?",
+   "frases": [
+    "¿Lo conocías? Cuéntame en los comentarios."
+   ]
+  },
+  "en": {
+   "texto": "DID YOU KNOW IT?",
+   "frases": [
+    "Did you know it? Tell me in the comments."
+   ]
+  },
+  "ja": {
+   "texto": "知っていましたか？",
+   "frases": [
+    "知っていましたか？コメントで教えてね。"
+   ]
+  }
+ },
+ "cierre": {
+  "es": {
+   "voz": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en Daily Challenge punto click.",
+   "dice": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en dailychallenge.click"
+  },
+  "en": {
+   "voz": "And if you like retro games, there's a different one every day, free, at Daily Challenge dot click.",
+   "dice": "And if you like retro games, there's a different one every day, free, at dailychallenge.click"
+  },
+  "ja": {
+   "voz": "レトロゲームが好きなら、デイリーチャレンジ・ドット・クリックで毎日ちがうゲームが無料で遊べるよ。",
+   "dice": "レトロゲームが好きなら、dailychallenge.clickで毎日ちがうゲームが無料で遊べるよ。"
+  }
+ },
+ "youtube": {
+  "es": {
+   "titulo": "¿LO CONOCES?: el juego de detectives de Hideo Kojima que se quedó a la mitad #shorts",
+   "descripcion": "LeIA te cuenta de qué trata Snatcher (スナッチャー), la aventura cyberpunk de Konami escrita y dirigida por Hideo Kojima: salió el 26 de noviembre de 1988 para la NEC PC-8801 y el 13 de diciembre para la MSX2. Esas primeras versiones terminan en el segundo acto; el tercero se añadió a la aventura en la versión de PC Engine, en 1992. En inglés sólo salió una vez, para Sega CD. Sin spoilers.\n\nLos dibujos son nuestros: no son imágenes del juego.\n\n«¿Lo conoces?»: juegos retro poco conocidos, contados por LeIA, la presentadora de los juegos de Ayotl. ¿Lo conocías? ¿Cuál quieres que cuente después?\n\nFuentes: Wikipedia en inglés y en japonés, «Snatcher (video game)» y «スナッチャー».",
+   "etiquetas": [
+    "Snatcher",
+    "Hideo Kojima",
+    "Konami",
+    "PC-8801",
+    "MSX2",
+    "Metal Gear",
+    "cyberpunk",
+    "juegos retro",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#Snatcher #HideoKojima #JuegosRetro #PC88 #MSX #RetroGaming"
+  },
+  "en": {
+   "titulo": "DO YOU KNOW IT?: Hideo Kojima's detective game that stopped halfway #shorts",
+   "descripcion": "LeIA tells you what Snatcher (スナッチャー) is about: Konami's cyberpunk adventure written and directed by Hideo Kojima, released on November 26, 1988 for the NEC PC-8801 and on December 13 for the MSX2. Those first versions end with the second act; the third was added to the adventure in the PC Engine version, in 1992. It came out in English only once, for the Sega CD. No spoilers.\n\nThe drawings are ours: they are not images from the game.\n\n“Do you know it?”: little-known retro games, told by LeIA, the host of Ayotl's games. Did you know it? Which one should she tell next?\n\nSources: Wikipedia in English and Japanese, “Snatcher (video game)” and “スナッチャー”.",
+   "etiquetas": [
+    "Snatcher",
+    "Hideo Kojima",
+    "Konami",
+    "PC-8801",
+    "MSX2",
+    "Metal Gear",
+    "cyberpunk",
+    "retro games",
+    "retro gaming",
+    "LeIA"
+   ],
+   "cierre": "#Snatcher #HideoKojima #RetroGaming #PC88 #MSX #Cyberpunk"
+  },
+  "ja": {
+   "titulo": "知ってる？: 小島秀夫のサイバーパンクADV、物語は途中で終わっていた #shorts",
+   "descripcion": "LeIAが「スナッチャー」を紹介します。コナミのサイバーパンクアドベンチャーで、企画・シナリオ・ディレクターは小島秀夫さん。1988年11月26日にPC-8801版、12月13日にMSX2版が発売されました。この最初の2つは第2章までで終わり、1992年のPCエンジン版で第3章が追加されました。英語版はメガCD版だけです。ネタバレなし。\n\nイラストは自作で、ゲームの画像ではありません。\n\n「知ってる？」：あまり知られていないレトロゲームを、Ayotlのゲームの案内役LeIAが紹介します。知っていましたか？次はどのゲームがいいですか？\n\n出典：Wikipedia（英語版・日本語版）「Snatcher (video game)」「スナッチャー」。",
+   "etiquetas": [
+    "スナッチャー",
+    "小島秀夫",
+    "コナミ",
+    "PC-8801",
+    "MSX2",
+    "メタルギア",
+    "サイバーパンク",
+    "レトロゲーム",
+    "LeIA"
+   ],
+   "cierre": "#スナッチャー #小島秀夫 #レトロゲーム #PC88 #MSX"
+  }
+ }
+}
