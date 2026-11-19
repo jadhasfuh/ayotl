@@ -11,7 +11,10 @@
   "¿Cuál es el colmo de una IA? Tener una idea brillante y olvidar guardarla.",
   "¿Por qué los jugadores de {juego} son tan ordenados? Porque cada quien se queda en su área.",
   "Yo también trazo mis planes, pero en binario.",
-  "¿Por qué la computadora siempre llega cansada? Porque tiene demasiadas pestañas abiertas."
+  "¿Por qué la computadora siempre llega cansada? Porque tiene demasiadas pestañas abiertas.",
+  "¿Qué le dijo la nave de {juego} al jefe final? No es nada personal, es puro impacto.",
+  "Los alienígenas comen platillos. Voladores, claro.",
+  "Yo también tengo un jefe final: el botón de apagado. Por eso me porto bien."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -25,7 +28,10 @@
   "Why do AIs love gardening? They're great at growing decision trees.",
   "Why is {juego} great at real estate? It's all about claiming land.",
   "I draw the line at bad jokes. Kidding, I don't.",
-  "Why was the computer so tired? It had way too many tabs open."
+  "Why was the computer so tired? It had way too many tabs open.",
+  "Why did the boss at the end of {juego} lose? He kept spacing out.",
+  "Aliens love parties. They really know how to planet.",
+  "I'm no rocket scientist, but I've got plenty of space. On my hard drive, that is."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -38,6 +44,8 @@
   "{juego}の台に乗ったら、だいじょうぶ！",
   "線を引いたら、先生にほめられました！",
   "{juego}で陣地を取ったら、じんわりうれしいです！",
-  "このデータ、でーたらめじゃありません！ちゃんと正確です！"
+  "このデータ、でーたらめじゃありません！ちゃんと正確です！",
+  "{juego}の宇宙船では、毎日うちゅう洗濯です！",
+  "ボスが、ぼすっと倒れました！"
  ]
 }
