@@ -182,6 +182,7 @@ export const U06: Unidad = {
               en: "- 23 shows up on the third look: 16 (too small, everything to its left is out), 56 (too big) and 23, at position 5. Ten numbers, three looks.\n- 6 isn't there: it looks at 16, 5 and 8, then `izq` passes `der` and it returns −1.",
             },
           },
+          enlaces: [{ url: "/aprende/algoritmos/busqueda-binaria", texto: { es: "La búsqueda binaria paso a paso, en el curso de Algoritmos", en: "Binary search step by step, in the Algorithms course" } }],
         },
         {
           tipo: "explica",

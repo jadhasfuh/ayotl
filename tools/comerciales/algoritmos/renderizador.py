@@ -549,7 +549,10 @@ class Fondo:
             return
         tabla = self.alg.TABLA
         cols = tabla['columnas']
-        derechas = [400, x1 - 40] if len(cols) == 2 else [300, 650, x1 - 40]
+        # `derechas` y `k` en la TABLA: dónde acaba cada columna y el tamaño de sus números, si no caben los de
+        # siempre (la búsqueda binaria lleva «1 000 000» en dos columnas)
+        derechas = tabla.get('derechas') or ([400, x1 - 40] if len(cols) == 2 else [300, 650, x1 - 40])
+        k = tabla.get('k', 5)
         colores = [PAL[c] for c in tabla.get('colores', ['white', 'yellow', 'cyan'])]
         y = lambda f: y0 + round((y1 - y0) * f)   # en proporción: con un código largo la ventana es más baja
         for c, x in zip(cols, derechas):
@@ -557,7 +560,7 @@ class Fondo:
         for i, fila in enumerate(tabla['filas']):
             if i in self.filas_t and t >= self.filas_t[i]:
                 for v, x, color in zip(fila, derechas, colores):
-                    texto(im, x, y(0.19 + 0.152 * i), self.valor(v), color, 5, 'r')
+                    texto(im, x, y(0.19 + 0.152 * i), self.valor(v), color, k, 'r')
         if self.complejidad_t is not None and t >= self.complejidad_t:
             texto(im, W // 2, y(0.69), self.alg.COMPLEJIDAD, PAL['red'] if self.complejidad_mala() else PAL['lgreen'], 7, 'm')
             texto(im, W // 2, y(0.86), en(self.alg.LEYENDA, self.lang), PAL['lgray'], 3, 'm')

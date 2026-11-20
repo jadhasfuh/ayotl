@@ -36,9 +36,11 @@ sys.path.insert(0, COMERCIALES); sys.path.insert(0, AQUI)
 import comercial   # noqa: E402  narrar() y RESPIRO: los mismos que usará el vídeo
 import renderizador as R   # noqa: E402
 import cajas   # noqa: E402
+import punteros   # noqa: E402
 
-# la vista de cada algoritmo: las barras de siempre o, con VISTA = 'cajas' en su archivo, la pila y la cola
-FONDOS = {'barras': R.Fondo, 'cajas': cajas.FondoCajas}
+# la vista de cada algoritmo: las barras de siempre; con VISTA = 'cajas' en su archivo, la pila y la cola; con
+# VISTA = 'punteros', las barras de un arreglo ordenado con izq, der y medio (la búsqueda binaria)
+FONDOS = {'barras': R.Fondo, 'cajas': cajas.FondoCajas, 'punteros': punteros.FondoPunteros}
 
 PY = os.path.expanduser('~/Documents/code challenge/.venv/bin/python')
 VOZ = {'es': ('es-US-Chirp3-HD-Achernar', 'es-US'), 'en': ('en-US-Chirp3-HD-Achernar', 'en-US'), 'ja': ('ja-JP-Chirp3-HD-Achernar', 'ja-JP')}
@@ -198,8 +200,10 @@ def revisar(salida, escenas, fondo_dur):
     print(f'  vídeo {sv:.3f} s, audio {sa:.3f} s ({"iguales" if abs(sv - sa) < 0.05 else "DISTINTOS"})')
     # la hoja: el gancho, la idea, una comparación, un intercambio, la O grande y la lección
     t = lambda i, f: 0.5 + escenas[i]['t0'] + f * escenas[i]['dur']
-    if not any(e['tipo'] == 'compara' for s in escenas for e in s['eventos']):
-        # otra vista (las cajas): un cuadro de cada renglón del guion, ya avanzado, y la tarjeta final
+    if not any(e['tipo'] == 'compara' for s in escenas for e in s['eventos']) or \
+            not any(e['tipo'] == 'mueve' or (e['tipo'] == 'cambia' and e['j'] != e['k']) for s in escenas for e in s['eventos']):
+        # otra vista (las cajas, o una búsqueda, que no mueve nada): un cuadro de cada renglón del guion, ya
+        # avanzado, y la tarjeta final
         momentos = [(t(i, 0.8), s['vista']) for i, s in enumerate(escenas)] + [(0.5 + fondo_dur + 2, 'tarjeta')]
         hoja(salida, momentos, salida[:-4] + '-hoja.png')
         print(' ', salida[:-4] + '-hoja.png')
