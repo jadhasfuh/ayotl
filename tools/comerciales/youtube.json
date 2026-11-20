@@ -2653,5 +2653,49 @@
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-19-ja.jpg",
   "id": "qtoyQu3D6qw"
+ },
+ {
+  "clave": "algoritmos-busqueda",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/algoritmos/busqueda-binaria",
+  "video": "salida/algoritmos-busqueda.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-24T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Búsqueda binaria en 1 minuto #Shorts",
+  "descripcion": "Búsqueda binaria en 1 minuto: piensa un número del 1 al 100 y lo adivino en 7 preguntas. Mira el de en medio y tira la mitad donde no puede estar. Con 16 números, 5 miradas contra 16; con un millón, 20 contra un millón: O(log n). Pero sólo si la lista está ordenada. LeIA lo explica con el código en JavaScript línea por línea, y la lección con este mismo código se puede probar en el navegador.",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "búsqueda binaria",
+   "binary search",
+   "divide y vencerás",
+   "O(log n)",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ]
+ },
+ {
+  "clave": "algoritmos-busqueda-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/algoritmos/busqueda-binaria",
+  "video": "salida/algoritmos-busqueda-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-24T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Binary search in 1 minute #Shorts",
+  "descripcion": "Binary search in 1 minute: think of a number from 1 to 100 and I'll guess it in 7 questions. Look at the middle one and throw away the half where it can't be. With 16 numbers, 5 looks instead of 16; with a million, 20 instead of a million: O(log n). But only if the list is sorted. LeIA walks through the JavaScript code line by line, and the lesson with this same code runs in your browser.",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "binary search",
+   "divide and conquer",
+   "O(log n)",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ]
  }
 ]
