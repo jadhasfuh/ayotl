@@ -27,6 +27,7 @@ export const A02: Unidad = {
   lecciones: [
     {
       id: "busqueda-binaria",
+      video: { es: { id: "ssRF3DRswto", desde: "2026-11-24T16:00:00-06:00" }, en: { id: "7CwrCy4mF_8", desde: "2026-11-24T16:20:00-06:00" } },
       titulo: { es: "Búsqueda binaria", en: "Binary search" },
       resumen: {
         es: "Mirar el de en medio y tirar la mitad donde no puede estar: un millón de datos ordenados en 20 miradas, O(log n).",
