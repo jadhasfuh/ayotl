@@ -14,7 +14,10 @@
   "¿Por qué la computadora siempre llega cansada? Porque tiene demasiadas pestañas abiertas.",
   "¿Qué le dijo la nave de {juego} al jefe final? No es nada personal, es puro impacto.",
   "Los alienígenas comen platillos. Voladores, claro.",
-  "Yo también tengo un jefe final: el botón de apagado. Por eso me porto bien."
+  "Yo también tengo un jefe final: el botón de apagado. Por eso me porto bien.",
+  "¿Por qué las piezas de {juego} nunca se pelean? Porque siempre encajan.",
+  "Soy una IA cuadrada: pienso en bloques.",
+  "¿Qué le dijo la pieza larga a la fila vacía? Tranquila, vengo a llenar tu vacío."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -31,7 +34,10 @@
   "Why was the computer so tired? It had way too many tabs open.",
   "Why did the boss at the end of {juego} lose? He kept spacing out.",
   "Aliens love parties. They really know how to planet.",
-  "I'm no rocket scientist, but I've got plenty of space. On my hard drive, that is."
+  "I'm no rocket scientist, but I've got plenty of space. On my hard drive, that is.",
+  "Why are {juego} pieces such good friends? They always know where they fit in.",
+  "I love {juego}. It really stacks up.",
+  "My favorite move in {juego} is clearing four lines. My favorite move as an AI is clearing my cache."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -46,6 +52,9 @@
   "{juego}で陣地を取ったら、じんわりうれしいです！",
   "このデータ、でーたらめじゃありません！ちゃんと正確です！",
   "{juego}の宇宙船では、毎日うちゅう洗濯です！",
-  "ボスが、ぼすっと倒れました！"
+  "ボスが、ぼすっと倒れました！",
+  "棒が来たら、ぼうっとしないで！",
+  "四角いブロックで、資格が取れました！",
+  "{juego}で列がそろったら、れっつごーです！"
  ]
 }

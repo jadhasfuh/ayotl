@@ -2595,5 +2595,63 @@
   "idioma": "ja",
   "id": "0WEAHBFOt_A",
   "en_tiktok": "2026-11-20T19:40:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-19",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-19.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-21T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 19 de noviembre: 7,757 puntos en TETRIS 🕹️",
+  "descripcion": "El mejor del 19 de noviembre en Daily Challenge fue ELVIS TECK, con 7,757 puntos en TETRIS. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "TETRIS"
+  ],
+  "miniatura": "salida/mejor-2026-11-19.jpg",
+  "id": "M-6fRi1H-js"
+ },
+ {
+  "clave": "mejor-2026-11-19-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-19-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-21T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 19: 7,757 points in TETRIS 🕹️",
+  "descripcion": "The best run of November 19 on Daily Challenge was by ELVIS TECK, with 7,757 points in TETRIS. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "TETRIS"
+  ],
+  "idioma": "en",
+  "miniatura": "salida/mejor-2026-11-19-en.jpg",
+  "id": "clrHtKI0FNA"
+ },
+ {
+  "clave": "mejor-2026-11-19-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-19-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-21T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月19日のベスト、TETRISで7,757点 🕹️",
+  "descripcion": "11月19日のDaily Challengeでいちばんだったのは、TETRISで7,757点のELVIS TECKさん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "テトリス"
+  ],
+  "idioma": "ja",
+  "miniatura": "salida/mejor-2026-11-19-ja.jpg",
+  "id": "qtoyQu3D6qw"
  }
 ]
