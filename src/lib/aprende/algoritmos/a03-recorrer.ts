@@ -68,6 +68,7 @@ export const A03: Unidad = {
   lecciones: [
     {
       id: "laberinto-bfs",
+      video: { es: { id: "N2WKcDTsk5Q", desde: "2026-11-26T16:00:00-06:00" }, en: { id: "hngtOc0wuuE", desde: "2026-11-26T16:20:00-06:00" } },
       titulo: { es: "El laberinto: búsqueda en anchura (BFS)", en: "The maze: breadth-first search (BFS)" },
       resumen: {
         es: "Salir de un laberinto por el camino más corto con una cola: la BFS explora por capas y la primera vez que llega a la salida ya es por el camino con menos pasos.",

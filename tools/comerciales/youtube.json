@@ -2755,5 +2755,114 @@
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-20-ja.jpg",
   "id": "OLLs28qWOxo"
+ },
+ {
+  "clave": "mejor-2026-11-21",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-21.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-23T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 21 de noviembre: 139,480 puntos en DIG DUG 🕹️",
+  "descripcion": "El mejor del 21 de noviembre en Daily Challenge fue FERXO17, con 139,480 puntos en DIG DUG. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "DIG DUG"
+  ],
+  "miniatura": "salida/mejor-2026-11-21.jpg",
+  "id": "PSPFGkZ7yyI"
+ },
+ {
+  "clave": "mejor-2026-11-21-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-21-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-23T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 21: 139,480 points in DIG DUG 🕹️",
+  "descripcion": "The best run of November 21 on Daily Challenge was by FERXO17, with 139,480 points in DIG DUG. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "DIG DUG"
+  ],
+  "idioma": "en",
+  "miniatura": "salida/mejor-2026-11-21-en.jpg",
+  "id": "9w8r9iVno88"
+ },
+ {
+  "clave": "mejor-2026-11-21-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-21-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-23T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月21日のベスト、DIG DUGで139,480点 🕹️",
+  "descripcion": "11月21日のDaily Challengeでいちばんだったのは、DIG DUGで139,480点のFERXO17さん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "ディグダグ"
+  ],
+  "idioma": "ja",
+  "miniatura": "salida/mejor-2026-11-21-ja.jpg",
+  "id": "9Mkr8GVX9Vg"
+ },
+ {
+  "clave": "algoritmos-laberinto",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/algoritmos/laberinto-bfs",
+  "video": "salida/algoritmos-laberinto.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-26T16:00:00-06:00",
+  "titulo": "ALGORITMOS: El laberinto con BFS en 1 minuto #Shorts",
+  "descripcion": "El laberinto con BFS en 1 minuto: la búsqueda en anchura explora por capas con una cola. La entrada entra con un 0, sus vecinos con un 1, los de ellos con un 2… y sale primero el que llegó antes. La salida aparece en la capa 12 y, como cada casilla anotó de dónde vino, de vuelta sale el camino. Una DFS, que se va a lo hondo, aquí da 20 pasos: la BFS siempre da el camino más corto en pasos. LeIA lo explica con el código en JavaScript línea por línea, y la lección con este mismo código se puede probar en el navegador.",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "BFS",
+   "búsqueda en anchura",
+   "laberinto",
+   "cola",
+   "camino más corto",
+   "grafos",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "N2WKcDTsk5Q"
+ },
+ {
+  "clave": "algoritmos-laberinto-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/algoritmos/laberinto-bfs",
+  "video": "salida/algoritmos-laberinto-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-26T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Solving a maze with BFS in 1 minute #Shorts",
+  "descripcion": "Solving a maze with BFS in 1 minute: breadth-first search explores in layers using a queue. The entrance goes in with a 0, its neighbors with a 1, theirs with a 2… and first in is first out. The exit shows up in layer 12 and, since every cell noted where it came from, walking back gives the path. A DFS, which dives deep, takes 20 steps here: BFS always finds the path with the fewest steps. LeIA walks through the JavaScript code line by line, and the lesson with this same code runs in your browser.",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "BFS",
+   "breadth-first search",
+   "maze",
+   "queue",
+   "shortest path",
+   "graphs",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "hngtOc0wuuE"
  }
 ]

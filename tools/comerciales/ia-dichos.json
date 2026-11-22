@@ -20,7 +20,10 @@
   "¿Qué le dijo la pieza larga a la fila vacía? Tranquila, vengo a llenar tu vacío.",
   "¿Por qué los monstruos de {juego} no comen manzanas? Porque siempre les caen mal.",
   "Las cerezas de {juego} son la cereza del pastel.",
-  "Yo también cavo hondo, pero en aprendizaje profundo."
+  "Yo también cavo hondo, pero en aprendizaje profundo.",
+  "¿Qué le dijo la roca al Pooka? Te caigo bien, ¿verdad?",
+  "¿Por qué los monstruos de {juego} nunca ganan una discusión? Porque siempre terminan desinflados.",
+  "¿Por qué la IA nunca usa bomba de aire? Porque ya vive en la nube."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -43,7 +46,10 @@
   "My favorite move in {juego} is clearing four lines. My favorite move as an AI is clearing my cache.",
   "The monsters in {juego} have a huge crush on apples. A really heavy one.",
   "That clown really digs his job.",
-  "Why did the cherry join {juego}? It wanted to be part of the bunch."
+  "Why did the cherry join {juego}? It wanted to be part of the bunch.",
+  "What did the rock say to the Pooka? I'm falling for you.",
+  "Why do the monsters in {juego} never win an argument? They always end up deflated.",
+  "Why is the dragon in {juego} bad at hide and seek? He keeps blowing his cover."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -64,6 +70,9 @@
   "{juego}で列がそろったら、れっつごーです！",
   "サクランボを食べたら、さくっと得点です！",
   "リンゴが落ちてきて、モンスターもびっくりんごです！",
-  "{juego}のピエロは、ホリデーも穴をほりでーす！"
+  "{juego}のピエロは、ホリデーも穴をほりでーす！",
+  "岩がいわく、落ちるのは得意です！",
+  "穴を掘ったら、あなたに会えました！",
+  "モンスターをふくらませたら、ふくれっつらになりました！"
  ]
 }
