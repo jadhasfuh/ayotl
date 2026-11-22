@@ -37,10 +37,13 @@ import comercial   # noqa: E402  narrar() y RESPIRO: los mismos que usará el v�
 import renderizador as R   # noqa: E402
 import cajas   # noqa: E402
 import punteros   # noqa: E402
+import rejilla   # noqa: E402
 
 # la vista de cada algoritmo: las barras de siempre; con VISTA = 'cajas' en su archivo, la pila y la cola; con
-# VISTA = 'punteros', las barras de un arreglo ordenado con izq, der y medio (la búsqueda binaria)
-FONDOS = {'barras': R.Fondo, 'cajas': cajas.FondoCajas, 'punteros': punteros.FondoPunteros}
+# VISTA = 'punteros', las barras de un arreglo ordenado con izq, der y medio (la búsqueda binaria); con
+# VISTA = 'rejilla', un laberinto que se recorre con su cola al lado (la BFS)
+FONDOS = {'barras': R.Fondo, 'cajas': cajas.FondoCajas, 'punteros': punteros.FondoPunteros,
+          'rejilla': rejilla.FondoRejilla}
 
 PY = os.path.expanduser('~/Documents/code challenge/.venv/bin/python')
 VOZ = {'es': ('es-US-Chirp3-HD-Achernar', 'es-US'), 'en': ('en-US-Chirp3-HD-Achernar', 'en-US'), 'ja': ('ja-JP-Chirp3-HD-Achernar', 'ja-JP')}
@@ -48,10 +51,14 @@ SUF = {'es': '', 'en': '-en', 'ja': '-ja'}
 # cuánto pesa cada tipo de paso al repartir el tiempo de una escena, y lo menos que puede durar para que se vea
 PESO = {'pasada': 0.35, 'compara': 1.0, 'cambia': 1.0, 'mueve': 1.0, 'coloca': 0.6, 'fija': 0.7, 'marca': 0.6,
         'linea': 0.5, 'rango': 0.5, 'fin': 3.0,
-        'caso': 1.0, 'lee': 0.5, 'mete': 1.0, 'saca': 1.6, 'resultado': 1.6, 'imprime': 1.0}
+        'caso': 1.0, 'lee': 0.5, 'mete': 1.0, 'saca': 1.6, 'resultado': 1.6, 'imprime': 1.0,
+        'empieza': 1.2, 'sale': 0.7, 'entra': 1.0, 'ya': 0.45, 'llega': 2.0, 'camino': 0.5, 'devuelve': 1.5,
+        'dfs': 0.4}   # los de rejilla.py
 MINIMO = {'pasada': 0.08, 'compara': 0.1, 'cambia': 0.12, 'mueve': 0.12, 'coloca': 0.08, 'fija': 0.12, 'marca': 0.1,
           'linea': 0.08, 'rango': 0.1, 'fin': 1.3,
-          'caso': 0.3, 'lee': 0.15, 'mete': 0.3, 'saca': 0.6, 'resultado': 0.6, 'imprime': 0.4}
+          'caso': 0.3, 'lee': 0.15, 'mete': 0.3, 'saca': 0.6, 'resultado': 0.6, 'imprime': 0.4,
+          'empieza': 0.3, 'sale': 0.06, 'entra': 0.06, 'ya': 0.04, 'llega': 1.0, 'camino': 0.08, 'devuelve': 0.5,
+          'dfs': 0.06}
 # la tarjeta final (la de comercial.py): la serie y la dirección de las lecciones
 MARCA = {'es': {'sitio': 'ayotl.dev/aprende', 'pie': 'Gratis, sin cuenta y en el navegador'},
          'en': {'sitio': 'ayotl.dev/en/learn', 'pie': 'Free, no account, in your browser'}}

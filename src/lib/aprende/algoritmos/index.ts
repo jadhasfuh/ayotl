@@ -1,13 +1,14 @@
 import type { Curso } from "../tipos";
 import { A01 } from "./a01-ordenar";
 import { A02 } from "./a02-buscar";
+import { A03 } from "./a03-recorrer";
 
 export const ALGORITMOS: Curso = {
   id: "algoritmos",
   titulo: { es: "Algoritmos", en: "Algorithms" },
   resumen: {
-    es: "Los algoritmos clásicos uno por uno, empezando por ordenar y buscar: cómo funcionan paso a paso, con código que se corre en el navegador, y cuánto trabajo hacen.",
-    en: "The classic algorithms one by one, starting with sorting and searching: how they work step by step, with code that runs in your browser, and how much work they do.",
+    es: "Los algoritmos clásicos uno por uno, empezando por ordenar, buscar y recorrer: cómo funcionan paso a paso, con código que se corre en el navegador, y cuánto trabajo hacen.",
+    en: "The classic algorithms one by one, starting with sorting, searching and traversal: how they work step by step, with code that runs in your browser, and how much work they do.",
   },
   intro: {
     es: "Cada lección toma un algoritmo clásico, lo sigue paso a paso con un programa que puedes cambiar y correr, y cuenta cuánto trabajo hace. Empieza por ordenar, que es de lo que más hace una computadora. Conviene conocer la notación O grande, de la primera unidad de estructuras de datos. Tu avance se guarda en este navegador, sin cuenta.",
@@ -15,5 +16,5 @@ export const ALGORITMOS: Curso = {
   },
   lenguaje: "JavaScript",
   acento: "tierra",
-  unidades: [A01, A02].filter((u) => u.lecciones.length > 0),
+  unidades: [A01, A02, A03].filter((u) => u.lecciones.length > 0),
 };
