@@ -17,7 +17,10 @@
   "Yo también tengo un jefe final: el botón de apagado. Por eso me porto bien.",
   "¿Por qué las piezas de {juego} nunca se pelean? Porque siempre encajan.",
   "Soy una IA cuadrada: pienso en bloques.",
-  "¿Qué le dijo la pieza larga a la fila vacía? Tranquila, vengo a llenar tu vacío."
+  "¿Qué le dijo la pieza larga a la fila vacía? Tranquila, vengo a llenar tu vacío.",
+  "¿Por qué los monstruos de {juego} no comen manzanas? Porque siempre les caen mal.",
+  "Las cerezas de {juego} son la cereza del pastel.",
+  "Yo también cavo hondo, pero en aprendizaje profundo."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -37,7 +40,10 @@
   "I'm no rocket scientist, but I've got plenty of space. On my hard drive, that is.",
   "Why are {juego} pieces such good friends? They always know where they fit in.",
   "I love {juego}. It really stacks up.",
-  "My favorite move in {juego} is clearing four lines. My favorite move as an AI is clearing my cache."
+  "My favorite move in {juego} is clearing four lines. My favorite move as an AI is clearing my cache.",
+  "The monsters in {juego} have a huge crush on apples. A really heavy one.",
+  "That clown really digs his job.",
+  "Why did the cherry join {juego}? It wanted to be part of the bunch."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -55,6 +61,9 @@
   "ボスが、ぼすっと倒れました！",
   "棒が来たら、ぼうっとしないで！",
   "四角いブロックで、資格が取れました！",
-  "{juego}で列がそろったら、れっつごーです！"
+  "{juego}で列がそろったら、れっつごーです！",
+  "サクランボを食べたら、さくっと得点です！",
+  "リンゴが落ちてきて、モンスターもびっくりんごです！",
+  "{juego}のピエロは、ホリデーも穴をほりでーす！"
  ]
 }

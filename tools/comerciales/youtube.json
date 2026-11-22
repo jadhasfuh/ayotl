@@ -2674,7 +2674,8 @@
    "programación",
    "aprende a programar",
    "Ayotl"
-  ]
+  ],
+  "id": "ssRF3DRswto"
  },
  {
   "clave": "algoritmos-busqueda-en",
@@ -2696,6 +2697,63 @@
    "programming",
    "learn to code",
    "Ayotl"
-  ]
+  ],
+  "id": "7CwrCy4mF_8"
+ },
+ {
+  "clave": "mejor-2026-11-20",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-20.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-22T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 20 de noviembre: 2,644 puntos en MR. DO! 🕹️ #shorts",
+  "descripcion": "El mejor del 20 de noviembre en Daily Challenge fue FERXO17, con 2,644 puntos en MR. DO!. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "MR. DO!"
+  ],
+  "id": "mmwK6Ov675g"
+ },
+ {
+  "clave": "mejor-2026-11-20-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-20-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-22T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 20: 2,644 points in MR. DO! 🕹️ #shorts",
+  "descripcion": "The best run of November 20 on Daily Challenge was by FERXO17, with 2,644 points in MR. DO!. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "MR. DO!"
+  ],
+  "idioma": "en",
+  "id": "ky5n_GHML30"
+ },
+ {
+  "clave": "mejor-2026-11-20-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-20-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-22T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月20日のベスト、MR. DO!で2,644点 🕹️",
+  "descripcion": "11月20日のDaily Challengeでいちばんだったのは、MR. DO!で2,644点のFERXO17さん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "ミスタードゥ"
+  ],
+  "idioma": "ja",
+  "miniatura": "salida/mejor-2026-11-20-ja.jpg",
+  "id": "OLLs28qWOxo"
  }
 ]
