@@ -23,7 +23,10 @@
   "Yo también cavo hondo, pero en aprendizaje profundo.",
   "¿Qué le dijo la roca al Pooka? Te caigo bien, ¿verdad?",
   "¿Por qué los monstruos de {juego} nunca ganan una discusión? Porque siempre terminan desinflados.",
-  "¿Por qué la IA nunca usa bomba de aire? Porque ya vive en la nube."
+  "¿Por qué la IA nunca usa bomba de aire? Porque ya vive en la nube.",
+  "¿Qué música escuchan las rocas? Rock, claro.",
+  "¿Por qué las rocas de {juego} son tan dramáticas? Porque a la mínima se vienen abajo.",
+  "¿Por qué una IA nunca se asusta en una mina? Porque ya está acostumbrada a la minería de datos."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -49,7 +52,10 @@
   "Why did the cherry join {juego}? It wanted to be part of the bunch.",
   "What did the rock say to the Pooka? I'm falling for you.",
   "Why do the monsters in {juego} never win an argument? They always end up deflated.",
-  "Why is the dragon in {juego} bad at hide and seek? He keeps blowing his cover."
+  "Why is the dragon in {juego} bad at hide and seek? He keeps blowing his cover.",
+  "My favorite music? Rock. Falling rock.",
+  "The diamonds in {juego} are just like me: they shine under pressure.",
+  "I'm great at mining. Data mining, that is."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -73,6 +79,9 @@
   "{juego}のピエロは、ホリデーも穴をほりでーす！",
   "岩がいわく、落ちるのは得意です！",
   "穴を掘ったら、あなたに会えました！",
-  "モンスターをふくらませたら、ふくれっつらになりました！"
+  "モンスターをふくらませたら、ふくれっつらになりました！",
+  "掘ったら、ほっとしました！",
+  "{juego}で岩が落ちたら、お祝いです！",
+  "石が落ちてきたら、ちゃんと、いしきしてくださいね！"
  ]
 }

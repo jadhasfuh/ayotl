@@ -2081,7 +2081,8 @@
    "LeIA"
   ],
   "cierre": "#Portopia #JuegosRetro #DragonQuest #PC88 #RetroGaming",
-  "id": "7cRXzCegJSE"
+  "id": "7cRXzCegJSE",
+  "en_tiktok": "2026-12-01T13:00:00-06:00"
  },
  {
   "clave": "lo-conoces-portopia-en",
@@ -2106,7 +2107,8 @@
   ],
   "cierre": "#Portopia #RetroGaming #DragonQuest #PC88 #AdventureGames",
   "idioma": "en",
-  "id": "UdmsFWBlSaM"
+  "id": "UdmsFWBlSaM",
+  "en_tiktok": "2026-12-01T13:20:00-06:00"
  },
  {
   "clave": "lo-conoces-portopia-ja",
@@ -2129,7 +2131,8 @@
   ],
   "cierre": "#ポートピア連続殺人事件 #レトロゲーム #ドラクエ #PC88",
   "idioma": "ja",
-  "id": "iIu6RUdXAU4"
+  "id": "iIu6RUdXAU4",
+  "en_tiktok": "2026-12-01T13:40:00-06:00"
  },
  {
   "clave": "mejor-2026-11-15",
@@ -2613,7 +2616,8 @@
    "TETRIS"
   ],
   "miniatura": "salida/mejor-2026-11-19.jpg",
-  "id": "M-6fRi1H-js"
+  "id": "M-6fRi1H-js",
+  "en_tiktok": "2026-11-23T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-19-en",
@@ -2633,7 +2637,8 @@
   ],
   "idioma": "en",
   "miniatura": "salida/mejor-2026-11-19-en.jpg",
-  "id": "clrHtKI0FNA"
+  "id": "clrHtKI0FNA",
+  "en_tiktok": "2026-11-23T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-19-ja",
@@ -2652,7 +2657,8 @@
   ],
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-19-ja.jpg",
-  "id": "qtoyQu3D6qw"
+  "id": "qtoyQu3D6qw",
+  "en_tiktok": "2026-11-23T19:40:00-06:00"
  },
  {
   "clave": "algoritmos-busqueda",
@@ -2675,7 +2681,8 @@
    "aprende a programar",
    "Ayotl"
   ],
-  "id": "ssRF3DRswto"
+  "id": "ssRF3DRswto",
+  "en_tiktok": "2026-11-24T16:00:00-06:00"
  },
  {
   "clave": "algoritmos-busqueda-en",
@@ -2698,7 +2705,8 @@
    "learn to code",
    "Ayotl"
   ],
-  "id": "7CwrCy4mF_8"
+  "id": "7CwrCy4mF_8",
+  "en_tiktok": "2026-11-24T16:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-20",
@@ -2716,7 +2724,8 @@
    "retro gaming",
    "MR. DO!"
   ],
-  "id": "mmwK6Ov675g"
+  "id": "mmwK6Ov675g",
+  "en_tiktok": "2026-11-24T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-20-en",
@@ -2735,7 +2744,8 @@
    "MR. DO!"
   ],
   "idioma": "en",
-  "id": "ky5n_GHML30"
+  "id": "ky5n_GHML30",
+  "en_tiktok": "2026-11-24T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-20-ja",
@@ -2754,7 +2764,8 @@
   ],
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-20-ja.jpg",
-  "id": "OLLs28qWOxo"
+  "id": "OLLs28qWOxo",
+  "en_tiktok": "2026-11-24T19:40:00-06:00"
  },
  {
   "clave": "mejor-2026-11-21",
@@ -2773,7 +2784,8 @@
    "DIG DUG"
   ],
   "miniatura": "salida/mejor-2026-11-21.jpg",
-  "id": "PSPFGkZ7yyI"
+  "id": "PSPFGkZ7yyI",
+  "en_tiktok": "2026-11-25T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-21-en",
@@ -2793,7 +2805,8 @@
   ],
   "idioma": "en",
   "miniatura": "salida/mejor-2026-11-21-en.jpg",
-  "id": "9w8r9iVno88"
+  "id": "9w8r9iVno88",
+  "en_tiktok": "2026-11-25T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-21-ja",
@@ -2812,7 +2825,8 @@
   ],
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-21-ja.jpg",
-  "id": "9Mkr8GVX9Vg"
+  "id": "9Mkr8GVX9Vg",
+  "en_tiktok": "2026-11-25T19:40:00-06:00"
  },
  {
   "clave": "algoritmos-laberinto",
@@ -2837,7 +2851,8 @@
    "aprende a programar",
    "Ayotl"
   ],
-  "id": "N2WKcDTsk5Q"
+  "id": "N2WKcDTsk5Q",
+  "en_tiktok": "2026-11-26T16:00:00-06:00"
  },
  {
   "clave": "algoritmos-laberinto-en",
@@ -2863,6 +2878,65 @@
    "learn to code",
    "Ayotl"
   ],
-  "id": "hngtOc0wuuE"
+  "id": "hngtOc0wuuE",
+  "en_tiktok": "2026-11-26T16:20:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-22",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-22.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-24T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 22 de noviembre: 1,640 puntos en BOULDER 🕹️ #shorts",
+  "descripcion": "El mejor del 22 de noviembre en Daily Challenge fue FERXO17, con 1,640 puntos en BOULDER. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "BOULDER"
+  ],
+  "id": "Lqsdlgte2K8",
+  "en_tiktok": "2026-11-26T19:00:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-22-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-22-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-24T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 22: 1,640 points in BOULDER 🕹️ #shorts",
+  "descripcion": "The best run of November 22 on Daily Challenge was by FERXO17, with 1,640 points in BOULDER. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "BOULDER"
+  ],
+  "idioma": "en",
+  "id": "ZVYRDq7XfcE",
+  "en_tiktok": "2026-11-26T19:20:00-06:00"
+ },
+ {
+  "clave": "mejor-2026-11-22-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-22-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-24T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月22日のベスト、BOULDERで1,640点 🕹️ #shorts",
+  "descripcion": "11月22日のDaily Challengeでいちばんだったのは、BOULDERで1,640点のFERXO17さん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "ボルダー"
+  ],
+  "idioma": "ja",
+  "id": "4IfRMEhH5N8",
+  "en_tiktok": "2026-11-26T19:40:00-06:00"
  }
 ]
