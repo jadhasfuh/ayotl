@@ -1,0 +1,1505 @@
+{
+ "fuente": "pixel",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#6ef5ff",
+  "texto": "#ffffff",
+  "tenue": "#9fb8c8",
+  "sobre_acento": "#000000",
+  "borde": "#1a6f7a"
+ },
+ "marca": {
+  "logo": "zanei/logo.png",
+  "logo_ancho": 420,
+  "lema": "El vestigio de los ángeles",
+  "sitio": "dailychallenge.click/zanei",
+  "pie": "Gratis en el navegador y en tu teléfono"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/zanei-larga.mp4",
+ "musica": {
+  "archivo": "zanei-larga/es/sonido.wav",
+  "desde": 0,
+  "volumen": 0.1,
+  "agacha": 0.55
+ },
+ "marcador": "zanei-larga/marcador-es.json",
+ "escenas": [
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 0.0,
+   "dur": 6.954,
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Zanei: el acto uno del arcade completo.",
+   "dice": "¡Hola! Soy LeIA. Hoy, en ZANEI: el ACTO I del arcade completo.",
+   "capitulo": "Nivel 1: CIUDAD"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 6.954,
+   "dur": 6.018,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Cuatro niveles seguidos, jugados de principio a fin por la computadora."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 12.972,
+   "dur": 7.794,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Sin trampas: si le dan, pierde la nave. Empieza con tres naves, tres bombas y el Vulcano.",
+   "dice": "Sin trampas: si le dan, pierde la nave. Empieza con tres naves, tres bombas y el VULCANO."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 20.766,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 20.966,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El vídeo va a velocidad real: así de rápido se juega."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 25.712,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 25.912,
+   "dur": 1.055,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 26.967,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Nos dieron! Transfiriendo memoria: Noa salta a la siguiente nave. Le quedan dos.",
+   "dice": "¡Nos dieron! Transfiriendo memoria: NOA salta a la siguiente nave. Le quedan dos."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 33.825,
+   "dur": 0.892,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 34.717,
+   "dur": 4.794,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Mini-jefe: un carguero! Va soltando cazas.",
+   "dice": "¡Mini-jefe: un CARGUERO! Va soltando cazas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 39.511,
+   "dur": 0.256,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 39.767,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Una nave de regalo! Ya tiene tres."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 43.433,
+   "dur": 7.074,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Zanei es una palabra japonesa: significa «vestigio», la imagen que queda.",
+   "dice": "ZANEI es una palabra japonesa: significa «vestigio», la imagen que queda."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 50.507,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 50.707,
+   "dur": 5.106,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Yo también transfiero mi memoria a otra nave… cada vez que me reinician."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 55.813,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 56.013,
+   "dur": 0.22,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 56.233,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Mini-jefe: una fragata! Si cae, deja la F.",
+   "dice": "¡Mini-jefe: una FRAGATA! Si cae, deja la F."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 61.507,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Fragata abajo! Mil doscientos puntos."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 65.773,
+   "dur": 6.018,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Lo que se destruye lejos, en el tercio del fondo de la pantalla, vale el doble."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 71.791,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 71.991,
+   "dur": 1.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué rápido!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 73.617,
+   "dur": 1.116,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 74.733,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Arma nueva: Rebote! Balas que rebotan dos veces en los bordes.",
+   "dice": "¡Arma nueva: REBOTE! Balas que rebotan dos veces en los bordes."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 80.271,
+   "dur": 1.026,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Uf!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 81.297,
+   "dur": 0.303,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 81.6,
+   "dur": 3.954,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Alerta! Llega el jefe: Nodriza.",
+   "dice": "¡Alerta! Llega el jefe: NODRIZA.",
+   "capitulo": "Jefe: NODRIZA"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 85.554,
+   "dur": 5.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A la izquierda van los niveles, los puntos, las naves, las bombas y el arma."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 91.308,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Y la música es la del nivel uno: el Solfeggietto de Carl Philipp Emanuel Baj, de 1766.",
+   "dice": "Y la música es la del nivel uno: el Solfeggietto de Carl Philipp Emanuel Bach, de 1766."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 99.774,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 99.974,
+   "dur": 5.994,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Te cuento un chiste malo de IA? ¿Por qué los enemigos geométricos siempre pierden?"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 105.968,
+   "dur": 3.018,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Porque nunca encuentran el ángulo."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 108.986,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 109.186,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 109.286,
+   "dur": 2.538,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Nodriza, destruida!",
+   "dice": "¡NODRIZA, destruida!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 111.824,
+   "dur": 5.298,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Nave extra, por pasar los 20000 puntos! Ya tiene cuatro.",
+   "dice": "¡Nave extra, por pasar los 20 000 puntos! Ya tiene cuatro."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 117.122,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Entra el nivel dos, Carretera! La música: el Preludio en do menor de Johann Sebastian Baj.",
+   "dice": "¡Entra el nivel dos, CARRETERA! La música: el Preludio en do menor de Johann Sebastian Bach.",
+   "capitulo": "Nivel 2: CARRETERA"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 123.668,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Arma nueva: Misiles! Buscan solos al enemigo más cercano.",
+   "dice": "¡Arma nueva: MISILES! Buscan solos al enemigo más cercano."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 128.942,
+   "dur": 5.754,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Potencia al máximo! El P4 dura veinticinco segundos de fuego."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 134.696,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Una medalla: si recoge varias seguidas, cada una vale el doble que la anterior."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 141.002,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Un caza vale treinta puntos."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 143.828,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 144.028,
+   "dur": 0.222,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 144.25,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otro carguero! Mil quinientos puntos si cae.",
+   "dice": "¡Otro CARGUERO! Mil quinientos puntos si cae."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 148.516,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Otra nave extra! Van cinco."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 152.062,
+   "dur": 3.834,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Se acabó la munición: vuelve el Vulcano.",
+   "dice": "Se acabó la munición: vuelve el VULCANO."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 155.896,
+   "dur": 7.674,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Van 34740 puntos, en el nivel dos de cuatro, con cinco naves y tres bombas.",
+   "dice": "Van 34 740 puntos, en el nivel dos de cuatro, con cinco naves y tres bombas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 163.57,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otra fragata! Dispara en abanico y lanza misiles.",
+   "dice": "¡Otra FRAGATA! Dispara en abanico y lanza misiles."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 168.076,
+   "dur": 3.354,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cayó la fragata! Ahí va la F."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 171.43,
+   "dur": 4.554,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡La F! La potencia, al máximo de golpe."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 175.984,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Bomba! El Pulso borra todas las balas.",
+   "dice": "¡Bomba! El PULSO borra todas las balas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 180.25,
+   "dur": 0.583,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 180.833,
+   "dur": 2.466,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Ay, nave perdida!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 183.299,
+   "dur": 6.906,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "La mente de Noa pasa a otra nave, y todo va a un tercio de velocidad mientras tanto. Quedan cuatro.",
+   "dice": "La mente de NOA pasa a otra nave, y todo va a un tercio de velocidad mientras tanto. Quedan cuatro."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 190.205,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Es un shoot 'em up vertical, de naves, con gráficos vectoriales:"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 195.359,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "todo está hecho de líneas de neón, como en las recreativas de los ochenta."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 200.513,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 200.713,
+   "dur": 3.498,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Caben hasta nueve naves y seis bombas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 204.211,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 204.411,
+   "dur": 0.106,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 204.517,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Alerta! El jefe del nivel dos: Acorazado.",
+   "dice": "¡Alerta! El jefe del nivel dos: ACORAZADO.",
+   "capitulo": "Jefe: ACORAZADO"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 208.951,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La piloto es Noa: maneja naves sin tripulación a distancia.",
+   "dice": "La piloto es NOA: maneja naves sin tripulación a distancia."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 214.009,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cuando una cae, su mente salta a la siguiente."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 218.515,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 218.715,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Pierde otra parte! El núcleo ya está más cerca."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 222.573,
+   "dur": 2.538,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Acorazado, destruido!",
+   "dice": "¡ACORAZADO, destruido!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 225.111,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Se empieza con tres naves."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 228.249,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 228.449,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 228.549,
+   "dur": 6.498,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Nivel tres: Mar! Ahora suena el Invierno de Vivaldi, de Las cuatro estaciones.",
+   "dice": "¡Nivel tres: MAR! Ahora suena el Invierno de Vivaldi, de Las cuatro estaciones.",
+   "capitulo": "Nivel 3: MAR"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 235.047,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Aquí juega un bot que esquiva: mira las balas que vienen y busca el hueco menos peligroso."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 241.713,
+   "dur": 3.186,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Es un piloto del montón, a propósito."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 244.899,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 245.099,
+   "dur": 3.786,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Otra vez al P4! A aprovecharlo."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 248.885,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Si al perder la nave le quedaban menos de tres bombas, vuelven a ser tres."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 254.111,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 254.311,
+   "dur": 1.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué rápido!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 255.937,
+   "dur": 0.196,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 256.133,
+   "dur": 5.106,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Bomba! Mientras crece el anillo, no hay bala que la toque."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 261.239,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cuidado!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 263.105,
+   "dur": 0.512,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 263.617,
+   "dur": 3.306,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡fragata a la vista! Ojo con el abanico.",
+   "dice": "¡FRAGATA a la vista! Ojo con el abanico."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 266.923,
+   "dur": 2.586,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Otra fragata menos!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 269.509,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Otra F! Directo al P4."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 273.055,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Ojo con el punto blanco del centro de la nave: es lo único que cuenta."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 278.593,
+   "dur": 3.258,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Si una bala toca el ala, no pasa nada."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 281.851,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 282.051,
+   "dur": 0.566,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 282.617,
+   "dur": 3.186,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otra bomba! Le queda una."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 285.803,
+   "dur": 2.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Hay siete armas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 287.909,
+   "dur": 6.834,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El Vulcano no se acaba nunca; las otras seis llegan en objetos y traen munición limitada.",
+   "dice": "El VULCANO no se acaba nunca; las otras seis llegan en objetos y traen munición limitada."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 294.743,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 294.943,
+   "dur": 0.324,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 295.267,
+   "dur": 3.066,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Vuelve el carguero, con más cazas!",
+   "dice": "¡Vuelve el CARGUERO, con más cazas!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 298.333,
+   "dur": 1.026,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Uf!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 299.359,
+   "dur": 0.258,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 299.617,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Una nave de regalo! Ya tiene cinco."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 302.755,
+   "dur": 7.578,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Van 103640 puntos, en el nivel tres de cuatro, con cinco naves y una bomba.",
+   "dice": "Van 103 640 puntos, en el nivel tres de cuatro, con cinco naves y una bomba."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 310.333,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Y el acto tres? Ese no te lo cuento: juégalo."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 314.791,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 314.991,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Arma nueva: Dispersión! Un abanico de tres a siete balas.",
+   "dice": "¡Arma nueva: DISPERSION! Un abanico de tres a siete balas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 320.505,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La potencia tiene cuatro escalones. Cada P sube uno, y el P4 se gasta con el fuego."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 327.771,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 327.971,
+   "dur": 0.246,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 328.217,
+   "dur": 4.386,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cambia a Onda! Un arco ancho y lento que atraviesa.",
+   "dice": "¡Cambia a ONDA! Un arco ancho y lento que atraviesa."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 332.603,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Alerta! Llega el jefe: Boya.",
+   "dice": "¡Alerta! Llega el jefe: BOYA.",
+   "capitulo": "Jefe: BOYA"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 336.149,
+   "dur": 0.434,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 336.583,
+   "dur": 3.594,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Bomba! Y la pantalla, limpia."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 340.177,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A la Boya le queda la mitad.",
+   "dice": "A la BOYA le queda la mitad."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 342.835,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El juego da sesenta pasos por segundo."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 347.149,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 347.349,
+   "dur": 0.418,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 347.767,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 347.867,
+   "dur": 7.338,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Nave abajo! Baja un escalón la potencia, pero conserva el arma. Le quedan cuatro."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 355.205,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Sin munición especial: otra vez el Vulcano, que no se acaba nunca.",
+   "dice": "Sin munición especial: otra vez el VULCANO, que no se acaba nunca."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 360.479,
+   "dur": 1.138,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 361.617,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Boya, destruida!",
+   "dice": "¡BOYA, destruida!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 363.891,
+   "dur": 3.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Está en español, inglés y japonés."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 367.197,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 367.397,
+   "dur": 0.503,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 367.9,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Nivel cuatro, el último del acto: Base! Suena la sonata Patética de Beethoven.",
+   "dice": "¡Nivel cuatro, el último del acto: BASE! Suena la sonata Patética de Beethoven.",
+   "capitulo": "Nivel 4: BASE"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 374.926,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La cámara va detrás y encima de la nave, inclinada treinta grados."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 380.512,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 380.712,
+   "dur": 0.288,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 381.0,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otro Pulso! Le quedan dos.",
+   "dice": "¡Otro PULSO! Le quedan dos."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 384.546,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "normal",
+   "voz": "La munición especial sólo se gasta mientras dispara: de veinte a treinta segundos de fuego,"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 391.404,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "normal",
+   "voz": "según el arma."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 393.678,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 393.878,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Van 121130 puntos, en el nivel cuatro de cuatro, con cuatro naves y dos bombas.",
+   "dice": "Van 121 130 puntos, en el nivel cuatro de cuatro, con cuatro naves y dos bombas."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 401.984,
+   "dur": 2.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Vamos!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 404.138,
+   "dur": 0.545,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 404.683,
+   "dur": 1.986,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Otra vez Onda!",
+   "dice": "¡Otra vez ONDA!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 406.669,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Cuando se pierde una nave, la siguiente aparece en el mismo sitio,"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 412.183,
+   "dur": 2.946,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "invulnerable dos segundos y medio."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 415.129,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 415.329,
+   "dur": 0.888,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 416.217,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡La última fragata del acto! Y otra F en juego.",
+   "dice": "¡La última FRAGATA del acto! Y otra F en juego."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 420.675,
+   "dur": 2.946,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Y cayó la última fragata!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 423.621,
+   "dur": 3.738,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Y otra F: a toda potencia!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 427.359,
+   "dur": 3.114,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cada nivel tiene dos mini-jefes."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 430.473,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 430.673,
+   "dur": 0.394,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 431.067,
+   "dur": 7.986,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Arma nueva: Cadena! Un rayo que nunca falla y salta de un enemigo a otro, aunque pega poco.",
+   "dice": "¡Arma nueva: CADENA! Un rayo que nunca falla y salta de un enemigo a otro, aunque pega poco."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 439.053,
+   "dur": 0.83,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 439.883,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cambia a Láser! Un rayo que atraviesa: el mejor contra los jefes.",
+   "dice": "¡Cambia a LASER! Un rayo que atraviesa: el mejor contra los jefes."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 445.277,
+   "dur": 3.594,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Carguero abajo! Mil quinientos puntos."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 448.871,
+   "dur": 2.106,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Bomba salvadora!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 450.977,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Las medallas valen cien, doscientos, cuatrocientos,"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 455.435,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ochocientos y mil seiscientos si se recogen seguidas sin perder la nave."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 460.373,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 460.573,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Munición agotada: de vuelta al Vulcano.",
+   "dice": "Munición agotada: de vuelta al VULCANO."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 464.647,
+   "dur": 8.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Van 144770 puntos, en el nivel cuatro de cuatro, con cuatro naves y una bomba.",
+   "dice": "Van 144 770 puntos, en el nivel cuatro de cuatro, con cuatro naves y una bomba."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 473.185,
+   "dur": 0.148,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 473.333,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Alerta! El jefe del nivel cuatro: Centinela.",
+   "dice": "¡Alerta! El jefe del nivel cuatro: CENTINELA.",
+   "capitulo": "Jefe: CENTINELA"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 477.647,
+   "dur": 1.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué rápido!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 479.273,
+   "dur": 0.494,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 479.767,
+   "dur": 5.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Nave extra, por pasar los 150000 puntos! Ya tiene cinco.",
+   "dice": "¡Nave extra, por pasar los 150 000 puntos! Ya tiene cinco."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 485.641,
+   "dur": 4.866,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Otra nave perdida! Ya van cuatro en el acto. Le quedan cuatro."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 490.507,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Mi arma favorita es la cadena: como yo, nunca falla… pero pega poco."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 496.021,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 496.221,
+   "dur": 1.079,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 497.3,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Centinela, destruido!",
+   "dice": "¡CENTINELA, destruido!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 499.958,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cuidado!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 501.824,
+   "dur": 0.876,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 502.7,
+   "dur": 0.3,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 503.0,
+   "dur": 2.394,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡acto uno completado!",
+   "dice": "¡ACTO I completado!"
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 505.394,
+   "dur": 9.306,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "191820 puntos en total, con 34000 de bono por las cuatro naves y las tres bombas que sobraron.",
+   "dice": "191 820 puntos en total, con 34 000 de bono por las cuatro naves y las tres bombas que sobraron."
+  },
+  {
+   "video": "zanei-larga/es/largo.mp4",
+   "vertical": true,
+   "desde": 514.7,
+   "dur": 3.954,
+   "continua": true,
+   "cara": "guino",
+   "voz": "En 8 minutos perdió cuatro naves y ganó cinco."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "¿Cuántos puntos harías tú?",
+   "capitulo": "Juega gratis"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Zanei es gratis: en el navegador, en Daily Challenge punto click, diagonal, Zanei, o en tu teléfono.",
+   "dice": "ZANEI es gratis: en el navegador, en dailychallenge.click/zanei, o en tu teléfono.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "¿Ya estás suscrito? Síguenos para más partidas como esta.",
+   "continua": true
+  }
+ ]
+}

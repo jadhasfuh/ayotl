@@ -1,0 +1,1340 @@
+{
+ "fuente": "pixel-ja12",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#6ef5ff",
+  "texto": "#ffffff",
+  "tenue": "#9fb8c8",
+  "sobre_acento": "#000000",
+  "borde": "#1a6f7a"
+ },
+ "marca": {
+  "logo": "zanei/logo.png",
+  "logo_ancho": 420,
+  "lema": "天使の残影",
+  "sitio": "dailychallenge.click/zanei",
+  "pie": "ブラウザとスマホで無料"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/zanei-larga-ja.mp4",
+ "musica": {
+  "archivo": "zanei-larga/es/sonido.wav",
+  "desde": 0,
+  "volumen": 0.1,
+  "agacha": 0.55
+ },
+ "marcador": "zanei-larga/marcador-ja.json",
+ "escenas": [
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 0.0,
+   "dur": 11.586,
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のザンエイは、アーケードのだいいちまくをまるごと。4ステージ連続で、最初から最後までコンピューターが遊びます。",
+   "dice": "こんにちは！LeIAです。今日のZANEIは、アーケードの第1幕をまるごと。4ステージ連続で、最初から最後までコンピューターが遊びます。",
+   "capitulo": "ステージ1：都市"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 11.586,
+   "dur": 8.778,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ズルはなし。弾に当たれば機体を失います。スタートは機体3つ、ボム3つ、武器はバルカン。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 20.364,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 20.564,
+   "dur": 4.698,
+   "continua": true,
+   "cara": "normal",
+   "voz": "この動画は等速です。実際にこの速さで遊びます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 25.262,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 25.462,
+   "dur": 1.338,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "速い！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 26.8,
+   "dur": 0.167,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 26.967,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "やられた！記憶を転送中。ノアの意識は次の機体へ。残り2機。",
+   "dice": "やられた！記憶を転送中。NOAの意識は次の機体へ。残り2機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 35.073,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "中ボス、ゆそうき！戦闘機を次々に出してきます。",
+   "dice": "中ボス、輸送機！戦闘機を次々に出してきます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 40.227,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "機体のプレゼント！これで3機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 44.085,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ザンエイは、日本語の「残影」。あとに残るイメージ、という意味です。",
+   "dice": "ZANEIは、日本語の「残影」。あとに残るイメージ、という意味です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 50.871,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 51.071,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "機体は9つまで、ボムは6つまで持てます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 55.697,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 55.897,
+   "dur": 0.336,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 56.233,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "中ボス、フリゲート！倒すとFを落とします。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 60.739,
+   "dur": 3.498,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "フリゲートを撃破！1200点。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 64.237,
+   "dur": 9.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "縦スクロールのシューティングで、グラフィックはベクター。80年代のアーケードのように、すべてネオンの線で描かれています。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 73.783,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 73.983,
+   "dur": 0.75,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 74.733,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "新しい武器、リコシェ！画面の端で2回はね返る弾です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 80.439,
+   "dur": 1.161,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 81.6,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "警告！ボス、マザーシップの登場です。",
+   "capitulo": "ボス：マザーシップ"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 85.626,
+   "dur": 15.954,
+   "continua": true,
+   "cara": "normal",
+   "voz": "左側には、ステージ、スコア、機体、ボム、武器。BGMはステージ1の曲、カール・フィリップ・エマヌエル・バッハの「ソルフェッジェット」。1766年の曲です。",
+   "dice": "左側には、ステージ、スコア、機体、ボム、武器。BGMはステージ1の曲、C.P.E.バッハの「ソルフェッジェット」。1766年の曲です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 101.58,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 101.78,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "画面の奥3分の1で倒した敵は、点数が2倍になります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 107.486,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 107.686,
+   "dur": 1.578,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "気をつけて！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 109.264,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "マザーシップ、撃破！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 111.922,
+   "dur": 5.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "エクステンド！20000点を超えました。これで4機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 117.796,
+   "dur": 8.394,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ステージ2、ハイウェイに突入！曲はヨハン・ゼバスティアン・バッハの「前奏曲 ハ短調」。",
+   "dice": "ステージ2、ハイウェイに突入！曲はJ.S.バッハの「前奏曲 ハ短調」。",
+   "capitulo": "ステージ2：ハイウェイ"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 126.19,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "新しい武器、ミサイル！いちばん近い敵を自動で追いかけます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 132.136,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "勲章です。続けて取ると、1つごとに点数が倍になります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 137.842,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "guino",
+   "voz": "わたしも記憶を転送しています。再起動されるたびにね。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 143.428,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 143.628,
+   "dur": 0.622,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 144.25,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "またゆそうき！倒せば1500点。",
+   "dice": "また輸送機！倒せば1500点。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 148.348,
+   "dur": 3.714,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "また機体が増えました！5機です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 152.062,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "normal",
+   "voz": "弾切れ。バルカンにもどります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 156.088,
+   "dur": 7.314,
+   "continua": true,
+   "cara": "normal",
+   "voz": "いま34740点。ステージ2で、機体は5機、ボムは3つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 163.402,
+   "dur": 5.226,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "またフリゲート！扇形に撃って、ミサイルも撃ってきます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 168.628,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Fを取った！一気にパワー最大です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 172.486,
+   "dur": 1.264,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 173.75,
+   "dur": 4.194,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ボム！パルスが敵の弾をぜんぶ消します。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 177.944,
+   "dur": 2.418,
+   "continua": true,
+   "cara": "normal",
+   "voz": "戦闘機は30点。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 180.362,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 180.562,
+   "dur": 0.271,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 180.833,
+   "dur": 10.626,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "あっ、機体を失いました！ノアの意識が別の機体に移るあいだ、ゲームは3分の1の速さになります。残り4機。",
+   "dice": "あっ、機体を失いました！NOAの意識が別の機体に移るあいだ、ゲームは3分の1の速さになります。残り4機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 191.459,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "パイロットはノア。無人の機体を遠くから操縦します。機体が落ちると、意識は次の機体へ飛び移ります。",
+   "dice": "パイロットはNOA。無人の機体を遠くから操縦します。機体が落ちると、意識は次の機体へ飛び移ります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 200.213,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 200.413,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "normal",
+   "voz": "最大パワーは25秒。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 203.071,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 203.271,
+   "dur": 1.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ふう！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 204.417,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 204.517,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "警告！ステージ2のボス、そうこうかん！",
+   "dice": "警告！ステージ2のボス、装甲艦！",
+   "capitulo": "ボス：装甲艦"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 208.975,
+   "dur": 10.554,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ここで遊んでいるのは、よけるボット。飛んでくる弾を見て、いちばん安全なすき間をさがします。わざと、ふつうの腕前にしてあります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 219.529,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 219.729,
+   "dur": 2.298,
+   "continua": true,
+   "cara": "normal",
+   "voz": "スタートは機体3つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 222.027,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 222.227,
+   "dur": 2.394,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "そうこうかん、撃破！",
+   "dice": "装甲艦、撃破！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 224.621,
+   "dur": 3.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "レーザーの弾は20秒ぶん。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 227.927,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 228.127,
+   "dur": 0.406,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 228.533,
+   "dur": 5.466,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ステージ3、うみ！BGMはヴィヴァルディの「四季」から「冬」。",
+   "dice": "ステージ3、海！BGMはヴィヴァルディの「四季」から「冬」。",
+   "capitulo": "ステージ3：海"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 233.999,
+   "dur": 7.698,
+   "continua": true,
+   "cara": "normal",
+   "voz": "いま72230点。ステージ3で、機体は4機、ボムは3つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 241.697,
+   "dur": 7.554,
+   "continua": true,
+   "cara": "guino",
+   "voz": "AIのダジャレ、聞きたい？図形の敵が勝てないのはなぜ？いつも角が立つから。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 249.251,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 249.451,
+   "dur": 6.066,
+   "continua": true,
+   "cara": "normal",
+   "voz": "機体を失ったとき、ボムが3つより少なければ、3つにもどります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 255.517,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 255.717,
+   "dur": 0.416,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 256.133,
+   "dur": 4.674,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ボム！リングが広がるあいだ、弾は当たりません。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 260.807,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "がんばれ！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 262.673,
+   "dur": 0.944,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 263.617,
+   "dur": 3.954,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "フリゲートが来た！扇形の弾に注意。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 267.571,
+   "dur": 3.378,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "フリゲートを落とした！Fが出ます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 270.949,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "またF！すぐにパワー最大。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 274.495,
+   "dur": 7.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "パワーは4段階。Pを取るたびに1段上がり、最大パワーは撃つほど減っていきます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 282.121,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 282.321,
+   "dur": 0.296,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 282.617,
+   "dur": 3.066,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "またボム！残り1つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 285.683,
+   "dur": 8.226,
+   "continua": true,
+   "cara": "normal",
+   "voz": "特殊武器の弾が減るのは、撃っているあいだだけ。武器によって、20秒から30秒ぶんです。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 293.909,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 294.109,
+   "dur": 1.158,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 295.267,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ゆそうきがまた登場！戦闘機に注意。",
+   "dice": "輸送機がまた登場！戦闘機に注意。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 299.773,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "機体のプレゼント！これで5機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 303.319,
+   "dur": 7.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "いま103740点。ステージ3で、機体は5機、ボムは1つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 310.945,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "normal",
+   "voz": "敵のミサイルを撃ち落とすと50点。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 314.491,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 314.691,
+   "dur": 0.342,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 315.033,
+   "dur": 6.258,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "新しい武器、スプレッド！3〜7発の弾が扇形に広がります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 321.291,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "normal",
+   "voz": "カメラは機体の後ろ上方から、30度かたむけて見下ろしています。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 327.477,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 327.677,
+   "dur": 0.54,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 328.217,
+   "dur": 6.594,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ウェーブに持ちかえ！幅の広い、ゆっくりした波。敵を貫通します。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 334.811,
+   "dur": 3.906,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "警告！ボス、ブイの登場です。",
+   "capitulo": "ボス：ブイ"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 338.717,
+   "dur": 3.186,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ボム！弾がきれいに消えました。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 341.903,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ブイの体力は、あと半分。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 345.449,
+   "dur": 1.338,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "速い！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 346.787,
+   "dur": 0.98,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 347.767,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 347.867,
+   "dur": 6.474,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "被弾！パワーは1段階下がりますが、武器はそのまま。残り4機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 354.341,
+   "dur": 4.986,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "もう少し！ブイの体力は、残り4分の1。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 359.327,
+   "dur": 1.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "あぶない！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 360.953,
+   "dur": 0.664,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 361.617,
+   "dur": 2.466,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ブイ、撃破！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 364.083,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "normal",
+   "voz": "各ステージに中ボスが2体。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 366.861,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 367.061,
+   "dur": 0.839,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 367.9,
+   "dur": 7.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ステージ4、この幕の最後、きち！BGMはベートーヴェンの「悲愴」ソナタ。",
+   "dice": "ステージ4、この幕の最後、基地！BGMはベートーヴェンの「悲愴」ソナタ。",
+   "capitulo": "ステージ4：基地"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 375.094,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "guino",
+   "voz": "第3幕は？それはナイショ。遊んでみてね。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 379.84,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 380.04,
+   "dur": 0.96,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 381.0,
+   "dur": 3.834,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "もう一発、パルス！残り2つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 384.834,
+   "dur": 9.618,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "機体のまん中の白い点に注目。当たり判定はそこだけです。翼に弾が当たっても、だいじょうぶ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 394.452,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 394.652,
+   "dur": 7.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "いま121290点。ステージ4で、機体は4機、ボムは2つ。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 402.278,
+   "dur": 1.746,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "来るよ！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 404.024,
+   "dur": 0.659,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 404.683,
+   "dur": 1.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "またウェーブ！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 406.501,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "機体を失うと、次の機体は同じ場所に現れて、2.5秒間は無敵です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 413.647,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 413.847,
+   "dur": 2.034,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "うわ、ギリギリ！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 415.881,
+   "dur": 0.336,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 416.217,
+   "dur": 4.794,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "この幕、最後のフリゲート！またFがねらえます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 421.011,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "またフリゲートを撃破！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 423.285,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "もうひとつF！パワー全開です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 427.143,
+   "dur": 1.698,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "よけて！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 428.841,
+   "dur": 0.792,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 429.633,
+   "dur": 1.434,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 431.067,
+   "dur": 9.186,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "新しい武器、チェイン！絶対に外れない電撃が、敵から敵へ飛び移ります。威力は低め。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 440.253,
+   "dur": 7.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "レーザーに持ちかえ！貫通するビーム。ボス戦でいちばん強い武器です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 447.447,
+   "dur": 0.57,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 448.017,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ボムで切りぬけた！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 450.291,
+   "dur": 10.074,
+   "continua": true,
+   "cara": "normal",
+   "voz": "武器は7種類。バルカンは弾切れなし。ほかの6つはアイテムで手に入り、弾に限りがあります。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 460.365,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 460.565,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "特殊武器の弾がなくなりました。またバルカン。こちらは弾切れなしです。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 466.871,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "ゲームは1秒に60ステップ進みます。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 471.497,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 471.697,
+   "dur": 1.578,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "気をつけて！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 473.275,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 473.375,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "警告！ステージ4のボス、センチネル！",
+   "capitulo": "ボス：センチネル"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 477.833,
+   "dur": 1.934,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 479.767,
+   "dur": 4.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "エクステンド！150000点を超えました。これで5機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 484.585,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "また機体を失いました！この幕で4機目。残り4機。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 490.531,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "normal",
+   "voz": "世界ランキングもあります。イニシャル3文字だけで、アカウントはいりません。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 496.885,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 497.085,
+   "dur": 0.215,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 497.3,
+   "dur": 2.754,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "センチネル、撃破！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 500.054,
+   "dur": 1.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ふう！"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 501.2,
+   "dur": 1.5,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 502.7,
+   "dur": 0.3,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 503.0,
+   "dur": 10.458,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "だいいちまくクリア！合計191820点。残った機体4機とボム3つで、ボーナス34000点です。",
+   "dice": "第1幕クリア！合計191820点。残った機体4機とボム3つで、ボーナス34000点です。"
+  },
+  {
+   "video": "zanei-larga/ja/largo.mp4",
+   "vertical": true,
+   "desde": 513.458,
+   "dur": 5.178,
+   "continua": true,
+   "cara": "guino",
+   "voz": "8分で、失った機体は4機、増えた機体は5機。"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "あなたなら何点取れる？",
+   "capitulo": "無料で遊ぶ"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "ザンエイは無料。ブラウザならデイリーチャレンジ・ドット・クリック・スラッシュ・ザンエイ、スマホでも遊べます。",
+   "dice": "ZANEIは無料。ブラウザならdailychallenge.click/zanei、スマホでも遊べます。",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "チャンネル登録はもうした？こういうプレイをもっと見たいなら、フォローしてね！",
+   "continua": true
+  }
+ ]
+}

@@ -33,7 +33,7 @@ APPS = {
     'warzone': {'nombre': 'War Zone', 'web': 'https://dailychallenge.click/warzone', 'juega': 'juega', 'play': 'dev.ayotl.warzone', 'ios': 'dev.ayotl.warzone'},
     'kazan': {'nombre': 'Kazan', 'web': 'https://kazan.dailychallenge.click', 'juega': 'juega', 'play': 'dev.ayotl.kazan', 'ios': 'dev.ayotl.kazan'},
     'zanei': {'nombre': 'ZANEI', 'web': 'https://dailychallenge.click/zanei', 'juega': 'juega', 'play': 'dev.ayotl.zanei', 'ios': 'dev.ayotl.zanei'},
-    'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'practica', 'play': 'org.jlptest.twa', 'ios': None},
+    'jlptest': {'nombre': 'jlptest', 'web': 'https://jlptest.org', 'juega': 'practica', 'play': 'org.jlptest.twa', 'ios': 'org.jlptest.app'},   # iOS a la venta desde el 11-nov-2026
     # «Algoritmos en pixel» (9-nov-2026): Shorts con su lección en ayotl.dev/aprende; una lista por idioma
     'algoritmos': {'nombre': 'Algoritmos', 'web': 'https://ayotl.dev/aprende/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
     'algorithms': {'nombre': 'Algorithms', 'web': 'https://ayotl.dev/en/learn/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},

@@ -1,0 +1,1606 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#6ef5ff",
+  "texto": "#ffffff",
+  "tenue": "#9fb8c8",
+  "sobre_acento": "#000000",
+  "borde": "#1a6f7a"
+ },
+ "marca": {
+  "logo": "zanei/logo.png",
+  "logo_ancho": 420,
+  "lema": "Vestige of the angels",
+  "sitio": "dailychallenge.click/zanei",
+  "pie": "Free in the browser and on your phone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/zanei-larga-en.mp4",
+ "musica": {
+  "archivo": "zanei-larga/es/sonido.wav",
+  "desde": 0,
+  "volumen": 0.1,
+  "agacha": 0.55
+ },
+ "marcador": "zanei-larga/marcador-en.json",
+ "escenas": [
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 0.0,
+   "dur": 5.658,
+   "cara": "feliz",
+   "voz": "Hi! I'm Leia. Today in Zanei: the whole of Act One in arcade mode.",
+   "dice": "Hi! I'm LeIA. Today in ZANEI: the whole of ACT I in arcade mode.",
+   "capitulo": "Level 1: CITY"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 5.658,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Four levels in a row, played start to finish by the computer."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 9.756,
+   "dur": 8.106,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "No cheats: if it gets hit, it loses the ship. It starts with three ships, three bombs and the Vulcan.",
+   "dice": "No cheats: if it gets hit, it loses the ship. It starts with three ships, three bombs and the VULCAN."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 17.862,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 18.062,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Zanei is a Japanese word: it means \"vestige\", the image that lingers.",
+   "dice": "ZANEI is a Japanese word: it means \"vestige\", the image that lingers."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 23.48,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 23.68,
+   "dur": 2.874,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A fighter is worth thirty points."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 26.554,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 26.754,
+   "dur": 0.213,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 26.967,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "We're hit! Transferring memory: Noa jumps to the next ship. Two left.",
+   "dice": "We're hit! Transferring memory: NOA jumps to the next ship. Two left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 32.673,
+   "dur": 1.794,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "So fast!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 34.467,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 34.717,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Mini-boss: a carrier! It keeps dropping fighters.",
+   "dice": "Mini-boss: a CARRIER! It keeps dropping fighters."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 38.815,
+   "dur": 0.952,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 39.767,
+   "dur": 2.898,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "A free ship! Now it has three."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 42.665,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "normal",
+   "voz": "On the left: the levels, the score, the ships, the bombs and the weapon."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 48.083,
+   "dur": 7.386,
+   "continua": true,
+   "cara": "normal",
+   "voz": "And the music is level one's: the Solfeggietto by Carl Philipp Emanuel Bach, from 1766."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 55.469,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 55.669,
+   "dur": 0.564,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 56.233,
+   "dur": 4.914,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Mini-boss: a frigate! If it goes down, it drops the F.",
+   "dice": "Mini-boss: a FRIGATE! If it goes down, it drops the F."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 61.147,
+   "dur": 2.538,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Frigate down! Twelve hundred points."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 63.685,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "It's a vertical shoot 'em up with vector graphics: everything is made of neon lines,"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 69.631,
+   "dur": 2.538,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "like the arcades of the eighties."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 72.169,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 72.369,
+   "dur": 1.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Careful!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 73.563,
+   "dur": 1.17,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 74.733,
+   "dur": 5.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "New weapon: Ricochet! Shots that bounce off the edges twice.",
+   "dice": "New weapon: RICOCHET! Shots that bounce off the edges twice."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 80.391,
+   "dur": 1.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Yes!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 81.585,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Warning! The boss is here: Mothership.",
+   "dice": "Warning! The boss is here: MOTHERSHIP.",
+   "capitulo": "Boss: MOTHERSHIP"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 86.331,
+   "dur": 7.338,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The pilot is Noa: she flies unmanned ships remotely. When one goes down, her mind jumps to the next.",
+   "dice": "The pilot is NOA: she flies unmanned ships remotely. When one goes down, her mind jumps to the next."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 93.669,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 93.869,
+   "dur": 2.514,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The Mothership is down to half.",
+   "dice": "The MOTHERSHIP is down to half."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 96.383,
+   "dur": 6.186,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A dodging bot is playing here: it watches the incoming bullets and looks for the safest gap."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 102.569,
+   "dur": 2.586,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "It's an average pilot, on purpose."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 105.155,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 105.355,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "A part breaks off: it switches attacks!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 109.429,
+   "dur": 6.618,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Mothership, destroyed! Level one cleared, with 20120 points in this level.",
+   "dice": "MOTHERSHIP, destroyed! Level one cleared, with 20,120 points in this level."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 116.047,
+   "dur": 6.378,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Here comes level two, Highway! The music: the Prelude in C minor by Johann Sebastian Bach.",
+   "dice": "Here comes level two, HIGHWAY! The music: the Prelude in C minor by Johann Sebastian Bach.",
+   "capitulo": "Level 2: HIGHWAY"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 122.425,
+   "dur": 0.442,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 122.867,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "New weapon: Missiles! They home in on the nearest enemy.",
+   "dice": "New weapon: MISSILES! They home in on the nearest enemy."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 127.373,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Full power! P4 lasts twenty-five seconds of firing."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 131.471,
+   "dur": 4.986,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "A medal: pick up several in a row and each one is worth double the last."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 136.457,
+   "dur": 3.834,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The video runs at real speed: this is how fast it plays."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 140.291,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 140.491,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "guino",
+   "voz": "And act three? Not telling: play it."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 143.629,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 143.829,
+   "dur": 0.421,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 144.25,
+   "dur": 0.333,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 144.583,
+   "dur": 2.754,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Carrier down! Fifteen hundred points."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 147.337,
+   "dur": 0.43,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 147.767,
+   "dur": 0.35,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 148.117,
+   "dur": 2.634,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Another extra ship! That makes five."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 150.751,
+   "dur": 3.186,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Out of ammo: back to the Vulcan.",
+   "dice": "Out of ammo: back to the VULCAN."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 153.937,
+   "dur": 6.834,
+   "continua": true,
+   "cara": "normal",
+   "voz": "34340 points so far, on level two of four, with five ships and three bombs.",
+   "dice": "34,340 points so far, on level two of four, with five ships and three bombs."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 160.771,
+   "dur": 1.386,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Heads up!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 162.157,
+   "dur": 0.843,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 163.0,
+   "dur": 4.986,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Another frigate! It fires in a fan and launches missiles.",
+   "dice": "Another FRIGATE! It fires in a fan and launches missiles."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 167.986,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "The frigate falls! There goes the F."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 170.764,
+   "dur": 3.666,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "The F! Full power in one go."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 174.43,
+   "dur": 3.618,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Bomb! The Pulse wipes out every bullet.",
+   "dice": "Bomb! The PULSE wipes out every bullet."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 178.048,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "normal",
+   "voz": "You start with three ships."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 180.322,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 180.522,
+   "dur": 0.311,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 180.833,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Ouch, ship lost! Noa's mind moves to another ship, and everything runs at a third of the speed meanwhile.",
+   "dice": "Ouch, ship lost! NOA's mind moves to another ship, and everything runs at a third of the speed meanwhile."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 188.339,
+   "dur": 1.938,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Four left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 190.277,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Want a bad AI joke? Why do geometric enemies always lose? They can never find the right angle."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 197.303,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 197.503,
+   "dur": 5.994,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Special ammo only runs down while firing: twenty to thirty seconds of fire, depending on the weapon."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 203.497,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 203.697,
+   "dur": 0.82,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 204.517,
+   "dur": 4.218,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Warning! The level two boss: Ironclad.",
+   "dice": "Warning! The level two boss: IRONCLAD.",
+   "capitulo": "Boss: IRONCLAD"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 208.735,
+   "dur": 5.106,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Watch the white dot in the middle of the ship: it's the only part that counts."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 213.841,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A bullet on the wing does nothing."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 217.387,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 217.587,
+   "dur": 3.426,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Another part gone! The core is getting closer."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 221.013,
+   "dur": 1.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Phew!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 222.159,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 222.259,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Ironclad, destroyed! Level two cleared, with 51510 points in this level.",
+   "dice": "IRONCLAD, destroyed! Level two cleared, with 51,510 points in this level."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 228.805,
+   "dur": 5.634,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Level three: Sea! Now playing Vivaldi's Winter, from The Four Seasons.",
+   "dice": "Level three: SEA! Now playing Vivaldi's Winter, from The Four Seasons.",
+   "capitulo": "Level 3: SEA"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 234.439,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "normal",
+   "voz": "72230 points so far, on level three of four, with four ships and three bombs.",
+   "dice": "72,230 points so far, on level three of four, with four ships and three bombs."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 241.585,
+   "dur": 7.338,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There are seven weapons. The Vulcan never runs out; the other six come in pickups, with limited ammo.",
+   "dice": "There are seven weapons. The VULCAN never runs out; the other six come in pickups, with limited ammo."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 248.923,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 249.123,
+   "dur": 5.106,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Anything destroyed far away, in the back third of the screen, is worth double."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 254.229,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 254.429,
+   "dur": 1.704,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 256.133,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Bomb! While the ring grows, no bullet can touch it."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 260.591,
+   "dur": 0.954,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Come on!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 261.545,
+   "dur": 2.072,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 263.617,
+   "dur": 3.426,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "frigate ahead! Watch out for the fan of shots.",
+   "dice": "FRIGATE ahead! Watch out for the fan of shots."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 267.043,
+   "dur": 1.578,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "One less frigate!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 268.621,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Another F! Straight to P4."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 271.447,
+   "dur": 4.746,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I transfer my memory to another ship too… every time they reboot me."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 276.193,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 276.393,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Power has four steps. Each P raises it one, and P4 burns down as you fire."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 282.099,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 282.299,
+   "dur": 0.318,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 282.617,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Another bomb! One left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 285.395,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Medals are worth one hundred, two hundred, four hundred,"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 289.493,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "normal",
+   "voz": "eight hundred and sixteen hundred if you grab them in a row without losing a ship."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 294.119,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 294.319,
+   "dur": 0.948,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 295.267,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The carrier is back, with more fighters!",
+   "dice": "The CARRIER is back, with more fighters!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 298.405,
+   "dur": 1.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Careful!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 299.599,
+   "dur": 2.994,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "A free ship! Now it has five."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 302.593,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "normal",
+   "voz": "103640 points so far, on level three of four, with five ships and one bomb.",
+   "dice": "103,640 points so far, on level three of four, with five ships and one bomb."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 311.059,
+   "dur": 3.426,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The game runs sixty steps per second."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 314.485,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 314.685,
+   "dur": 0.348,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 315.033,
+   "dur": 4.554,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "New weapon: Spread! A fan of three to seven shots.",
+   "dice": "New weapon: SPREAD! A fan of three to seven shots."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 319.587,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "When a ship is lost, the next one appears in the same spot, invulnerable for two and a half seconds."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 325.893,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 326.093,
+   "dur": 1.386,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Here it comes!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 327.479,
+   "dur": 0.738,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 328.217,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Switching to Wave! A wide, slow arc that passes through.",
+   "dice": "Switching to WAVE! A wide, slow arc that passes through."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 333.491,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Warning! The boss is here: Buoy.",
+   "dice": "Warning! The boss is here: BUOY.",
+   "capitulo": "Boss: BUOY"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 336.317,
+   "dur": 0.266,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 336.583,
+   "dur": 2.226,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Bomb! And the screen is clear."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 338.809,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "If it had fewer than three bombs when the ship goes down, it gets back up to three."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 344.395,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 344.595,
+   "dur": 2.826,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The laser comes with twenty seconds of ammo."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 347.421,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 347.621,
+   "dur": 0.146,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 347.767,
+   "dur": 0.1,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 347.867,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Ship down! The power drops one step, but the weapon stays. Four left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 353.405,
+   "dur": 3.354,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Almost there! The Buoy has a quarter left.",
+   "dice": "Almost there! The BUOY has a quarter left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 356.759,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "normal",
+   "voz": "No special ammo left: the Vulcan again, which never runs out.",
+   "dice": "No special ammo left: the VULCAN again, which never runs out."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 361.217,
+   "dur": 0.4,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 361.617,
+   "dur": 6.618,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Buoy, destroyed! Level three cleared, with 46380 points in this level.",
+   "dice": "BUOY, destroyed! Level three cleared, with 46,380 points in this level."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 368.235,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Level four, the last one of the act: Base! Now playing Beethoven's Pathétique sonata.",
+   "dice": "Level four, the last one of the act: BASE! Now playing Beethoven's Pathétique sonata.",
+   "capitulo": "Level 4: BASE"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 375.501,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The camera sits behind and above the ship, tilted thirty degrees."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 380.007,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 380.207,
+   "dur": 0.793,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 381.0,
+   "dur": 2.226,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "One more Pulse! Two left.",
+   "dice": "One more PULSE! Two left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 383.226,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "In the acts everything carries over from one level to the next: score, ships, bombs,"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 389.58,
+   "dur": 2.106,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "weapon and power."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 391.686,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 391.886,
+   "dur": 2.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Back to P4! Make it count."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 394.544,
+   "dur": 7.986,
+   "continua": true,
+   "cara": "normal",
+   "voz": "121290 points so far, on level four of four, with four ships and two bombs.",
+   "dice": "121,290 points so far, on level four of four, with four ships and two bombs."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 402.53,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Ooh, close!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 404.396,
+   "dur": 0.287,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 404.683,
+   "dur": 1.458,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Wave again!",
+   "dice": "WAVE again!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 406.141,
+   "dur": 5.874,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Extra ships for points come at twenty thousand, a hundred and fifty thousand, three hundred thousand,"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 412.015,
+   "dur": 1.938,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "and so on up to a million."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 413.953,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 414.153,
+   "dur": 1.266,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Dodge!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 415.419,
+   "dur": 0.798,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 416.217,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The act's last frigate! And one more F up for grabs.",
+   "dice": "The act's last FRIGATE! And one more F up for grabs."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 420.675,
+   "dur": 1.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "And that's the last frigate!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 422.493,
+   "dur": 2.466,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "And one more F: full power!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 424.959,
+   "dur": 5.658,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "And there are no music files: the game plays it on a sound chip made in code, from a text recipe."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 430.617,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 430.817,
+   "dur": 0.25,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 431.067,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "New weapon: Chain! A bolt that never misses and jumps from enemy to enemy, though it hits softly.",
+   "dice": "New weapon: CHAIN! A bolt that never misses and jumps from enemy to enemy, though it hits softly."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 437.925,
+   "dur": 1.194,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Yes!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 439.119,
+   "dur": 0.764,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 439.883,
+   "dur": 5.034,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Switching to Laser! A beam that pierces through: the best against bosses.",
+   "dice": "Switching to LASER! A beam that pierces through: the best against bosses."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 444.917,
+   "dur": 2.106,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "The carrier falls!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 447.023,
+   "dur": 0.994,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 448.017,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Bomb, just in time!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 450.291,
+   "dur": 6.474,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I asked the bot why it doesn't go for the medals. It said: I'm busy dodging… responsibilities."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 456.765,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 456.965,
+   "dur": 2.586,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Full power once again!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 459.551,
+   "dur": 5.538,
+   "continua": true,
+   "cara": "normal",
+   "voz": "There are twenty kinds of enemies: fighters, drones, interceptors,"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 465.089,
+   "dur": 5.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "shielded escorts, tanks, turrets, missile launchers and bombers."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 470.675,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 470.875,
+   "dur": 1.386,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Heads up!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 472.261,
+   "dur": 1.072,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 473.333,
+   "dur": 3.306,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Warning! The level four boss: Sentinel.",
+   "dice": "Warning! The level four boss: SENTINEL.",
+   "capitulo": "Boss: SENTINEL"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 476.639,
+   "dur": 3.128,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 479.767,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Extra ship, for passing 150000 points! Now it has five.",
+   "dice": "Extra ship, for passing 150,000 points! Now it has five."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 484.921,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Another ship lost! That makes four in this act. Four left."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 489.547,
+   "dur": 3.306,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Bosses are made of parts that break off separately."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 492.853,
+   "dur": 3.978,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The core stays armored until the outer ones fall."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 496.831,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 497.031,
+   "dur": 0.269,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 497.3,
+   "dur": 2.586,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Sentinel, destroyed!",
+   "dice": "SENTINEL, destroyed!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 499.886,
+   "dur": 1.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Phew!"
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 501.032,
+   "dur": 1.668,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 502.7,
+   "dur": 0.3,
+   "continua": true
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 503.0,
+   "dur": 10.626,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Act One cleared! 191820 points in total, with a 34000 bonus for the four ships and three bombs left over.",
+   "dice": "ACT I cleared! 191,820 points in total, with a 34,000 bonus for the four ships and three bombs left over."
+  },
+  {
+   "video": "zanei-larga/en/largo.mp4",
+   "vertical": true,
+   "desde": 513.626,
+   "dur": 3.858,
+   "continua": true,
+   "cara": "guino",
+   "voz": "In 8 minutes it lost four ships and won five."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "How many points would you score?",
+   "capitulo": "Play free"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Zanei is free: in your browser at daily challenge dot click slash zanei, or on your phone.",
+   "dice": "ZANEI is free: in your browser at dailychallenge.click/zanei, or on your phone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Are you subscribed yet? Follow us for more runs like this one.",
+   "continua": true
+  }
+ ]
+}

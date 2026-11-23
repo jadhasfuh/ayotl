@@ -55,6 +55,10 @@ SR = 48000
 FUNDIDO = 0.35          # cruce entre escenas (s)
 RESPIRO = 0.55          # silencio después de cada frase (s)
 CALLADA = 3.0           # tras tantos segundos sin voz, el cuadro de diálogo se oculta
+# el cuadro de diálogo alto a la derecha de un juego vertical en horizontal (`vertical: true`, la partida larga de ZANEI):
+# x0, y0, x1, y1; el juego mide VERTICAL_ANCHO x 1080 en medio (720x1280 escalado)
+VERTICAL_ANCHO = 608
+LADO = (1292, 250, 1892, 1044)
 ABAJO = 1270            # en vertical, dónde empieza el cuadro de diálogo de una escena `completo` (deja libres 330 px abajo)
 AVENIR = '/System/Library/Fonts/Avenir Next.ttc'
 JAPONESA = os.path.expanduser('~/Documents/jlptest/fuentes/ipaexg.ttf')
@@ -130,6 +134,8 @@ def marcador(im, m, t, x0, ancho, alto, c):
     import bisect
     if m.get('tipo') == 'naciones':
         return marcador_naciones(im, m, t, x0, ancho, alto, c)
+    if m.get('tipo') == 'zanei':
+        return marcador_zanei(im, m, t, x0, ancho, alto, c)
     if '_ts' not in m:
         m['_ts'] = [s['t'] for s in m['estados']]
     est = m['estados'][max(0, bisect.bisect_right(m['_ts'], t + 1e-6) - 1)]
@@ -236,6 +242,92 @@ def marcador_naciones(im, m, t, x0, ancho, alto, c):
         elif s['sb']:
             pintar(d, (lx, y), rot['sin_base'], pixel(16, rot['sin_base']), naranja)
     m['_izq'] = im.crop((0, 0, x0 - 4, alto)); m['_der'] = im.crop((x0 + ancho + 4, 0, im.size[0], alto)); m['_pintado'] = (ie, x0, ancho, alto)
+
+
+def marcador_zanei(im, m, t, x0, ancho, alto, c):
+    """Los lados de la partida larga de ZANEI (21-nov-2026), un juego vertical en medio: a la izquierda, por qué nivel
+    del acto va (los hechos con sus puntos, el que se juega resaltado), los puntos, las naves (y cuántas se perdieron),
+    las bombas, el arma con su potencia y, si hay, el jefe con su vida; a la derecha, arriba del cuadro de LeIA, el
+    título. `m`: {tipo: 'zanei', modo, logo, niveles: [{nombre, jefe}], armas: {clave: [nombre, color]}, rotulos:
+    {puntos, naves, perdidas, bombas, arma, jefe}, estados: [{t, k, p, nv, b, a, pot, perd, pn: [puntos de cada nivel
+    hecho], j: [nombre, vida %] | null}]}; `t` es el segundo del vídeo del juego. Lo latino en Press Start 2P y lo
+    japonés en PixelMplus12, como el diálogo."""
+    import bisect
+    if '_ts' not in m:
+        m['_ts'] = [s['t'] for s in m['estados']]
+    ie = max(0, bisect.bisect_right(m['_ts'], t + 1e-6) - 1); est = m['estados'][ie]
+    if m.get('_pintado') == (ie, x0, ancho, alto):   # sólo cambia con el estado (cada cuarto de segundo)
+        im.paste(m['_izq'], (0, 0)); im.paste(m['_der'], (x0 + ancho + 4, 0)); return
+    d = ImageDraw.Draw(im)
+    acento, tenue, blanco, gris = color(c['acento']), color(c['tenue']), (236, 236, 240), (84, 92, 108)
+    naranja, rojo, verde = (255, 209, 102), (255, 95, 162), (125, 255, 176)
+    L, R = 40, x0 - 40
+    rot = m['rotulos']
+    # cabecera: el modo
+    pintar(d, (L, 44), m['modo'], pixel(24, m['modo']), acento)
+    d.rectangle([L, 86, R, 89], fill=color(c['borde']))
+    # los niveles del acto
+    y = 112
+    for i, nv in enumerate(m['niveles']):
+        hecho, actual = i < est['k'] or est.get('fin'), i == est['k'] and not est.get('fin')
+        col = acento if actual else blanco if hecho else gris
+        if actual:
+            d.polygon([(L, y + 2), (L, y + 22), (L + 12, y + 12)], fill=acento)
+        nombre = f"{i + 1} {nv['nombre']}"
+        pintar(d, (L + 24, y), nombre, pixel(24, nombre), col)
+        if hecho and i < len(est['pn']):
+            s = str(est['pn'][i]); pintar(d, (R, y + 4), s, pixel(16, s), verde, 'ra')
+        jefe = nv['jefe']
+        pintar(d, (L + 24, y + 38), jefe, pixel(16, jefe), tenue if (hecho or actual) else gris)
+        y += 84
+    d.rectangle([L, y + 2, R, y + 5], fill=color(c['borde']))
+    # los puntos
+    y += 30
+    pintar(d, (L, y), rot['puntos'], pixel(16, rot['puntos']), tenue)
+    s = str(est['p']); pintar(d, (L, y + 32), s, pixel(40, s), blanco)
+    # las naves (como en el marcador del juego: triángulos blancos) y cuántas se perdieron
+    y += 106
+    pintar(d, (L, y), rot['naves'], pixel(16, rot['naves']), tenue)
+    s = f"{rot['perdidas']} {est['perd']}"; pintar(d, (R, y), s, pixel(16, s), rojo if est['perd'] else tenue, 'ra')
+    for k in range(est['nv']):
+        cx = L + 16 + k * 40; yy = y + 34
+        d.line([(cx, yy), (cx - 14, yy + 26), (cx, yy + 19), (cx + 14, yy + 26), (cx, yy)], fill=blanco, width=3)
+    # las bombas (rombos naranjas)
+    y += 86
+    pintar(d, (L, y), rot['bombas'], pixel(16, rot['bombas']), tenue)
+    for k in range(est['b']):
+        cx = L + 14 + k * 40; yy = y + 46
+        d.polygon([(cx, yy - 13), (cx + 12, yy), (cx, yy + 13), (cx - 12, yy)], outline=naranja, width=3)
+    # el arma y la potencia
+    y += 86
+    pintar(d, (L, y), rot['arma'], pixel(16, rot['arma']), tenue)
+    nombre, col = m['armas'][est['a']]; col = color(col)
+    pintar(d, (L, y + 34), nombre, pixel(24, nombre), col)
+    for k in range(4):   # P1-P4
+        bx = R - (3 - k) * 30 - 22
+        if k < est['pot']:
+            d.rectangle([bx, y + 36, bx + 22, y + 56], fill=col)
+        else:
+            d.rectangle([bx, y + 36, bx + 22, y + 56], outline=gris, width=2)
+    # el jefe
+    y += 96
+    if est.get('j'):
+        nombre, vida = est['j']
+        pintar(d, (L, y), rot['jefe'], pixel(16, rot['jefe']), tenue)
+        pintar(d, (L, y + 32), nombre, pixel(24, nombre), rojo)
+        d.rectangle([L, y + 74, R, y + 92], outline=rojo, width=2)
+        llena = round((R - L - 8) * max(0, min(100, vida)) / 100)
+        if llena > 0:
+            d.rectangle([L + 4, y + 78, L + 4 + llena, y + 88], fill=rojo)
+    # a la derecha, arriba: el icono, ZANEI y 天使の残影
+    xd = x0 + ancho + 4
+    if m.get('logo'):
+        if '_logo' not in m:
+            m['_logo'] = Image.open(m['logo']).convert('RGB').resize((176, 176), Image.LANCZOS)
+        im.paste(m['_logo'], (xd + 36, 30))
+    pintar(d, (xd + 240, 66), 'ZANEI', pixel(48, 'ZANEI'), blanco)
+    d.text((xd + 242, 140), '天使の残影', font=ImageFont.truetype(PIXELMPLUS, 36), fill=acento)
+    m['_izq'] = im.crop((0, 0, x0 - 4, alto)); m['_der'] = im.crop((xd, 0, im.size[0], 232)); m['_pintado'] = (ie, x0, ancho, alto)
 
 
 def horizontal():
@@ -345,11 +437,27 @@ class Clip:
         self.abrir()
         self.n, self.ultimo = -1, None
         self.cuadro(0)
+        if self.ultimo is None:   # `desde` cae después del final (la ficha del acto dura más que la partida): el último cuadro, quieto
+            self.cerrar()
+            crudo = subprocess.run([FF, '-loglevel', 'error', '-sseof', '-1', '-i', ruta, '-vf', self.filtro, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
+                                   capture_output=True).stdout
+            tam = self.ancho * self.alto * 3
+            if len(crudo) < tam:
+                sys.exit(f'{ruta}: no hay cuadros desde el segundo {desde}')
+            fin = len(crudo) // tam * tam
+            self.ultimo = Image.frombytes('RGB', (self.ancho, self.alto), crudo[fin - tam:fin]); self.n = 1 << 60   # ya no se lee más
 
     def abrir(self):
         self.p = subprocess.Popen([FF, '-loglevel', 'error', '-ss', str(self.desde), '-t', f'{self.largo:.2f}', '-i', self.ruta,
                                    '-vf', self.filtro, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
                                   stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)   # se corta a media lectura
+
+    def cerrar(self):
+        """Mata el ffmpeg del clip y suelta su tubería. No basta con dejar de usarlo: subprocess guarda en _active los
+        procesos que no han terminado, con la tubería abierta, y el ffmpeg se queda bloqueado escribiendo hasta que acaba
+        todo el armado. A ~95 MB cada uno, las 174 escenas del largo de ZANEI llenaron la RAM, el swap (16 GB) y el disco,
+        y la Mac se reinició sola (23-nov-2026; el 21 se había quedado en 497 MB libres por lo mismo)."""
+        self.p.kill(); self.p.wait(); self.p.stdout.close()
 
     def cuadro(self, k):
         while self.n < k:
@@ -357,7 +465,7 @@ class Clip:
             if len(b) < self.ancho * self.alto * 3:
                 if not self.bucle:
                     break
-                self.p.kill(); self.abrir(); continue   # otra vuelta desde `desde`
+                self.cerrar(); self.abrir(); continue   # otra vuelta desde `desde`
             self.ultimo = Image.frombytes('RGB', (self.ancho, self.alto), b); self.n += 1
         return self.ultimo
 
@@ -375,6 +483,9 @@ class Escena:
             return
         if e.get('arriba'):   # el juego arriba y el cuadro de diálogo debajo, sin taparlo
             self.clip = Clip(e['video'], e.get('desde', 0), e.get('recorte'), e.get('ancho', 1280), dur, e.get('pixel', False), hasta=e.get('hasta'))
+            return
+        if e.get('vertical'):   # un juego vertical (ZANEI) a toda la altura, en medio; el diálogo y el marcador a los lados
+            self.clip = Clip(e['video'], e.get('desde', 0), e.get('recorte'), e.get('ancho', VERTICAL_ANCHO), dur, e.get('pixel', False), alto=H, hasta=e.get('hasta'))
             return
         # ancho de la pantalla: en vertical, 700 para una de teléfono, para que el pie y los botones de
         # Instagram no la tapen; las de juego, apaisadas, caben más anchas
@@ -421,6 +532,8 @@ class Escena:
             return self.completo(f)
         if self.e.get('arriba'):
             return self.arriba(f)
+        if self.e.get('vertical'):
+            return self.vertical(f)
         if self.fija is not None:
             return self.fija.copy()
         im = Image.new('RGB', (W, H), self.fondo); d = ImageDraw.Draw(im)
@@ -471,6 +584,23 @@ class Escena:
             marcador(im, self.g['marcador'], self.e.get('desde', 0) + f * self.dur, x0, juego.size[0], juego.size[1], c)
         return im
 
+    def vertical(self, f):
+        """Un juego vertical (la partida larga de ZANEI, 21-nov-2026) a toda la altura y en medio, sin nada encima: la
+        nave va abajo, donde el cuadro de diálogo de siempre la taparía. LeIA habla en un cuadro alto a la derecha
+        (dialogo(), LADO) y a la izquierda va el marcador."""
+        im = Image.new('RGB', (W, H), self.fondo)
+        juego = self.clip.cuadro(round(f * self.dur * FPS))
+        x0 = (W - juego.size[0]) // 2
+        im.paste(juego, (x0, 0))
+        c = self.g['colores']
+        if c.get('borde'):
+            d = ImageDraw.Draw(im)
+            d.rectangle([x0 - 4, 0, x0 - 1, H - 1], fill=color(c['borde']))
+            d.rectangle([x0 + juego.size[0], 0, x0 + juego.size[0] + 3, H - 1], fill=color(c['borde']))
+        if self.g.get('marcador'):
+            marcador(im, self.g['marcador'], self.e.get('desde', 0) + f * self.dur, x0, juego.size[0], juego.size[1], c)
+        return im
+
     def completo(self, f):
         """El vídeo a todo el cuadro y, si hay texto, una franja abajo que entra y sale."""
         im = self.clip.cuadro(round(f * self.dur * FPS)).copy()
@@ -505,7 +635,10 @@ class Escena:
         aparece = min(1, max(0, (t + 0.05) / 0.2), max(0, (voz_dur + CALLADA + 0.25 - t) / 0.25))
         if aparece <= 0:
             return
-        if horizontal():
+        al_lado = horizontal() and e.get('vertical')   # el cuadro alto a la derecha de un juego vertical: el retrato arriba, el texto debajo
+        if al_lado:
+            x0, y0, x1, y1 = LADO; tam = 32
+        elif horizontal():
             x0, y0, x1, y1, tam = 60, H - 330, W - 60, H - 36, 32 if JAPONES else 30   # en japonés, múltiplos de 8: Misaki no se emborrona
         else:
             x0, y0, x1, y1, tam = 40, 1150, W - 40, 1470, 24 if JAPONES else 27
@@ -520,7 +653,7 @@ class Escena:
         # el retrato
         cara = Image.open(os.path.join(pr['caras'], f"{pr['nombre'].lower()}-{e.get('cara', 'normal')}.png")).convert('RGBA')
         lado = cara.size[0] * max(1, 256 // cara.size[0])   # a escala entera, cerca de 256 px (64 x4, 128 x2)
-        px, py = x0 + 22, y0 + (y1 - y0 - lado) // 2
+        px, py = (x0 + 22, y0 + 40) if al_lado else (x0 + 22, y0 + (y1 - y0 - lado) // 2)
         cara = cara.resize((lado, lado), Image.NEAREST)
         d.rectangle([px - 6, py - 6, px + lado + 5, py + lado + 5], fill=(40, 52, 120, a), outline=(255, 255, 255, a), width=3)
         if aparece < 1:
@@ -533,26 +666,26 @@ class Escena:
         r_, g_, b_ = color(c['acento']); claro = 0.299 * r_ + 0.587 * g_ + 0.114 * b_ > 150   # con acento claro, letra oscura
         d.text((nx + 18, y0 - 4), pr['nombre'], font=fn, fill=((20, 20, 30, a) if claro else (255, 255, 255, a)), anchor='lm')
         # el texto, escribiéndose: termina un poco antes que la voz
-        texto = e.get('dice') or e.get('voz') or ''
-        ft = pixel(tam, texto); tx = px + lado + 40; ancho = x1 - 40 - tx
+        texto = re.sub(r'(?<=\d) (?=\d{3}(?!\d))', '\u00a0', e.get('dice') or e.get('voz') or '')   # «34 000» no se parte entre renglones (23-nov)
+        ft = pixel(tam, texto); tx = x0 + 34 if al_lado else px + lado + 40; ancho = x1 - 34 - tx if al_lado else x1 - 40 - tx
         # las líneas: por palabras; en japonés no hay espacios, así que por carácter (Adrián, 27-oct: las letras se
         # salían del cuadro), sin empezar línea con 。、！？ ni cerrar paréntesis
         ja = JAPONES and any(ord(ch) > 0x2E7F for ch in texto)
-        partes, sep = (re.findall(r'[A-Za-z0-9.:/]+|.', texto), '') if ja else (texto.split(), ' ')   # en japonés, las palabras latinas (LeIA, Daily Challenge, direcciones) enteras
+        partes, sep = (re.findall(r'[A-Za-z0-9.:/]+|.', texto), '') if ja else (re.split('[ \n\t]+', texto.strip()), ' ')   # en japonés, las palabras latinas (LeIA, Daily Challenge, direcciones) enteras
         lineas, actual = [], ''
         for palabra in partes:
             prueba = (actual + sep + palabra) if actual else palabra
-            if d.textlength(prueba, font=ft) > ancho and actual and palabra not in '。、！？）」・':
+            if d.textlength(prueba.replace('\u00a0', ' '), font=ft) > ancho and actual and palabra not in '。、！？）」・':
                 lineas.append(actual); actual = palabra
             else:
                 actual = prueba
         lineas.append(actual)
         cuantas = round(len(texto) * min(1, max(0, (t - 0.15) / max(0.3, voz_dur * 0.92))))
-        y = y0 + 58; resto = cuantas
+        y = py + lado + 40 if al_lado else y0 + 58; resto = cuantas
         for linea in lineas:
             if resto <= 0:
                 break
-            pintar(d, (tx, y), linea[:resto], ft, (255, 255, 255, a))
+            pintar(d, (tx, y), linea[:resto].replace('\u00a0', ' '), ft, (255, 255, 255, a))
             resto -= len(linea) + len(sep); y += round(ft.size * 1.75)   # el salto va con la fuente real (Misaki sale un tercio más grande)
         if cuantas >= len(texto) and int(t * 3) % 2 == 0:   # el ▼ de «sigue»
             vx, vy = x1 - 50, y1 - 46
@@ -742,8 +875,12 @@ def main():
                 eco = (g['escenas'][j - 1], len(voces[j - 1]) / SR, durs[j - 1]) if j and e.get('continua') and not len(voces[j]) and len(voces[j - 1]) else None
                 abiertas[j] = Escena(e, g, durs[j], len(voces[j]) / SR, eco)
                 for viejo in [x for x in abiertas if x < j - 1]:
-                    del abiertas[viejo]
+                    soltar(viejo)
             return abiertas[j]
+        def soltar(j):
+            clip = getattr(abiertas.pop(j), 'clip', None)
+            if clip:
+                clip.cerrar()
         fondo = Image.new('RGB', (W, H), color(g['colores']['fondo']))
         for k in range(int(total * FPS)):
             t = k / FPS
@@ -761,6 +898,8 @@ def main():
                 if i == len(durs) - 1 and total - t < 0.6:
                     im = Image.blend(fondo, im, max(0, (total - t) / 0.6))
             p.stdin.write(im.tobytes())
+        for j in list(abiertas):
+            soltar(j)
         p.stdin.close(); p.wait()
         print(f'{salida}: {total:.1f} s, {len(durs)} escenas' + (f', {len(caps)} capítulos' if caps else ''))
 

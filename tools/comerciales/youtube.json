@@ -2938,5 +2938,75 @@
   "idioma": "ja",
   "id": "4IfRMEhH5N8",
   "en_tiktok": "2026-11-26T19:40:00-06:00"
+ },
+ {
+  "clave": "zanei-larga",
+  "app": "zanei",
+  "video": "salida/zanei-larga.mp4",
+  "miniatura": "salida/zanei-larga.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-25T18:00:00-06:00",
+  "titulo": "ZANEI: la computadora juega el ACTO I, 4 niveles y 4 jefes seguidos (partida completa)",
+  "descripcion": "Los cuatro niveles del ACTO I del arcade de ZANEI, seguidos y sin continuar, jugados de principio a fin por un bot que esquiva: CIUDAD, CARRETERA, MAR y BASE, con sus cuatro jefes. LeIA comenta la partida completa: cuatro naves perdidas, cinco naves extra, las seis armas especiales, seis bombas y 191 820 puntos al final. A la izquierda va el marcador: el nivel, los puntos, las naves, las bombas, el arma y la vida del jefe. El sonido es el del juego: sus efectos y su música, clásica de dominio público en electro (C. P. E. Bach, J. S. Bach, Vivaldi, Beethoven y Dvořák).\n\nZANEI es un shoot 'em up vertical con gráficos vectoriales: una piloto enlazada a naves sin tripulación contra una invasión de formas geométricas. Doce niveles de historia y un arcade para buscar récords, en español, inglés y japonés.\n\nLeIA es la presentadora de los juegos de Ayotl.",
+  "cierre": "#ZANEI #Shmup #RetroGaming #Videojuegos #IndieGame",
+  "etiquetas": [
+   "ZANEI",
+   "shoot 'em up",
+   "shmup",
+   "matamarcianos",
+   "juego retro",
+   "gráficos vectoriales",
+   "arcade",
+   "partida completa",
+   "indie game",
+   "Daily Challenge"
+  ],
+  "id": "gTfHPmRUal8"
+ },
+ {
+  "clave": "zanei-larga-en",
+  "app": "zanei",
+  "video": "salida/zanei-larga-en.mp4",
+  "miniatura": "salida/zanei-larga-en.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-25T18:20:00-06:00",
+  "titulo": "ZANEI: the computer plays ACT I, 4 levels and 4 bosses in a row (full run)",
+  "descripcion": "All four levels of ZANEI's arcade ACT I, back to back with no continues, played start to finish by a dodging bot: CITY, HIGHWAY, SEA and BASE, with their four bosses. With LeIA's commentary on the full run: four ships lost, five extra ships, all six special weapons, six bombs and 191,820 points at the end. The scoreboard is on the left: level, score, ships, bombs, weapon and the boss's health. The sound is the game's own: its effects and its music, public-domain classical pieces turned into electro (C. P. E. Bach, J. S. Bach, Vivaldi, Beethoven and Dvořák).\n\nZANEI is a vertical shoot 'em up with vector graphics: a pilot linked to unmanned ships against an invasion of geometric shapes. Twelve story levels and an arcade mode for high scores, in Spanish, English and Japanese.\n\nLeIA is the host of Ayotl's games.",
+  "cierre": "#ZANEI #Shmup #RetroGaming #IndieGame",
+  "etiquetas": [
+   "ZANEI",
+   "shoot 'em up",
+   "shmup",
+   "retro games",
+   "vector graphics",
+   "arcade",
+   "full run",
+   "indie game"
+  ],
+  "idioma": "en",
+  "id": "Z8vq-R3mIsY"
+ },
+ {
+  "clave": "zanei-larga-ja",
+  "app": "zanei",
+  "video": "salida/zanei-larga-ja.mp4",
+  "miniatura": "salida/zanei-larga-ja.jpg",
+  "categoria": "20",
+  "publicar": "2026-11-25T18:40:00-06:00",
+  "titulo": "ZANEI: コンピューターが第1幕に挑戦、4ステージ・ボス4体を連続で（フルプレイ）",
+  "descripcion": "ZANEIのアーケード「第1幕」の4ステージを、コンティニューなしで連続プレイ。遊ぶのは、弾をよけるボットです。都市、ハイウェイ、海、基地、そして4体のボス。LeIAがフルプレイを実況：失った機体4、増えた機体5、特殊武器6種類すべて、ボム6回、最終スコア191820点。画面の左には、ステージ、スコア、機体、ボム、武器、ボスの体力。音はゲームそのもの。効果音と、著作権の切れたクラシックをエレクトロにした音楽（C.P.E.バッハ、J.S.バッハ、ヴィヴァルディ、ベートーヴェン、ドヴォルザーク）です。\n\nZANEI（天使の残影）は、ベクターグラフィックの縦スクロールシューティング。無人機とつながったパイロットが、幾何学の侵略者と戦います。ストーリー12ステージと、ハイスコアをねらうアーケード。日本語・英語・スペイン語に対応。\n\nLeIAはAyotlのゲームの案内役です。",
+  "cierre": "#ZANEI #シューティング #レトロゲーム #インディーゲーム",
+  "etiquetas": [
+   "ZANEI",
+   "天使の残影",
+   "シューティング",
+   "STG",
+   "レトロゲーム",
+   "ベクターグラフィック",
+   "アーケード",
+   "フルプレイ"
+  ],
+  "idioma": "ja",
+  "id": "rfTuOLUAD5Q"
  }
 ]
