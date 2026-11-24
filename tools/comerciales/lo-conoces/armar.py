@@ -11,10 +11,15 @@ no arma nada: apunta en youtube.json los vídeos ya armados y revisados, ese dí
 (ja), con el título y la descripción de `youtube` en la ficha (app `loconoces`), y manda el español a Instagram y
 Facebook con dc-social.py (--sin-social para no hacerlo). Los sube subir-youtube.py. Como
 los demás, escribe youtube.json: nunca a la vez. Adrián aprobó el formato con el piloto de Sweet Home (16-nov-2026).
+
+También arma las anécdotas de TI (historias reales de empresas viejas, en ../anecdotas/; piloto del 24-nov-2026, para el
+jueves 3-dic): su ficha dice `app` y `acento`, va en es y en, y una frase puede ser {dice, voz} si algo no se pronuncia
+como se escribe.
 """
 import json, os, subprocess, sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__)); COM = os.path.dirname(AQUI)
+CARPETAS = [AQUI, os.path.join(COM, 'anecdotas')]   # dónde puede estar la ficha
 VOZ = {'es': ('es-US-Chirp3-HD-Achernar', 'es-US'), 'en': ('en-US-Chirp3-HD-Achernar', 'en-US'), 'ja': ('ja-JP-Chirp3-HD-Achernar', 'ja-JP')}
 HORA = {'es': '13:00', 'en': '13:20', 'ja': '13:40'}
 MARCA = {'es': ('Un reto nuevo cada día', 'Gratis, en el navegador y sin descargar'), 'en': ('A new challenge every day', 'Free, in your browser, no download'),
@@ -35,12 +40,13 @@ def renglones(texto, lang):
     return n
 
 
-def guion(ficha, juego, lang):
+def guion(ficha, juego, lang, carpeta=AQUI):
     clave = ficha['clave'] + ('' if lang == 'es' else '-' + lang)
     escenas = []
     for e in ficha['escenas'] + [ficha['pregunta']]:   # una escena de comercial.py por frase, con el mismo dibujo y el mismo título
         for frase in e[lang]['frases']:
-            escenas.append({'imagen': os.path.join(AQUI, juego, e['imagen']), 'ancho': 750, 'radio': 12, 'cara': e['cara'], 'texto': e[lang]['texto'], 'voz': frase})
+            f = frase if isinstance(frase, dict) else {'voz': frase}
+            escenas.append({'imagen': os.path.join(carpeta, juego, e['imagen']), 'ancho': 750, 'radio': 12, 'cara': e['cara'], 'texto': e[lang]['texto'], **f})
     escenas.append({'final': True, 'cara': 'guino', **ficha['cierre'][lang]})
     for e in escenas:
         # el título, en un renglón: con dos, la tarjeta baja y el cuadro de diálogo le tapa el borde (Snatcher, 17-nov-2026)
@@ -52,7 +58,7 @@ def guion(ficha, juego, lang):
     return clave, {
         'fuente': 'pixel-ja' if lang == 'ja' else 'pixel', 'salida': os.path.join(COM, 'salida', clave + '.mp4'), 'voz': VOZ[lang][0], 'idioma': VOZ[lang][1],
         'bpm': 84, 'acercamiento': False, 'presentadora': {'nombre': 'LeIA', 'caras': os.path.join(COM, 'avatar')},
-        'colores': {'fondo': '#000000', 'acento': '#f0c850', 'texto': '#ffffff', 'tenue': '#9a9aa8', 'sobre_acento': '#000000', 'borde': '#3a3a48'},
+        'colores': {'fondo': '#000000', 'acento': ficha.get('acento', '#f0c850'), 'texto': '#ffffff', 'tenue': '#9a9aa8', 'sobre_acento': '#000000', 'borde': '#3a3a48'},
         'marca': {'logo': os.path.join(COM, 'dc', 'logo.png'), 'logo_ancho': 944, 'lema': MARCA[lang][0], 'sitio': 'dailychallenge.click', 'pie': MARCA[lang][1]},
         'escenas': escenas}
 
@@ -63,7 +69,7 @@ def planear(ficha, idiomas, fecha):
         clave = ficha['clave'] + ('' if lang == 'es' else '-' + lang)
         if not os.path.exists(os.path.join(COM, 'salida', clave + '.mp4')):
             sys.exit(f'falta salida/{clave}.mp4: ármalo antes de --publicar')
-        v = {'clave': clave, 'app': 'loconoces', 'video': f'salida/{clave}.mp4', 'categoria': '20', 'publicar': f'{fecha}T{HORA[lang]}:00-06:00', **ficha['youtube'][lang]}
+        v = {'clave': clave, 'app': ficha.get('app', 'loconoces'), 'video': f'salida/{clave}.mp4', 'categoria': '20', 'publicar': f'{fecha}T{HORA[lang]}:00-06:00', **ficha['youtube'][lang]}
         if lang != 'es':
             v['idioma'] = lang
         viejo = next((x for x in plan if x['clave'] == clave), None)
@@ -84,11 +90,12 @@ def main():
     fecha = sys.argv[sys.argv.index('--publicar') + 1] if '--publicar' in sys.argv else None
     args = [a for a in args if a != fecha]
     juego = args[0]; idiomas = args[1:] or ['es']
-    ficha = json.load(open(os.path.join(AQUI, juego + '.json'), encoding='utf-8'))
+    carpeta = next((c for c in CARPETAS if os.path.exists(os.path.join(c, juego + '.json'))), AQUI)
+    ficha = json.load(open(os.path.join(carpeta, juego + '.json'), encoding='utf-8'))
     if fecha:
         return planear(ficha, idiomas, fecha)
     for lang in idiomas:
-        clave, g = guion(ficha, juego, lang)
+        clave, g = guion(ficha, juego, lang, carpeta)
         ruta = os.path.join(COM, 'salida', clave + '.json')
         json.dump(g, open(ruta, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print(clave, '->', ruta, flush=True)

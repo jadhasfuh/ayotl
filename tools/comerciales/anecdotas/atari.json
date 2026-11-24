@@ -1,0 +1,220 @@
+{
+ "_nota": "Primera anécdota de TI (piloto, 24-nov-2026), para el jueves 3-dic: Atari y el entierro de 1983. Pedida por Adrián el 14-nov («historias cortas de empresas antiguas, anécdotas TI»); él eligió Atari el 24-nov. Cada dato está en dos fuentes o más; donde las cifras difieren se dice la redonda: «unos 700 mil» (Heller dijo 728 000) y «poco más de mil» (unos dicen 1 000 y otros 1 300).",
+ "juego": "Atari y el basurero de Alamogordo",
+ "clave": "anecdota-atari",
+ "app": "anecdotas",
+ "acento": "#f0905a",
+ "hechos": [
+  "En septiembre de 1983 entre 10 y 20 tráileres llevaron de la bodega de Atari en El Paso, Texas, al basurero de Alamogordo, Nuevo México, cajas, cartuchos y sistemas (y computadoras, según Tribune Wires); se aplastaron y enterraron.",
+  "Desde el 29 de septiembre de 1983 se echó una capa de concreto encima.",
+  "En 1982 Atari tenía el 80 % del mercado de los videojuegos.",
+  "De Pac-Man para la Atari 2600 se hicieron unos 12 millones de cartuchos, con unos 10 millones de consolas vendidas.",
+  "E.T. lo programó Howard Scott Warshaw en unas cinco semanas (27 de julio al 1 de septiembre de 1982); salió en diciembre de 1982. Las fuentes no coinciden en cuánto se vendió (1.5 millones de 5; o más de 2.6 a fin de 1982 con 669 000 devueltos; o, según Kassar, 3.5 de 4 millones regresaron): sólo se dice que sobraron millones.",
+  "Durante años se tomó por leyenda urbana.",
+  "El 26 de abril de 2014 se excavó para el documental Atari: Game Over; aparecieron E.T. y otros. Se calcula que hay unos 700 000 cartuchos de varios juegos; se sacaron unos 1 300 porque estaban más hondos de lo esperado.",
+  "Un cartucho de E.T. desenterrado está en la colección del Smithsonian (National Museum of American History)."
+ ],
+ "fuentes": [
+  "https://en.wikipedia.org/wiki/Atari_video_game_burial",
+  "https://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(video_game)",
+  "https://www.thehenryford.org/collections/explore/articles/atari-tomb",
+  "https://archaeology.org/issues/july-august-2014/digs-discoveries/new-mexico-atari-dump-site-excavation/",
+  "https://www.computerhistory.org/revolution/computer-games/16/192/792",
+  "https://techcrunch.com/2018/06/21/inside-ataris-rise-and-fall/",
+  "https://www.guinnessworldrecords.com/world-records/412757-shortest-development-period-for-a-videogame-film-conversion",
+  "https://dashboard.si.edu/object/video-game-cartridge-et-extra-terrestrial%3Anmah_1519322"
+ ],
+ "escenas": [
+  {
+   "imagen": "1-camiones.png",
+   "cara": "normal",
+   "es": {
+    "texto": "SEPTIEMBRE DE 1983",
+    "frases": [
+     "Septiembre de 1983: unos camiones de Atari llegan a un basurero de Nuevo México.",
+     "Traen cartuchos, consolas y hasta computadoras."
+    ]
+   },
+   "en": {
+    "texto": "SEPTEMBER 1983",
+    "frases": [
+     "September 1983: Atari trucks pull into a landfill in New Mexico.",
+     "They're carrying cartridges, consoles and even computers."
+    ]
+   }
+  },
+  {
+   "imagen": "2-cemento.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "TODO, APLASTADO",
+    "frases": [
+     "Lo aplastan todo, lo entierran… ¡y le echan cemento encima!"
+    ]
+   },
+   "en": {
+    "texto": "ALL OF IT, CRUSHED",
+    "frases": [
+     "They crush it all, bury it… and pour concrete on top!"
+    ]
+   }
+  },
+  {
+   "imagen": "3-reina.png",
+   "cara": "pensando",
+   "es": {
+    "texto": "¿PERO POR QUÉ?",
+    "frases": [
+     "Un año antes, Atari era la reina: tenía el 80 por ciento del mercado de los videojuegos.",
+     {
+      "dice": "Y se confió: hizo 12 millones de cartuchos de Pac-Man… con unos 10 millones de consolas vendidas.",
+      "voz": "Y se confió: hizo doce millones de cartuchos de Pac Man… con unos diez millones de consolas vendidas."
+     }
+    ]
+   },
+   "en": {
+    "texto": "BUT WHY?",
+    "frases": [
+     "A year earlier, Atari was on top: it had 80 percent of the video game market.",
+     "And it got cocky: 12 million Pac-Man cartridges… with about 10 million consoles sold."
+    ]
+   }
+  },
+  {
+   "imagen": "4-semanas.png",
+   "cara": "sorpresa",
+   "es": {
+    "texto": "CINCO SEMANAS",
+    "frases": [
+     {
+      "dice": "Luego vino E.T.: Howard Scott Warshaw tuvo sólo cinco semanas para programarlo.",
+      "voz": "Luego vino I Ti: Jáuard Escot Uórsho tuvo sólo cinco semanas para programarlo."
+     },
+     "Llegó para la Navidad de 1982, y a Atari le sobraron millones de cartuchos."
+    ]
+   },
+   "en": {
+    "texto": "FIVE WEEKS",
+    "frases": [
+     "Then came E.T.: Howard Scott Warshaw had just five weeks to program it.",
+     "It arrived for Christmas 1982, and Atari was left with millions of unsold cartridges."
+    ]
+   }
+  },
+  {
+   "imagen": "5-leyenda.png",
+   "cara": "guino",
+   "es": {
+    "texto": "¿SERÍA VERDAD?",
+    "frases": [
+     "Durante 30 años, mucha gente creyó que lo del entierro era puro cuento."
+    ]
+   },
+   "en": {
+    "texto": "WAS IT TRUE?",
+    "frases": [
+     "For 30 years, a lot of people thought the burial was just a tall tale."
+    ]
+   }
+  },
+  {
+   "imagen": "6-excavadora.png",
+   "cara": "feliz",
+   "es": {
+    "texto": "26 DE ABRIL DE 2014",
+    "frases": [
+     "Hasta que en 2014 excavaron para un documental… ¡y ahí estaban!",
+     "Eran unos 700 mil cartuchos. Estaban tan hondos que sacaron poco más de mil."
+    ]
+   },
+   "en": {
+    "texto": "APRIL 26, 2014",
+    "frases": [
+     "Until 2014, when they dug for a documentary… and there they were!",
+     "About 700,000 cartridges. They were so deep that just over a thousand came out."
+    ]
+   }
+  },
+  {
+   "imagen": "7-museo.png",
+   "cara": "normal",
+   "es": {
+    "texto": "DEL BASURERO AL MUSEO",
+    "frases": [
+     {
+      "dice": "Hoy, uno de los de E.T. está en la colección del Smithsonian.",
+      "voz": "Hoy, uno de los de I Ti está en la colección del Esmitsónian."
+     }
+    ]
+   },
+   "en": {
+    "texto": "FROM DUMP TO MUSEUM",
+    "frases": [
+     "Today, one of the E.T. ones is in the Smithsonian's collection."
+    ]
+   }
+  }
+ ],
+ "pregunta": {
+  "imagen": "8-pala.png",
+  "cara": "feliz",
+  "es": {
+   "texto": "¿Y TÚ?",
+   "frases": [
+    "¿Tú qué juego enterrarías? Cuéntame en los comentarios."
+   ]
+  },
+  "en": {
+   "texto": "HOW ABOUT YOU?",
+   "frases": [
+    "What game would you bury? Tell me in the comments."
+   ]
+  }
+ },
+ "cierre": {
+  "es": {
+   "voz": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en Daily Challenge punto click.",
+   "dice": "Y si te gustan los juegos retro, hay uno distinto cada día, gratis, en dailychallenge.click"
+  },
+  "en": {
+   "voz": "And if you like retro games, there's a different one every day, free, at Daily Challenge dot click.",
+   "dice": "And if you like retro games, there's a different one every day, free, at dailychallenge.click"
+  }
+ },
+ "youtube": {
+  "es": {
+   "titulo": "ANÉCDOTAS DE TI: Atari enterró sus juegos en el desierto #shorts",
+   "descripcion": "En septiembre de 1983, Atari mandó aplastar y enterrar cartuchos, consolas y computadoras en un basurero de Alamogordo, Nuevo México, y los cubrió con cemento. Durante 30 años mucha gente creyó que era una leyenda, hasta que el 26 de abril de 2014 los desenterraron para un documental. LeIA te cuenta por qué: los 12 millones de cartuchos de Pac-Man y las cinco semanas que tuvo Howard Scott Warshaw para programar E.T.\n\nLos dibujos son nuestros.\n\nAnécdotas de TI: historias reales de empresas viejas de tecnología, contadas por LeIA, la presentadora de los juegos de Ayotl.\n\nFuentes: The Henry Ford, revista Archaeology, Computer History Museum, TechCrunch, Guinness World Records, Smithsonian y Wikipedia en inglés.",
+   "etiquetas": [
+    "Atari",
+    "E.T.",
+    "Pac-Man",
+    "Alamogordo",
+    "historia de los videojuegos",
+    "crisis de 1983",
+    "Atari 2600",
+    "anécdotas",
+    "tecnología",
+    "LeIA"
+   ],
+   "cierre": "#Atari #HistoriaDeLosVideojuegos #RetroGaming"
+  },
+  "en": {
+   "titulo": "TECH TALES: Atari buried its games in the desert #shorts",
+   "descripcion": "In September 1983, Atari had cartridges, consoles and computers crushed and buried in a landfill in Alamogordo, New Mexico, under a layer of concrete. For 30 years a lot of people thought it was a legend, until they were dug up on April 26, 2014, for a documentary. LeIA tells you why it happened: the 12 million Pac-Man cartridges and the five weeks Howard Scott Warshaw had to program E.T.\n\nThe drawings are ours.\n\nTech tales: true stories about old tech companies, told by LeIA, the host of Ayotl's games.\n\nSources: The Henry Ford, Archaeology magazine, Computer History Museum, TechCrunch, Guinness World Records, Smithsonian and English Wikipedia.",
+   "etiquetas": [
+    "Atari",
+    "E.T.",
+    "Pac-Man",
+    "Alamogordo",
+    "video game history",
+    "video game crash of 1983",
+    "Atari 2600",
+    "tech stories",
+    "technology",
+    "LeIA"
+   ],
+   "cierre": "#Atari #VideoGameHistory #RetroGaming"
+  }
+ }
+}
