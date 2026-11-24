@@ -37,7 +37,7 @@ export const PROGRAMANDO: Programando[] = [
       en: "This is the video's code, as is: a playable Snake in JavaScript, with no engine or libraries. The names and the logic are those of [Daily Challenge's Snake](https://dailychallenge.click/juegos/snake). What's missing (the maps with walls, the bonus bug, the hunger, the sound and the server) is part 2.",
     },
     archivo: "snake.html",
-    video: null,
+    video: { es: { id: "37O_Kdo0ebw", desde: "2026-11-29T18:00:00-06:00" }, en: { id: "R0ey0G_VfUI", desde: "2026-11-29T18:20:00-06:00" } },
     archivos: parte1.archivos,
     lineas: parte1.lineas,
     junto: parte1.junto,
