@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cabecera } from "@/components/Cabecera";
 import { CURSOS, leccionesDe, rutaCurso } from "@/lib/aprende";
+import { programandoDe, rutaCodigo } from "@/lib/aprende/programando";
 import { ruta, t } from "@/lib/idioma";
 import { idiomaDe, metadatosDe } from "@/lib/paginas";
 
@@ -39,6 +40,12 @@ export default async function Aprende({ params }: Props) {
                 <h2><Link href={rutaCurso(c.id, idioma)}>{c.titulo[idioma]}</Link></h2>
                 <p>{c.resumen[idioma]}</p>
                 <Link href={rutaCurso(c.id, idioma)} className="enlace-flecha">{x("aprendeVerCurso")} →</Link>
+                {programandoDe(c.id).map((p) => (
+                  <Link key={p.id} href={rutaCodigo(p, idioma)} className="programa-aviso">
+                    <span className="programa-aviso-titulo">▶ {p.titulo[idioma]}</span>
+                    <span>{x("codigoAviso")} →</span>
+                  </Link>
+                ))}
               </li>
             ))}
           </ul>

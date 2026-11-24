@@ -35,6 +35,7 @@ src/app/[idioma]/beta/page.tsx   programa Beta (dinámica: lee la clave de sitio
 src/app/[idioma]/acerca/page.tsx historia del nombre (en inglés se sirve como /en/about)
 src/app/[idioma]/retos/          retos de código de los vídeos de YouTube (en inglés /en/challenges); datos en src/content/retos.json, que genera `ttcode export`
 src/app/[idioma]/aprende/        cursos al estilo Duolingo (en inglés /en/learn): índice, camino del curso y lección
+src/app/[idioma]/aprende/[curso]/codigo/  el código de los vídeos de «Programando …», para copiarlo y jugarlo (lib/aprende/programando.ts; src/content/programando-*.json lo deja tools/comerciales/programando/exportar.py)
 src/lib/aprende/                 los cursos: tipos.ts (formato), estructuras/ y snake/ (una unidad por fichero), resaltar.ts, ejecutar.ts, progreso.ts (localStorage)
 src/components/aprende/          Leccion (una tarjeta a la vez), Camino, Pizarra (editor que corre), Dibujo (SVG), TextoRico, CodigoQuieto
 public/aprende/ejecutor.js       Worker que corre el código de las lecciones, con su propia CSP (next.config.ts)

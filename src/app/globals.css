@@ -725,6 +725,36 @@ main[data-acento="tierra"] { --tarjeta-acento: var(--tierra); }
 .retos-aprende { margin-top: 2rem; max-width: 46rem; }
 .retos-aprende ul { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.4rem; }
 
+/* El código de los vídeos de «Programando …»: el aviso en el curso, el juego y su cruceta */
+.programa-aviso {
+  display: grid; gap: 0.15rem; margin-top: 1.25rem; padding: 0.9rem 1.1rem; max-width: 40rem; text-decoration: none;
+  color: var(--tinta-2); background: var(--curso-suave); border: 1px solid var(--linea); border-left: 4px solid var(--curso); border-radius: var(--radio);
+}
+.programa-aviso:hover { text-decoration: none; border-color: var(--curso); }
+.programa-aviso-titulo { font-family: var(--fuente-titulo); font-size: 1.1rem; color: var(--tinta); }
+.programa { display: grid; gap: 0.9rem; justify-items: start; }
+.programa-pantalla {
+  width: min(100%, 30rem); aspect-ratio: 160 / 192; display: grid; place-items: center; overflow: hidden;
+  background: #000; border: 4px solid #0e2278; border-radius: var(--radio);
+}
+.programa-pantalla iframe { width: 100%; height: 100%; border: 0; display: block; }
+.programa-jugar {
+  font-family: var(--f-atari), ui-monospace, monospace; font-size: 14px; line-height: 1; padding: 1.1rem 1.4rem; min-height: 44px; cursor: pointer;
+  border: 0; border-radius: 0; background: #ffde5a; color: #0e2278;
+}
+.programa-jugar:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.programa-mandos { display: flex; align-items: center; gap: 1.5rem; }
+.programa-cruceta { display: grid; grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(2, 56px); gap: 6px; touch-action: none; }
+.programa-cruceta button {
+  display: grid; place-items: center; padding: 0; cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none;
+  border: 3px solid #0e2278; border-radius: 10px; background: #1838b4; color: #fff;
+}
+.programa-cruceta button:active { background: #ffde5a; color: #0e2278; }
+.programa-cruceta [data-lado="arriba"] { grid-area: 1 / 2; }
+.programa-cruceta [data-lado="izquierda"] { grid-area: 2 / 1; }
+.programa-cruceta [data-lado="abajo"] { grid-area: 2 / 2; }
+.programa-cruceta [data-lado="derecha"] { grid-area: 2 / 3; }
+
 /* El camino: nodos redondos en zigzag, como una vereda */
 .camino { margin-top: 2rem; max-width: 40rem; }
 .camino-estado {

@@ -72,6 +72,20 @@ def archivos(im, d, x):
         texto(im, 56, y + 18, nombre, BLANCO if on else GRIS, 3); texto(im, 56, y + 58, hace, AMAR if on else atari(9, 5), 2)
 
 
+def terminal(im, d, x):
+    """Cómo se levanta un servidor en la carpeta (los módulos no se abren con doble clic)."""
+    lineas = [('$ npx serve', BLANCO), ('http://localhost:3000', CIAN), ('', None), ({'es': 'O BIEN', 'en': 'OR'}[x['lang']], GRIS), ('', None),
+              ('$ python3 -m http.server', BLANCO), ('http://localhost:8000', CIAN)]
+    d.rectangle([20, 68, 475, 420], fill=(8, 8, 14), outline=GRIS, width=4)
+    n = max(0, int((x['u'] - 0.3) * 110))
+    for i, (s, c) in enumerate(lineas):
+        if n <= 0:
+            break
+        texto(im, 44, 100 + i * 42, s[:n], c or BLANCO, 2); n -= len(s) + 2
+    if x['u'] > 0.75:
+        texto(im, 248, 470, 'file://', ROJO, 4, 'm'); d.rectangle([130, 484, 366, 490], fill=ROJO)
+
+
 def medidas(im, d, x):
     """La pantalla vacía con sus medidas."""
     o = Image.new('RGB', (160, 192), (16, 16, 24)); pega(im, o, 2, 112, 84)
@@ -443,16 +457,16 @@ def panel_cuadro(im, d, x):
 
 
 # el título del panel, cuando lo que se ve no es la pantalla del juego
-TITULOS = {'es': {'archivos': 'LOS ARCHIVOS', 'medidas': 'EL CANVAS', 'borroso': 'AL AGRANDAR', 'rectangulo': 'EL PINCEL', 'paleta': 'LA PALETA', 'acumulador': 'EL RELOJ',
+TITULOS = {'es': {'archivos': 'LOS ARCHIVOS', 'terminal': 'EN LA TERMINAL', 'medidas': 'EL CANVAS', 'borroso': 'AL AGRANDAR', 'rectangulo': 'EL PINCEL', 'paleta': 'LA PALETA', 'acumulador': 'EL RELOJ',
                   'puntos': 'LO QUE VALE UNA FRUTA', 'letra': 'LA FUENTE', 'bits': 'EL CONTROL', 'lista': 'LA LISTA', 'ticks': 'LOS TICKS',
                   'libres': 'LAS LIBRES', 'cuadro': 'DE CERCA', 'rejilla': 'LAS CASILLAS', 'casilla': 'DE CASILLA A PÍXEL'},
-           'en': {'archivos': 'THE FILES', 'medidas': 'THE CANVAS', 'borroso': 'SCALED UP', 'rectangulo': 'THE BRUSH', 'paleta': 'THE PALETTE', 'acumulador': 'THE CLOCK',
+           'en': {'archivos': 'THE FILES', 'terminal': 'IN THE TERMINAL', 'medidas': 'THE CANVAS', 'borroso': 'SCALED UP', 'rectangulo': 'THE BRUSH', 'paleta': 'THE PALETTE', 'acumulador': 'THE CLOCK',
                   'puntos': 'WHAT A FRUIT IS WORTH', 'letra': 'THE FONT', 'bits': 'THE CONTROLS', 'lista': 'THE LIST', 'ticks': 'THE TICKS',
                   'libres': 'THE FREE CELLS', 'cuadro': 'UP CLOSE', 'rejilla': 'THE CELLS', 'casilla': 'FROM CELL TO PIXEL'}}
-PANELES = {None: grande, 'nada': nada, 'archivos': archivos, 'medidas': medidas, 'borroso': borroso, 'rectangulo': rectangulo, 'paleta': paleta,
+PANELES = {None: grande, 'nada': nada, 'archivos': archivos, 'terminal': terminal, 'medidas': medidas, 'borroso': borroso, 'rectangulo': rectangulo, 'paleta': paleta,
            'rejilla': panel_rejilla, 'casilla': panel_casilla, 'lista': panel_lista, 'acumulador': panel_acumulador,
            'ticks': panel_ticks, 'bits': panel_bits, 'libres': panel_libres, 'puntos': panel_puntos, 'letra': panel_letra,
            'cuadro': panel_cuadro}
 # los que cambian solos (hay que redibujarlos en cada cuadro); los demás, sólo cuando cambia la pantalla o el estado
-ANIMADOS = {'archivos', 'medidas', 'borroso', 'rectangulo', 'paleta', 'rejilla', 'casilla', 'lista', 'acumulador', 'ticks', 'bits', 'libres',
+ANIMADOS = {'archivos', 'terminal', 'medidas', 'borroso', 'rectangulo', 'paleta', 'rejilla', 'casilla', 'lista', 'acumulador', 'ticks', 'bits', 'libres',
             'puntos', 'letra', 'cuadro'}

@@ -394,3 +394,23 @@ estrenó sellos y reseñas. Adrián pidió notas con lo hecho. Van cuatro, en
 
 Ninguna nombra juegos de otros: «como en los clásicos del género» tampoco
 hizo falta.
+
+## 2026-11-24 — El código de los vídeos largos, para copiar y jugar
+
+Los tutoriales largos de «Programando …» (el primero, Snake, parte 1) escriben
+un programa entero en pantalla. Adrián: «sí, publica para copiable en la
+página». Va en `/aprende/<curso>/codigo/<parte>` (`/en/learn/…`), enlazado desde
+`/aprende` y desde el curso, que es lo que dice LeIA al final.
+
+- **Una sola fuente.** `tools/comerciales/programando/exportar.py` deja
+  `src/content/programando-<clave>.json` con el mismo código que se ve escribirse
+  en el vídeo (y que el vídeo ejecuta); con `--revisar` avisa si se desfasó.
+- **Una pestaña por archivo y «Todo en uno».** Con `type="module"` el navegador
+  no abre la página con doble clic: hace falta un servidor. Por eso va también
+  en un solo `.html`, que sí se abre. El editor es el de los retos (EditorReto).
+- **Se juega ahí mismo**, en un `<iframe srcDoc>` con «Todo en uno»: lo que
+  corre es lo que se copia. Un srcDoc no pasa por `frame-src` y hereda la CSP
+  del sitio (que ya deja scripts en línea), así que no cambió ninguna cabecera.
+  El programa sólo lee el teclado; la cruceta de pantalla le manda esas teclas.
+- El vídeo aparece solo en la página a la hora en que deja de ser privado, como
+  en las lecciones.

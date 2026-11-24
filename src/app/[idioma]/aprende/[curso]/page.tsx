@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Camino } from "@/components/aprende/Camino";
 import { Cabecera } from "@/components/Cabecera";
 import { CURSOS, cursoPorId, rutaCurso, rutaLeccion } from "@/lib/aprende";
+import { programandoDe, rutaCodigo } from "@/lib/aprende/programando";
 import type { Curso } from "@/lib/aprende/tipos";
 import { IDIOMAS, ruta, t, type Idioma } from "@/lib/idioma";
 import { idiomaDe } from "@/lib/paginas";
@@ -62,6 +63,12 @@ export default async function PaginaCurso({ params }: Props) {
             <h1>{c.titulo[idioma]}</h1>
             <p className="grande">{c.intro[idioma]}</p>
           </div>
+          {programandoDe(c.id).map((p) => (
+            <Link key={p.id} href={rutaCodigo(p, idioma)} className="programa-aviso">
+              <span className="programa-aviso-titulo">▶ {p.titulo[idioma]}</span>
+              <span>{x("codigoAviso")} →</span>
+            </Link>
+          ))}
           <Camino curso={c.id} unidades={unidades} idioma={idioma} />
         </div>
       </main>

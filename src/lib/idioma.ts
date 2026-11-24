@@ -264,6 +264,31 @@ const TEXTOS = {
     en: "These challenges assume you know your data structures. If you don't, there's a course in short lessons, with code that runs right here, from what an array is all the way to graphs. And another that takes a Daily Challenge game apart piece by piece.",
   },
 
+  // El código de los vídeos de «Programando …» (lib/aprende/programando), para copiarlo y jugarlo
+  codigoTitulo: { es: "El código", en: "The code" },
+  codigoVideo: { es: "El vídeo", en: "The video" },
+  codigoAviso: { es: "El código del vídeo, para copiarlo y jugarlo", en: "The video's code, to copy and play" },
+  codigoJuega: { es: "Juégalo aquí", en: "Play it here" },
+  codigoJugar: { es: "Jugar", en: "Play" },
+  codigoOtra: { es: "Otra partida", en: "New game" },
+  codigoAyuda: { es: "Con las flechas del teclado o con los botones. Es el mismo código de abajo.", en: "With the keyboard's arrows or with the buttons. It's the same code as below." },
+  codigoArriba: { es: "Arriba", en: "Up" },
+  codigoAbajo: { es: "Abajo", en: "Down" },
+  codigoIzquierda: { es: "Izquierda", en: "Left" },
+  codigoDerecha: { es: "Derecha", en: "Right" },
+  codigoCopia: { es: "Cópialo", en: "Copy it" },
+  codigoCopiaTexto: {
+    es: "Cada pestaña es un archivo del vídeo. **Todo en uno** es el mismo programa en un solo archivo.",
+    en: "Each tab is one of the video's files. **All in one** is the same program in a single file.",
+  },
+  codigoJunto: { es: "Todo en uno", en: "All in one" },
+  codigoDobleClic: { es: "(o doble clic en el archivo)", en: "(or double-click the file)" },
+  codigoComo: { es: "Cómo correrlo en tu computadora", en: "How to run it on your computer" },
+  codigoComoTexto: {
+    es: "- **Lo más fácil:** copia «Todo en uno», guárdalo como `{archivo}` y ábrelo con doble clic.\n- **Como en el vídeo:** guarda los archivos, cada uno con su nombre, en una misma carpeta. Los módulos no se abren con doble clic: en esa carpeta corre `npx serve` (o `python3 -m http.server`) y abre la dirección que te diga (con Python es `http://localhost:8000`).",
+    en: "- **The easy way:** copy \"All in one\", save it as `{archivo}` and double-click it.\n- **As in the video:** save the files, each with its own name, in one folder. Modules don't open with a double click: in that folder run `npx serve` (or `python3 -m http.server`) and open the address it gives you (with Python it's `http://localhost:8000`).",
+  },
+  codigoCurso: { es: "El curso, pieza por pieza y con ejercicios", en: "The course, piece by piece and with exercises" },
   // El editor que corre código (components/aprende/Pizarra)
   pzCorrer: { es: "CORRER", en: "RUN" },
   pzProbar: { es: "PROBAR", en: "TEST" },

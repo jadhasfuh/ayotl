@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { APPS } from "@/lib/apps";
 import { CURSOS, leccionesDe, rutaCurso, rutaLeccion } from "@/lib/aprende";
+import { PROGRAMANDO, rutaCodigo } from "@/lib/aprende/programando";
 import { PAGINAS, ruta } from "@/lib/idioma";
 import { NOTAS } from "@/lib/notas";
 import { publicados } from "@/lib/retos";
@@ -49,6 +50,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: { es: base + rutaLeccion(c.id, l.id, "es"), en: base + rutaLeccion(c.id, l.id, "en") } },
     })),
   ]);
+  const codigos: MetadataRoute.Sitemap = PROGRAMANDO.map((p) => ({
+    url: base + rutaCodigo(p, "es"), changeFrequency: "yearly" as const, priority: 0.5,
+    alternates: { languages: { es: base + rutaCodigo(p, "es"), en: base + rutaCodigo(p, "en") } },
+  }));
   // El research statement va sin alternates: existe sólo en inglés y las dos
   // direcciones apuntan a la misma canónica.
   const research: MetadataRoute.Sitemap = [
@@ -65,5 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
   ];
-  return [...paginas, ...apps, ...notas, ...retos, ...cursos, ...research];
+  return [...paginas, ...apps, ...notas, ...retos, ...cursos, ...codigos, ...research];
 }

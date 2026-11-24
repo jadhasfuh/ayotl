@@ -37,6 +37,12 @@ APPS = {
     # «Algoritmos en pixel» (9-nov-2026): Shorts con su lección en ayotl.dev/aprende; una lista por idioma
     'algoritmos': {'nombre': 'Algoritmos', 'web': 'https://ayotl.dev/aprende/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
     'algorithms': {'nombre': 'Algorithms', 'web': 'https://ayotl.dev/en/learn/algoritmos', 'juega': 'aprende', 'play': None, 'ios': None},
+    # «Programando …» (24-nov-2026): los tutoriales largos de los juegos de Daily Challenge, con su código en ayotl.dev; una lista por
+    # idioma. El título empieza con el juego: «PROGRAMANDO SNAKE: …», «CODING SNAKE: …»
+    'programando': {'nombre': 'Programando juegos', 'web': 'https://ayotl.dev/aprende/snake/codigo/parte-1', 'juega': 'codigo', 'play': None, 'ios': None,
+                    'prefijos': ['PROGRAMANDO ']},
+    'coding': {'nombre': 'Coding games', 'web': 'https://ayotl.dev/en/learn/snake/codigo/parte-1', 'juega': 'codigo', 'play': None, 'ios': None,
+               'prefijos': ['CODING ']},
     # «¿Lo conoces?» (16-nov-2026): la trama de un juego retro poco conocido, contada por LeIA; una sola lista, y los
     # enlaces de Daily Challenge (es a quien le gustan los juegos retro). `prefijos`: cómo empieza el título en en/ja
     'loconoces': {'nombre': '¿Lo conoces?', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None,
@@ -48,11 +54,11 @@ APPS = {
 # los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)
 TEXTOS = {
     'es': {'juega': '▶ Juega gratis en el navegador', 'practica': '▶ Practica gratis', 'play': '📱 Android, en Google Play', 'ios': '🍎 iPhone y iPad, en la App Store',
-           'capitulos': 'Capítulos', 'mas': 'Más apps y juegos de Ayotl', 'aprende': '▶ El curso, con el código y ejercicios, gratis'},
+           'capitulos': 'Capítulos', 'mas': 'Más apps y juegos de Ayotl', 'aprende': '▶ El curso, con el código y ejercicios, gratis', 'codigo': '▶ El código, para copiarlo y jugarlo'},
     'en': {'juega': '▶ Play free in the browser', 'practica': '▶ Practice for free', 'play': '📱 Android, on Google Play', 'ios': '🍎 iPhone and iPad, on the App Store',
-           'capitulos': 'Chapters', 'mas': 'More apps and games by Ayotl', 'aprende': '▶ The course, with the code and exercises, free'},
+           'capitulos': 'Chapters', 'mas': 'More apps and games by Ayotl', 'aprende': '▶ The course, with the code and exercises, free', 'codigo': '▶ The code, to copy and play'},
     'ja': {'juega': '▶ ブラウザで無料で遊べます', 'practica': '▶ 無料で練習', 'play': '📱 Android（Google Play）', 'ios': '🍎 iPhone・iPad（App Store）',
-           'capitulos': 'チャプター', 'mas': 'Ayotlのほかのアプリとゲーム', 'aprende': '▶ コースとコード・練習問題（無料）'},
+           'capitulos': 'チャプター', 'mas': 'Ayotlのほかのアプリとゲーム', 'aprende': '▶ コースとコード・練習問題（無料）', 'codigo': '▶ コード（コピーして遊べます）'},
 }
 _tiendas = {}
 
