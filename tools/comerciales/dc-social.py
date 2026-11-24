@@ -87,7 +87,7 @@ def main():
     cuerpo = [l for l in lineas if l and not l.startswith('#')]; cabeza = [l for l in lineas if l.startswith('#')]
     with open(cal, 'w', encoding='utf-8') as f: f.write('\n'.join(cabeza + sorted(cuerpo)) + '\n')
     git('add', 'public/marketing', 'public/content/anuncios', cwd=WT)
-    msg = 'LeIA a Instagram y Facebook: ' + ', '.join(f'{c} el {d}' for c, _, _, d in trabajos) + '\n\nCo-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>'
+    msg = 'LeIA a Instagram y Facebook: ' + ', '.join(f'{c} el {d}' for c, _, _, d in trabajos) + '\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
     git('commit', '-q', '-m', msg, cwd=WT)
     if sin_push: print('sin push: el worktree queda en', WT); return
     git('push', '-q', 'origin', 'HEAD:main', cwd=WT)

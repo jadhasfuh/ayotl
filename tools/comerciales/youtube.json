@@ -3066,5 +3066,55 @@
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-23-ja.jpg",
   "id": "5YtMnRic9nU"
+ },
+ {
+  "clave": "algoritmos-relleno",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/algoritmos/relleno",
+  "video": "salida/algoritmos-relleno.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-28T16:00:00-06:00",
+  "titulo": "ALGORITMOS: El relleno (flood fill) en 1 minuto #Shorts",
+  "descripcion": "El relleno (flood fill) en 1 minuto: cómo sabe el bote de pintura hasta dónde pintar. Anota el color viejo, pinta la primera casilla y la mete a una pila; luego saca la de arriba, mira a sus cuatro vecinas y pinta las que siguen siendo del color viejo. Cuando la pila queda vacía, se acabó. La puerta también es blanca, pero no está conectada; y con diagonales, la pintura se saldría por las esquinas del techo. Con una cola pinta en ondas y queda el mismo dibujo. Qix, en Daily Challenge, rellena así el tablero. LeIA lo explica con el código en JavaScript línea por línea, y la lección con este mismo código se puede probar en el navegador.",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "relleno",
+   "flood fill",
+   "bote de pintura",
+   "pila",
+   "DFS",
+   "qix",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "dVTG3X23r64"
+ },
+ {
+  "clave": "algoritmos-relleno-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/algoritmos/relleno",
+  "video": "salida/algoritmos-relleno-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-28T16:20:00-06:00",
+  "titulo": "ALGORITHMS: Flood fill in 1 minute #Shorts",
+  "descripcion": "Flood fill in 1 minute: how the paint bucket knows where to stop. It notes the old color, paints the first cell and pushes it onto a stack; then it pops the top one, looks at its four neighbors and paints the ones that are still the old color. When the stack is empty, it's done. The door is white too, but it isn't connected; and with diagonals, the paint would leak out at the corners of the roof. With a queue it paints in waves and you get the same picture. Qix, in Daily Challenge, fills the board like this. LeIA walks through the JavaScript code line by line, and the lesson with this same code runs in your browser.",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "flood fill",
+   "paint bucket",
+   "stack",
+   "DFS",
+   "qix",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "M3oEjsnZvbs"
  }
 ]

@@ -62,6 +62,54 @@ const DIBUJO_DFS = ["xxxxxxxxxxx", "xmmmxmmmx.x", "xmxmxmxmx.x", "xmxmmmxmmmx", 
 
 const PROGRAMA_BFS = (idioma: "es" | "en") => `${LAB}\n\n${VECINOS[idioma]}\n\n${BFS}`;
 
+/**
+ * El código del relleno es el de su Short de «Algoritmos en pixel» (tools/comerciales/algoritmos/relleno.py, CODIGO):
+ * si cambia uno, cambia el otro. La casita también es la del vídeo: 19 casillas de pared, 9 de techo, 73 de cielo y
+ * una puerta de 2 que nadie toca.
+ */
+const RELLENO = `function rellenar(f, c, nuevo) {
+  const viejo = mapa[f][c];
+  if (viejo === nuevo) return;
+  const pila = [[f, c]];
+  mapa[f][c] = nuevo;
+  while (pila.length > 0) {
+    const [y, x] = pila.pop();
+    for (const [i, j] of lados(y, x))
+      if (mapa[i]?.[j] === viejo) {
+        mapa[i][j] = nuevo;
+        pila.push([i, j]);
+      }
+  }
+}`;
+
+const CASA = [".............", "......x......", ".....x.x.....", "....x...x....", "...x.....x...", "..xxxxxxxxx..", "..x.......x..", "..x.xxx...x..", "..x.x.x...x..", "..x.x.x...x..", "..xxxxxxxxx.."];
+const CASA_PARED = [".............", "......x......", ".....x.x.....", "....x...x....", "...x.....x...", "..xxxxxxxxx..", "..xmmmmmmmx..", "..xmxxxmmmx..", "..xmx.xmmmx..", "..xmx.xmmmx..", "..xxxxxxxxx.."];
+const CASA_TODA = ["hhhhhhhhhhhhh", "hhhhhhxhhhhhh", "hhhhhxoxhhhhh", "hhhhxoooxhhhh", "hhhxoooooxhhh", "hhxxxxxxxxxhh", "hhxmmmmmmmxhh", "hhxmxxxmmmxhh", "hhxmx.xmmmxhh", "hhxmx.xmmmxhh", "hhxxxxxxxxxhh"];
+const LEYENDA_CASA = { x: { es: "la raya", en: "the line" }, m: { es: "la pared, 19 casillas", en: "the wall, 19 cells" } };
+
+const MAPA: T = {
+  es: `// 'x' es la raya y '.', el papel; cada fila se parte en letras para poder cambiarlas
+const mapa = [
+${CASA.map((f) => `  "${f}",`).join("\n")}
+].map((fila) => [...fila]);`,
+  en: `// 'x' is the line and '.', the paper; each row is split into letters so they can be changed
+const mapa = [
+${CASA.map((f) => `  "${f}",`).join("\n")}
+].map((fila) => [...fila]);`,
+};
+
+const LADOS: T = {
+  es: `// arriba, derecha, abajo, izquierda
+const lados = (y, x) => [[y - 1, x], [y, x + 1], [y + 1, x], [y, x - 1]];`,
+  en: `// up, right, down, left
+const lados = (y, x) => [[y - 1, x], [y, x + 1], [y + 1, x], [y, x - 1]];`,
+};
+
+const VER = `const ver = () => console.log(mapa.map((fila) => fila.join("")).join("\\n"));
+const cuantas = (letra) => mapa.flat().filter((l) => l === letra).length;`;
+
+const BASE_RELLENO = (idioma: "es" | "en") => `${MAPA[idioma]}\n\n${LADOS[idioma]}\n\n${RELLENO}\n\n${VER}`;
+
 export const A03: Unidad = {
   id: "recorrer",
   titulo: { es: "Recorrer", en: "Traversal" },
@@ -218,6 +266,197 @@ export const A03: Unidad = {
           porque: {
             es: "Es la misma BFS, pero en vez de `de` guarda la distancia: la del que la descubrió más uno. Cuando sale `fin` de la cola, su distancia ya es la mínima. Si la cola se vacía sin verla, no hay camino.",
             en: "It's the same BFS, but instead of `de` it stores the distance: the discoverer's plus one. When `fin` comes out of the queue, its distance is already the minimum. If the queue empties without seeing it, there's no path.",
+          },
+        },
+      ],
+    },
+    {
+      id: "relleno",
+      video: { es: { id: "dVTG3X23r64", desde: "2026-11-28T16:00:00-06:00" }, en: { id: "M3oEjsnZvbs", desde: "2026-11-28T16:20:00-06:00" } },
+      titulo: { es: "El relleno (flood fill): el bote de pintura", en: "Flood fill: the paint bucket" },
+      resumen: {
+        es: "Cómo sabe el bote de pintura hasta dónde pintar: una pila, cuatro vecinas y una sola regla, seguir mientras la casilla sea del color viejo.",
+        en: "How the paint bucket knows where to stop: a stack, four neighbors and a single rule, keep going while the cell is the old color.",
+      },
+      retos: ["number-of-islands", "rotting-oranges"],
+      enlaces: [
+        { url: "/aprende/estructuras-de-datos/pilas", texto: { es: "Pilas, en «Estructuras de datos»", en: "Stacks, in \"Data structures\"" } },
+        { url: "https://dailychallenge.click/juegos/qix", texto: { es: "Qix, en Daily Challenge: usa este algoritmo", en: "Qix, on Daily Challenge: it uses this algorithm" } },
+        { url: "https://es.wikipedia.org/wiki/Algoritmo_de_relleno_por_difusi%C3%B3n", texto: { es: "Relleno por difusión (Wikipedia)", en: "Flood fill (Wikipedia, Spanish)" } },
+      ],
+      pasos: [
+        {
+          tipo: "explica",
+          titulo: { es: "¿Hasta dónde pinta el bote?", en: "How far does the bucket paint?" },
+          texto: {
+            es: "Picas la pared con el bote de pintura y se pinta **toda la pared**, pero no el techo, ni el cielo, ni la puerta, aunque también son blancos. La regla es ésta: se pintan las casillas que tienen el **mismo color** que la que picaste **y** a las que se llega desde ella pasando sólo por casillas de ese color, hacia arriba, abajo, izquierda o derecha.\n\nA eso se le llama **relleno**, o *flood fill*: como si echaras agua y la raya negra fuera la orilla. La puerta es blanca, pero para llegar a ella habría que cruzar la raya.",
+            en: "You click the wall with the paint bucket and **the whole wall** gets painted, but not the roof, or the sky, or the door, even though they're white too. The rule is this: it paints the cells that have the **same color** as the one you clicked **and** that you can reach from it going only through cells of that color, up, down, left or right.\n\nThat's called **flood fill**: as if you poured water and the black line were the shore. The door is white, but to get to it you'd have to cross the line.",
+          },
+          dibujo: { tipo: "rejilla", filas: CASA_PARED, leyenda: LEYENDA_CASA },
+          programa: {
+            codigo: {
+              es: `${MAPA.es}\n\n${LADOS.es}\n\n// las cuatro vecinas de la casilla (6, 6), en la pared\nfor (const [i, j] of lados(6, 6)) console.log(i, j, mapa[i]?.[j]);\n\n// y las de una esquina del cielo: dos caen fuera\nfor (const [i, j] of lados(0, 0)) console.log(i, j, mapa[i]?.[j]);`,
+              en: `${MAPA.en}\n\n${LADOS.en}\n\n// the four neighbors of cell (6, 6), on the wall\nfor (const [i, j] of lados(6, 6)) console.log(i, j, mapa[i]?.[j]);\n\n// and the ones of a corner of the sky: two fall outside\nfor (const [i, j] of lados(0, 0)) console.log(i, j, mapa[i]?.[j]);`,
+            },
+            notas: {
+              es: "- De `(6, 6)`, la de arriba y la de abajo son raya (`x`); la de la derecha y la de la izquierda, papel.\n- Fuera del mapa sale `undefined`: `?.` evita que truene al pedir una fila que no existe. Como `undefined` no es el color viejo, el borde del dibujo detiene la pintura solo.",
+              en: "- From `(6, 6)`, the ones above and below are line (`x`); the ones to the right and left are paper.\n- Outside the map you get `undefined`: `?.` keeps it from crashing when you ask for a row that doesn't exist. Since `undefined` isn't the old color, the edge of the drawing stops the paint by itself.",
+            },
+          },
+        },
+        {
+          tipo: "explica",
+          titulo: { es: "Una pila de pendientes", en: "A stack of things to do" },
+          texto: {
+            es: "Primero se anota el color **viejo**, el que había donde picaste. Se pinta esa casilla y se mete a una **pila**. Después, mientras la pila tenga algo: se saca la de **arriba** y se miran sus cuatro vecinas; las que todavía sean del color viejo se pintan y entran a la pila.\n\nCuando la pila queda vacía, ya no hay a quién preguntarle: se acabó. La pared da **19 casillas**.",
+            en: "First you note the **old** color, the one that was where you clicked. You paint that cell and push it onto a **stack**. Then, while the stack has something: you pop the one on **top** and look at its four neighbors; the ones that are still the old color get painted and pushed.\n\nWhen the stack is empty, there's no one left to ask: you're done. The wall comes to **19 cells**.",
+          },
+          programa: {
+            codigo: {
+              es: `${BASE_RELLENO("es")}\n\nrellenar(6, 6, "m");\nver();\nconsole.log("pintadas:", cuantas("m"));`,
+              en: `${BASE_RELLENO("en")}\n\nrellenar(6, 6, "m");\nver();\nconsole.log("painted:", cuantas("m"));`,
+            },
+            notas: {
+              es: "- Las dos casillas de la puerta siguen siendo `.`: nadie llegó a ellas.\n- Prueba `rellenar(8, 5, \"p\")` para pintar la puerta, o `rellenar(5, 5, \"x\")`: picar la raya con su mismo color no hace nada.\n- Pica la raya con otra letra, `rellenar(5, 5, \"r\")`: cambia el marco de la pared, pero no las rayas del techo. Sólo se tocan por la esquina, y eso importa más adelante.",
+              en: "- The two cells of the door are still `.`: nobody got to them.\n- Try `rellenar(8, 5, \"p\")` to paint the door, or `rellenar(5, 5, \"x\")`: clicking the line with its own color does nothing.\n- Click the line with another letter, `rellenar(5, 5, \"r\")`: the wall's frame changes, but not the roof's lines. They only touch at the corner, and that matters later on.",
+            },
+          },
+        },
+        {
+          tipo: "explica",
+          titulo: { es: "Pintar ya es marcar", en: "Painting is marking" },
+          texto: {
+            es: "En el laberinto hacía falta anotar quién ya estaba visto. Aquí no: en cuanto una casilla se pinta, deja de ser del color viejo, así que **nadie entra dos veces**. Por eso se pinta **al meterla** a la pila y no al sacarla: si se dejara para después, dos vecinas podrían meter a la misma.\n\nY por eso está `if (viejo === nuevo) return;`. Si pintas de blanco lo que ya es blanco, la casilla pintada **sigue siendo del color viejo**: todas volverían a entrar una y otra vez, y no acabaría nunca.",
+            en: "In the maze you had to note who had already been seen. Not here: as soon as a cell is painted, it stops being the old color, so **nobody goes in twice**. That's why it's painted **when it's pushed** and not when it's popped: if you left it for later, two neighbors could push the same one.\n\nAnd that's why `if (viejo === nuevo) return;` is there. If you paint white what's already white, the painted cell **is still the old color**: they'd all go in again and again, and it would never end.",
+          },
+          programa: {
+            codigo: {
+              es: `${MAPA.es}\n\n${LADOS.es}\n\n// la misma, pero pinta al SACAR en vez de al meter, y cuenta cuántas entran\nfunction tarde(f, c, nuevo) {\n  const viejo = mapa[f][c];\n  const pila = [[f, c]];\n  let entraron = 1;\n  while (pila.length > 0) {\n    const [y, x] = pila.pop();\n    mapa[y][x] = nuevo;\n    for (const [i, j] of lados(y, x))\n      if (mapa[i]?.[j] === viejo) { pila.push([i, j]); entraron++; }\n  }\n  return entraron;\n}\n\nconsole.log("casillas de la pared: 19");\nconsole.log("entraron a la pila:", tarde(6, 6, "m"));`,
+              en: `${MAPA.en}\n\n${LADOS.en}\n\n// the same one, but it paints when POPPING instead of pushing, and counts how many go in\nfunction tarde(f, c, nuevo) {\n  const viejo = mapa[f][c];\n  const pila = [[f, c]];\n  let entraron = 1;\n  while (pila.length > 0) {\n    const [y, x] = pila.pop();\n    mapa[y][x] = nuevo;\n    for (const [i, j] of lados(y, x))\n      if (mapa[i]?.[j] === viejo) { pila.push([i, j]); entraron++; }\n  }\n  return entraron;\n}\n\nconsole.log("wall cells: 19");\nconsole.log("pushed onto the stack:", tarde(6, 6, "m"));`,
+            },
+            notas: {
+              es: "- Da el mismo dibujo, pero entran más de 19: algunas casillas estaban dos veces en la pila.\n- En un dibujo grande la diferencia se nota. Pintando al meter, cada casilla entra **una** vez y se miran sus cuatro lados: el trabajo crece con las casillas pintadas, **O(n)**.",
+              en: "- You get the same picture, but more than 19 go in: some cells were on the stack twice.\n- On a big drawing you'd notice. Painting on push, each cell goes in **once** and its four sides are looked at: the work grows with the cells painted, **O(n)**.",
+            },
+          },
+        },
+        {
+          tipo: "explica",
+          titulo: { es: "Cuatro vecinas, no ocho", en: "Four neighbors, not eight" },
+          texto: {
+            es: "Las rayas del techo van en **diagonal**: cada casilla negra toca a la siguiente sólo por la esquina. Con cuatro vecinas eso basta para cerrar el paso. Si además se miran las diagonales (ocho vecinas), la pintura **se cuela por las esquinas** y mancha el cielo.\n\nNo es que ocho esté mal: es otra idea de «pegadas». Lo importante es saber cuál quieres. El buscaminas, por ejemplo, abre hacia las ocho.",
+            en: "The lines of the roof run **diagonally**: each black cell touches the next one only at the corner. With four neighbors that's enough to block the way. If you also look at the diagonals (eight neighbors), the paint **leaks through the corners** and stains the sky.\n\nEight isn't wrong: it's a different idea of \"touching\". What matters is knowing which one you want. Minesweeper, for example, opens in all eight.",
+          },
+          dibujo: { tipo: "rejilla", filas: CASA_TODA, leyenda: { ...LEYENDA_CASA, o: { es: "el techo, 9 casillas", en: "the roof, 9 cells" }, h: { es: "el cielo, 73 casillas", en: "the sky, 73 cells" } } },
+          programa: {
+            codigo: {
+              es: `${MAPA.es}\n\n// las ocho de alrededor, con las diagonales\nconst lados = (y, x) => [[y - 1, x], [y - 1, x + 1], [y, x + 1], [y + 1, x + 1],\n                         [y + 1, x], [y + 1, x - 1], [y, x - 1], [y - 1, x - 1]];\n\n${RELLENO}\n\n${VER}\n\nrellenar(4, 6, "o");   // el techo\nver();\nconsole.log("pintadas:", cuantas("o"));`,
+              en: `${MAPA.en}\n\n// all eight around it, diagonals included\nconst lados = (y, x) => [[y - 1, x], [y - 1, x + 1], [y, x + 1], [y + 1, x + 1],\n                         [y + 1, x], [y + 1, x - 1], [y, x - 1], [y - 1, x - 1]];\n\n${RELLENO}\n\n${VER}\n\nrellenar(4, 6, "o");   // the roof\nver();\nconsole.log("painted:", cuantas("o"));`,
+            },
+            notas: {
+              es: "- Pinta 82: las 9 del techo y las 73 del cielo. Con cuatro vecinas daría 9.\n- La pared se salva: sus esquinas están cerradas con casillas negras que se tocan por el lado.",
+              en: "- It paints 82: the roof's 9 and the sky's 73. With four neighbors it'd be 9.\n- The wall is safe: its corners are closed with black cells that touch side by side.",
+            },
+          },
+        },
+        {
+          tipo: "explica",
+          titulo: { es: "Con cola, con pila o llamándose a sí misma", en: "With a queue, a stack, or calling itself" },
+          texto: {
+            es: "Si en vez de sacar la de arriba sacas la **primera** que entró (una cola), la pintura avanza en **ondas** parejas, como la BFS del laberinto. Con la pila se va a lo hondo por un lado y luego regresa. El orden cambia; **el dibujo final es el mismo**, porque se pintan todas las que se alcanzan, en el orden que sea.\n\nTambién se puede escribir con **recursión**: pinta y llámate con tus cuatro vecinas. Son seis renglones, pero ahora la pila es la de las llamadas, y ésa es chica: en un dibujo grande se desborda.",
+            en: "If instead of popping the top one you take the **first** one in (a queue), the paint moves in even **waves**, like the maze's BFS. With the stack it dives deep on one side and then comes back. The order changes; **the final picture is the same**, because every reachable cell gets painted, whatever the order.\n\nYou can also write it with **recursion**: paint, then call yourself with your four neighbors. It's six lines, but now the stack is the call stack, and that one is small: on a big drawing it overflows.",
+          },
+          programa: {
+            codigo: {
+              es: `${LADOS.es}\n\nlet mapa;\nfunction recursivo(f, c, nuevo, viejo = mapa[f][c]) {\n  if (viejo === nuevo || mapa[f]?.[c] !== viejo) return;\n  mapa[f][c] = nuevo;\n  for (const [i, j] of lados(f, c)) recursivo(i, j, nuevo, viejo);\n}\n\n${RELLENO}\n\nconst lienzo = (n) => Array.from({ length: n }, () => Array(n).fill("."));\nconst cuantas = () => mapa.flat().filter((l) => l === "m").length;\n\nmapa = lienzo(20);\nrecursivo(0, 0, "m");\nconsole.log("20 x 20, recursivo:", cuantas());\n\nmapa = lienzo(400);\ntry {\n  recursivo(0, 0, "m");\n  console.log("400 x 400, recursivo:", cuantas());\n} catch (e) {\n  console.log("400 x 400, recursivo:", e.message);\n}\n\nmapa = lienzo(400);\nrellenar(0, 0, "m");\nconsole.log("400 x 400, con pila:", cuantas());`,
+              en: `${LADOS.en}\n\nlet mapa;\nfunction recursivo(f, c, nuevo, viejo = mapa[f][c]) {\n  if (viejo === nuevo || mapa[f]?.[c] !== viejo) return;\n  mapa[f][c] = nuevo;\n  for (const [i, j] of lados(f, c)) recursivo(i, j, nuevo, viejo);\n}\n\n${RELLENO}\n\nconst lienzo = (n) => Array.from({ length: n }, () => Array(n).fill("."));\nconst cuantas = () => mapa.flat().filter((l) => l === "m").length;\n\nmapa = lienzo(20);\nrecursivo(0, 0, "m");\nconsole.log("20 x 20, recursive:", cuantas());\n\nmapa = lienzo(400);\ntry {\n  recursivo(0, 0, "m");\n  console.log("400 x 400, recursive:", cuantas());\n} catch (e) {\n  console.log("400 x 400, recursive:", e.message);\n}\n\nmapa = lienzo(400);\nrellenar(0, 0, "m");\nconsole.log("400 x 400, with a stack:", cuantas());`,
+            },
+            notas: {
+              es: "- En el de 20 x 20 las dos sirven. En el de 400 x 400 la recursiva se queda sin pila de llamadas (el mensaje cambia con el navegador); la nuestra pinta las 160 000.\n- Para verla en ondas, cambia `pila.pop()` por `pila.shift()`: el resultado no cambia.",
+              en: "- On the 20 x 20 one both work. On the 400 x 400 one the recursive version runs out of call stack (the message depends on the browser); ours paints all 160,000.\n- To see it in waves, change `pila.pop()` to `pila.shift()`: the result doesn't change.",
+            },
+          },
+        },
+        {
+          tipo: "explica",
+          titulo: { es: "Para qué sirve: Qix y contar islas", en: "What it's for: Qix and counting islands" },
+          texto: {
+            es: "En [Qix](https://dailychallenge.click/juegos/qix), de Daily Challenge, cuando cierras una línea el juego **rellena** cada pedazo que quedó sin dueño, con una pila como la de aquí, y le pone un número. Luego mira en cuáles anda el bicho: ésos se quedan libres y **los demás son tuyos**.\n\nLo mismo sirve para **contar regiones**: recorre las casillas y, cada vez que encuentres una sin pintar, rellénala entera y suma uno. Es el problema de «contar islas», un clásico de las entrevistas.",
+            en: "In [Qix](https://dailychallenge.click/juegos/qix), on Daily Challenge, when you close a line the game **fills** each unclaimed piece, with a stack like this one, and gives it a number. Then it checks which ones the creature is in: those stay free and **the rest are yours**.\n\nThe same works for **counting regions**: go over the cells and, each time you find one that's not painted, fill all of it and add one. It's the \"number of islands\" problem, an interview classic.",
+          },
+          programa: {
+            codigo: {
+              es: `${BASE_RELLENO("es")}\n\nlet regiones = 0;\nfor (let f = 0; f < mapa.length; f++)\n  for (let c = 0; c < mapa[f].length; c++)\n    if (mapa[f][c] === ".") {\n      regiones++;\n      rellenar(f, c, String(regiones));   // cada pedazo, con su número\n    }\nver();\nconsole.log("pedazos blancos:", regiones);`,
+              en: `${BASE_RELLENO("en")}\n\nlet regiones = 0;\nfor (let f = 0; f < mapa.length; f++)\n  for (let c = 0; c < mapa[f].length; c++)\n    if (mapa[f][c] === ".") {\n      regiones++;\n      rellenar(f, c, String(regiones));   // each piece, with its number\n    }\nver();\nconsole.log("white pieces:", regiones);`,
+            },
+            notas: {
+              es: "- Son cuatro: el cielo, el techo, la pared y la puerta.\n- Los `for` pasan por todas las casillas, pero cada una se pinta una sola vez: el trabajo total sigue siendo **O(n)**.",
+              en: "- There are four: the sky, the roof, the wall and the door.\n- The `for` loops go over every cell, but each one is painted only once: the total work is still **O(n)**.",
+            },
+          },
+        },
+        {
+          tipo: "elige",
+          pregunta: { es: "La puerta es blanca, igual que la pared. ¿Por qué no se pinta cuando picas la pared?", en: "The door is white, just like the wall. Why isn't it painted when you click the wall?" },
+          opciones: [
+            { es: "Porque no hay camino de casillas blancas, de lado en lado, de la pared a la puerta", en: "Because there's no path of white cells, side by side, from the wall to the door" },
+            { es: "Porque es más chica que la pared", en: "Because it's smaller than the wall" },
+            { es: "Porque la pila se llena antes de llegar a ella", en: "Because the stack fills up before getting to it" },
+            { es: "Porque está más abajo en el mapa", en: "Because it's lower down on the map" },
+          ],
+          correcta: 0,
+          porque: {
+            es: "El relleno sólo avanza a casillas pegadas por un lado y del color viejo. La raya rodea la puerta por completo, así que ninguna vecina blanca la mete a la pila.",
+            en: "Flood fill only moves to cells that touch by a side and are the old color. The line goes all the way around the door, so no white neighbor ever pushes it onto the stack.",
+          },
+        },
+        {
+          tipo: "elige",
+          pregunta: { es: "Quitas `if (viejo === nuevo) return;` y pintas de blanco una región blanca. ¿Qué pasa?", en: "You remove `if (viejo === nuevo) return;` and paint a white region white. What happens?" },
+          opciones: [
+            { es: "No termina: las casillas pintadas siguen siendo del color viejo y vuelven a entrar", en: "It never ends: painted cells are still the old color and go back in" },
+            { es: "No pasa nada: la región ya estaba blanca", en: "Nothing: the region was already white" },
+            { es: "Se pinta todo el mapa, también la raya", en: "The whole map gets painted, the line too" },
+            { es: "Pinta sólo la primera casilla", en: "It paints only the first cell" },
+          ],
+          correcta: 0,
+          porque: {
+            es: "Lo que evita que una casilla entre dos veces es que deja de ser del color viejo. Si el nuevo y el viejo son el mismo, nunca deja de serlo: la pila se vuelve a llenar sin parar.",
+            en: "What keeps a cell from going in twice is that it stops being the old color. If the new and the old are the same, it never stops being it: the stack keeps filling up forever.",
+          },
+        },
+        {
+          tipo: "completa",
+          pregunta: { es: "Completa el corazón del relleno.", en: "Fill in the heart of flood fill." },
+          codigo: "const [y, x] = pila.___();\nfor (const [i, j] of lados(y, x))\n  if (mapa[i]?.[j] === ___) {\n    mapa[i][j] = ___;\n    pila.push([i, j]);\n  }",
+          huecos: ["pop", "viejo", "nuevo"],
+          banco: ["pop", "viejo", "nuevo", "push", "pila", "undefined"],
+          porque: {
+            es: "Se saca la de arriba (`pop`), se aceptan sólo las vecinas del color `viejo` y se pintan del `nuevo` antes de meterlas, para que nadie más las meta.",
+            en: "Pop the one on top (`pop`), accept only neighbors of the `viejo` (old) color and paint them `nuevo` (new) before pushing them, so nobody else pushes them.",
+          },
+        },
+        {
+          tipo: "escribe",
+          pregunta: {
+            es: "Escribe `pedazos(filas)`: cuántas regiones de `.` hay, si dos casillas están pegadas sólo cuando se tocan por un lado. Puedes rellenar cada región con otra letra mientras cuentas.",
+            en: "Write `pedazos(filas)`: how many regions of `.` there are, where two cells touch only if they share a side. You can fill each region with another letter as you count.",
+          },
+          inicial: {
+            es: "function pedazos(filas) {\n  const mapa = filas.map((f) => [...f]);\n  // por cada '.' que encuentres: suma uno y rellena su región\n  return 0;\n}\n\nconsole.log(pedazos([\".x.\", \"xxx\", \".x.\"]));",
+            en: "function pedazos(filas) {\n  const mapa = filas.map((f) => [...f]);\n  // for each '.' you find: add one and fill its region\n  return 0;\n}\n\nconsole.log(pedazos([\".x.\", \"xxx\", \".x.\"]));",
+          },
+          pruebas: [
+            { llamada: "pedazos([\".x.\", \"xxx\", \".x.\"])", espera: "4" },
+            { llamada: "pedazos([\"..\", \"..\"])", espera: "1" },
+            { llamada: "pedazos([\"xxx\"])", espera: "0" },
+            { llamada: "pedazos([\".x\", \"x.\"])", espera: "2" },
+            { llamada: "pedazos([\".............\", \"......x......\", \".....x.x.....\", \"....x...x....\", \"...x.....x...\", \"..xxxxxxxxx..\", \"..x.......x..\", \"..x.xxx...x..\", \"..x.x.x...x..\", \"..x.x.x...x..\", \"..xxxxxxxxx..\"])", espera: "4" },
+          ],
+          solucion: "function pedazos(filas) {\n  const mapa = filas.map((f) => [...f]);\n  let n = 0;\n  for (let f = 0; f < mapa.length; f++)\n    for (let c = 0; c < mapa[f].length; c++) {\n      if (mapa[f][c] !== \".\") continue;\n      n++;\n      const pila = [[f, c]];\n      mapa[f][c] = \"o\";\n      while (pila.length > 0) {\n        const [y, x] = pila.pop();\n        for (const [i, j] of [[y - 1, x], [y, x + 1], [y + 1, x], [y, x - 1]])\n          if (mapa[i]?.[j] === \".\") {\n            mapa[i][j] = \"o\";\n            pila.push([i, j]);\n          }\n      }\n    }\n  return n;\n}",
+          porque: {
+            es: "Cada `.` que aparece al recorrer el mapa es de una región nueva: si fuera de una ya contada, el relleno la habría pintado de `o`. En `[\".x\", \"x.\"]` son dos, porque se tocan sólo por la esquina.",
+            en: "Each `.` you come across is from a new region: if it were from one already counted, the fill would have painted it `o`. In `[\".x\", \"x.\"]` there are two, because they only touch at the corner.",
           },
         },
       ],
