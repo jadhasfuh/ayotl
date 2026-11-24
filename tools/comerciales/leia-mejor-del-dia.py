@@ -76,6 +76,13 @@ TEXTOS = {
         'vidamas': ['¡Vida extra!', '¡Bien! Una vida más.', '¡Otra vida de regalo!'],
         'oleada': ['¡Oleada {n}!', '¡Ya va en la oleada {n}!', '¡Oleada {n}, y vienen más!'],
         'nivel': ['¡Nivel {n}!', '¡Pasó al nivel {n}!', '¡Ya va en el nivel {n}!'],
+        # los que no cuentan niveles (dc-partida.mjs, CAMPO), y los sustos que no son «estuvo cerca»
+        'tramo': ['¡Tramo {n}!', '¡Pasó al tramo {n}!', '¡Ya va en el tramo {n}!'],
+        'zona': ['¡Tramo {n} de 20!', '¡Ya va en el tramo {n} de 20!'],
+        'jornada': ['¡Día {n}!', '¡Cuota cumplida! Empieza el día {n}.', '¡Ya va en el día {n}!'],
+        'hoyo': ['¡Hoyo {n}!', '¡Va por el hoyo {n}!', '¡Al hoyo {n}!'],
+        'uy_pesca': ['¡Ñam! Se lo comió el tiburón.', '¡Se lo llevó el tiburón!'],
+        'uy_minigolf': ['¡Al agua!', '¡Splash! Un golpe más.'],
         'uy': ['¡Uy, estuvo cerca!', '¡Uf, por poco!', '¡Auch!', '¡Cuidado!'],
         'racha': ['¡Qué jugada! {pts} puntos de golpe.', '¡Eso! {pts} puntos en un momento.', '¡Wow! {pts} puntos así nada más.'],
         'record': '¡Y con esto supera el récord que tenía {juego} en {dc}: {pts} puntos!',
@@ -122,6 +129,12 @@ TEXTOS = {
         'vidamas': ['Extra life!', 'Nice, one more life!', 'A free life!'],
         'oleada': ['Wave {n}!', 'On to wave {n}!', 'Wave {n}, and more are coming!'],
         'nivel': ['Level {n}!', 'Up to level {n}!', 'Now on level {n}!'],
+        'tramo': ['Stage {n}!', 'On to stage {n}!', 'Now on stage {n}!'],
+        'zona': ['Zone {n} of 20!', 'Now in zone {n} of 20!'],
+        'jornada': ['Day {n}!', 'Quota met! Here comes day {n}.', 'Now on day {n}!'],
+        'hoyo': ['Hole {n}!', 'On to hole {n}!', 'Now on hole {n}!'],
+        'uy_pesca': ['Chomp! The shark got it.', 'The shark took it!'],
+        'uy_minigolf': ['Into the water!', 'Splash! One more stroke.'],
         'uy': ['Whoa, that was close!', 'Phew, close call!', 'Ouch!', 'Watch out!'],
         'racha': ['What a play! {pts} points at once.', 'Boom! {pts} points in a flash.', 'Wow! {pts} points just like that.'],
         'record': 'And with that, it beats the old {juego} record on {dc}: {pts} points!',
@@ -169,6 +182,12 @@ TEXTOS = {
         'vidamas': ['ライフが増えた！', 'やった、ワンアップ！', 'ライフをもうひとつゲット！'],
         'oleada': ['ウェーブ{n}！', 'ウェーブ{n}に突入！', 'ウェーブ{n}、まだまだ来ます！'],
         'nivel': ['レベル{n}！', 'レベル{n}に上がりました！', 'もうレベル{n}！'],
+        'tramo': ['ステージ{n}！', 'ステージ{n}に突入！', 'もうステージ{n}！'],
+        'zona': ['エリア{n}！', '20エリアのうち、もう{n}エリア目！'],
+        'jornada': ['{n}日目！', 'ノルマ達成！{n}日目です！', 'もう{n}日目！'],
+        'hoyo': ['{n}番ホール！', '次は{n}番ホール！', 'もう{n}番ホール！'],
+        'uy_pesca': ['パクッ！サメに食べられました。', 'サメに取られちゃった！'],
+        'uy_minigolf': ['池ポチャ！', 'ドボン！1打追加です。'],
         'uy': ['おっと、あぶない！', 'ふう、ギリギリ！', 'いたっ！', 'あぶなーい！'],
         'racha': ['ナイスプレイ！一気に{pts}点！', 'すごい！あっという間に{pts}点！', 'わあ、{pts}点もいっぺんに！'],
         'record': 'これで、{dc}の{juego}のこれまでの記録、{pts}点をこえました！',
@@ -377,9 +396,12 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
             if e['tipo'] == 'vida' and e.get('quedan', 1) <= 0:
                 continue   # la última: la partida se acaba y eso lo dice el final
             if e['tipo'] in ('vida', 'vidamas', 'uy'):
-                en(e['tipo'], e['t'], lambda ahora, corta=False, k=e['tipo']: variante(k, corta))
+                propio = f"{e['tipo']}_{info['juego']}"   # «se lo comió el tiburón» y no «estuvo cerca»
+                en(e['tipo'], e['t'], lambda ahora, corta=False, k=propio if propio in tx else e['tipo']: variante(k, corta))
             elif e['tipo'] == 'nivel':
-                k = 'oleada' if e['campo'] in ('wave', 'oleada') else 'nivel'
+                k = {'wave': 'oleada', 'oleada': 'oleada', 'tramo': 'tramo', 'jornada': 'jornada', 'hoyo': 'hoyo'}.get(e['campo'], 'nivel')
+                if info['juego'] == 'cueva':   # son 20, y en pantalla se llaman de otra forma en inglés y japonés
+                    k = 'zona'
                 en('nivel', e['t'], lambda ahora, corta=False, k=k, n=e['n']: marcar(variante(k, corta), dict(valores, n=(str(n),) * 2)))
         if len(mk) > 4 and pts > 0:   # las rachas: lo que más puntos dio en 2 s, si es mucho
             prom = pts / len(mk) * 2; elegidos = []

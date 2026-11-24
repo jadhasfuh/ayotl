@@ -73,8 +73,15 @@ const nuevo = () => new Game(seeds(reto.semilla).game, contenido('maps', `${reto
 // oleada que sube (el primer campo de NIVELES que tenga el juego) y los sustos ('hurt': un tapón, un golpe, la
 // paleta a la mitad), para que LeIA reaccione («¡chispas, ahí va una vida!»). Los juegos vacían `events` en cada tick.
 const NIVELES = ['wave', 'oleada', 'ronda', 'stage', 'nivel', 'level'];
+// El número que enseña la pantalla, en los juegos donde no es el primero de NIVELES: `level` suele ser la dificultad del
+// día más lo que se lleva pasado (el 20-nov, con dificultad 6, LeIA dijo «¡Nivel 7!» en la segunda pantalla de Mr. Do!,
+// que decía L2). Los que cuentan desde 0 se dicen desde 1, como en pantalla. Cueva tiene 20 tramos cortos: uno de cada 5.
+const CAMPO = { boulder: 'pantalla', mrdo: 'pantalla', burgertime: 'pantalla', pang: 'round', spaceimpact: 'vuelta',
+                slalom: 'tramo', pesca: 'jornada', cueva: 'tramo', minigolf: 'hoyo' };
+const CADA_NIVEL = { cueva: 5 }, ULTIMO_NIVEL = { minigolf: 9 };
 const g0 = nuevo();
-const campoNivel = NIVELES.find(k => typeof g0[k] === 'number');
+const campoNivel = [CAMPO[reto.juego], ...NIVELES].find(k => typeof g0[k] === 'number');
+const desdeUno = campoNivel && g0[campoNivel] === 0 ? 1 : 0;
 let fin = 0, vidas = typeof g0.lives === 'number' ? g0.lives : null, nivel = campoNivel ? g0[campoNivel] : null, susto = -99;
 const marcador = [], eventos = [];
 while (fin < log.length && !g0.over) {
@@ -86,7 +93,8 @@ while (fin < log.length && !g0.over) {
     eventos.push({ t, tipo: g0.lives < vidas ? 'vida' : 'vidamas', quedan: g0.lives }); vidas = g0.lives;
   }
   if (campoNivel && g0[campoNivel] !== nivel) {
-    if (g0[campoNivel] > nivel) eventos.push({ t, tipo: 'nivel', campo: campoNivel, n: g0[campoNivel] });
+    const n = g0[campoNivel] + desdeUno;
+    if (g0[campoNivel] > nivel && n % (CADA_NIVEL[reto.juego] ?? 1) === 0 && n <= (ULTIMO_NIVEL[reto.juego] ?? n)) eventos.push({ t, tipo: 'nivel', campo: campoNivel, n });
     nivel = g0[campoNivel];
   }
   if (g0.events?.includes('hurt') && t - susto > 3) { eventos.push({ t, tipo: 'uy' }); susto = t; }

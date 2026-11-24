@@ -458,6 +458,82 @@
     "corto": "マッピーは1983年のナムコのゲーム。ネズミの警官が、ネコの屋敷から盗まれた品物を取りもどします。",
     "largo": "マッピーは1983年のナムコのゲーム。ネズミの警官が、ネコの屋敷から盗まれた品物を取りもどします。トランポリンで階を移動して、ドアでミューキーズや親分のニャームコをはじきとばします。"
    }
+  },
+  "slalom": {
+   "voz": {
+    "es": "Eslálom",
+    "en": "Slalom",
+    "ja": "スラローム"
+   },
+   "es": {
+    "corto": "{Slalom|Eslálom} es un juego original de {Ayotl|Áyotl}, de 2026. La palabra es noruega: una ladera suave y la huella de los esquís.",
+    "largo": "{Slalom|Eslálom} es un juego original de {Ayotl|Áyotl}, de 2026. La palabra es noruega: una ladera suave y la huella de los esquís. Arnold Lunn escribió las reglas modernas en 1922, y en 1936 el esquí alpino llegó a los Juegos Olímpicos de Invierno."
+   },
+   "en": {
+    "corto": "Slalom is an original game by Ayotl, from 2026. The word is Norwegian: a gentle slope plus the track left by skis.",
+    "largo": "Slalom is an original game by Ayotl, from 2026. The word is Norwegian: a gentle slope plus the track left by skis. Arnold Lunn wrote the modern rules in 1922, and in 1936 alpine skiing reached the Winter Olympics."
+   },
+   "ja": {
+    "corto": "スラロームは2026年の{Ayotl|アヨトル}オリジナル。名前はノルウェー語で「ゆるい斜面」と「スキーの跡」です。",
+    "largo": "スラロームは2026年の{Ayotl|アヨトル}オリジナル。名前はノルウェー語で「ゆるい斜面」と「スキーの跡」です。今のルールは1922年にアーノルド・ランがまとめ、1936年にはアルペンスキーが冬のオリンピックに加わりました。"
+   }
+  },
+  "pesca": {
+   "voz": {
+    "es": "Pesca",
+    "en": "Pesca",
+    "ja": "ペスカ"
+   },
+   "es": {
+    "corto": "Pesca es un juego original de {Ayotl|Áyotl}, de 2026: una semana de cinco jornadas, con tiburones que se comen lo que subes.",
+    "largo": "Pesca es un juego original de {Ayotl|Áyotl}, de 2026: una semana de cinco jornadas, con tiburones que se comen lo que subes. Lo del tiburón es una idea vieja: David Crane lo puso en {Fishing Derby|Físhin Dérbi}, de 1980, porque sin una amenaza le faltaba juego."
+   },
+   "en": {
+    "corto": "Pesca, Spanish for fishing, is an original game by Ayotl, from 2026: a five-day week with sharks that eat your catch.",
+    "largo": "Pesca, Spanish for fishing, is an original game by Ayotl, from 2026: a five-day week with sharks that eat your catch. The shark is an old idea: David Crane put one in Fishing Derby, from 1980, because without a threat the game was missing something."
+   },
+   "ja": {
+    "corto": "ペスカはスペイン語で「釣り」。2026年の{Ayotl|アヨトル}オリジナルで、釣った魚をサメがねらいます。",
+    "largo": "ペスカはスペイン語で「釣り」。2026年の{Ayotl|アヨトル}オリジナルで、釣った魚をサメがねらいます。サメを出したのは1980年の「フィッシングダービー」が先で、作者のデビッド・クレーンは、それだけではもの足りないと思って入れました。"
+   }
+  },
+  "cueva": {
+   "voz": {
+    "es": "Cueva",
+    "en": "Cueva",
+    "ja": "クエバ"
+   },
+   "es": {
+    "corto": "Cueva es un juego original de {Ayotl|Áyotl}, de 2026: una luciérnaga cruza 20 tramos, y para volar hay un solo botón.",
+    "largo": "Cueva es un juego original de {Ayotl|Áyotl}, de 2026: una luciérnaga cruza 20 tramos, y para volar hay un solo botón. Lo de avanzar solo viene de lejos: {Scramble|Scrámbol}, de Konami, de 1981, fue el primer juego de naves de lado con avance forzado y niveles distintos. Y ojo: las luciérnagas no son moscas, son escarabajos."
+   },
+   "en": {
+    "corto": "Cueva, Spanish for cave, is an original game by Ayotl, from 2026: a firefly, 20 sections and one button to fly.",
+    "largo": "Cueva, Spanish for cave, is an original game by Ayotl, from 2026: a firefly, 20 sections and one button to fly. Scrolling by itself goes way back: Konami's Scramble, from 1981, was the first side-scrolling shooter with forced scrolling and distinct levels. And fireflies aren't flies: they're beetles."
+   },
+   "ja": {
+    "corto": "クエバはスペイン語で「洞くつ」。2026年の{Ayotl|アヨトル}オリジナルで、ホタルがボタン1つで飛びます。",
+    "largo": "クエバはスペイン語で「洞くつ」。2026年の{Ayotl|アヨトル}オリジナルで、ホタルがボタン1つで飛びます。1981年のコナミの「スクランブル」は、強制スクロールといくつもの面をそなえた最初の横シューティングでした。ちなみに、ホタルはカブトムシと同じ甲虫のなかまです。"
+   }
+  },
+  "minigolf": {
+   "voz": {
+    "es": "Minigolf",
+    "en": "Minigolf",
+    "ja": "ミニゴルフ"
+   },
+   "es": {
+    "corto": "Minigolf es un juego original de {Ayotl|Áyotl}, de 2026: nueve hoyos sacados de doce, con agua, rampas, barreras y un volcán.",
+    "largo": "Minigolf es un juego original de {Ayotl|Áyotl}, de 2026: nueve hoyos sacados de doce, con agua, rampas, barreras y un volcán. Los campos para el golpe corto empezaron en 1867, en {St Andrews|Sent Ándrius}, Escocia, para el club de golf de damas. A finales de los años veinte, Nueva York tenía más de 150 campos de minigolf en azoteas."
+   },
+   "en": {
+    "corto": "Minigolf is an original game by Ayotl, from 2026: nine holes out of twelve, with water, ramps, barriers and a volcano.",
+    "largo": "Minigolf is an original game by Ayotl, from 2026: nine holes out of twelve, with water, ramps, barriers and a volcano. Putting courses go back to 1867, at St Andrews, Scotland, where one was laid out for the ladies' golf club. By the late 1920s New York City had over 150 mini golf courses on rooftops."
+   },
+   "ja": {
+    "corto": "ミニゴルフは2026年の{Ayotl|アヨトル}オリジナル。12ホールから9ホール、池や坂や火山もあります。",
+    "largo": "ミニゴルフは2026年の{Ayotl|アヨトル}オリジナル。12ホールから9ホール、池や坂や火山もあります。パットだけのコースは1867年、スコットランドのセントアンドリュースで、女性のゴルフクラブのために作られました。1920年代の終わりには、ニューヨークの屋上に150以上のミニゴルフ場がありました。"
+   }
   }
  }
 }

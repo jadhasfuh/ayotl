@@ -3008,5 +3008,63 @@
   ],
   "idioma": "ja",
   "id": "rfTuOLUAD5Q"
+ },
+ {
+  "clave": "mejor-2026-11-23",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-23.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-25T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 23 de noviembre: 1,990 puntos en INVADERS 🕹️",
+  "descripcion": "El mejor del 23 de noviembre en Daily Challenge fue FERXO17, con 1,990 puntos en INVADERS. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "INVADERS"
+  ],
+  "miniatura": "salida/mejor-2026-11-23.jpg",
+  "id": "xdyMxJc6ijE"
+ },
+ {
+  "clave": "mejor-2026-11-23-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-23-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-25T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 23: 1,990 points in INVADERS 🕹️",
+  "descripcion": "The best run of November 23 on Daily Challenge was by FERXO17, with 1,990 points in INVADERS. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "INVADERS"
+  ],
+  "idioma": "en",
+  "miniatura": "salida/mejor-2026-11-23-en.jpg",
+  "id": "yBaaE8xBcDk"
+ },
+ {
+  "clave": "mejor-2026-11-23-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-23-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-25T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月23日のベスト、INVADERSで1,990点 🕹️",
+  "descripcion": "11月23日のDaily Challengeでいちばんだったのは、INVADERSで1,990点のFERXO17さん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "インベーダー"
+  ],
+  "idioma": "ja",
+  "miniatura": "salida/mejor-2026-11-23-ja.jpg",
+  "id": "5YtMnRic9nU"
  }
 ]

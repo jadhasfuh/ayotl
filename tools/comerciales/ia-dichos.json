@@ -26,7 +26,10 @@
   "¿Por qué la IA nunca usa bomba de aire? Porque ya vive en la nube.",
   "¿Qué música escuchan las rocas? Rock, claro.",
   "¿Por qué las rocas de {juego} son tan dramáticas? Porque a la mínima se vienen abajo.",
-  "¿Por qué una IA nunca se asusta en una mina? Porque ya está acostumbrada a la minería de datos."
+  "¿Por qué una IA nunca se asusta en una mina? Porque ya está acostumbrada a la minería de datos.",
+  "¿Cuál es el colmo de un invasor? Venir de otro planeta y que lo manden a volar.",
+  "Soy una IA espacial: me sobra espacio en disco.",
+  "¿Por qué la IA nunca gana a las escondidas? Porque siempre aparece en el buscador."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -55,7 +58,10 @@
   "Why is the dragon in {juego} bad at hide and seek? He keeps blowing his cover.",
   "My favorite music? Rock. Falling rock.",
   "The diamonds in {juego} are just like me: they shine under pressure.",
-  "I'm great at mining. Data mining, that is."
+  "I'm great at mining. Data mining, that is.",
+  "What's an alien invader's favorite key on the keyboard? The space bar.",
+  "An invader broke up with me. It needed space.",
+  "I'd tell you a joke about my memory, but I forgot it. Must be a RAM-dom glitch."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -82,6 +88,8 @@
   "モンスターをふくらませたら、ふくれっつらになりました！",
   "掘ったら、ほっとしました！",
   "{juego}で岩が落ちたら、お祝いです！",
-  "石が落ちてきたら、ちゃんと、いしきしてくださいね！"
+  "石が落ちてきたら、ちゃんと、いしきしてくださいね！",
+  "{juego}の敵が、てきぱきと降りてきます！",
+  "盾があれば、たてこもれます！"
  ]
 }

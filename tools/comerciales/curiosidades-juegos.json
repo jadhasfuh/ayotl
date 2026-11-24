@@ -304,21 +304,21 @@
       "Se jugaba con un {trackball|trac bol} y tres botones, uno para disparar desde cada base.",
       "Su creador, Dave Theurer, hizo después Tempest, de 1981, con gráficos vectoriales a color.",
       "Salió en 1980, en plena Guerra Fría, cuando el miedo a una guerra nuclear estaba en todos lados.",
-      "Aquí tienes 20 antimisiles por oleada: cada misil derribado vale 25, y al final cada ciudad viva 100 y cada antimisil sin usar 5.",
+      "Aquí cada misil derribado vale 25, y al final cada ciudad viva 100 y cada antimisil sin usar 5; desde la oleada 4, todo vale el doble.",
       "Aquí cada dos oleadas recuperas una ciudad perdida, y desde la oleada 3 algunos misiles se dividen en dos a media altura."
     ],
     "en": [
       "It was played with a trackball and three buttons, one to fire from each base.",
       "Its creator, Dave Theurer, went on to make Tempest in 1981, with color vector graphics.",
       "It came out in 1980, in the middle of the Cold War, when fear of nuclear war was everywhere.",
-      "Here you get 20 counter missiles per wave: each missile you stop is worth 25, and at the end each city left is 100 and each unused shot 5.",
+      "Here each missile you stop is worth 25, and at the end each city left is 100 and each unused shot 5; from wave 4 it all counts double.",
       "Here you get a lost city back every two waves, and from wave 3 some missiles split in two halfway down."
     ],
     "ja": [
       "トラックボールと、3つの基地それぞれの発射ボタンで遊びました。",
       "作者のデイブ・セウラーは、のちに1981年の「テンペスト」を作りました。カラーのベクターゲームです。",
       "発売は1980年。冷戦のまっただ中で、核戦争へのこわさが身近だった時代です。",
-      "ここでは1回の攻撃に迎撃ミサイルが20発。1発落とすと25点、最後に残った街1つ100点、残り弾1発5点。",
+      "ここではミサイル1発25点、最後に残った街1つ100点、残り弾1発5点。4回目の攻撃からは、ぜんぶ2倍。",
       "ここでは2回ごとに街が1つもどります。3回目からは、空中で2つに分かれるミサイルも出てきます。"
     ]
   },
@@ -688,6 +688,98 @@
       "1986年には、ファミコンで続編の「マッピーランド」が出ました。",
       "ここではアイテムは100点から500点。同じ種類の2つを続けて取ると、2つ目は2倍です。",
       "ここではドアで飛ばしたネコの数で100、200、400、800点。トランポリンは続けて4回跳ねると破れます。"
+    ]
+  },
+  "slalom": {
+    "es": [
+      "En 1980, Activision sacó {Skiing|Esquíin} para la Atari 2600, de Bob Whitehead, con descenso y eslalon.",
+      "{SkiFree|Esquí Frii}, de 1991, venía en un paquete de juegos para Windows: pasados los 2000 metros salía un hombre de las nieves y te comía.",
+      "El {Slalom|Eslálom} de la {NES|Nes}, de 1987, fue el primer juego de esa consola hecho fuera de Japón y el primero con la marca Rare.",
+      "Aquí cada puerta vale 10 por el multiplicador, que sube uno cada tres puertas seguidas, hasta por 8; si fallas una o te caes, vuelve a uno.",
+      "Aquí agachado bajas un {30 %|treinta por ciento} más rápido, pero no puedes ponerte de lado, que es el freno; cada árbol que sobrevuelas vale 25."
+    ],
+    "en": [
+      "In 1980 Activision released Skiing for the Atari 2600, by Bob Whitehead, with downhill and slalom.",
+      "SkiFree, from 1991, came in a game pack for Windows: past 2,000 meters an Abominable Snowman showed up and ate you.",
+      "The NES Slalom, from 1987, was that console's first game made outside Japan and the first under the Rare brand.",
+      "Here each gate is worth 10 times the multiplier, which goes up every three gates in a row, up to 8; miss one or fall and it's back to one.",
+      "Here tucking makes you 30 percent faster, but you can't turn sideways, which is your brake; each tree you fly over pays 25."
+    ],
+    "ja": [
+      "1980年、アクティビジョンはアタリ2600で、滑降とスラロームの「スキーイング」を出しました。",
+      "1991年の「スキーフリー」では、2000メートルをすぎると雪男が出てきて、食べられてしまいます。",
+      "1987年のNES版「スラローム」は、日本の外で作られた最初のNESのゲームで、レア社の名前で出た第1作です。",
+      "ここでは旗門1つで10点×倍率。3つ続けて通るごとに倍率が上がり、最大8倍。転ぶと1倍にもどります。",
+      "ここではしゃがむと3割速くなりますが、ブレーキの横向きにはなれません。木を飛びこえると25点。"
+    ]
+  },
+  "pesca": {
+    "es": [
+      "En {Fishing Derby|Físhin Dérbi} dos pescadores compiten frente a frente: gana el primero que saca 99 libras de pescado.",
+      "En 1997, {Sega|Séga} llevó a las salas de juego {Get Bass|Guet Bas}, que se jugaba con una caña con carrete de verdad.",
+      "La caña de {Get Bass|Guet Bas} tenía hasta su hilo: se metía en la máquina y tiraba según lo que hacía el pez.",
+      "Aquí la sardina vale 5, la dorada 20, el atún 60 y el pez linterna 120: cuanto más hondo, más vale y más pesa.",
+      "Aquí el tiburón avisa con un signo de admiración antes de lanzarse, y de espaldas no ve; el tesoro no le interesa."
+    ],
+    "en": [
+      "In Fishing Derby two anglers face off, and the first to land 99 pounds of fish wins.",
+      "In 1997 Sega brought Get Bass, also known as Sega Bass Fishing, to arcades: you played with a rod and a working reel.",
+      "That arcade rod even had its own line: it ran into the cabinet and pulled depending on what the fish did.",
+      "Here a sardine is worth 5, a bream 20, a tuna 60 and an anglerfish 120: the deeper it lives, the more it's worth and weighs.",
+      "Here the shark warns with an exclamation mark before it lunges, and it can't see behind it; the treasure doesn't interest it."
+    ],
+    "ja": [
+      "「フィッシングダービー」は2人の釣り人の対決で、先に99ポンド釣ったほうが勝ちです。",
+      "1997年、セガの「ゲットバス」がゲームセンターに登場。リール付きのさおで遊びました。",
+      "「ゲットバス」のさおには糸もついていて、魚の動きに合わせて引っぱられました。",
+      "ここではイワシ5点、タイ20点、マグロ60点、チョウチンアンコウ120点。深いほど高くて重くなります。",
+      "ここではサメはビックリマークで知らせてから飛びかかります。後ろは見えず、宝箱には興味がありません。"
+    ]
+  },
+  "cueva": {
+    "es": [
+      "{Flappy Bird|Fláppi Berd}, de 2013, también se volaba con un solo dedo: su creador lo retiró en febrero de 2014, en plena fama.",
+      "A finales de enero de 2014, {Flappy Bird|Fláppi Berd} era el juego gratis más descargado de la {App Store|Ap Estor}.",
+      "La luz de las luciérnagas es luz fría: no trae infrarrojos ni ultravioletas.",
+      "Aquí los cristales seguidos valen cada vez más: el undécimo ya vale el doble, y si dejas pasar uno, se reinicia.",
+      "Aquí volar a menos de 3 pixeles de la roca, sin tocarla, da 30 puntos por segundo; y salir de la cueva, 1000 más 500 por vida."
+    ],
+    "en": [
+      "Flappy Bird, from 2013, was also one-finger flying: its creator pulled it in February 2014, at the height of its fame.",
+      "At the end of January 2014, Flappy Bird was the most downloaded free game on the App Store.",
+      "A firefly's glow is cold light: no infrared and no ultraviolet.",
+      "Here crystals in a row are worth more and more: the eleventh is worth double, and missing one resets it.",
+      "Here flying within 3 pixels of the rock without touching it pays 30 points a second; leaving the cave, 1,000 plus 500 per life."
+    ],
+    "ja": [
+      "2013年の「フラッピーバード」も指1本で飛ぶゲーム。作者は人気のさなか、2014年2月に公開をやめました。",
+      "2014年1月の終わり、「フラッピーバード」はアップストアでいちばん人気の無料ゲームでした。",
+      "ホタルの光は「冷たい光」とよばれ、赤外線も紫外線も出ません。",
+      "ここではクリスタルを続けて取るほど点が上がり、11個目で2倍。1つのがすと、はじめからです。",
+      "ここでは岩すれすれを飛ぶと1秒に30点。洞くつを出ると1000点と、残り1機につき500点です。"
+    ]
+  },
+  "minigolf": {
+    "es": [
+      "En 1916 hubo en Carolina del Norte un minigolf llamado {Thistle Dhu|Zísel Du}, que en inglés suena a: con esto basta.",
+      "En 1979, Atari sacó {Miniature Golf|Míniachur Golf} para su consola, la Atari 2600.",
+      "La federación sueca de minigolf es de 1937: la organización de minigolf más antigua del mundo.",
+      "Aquí embocar al par vale 400; cada golpe de menos, 400 más, y el hoyo en uno, 500 de regalo.",
+      "Aquí cada segundo que le sobra al reloj del hoyo vale 15 puntos: con los mismos golpes, gana el más rápido."
+    ],
+    "en": [
+      "In 1916 North Carolina had a mini golf course called Thistle Dhu, which sounds like: this'll do.",
+      "In 1979 Atari released Miniature Golf for its console, the Atari 2600.",
+      "Sweden's minigolf federation dates from 1937: it's the oldest minigolf organization in the world.",
+      "Here holing out at par is worth 400; each stroke under, 400 more, and a hole in one, 500 on top.",
+      "Here each second left on the hole's clock is worth 15 points: with the same strokes, the faster player wins."
+    ],
+    "ja": [
+      "1916年、アメリカに「ジスル・ドゥー」というコースがありました。「これでよし」のだじゃれです。",
+      "1979年、アタリは家庭用ゲーム機のアタリ2600で「ミニチュアゴルフ」を出しました。",
+      "スウェーデンのミニゴルフ連盟は1937年にできた、世界でいちばん古いミニゴルフの団体です。",
+      "ここではパーで入れると400点。1打少ないごとに400点ふえて、ホールインワンなら500点のおまけ。",
+      "ここでは残り時間1秒につき15点。同じ打数なら、早く入れたほうが勝ちです。"
     ]
   }
 }
