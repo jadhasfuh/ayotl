@@ -74,8 +74,8 @@ const nuevo = () => new Game(seeds(reto.semilla).game, contenido('maps', `${reto
 // paleta a la mitad), para que LeIA reaccione («¡chispas, ahí va una vida!»). Los juegos vacían `events` en cada tick.
 const NIVELES = ['wave', 'oleada', 'ronda', 'stage', 'nivel', 'level'];
 // El número que enseña la pantalla, en los juegos donde no es el primero de NIVELES: `level` suele ser la dificultad del
-// día más lo que se lleva pasado (el 20-nov, con dificultad 6, LeIA dijo «¡Nivel 7!» en la segunda pantalla de Mr. Do!,
-// que decía L2). Los que cuentan desde 0 se dicen desde 1, como en pantalla. Cueva tiene 20 tramos cortos: uno de cada 5.
+// día más lo que se lleva pasado (el 20-nov, con dificultad 5, LeIA dijo «¡Nivel 7!» en la tercera pantalla de Mr. Do!,
+// que decía L3). Los que cuentan desde 0 se dicen desde 1, como en pantalla. Cueva tiene 20 tramos cortos: uno de cada 5.
 const CAMPO = { boulder: 'pantalla', mrdo: 'pantalla', burgertime: 'pantalla', pang: 'round', spaceimpact: 'vuelta',
                 slalom: 'tramo', pesca: 'jornada', cueva: 'tramo', minigolf: 'hoyo' };
 const CADA_NIVEL = { cueva: 5 }, ULTIMO_NIVEL = { minigolf: 9 };
