@@ -41,6 +41,9 @@ APPS = {
     # enlaces de Daily Challenge (es a quien le gustan los juegos retro). `prefijos`: cómo empieza el título en en/ja
     'loconoces': {'nombre': '¿Lo conoces?', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None,
                   'prefijos': ['¿LO CONOCES?:', 'DO YOU KNOW IT?:', '知ってる？:']},
+    # «Anécdotas de TI» (24-nov-2026): historias reales de empresas viejas de tecnología, los jueves; es y en, una sola lista
+    'anecdotas': {'nombre': 'Anécdotas de TI', 'web': 'https://dailychallenge.click', 'juega': 'juega', 'play': 'click.dailychallenge.twa', 'ios': None,
+                  'prefijos': ['ANÉCDOTAS DE TI:', 'TECH TALES:']},
 }
 # los textos fijos de la descripción por idioma del vídeo (`idioma` en la entrada; sin él, español)
 TEXTOS = {

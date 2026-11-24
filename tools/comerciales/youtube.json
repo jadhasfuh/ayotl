@@ -3116,5 +3116,52 @@
    "Ayotl"
   ],
   "id": "M3oEjsnZvbs"
+ },
+ {
+  "clave": "anecdota-atari",
+  "app": "anecdotas",
+  "video": "salida/anecdota-atari.mp4",
+  "categoria": "20",
+  "publicar": "2026-12-03T13:00:00-06:00",
+  "titulo": "ANÉCDOTAS DE TI: Atari enterró sus juegos en el desierto #shorts",
+  "descripcion": "En septiembre de 1983, Atari mandó aplastar y enterrar cartuchos, consolas y computadoras en un basurero de Alamogordo, Nuevo México, y los cubrió con cemento. Durante 30 años mucha gente creyó que era una leyenda, hasta que el 26 de abril de 2014 los desenterraron para un documental. LeIA te cuenta por qué: los 12 millones de cartuchos de Pac-Man y las cinco semanas que tuvo Howard Scott Warshaw para programar E.T.\n\nLos dibujos son nuestros.\n\nAnécdotas de TI: historias reales de empresas viejas de tecnología, contadas por LeIA, la presentadora de los juegos de Ayotl.\n\nFuentes: The Henry Ford, revista Archaeology, Computer History Museum, TechCrunch, Guinness World Records, Smithsonian y Wikipedia en inglés.",
+  "etiquetas": [
+   "Atari",
+   "E.T.",
+   "Pac-Man",
+   "Alamogordo",
+   "historia de los videojuegos",
+   "crisis de 1983",
+   "Atari 2600",
+   "anécdotas",
+   "tecnología",
+   "LeIA"
+  ],
+  "cierre": "#Atari #HistoriaDeLosVideojuegos #RetroGaming",
+  "id": "9wbuY9SxAOE"
+ },
+ {
+  "clave": "anecdota-atari-en",
+  "app": "anecdotas",
+  "video": "salida/anecdota-atari-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-12-03T13:20:00-06:00",
+  "titulo": "TECH TALES: Atari buried its games in the desert #shorts",
+  "descripcion": "In September 1983, Atari had cartridges, consoles and computers crushed and buried in a landfill in Alamogordo, New Mexico, under a layer of concrete. For 30 years a lot of people thought it was a legend, until they were dug up on April 26, 2014, for a documentary. LeIA tells you why it happened: the 12 million Pac-Man cartridges and the five weeks Howard Scott Warshaw had to program E.T.\n\nThe drawings are ours.\n\nTech tales: true stories about old tech companies, told by LeIA, the host of Ayotl's games.\n\nSources: The Henry Ford, Archaeology magazine, Computer History Museum, TechCrunch, Guinness World Records, Smithsonian and English Wikipedia.",
+  "etiquetas": [
+   "Atari",
+   "E.T.",
+   "Pac-Man",
+   "Alamogordo",
+   "video game history",
+   "video game crash of 1983",
+   "Atari 2600",
+   "tech stories",
+   "technology",
+   "LeIA"
+  ],
+  "cierre": "#Atari #VideoGameHistory #RetroGaming",
+  "idioma": "en",
+  "id": "bEjFGJTBLwk"
  }
 ]
