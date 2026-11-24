@@ -3118,6 +3118,55 @@
   "id": "M3oEjsnZvbs"
  },
  {
+  "clave": "algoritmos-vida",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/algoritmos/juego-de-la-vida",
+  "video": "salida/algoritmos-vida.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-30T16:00:00-06:00",
+  "titulo": "ALGORITMOS: El Juego de la vida en 1 minuto #Shorts",
+  "descripcion": "El Juego de la vida, de John Conway, en 1 minuto: un tablero que se mueve solo. Cada casilla mira a sus ocho vecinas y cuenta las vivas: con tres, vive; con dos, se queda como está; con una o ninguna muere de sola y con más de tres, amontonada. Todas a la vez: el tablero nuevo se hace mirando el viejo. De esa regla salen tres en fila que giran para siempre, un cuadro que no cambia nunca, un planeador que camina y una pistola que dispara uno cada 30 generaciones. LeIA lo explica con el código en JavaScript línea por línea, y la lección con este mismo código se puede probar en el navegador.",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "juego de la vida",
+   "Conway",
+   "autómata celular",
+   "planeador",
+   "simulación",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "pJXP08qlaNk"
+ },
+ {
+  "clave": "algoritmos-vida-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/algoritmos/juego-de-la-vida",
+  "video": "salida/algoritmos-vida-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-11-30T16:20:00-06:00",
+  "titulo": "ALGORITHMS: The Game of Life in 1 minute #Shorts",
+  "descripcion": "John Conway's Game of Life in 1 minute: a board that moves on its own. Each cell looks at its eight neighbors and counts the live ones: with three, it lives; with two, it stays as it is; with one or none it dies of loneliness and with more than three, of crowding. All at once: the new board is built by looking only at the old one. That rule gives you three in a row that spin forever, a square that never changes, a glider that walks and a gun that fires one every 30 generations. LeIA walks through the JavaScript code line by line, and the lesson with this same code runs in your browser.",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "game of life",
+   "Conway",
+   "cellular automaton",
+   "glider",
+   "simulation",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "56WgeI4BpFE"
+ },
+ {
   "clave": "anecdota-atari",
   "app": "anecdotas",
   "video": "salida/anecdota-atari.mp4",
