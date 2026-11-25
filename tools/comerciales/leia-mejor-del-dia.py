@@ -76,6 +76,7 @@ TEXTOS = {
         'vidamas': ['¡Vida extra!', '¡Bien! Una vida más.', '¡Otra vida de regalo!'],
         'oleada': ['¡Oleada {n}!', '¡Ya va en la oleada {n}!', '¡Oleada {n}, y vienen más!'],
         'nivel': ['¡Nivel {n}!', '¡Pasó al nivel {n}!', '¡Ya va en el nivel {n}!'],
+        'ronda': ['¡Ronda {n}!', '¡Pasó a la ronda {n}!', '¡Ya va en la ronda {n}!'],
         # los que no cuentan niveles (dc-partida.mjs, CAMPO), y los sustos que no son «estuvo cerca»
         'tramo': ['¡Tramo {n}!', '¡Pasó al tramo {n}!', '¡Ya va en el tramo {n}!'],
         'zona': ['¡Tramo {n} de 20!', '¡Ya va en el tramo {n} de 20!'],
@@ -129,6 +130,7 @@ TEXTOS = {
         'vidamas': ['Extra life!', 'Nice, one more life!', 'A free life!'],
         'oleada': ['Wave {n}!', 'On to wave {n}!', 'Wave {n}, and more are coming!'],
         'nivel': ['Level {n}!', 'Up to level {n}!', 'Now on level {n}!'],
+        'ronda': ['Round {n}!', 'On to round {n}!', 'Now on round {n}!'],
         'tramo': ['Stage {n}!', 'On to stage {n}!', 'Now on stage {n}!'],
         'zona': ['Zone {n} of 20!', 'Now in zone {n} of 20!'],
         'jornada': ['Day {n}!', 'Quota met! Here comes day {n}.', 'Now on day {n}!'],
@@ -182,6 +184,7 @@ TEXTOS = {
         'vidamas': ['ライフが増えた！', 'やった、ワンアップ！', 'ライフをもうひとつゲット！'],
         'oleada': ['ウェーブ{n}！', 'ウェーブ{n}に突入！', 'ウェーブ{n}、まだまだ来ます！'],
         'nivel': ['レベル{n}！', 'レベル{n}に上がりました！', 'もうレベル{n}！'],
+        'ronda': ['ラウンド{n}！', 'ラウンド{n}に突入！', 'もうラウンド{n}！'],
         'tramo': ['ステージ{n}！', 'ステージ{n}に突入！', 'もうステージ{n}！'],
         'zona': ['エリア{n}！', '20エリアのうち、もう{n}エリア目！'],
         'jornada': ['{n}日目！', 'ノルマ達成！{n}日目です！', 'もう{n}日目！'],
@@ -399,7 +402,7 @@ def guion(fecha, lang, info, datos, video, medir, ia=None):
                 propio = f"{e['tipo']}_{info['juego']}"   # «se lo comió el tiburón» y no «estuvo cerca»
                 en(e['tipo'], e['t'], lambda ahora, corta=False, k=propio if propio in tx else e['tipo']: variante(k, corta))
             elif e['tipo'] == 'nivel':
-                k = {'wave': 'oleada', 'oleada': 'oleada', 'tramo': 'tramo', 'jornada': 'jornada', 'hoyo': 'hoyo'}.get(e['campo'], 'nivel')
+                k = {'wave': 'oleada', 'oleada': 'oleada', 'ronda': 'ronda', 'tramo': 'tramo', 'jornada': 'jornada', 'hoyo': 'hoyo'}.get(e['campo'], 'nivel')
                 if info['juego'] == 'cueva':   # son 20, y en pantalla se llaman de otra forma en inglés y japonés
                     k = 'zona'
                 en('nivel', e['t'], lambda ahora, corta=False, k=k, n=e['n']: marcar(variante(k, corta), dict(valores, n=(str(n),) * 2)))
