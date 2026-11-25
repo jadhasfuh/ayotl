@@ -2961,7 +2961,8 @@
    "indie game",
    "Daily Challenge"
   ],
-  "id": "gTfHPmRUal8"
+  "id": "gTfHPmRUal8",
+  "en_tiktok": "2026-11-25T18:00:00-06:00"
  },
  {
   "clave": "zanei-larga-en",
@@ -2984,7 +2985,8 @@
    "indie game"
   ],
   "idioma": "en",
-  "id": "Z8vq-R3mIsY"
+  "id": "Z8vq-R3mIsY",
+  "en_tiktok": "2026-11-25T18:20:00-06:00"
  },
  {
   "clave": "zanei-larga-ja",
@@ -3007,7 +3009,8 @@
    "フルプレイ"
   ],
   "idioma": "ja",
-  "id": "rfTuOLUAD5Q"
+  "id": "rfTuOLUAD5Q",
+  "en_tiktok": "2026-11-25T18:40:00-06:00"
  },
  {
   "clave": "mejor-2026-11-23",
@@ -3026,7 +3029,8 @@
    "INVADERS"
   ],
   "miniatura": "salida/mejor-2026-11-23.jpg",
-  "id": "xdyMxJc6ijE"
+  "id": "xdyMxJc6ijE",
+  "en_tiktok": "2026-11-27T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-23-en",
@@ -3046,7 +3050,8 @@
   ],
   "idioma": "en",
   "miniatura": "salida/mejor-2026-11-23-en.jpg",
-  "id": "yBaaE8xBcDk"
+  "id": "yBaaE8xBcDk",
+  "en_tiktok": "2026-11-27T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-23-ja",
@@ -3065,7 +3070,8 @@
   ],
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-23-ja.jpg",
-  "id": "5YtMnRic9nU"
+  "id": "5YtMnRic9nU",
+  "en_tiktok": "2026-11-27T19:40:00-06:00"
  },
  {
   "clave": "algoritmos-relleno",
@@ -3090,7 +3096,8 @@
    "aprende a programar",
    "Ayotl"
   ],
-  "id": "dVTG3X23r64"
+  "id": "dVTG3X23r64",
+  "en_tiktok": "2026-11-28T16:00:00-06:00"
  },
  {
   "clave": "algoritmos-relleno-en",
@@ -3115,7 +3122,8 @@
    "learn to code",
    "Ayotl"
   ],
-  "id": "M3oEjsnZvbs"
+  "id": "M3oEjsnZvbs",
+  "en_tiktok": "2026-11-28T16:20:00-06:00"
  },
  {
   "clave": "algoritmos-vida",
@@ -3139,7 +3147,8 @@
    "aprende a programar",
    "Ayotl"
   ],
-  "id": "pJXP08qlaNk"
+  "id": "pJXP08qlaNk",
+  "en_tiktok": "2026-11-30T16:00:00-06:00"
  },
  {
   "clave": "algoritmos-vida-en",
@@ -3164,7 +3173,8 @@
    "learn to code",
    "Ayotl"
   ],
-  "id": "56WgeI4BpFE"
+  "id": "56WgeI4BpFE",
+  "en_tiktok": "2026-11-30T16:20:00-06:00"
  },
  {
   "clave": "programando-snake-1",
@@ -3190,7 +3200,8 @@
    "LeIA",
    "Ayotl"
   ],
-  "id": "37O_Kdo0ebw"
+  "id": "37O_Kdo0ebw",
+  "en_tiktok": "2026-11-29T18:00:00-06:00"
  },
  {
   "clave": "programando-snake-1-en",
@@ -3217,7 +3228,8 @@
    "LeIA",
    "Ayotl"
   ],
-  "id": "R0ey0G_VfUI"
+  "id": "R0ey0G_VfUI",
+  "en_tiktok": "2026-11-29T18:20:00-06:00"
  },
  {
   "clave": "anecdota-atari",
@@ -3240,7 +3252,8 @@
    "LeIA"
   ],
   "cierre": "#Atari #HistoriaDeLosVideojuegos #RetroGaming",
-  "id": "9wbuY9SxAOE"
+  "id": "9wbuY9SxAOE",
+  "en_tiktok": "2026-12-03T13:00:00-06:00"
  },
  {
   "clave": "anecdota-atari-en",
@@ -3264,7 +3277,8 @@
   ],
   "cierre": "#Atari #VideoGameHistory #RetroGaming",
   "idioma": "en",
-  "id": "bEjFGJTBLwk"
+  "id": "bEjFGJTBLwk",
+  "en_tiktok": "2026-12-03T13:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-24",
@@ -3282,7 +3296,8 @@
    "retro gaming",
    "RALLY-X"
   ],
-  "id": "2n7-prhShNU"
+  "id": "2n7-prhShNU",
+  "en_tiktok": "2026-11-28T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-24-en",
@@ -3301,7 +3316,8 @@
    "RALLY-X"
   ],
   "idioma": "en",
-  "id": "klayhH_wDvc"
+  "id": "klayhH_wDvc",
+  "en_tiktok": "2026-11-28T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-24-ja",
@@ -3319,6 +3335,7 @@
    "ラリーエックス"
   ],
   "idioma": "ja",
-  "id": "W4UudtQ5oig"
+  "id": "W4UudtQ5oig",
+  "en_tiktok": "2026-11-28T19:40:00-06:00"
  }
 ]

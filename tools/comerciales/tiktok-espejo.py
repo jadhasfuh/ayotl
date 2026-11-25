@@ -32,7 +32,8 @@ allí). El mejor del día se arma dos días antes de salir y una tanda abarca 10
 entrado a ninguna: la siguiente tanda lo mete a su misma hora, en el primer día libre desde el suyo y en orden
 (Adrián, 30-oct: «a su misma hora pero en los días siguientes»); los de esa serie que salen dentro de la tanda
 también se forman, para no adelantarse a los viejos. Nada sale en TikTok antes que en YouTube, y lo que no cabe
-queda para la tanda siguiente. Como leia-mejor-del-dia.py y subir-youtube.py, escribe youtube.json: nunca a la vez.
+queda para la tanda siguiente. Desde el 25-nov-2026 cuenta también las horas que ya ocupan las tandas anteriores
+(`en_tiktok`): lo que caería encima se forma igual que los atrasados, así que ya no hace falta `--desde`. Como leia-mejor-del-dia.py y subir-youtube.py, escribe youtube.json: nunca a la vez.
 """
 import datetime as dt, glob, html, importlib.util, json, os, re, subprocess, sys, urllib.parse
 
@@ -73,7 +74,10 @@ for ruta in ([] if REEMPLAZAR else glob.glob(f'{TTCODE}/challenges/*/*/meta.json
         items.append({'clave': f"reto {m['slug']}", 'cuando': cuando, 'yt_cuando': cuando, 'id': m['youtube']['mobile'],
                       'idioma': 'en', 'ia': False, 'origen': f"{AYOTL}/public/media/retos/{m['slug']}.mp4"})
 en_tanda, cola = [], []
-for v in json.load(open(f'{COM}/youtube.json', encoding='utf-8')):
+plan_yt = json.load(open(f'{COM}/youtube.json', encoding='utf-8'))
+# las horas que ya tienen un vídeo programado en TikTok, de las tandas anteriores: ahí no cabe otro
+programado = set() if REEMPLAZAR else {dt.datetime.fromisoformat(v['en_tiktok']) for v in plan_yt if v.get('en_tiktok')}
+for v in plan_yt:
     cuando = dt.datetime.fromisoformat(v['publicar'])
     if REEMPLAZAR:   # sólo esas, a la hora que ya tienen en TikTok
         if any(v['clave'] == c or v['clave'] in (c + '-en', c + '-ja') for c in REEMPLAZAR):
@@ -87,12 +91,12 @@ for v in json.load(open(f'{COM}/youtube.json', encoding='utf-8')):
     if not os.path.exists(origen):
         origen = COPIAS.get(v['clave'], origen)
     # los de LeIA: su imagen y su voz son de IA, TikTok pide marcarlo
-    (cola if cuando < DESDE else en_tanda).append({'clave': v['clave'], 'cuando': cuando, 'yt_cuando': cuando, 'id': v.get('id'),
+    (cola if cuando < DESDE or cuando in programado else en_tanda).append({'clave': v['clave'], 'cuando': cuando, 'yt_cuando': cuando, 'id': v.get('id'),
                                                     'idioma': v.get('idioma', 'es'), 'ia': True, 'origen': origen, 'plan': v})
 atrasadas = {serie(x['clave']) for x in cola}
 cola += [x for x in en_tanda if serie(x['clave']) in atrasadas]
 items += [x for x in en_tanda if serie(x['clave']) not in atrasadas]
-ocupado = {x['cuando'] for x in items}
+ocupado = {x['cuando'] for x in items} | programado
 for x in sorted(cola, key=lambda x: (x['yt_cuando'], x['clave'])):
     dia = max(DESDE, x['yt_cuando']).date()
     while (hueco := dt.datetime.combine(dia, x['yt_cuando'].timetz())) <= HASTA:
