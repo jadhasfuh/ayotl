@@ -327,8 +327,8 @@ export const APPS: App[] = [
     // Shoot 'em up vertical de líneas de neón, séptimo producto (3-nov-2026): se
     // juega en la web dentro de Daily Challenge como «juego extra»; la app con
     // AdMob está a la venta en la App Store desde el 9-nov-2026 (la insignia sale
-    // con bundleIos + appStoreId) y en prueba cerrada en Google Play (la de Play
-    // sale sola cuando la ficha sea pública). ZANEI es 残影, «la imagen que queda de
+    // con bundleIos + appStoreId) y es pública en Google Play desde el 26-nov-2026
+    // (la insignia salió sola con paquetePlay). ZANEI es 残影, «la imagen que queda de
     // lo que se fue». Las cifras salen del código: www/game/niveles.js, armas.js y
     // enemigos.js del repo zanei.
     id: "zanei",
@@ -344,15 +344,15 @@ export const APPS: App[] = [
       en: "A bodiless pilot against an invasion that only knows how to repeat itself.",
     },
     descripcion: {
-      es: "Shoot 'em up vertical dibujado con líneas de neón: doce niveles en tres actos, siete municiones, bombas, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. Música clásica pasada a techno. Gratis en la web y en iPhone y iPad.",
-      en: "A vertical shoot 'em up drawn in neon lines: twelve levels in three acts, seven weapons, bombs, bosses that break apart piece by piece and a radio story that reacts to how you play. Classical music turned into techno. Free on the web and on iPhone and iPad.",
+      es: "Shoot 'em up vertical dibujado con líneas de neón: doce niveles en tres actos, siete municiones, bombas, jefes que se rompen por partes y una historia por radio que reacciona a cómo juegas. Música clásica pasada a techno. Gratis en la web, en Android y en iPhone y iPad.",
+      en: "A vertical shoot 'em up drawn in neon lines: twelve levels in three acts, seven weapons, bombs, bosses that break apart piece by piece and a radio story that reacts to how you play. Classical music turned into techno. Free on the web, on Android and on iPhone and iPad.",
     },
     datos: [
       { valor: "12", etiqueta: { es: "niveles", en: "levels" } },
       { valor: "7", etiqueta: { es: "municiones", en: "weapons" } },
       { valor: "20", etiqueta: { es: "enemigos", en: "enemy types" } },
     ],
-    etiquetas: { es: ["Juegos", "Web"], en: ["Games", "Web"] },
+    etiquetas: { es: ["Juegos", "Android", "iOS", "Web"], en: ["Games", "Android", "iOS", "Web"] },
     pantallas: [
       { imagen: "zanei-titulo",
         titulo: { es: "Líneas de neón sobre negro", en: "Neon lines on black" },
@@ -371,7 +371,7 @@ export const APPS: App[] = [
         texto: { es: "Al dar SIGUIENTE la nave vuelve a volar sola, la pantalla se funde a negro y sale un cuadro dibujado a línea con un pensamiento de la piloto. Las cinemáticas cambian con la historia: en el segundo acto la transmisión se corta; en el tercero, el dibujo se copia a sí mismo.", en: "When you press NEXT the ship flies on alone, the screen fades to black and a line-drawn frame appears with one thought from the pilot. The cutscenes change with the story: in the second act the transmission breaks up; in the third, the drawing copies itself." } },
       { imagen: "zanei-resultado",
         titulo: { es: "La ficha y los récords", en: "The score card and the records" },
-        texto: { es: "Al terminar: tiempo, destruidos, precisión, bombas, naves perdidas, bono y rango. Modo Historia con los doce niveles seguidos y modo Arcade por puntos, nivel a nivel, con récord por nivel. En español, inglés y japonés.", en: "At the end: time, kills, accuracy, bombs, ships lost, bonus and rank. Story mode with all twelve levels in a row and Arcade mode for points, level by level, with a record per level. In Spanish, English and Japanese." } },
+        texto: { es: "Al terminar: tiempo, destruidos, precisión, bombas, naves perdidas, bono y rango. La historia lleva los doce niveles seguidos; el arcade, los doce sin pausa, tres actos de cuatro, cada nivel suelto y la Señal del día: un reto de tres minutos que cambia cada día. Récords mundiales por dificultad. En español, inglés y japonés.", en: "At the end: time, kills, accuracy, bombs, ships lost, bonus and rank. Story mode runs the twelve levels in a row; Arcade has all twelve nonstop, three acts of four, every level on its own and the Daily Signal: a three-minute challenge that changes every day. World records per difficulty. In Spanish, English and Japanese." } },
     ],
   },
 ];
