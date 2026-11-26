@@ -1,0 +1,653 @@
+{
+ "fuente": "pixel-ja12",
+ "voz": "ja-JP-Chirp3-HD-Achernar",
+ "idioma": "ja-JP",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "ターン制の砲撃バトル",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "ブラウザ・Android・iPhoneで無料"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-archipielago-ja.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-archipielago/ja/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-archipielago/marcador-ja.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 11.778,
+   "cara": "feliz",
+   "voz": "こんにちは！レイアです。今日のウォーゾーンは、4チームのバトルロイヤル。マップはぐんとうです。4チームともコンピューターが、しかもハードで戦います。",
+   "dice": "こんにちは！LeIAです。今日のWar Zoneは、4チームのバトルロイヤル。マップは群島です。4チームともコンピューターが、しかもハードで戦います。",
+   "capitulo": "4チームのバトル"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 11.778,
+   "dur": 8.658,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "青、赤、緑、黄。各チーム4人の兵士で、最後まで生き残れるのは1チームだけ。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 20.436,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！ニノがマヌエル・ガルベスをたおしました。きいろチームは残り2人。",
+   "dice": "ヘッドショット！NinoがManuel Galvezをたおしました。黄チームは残り2人。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 27.294,
+   "dur": 8.346,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！リオバスがライフルでラ・ビチョンガの頭を撃ちぬきました！みどりチーム、あと3人です。",
+   "dice": "ヘッドショット！LiobasがライフルでLa Bichongaの頭を撃ちぬきました！緑チーム、あと3人です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 35.64,
+   "dur": 9.738,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "画面の左右を見てね。4つのチームと兵士たち、それぞれのHPが出ています。矢印は今撃っている兵士です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 45.378,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 45.828,
+   "dur": 1.866,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "がんばれ！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 47.694,
+   "dur": 0.936,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.63,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "頭に命中！モコ、アパツィンガンのライフルにやられました。きいろチームはピリひとりだけ。",
+   "dice": "頭に命中！Moco、Apatzinganのライフルにやられました。黄チームはPiliひとりだけ。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 57.096,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "triste",
+   "voz": "いたっ！ジョジョに56のダメージ。",
+   "dice": "いたっ！Jojoに56のダメージ。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.642,
+   "dur": 7.914,
+   "continua": true,
+   "cara": "normal",
+   "voz": "マップはぐんとう。平らな島が4つ、あいだは海。海に落ちたらアウトです。",
+   "dice": "マップは群島。平らな島が4つ、あいだは海。海に落ちたらアウトです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.556,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 69.006,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "triste",
+   "voz": "奈落に落ちても、もちろんアウト。HPが100あってもです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.424,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.874,
+   "dur": 0.256,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.13,
+   "dur": 9.834,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "あっ、同士討ち！ジョジョのスナイパーが、仲間のニノをたおしちゃいました。あかチームは残り3人。",
+   "dice": "あっ、同士討ち！Jojoのスナイパーが、仲間のNinoをたおしちゃいました。赤チームは残り3人。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 84.964,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ロラが154ピクセルふっ飛んで…奈落へ！ラロのグレネードです。あおチーム、あと2人です。",
+   "dice": "Lolaが154ピクセルふっ飛んで…奈落へ！Laloのグレネードです。青チーム、あと2人です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 93.43,
+   "dur": 10.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "1分半経過。残りの兵士は9人：あおチーム2人、あかチーム3人、みどりチーム3人ときいろチーム1人。",
+   "dice": "1分半経過。残りの兵士は9人：青チーム2人、赤チーム3人、緑チーム3人と黄チーム1人。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 104.176,
+   "dur": 2.298,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ドキドキするね！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 106.474,
+   "dur": 1.256,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 107.73,
+   "dur": 10.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "一発で2人！ミランゴのグレネードがジョジョとマルタ・マンテカスをまとめてたおしました！あかチームに残るのはアパツィンガンだけです。",
+   "dice": "一発で2人！MilangoのグレネードがJojoとMarta Mantecasをまとめてたおしました！赤チームに残るのはApatzinganだけです。",
+   "capitulo": "ダブルキル"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 118.236,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "エル・トレロ、奈落に落ちました！ピリのブーツです。あおチームはリオバスひとりだけ。",
+   "dice": "El Torero、奈落に落ちました！Piliのブーツです。青チームはLiobasひとりだけ。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 125.742,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ミランゴが絶好調！もう2人たおしました。",
+   "dice": "Milangoが絶好調！もう2人たおしました。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 129.816,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "島と島のあいだの海は16ピクセル。まん中には飛び石があります。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 136.842,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 137.292,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "上には岩の出っぱりが2つ。狙いやすいけど、落ちたら遠いです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 143.646,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 144.096,
+   "dur": 1.504,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 145.6,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！アパツィンガンがピリをたおしました。きいろチーム、脱落です！",
+   "dice": "ヘッドショット！ApatzinganがPiliをたおしました。黄チーム、脱落です！",
+   "capitulo": "黄チーム脱落"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 152.386,
+   "dur": 5.466,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "残るはあおチーム、あかチームとみどりチームの3チーム。",
+   "dice": "残るは青チーム、赤チームと緑チームの3チーム。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 157.852,
+   "dur": 6.834,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "ドカーン！リオバスのグレネードがパコをたおしました。みどりチームは残り2人。",
+   "dice": "ドカーン！LiobasのグレネードがPacoをたおしました。緑チームは残り2人。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 164.686,
+   "dur": 5.178,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "アパツィンガン、2キル目！あかチームに注目です。",
+   "dice": "Apatzingan、2キル目！赤チームに注目です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 169.864,
+   "dur": 2.514,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "リオバス、これで2人目！",
+   "dice": "Liobas、これで2人目！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 172.378,
+   "dur": 10.098,
+   "continua": true,
+   "cara": "guino",
+   "voz": "コンピューターの兵士には、おなじみの名前もあります。リオバス、チュチェ・エル・アギラ、マヌエル・ガルベスとエル・トレロ…",
+   "dice": "コンピューターの兵士には、おなじみの名前もあります。Liobas、Chuche el Aguila、Manuel GalvezとEl Torero…"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 182.476,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 182.926,
+   "dur": 8.394,
+   "continua": true,
+   "cara": "normal",
+   "voz": "3分経過。残りの兵士は4人：あおチーム1人、あかチーム1人とみどりチーム2人。",
+   "dice": "3分経過。残りの兵士は4人：青チーム1人、赤チーム1人と緑チーム2人。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 191.32,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "normal",
+   "voz": "1ターンでできるのは、少し歩いて、武器をえらんで、狙って撃つこと。そして次のチームの番です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.074,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 200.524,
+   "dur": 3.546,
+   "continua": true,
+   "cara": "guino",
+   "voz": "ロボットがこわいのは、磁石だけです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 204.07,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 204.52,
+   "dur": 0.55,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 205.07,
+   "dur": 8.778,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ヘッドショット！リオバスがライフルでラロの頭を撃ちぬきました！みどりチームに残るのはミランゴだけです。",
+   "dice": "ヘッドショット！LiobasがライフルでLaloの頭を撃ちぬきました！緑チームに残るのはMilangoだけです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 213.848,
+   "dur": 4.674,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "リオバスが絶好調！もう3人たおしました。",
+   "dice": "Liobasが絶好調！もう3人たおしました。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 218.522,
+   "dur": 8.154,
+   "continua": true,
+   "cara": "guino",
+   "voz": "AIのダジャレ、聞きたい？グレネードに友だちがいないのはなぜ？すぐキレて爆発するから。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 226.676,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 227.126,
+   "dur": 0.804,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 227.93,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "リオバス、脱落！ミランゴのグレネードは容赦なし。これであおチームは全滅！",
+   "dice": "Liobas、脱落！Milangoのグレネードは容赦なし。これで青チームは全滅！",
+   "capitulo": "青チーム脱落"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 235.076,
+   "dur": 3.738,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "一騎打ち！アパツィンガン対ミランゴ！",
+   "dice": "一騎打ち！Apatzingan対Milango！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 238.814,
+   "dur": 2.216,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 241.03,
+   "dur": 6.426,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "すごい飛距離！アパツィンガン、74ピクセル飛んでもまだ生きてます。",
+   "dice": "すごい飛距離！Apatzingan、74ピクセル飛んでもまだ生きてます。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 247.456,
+   "dur": 4.674,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ミランゴ、3キル目！みどりチームに注目です。",
+   "dice": "Milango、3キル目！緑チームに注目です。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 252.13,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ライフル、スナイパー、レーザーで頭を撃たれたら、HPがいくつあっても一発でアウトです。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 259.876,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 260.326,
+   "dur": 2.274,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "おもしろくなってきた！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 262.6,
+   "dur": 2.47,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.07,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "ミランゴ、HP3でギリギリ生きてます！",
+   "dice": "Milango、HP3でギリギリ生きてます！"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 269.336,
+   "dur": 7.746,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "ハードのコンピューターは、ずれても3度まで。しかも10ターンに4回は頭をねらってきます。"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.082,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.532,
+   "dur": 2.668,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.2,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/ja/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.4,
+   "dur": 9.834,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "ミランゴ、ダウン！試合終了！勝ったのはあかチーム！アパツィンガンがHP22で生き残りました！",
+   "dice": "Milango、ダウン！試合終了！勝ったのは赤チーム！ApatzinganがHP22で生き残りました！"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "47ターンで、アパツィンガンが3人をたおしました。コンピューターに挑戦してみる？",
+   "dice": "47ターンで、Apatzinganが3人をたおしました。コンピューターに挑戦してみる？",
+   "capitulo": "無料で遊ぶ"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "ブラウザで無料：デイリーチャレンジ・ドット・クリック、スラッシュ、ウォーゾーン。AndroidとiPhoneでも遊べます。",
+   "dice": "ブラウザで無料：dailychallenge.click/warzone。AndroidとiPhoneでも遊べます。",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "チャンネル登録はもうした？こういう対戦をもっと見たいなら、フォローしてね！",
+   "continua": true
+  }
+ ]
+}

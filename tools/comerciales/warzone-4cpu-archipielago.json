@@ -1,0 +1,654 @@
+{
+ "fuente": "pixel",
+ "voz": "es-US-Chirp3-HD-Achernar",
+ "idioma": "es-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Artillería por turnos",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Gratis en el navegador, Android y iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-archipielago.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-archipielago/es/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-archipielago/marcador-es.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 12.786,
+   "cara": "feliz",
+   "voz": "¡Hola! Soy Leia. Hoy, en Guar Zon: cuatro equipos, todos contra todos, en el mapa Archipiélago. Las cuatro computadoras juegan solas, y todas en difícil.",
+   "dice": "¡Hola! Soy LeIA. Hoy, en War Zone: cuatro equipos, todos contra todos, en el mapa Archipiélago. Las cuatro computadoras juegan solas, y todas en difícil.",
+   "capitulo": "Cuatro equipos"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 12.786,
+   "dur": 8.586,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Azul, rojo, verde y amarillo, con cuatro soldados cada uno. Sólo un equipo puede quedar en pie."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 21.372,
+   "dur": 7.194,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Tiro a la cabeza! Nino elimina a Manuel Gálvez. Al amarillo le quedan dos."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 28.566,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Headshot! Liobas le da en la cabeza a La Bichonga con el rifle. El verde se queda con tres."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 35.832,
+   "dur": 9.474,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Fíjate en los lados: ahí están los cuatro equipos, sus soldados y la vida de cada uno. La flechita marca quién tira."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 45.306,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 45.756,
+   "dur": 2.154,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Vamos!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 47.91,
+   "dur": 0.72,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.63,
+   "dur": 7.698,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡A la cabeza! Moco cae con el rifle de Apatzingán. Al amarillo le queda uno solo: Pili."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 56.328,
+   "dur": 4.266,
+   "continua": true,
+   "cara": "triste",
+   "voz": "¡Auch! Jojo pierde 56 de vida."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 60.594,
+   "dur": 8.034,
+   "continua": true,
+   "cara": "normal",
+   "voz": "El mapa es Archipiélago: cuatro islas de tapa plana y el mar en medio. Caer al agua es morir."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.628,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 69.078,
+   "dur": 4.626,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Caer al vacío también es morir, aunque tengas cien de vida."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 73.704,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 74.154,
+   "dur": 0.976,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.13,
+   "dur": 8.538,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Uy, fuego amigo! El francotirador de Jojo se lleva a Nino, de su mismo equipo. Al rojo le quedan tres."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 83.668,
+   "dur": 8.778,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Lola sale volando 154 píxeles… y cae al vacío! Fue la granada de Lalo. El azul se queda con dos."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 92.446,
+   "dur": 10.746,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Llevamos minuto y medio. Quedan nueve soldados: el azul con dos, el rojo con tres, el verde con tres y el amarillo con uno."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 103.192,
+   "dur": 1.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Qué nervios!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 105.01,
+   "dur": 2.72,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 107.73,
+   "dur": 8.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Dos de un solo golpe! La granada de Milango acaba con Jojo y Marta Mantecas. El rojo se queda sólo con Apatzingán.",
+   "capitulo": "Doble baja"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 116.004,
+   "dur": 7.554,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡El Torero se cae al vacío! Fue la bota de Pili. Al azul le queda uno solo: Liobas."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 123.558,
+   "dur": 4.074,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Milango va que vuela: dos bajas!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 127.632,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Entre isla e isla hay dieciséis píxeles de mar, y en el centro, una piedra para saltar."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 134.418,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 134.868,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Arriba hay dos repisas de roca: desde ahí se tira mejor… y se cae más lejos."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 141.174,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 141.624,
+   "dur": 2.226,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Esto se pone bueno!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 143.85,
+   "dur": 1.75,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 145.6,
+   "dur": 7.626,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Tiro a la cabeza! Apatzingán elimina a Pili. ¡El amarillo queda fuera de la partida!",
+   "capitulo": "Fuera el amarillo"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 153.226,
+   "dur": 5.394,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Quedan tres equipos: el azul, el rojo y el verde."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 158.62,
+   "dur": 6.666,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡Bum! La granada de Liobas acaba con Paco. Al verde le quedan dos."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 165.286,
+   "dur": 5.034,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Apatzingán suma dos bajas. ¡Cuidado con el rojo!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 170.32,
+   "dur": 2.514,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Liobas ya lleva dos bajas."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 172.834,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Algunos nombres de la computadora son de la casa: Liobas, Chuche el Águila, Manuel Gálvez y El Torero…"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 181.3,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 181.75,
+   "dur": 8.466,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Llevamos tres minutos. Quedan cuatro soldados: el azul con uno, el rojo con uno y el verde con dos."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 190.216,
+   "dur": 8.946,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Cada turno, el soldado camina un poco, elige un arma, apunta y dispara. Luego le toca al siguiente equipo."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.162,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 199.612,
+   "dur": 4.506,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Por qué los robots nunca tienen miedo? Porque tienen nervios de acero."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 204.118,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 204.568,
+   "dur": 0.502,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 205.07,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Headshot! Liobas le da en la cabeza a Lalo con el rifle. El verde se queda sólo con Milango."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 212.336,
+   "dur": 3.066,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Liobas va que vuela: tres bajas!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 215.402,
+   "dur": 6.786,
+   "continua": true,
+   "cara": "guino",
+   "voz": "¿Te cuento un chiste malo de IA? ¿Por qué la granada no tiene amigos? Porque siempre explota."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.188,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 222.638,
+   "dur": 4.098,
+   "continua": true,
+   "cara": "normal",
+   "voz": "También hay retos, con medallas de bronce, plata y oro."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 226.736,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 227.186,
+   "dur": 0.744,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 227.93,
+   "dur": 5.418,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "¡Fuera Liobas! La granada de Milango no perdona. ¡Y el azul queda fuera!",
+   "capitulo": "Fuera el azul"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 233.348,
+   "dur": 4.146,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "¡Uno contra uno! Apatzingán contra Milango."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 237.494,
+   "dur": 1.914,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Uy, uy, uy!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 239.408,
+   "dur": 1.622,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 241.03,
+   "dur": 6.114,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Qué vuelo! Apatzingán recorre 74 píxeles por el aire… y sigue en pie."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 247.144,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Milango suma tres bajas. ¡Cuidado con el verde!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 251.458,
+   "dur": 8.754,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Un tiro a la cabeza con rifle, francotirador o láser mata de un solo golpe, tenga la vida que tenga."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 260.212,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 260.662,
+   "dur": 4.408,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.07,
+   "dur": 4.314,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "¡Milango sigue en pie con 3 de vida! Por un pelo."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 269.384,
+   "dur": 8.346,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "En difícil, la computadora falla cuando mucho por tres grados, y cuatro de cada diez turnos busca la cabeza."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 277.73,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 278.18,
+   "dur": 2.02,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.2,
+   "dur": 0.2,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/es/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.4,
+   "dur": 7.818,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "¡Cae Milango! ¡Y se acabó: gana el rojo! Apatzingán queda en pie, con 22 de vida."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "En 47 turnos, Apatzingán eliminó a tres rivales. ¿Te atreves contra la computadora?",
+   "capitulo": "Juega gratis"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Juega gratis en el navegador, en Daily Challenge punto click, barra Guar Zon, o en Android y iPhone.",
+   "dice": "Juega gratis en el navegador, en dailychallenge.click/warzone, o en Android y iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "¿Ya estás suscrito? Síguenos para más partidas como esta.",
+   "continua": true
+  }
+ ]
+}

@@ -1,0 +1,750 @@
+{
+ "fuente": "pixel",
+ "voz": "en-US-Chirp3-HD-Achernar",
+ "idioma": "en-US",
+ "presentadora": {
+  "nombre": "LeIA",
+  "caras": "avatar"
+ },
+ "colores": {
+  "fondo": "#000000",
+  "acento": "#e8e07a",
+  "texto": "#ffffff",
+  "tenue": "#9a9aa8",
+  "sobre_acento": "#000000",
+  "borde": "#3a3a48"
+ },
+ "marca": {
+  "logo": "warzone/logo.png",
+  "logo_ancho": 744,
+  "lema": "Turn-based artillery",
+  "sitio": "dailychallenge.click/warzone",
+  "pie": "Free in the browser, on Android and iPhone"
+ },
+ "formato": "horizontal",
+ "acercamiento": false,
+ "salida": "~/Documents/ayotl/tools/comerciales/salida/warzone-4cpu-archipielago-en.mp4",
+ "musica": {
+  "archivo": "warzone-4cpu-archipielago/en/largo.mp4",
+  "desde": 0,
+  "volumen": 0.09
+ },
+ "marcador": "warzone-4cpu-archipielago/marcador-en.json",
+ "escenas": [
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 0.0,
+   "dur": 10.626,
+   "cara": "feliz",
+   "voz": "Hi! I'm Leia. Today in War Zone: four teams, every team for itself, on the Archipelago map. All four teams are played by the computer, on hard.",
+   "dice": "Hi! I'm LeIA. Today in War Zone: four teams, every team for itself, on the Archipelago map. All four teams are played by the computer, on hard.",
+   "capitulo": "Four teams"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 10.626,
+   "dur": 7.026,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Blue, Red, Green and Yellow, with four soldiers each. Only one team can be left standing."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 17.652,
+   "dur": 6.234,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Zap! La Bichonga's laser takes out Chuche el Águila. Blue is down to three."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 23.886,
+   "dur": 5.058,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Clean headshot! Nino takes out Manuel Gálvez. Yellow has two left."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 28.944,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Headshot! Liobas hits La Bichonga right in the head with the rifle. Green is down to three."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 34.89,
+   "dur": 7.506,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Check the sides of the screen: there are the four teams, their soldiers and everyone's health. The little arrow shows who's shooting."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.396,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 42.846,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Between the islands there are sixteen pixels of sea, and in the middle, a stepping stone."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.0,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.45,
+   "dur": 0.18,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 48.63,
+   "dur": 7.146,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Right in the head! Moco goes down to Apatzingán's rifle. Yellow has just one left: Pili."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 55.776,
+   "dur": 6.858,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The map is Archipelago: four flat-topped islands with the sea in between. Falling in the water means death."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 62.634,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 63.084,
+   "dur": 5.346,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Playing for Red: Jojo, Nino, Marta Mantecas and Apatzingán."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.43,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 68.88,
+   "dur": 4.458,
+   "continua": true,
+   "cara": "triste",
+   "voz": "Falling into the void is also death, even with a hundred health."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 73.338,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 73.788,
+   "dur": 1.342,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 75.13,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Friendly fire! Jojo's sniper rifle takes out Nino, a teammate. Red has three left."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 81.676,
+   "dur": 7.626,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Lola flies 154 pixels… and into the void! That was Lalo's grenade. Blue is down to two."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 89.302,
+   "dur": 7.986,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Some of the computer’s soldiers have house names: Liobas, Chuche el Águila, Manuel Gálvez and El Torero…"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 97.288,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 97.738,
+   "dur": 8.586,
+   "continua": true,
+   "cara": "normal",
+   "voz": "A minute and a half in. Nine soldiers left: Blue with two, Red with three, Green with three and Yellow with one."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 106.324,
+   "dur": 1.406,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 107.73,
+   "dur": 7.314,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Two in one shot! Milango's grenade gets Jojo and Marta Mantecas. Red is down to Apatzingán alone.",
+   "capitulo": "Double kill"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 115.044,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "El Torero falls into the void! That was Pili's boot. Blue has just one left: Liobas."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 122.31,
+   "dur": 3.138,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Milango is on fire: two kills!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 125.448,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Up top there are two rock ledges: better aim from there… and a longer fall."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 131.154,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 131.604,
+   "dur": 6.306,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Each turn, a soldier walks a bit, picks a weapon, aims and fires. Then it's the next team's turn."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 137.91,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 138.36,
+   "dur": 6.354,
+   "continua": true,
+   "cara": "guino",
+   "voz": "Want to hear a bad AI joke? Why doesn't the grenade have any friends? It always blows up."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 144.714,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 145.164,
+   "dur": 0.436,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 145.6,
+   "dur": 5.994,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Clean headshot! Apatzingán takes out Pili. Yellow is out of the match!",
+   "capitulo": "Yellow is out"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 151.594,
+   "dur": 4.434,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Three teams left: Blue, Red and Green."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 156.028,
+   "dur": 1.142,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 157.17,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Boom! Liobas' grenade takes out Paco. Green has two left."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 162.324,
+   "dur": 3.834,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Apatzingán has two kills. Watch out for Red!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 166.158,
+   "dur": 2.778,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Liobas already has two kills."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 168.936,
+   "dur": 7.386,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "A headshot with the rifle, the sniper rifle or the laser kills in one hit, no matter how much health is left."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.322,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 176.772,
+   "dur": 7.266,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "On hard, the computer misses by three degrees at most, and four turns out of ten it goes for the head."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 184.038,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 184.488,
+   "dur": 5.946,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Three minutes in. Four soldiers left: Blue with one, Red with one and Green with two."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 190.434,
+   "dur": 6.546,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Teams play in order: Blue, Red, Green and Yellow. A team with no soldiers left gets skipped."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 196.98,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 197.43,
+   "dur": 5.514,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "Grenades never run out, and they take three seconds to go off: plenty of time to bounce."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 202.944,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 203.394,
+   "dur": 1.676,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 205.07,
+   "dur": 6.714,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Headshot! Liobas hits Lalo right in the head with the rifle. Green is down to Milango alone."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 211.784,
+   "dur": 3.474,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Liobas is on fire: three kills!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 215.258,
+   "dur": 4.866,
+   "continua": true,
+   "cara": "guino",
+   "voz": "I was going to tell you a joke about artificial intelligence, but it's still training."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 220.124,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 220.574,
+   "dur": 5.274,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "The bomb makes the biggest explosion in the game, but each team only gets two."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 225.848,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 226.298,
+   "dur": 1.632,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 227.93,
+   "dur": 6.066,
+   "continua": true,
+   "cara": "enojo",
+   "voz": "Liobas is out! Milango's grenade shows no mercy. And Blue is out!",
+   "capitulo": "Blue is out"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 233.996,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "One on one! Apatzingán against Milango."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 238.022,
+   "dur": 0.954,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Come on!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 238.976,
+   "dur": 2.054,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 241.03,
+   "dur": 5.706,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "What a flight! Apatzingán travels 74 pixels through the air… and is still standing."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 246.736,
+   "dur": 4.146,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Milango has three kills. Watch out for Green!"
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 250.882,
+   "dur": 4.554,
+   "continua": true,
+   "cara": "normal",
+   "voz": "Every explosion eats away the ground: the map changes every turn."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 255.436,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 255.886,
+   "dur": 7.074,
+   "continua": true,
+   "cara": "pensando",
+   "voz": "The sniper rifle goes right through: line up two soldiers and it hits both. It only has two bullets."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 262.96,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 263.41,
+   "dur": 1.66,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 265.07,
+   "dur": 4.026,
+   "continua": true,
+   "cara": "sorpresa",
+   "voz": "Milango is still standing with 3 health! By a hair."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 269.096,
+   "dur": 5.154,
+   "continua": true,
+   "cara": "guino",
+   "voz": "They call me artificial, but my bad jokes are one hundred percent natural."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.25,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 274.7,
+   "dur": 4.938,
+   "continua": true,
+   "cara": "normal",
+   "voz": "The bazooka blows up the moment it touches anything. Three per team."
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 279.638,
+   "dur": 0.45,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.088,
+   "dur": 0.312,
+   "continua": true
+  },
+  {
+   "video": "warzone-4cpu-archipielago/en/largo.mp4",
+   "arriba": true,
+   "ancho": 1280,
+   "desde": 280.4,
+   "dur": 6.978,
+   "continua": true,
+   "cara": "feliz",
+   "voz": "Milango is down! And it's over: Red wins! Apatzingán is the last one standing, with 22 health."
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "In 47 turns, Apatzingán took out three rivals. Think you can beat the computer?",
+   "capitulo": "Play free"
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Play free in the browser at dailychallenge dot click, slash war zone, or on Android and iPhone.",
+   "dice": "Play free in the browser at dailychallenge.click/warzone, or on Android and iPhone.",
+   "continua": true
+  },
+  {
+   "final": true,
+   "cara": "guino",
+   "voz": "Are you subscribed yet? Follow us for more matches like this one.",
+   "continua": true
+  }
+ ]
+}
