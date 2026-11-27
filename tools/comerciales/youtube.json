@@ -3177,6 +3177,55 @@
   "en_tiktok": "2026-11-30T16:20:00-06:00"
  },
  {
+  "clave": "algoritmos-hanoi",
+  "app": "algoritmos",
+  "web": "https://ayotl.dev/aprende/algoritmos/torres-de-hanoi",
+  "video": "salida/algoritmos-hanoi.mp4",
+  "categoria": "27",
+  "publicar": "2026-12-02T16:00:00-06:00",
+  "titulo": "ALGORITMOS: Las Torres de Hanói en 1 minuto #Shorts",
+  "descripcion": "Las Torres de Hanói y la recursión en 1 minuto. Las reglas: un disco a la vez y nunca uno grande sobre uno chico. El truco: para mover tres discos, mueve los dos de arriba al otro poste, luego el grande, y los dos encima; y para mover los dos, la función se llama a sí misma. Cada llamada espera en la pila de llamadas hasta llegar al caso base, con cero discos. Con n discos son 2 a la n, menos 1 movimientos: Édouard Lucas inventó el juego en 1883 con la leyenda de un templo con 64 discos de oro, que a un disco por segundo tardaría unos 585 mil millones de años. LeIA lo explica con el código en JavaScript línea por línea, y la lección con este mismo código se puede probar en el navegador.",
+  "cierre": "#Algoritmos #Programacion #JavaScript #AprendeAProgramar #Shorts",
+  "etiquetas": [
+   "algoritmos",
+   "torres de hanói",
+   "recursión",
+   "pila de llamadas",
+   "caso base",
+   "Édouard Lucas",
+   "javascript",
+   "programación",
+   "aprende a programar",
+   "Ayotl"
+  ],
+  "id": "wjn3LQSndAg"
+ },
+ {
+  "clave": "algoritmos-hanoi-en",
+  "app": "algorithms",
+  "idioma": "en",
+  "web": "https://ayotl.dev/en/learn/algoritmos/torres-de-hanoi",
+  "video": "salida/algoritmos-hanoi-en.mp4",
+  "categoria": "27",
+  "publicar": "2026-12-02T16:20:00-06:00",
+  "titulo": "ALGORITHMS: The Tower of Hanoi in 1 minute #Shorts",
+  "descripcion": "The Tower of Hanoi and recursion in 1 minute. The rules: one disk at a time, and never a big one on a small one. The trick: to move three disks, move the top two to the other peg, then the big one, then the two back on top; and to move the two, the function calls itself. Each call waits on the call stack until it reaches the base case, with zero disks. With n disks it takes 2 to the n, minus 1 moves: Édouard Lucas invented the puzzle in 1883 with the legend of a temple with 64 golden disks, which at one move per second would take about 585 billion years. LeIA walks through the JavaScript code line by line, and the lesson with this same code runs in your browser.",
+  "cierre": "#Algorithms #Coding #JavaScript #LearnToCode #Shorts",
+  "etiquetas": [
+   "algorithms",
+   "tower of hanoi",
+   "recursion",
+   "call stack",
+   "base case",
+   "Édouard Lucas",
+   "javascript",
+   "programming",
+   "learn to code",
+   "Ayotl"
+  ],
+  "id": "TZLrds6evv4"
+ },
+ {
   "clave": "programando-snake-1",
   "app": "programando",
   "video": "salida/programando-snake-1.mp4",

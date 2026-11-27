@@ -29,6 +29,7 @@ export const A05: Unidad = {
   lecciones: [
     {
       id: "torres-de-hanoi",
+      video: { es: { id: "wjn3LQSndAg", desde: "2026-12-02T16:00:00-06:00" }, en: { id: "TZLrds6evv4", desde: "2026-12-02T16:20:00-06:00" } },
       titulo: { es: "Las Torres de Hanói", en: "The Tower of Hanoi" },
       resumen: {
         es: "Pasar una torre de discos de un poste a otro con una función que se llama a sí misma: el caso base, la pila de llamadas y por qué son 2ⁿ − 1 movimientos.",
