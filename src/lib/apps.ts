@@ -58,6 +58,12 @@ export const APPS: App[] = [
     nombre: "Mercadito",
     dominio: "mercadito.cx",
     url: "https://mercadito.cx",
+    // La app de los negocios: pública en Google Play (vc 96 en producción
+    // desde el 5-nov-2026) y a la venta en la App Store desde el 8-nov-2026.
+    // Las insignias salen solas mientras las fichas respondan (lib/en-play).
+    paquetePlay: "mx.mercadito.cx",
+    bundleIos: "mx.mercadito.cx",
+    appStoreId: "6771926373",   // https://apps.apple.com/app/id6771926373 («Mercadito»)
     acento: "tierra",
     lema: {
       es: "Menú digital y herramientas para negocios locales.",
