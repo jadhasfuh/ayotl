@@ -32,7 +32,10 @@
   "¿Por qué la IA nunca gana a las escondidas? Porque siempre aparece en el buscador.",
   "En {juego}, si te persiguen, hazte humo.",
   "¿Qué le dijo el radar a la bandera? Tranquila, te tengo bien ubicada.",
-  "¿Por qué una IA nunca maneja en un laberinto? Porque se queda atorada en un bucle infinito."
+  "¿Por qué una IA nunca maneja en un laberinto? Porque se queda atorada en un bucle infinito.",
+  "¿Qué le dijo la nieve al esquiador? Me tienes a tus pies.",
+  "¿Por qué el esquiador de {juego} siempre está tan tranquilo? Porque todo le resbala.",
+  "¿Por qué una IA sería buena esquiando? Porque se pasa el día bajando archivos."
  ],
  "en": [
   "Why are pipes great at video games? They never leak the ending.",
@@ -67,7 +70,10 @@
   "I'd tell you a joke about my memory, but I forgot it. Must be a RAM-dom glitch.",
   "The red cars in {juego} are always in a spin.",
   "What did the radar say to the flag? I've got my eye on you.",
-  "Why don't AIs drive through mazes? Too many loops."
+  "Why don't AIs drive through mazes? Too many loops.",
+  "Skiing jokes? Snow problem.",
+  "Why is the skier in {juego} so good at school? He always makes the grade.",
+  "Why are AIs such good skiers? They spend all day downloading."
  ],
  "ja": [
   "配管をまちがえたら、はいかんです！",
@@ -99,6 +105,9 @@
   "盾があれば、たてこもれます！",
   "旗を集めて、はたらき者です！",
   "煙を出したら、敵もけむに巻かれました！",
-  "{juego}の車が、くるまで待ってます！"
+  "{juego}の車が、くるまで待ってます！",
+  "スキーが好きすぎー！",
+  "{juego}の雪道で、ゆきどまりにならないでくださいね！",
+  "スキーで滑るのは得意です。ダジャレも、よく滑ります！"
  ]
 }

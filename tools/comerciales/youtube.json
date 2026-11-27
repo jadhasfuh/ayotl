@@ -3459,5 +3459,63 @@
   ],
   "idioma": "ja",
   "id": "6CMPLgCDK5o"
+ },
+ {
+  "clave": "mejor-2026-11-26",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-26.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-28T19:00:00-06:00",
+  "titulo": "DAILY CHALLENGE: El mejor del 26 de noviembre: 10,090 puntos en SLALOM 🕹️",
+  "descripcion": "El mejor del 26 de noviembre en Daily Challenge fue FERXO17, con 10,090 puntos en SLALOM. Es su partida de verdad, re-simulada tick a tick, y LeIA la narra con un dato del juego.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "juegos retro",
+   "arcade",
+   "retro gaming",
+   "SLALOM"
+  ],
+  "miniatura": "salida/mejor-2026-11-26.jpg",
+  "id": "Qzn55dT_oOQ"
+ },
+ {
+  "clave": "mejor-2026-11-26-en",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-26-en.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-28T19:20:00-06:00",
+  "titulo": "DAILY CHALLENGE: Best run of November 26: 10,090 points in SLALOM 🕹️",
+  "descripcion": "The best run of November 26 on Daily Challenge was by FERXO17, with 10,090 points in SLALOM. It is the real run, re-simulated tick by tick, narrated by LeIA with a fun fact about the game.",
+  "cierre": "#DailyChallenge #RetroGaming #Arcade",
+  "etiquetas": [
+   "Daily Challenge",
+   "retro games",
+   "arcade",
+   "retro gaming",
+   "SLALOM"
+  ],
+  "idioma": "en",
+  "miniatura": "salida/mejor-2026-11-26-en.jpg",
+  "id": "MR-ar8ooFLc"
+ },
+ {
+  "clave": "mejor-2026-11-26-ja",
+  "app": "dc",
+  "video": "salida/mejor-2026-11-26-ja.mp4",
+  "categoria": "20",
+  "publicar": "2026-11-28T19:40:00-06:00",
+  "titulo": "DAILY CHALLENGE: 11月26日のベスト、SLALOMで10,090点 🕹️",
+  "descripcion": "11月26日のDaily Challengeでいちばんだったのは、SLALOMで10,090点のFERXO17さん。実際のプレイを1フレームずつ再現して、LeIAが豆知識といっしょに実況します。",
+  "cierre": "#DailyChallenge #レトロゲーム #アーケード",
+  "etiquetas": [
+   "Daily Challenge",
+   "レトロゲーム",
+   "アーケード",
+   "スラローム"
+  ],
+  "idioma": "ja",
+  "miniatura": "salida/mejor-2026-11-26-ja.jpg",
+  "id": "g2oZjqd1e14"
  }
 ]
