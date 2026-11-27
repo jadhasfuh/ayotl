@@ -24,7 +24,7 @@ def main():
     mal = 0
     for ruta in sorted(glob.glob(os.path.join(AQUI, '*.py'))):
         nombre = os.path.basename(ruta)[:-3]
-        if nombre in ('armar', 'renderizador', 'cajas', 'punteros', 'rejilla', 'pintura', 'celulas', 'revisar-codigo'):
+        if nombre in ('armar', 'renderizador', 'cajas', 'punteros', 'rejilla', 'pintura', 'celulas', 'torres', 'revisar-codigo'):
             continue
         spec = importlib.util.spec_from_file_location(nombre, ruta); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
         codigos = m.CODIGO if isinstance(m.CODIGO, dict) else {'es': m.CODIGO}
