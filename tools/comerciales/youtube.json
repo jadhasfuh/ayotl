@@ -2307,7 +2307,8 @@
    "LeIA"
   ],
   "cierre": "#ClockTower #SuperFamicom #JuegosRetro #SurvivalHorror #RetroGaming",
-  "id": "gs0sfD0-qLM"
+  "id": "gs0sfD0-qLM",
+  "en_tiktok": "2026-12-05T13:00:00-06:00"
  },
  {
   "clave": "lo-conoces-clock-tower-en",
@@ -2330,7 +2331,8 @@
   ],
   "cierre": "#ClockTower #SuperFamicom #RetroGaming #SurvivalHorror #SNES",
   "idioma": "en",
-  "id": "r5u2JCeAl4s"
+  "id": "r5u2JCeAl4s",
+  "en_tiktok": "2026-12-05T13:20:00-06:00"
  },
  {
   "clave": "lo-conoces-clock-tower-ja",
@@ -2350,7 +2352,8 @@
   ],
   "cierre": "#クロックタワー #スーパーファミコン #レトロゲーム #ホラーゲーム",
   "idioma": "ja",
-  "id": "P20o226On9A"
+  "id": "P20o226On9A",
+  "en_tiktok": "2026-12-05T13:40:00-06:00"
  },
  {
   "clave": "mejor-2026-11-16",
@@ -3198,7 +3201,8 @@
    "aprende a programar",
    "Ayotl"
   ],
-  "id": "wjn3LQSndAg"
+  "id": "wjn3LQSndAg",
+  "en_tiktok": "2026-12-02T16:00:00-06:00"
  },
  {
   "clave": "algoritmos-hanoi-en",
@@ -3223,7 +3227,8 @@
    "learn to code",
    "Ayotl"
   ],
-  "id": "TZLrds6evv4"
+  "id": "TZLrds6evv4",
+  "en_tiktok": "2026-12-02T16:20:00-06:00"
  },
  {
   "clave": "programando-snake-1",
@@ -3403,7 +3408,8 @@
    "retro gaming",
    "Q*BERT"
   ],
-  "id": "e4se4zvH8J8"
+  "id": "e4se4zvH8J8",
+  "en_tiktok": "2026-11-29T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-25-en",
@@ -3422,7 +3428,8 @@
    "Q*BERT"
   ],
   "idioma": "en",
-  "id": "SmFIjGczl6k"
+  "id": "SmFIjGczl6k",
+  "en_tiktok": "2026-11-29T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-25-ja",
@@ -3440,7 +3447,8 @@
    "キューバート"
   ],
   "idioma": "ja",
-  "id": "Q57QoIPil1A"
+  "id": "Q57QoIPil1A",
+  "en_tiktok": "2026-11-29T19:40:00-06:00"
  },
  {
   "clave": "warzone-4cpu-archipielago",
@@ -3463,7 +3471,8 @@
    "indie game",
    "Daily Challenge"
   ],
-  "id": "u66uCNP_yUI"
+  "id": "u66uCNP_yUI",
+  "en_tiktok": "2026-12-02T18:00:00-06:00"
  },
  {
   "clave": "warzone-4cpu-archipielago-en",
@@ -3486,7 +3495,8 @@
    "Atari 2600"
   ],
   "idioma": "en",
-  "id": "NllxTvxtW_Q"
+  "id": "NllxTvxtW_Q",
+  "en_tiktok": "2026-12-02T18:20:00-06:00"
  },
  {
   "clave": "warzone-4cpu-archipielago-ja",
@@ -3507,7 +3517,8 @@
    "レトロゲーム"
   ],
   "idioma": "ja",
-  "id": "6CMPLgCDK5o"
+  "id": "6CMPLgCDK5o",
+  "en_tiktok": "2026-12-02T18:40:00-06:00"
  },
  {
   "clave": "mejor-2026-11-26",
@@ -3526,7 +3537,8 @@
    "SLALOM"
   ],
   "miniatura": "salida/mejor-2026-11-26.jpg",
-  "id": "Qzn55dT_oOQ"
+  "id": "Qzn55dT_oOQ",
+  "en_tiktok": "2026-11-30T19:00:00-06:00"
  },
  {
   "clave": "mejor-2026-11-26-en",
@@ -3546,7 +3558,8 @@
   ],
   "idioma": "en",
   "miniatura": "salida/mejor-2026-11-26-en.jpg",
-  "id": "MR-ar8ooFLc"
+  "id": "MR-ar8ooFLc",
+  "en_tiktok": "2026-11-30T19:20:00-06:00"
  },
  {
   "clave": "mejor-2026-11-26-ja",
@@ -3565,6 +3578,7 @@
   ],
   "idioma": "ja",
   "miniatura": "salida/mejor-2026-11-26-ja.jpg",
-  "id": "g2oZjqd1e14"
+  "id": "g2oZjqd1e14",
+  "en_tiktok": "2026-11-30T19:40:00-06:00"
  }
 ]
