@@ -11,12 +11,17 @@ import type { Idioma } from "./idioma";
  * (comprobados el 2026-09-22); si crecen, se actualizan aquí a mano.
  */
 export type App = {
-  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion" | "kazan" | "zanei";
+  id: "mercadito" | "jlptest" | "dailychallenge" | "warzone" | "procesion" | "kazan" | "zanei" | "panpam";
   nombre: string;
   /** Lo que va bajo el nombre en la tarjeta: el dominio, o dónde está si aún no tiene web. */
   dominio: string;
   /** Si falta, la app todavía no se puede abrir desde aquí (está en camino a la tienda). */
   url?: string;
+  /**
+   * La ficha del juego en Daily Challenge (dailychallenge.click/juegos/…), si la
+   * tiene: la página de la app la enlaza junto al botón de abrir.
+   */
+  ficha?: string;
   /**
    * La página de «Become a tester» de la prueba cerrada de Play. Es el paso
    * que de verdad cuenta para Google, y el que más se olvida: sin aceptar
@@ -378,6 +383,58 @@ export const APPS: App[] = [
       { imagen: "zanei-resultado",
         titulo: { es: "La ficha y los récords", en: "The score card and the records" },
         texto: { es: "Al terminar: tiempo, destruidos, precisión, bombas, naves perdidas, bono y rango. La historia lleva los doce niveles seguidos; el arcade, los doce sin pausa, tres actos de cuatro, cada nivel suelto y la Señal del día: un reto de tres minutos que cambia cada día. Récords mundiales por dificultad. En español, inglés y japonés.", en: "At the end: time, kills, accuracy, bombs, ships lost, bonus and rank. Story mode runs the twelve levels in a row; Arcade has all twelve nonstop, three acts of four, every level on its own and the Daily Signal: a three-minute challenge that changes every day. World records per difficulty. In Spanish, English and Japanese." } },
+    ],
+  },
+  {
+    // Juego de soltar y fusionar panes, noveno producto (27-nov-2026): pixel art
+    // de 16 colores estilo PC-98, en negro y rosa. Es un DEMO EN PRUEBAS que se
+    // juega en la web dentro de Daily Challenge como «juego extra»; la app con
+    // AdMob (dev.ayotl.panpam en Android y en iOS) todavía no está en ninguna
+    // tienda. La insignia de Google Play saldrá sola con paquetePlay; para la de
+    // la App Store falta añadir appStoreId el día que exista. Las cifras salen
+    // del código: www/game/config.js (la cadena), www/core/paleta.js y
+    // www/game/textos.js del repo ayotl-drop.
+    id: "panpam",
+    nombre: "PanPam! (demo)",
+    dominio: "dailychallenge.click/panpam",
+    url: "https://dailychallenge.click/panpam",
+    ficha: "https://dailychallenge.click/juegos/panpam",
+    paquetePlay: "dev.ayotl.panpam",
+    bundleIos: "dev.ayotl.panpam",
+    acento: "tierra",
+    lema: {
+      es: "Suelta panes, junta dos iguales y hazlos crecer hasta la gran Ayotl dorada.",
+      en: "Drop sweet breads, match two of a kind and grow them into the great golden Ayotl.",
+    },
+    descripcion: {
+      es: "Juego de soltar y fusionar con pan dulce mexicano y dulces japoneses, en pixel art de 16 colores estilo PC-98, negro y rosa. Reto del día igual para todos, modo libre, colección de diez panes y récords en línea. Bach en arreglo electro-barroco. Es un demo en pruebas: gratis y sin anuncios en la web.",
+      en: "A drop-and-merge game with Mexican sweet bread and Japanese sweets, in 16-colour PC-98-style pixel art, black and pink. A daily challenge that is the same for everyone, free play, a collection of ten breads and online records. Bach in an electro-baroque arrangement. It is a demo in testing: free and ad-free on the web.",
+    },
+    datos: [
+      { valor: "10", etiqueta: { es: "panes", en: "breads" } },
+      { valor: "16", etiqueta: { es: "colores", en: "colours" } },
+      { valor: "3", etiqueta: { es: "idiomas", en: "languages" } },
+    ],
+    etiquetas: { es: ["Juegos", "Demo", "Web"], en: ["Games", "Demo", "Web"] },
+    pantallas: [
+      { imagen: "panpam-titulo",
+        titulo: { es: "Negro y rosa, como en una PC-98", en: "Black and pink, like a PC-98" },
+        texto: { es: "Pixel art de 16 colores, al estilo de las computadoras japonesas de finales de los ochenta. Desde la portada se entra al reto de hoy, al modo libre y a la colección. Se juega en vertical y con un dedo, en español, inglés y japonés.", en: "16-colour pixel art, in the style of the Japanese computers of the late eighties. The title screen leads to today's challenge, free play and the collection. You play in portrait with one finger, in Spanish, English and Japanese." } },
+      { imagen: "panpam-juego",
+        titulo: { es: "Suelta, junta y ¡pam!", en: "Drop, match and pam!" },
+        texto: { es: "Sueltas un pan a la vez dentro del vaso. Dos iguales que se tocan se funden en el siguiente de la cadena: dango, polvorón, daifuku de fresa, dona, dorayaki, concha, melonpan, pan de muerto, rosca de Reyes y la gran Ayotl dorada, un pan con forma de tortuga. Si los panes pasan la línea, se acabó.", en: "You drop one bread at a time into the cup. Two of a kind that touch merge into the next one in the chain: dango, polvorón, strawberry daifuku, donut, dorayaki, concha, melon pan, pan de muerto, rosca de Reyes and the great golden Ayotl, a bread shaped like a turtle. If the breads go over the line, the game is over." } },
+      { imagen: "panpam-carga",
+        titulo: { es: "Momo y Kai cargan el pan", en: "Momo and Kai carry the bread" },
+        texto: { es: "Dos personajes originales, chibis de estilo gothic lolita y aristócrata: Momo, tsundere de pelo rosa, y Kai, alegre y con una bufanda de rayas que le tapa la boca. Cargan el pan arriba del vaso, como si nada si es chico y con todo el esfuerzo si es grande, y lo comentan al soltarlo. Los dibujos se generaron con IA a partir de descripciones propias y se pasaron a 16 colores.", en: "Two original characters, chibis in gothic lolita and aristocrat style: Momo, a pink-haired tsundere, and Kai, cheerful and with a striped scarf that covers his mouth. They carry the bread above the cup, effortlessly if it is small and with all their strength if it is big, and comment on it when you drop it. The drawings were generated with AI from our own descriptions and reduced to 16 colours." } },
+      { imagen: "panpam-estallido",
+        titulo: { es: "Bach con bombo electrónico", en: "Bach with an electronic kick drum" },
+        texto: { es: "Las fusiones estallan y, si van en cadena, sube el multiplicador. De fondo suenan Bach y otros clásicos de dominio público, sacados de partitura y arreglados en «electro-barroco»: clavecín, órgano, caja de música y bombo electrónico. La música y los efectos los sintetiza el propio juego.", en: "Merges burst and, when they chain, the multiplier goes up. In the background, Bach and other public-domain classics, taken from the score and arranged as “electro-baroque”: harpsichord, organ, music box and an electronic kick drum. The game itself synthesises the music and the sound effects." } },
+      { imagen: "panpam-fin",
+        titulo: { es: "El reto del día", en: "The daily challenge" },
+        texto: { es: "La misma secuencia de panes para todo el mundo, que cambia cada día en hora de México; jugarlo días seguidos suma racha. El modo libre es para jugar a tu ritmo. Los récords van a tablas en línea con unas iniciales, sin cuenta.", en: "The same sequence of breads for everyone, changing every day on Mexico time; playing it on consecutive days builds a streak. Free play is for going at your own pace. Records go to online tables with a set of initials, no account." } },
+      { imagen: "panpam-album",
+        titulo: { es: "La colección y los premios", en: "The collection and the prizes" },
+        texto: { es: "Los diez panes que vas descubriendo quedan en tu colección, y jugando ganas premios para vestir a Momo y a Kai: sombreros y colores de pelo. Todo eso se guarda en tu aparato. Es un demo en pruebas y puede cambiar de un día para otro; la app para Android y iPhone, con anuncios, viene después.", en: "The ten breads you discover stay in your collection, and by playing you earn prizes to dress up Momo and Kai: hats and hair colours. All of that is kept on your device. It is a demo in testing and can change from one day to the next; the app for Android and iPhone, with ads, comes later." } },
     ],
   },
 ];

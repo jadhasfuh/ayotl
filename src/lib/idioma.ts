@@ -134,6 +134,7 @@ const TEXTOS = {
 
   // Página de cada app
   appAbrir: { es: "Abrir", en: "Open" },
+  appFicha: { es: "Ficha del juego", en: "About the game" },
   appEnLaTienda: { es: "En Google Play", en: "On Google Play" },
   appEnAppStore: { es: "En la App Store", en: "On the App Store" },
   appProximamente: { es: "Próximamente", en: "Coming soon" },

@@ -97,6 +97,11 @@ export default async function PaginaApp({ params }: Props) {
             ) : (
               <span className="boton secundario" aria-disabled="true">{x("appProximamente")}: {app.dominio}</span>
             )}
+            {app.ficha && (
+              <a href={app.ficha} className="boton secundario" target="_blank" rel="noopener">
+                {x("appFicha")} ↗
+              </a>
+            )}
             <Link href={ruta("negocios", idioma)} className="boton secundario">{x("navNegocios")}</Link>
           </p>
           {play && (
